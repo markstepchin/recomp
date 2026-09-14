@@ -1,24 +1,14 @@
-# PostHog (not installed)
+# PostHog
 
-This site has **no PostHog runtime**, no project key, and no analytics snippet. Add it yourself when you want website analytics.
+Website analytics lives in one shared file: `js/posthog.js`. That file is the official snippet from project settings, plus a localhost skip so `npm run dev` does not send events.
 
-## Create a project
+## Pages that load it
 
-1. Sign in at [PostHog](https://posthog.com/) and create a project (US or EU cloud is fine).
-2. Open **Project settings** and copy the official **HTML/JS snippet**. It includes your project API key — use that key. Do not invent one.
-
-## Where to paste
-
-There is no shared layout file (plain static HTML). Paste the snippet inside `<head>` on each page you want tracked.
-
-A no-op comment marks the spot on the new inner pages:
-
-```html
-<!-- PostHog: paste snippet in shared head -->
-```
+Each real page includes the file next to `theme.js` (home page: before the inline script). Redirect stubs `privacy.html` and `support.html` do not.
 
 | Page | File |
 | --- | --- |
+| Home | `index.html` |
 | Blog index | `blog/index.html` |
 | Progress photos article | `blog/how-to-take-progress-photos-for-recomp/index.html` |
 | About | `about/index.html` |
@@ -26,11 +16,18 @@ A no-op comment marks the spot on the new inner pages:
 | FAQ | `faq/index.html` |
 | Support | `support/index.html` |
 
-The live **home page** (`index.html`) is left unchanged in this work. If you want PostHog there too, paste the same snippet in that file’s `<head>` yourself.
+## Config
 
-Skip the redirect files `privacy.html` and `support.html`.
+Copied from the PostHog project snippet:
 
-## Notes
+- Project API key in `js/posthog.js` (client-side keys are public by design)
+- `api_host`: `https://us.i.posthog.com`
+- `defaults`: `2026-05-30`
+- `person_profiles`: `identified_only` — no person profile for anonymous visitors
+- Session replay is off (SDK default)
 
-- Website analytics is separate from the iOS app. Recomp check-ins stay on device.
-- If you later extract a shared `head` partial, paste the snippet once there and delete the copies.
+Website analytics is separate from the iOS app. Recomp check-ins stay on device.
+
+## Updating the snippet
+
+Replace the loader and `posthog.init` block in `js/posthog.js` with a fresh copy from **Project settings**. Keep the localhost guard around it.
