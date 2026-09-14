@@ -48,47 +48,9 @@
     />
     <link rel="icon" href="assets/recomp-app-icon.png" type="image/png" />
     <link rel="apple-touch-icon" href="assets/recomp-app-icon.png" />
-    <!-- POSTHOG_SNIPPET -->
   </head>
   <body>
     <div>
-      <header class="site-header">
-        <div
-          class="mx-auto flex w-full max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4"
-        >
-          <a
-            class="text-fg font-bold tracking-wordmark no-underline hover:no-underline"
-            href="./"
-            aria-current="page"
-            >Recomp</a
-          >
-          <nav
-            class="flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
-            aria-label="Site"
-          >
-            <a
-              class="text-muted no-underline hover:text-fg hover:underline"
-              href="blog/"
-              >Blog</a
-            >
-            <a
-              class="text-muted no-underline hover:text-fg hover:underline"
-              href="about/"
-              >About</a
-            >
-            <a
-              class="text-muted no-underline hover:text-fg hover:underline"
-              href="privacy/"
-              >Privacy</a
-            >
-            <a
-              class="text-muted no-underline hover:text-fg hover:underline"
-              href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
-              >App Store</a
-            >
-          </nav>
-        </div>
-      </header>
       <main>
         <div class="page-grid relative isolate">
           <!-- Section 1: Hero -->
@@ -115,6 +77,17 @@
                 >
                   A side-by-side timeline of your photos, weight, and more
                 </p>
+                <!--
+                <button
+                  type="button"
+                  class="mb-3 inline-flex min-h-11 cursor-pointer items-center justify-center justify-self-center rounded-full border-0 bg-accent px-[22px] py-3.5 text-base font-bold whitespace-nowrap text-white no-underline hover:bg-accent-hover hover:no-underline focus-visible:bg-accent-hover focus-visible:no-underline active:bg-accent-active"
+                  data-waitlist-open
+                  aria-haspopup="dialog"
+                  aria-controls="waitlist-modal"
+                >
+                  Get early access
+                </button>
+                -->
                 <a
                   class="app-store-badge mb-2 justify-self-center"
                   href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
@@ -475,33 +448,14 @@
             >
               <a
                 class="text-muted no-underline hover:text-fg hover:underline focus-visible:text-fg focus-visible:underline"
-                href="blog/"
-                >Blog</a
-              >
-              <a
-                class="text-muted no-underline hover:text-fg hover:underline focus-visible:text-fg focus-visible:underline"
-                href="about/"
-                >About</a
-              >
-              <a
-                class="text-muted no-underline hover:text-fg hover:underline focus-visible:text-fg focus-visible:underline"
-                href="privacy/"
+                href="privacy.html"
                 >Privacy</a
               >
-              <a
-                class="text-muted no-underline hover:text-fg hover:underline focus-visible:text-fg focus-visible:underline"
-                href="faq/"
-                >FAQ</a
-              >
+
               <a
                 class="text-muted no-underline hover:text-fg hover:underline focus-visible:text-fg focus-visible:underline"
                 href="support/"
                 >Support</a
-              >
-              <a
-                class="text-muted no-underline hover:text-fg hover:underline focus-visible:text-fg focus-visible:underline"
-                href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
-                >App Store</a
               >
             </nav>
             <div
@@ -539,9 +493,103 @@
       </footer>
     </div>
 
-    <script src="js/theme.js"></script>
+    <dialog
+      class="m-0 h-dvh max-h-dvh w-screen max-w-[100vw] border-0 bg-transparent p-gutter text-fg backdrop:bg-[color-mix(in_srgb,#000_52%,transparent)] open:grid open:place-items-center"
+      id="waitlist-modal"
+      aria-labelledby="waitlist-modal-heading"
+    >
+      <div
+        class="relative w-[min(100%,440px)] rounded-card border border-card-border bg-card px-6 pt-7 pb-6 shadow-card"
+      >
+        <button
+          type="button"
+          class="absolute top-4 right-4 grid size-9 place-items-center rounded-full border-0 bg-transparent p-0 text-2xl leading-none text-muted hover:bg-accent-tint hover:text-fg focus-visible:bg-accent-tint focus-visible:text-fg"
+          data-waitlist-close
+          aria-label="Close"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+        <h2
+          id="waitlist-modal-heading"
+          class="pr-9 text-h3 font-bold tracking-h3"
+        >
+          Get early access
+        </h2>
+        <blockquote class="mt-3 mb-5 text-body leading-body text-muted">
+          <p>
+            This project is personal. I'm building the compare tool I always
+            wanted as a lifter, and I'm genuinely excited to finally share it.
+            I'm always open to feedback, and I appreciate anything you want to
+            share.
+          </p>
+          <footer class="mt-2.5 text-micro text-fg">
+            — Mark Stepchin, app developer
+          </footer>
+        </blockquote>
+        <form class="grid w-full gap-2 text-left" data-waitlist>
+          <label
+            class="text-sm font-medium text-fg in-[.is-success]:hidden"
+            for="waitlist-email"
+            >Email</label
+          >
+          <div
+            class="grid gap-3 in-[.is-success]:hidden sm:grid-cols-[1fr_auto] sm:items-stretch"
+          >
+            <input
+              id="waitlist-email"
+              class="min-h-11 w-full rounded-xl border border-card-border bg-bg px-4 py-3 text-input text-fg placeholder:text-muted placeholder:opacity-100"
+              type="email"
+              name="email"
+              inputmode="email"
+              autocomplete="email"
+              required
+              placeholder="you@email.com"
+            />
+            <button
+              type="submit"
+              class="inline-flex min-h-11 cursor-pointer items-center justify-center rounded-full border-0 bg-accent px-[22px] py-3.5 text-base font-bold whitespace-nowrap text-white no-underline hover:bg-accent-hover hover:no-underline focus-visible:bg-accent-hover focus-visible:no-underline active:bg-accent-active"
+            >
+              Get early access
+            </button>
+          </div>
+          <p
+            class="waitlist__status m-0 min-h-[1.2em] text-helper text-muted data-[state=error]:font-medium data-[state=error]:text-error data-[state=success]:text-success"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </div>
+    </dialog>
+
     <script>
       (function () {
+        const storageKey = "recomp-theme";
+        const root = document.documentElement;
+        const buttons = document.querySelectorAll("[data-theme-choice]");
+
+        function applyTheme(choice) {
+          root.setAttribute("data-theme", choice);
+          buttons.forEach((button) => {
+            button.setAttribute(
+              "aria-pressed",
+              button.dataset.themeChoice === choice ? "true" : "false",
+            );
+          });
+        }
+
+        const saved = localStorage.getItem(storageKey);
+        if (saved === "light" || saved === "dark" || saved === "system") {
+          applyTheme(saved);
+        }
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const choice = button.dataset.themeChoice;
+            localStorage.setItem(storageKey, choice);
+            applyTheme(choice);
+          });
+        });
+
         const motionQuery = window.matchMedia(
           "(prefers-reduced-motion: reduce)",
         );
@@ -779,6 +827,70 @@
                 panel.style.height = "";
               });
             });
+          });
+        }
+
+        const waitlistModal = document.getElementById("waitlist-modal");
+        const waitlistForm = waitlistModal
+          ? waitlistModal.querySelector("[data-waitlist]")
+          : null;
+
+        function openWaitlistModal() {
+          if (!waitlistModal) return;
+          waitlistModal.showModal();
+          const input = waitlistModal.querySelector('input[type="email"]');
+          if (
+            input &&
+            waitlistForm &&
+            !waitlistForm.classList.contains("is-success")
+          ) {
+            input.focus();
+          }
+        }
+
+        function closeWaitlistModal() {
+          if (!waitlistModal || !waitlistModal.open) return;
+          waitlistModal.close();
+        }
+
+        document.querySelectorAll("[data-waitlist-open]").forEach((button) => {
+          button.addEventListener("click", openWaitlistModal);
+        });
+
+        document.querySelectorAll("[data-waitlist-close]").forEach((button) => {
+          button.addEventListener("click", closeWaitlistModal);
+        });
+
+        if (waitlistModal) {
+          waitlistModal.addEventListener("click", (event) => {
+            if (event.target === waitlistModal) closeWaitlistModal();
+          });
+        }
+
+        function setFormState(form, state, message) {
+          const status = form.querySelector(".waitlist__status");
+          status.dataset.state = state;
+          status.textContent = message;
+          form.classList.toggle("is-success", state === "success");
+        }
+
+        if (waitlistForm) {
+          waitlistForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const input = waitlistForm.querySelector('input[type="email"]');
+            const email = (input.value || "").trim();
+
+            if (!input.checkValidity()) {
+              setFormState(waitlistForm, "error", "Enter a valid email.");
+              input.focus();
+              return;
+            }
+
+            setFormState(
+              waitlistForm,
+              "success",
+              "You're on the list. We'll email you when your invite is ready.",
+            );
           });
         }
       })();

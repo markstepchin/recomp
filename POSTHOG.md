@@ -1,23 +1,24 @@
-# PostHog
+# PostHog (not installed)
 
-Product analytics is **not** enabled yet. When you are ready, paste the official PostHog JavaScript snippet into the shared head marker — do not invent or commit a project API key until you mean to turn tracking on.
+This site has **no PostHog runtime**, no project key, and no analytics snippet. Add it yourself when you want website analytics.
 
-## Where to paste (2 minutes)
+## Create a project
 
-1. Open the PostHog project → **Project settings** → copy the HTML/JS snippet they give you.
-2. Find this HTML comment in each page `<head>`:
+1. Sign in at [PostHog](https://posthog.com/) and create a project (US or EU cloud is fine).
+2. Open **Project settings** and copy the official **HTML/JS snippet**. It includes your project API key — use that key. Do not invent one.
 
-   ```html
-   <!-- POSTHOG_SNIPPET -->
-   ```
+## Where to paste
 
-3. Paste the snippet **immediately after** that comment (still inside `<head>`).
+There is no shared layout file (plain static HTML). Paste the snippet inside `<head>` on each page you want tracked.
 
-There is no shared layout file — this is a static GitHub Pages site — so the marker is duplicated in every public HTML page:
+A no-op comment marks the spot on the new inner pages:
+
+```html
+<!-- PostHog: paste snippet in shared head -->
+```
 
 | Page | File |
 | --- | --- |
-| Home | `index.html` |
 | Blog index | `blog/index.html` |
 | Progress photos article | `blog/how-to-take-progress-photos-for-recomp/index.html` |
 | About | `about/index.html` |
@@ -25,9 +26,11 @@ There is no shared layout file — this is a static GitHub Pages site — so the
 | FAQ | `faq/index.html` |
 | Support | `support/index.html` |
 
-Skip the thin redirect files (`privacy.html`, `support.html`). Those bounce to the directory URLs above.
+The live **home page** (`index.html`) is left unchanged in this work. If you want PostHog there too, paste the same snippet in that file’s `<head>` yourself.
+
+Skip the redirect files `privacy.html` and `support.html`.
 
 ## Notes
 
-- The iOS app is local-first: photos and check-ins stay on device. Website analytics (this snippet) is separate from the app and only covers `markstepchin.github.io/recomp`.
-- If you later extract a shared `head` partial, keep a single `<!-- POSTHOG_SNIPPET -->` there and delete the copies.
+- Website analytics is separate from the iOS app. Recomp check-ins stay on device.
+- If you later extract a shared `head` partial, paste the snippet once there and delete the copies.
