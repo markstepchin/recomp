@@ -5,6 +5,7 @@
 - [Home](https://markstepchin.github.io/recomp/): Product landing page
 - [Blog](https://markstepchin.github.io/recomp/blog/): Articles on progress photos and recomp tracking
 - [How to Take Progress Photos for a Recomp (Cut or Bulk)](https://markstepchin.github.io/recomp/blog/how-to-take-progress-photos-for-recomp/): Published guide — lighting, poses, cadence, reviewing a flat scale
+- [Why I Built Recomp](https://markstepchin.github.io/recomp/blog/why-i-built-recomp/): Founder post — weekly progress photos, comparison, and why the app exists
 - [About](https://markstepchin.github.io/recomp/about/): Mark Stepchin, independent developer
 - [Privacy](https://markstepchin.github.io/recomp/privacy/): App data never leaves the device; no upload
 - [FAQ](https://markstepchin.github.io/recomp/faq/): Short answers (longer FAQ coming)

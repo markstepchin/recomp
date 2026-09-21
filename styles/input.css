@@ -527,6 +527,11 @@ html[data-theme="light"] .app-store-badge__img--black {
   list-style: disc;
 }
 
+.article-prose ol {
+  padding-left: 1.25rem;
+  list-style: decimal;
+}
+
 .quick-answer,
 .cta-panel,
 .blog-card {
