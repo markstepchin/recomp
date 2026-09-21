@@ -44,6 +44,7 @@ function urls(depth) {
     privacy: `${up}privacy/`,
     faq: `${up}faq/`,
     support: `${up}support/`,
+    assets: `${up}assets/`,
   };
 }
 
