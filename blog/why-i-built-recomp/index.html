@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en" data-theme="system">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Why I Built Recomp — Recomp</title>
+    <meta
+      name="description"
+      content="I built Recomp because weekly progress photos still didn’t show me week-to-week change when weight barely moved. Camera roll can’t pair dates with weight. Workout and macro apps bury photos. I wanted a clean, local-first check-in + comparison tool — not AI body-fat, not another all-in-one."
+    />
+    <link rel="stylesheet" href="../../styles/output.css" />
+    <link
+      rel="canonical"
+      href="https://markstepchin.github.io/recomp/blog/why-i-built-recomp/"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta property="og:title" content="Why I Built Recomp" />
+    <meta
+      property="og:description"
+      content="I built Recomp because weekly progress photos still didn’t show me week-to-week change when weight barely moved. Camera roll can’t pair dates with weight. Workout and macro apps bury photos. I wanted a clean, local-first check-in + comparison tool — not AI body-fat, not another all-in-one."
+    />
+    <meta
+      property="og:url"
+      content="https://markstepchin.github.io/recomp/blog/why-i-built-recomp/"
+    />
+    <meta
+      property="og:image"
+      content="https://markstepchin.github.io/recomp/assets/step-compare.webp?v=5"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="article:published_time" content="2026-09-21" />
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Why I Built Recomp",
+        "description": "I built Recomp because weekly progress photos still didn’t show me week-to-week change when weight barely moved. Camera roll can’t pair dates with weight. Workout and macro apps bury photos. I wanted a clean, local-first check-in + comparison tool — not AI body-fat, not another all-in-one.",
+        "datePublished": "2026-09-21",
+        "dateModified": "2026-09-21",
+        "author": {
+          "@type": "Person",
+          "name": "Mark Stepchin",
+          "url": "https://markstepchin.github.io/recomp/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Recomp",
+          "url": "https://markstepchin.github.io/recomp/"
+        },
+        "mainEntityOfPage": "https://markstepchin.github.io/recomp/blog/why-i-built-recomp/",
+        "image": "https://markstepchin.github.io/recomp/assets/step-compare.webp?v=5"
+      }
+    </script>
+  </head>
+  <body>
+    <div class="flex min-h-dvh flex-col">
+      <header class="site-header">
+        <div
+          class="mx-auto flex w-full max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4"
+        >
+          <a
+            class="text-fg font-bold tracking-wordmark no-underline hover:no-underline"
+            href="../../"
+            >Recomp</a
+          >
+          <nav
+            class="flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
+            aria-label="Site"
+          >
+            <a
+              class="text-muted no-underline hover:text-fg hover:underline"
+              href="../"
+              >Blog</a
+            >
+            <a
+              class="text-muted no-underline hover:text-fg hover:underline"
+              href="../../about/"
+              >About</a
+            >
+            <a
+              class="text-muted no-underline hover:text-fg hover:underline"
+              href="../../privacy/"
+              >Privacy</a
+            >
+            <a
+              class="text-muted no-underline hover:text-fg hover:underline"
+              href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
+              >App Store</a
+            >
+          </nav>
+        </div>
+      </header>
+
+      <main class="mx-auto w-full max-w-[700px] flex-1 px-gutter py-12">
+        <p class="text-micro text-muted pb-3">
+          <a class="text-muted" href="../">Blog</a>
+          · September 21, 2026 · Mark Stepchin
+        </p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-8">
+          Why I Built Recomp
+        </h1>
+
+        <aside class="quick-answer" aria-labelledby="quick-answer-heading">
+          <h2 id="quick-answer-heading" class="text-h4 font-bold tracking-h4">
+            Quick answer
+          </h2>
+          <p>
+            I built Recomp because weekly progress photos still didn’t show me
+            week-to-week change when weight barely moved. Camera roll can’t pair
+            dates with weight. Workout and macro apps bury photos. I wanted a
+            clean, local-first check-in + comparison tool — not AI body-fat, not
+            another all-in-one.
+          </p>
+        </aside>
+
+        <div class="article-prose pt-4">
+          <p>I didn’t start Recomp because I had a clever startup idea.</p>
+          <p>
+            I started it because a coach could see progress on me that I
+            couldn’t see on myself — and that annoyed me enough to keep thinking
+            about it for years.
+          </p>
+
+          <h2>The coach saw it. I didn’t.</h2>
+          <p>
+            I’d been lifting for a while. [Exact year I started — confirm with
+            me.] StrongLifts 5x5 for about a year. Then other programs,
+            pull-ups, the usual hopping around. Strength went up. Fat loss was
+            harder.
+          </p>
+          <p>
+            I did the “obvious” things: drop calories, add cardio. Weight
+            stalled. I felt slower, not leaner. So I hired a remote trainer.
+          </p>
+          <p>
+            That trainer’s process was simple and ruthless: every week, front /
+            side / back photos, plus weight, workouts, and food. He had an
+            all-in-one client app. I used it because <em>he</em> used it — not
+            because I loved it.
+          </p>
+          <p>
+            The workout tracking in that app was worse than Hevy or Strong. The
+            food tracking was worse than a dedicated macro app. But the
+            <strong>photos</strong> stuck. Weekly physique check-ins became a
+            habit.
+          </p>
+          <p>
+            He’d look at a week I thought was “nothing” and say I looked better.
+            I’d squint at the same photos and shrug. Six months apart? Easy. One
+            week apart? Invisible to me. That gap — between what was happening
+            and what I could perceive — is the whole reason Recomp exists.
+          </p>
+
+          <h2>After the trainer: the photos stayed, the system didn’t</h2>
+          <p>
+            When that coaching relationship ended, I kept taking photos. The
+            habit was useful. The tooling wasn’t.
+          </p>
+          <p>Apple Photos is fine for storage. It’s terrible for this job:</p>
+          <ul>
+            <li>No honest side-by-side for the same pose across dates</li>
+            <li>No weight sitting next to the shot</li>
+            <li>
+              No fast way to jump “last week ↔ last month ↔ three months ago”
+            </li>
+          </ul>
+          <p>So I tried bolting photos onto apps I already liked.</p>
+          <p>
+            Hevy / Strong: great for workouts. Photo features feel like an
+            afterthought — buried, second-class, not a physique timeline.
+          </p>
+          <p>
+            MyFitnessPal and other nutrition apps: same story. A photo attached
+            to a weigh-in isn’t a progress system.
+          </p>
+          <p>
+            Then I went hunting. I downloaded something like twenty dedicated
+            “progress photo” apps.
+          </p>
+          <p>
+            Most were clunky, bloated, or weirdly proud of features I didn’t ask
+            for. I couldn’t quickly switch dates. I couldn’t cleanly pair
+            <strong>weight + photo</strong>. The comparison UX — the actual
+            point — was either missing or painful.
+          </p>
+          <p>
+            If you already take gym progress photos, you don’t need another
+            “fitness suite.” You need a <strong>review tool</strong>.
+          </p>
+
+          <h2>The DIY that almost worked (and proved the gap)</h2>
+          <p>I tried to build it myself without shipping an app.</p>
+          <p>
+            Google Sheets. Forms. Email reminders so I’d stay consistent.
+          </p>
+          <p>
+            That got me <em>structure</em>: dates, weight, notes, a prompt to
+            show up. What it didn’t get me was <strong>comparison</strong>.
+            Spreadsheets don’t scrub. Forms don’t put last Tuesday next to today
+            with the same pose and the number on the scale in the same glance.
+          </p>
+          <p>
+            So the missing loop was obvious once I said it out loud:
+          </p>
+          <ol>
+            <li><strong>Notify me</strong> so I don’t flake</li>
+            <li>
+              <strong>Capture</strong> weight + photos + notes in one check-in
+            </li>
+            <li>
+              <strong>Compare</strong> prior week / month / phase without
+              fighting the UI
+            </li>
+          </ol>
+          <p>That’s it. That’s the product.</p>
+
+          <h2>What Recomp is (and isn’t)</h2>
+          <p>
+            <strong>Recomp is for people who already take progress photos</strong>
+            and need a clean <strong>comparison + weight timeline</strong>.
+          </p>
+          <p>
+            It’s a power-user data review tool dressed like the iPhone Photos
+            app: uncluttered, focused, no ads in your face, no feature spam.
+          </p>
+          <p>What it is <em>not</em>:</p>
+          <ul>
+            <li>Not a buried tab inside Hevy or MyFitnessPal</li>
+            <li>
+              Not “AI body fat” as the headline — that’s GainFrame’s lane, and
+              they’re good at it
+            </li>
+            <li>
+              Not an all-in-one coach CRM / social feed / workout logger
+              pretending to be a physique tracker
+            </li>
+          </ul>
+          <p>
+            If what you want is an AI estimate of body fat from a selfie,
+            download GainFrame. Seriously. If what you want is to
+            <em>see</em> subtle change with your own eyes — especially during a
+            recomp when the scale lies — that’s the seat I’m building for.
+          </p>
+          <p>
+            Local-first matters to me here. Physique photos are personal. The
+            core job is organize, align, scrub, and keep weight next to the
+            visual record — not ship your body pics to a model so a number can
+            argue with you.
+          </p>
+
+          <h2>Why week-to-week comparison is the hard problem</h2>
+          <p>
+            Big transformations are easy to believe. Tiny ones are where people
+            quit.
+          </p>
+          <p>
+            A cut where weight barely moves. A bulk where the mirror gaslights
+            you every morning. A recomp where clothing fits differently but the
+            scale is “meh.”
+          </p>
+          <p>Those are exactly the moments when you need:</p>
+          <ul>
+            <li>Same poses</li>
+            <li>Same framing (as close as you can get)</li>
+            <li>Weight context on the timeline</li>
+            <li>A scrub / side-by-side that doesn’t take twelve taps</li>
+          </ul>
+          <p>
+            Without that, you either trust a coach’s eye, trust a spreadsheet,
+            or stop taking photos because “they’re not telling me anything.”
+          </p>
+          <p>I got tired of option three.</p>
+
+          <h2>Build principles I refuse to negotiate</h2>
+          <p>A few things I keep repeating to myself while I ship:</p>
+          <ul>
+            <li>
+              <strong>Photos first.</strong> Charts and extras are context, not
+              the product.
+            </li>
+            <li>
+              <strong>Check-ins, not chaos.</strong> A recurring habit (front /
+              side / back + date + weight + optional notes) beats a dump of
+              random camera-roll selfies.
+            </li>
+            <li>
+              <strong>Import history separately.</strong> Old library ≠ this
+              week’s check-in.
+            </li>
+            <li>
+              <strong>Clean like Photos.</strong> If the UI feels like a mall of
+              subscriptions and banners, I failed.
+            </li>
+            <li>
+              <strong>Fast date switching.</strong> If comparison takes longer
+              than looking, people won’t look.
+            </li>
+            <li>
+              <strong>No AI body-fat headline.</strong> Different product.
+              Different trust bargain.
+            </li>
+          </ul>
+          <p>
+            I’m not trying to replace your training app or your food tracker.
+            I’m trying to be the place you go when you ask, “Did the work show
+            up?”
+          </p>
+
+          <h2>What “clean comparison” actually means day to day</h2>
+          <p>
+            When I say comparison, I don’t mean a pretty collage for Instagram.
+          </p>
+          <p>
+            I mean: open last week’s front pose next to this week’s front pose.
+            Scrub a few months if you need the bigger story. Glance at the weight
+            on those same dates. Maybe a note — “salty dinner,” “travel,” “peak
+            week” — so you don’t gaslight yourself later.
+          </p>
+          <p>
+            That’s a <strong>physique check-in system</strong>, not a camera-roll
+            hobby.
+          </p>
+          <p>The apps that failed me usually failed in one of three ways:</p>
+          <ol>
+            <li>
+              <strong>Storage without review</strong> — plenty of photos, zero
+              timeline intelligence
+            </li>
+            <li>
+              <strong>Suite apps with a photo tab</strong> — the feature exists
+              so they can check a marketing box
+            </li>
+            <li>
+              <strong>Dedicated apps that feel heavy</strong> — ads, upsells,
+              mystery charts, everything except fast date switching
+            </li>
+          </ol>
+          <p>
+            Recomp’s bet is boring on purpose: make the weekly loop so light that
+            you keep doing it, and make the review so fast that you actually
+            look.
+          </p>
+
+          <h2>Who this is for (and who should look elsewhere)</h2>
+          <p>
+            If you’re the person with a groomed album of front/side/back shots
+            and a quiet suspicion that something’s changing even when the scale
+            isn’t — you’re the ICP.
+          </p>
+          <p>
+            If you’re shopping for an AI body-composition score as the main
+            reason to open the app — I’m not competing for that click.
+            <a href="LINK_REC42_ROUNDUP">Best Progress Photo Apps (2026)</a>
+            covers that split honestly, including GainFrame.
+          </p>
+          <p>
+            If you only need a private dump of gym selfies and you’ll never
+            compare them, Apple Photos Hidden album is free and fine. Recomp is
+            for when the dump stopped being enough.
+          </p>
+
+          <h2>Soft next steps</h2>
+          <p>If this story matches how you train:</p>
+          <ul>
+            <li>
+              Try
+              <strong
+                ><a
+                  href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
+                  >Recomp on the App Store</a
+                ></strong
+              >
+            </li>
+            <li>
+              If you’re still shopping the category, read the honest roundup:
+              <strong
+                ><a href="LINK_REC42_ROUNDUP"
+                  >Best Progress Photo Apps (2026)</a
+                ></strong
+              >
+              — includes GainFrame, Metamorph, Check-In, and where Recomp fits
+            </li>
+            <li>
+              Short version of who I am:
+              <strong><a href="../../about/">About</a></strong>
+            </li>
+            <li>
+              Coming: privacy / local-first deep dive and a practical how-to for
+              weekly gym progress photos (<a href="../../privacy/">Privacy</a>,
+              <strong>LINK_HOWTO</strong>)
+            </li>
+          </ul>
+          <p>
+            I’m still refining the edges. If something in this post doesn’t
+            match the app today, tell me — especially the year I started
+            lifting. I want that date right.
+          </p>
+          <p>
+            <em
+              >I’m Mark Stepchin. I build Recomp as a solo indie project because
+              I needed the tool and couldn’t find one that treated progress
+              photos like a first-class job.</em
+            >
+          </p>
+        </div>
+
+        <section
+          class="cta-panel mt-12"
+          aria-labelledby="article-cta-heading"
+        >
+          <h2 id="article-cta-heading" class="text-h3 font-bold tracking-h3">
+            Keep the photos where you can use them
+          </h2>
+          <p class="pt-3 text-muted">
+            Recomp is a local-first physique check-in app for progress photos —
+            scrub between dates, align poses, keep photos on your device. No AI
+            body-fat estimates.
+          </p>
+          <p class="pt-6">
+            <a
+              class="app-store-badge"
+              href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
+              aria-label="Download on the App Store"
+            >
+              <img
+                class="app-store-badge__img app-store-badge__img--black"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="app-store-badge__img app-store-badge__img--white"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </p>
+        </section>
+      </main>
+
+      <footer class="pt-8 pb-8">
+        <div class="mx-auto w-full max-w-[800px] px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-6">
+            <nav
+              class="flex flex-wrap gap-x-6 gap-y-3 text-micro"
+              aria-label="Footer"
+            >
+              <a
+                class="text-muted no-underline hover:text-fg hover:underline"
+                href="../"
+                >Blog</a
+              >
+              <a
+                class="text-muted no-underline hover:text-fg hover:underline"
+                href="../../about/"
+                >About</a
+              >
+              <a
+                class="text-muted no-underline hover:text-fg hover:underline"
+                href="../../privacy/"
+                >Privacy</a
+              >
+              <a
+                class="text-muted no-underline hover:text-fg hover:underline"
+                href="../../faq/"
+                >FAQ</a
+              >
+              <a
+                class="text-muted no-underline hover:text-fg hover:underline"
+                href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
+                >App Store</a
+              >
+            </nav>
+            <div
+              class="inline-flex items-center gap-1 rounded-full border border-card-border bg-card p-1.5"
+              role="group"
+              aria-label="Color theme"
+            >
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="system"
+                aria-pressed="true"
+              >
+                Auto
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="light"
+                aria-pressed="false"
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="dark"
+                aria-pressed="false"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../../js/posthog.js"></script>
+    <script src="../../js/theme.js"></script>
+  </body>
+</html>
