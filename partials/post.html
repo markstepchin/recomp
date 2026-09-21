@@ -3,45 +3,30 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Privacy — Recomp</title>
-    <meta
-      name="description"
-      content="Recomp does not upload your photos. Progress photos, weight, and notes stay on your iPhone. No account. No Recomp servers for your physique data."
-    />
-    <link rel="stylesheet" href="../styles/output.css" />
-    <link
-      rel="canonical"
-      href="https://markstepchin.github.io/recomp/privacy/"
-    />
-    <meta property="og:type" content="website" />
+    <title>Post title — Recomp</title>
+    <meta name="description" content="One-sentence description." />
+    <link rel="stylesheet" href="../../styles/output.css" />
+    <link rel="canonical" href="https://markstepchin.github.io/recomp/blog/post-slug/" />
+    <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Recomp" />
-    <meta property="og:title" content="Privacy — Recomp" />
-    <meta
-      property="og:description"
-      content="Recomp does not upload your photos. Check-ins stay on your iPhone."
-    />
-    <meta
-      property="og:url"
-      content="https://markstepchin.github.io/recomp/privacy/"
-    />
-    <meta
-      property="og:image"
-      content="https://markstepchin.github.io/recomp/assets/step-compare.webp?v=5"
-    />
+    <meta property="og:title" content="Post title" />
+    <meta property="og:description" content="One-sentence description." />
+    <meta property="og:url" content="https://markstepchin.github.io/recomp/blog/post-slug/" />
+    <meta property="og:image" content="https://markstepchin.github.io/recomp/assets/step-compare.webp?v=5" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="../assets/recomp-app-icon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="../assets/recomp-app-icon.png" />
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
   </head>
   <body>
     <div class="flex min-h-dvh flex-col">
-      <!-- chrome:header current="privacy" depth="1" -->
+      <!-- chrome:header current="blog" depth="2" -->
       <header class="site-header">
         <div
           class="mx-auto flex w-full max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4"
         >
           <a
             class="text-fg font-bold tracking-wordmark no-underline hover:no-underline"
-            href="../"
+            href="../../"
             >Recomp</a
           >
           <nav
@@ -49,19 +34,19 @@
             aria-label="Site"
           >
             <a
-              class="text-muted no-underline hover:text-fg hover:underline"
-              href="../blog/"
+              class="text-fg no-underline hover:underline"
+              href="../"
+              aria-current="page"
               >Blog</a
             >
             <a
               class="text-muted no-underline hover:text-fg hover:underline"
-              href="../about/"
+              href="../../about/"
               >About</a
             >
             <a
-              class="text-fg no-underline hover:underline"
-              href="../privacy/"
-              aria-current="page"
+              class="text-muted no-underline hover:text-fg hover:underline"
+              href="../../privacy/"
               >Privacy</a
             >
             <a
@@ -74,59 +59,18 @@
       </header>
       <!-- /chrome:header -->
 
-      <main class="mx-auto w-full max-w-[700px] flex-1 px-gutter py-12">
-        <p class="text-micro text-muted pb-3">Privacy</p>
-        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-3">
-          Your data stays on your device
-        </h1>
-        <p class="text-micro text-muted pb-8">Effective date: September 14, 2026</p>
-
+      <main class="mx-auto w-full max-w-[800px] flex-1 px-gutter py-12">
+        <p class="text-micro text-muted pb-3">
+          <a class="text-muted" href="../">Blog</a>
+          · Month Day, Year · Mark Stepchin
+        </p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-8">Post title</h1>
         <div class="article-prose">
-          <p>
-            Recomp is a local-first iOS app. Progress photos, weight, notes, and
-            other check-in details you add in the app
-            <strong>never leave your device</strong>. Recomp does not upload
-            them, does not create an account for you, and does not store your
-            physique data on a Recomp server.
-          </p>
-
-          <h2>What the app stores</h2>
-          <p>
-            Check-ins live in the app on your iPhone. Photos you import come
-            from your Photos library; Recomp does not scan your camera roll in
-            the background or send those images anywhere.
-          </p>
-          <p>
-            If you back up your phone with iCloud or a computer, those backups
-            follow Apple’s rules — the same as the rest of your photos. That is
-            your backup, not a Recomp upload.
-          </p>
-
-          <h2>What we do not do</h2>
-          <ul>
-            <li>No photo upload to Recomp</li>
-            <li>No social feed or sharing built into the app</li>
-            <li>No AI body-fat estimates</li>
-            <li>No advertising SDKs in the app for selling your data</li>
-            <li>No tracking you across other apps or websites from the app</li>
-          </ul>
-
-          <h2>This website</h2>
-          <p>
-            This GitHub Pages site is a marketing site. It does not receive your
-            in-app photos. It uses PostHog to record visits and clicks on these
-            pages — not the contents of the app.
-          </p>
-
-          <h2>Contact</h2>
-          <p>
-            Questions:
-            <a href="mailto:markstepchin@gmail.com">markstepchin@gmail.com</a>
-          </p>
+          <p>Article body.</p>
         </div>
       </main>
 
-      <!-- chrome:footer depth="1" -->
+      <!-- chrome:footer depth="2" -->
       <footer class="site-footer pt-8 pb-8">
         <div class="mx-auto w-full max-w-[800px] px-gutter">
           <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4">
@@ -134,22 +78,22 @@
               <div class="flex flex-wrap gap-x-6 gap-y-1">
                 <a
                   class="text-muted no-underline hover:text-fg hover:underline"
-                  href="../"
+                  href="../../"
                   >Home</a
                 >
                 <a
                   class="text-muted no-underline hover:text-fg hover:underline"
-                  href="../blog/"
+                  href="../"
                   >Blog</a
                 >
                 <a
                   class="text-muted no-underline hover:text-fg hover:underline"
-                  href="../about/"
+                  href="../../about/"
                   >About</a
                 >
                 <a
                   class="text-muted no-underline hover:text-fg hover:underline"
-                  href="../faq/"
+                  href="../../faq/"
                   >FAQ</a
                 >
                 <a
@@ -161,12 +105,12 @@
               <div class="flex flex-wrap gap-x-6 gap-y-1">
                 <a
                   class="text-muted no-underline hover:text-fg hover:underline"
-                  href="../privacy/"
+                  href="../../privacy/"
                   >Privacy</a
                 >
                 <a
                   class="text-muted no-underline hover:text-fg hover:underline"
-                  href="../support/"
+                  href="../../support/"
                   >Support</a
                 >
               </div>
@@ -205,8 +149,8 @@
         </div>
       </footer>
       <!-- /chrome:footer -->
+      <script src="../../js/posthog.js"></script>
+      <script src="../../js/theme.js"></script>
     </div>
-    <script src="../js/posthog.js"></script>
-    <script src="../js/theme.js"></script>
   </body>
 </html>
