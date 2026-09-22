@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://markstepchin.github.io/recomp/sitemap.xml
+Sitemap: https://progressphotos.app/sitemap.xml
