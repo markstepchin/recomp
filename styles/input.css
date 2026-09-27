@@ -565,7 +565,7 @@ html[data-theme="light"] .app-store-badge__img--black {
   color: var(--color-muted);
 }
 
-/* Founder post: text beside the photos-album shot once that file is uncommented. */
+/* Founder post: text beside the tall Photos album shot. */
 .founder-split:has(.founder-shot) {
   display: flex;
   flex-direction: column;
@@ -575,7 +575,7 @@ html[data-theme="light"] .app-store-badge__img--black {
 @media (min-width: 768px) {
   .founder-split:has(.founder-shot) {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) 260px;
     column-gap: 1.75rem;
     align-items: start;
   }
@@ -587,13 +587,23 @@ html[data-theme="light"] .app-store-badge__img--black {
 
 .founder-shot {
   margin: 0;
+  width: min(100%, 280px);
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  .founder-shot {
+    width: 260px;
+    align-self: start;
+  }
 }
 
 .founder-shot img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 16px;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-card-border);
 }
 
 .blog-backlog {
