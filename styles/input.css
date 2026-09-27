@@ -565,6 +565,37 @@ html[data-theme="light"] .app-store-badge__img--black {
   color: var(--color-muted);
 }
 
+/* Founder post: text beside the photos-album shot once that file is uncommented. */
+.founder-split:has(.founder-shot) {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .founder-split:has(.founder-shot) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 1.75rem;
+    align-items: start;
+  }
+
+  .founder-split:has(.founder-shot) .founder-split__copy {
+    order: -1;
+  }
+}
+
+.founder-shot {
+  margin: 0;
+}
+
+.founder-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
 .blog-backlog {
   display: grid;
   gap: 0.65rem;

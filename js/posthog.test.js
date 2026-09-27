@@ -105,6 +105,14 @@ assert.deepStrictEqual(ph.appStoreClickProps(click(badge), "/", "https://progres
   cta_location: "inline",
 });
 
+var articleFooter = el("a", main);
+articleFooter.attrs.href = "https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125";
+articleFooter.attrs["data-cta-location"] = "article_footer";
+assert.deepStrictEqual(
+  ph.appStoreClickProps(click(articleFooter), "/blog/why-i-built-recomp/", "https://progressphotos.app/blog/why-i-built-recomp/"),
+  { page_path: "/blog/why-i-built-recomp/", cta_location: "article_footer" }
+);
+
 var internal = el("a", header);
 internal.attrs.href = "../privacy/";
 assert.strictEqual(ph.appStoreClickProps(click(internal), "/about/", "https://progressphotos.app/about/"), null);
