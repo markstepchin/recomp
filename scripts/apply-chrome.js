@@ -1,10 +1,13 @@
 /**
- * Stamp partials/header.html and partials/footer.html into static pages.
+ * Stamp partials/header.html and partials/footer.html into static pages,
+ * and set each page's canonical and og:url from its path.
  * Cloudflare serves the HTML as-is, so the filled markup is what gets committed.
  * Edit the partials, then run `npm run build`.
  */
 import { readFileSync, writeFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
+
+const SITE_URL = "https://progressphotos.app";
 
 const root = new URL("..", import.meta.url).pathname;
 const headerPartial = readFileSync(join(root, "partials/header.html"), "utf8").trim();
@@ -106,6 +109,54 @@ function infer(html) {
   return { current, depth };
 }
 
+function publicUrl(rel) {
+  const normalized = rel.split("\\").join("/");
+  if (normalized === "partials/post.html") return `${SITE_URL}/blog/post-slug/`;
+  let path = normalized;
+  if (path.endsWith("/index.html")) path = path.slice(0, -"index.html".length);
+  else if (path === "index.html") path = "";
+  else path = path.replace(/\.html$/, "");
+  if (path === "" || path === "/") return `${SITE_URL}/`;
+  if (!path.endsWith("/")) path += "/";
+  return `${SITE_URL}/${path}`;
+}
+
+const tag = (name) => new RegExp(`<${name}\\b(?:[^>"']|"[^"]*"|'[^']*')*>`, "gi");
+
+function setAttr(markup, attr, value) {
+  const quoted = new RegExp(`\\b${attr}\\s*=\\s*(["'])[^"']*\\1`, "i");
+  if (quoted.test(markup)) {
+    return markup.replace(quoted, (_, quote) => `${attr}=${quote}${value}${quote}`);
+  }
+  return markup.replace(/\/?>$/, (end) => ` ${attr}="${value}"${end}`);
+}
+
+function stampHead(html, url) {
+  let canonicals = 0;
+  let next = html.replace(tag("link"), (el) => {
+    if (!/\brel\s*=\s*["']canonical["']/i.test(el)) return el;
+    canonicals += 1;
+    return canonicals === 1 ? setAttr(el, "href", url) : "";
+  });
+  if (canonicals === 0) {
+    next = next.replace(/<\/head>/i, `    <link rel="canonical" href="${url}" />\n  </head>`);
+  }
+
+  let ogUrls = 0;
+  next = next.replace(tag("meta"), (el) => {
+    if (!/\bproperty\s*=\s*["']og:url["']/i.test(el)) return el;
+    ogUrls += 1;
+    return ogUrls === 1 ? setAttr(el, "content", url) : "";
+  });
+  if (ogUrls === 0) {
+    next = next.replace(
+      /<link\b[^>]*\brel\s*=\s*["']canonical["'][^>]*>/i,
+      (el) => `${el}\n    <meta property="og:url" content="${url}" />`,
+    );
+  }
+  return next;
+}
+
 function apply(html) {
   const inferred = infer(html);
   let next = html;
@@ -160,7 +211,7 @@ for (const rel of targets) {
     continue;
   }
   if (!before.includes("site-footer") && !before.includes("chrome:footer")) continue;
-  const after = apply(before);
+  const after = stampHead(apply(before), publicUrl(rel));
   if (after !== before) {
     writeFileSync(path, after);
     changed += 1;
