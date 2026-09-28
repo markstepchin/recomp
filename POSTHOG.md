@@ -49,7 +49,7 @@ Break down Live events and insights by `utm_source` or `initial_utm_source`, and
 | Property | Value |
 | --- | --- |
 | `page_path` | `location.pathname` |
-| `cta_location` | `header` if the link is inside `<header>`, `footer` if inside `<footer>`, otherwise `inline` (hero and article badges) |
+| `cta_location` | `data-cta-location` on the link or an ancestor when set (the founder post button uses `article_footer`). Otherwise `header` if the link is inside `<header>`, `footer` if inside `<footer>`, or `inline` (hero and article badges). |
 
 Latest and first-touch attribution ride along as super properties on the same event. The capture uses `sendBeacon` so a same-tab hop to the App Store still sends.
 
@@ -62,7 +62,7 @@ Use a production host (not `localhost` — that skip is intentional). Open the s
 In PostHog: **Activity → Live events**.
 
 1. `$pageview` for that URL. Properties include `utm_source=tiktok` (and the other params above), `initial_utm_source=tiktok` on this first landing, plus `$referrer` / `$referring_domain` (or `$direct` when there is no referrer).
-2. Click a header **App Store** link, an in-page badge, and a footer **App Store** link. Each sends `app_store_click` with `page_path` and `cta_location` of `header`, `inline`, or `footer`.
+2. Click a header **App Store** link, an in-page badge, and a footer **App Store** link. Each sends `app_store_click` with `page_path` and `cta_location` of `header`, `inline`, or `footer`. The founder post’s “Download Recomp on the App Store” button sends `article_footer`.
 3. Open another page in the same browser with no query string. That `$pageview` still has `initial_utm_*` from the first landing. A new `utm_source` on a later visit updates `utm_source` and leaves `initial_utm_source` as the first value.
 
 ## Insight to save in the PostHog UI

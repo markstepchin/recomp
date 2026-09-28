@@ -61,11 +61,16 @@
     return null;
   }
 
-  // Nearest header/footer ancestor. Pages already mark those regions in HTML,
-  // so App Store clicks don't need new data attributes on the chrome.
+  // Nearest header/footer ancestor, unless the link or an ancestor sets
+  // data-cta-location. Chrome stays unmarked; the founder-post button uses
+  // article_footer so it is distinct from the site footer badge.
   function ctaLocation(element) {
     var node = element;
     while (node && node.nodeType === 1) {
+      if (typeof node.getAttribute === "function") {
+        var explicit = node.getAttribute("data-cta-location");
+        if (explicit) return explicit;
+      }
       var tag = elementTag(node);
       if (tag === "header") return "header";
       if (tag === "footer") return "footer";
