@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="system">
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto" data-theme="system">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -49,13 +49,13 @@
     <link rel="icon" href="assets/recomp-app-icon.png" type="image/png" />
     <link rel="apple-touch-icon" href="assets/recomp-app-icon.png" />
   </head>
-  <body>
+  <body class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]">
     <div>
       <main>
         <div class="page-grid relative isolate">
           <!-- Section 1: Hero -->
           <section
-            class="reveal-section pt-12 pb-section"
+            class="translate-y-2 opacity-0 transition-[opacity,transform] duration-[650ms] ease-out [&.is-revealed]:translate-none [&.is-revealed]:opacity-100 motion-reduce:!translate-none motion-reduce:!opacity-100 pt-12 pb-section"
             id="hero"
             data-reveal="load"
             aria-labelledby="hero-heading"
@@ -89,21 +89,21 @@
                 </button>
                 -->
                 <a
-                  class="app-store-badge mb-2 justify-self-center"
+                  class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] mb-2 justify-self-center"
                   href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Download on the App Store"
                 >
                   <img
-                    class="app-store-badge__img app-store-badge__img--black"
+                    class="hidden h-auto w-[140px] light:block"
                     src="assets/download-on-the-app-store-black.svg"
                     alt=""
                     width="140"
                     height="47"
                   />
                   <img
-                    class="app-store-badge__img app-store-badge__img--white"
+                    class="h-auto w-[140px] light:hidden"
                     src="assets/download-on-the-app-store-white.svg"
                     alt=""
                     width="140"
@@ -151,7 +151,7 @@
           </section>
 
           <section
-            class="reveal-section pt-section"
+            class="translate-y-2 opacity-0 transition-[opacity,transform] duration-[650ms] ease-out [&.is-revealed]:translate-none [&.is-revealed]:opacity-100 motion-reduce:!translate-none motion-reduce:!opacity-100 pt-section"
             id="how-it-works"
             data-reveal="scroll"
             aria-labelledby="how-heading"
@@ -346,7 +346,7 @@
 
         <!-- Section 7: FAQ -->
         <section
-          class="reveal-section relative bg-bg py-section"
+          class="translate-y-2 opacity-0 transition-[opacity,transform] duration-[650ms] ease-out [&.is-revealed]:translate-none [&.is-revealed]:opacity-100 motion-reduce:!translate-none motion-reduce:!opacity-100 relative bg-bg py-section"
           id="faq"
           data-reveal="scroll"
           aria-labelledby="faq-heading"
@@ -442,33 +442,33 @@
       </main>
 
       <!-- chrome:footer depth="0" -->
-      <footer class="site-footer pt-8 pb-8">
+      <footer class="pt-8 pb-8">
         <div class="mx-auto w-full max-w-[800px] px-gutter">
           <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4">
             <nav class="grid min-w-0 gap-y-1 text-micro" aria-label="Footer">
               <div class="flex flex-wrap gap-x-6 gap-y-1">
                 <a
-                  class="text-muted no-underline hover:text-fg hover:underline"
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="./"
                   >Home</a
                 >
                 <a
-                  class="text-muted no-underline hover:text-fg hover:underline"
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="blog/"
                   >Blog</a
                 >
                 <a
-                  class="text-muted no-underline hover:text-fg hover:underline"
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="about/"
                   >About</a
                 >
                 <a
-                  class="text-muted no-underline hover:text-fg hover:underline"
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="faq/"
                   >FAQ</a
                 >
                 <a
-                  class="text-muted no-underline hover:text-fg hover:underline"
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -477,12 +477,12 @@
               </div>
               <div class="flex flex-wrap gap-x-6 gap-y-1">
                 <a
-                  class="text-muted no-underline hover:text-fg hover:underline"
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="privacy/"
                   >Privacy</a
                 >
                 <a
-                  class="text-muted no-underline hover:text-fg hover:underline"
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="support/"
                   >Support</a
                 >
@@ -654,7 +654,9 @@
         }
 
         function whenHeroMediaReady(section) {
-          const badges = section.querySelectorAll(".app-store-badge__img");
+          const badges = section.querySelectorAll(
+            'a[aria-label="Download on the App Store"] img',
+          );
           const video = section.querySelector(".device--hero .device__media");
           const waits = [...badges].map(whenImageReady);
 

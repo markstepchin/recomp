@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="system">
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto" data-theme="system">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -62,15 +62,15 @@
       }
     </script>
   </head>
-  <body>
+  <body class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]">
     <div class="flex min-h-dvh flex-col">
       <!-- chrome:header current="blog" depth="2" -->
-      <header class="site-header">
+      <header class="border-b border-card-border">
         <div
-          class="mx-auto flex w-full max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4"
+          class="mx-auto flex w-full max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
         >
           <a
-            class="text-fg font-bold tracking-wordmark no-underline hover:no-underline"
+            class="text-fg font-bold tracking-wordmark no-underline hover:no-underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
             href="../../"
             >Recomp</a
           >
@@ -79,27 +79,27 @@
             aria-label="Site"
           >
             <a
-              class="text-fg no-underline hover:underline"
+              class="text-fg no-underline hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
               href="../"
               aria-current="page"
               >Blog</a
             >
             <a
-              class="app-store-badge shrink-0"
+              class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
               href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Download on the App Store"
             >
               <img
-                class="app-store-badge__img app-store-badge__img--black"
+                class="hidden h-auto w-[140px] light:block"
                 src="../../assets/download-on-the-app-store-black.svg"
                 alt=""
                 width="140"
                 height="47"
               />
               <img
-                class="app-store-badge__img app-store-badge__img--white"
+                class="h-auto w-[140px] light:hidden"
                 src="../../assets/download-on-the-app-store-white.svg"
                 alt=""
                 width="140"
@@ -120,11 +120,11 @@
           Why I created Recomp
         </h1>
 
-        <aside class="quick-answer" aria-labelledby="quick-answer-heading">
+        <aside class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]" aria-labelledby="quick-answer-heading">
           <h2 id="quick-answer-heading" class="text-h4 font-bold tracking-h4">
             Quick Answer
           </h2>
-          <p>
+          <p class="mt-3 text-muted">
             I built Recomp because after years of weekly progress photos, I
             couldn't find an app that made it fast to take, align, and compare
             them. Recomp does one job: a weekly photo and weight check-in that
@@ -134,19 +134,20 @@
           </p>
         </aside>
 
-        <div class="article-prose pt-4">
+        <div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4">
           <h2>How I Started Taking Progress Photos</h2>
-          <div class="founder-split">
-            <figure class="founder-shot">
+          <div class="flex flex-col gap-6 md:grid md:grid-cols-[minmax(0,1fr)_260px] md:items-start md:gap-x-7">
+            <figure class="m-0 w-[min(100%,280px)] self-center md:w-[260px] md:self-start">
               <img
+                class="block h-auto w-full rounded-card border border-card-border"
                 src="../../assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp"
                 alt="iOS Photos album showing hundreds of weekly front, side, and back progress photos from years of coaching check-ins"
                 width="1290"
                 height="2635"
               />
-              <figcaption>Years of weekly check-ins, still stuck in my camera roll.</figcaption>
+              <figcaption class="mt-[0.65rem] text-center text-caption leading-[1.4] text-muted">Years of weekly check-ins, still stuck in my camera roll.</figcaption>
             </figure>
-            <div class="founder-split__copy">
+            <div class="md:order-first [&>*+*]:mt-[1em]">
               <p>
                 After hitting a fat-loss plateau, I hired an online lifting
                 coach. Every week I sent front, side, and back photos, my
@@ -285,33 +286,33 @@
       </main>
 
       <!-- chrome:footer depth="2" -->
-      <footer class="site-footer pt-8 pb-8">
+      <footer class="pt-8 pb-8">
         <div class="mx-auto w-full max-w-[800px] px-gutter">
           <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4">
             <nav class="grid min-w-0 gap-y-1 text-micro" aria-label="Footer">
               <div class="flex flex-wrap gap-x-6 gap-y-1">
                 <a
-                  class="text-muted no-underline hover:text-fg hover:underline"
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="../../"
                   >Home</a
                 >
                 <a
-                  class="text-muted no-underline hover:text-fg hover:underline"
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="../"
                   >Blog</a
                 >
                 <a
-                  class="text-muted no-underline hover:text-fg hover:underline"
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="../../about/"
                   >About</a
                 >
                 <a
-                  class="text-muted no-underline hover:text-fg hover:underline"
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="../../faq/"
                   >FAQ</a
                 >
                 <a
-                  class="text-muted no-underline hover:text-fg hover:underline"
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -320,12 +321,12 @@
               </div>
               <div class="flex flex-wrap gap-x-6 gap-y-1">
                 <a
-                  class="text-muted no-underline hover:text-fg hover:underline"
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="../../privacy/"
                   >Privacy</a
                 >
                 <a
-                  class="text-muted no-underline hover:text-fg hover:underline"
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="../../support/"
                   >Support</a
                 >
