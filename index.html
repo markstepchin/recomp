@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Recomp: Progress Photo Tracker</title>
+    <!-- REC-63 draft. Mark writes the final title and description. -->
+    <title>Recomp: Progress Photo App for iPhone</title>
     <meta
       name="description"
-      content="Import one Photos album. See two years of work, side by side, in minutes."
+      content="Compare progress photos side by side with the weight from each date. Your photos stay on your device. Recomp is a free progress photo app for iPhone."
     />
     <link rel="stylesheet" href="styles/output.css" />
     <link
@@ -19,10 +20,10 @@
     <link rel="canonical" href="https://progressphotos.app/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Recomp" />
-    <meta property="og:title" content="Recomp: progress photo tracker" />
+    <meta property="og:title" content="Recomp: Progress Photo App for iPhone" />
     <meta
       property="og:description"
-      content="Import one Photos album. See two years of work, side by side, in minutes."
+      content="Compare progress photos side by side with the weight from each date. Your photos stay on your device. Recomp is a free progress photo app for iPhone."
     />
     <meta property="og:url" content="https://progressphotos.app/" />
     <meta
@@ -37,10 +38,10 @@
     <meta property="og:image:width" content="472" />
     <meta property="og:image:height" content="1024" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Recomp: progress photo tracker" />
+    <meta name="twitter:title" content="Recomp: Progress Photo App for iPhone" />
     <meta
       name="twitter:description"
-      content="Import one Photos album. See two years of work, side by side, in minutes."
+      content="Compare progress photos side by side with the weight from each date. Your photos stay on your device. Recomp is a free progress photo app for iPhone."
     />
     <meta
       name="twitter:image"
@@ -48,6 +49,87 @@
     />
     <link rel="icon" href="assets/recomp-app-icon.png" type="image/png" />
     <link rel="apple-touch-icon" href="assets/recomp-app-icon.png" />
+    <!-- No star rating in structured data until there are real App Store ratings. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Recomp",
+        "operatingSystem": "iOS",
+        "applicationCategory": "HealthApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "installUrl": "https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125",
+        "url": "https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is my data private?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your data never leaves your device. Recomp doesn't upload or share your data"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I track my macros or workouts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. There are many excellent alternatives for workout and calorie tracking. Recomp is a no fluff tool focused on 1 job and 1 job only: Visually track your results over time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the import work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "While you can add photos 1 check-in at a time, you can also select many photos at the same time. The app will automatically group them by date.\n\nFor large number of photos, we recommend that you group your photos into a Photos Collection. You can then import the entire collection with 1 tap.\n\nNote: Recomp doesn't scan or do any auto-detection."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why not simply use a Photos Collection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your photos are associated to your weight, notes, and more. This is especially useful to see what your body composition was in the past at the same weight."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why not simply use a Collage app, or a tool like Canva, Figma, or Photoshop?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "While these tools are powerful for showing a single comparison between 2 photos, they're a poor fit for quickly comparing hundreds of photos, their associated weights, and measurements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is an Android version coming?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, since I built this app primarily for myself, and I use an iPhone."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]">
     <div>
@@ -64,6 +146,7 @@
               class="mx-auto grid w-full max-w-[var(--max-width-hero)] justify-items-center gap-12 px-gutter text-center"
             >
               <div class="grid w-full max-w-[min(100%,var(--measure-lead))]">
+                <!-- REC-63 draft. Mark writes the final H1 and subhead. Keyword sits in the subhead. -->
                 <h1
                   id="hero-heading"
                   class="text-h1 font-bold tracking-h1 text-balance pb-6"
@@ -75,19 +158,8 @@
                 <p
                   class="mx-auto max-w-[var(--measure-lead)] text-lead text-muted pb-16"
                 >
-                  A side-by-side timeline of your photos, weight, and more
+                  A progress photo app for comparing photos and weight, side by side
                 </p>
-                <!--
-                <button
-                  type="button"
-                  class="mb-3 inline-flex min-h-11 cursor-pointer items-center justify-center justify-self-center rounded-full border-0 bg-accent px-[22px] py-3.5 text-base font-bold whitespace-nowrap text-white no-underline hover:bg-accent-hover hover:no-underline focus-visible:bg-accent-hover focus-visible:no-underline active:bg-accent-active"
-                  data-waitlist-open
-                  aria-haspopup="dialog"
-                  aria-controls="waitlist-modal"
-                >
-                  Get early access
-                </button>
-                -->
                 <a
                   class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] mb-2 justify-self-center"
                   href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
@@ -157,12 +229,17 @@
             aria-labelledby="how-heading"
           >
             <div class="mx-auto w-full max-w-[var(--max-width)] px-gutter">
-              <h1
+              <h2
                 id="how-heading"
                 class="text-center text-h1 font-bold tracking-h1 text-balance"
               >
                 How it works
-              </h1>
+              </h2>
+              <p class="mx-auto mt-4 max-w-[var(--measure-lead)] text-center text-balance text-muted">
+                An app for progress pictures you can compare with weight. Read
+                <a href="blog/why-i-built-recomp/">why I built Recomp</a>, or the
+                <a href="blog/how-to-take-progress-photos-for-recomp/">guide to taking progress photos</a>.
+              </p>
             </div>
 
             <div class="how-visual mt-10">
@@ -212,8 +289,9 @@
                         </h4>
                       </div>
                       <p class="text-muted text-sm">
-                        Select photos or import an entire album. Apple Health
-                        support for weight coming soon!
+                        Select photos or import an entire album of progress
+                        pictures. Recomp groups them by date into check-ins, and
+                        Apple Health support for weight is coming soon.
                       </p>
                     </div>
                   </article>
@@ -254,7 +332,9 @@
                         </h4>
                       </div>
                       <p class="text-muted text-sm">
-                        Quickly navigate between photos & weights
+                        See two photos side by side, with the weight from each
+                        date. Move between check-ins to pick the comparison you
+                        want.
                       </p>
                     </div>
                   </article>
@@ -294,7 +374,10 @@
                           Align your photos
                         </h4>
                       </div>
-                      <p class="text-muted text-sm">Pan, zoom, and rotate</p>
+                      <p class="text-muted text-sm">
+                        Pan, zoom, and rotate each photo until the framing lines
+                        up. You place them yourself, with no automatic alignment.
+                      </p>
                     </div>
                   </article>
                   <article
@@ -334,7 +417,9 @@
                         </h4>
                       </div>
                       <p class="text-muted text-sm">
-                        Optional reminders for consistency
+                        Add the next check-in with photos, weight, and an
+                        optional note. Turn on a reminder if you want help
+                        staying consistent.
                       </p>
                     </div>
                   </article>
@@ -352,12 +437,12 @@
           aria-labelledby="faq-heading"
         >
           <div class="mx-auto w-full max-w-[800px] px-gutter">
-            <h1
+            <h2
               id="faq-heading"
               class="text-center text-h1 font-bold tracking-h1 text-balance"
             >
               FAQs
-            </h1>
+            </h2>
             <div class="faq mt-10 grid gap-3">
               <details>
                 <summary>Is my data private?</summary>
