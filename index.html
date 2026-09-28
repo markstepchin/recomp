@@ -3,11 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- REC-63 draft. Mark writes the final title and description. -->
     <title>Recomp: Progress Photo App for iPhone</title>
     <meta
       name="description"
-      content="Compare progress photos side by side with the weight from each date. Your photos stay on your device. Recomp is a free progress photo app for iPhone."
+      content="Import years of progress photos from your camera roll and compare them side by side with your weight. Free for iPhone, and your photos never leave your device."
     />
     <link rel="stylesheet" href="styles/output.css" />
     <link
@@ -23,7 +22,7 @@
     <meta property="og:title" content="Recomp: Progress Photo App for iPhone" />
     <meta
       property="og:description"
-      content="Compare progress photos side by side with the weight from each date. Your photos stay on your device. Recomp is a free progress photo app for iPhone."
+      content="Import years of progress photos from your camera roll and compare them side by side with your weight. Free for iPhone, and your photos never leave your device."
     />
     <meta property="og:url" content="https://progressphotos.app/" />
     <meta
@@ -41,7 +40,7 @@
     <meta name="twitter:title" content="Recomp: Progress Photo App for iPhone" />
     <meta
       name="twitter:description"
-      content="Compare progress photos side by side with the weight from each date. Your photos stay on your device. Recomp is a free progress photo app for iPhone."
+      content="Import years of progress photos from your camera roll and compare them side by side with your weight. Free for iPhone, and your photos never leave your device."
     />
     <meta
       name="twitter:image"
@@ -62,8 +61,9 @@
           "price": "0",
           "priceCurrency": "USD"
         },
+        "url": "https://progressphotos.app/",
         "installUrl": "https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125",
-        "url": "https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
+        "sameAs": "https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
       }
     </script>
     <script type="application/ld+json">
@@ -146,7 +146,6 @@
               class="mx-auto grid w-full max-w-[var(--max-width-hero)] justify-items-center gap-12 px-gutter text-center"
             >
               <div class="grid w-full max-w-[min(100%,var(--measure-lead))]">
-                <!-- REC-63 draft. Mark writes the final H1 and subhead. Keyword sits in the subhead. -->
                 <h1
                   id="hero-heading"
                   class="text-h1 font-bold tracking-h1 text-balance pb-6"
@@ -158,13 +157,14 @@
                 <p
                   class="mx-auto max-w-[var(--measure-lead)] text-lead text-muted pb-16"
                 >
-                  A progress photo app for comparing photos and weight, side by side
+                  The progress photo app that puts your photos and weight on one side-by-side timeline.
                 </p>
                 <a
                   class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] mb-2 justify-self-center"
                   href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-cta-location="hero"
                   aria-label="Download on the App Store"
                 >
                   <img
@@ -235,11 +235,6 @@
               >
                 How it works
               </h2>
-              <p class="mx-auto mt-4 max-w-[var(--measure-lead)] text-center text-balance text-muted">
-                An app for progress pictures you can compare with weight. Read
-                <a href="blog/why-i-built-recomp/">why I built Recomp</a>, or the
-                <a href="blog/how-to-take-progress-photos-for-recomp/">guide to taking progress photos</a>.
-              </p>
             </div>
 
             <div class="how-visual mt-10">
@@ -285,12 +280,13 @@
                           1
                         </div>
                         <h4 class="text-h4 font-bold tracking-h4">
-                          Import your data
+                          Import your photos
                         </h4>
                       </div>
                       <p class="text-muted text-sm">
-                        Select photos or import an entire album of progress
-                        pictures. Recomp groups them by date into check-ins, and
+                        Add one check-in at a time, or select many photos at once
+                        and Recomp groups them by date. Keep years of photos in a
+                        Photos collection? Import the whole thing in one tap.
                         Apple Health support for weight is coming soon.
                       </p>
                     </div>
@@ -332,9 +328,8 @@
                         </h4>
                       </div>
                       <p class="text-muted text-sm">
-                        See two photos side by side, with the weight from each
-                        date. Move between check-ins to pick the comparison you
-                        want.
+                        Put any two check-ins side by side and jump between dates
+                        instantly, with your weight next to each photo.
                       </p>
                     </div>
                   </article>
@@ -375,8 +370,8 @@
                         </h4>
                       </div>
                       <p class="text-muted text-sm">
-                        Pan, zoom, and rotate each photo until the framing lines
-                        up. You place them yourself, with no automatic alignment.
+                        Pan, zoom, and rotate each photo so your poses line up
+                        and changes are easier to see.
                       </p>
                     </div>
                   </article>
@@ -417,13 +412,18 @@
                         </h4>
                       </div>
                       <p class="text-muted text-sm">
-                        Add the next check-in with photos, weight, and an
-                        optional note. Turn on a reminder if you want help
-                        staying consistent.
+                        Set optional reminders to keep your weekly check-ins
+                        consistent.
                       </p>
                     </div>
                   </article>
                 </div>
+                <p class="mx-auto mt-10 max-w-[var(--measure-lead)] text-center text-balance text-muted">
+                  New to progress photos? Read
+                  <a href="/blog/how-to-take-progress-photos-for-recomp/">how to take consistent progress photos</a>,
+                  or see
+                  <a href="/blog/why-i-built-recomp/">why I created Recomp</a>.
+                </p>
               </div>
             </div>
           </section>
@@ -524,6 +524,49 @@
             </div>
           </div>
         </section>
+
+        <section class="bg-bg pb-section" aria-label="A note from Mark Stepchin">
+          <div class="mx-auto w-full max-w-[800px] px-gutter">
+            <div
+              class="mx-auto grid w-[min(100%,440px)] justify-items-center rounded-card border border-card-border bg-card px-6 pt-7 pb-6 text-center shadow-card"
+            >
+              <blockquote class="mb-5 text-body leading-body text-muted">
+                <p>
+                  This project is personal. I'm building the compare tool I always
+                  wanted as a lifter, and I'm genuinely excited to finally share it.
+                  I'm always open to feedback, and I appreciate anything you want to
+                  share.
+                </p>
+                <footer class="mt-2.5 text-micro text-fg">
+                  — Mark Stepchin, app developer
+                </footer>
+              </blockquote>
+              <a
+                class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85]"
+                href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cta-location="footer_cta"
+                aria-label="Download on the App Store"
+              >
+                <img
+                  class="hidden h-auto w-[140px] light:block"
+                  src="assets/download-on-the-app-store-black.svg"
+                  alt=""
+                  width="140"
+                  height="47"
+                />
+                <img
+                  class="h-auto w-[140px] light:hidden"
+                  src="assets/download-on-the-app-store-white.svg"
+                  alt=""
+                  width="140"
+                  height="47"
+                />
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
 
       <!-- chrome:footer depth="0" -->
@@ -608,74 +651,6 @@
       </footer>
       <!-- /chrome:footer -->
     </div>
-
-    <dialog
-      class="m-0 h-dvh max-h-dvh w-screen max-w-[100vw] border-0 bg-transparent p-gutter text-fg backdrop:bg-[color-mix(in_srgb,#000_52%,transparent)] open:grid open:place-items-center"
-      id="waitlist-modal"
-      aria-labelledby="waitlist-modal-heading"
-    >
-      <div
-        class="relative w-[min(100%,440px)] rounded-card border border-card-border bg-card px-6 pt-7 pb-6 shadow-card"
-      >
-        <button
-          type="button"
-          class="absolute top-4 right-4 grid size-9 place-items-center rounded-full border-0 bg-transparent p-0 text-2xl leading-none text-muted hover:bg-accent-tint hover:text-fg focus-visible:bg-accent-tint focus-visible:text-fg"
-          data-waitlist-close
-          aria-label="Close"
-        >
-          <span aria-hidden="true">×</span>
-        </button>
-        <h2
-          id="waitlist-modal-heading"
-          class="pr-9 text-h3 font-bold tracking-h3"
-        >
-          Get early access
-        </h2>
-        <blockquote class="mt-3 mb-5 text-body leading-body text-muted">
-          <p>
-            This project is personal. I'm building the compare tool I always
-            wanted as a lifter, and I'm genuinely excited to finally share it.
-            I'm always open to feedback, and I appreciate anything you want to
-            share.
-          </p>
-          <footer class="mt-2.5 text-micro text-fg">
-            — Mark Stepchin, app developer
-          </footer>
-        </blockquote>
-        <form class="grid w-full gap-2 text-left" data-waitlist>
-          <label
-            class="text-sm font-medium text-fg in-[.is-success]:hidden"
-            for="waitlist-email"
-            >Email</label
-          >
-          <div
-            class="grid gap-3 in-[.is-success]:hidden sm:grid-cols-[1fr_auto] sm:items-stretch"
-          >
-            <input
-              id="waitlist-email"
-              class="min-h-11 w-full rounded-xl border border-card-border bg-bg px-4 py-3 text-input text-fg placeholder:text-muted placeholder:opacity-100"
-              type="email"
-              name="email"
-              inputmode="email"
-              autocomplete="email"
-              required
-              placeholder="you@email.com"
-            />
-            <button
-              type="submit"
-              class="inline-flex min-h-11 cursor-pointer items-center justify-center rounded-full border-0 bg-accent px-[22px] py-3.5 text-base font-bold whitespace-nowrap text-white no-underline hover:bg-accent-hover hover:no-underline focus-visible:bg-accent-hover focus-visible:no-underline active:bg-accent-active"
-            >
-              Get early access
-            </button>
-          </div>
-          <p
-            class="waitlist__status m-0 min-h-[1.2em] text-helper text-muted data-[state=error]:font-medium data-[state=error]:text-error data-[state=success]:text-success"
-            role="status"
-            aria-live="polite"
-          ></p>
-        </form>
-      </div>
-    </dialog>
 
     <script src="js/posthog.js"></script>
     <script>
@@ -946,70 +921,6 @@
                 panel.style.height = "";
               });
             });
-          });
-        }
-
-        const waitlistModal = document.getElementById("waitlist-modal");
-        const waitlistForm = waitlistModal
-          ? waitlistModal.querySelector("[data-waitlist]")
-          : null;
-
-        function openWaitlistModal() {
-          if (!waitlistModal) return;
-          waitlistModal.showModal();
-          const input = waitlistModal.querySelector('input[type="email"]');
-          if (
-            input &&
-            waitlistForm &&
-            !waitlistForm.classList.contains("is-success")
-          ) {
-            input.focus();
-          }
-        }
-
-        function closeWaitlistModal() {
-          if (!waitlistModal || !waitlistModal.open) return;
-          waitlistModal.close();
-        }
-
-        document.querySelectorAll("[data-waitlist-open]").forEach((button) => {
-          button.addEventListener("click", openWaitlistModal);
-        });
-
-        document.querySelectorAll("[data-waitlist-close]").forEach((button) => {
-          button.addEventListener("click", closeWaitlistModal);
-        });
-
-        if (waitlistModal) {
-          waitlistModal.addEventListener("click", (event) => {
-            if (event.target === waitlistModal) closeWaitlistModal();
-          });
-        }
-
-        function setFormState(form, state, message) {
-          const status = form.querySelector(".waitlist__status");
-          status.dataset.state = state;
-          status.textContent = message;
-          form.classList.toggle("is-success", state === "success");
-        }
-
-        if (waitlistForm) {
-          waitlistForm.addEventListener("submit", (event) => {
-            event.preventDefault();
-            const input = waitlistForm.querySelector('input[type="email"]');
-            const email = (input.value || "").trim();
-
-            if (!input.checkValidity()) {
-              setFormState(waitlistForm, "error", "Enter a valid email.");
-              input.focus();
-              return;
-            }
-
-            setFormState(
-              waitlistForm,
-              "success",
-              "You're on the list. We'll email you when your invite is ready.",
-            );
           });
         }
       })();
