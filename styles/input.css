@@ -560,6 +560,16 @@ html[data-theme="light"] .app-store-badge__img--black {
   padding: 1.35rem 1.4rem;
 }
 
+.blog-card h3 a {
+  color: var(--color-fg);
+  text-decoration: none;
+}
+
+.blog-card h3 a:hover,
+.blog-card h3 a:focus-visible {
+  text-decoration: underline;
+}
+
 .quick-answer p {
   margin-top: 0.75rem;
   color: var(--color-muted);
@@ -583,6 +593,10 @@ html[data-theme="light"] .app-store-badge__img--black {
   .founder-split:has(.founder-shot) .founder-split__copy {
     order: -1;
   }
+}
+
+.founder-split__copy > * + * {
+  margin-top: 1em;
 }
 
 .founder-shot {
