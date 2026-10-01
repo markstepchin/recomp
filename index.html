@@ -1,7 +1,41 @@
+<!-- test push 2026-09-29: verifying GitHub Pages stays unpublished -->
 <!doctype html>
 <html lang="en" class="scroll-smooth motion-reduce:scroll-auto" data-theme="system">
   <head>
     <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Recomp: Progress Photo App for iPhone</title>
     <meta
@@ -62,8 +96,8 @@
           "priceCurrency": "USD"
         },
         "url": "https://progressphotos.app/",
-        "installUrl": "https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125",
-        "sameAs": "https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
+        "installUrl": "https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125",
+        "sameAs": "https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
       }
     </script>
     <script type="application/ld+json">
@@ -161,7 +195,7 @@
                 </p>
                 <a
                   class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] mb-2 justify-self-center"
-                  href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
+                  href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-cta-location="hero"
@@ -287,7 +321,6 @@
                         Add one check-in at a time, or select many photos at once
                         and Recomp groups them by date. Keep years of photos in a
                         Photos collection? Import the whole thing in one tap.
-                        Apple Health support for weight is coming soon.
                       </p>
                     </div>
                   </article>
@@ -543,7 +576,7 @@
               </blockquote>
               <a
                 class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85]"
-                href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
+                href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cta-location="footer_cta"
@@ -590,18 +623,6 @@
                   href="about/"
                   >About</a
                 >
-                <a
-                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
-                  href="faq/"
-                  >FAQ</a
-                >
-                <a
-                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
-                  href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >App Store</a
-                >
               </div>
               <div class="flex flex-wrap gap-x-6 gap-y-1">
                 <a
@@ -613,6 +634,11 @@
                   class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="support/"
                   >Support</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+                  href="roadmap/"
+                  >Roadmap</a
                 >
               </div>
             </nav>
