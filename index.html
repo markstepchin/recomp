@@ -1,6 +1,10 @@
 <!-- test push 2026-09-29: verifying GitHub Pages stays unpublished -->
 <!doctype html>
-<html lang="en" class="scroll-smooth motion-reduce:scroll-auto" data-theme="system">
+<html
+  lang="en"
+  class="scroll-smooth motion-reduce:scroll-auto"
+  data-theme="system"
+>
   <head>
     <meta charset="utf-8" />
     <!-- chrome:theme -->
@@ -37,10 +41,10 @@
     </style>
     <!-- /chrome:theme -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Recomp: Progress Photo Tracker</title>
+    <title>Recomp: Progress Photo App for iPhone</title>
     <meta
       name="description"
-      content="Import one Photos album. See two years of work, side by side, in minutes."
+      content="Recomp is a free progress photo app for iPhone. Import one Photos album. See two years of work, side by side, in minutes. Your photos never leave your device."
     />
     <link rel="stylesheet" href="styles/output.css" />
     <link
@@ -53,37 +57,124 @@
     <link rel="canonical" href="https://progressphotos.app/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Recomp" />
-    <meta property="og:title" content="Recomp: progress photo tracker" />
+    <meta property="og:title" content="Recomp: Progress Photo App for iPhone" />
     <meta
       property="og:description"
-      content="Import one Photos album. See two years of work, side by side, in minutes."
+      content="Recomp is a free progress photo app for iPhone. Import one Photos album. See two years of work, side by side, in minutes. Your photos never leave your device."
     />
     <meta property="og:url" content="https://progressphotos.app/" />
     <meta
       property="og:image"
-      content="https://progressphotos.app/assets/step-compare.webp?v=5"
+      content="https://progressphotos.app/assets/og-compare.webp?v=6"
     />
     <meta
       property="og:image:alt"
-      content="Recomp compare screen with two dated physique photos side by side"
+      content="Recomp compare screen with two physique photos side by side, including weights and dates"
     />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:width" content="472" />
-    <meta property="og:image:height" content="1024" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Recomp: progress photo tracker" />
+    <meta
+      name="twitter:title"
+      content="Recomp: Progress Photo App for iPhone"
+    />
     <meta
       name="twitter:description"
-      content="Import one Photos album. See two years of work, side by side, in minutes."
+      content="Recomp is a free progress photo app for iPhone. Import one Photos album. See two years of work, side by side, in minutes. Your photos never leave your device."
     />
     <meta
       name="twitter:image"
-      content="https://progressphotos.app/assets/step-compare.webp?v=5"
+      content="https://progressphotos.app/assets/og-compare.webp?v=6"
     />
     <link rel="icon" href="assets/recomp-app-icon.png" type="image/png" />
     <link rel="apple-touch-icon" href="assets/recomp-app-icon.png" />
+    <!-- No star rating in structured data until there are real App Store ratings. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Recomp",
+        "operatingSystem": "iOS",
+        "applicationCategory": "HealthApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "url": "https://progressphotos.app/",
+        "installUrl": "https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125",
+        "sameAs": "https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is my data private?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your data never leaves your device. Recomp doesn't upload or share your data."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I track my macros or workouts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. There are many excellent alternatives for workout and calorie tracking. Recomp is a no fluff tool focused on 1 job and 1 job only: Visually track your results over time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the import work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "While you can add photos 1 check-in at a time, you can also select many photos at the same time. The app will automatically group them by date.\n\nFor large number of photos, we recommend that you group your photos into a Photos Collection. You can then import the entire collection with 1 tap.\n\nNote: Recomp doesn't scan or do any auto-detection."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why not simply use a Photos Collection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your photos are associated to your weight, notes, and more. This is especially useful to see what your body composition was in the past at the same weight."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why not simply use a Collage app, or a tool like Canva, Figma, or Photoshop?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "While these tools are powerful for showing a single comparison between 2 photos, they're a poor fit for quickly comparing hundreds of photos and their associated weights."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is an Android version coming?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, since I built this app primarily for myself, and I use an iPhone."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
-  <body class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]">
+  <body
+    class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]"
+  >
     <div>
       <main>
         <div class="page-grid relative isolate">
@@ -109,24 +200,15 @@
                 <p
                   class="mx-auto max-w-[var(--measure-lead)] text-lead text-muted pb-16"
                 >
-                  A side-by-side timeline of your photos, weight, and more
+                  A side-by-side timeline of your progress photos, weight, and
+                  more.
                 </p>
-                <!--
-                <button
-                  type="button"
-                  class="mb-3 inline-flex min-h-11 cursor-pointer items-center justify-center justify-self-center rounded-full border-0 bg-accent px-[22px] py-3.5 text-base font-bold whitespace-nowrap text-white no-underline hover:bg-accent-hover hover:no-underline focus-visible:bg-accent-hover focus-visible:no-underline active:bg-accent-active"
-                  data-waitlist-open
-                  aria-haspopup="dialog"
-                  aria-controls="waitlist-modal"
-                >
-                  Get early access
-                </button>
-                -->
                 <a
                   class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] mb-2 justify-self-center"
-                  href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
+                  href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-cta-location="hero"
                   aria-label="Download on the App Store"
                 >
                   <img
@@ -191,12 +273,12 @@
             aria-labelledby="how-heading"
           >
             <div class="mx-auto w-full max-w-[var(--max-width)] px-gutter">
-              <h1
+              <h2
                 id="how-heading"
                 class="text-center text-h1 font-bold tracking-h1 text-balance"
               >
                 How it works
-              </h1>
+              </h2>
             </div>
 
             <div class="how-visual mt-10">
@@ -246,8 +328,8 @@
                         </h4>
                       </div>
                       <p class="text-muted text-sm">
-                        Select photos or import an entire album. Apple Health
-                        support for weight coming soon!
+                        Select photos individually or import an entire album.
+                        Optionally import your weight from a CSV
                       </p>
                     </div>
                   </article>
@@ -386,19 +468,19 @@
           aria-labelledby="faq-heading"
         >
           <div class="mx-auto w-full max-w-[800px] px-gutter">
-            <h1
+            <h2
               id="faq-heading"
               class="text-center text-h1 font-bold tracking-h1 text-balance"
             >
               FAQs
-            </h1>
+            </h2>
             <div class="faq mt-10 grid gap-3">
               <details>
                 <summary>Is my data private?</summary>
                 <div class="faq__panel">
                   <div class="faq__answer">
                     Your data never leaves your device. Recomp doesn't upload or
-                    share your data
+                    share your data.
                   </div>
                 </div>
               </details>
@@ -448,8 +530,7 @@
                   <div class="faq__answer">
                     While these tools are powerful for showing a single
                     comparison between 2 photos, they're a poor fit for quickly
-                    comparing hundreds of photos, their associated weights, and
-                    measurements.
+                    comparing hundreds of photos and their associated weights.
                   </div>
                 </div>
               </details>
@@ -550,74 +631,6 @@
       </footer>
       <!-- /chrome:footer -->
     </div>
-
-    <dialog
-      class="m-0 h-dvh max-h-dvh w-screen max-w-[100vw] border-0 bg-transparent p-gutter text-fg backdrop:bg-[color-mix(in_srgb,#000_52%,transparent)] open:grid open:place-items-center"
-      id="waitlist-modal"
-      aria-labelledby="waitlist-modal-heading"
-    >
-      <div
-        class="relative w-[min(100%,440px)] rounded-card border border-card-border bg-card px-6 pt-7 pb-6 shadow-card"
-      >
-        <button
-          type="button"
-          class="absolute top-4 right-4 grid size-9 place-items-center rounded-full border-0 bg-transparent p-0 text-2xl leading-none text-muted hover:bg-accent-tint hover:text-fg focus-visible:bg-accent-tint focus-visible:text-fg"
-          data-waitlist-close
-          aria-label="Close"
-        >
-          <span aria-hidden="true">×</span>
-        </button>
-        <h2
-          id="waitlist-modal-heading"
-          class="pr-9 text-h3 font-bold tracking-h3"
-        >
-          Get early access
-        </h2>
-        <blockquote class="mt-3 mb-5 text-body leading-body text-muted">
-          <p>
-            This project is personal. I'm building the compare tool I always
-            wanted as a lifter, and I'm genuinely excited to finally share it.
-            I'm always open to feedback, and I appreciate anything you want to
-            share.
-          </p>
-          <footer class="mt-2.5 text-micro text-fg">
-            — Mark Stepchin, app developer
-          </footer>
-        </blockquote>
-        <form class="grid w-full gap-2 text-left" data-waitlist>
-          <label
-            class="text-sm font-medium text-fg in-[.is-success]:hidden"
-            for="waitlist-email"
-            >Email</label
-          >
-          <div
-            class="grid gap-3 in-[.is-success]:hidden sm:grid-cols-[1fr_auto] sm:items-stretch"
-          >
-            <input
-              id="waitlist-email"
-              class="min-h-11 w-full rounded-xl border border-card-border bg-bg px-4 py-3 text-input text-fg placeholder:text-muted placeholder:opacity-100"
-              type="email"
-              name="email"
-              inputmode="email"
-              autocomplete="email"
-              required
-              placeholder="you@email.com"
-            />
-            <button
-              type="submit"
-              class="inline-flex min-h-11 cursor-pointer items-center justify-center rounded-full border-0 bg-accent px-[22px] py-3.5 text-base font-bold whitespace-nowrap text-white no-underline hover:bg-accent-hover hover:no-underline focus-visible:bg-accent-hover focus-visible:no-underline active:bg-accent-active"
-            >
-              Get early access
-            </button>
-          </div>
-          <p
-            class="waitlist__status m-0 min-h-[1.2em] text-helper text-muted data-[state=error]:font-medium data-[state=error]:text-error data-[state=success]:text-success"
-            role="status"
-            aria-live="polite"
-          ></p>
-        </form>
-      </div>
-    </dialog>
 
     <script src="js/posthog.js"></script>
     <script>
@@ -888,70 +901,6 @@
                 panel.style.height = "";
               });
             });
-          });
-        }
-
-        const waitlistModal = document.getElementById("waitlist-modal");
-        const waitlistForm = waitlistModal
-          ? waitlistModal.querySelector("[data-waitlist]")
-          : null;
-
-        function openWaitlistModal() {
-          if (!waitlistModal) return;
-          waitlistModal.showModal();
-          const input = waitlistModal.querySelector('input[type="email"]');
-          if (
-            input &&
-            waitlistForm &&
-            !waitlistForm.classList.contains("is-success")
-          ) {
-            input.focus();
-          }
-        }
-
-        function closeWaitlistModal() {
-          if (!waitlistModal || !waitlistModal.open) return;
-          waitlistModal.close();
-        }
-
-        document.querySelectorAll("[data-waitlist-open]").forEach((button) => {
-          button.addEventListener("click", openWaitlistModal);
-        });
-
-        document.querySelectorAll("[data-waitlist-close]").forEach((button) => {
-          button.addEventListener("click", closeWaitlistModal);
-        });
-
-        if (waitlistModal) {
-          waitlistModal.addEventListener("click", (event) => {
-            if (event.target === waitlistModal) closeWaitlistModal();
-          });
-        }
-
-        function setFormState(form, state, message) {
-          const status = form.querySelector(".waitlist__status");
-          status.dataset.state = state;
-          status.textContent = message;
-          form.classList.toggle("is-success", state === "success");
-        }
-
-        if (waitlistForm) {
-          waitlistForm.addEventListener("submit", (event) => {
-            event.preventDefault();
-            const input = waitlistForm.querySelector('input[type="email"]');
-            const email = (input.value || "").trim();
-
-            if (!input.checkValidity()) {
-              setFormState(waitlistForm, "error", "Enter a valid email.");
-              input.focus();
-              return;
-            }
-
-            setFormState(
-              waitlistForm,
-              "success",
-              "You're on the list. We'll email you when your invite is ready.",
-            );
           });
         }
       })();
