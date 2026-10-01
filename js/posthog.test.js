@@ -70,7 +70,7 @@ assert.deepStrictEqual(campaign.once, [{ initial_utm_source: "tiktok", initial_g
 assert.deepStrictEqual(campaign.latest, [{ utm_source: "tiktok", gclid: "G1" }]);
 
 assert.strictEqual(
-  ph.isAppStoreHref("https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"),
+  ph.isAppStoreHref("https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"),
   true
 );
 assert.strictEqual(ph.isAppStoreHref("http://itunes.apple.com/app/id6760444125"), true);
@@ -81,7 +81,7 @@ assert.strictEqual(ph.isAppStoreHref("#hero"), false);
 
 var header = el("header");
 var headerLink = el("a", header);
-headerLink.attrs.href = "https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125";
+headerLink.attrs.href = "https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125";
 var headerImg = el("img", headerLink);
 assert.strictEqual(ph.ctaLocation(headerLink), "header");
 assert.deepStrictEqual(ph.appStoreClickProps(click(headerImg), "/about/", "https://progressphotos.app/about/"), {
@@ -91,7 +91,7 @@ assert.deepStrictEqual(ph.appStoreClickProps(click(headerImg), "/about/", "https
 
 var footer = el("footer");
 var footerLink = el("a", footer);
-footerLink.attrs.href = "https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125";
+footerLink.attrs.href = "https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125";
 assert.deepStrictEqual(ph.appStoreClickProps(click(footerLink), "/blog/", "https://progressphotos.app/blog/"), {
   page_path: "/blog/",
   cta_location: "footer",
@@ -99,14 +99,14 @@ assert.deepStrictEqual(ph.appStoreClickProps(click(footerLink), "/blog/", "https
 
 var main = el("main");
 var badge = el("a", main);
-badge.attrs.href = "https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125";
+badge.attrs.href = "https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125";
 assert.deepStrictEqual(ph.appStoreClickProps(click(badge), "/", "https://progressphotos.app/"), {
   page_path: "/",
   cta_location: "inline",
 });
 
 var articleFooter = el("a", main);
-articleFooter.attrs.href = "https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125";
+articleFooter.attrs.href = "https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125";
 articleFooter.attrs["data-cta-location"] = "article_footer";
 assert.deepStrictEqual(
   ph.appStoreClickProps(click(articleFooter), "/blog/why-i-built-recomp/", "https://progressphotos.app/blog/why-i-built-recomp/"),

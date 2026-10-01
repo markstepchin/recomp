@@ -9,4 +9,4 @@
 - [About](https://progressphotos.app/about/): Mark Stepchin, independent developer
 - [Privacy](https://progressphotos.app/privacy/): App data never leaves the device; no upload
 - [FAQ](https://progressphotos.app/faq/): Short answers (longer FAQ coming)
-- [App Store](https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125): Download Recomp for iPhone
+- [App Store](https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125): Download Recomp for iPhone
