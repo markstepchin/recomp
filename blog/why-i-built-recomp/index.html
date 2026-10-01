@@ -6,6 +6,39 @@
 >
   <head>
     <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Why I created Recomp — Recomp</title>
     <meta
@@ -267,13 +300,13 @@
             </li>
           </ol>
           <p>
-            I quickly realized that building a fast, intuitive photo gallery and
-            editor sounds easy. In practice it comes with a mountain of
-            invisible work that nobody notices until something goes wrong. That
-            also explained why the apps I'd tried felt the way they did. The
-            first 90% is less than 10% of the work, and I'm still chipping away
-            at the last 10%. If you run into an edge case or have any feedback,
-            I'd love to hear from you at
+            I quickly realized that building a performant, intuitive photo
+            gallery and editor sounds easy. In practice it comes with a mountain
+            of invisible work that nobody notices until something goes wrong.
+            That also explained why the apps I'd tried felt the way they did.
+            I'm still actively working to make every interaction feel truely
+            seemless and delightful. If you run into an edge case or have any
+            feedback, I'd love to hear from you at
             <a href="mailto:markstepchin@gmail.com">markstepchin@gmail.com</a>.
           </p>
         </div>
@@ -322,7 +355,9 @@
       <!-- chrome:footer depth="2" -->
       <footer class="pt-8 pb-8">
         <div class="mx-auto w-full max-w-[800px] px-gutter">
-          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4">
+          <div
+            class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4"
+          >
             <nav class="grid min-w-0 gap-y-1 text-micro" aria-label="Footer">
               <div class="flex flex-wrap gap-x-6 gap-y-1">
                 <a

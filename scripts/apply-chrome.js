@@ -12,6 +12,7 @@ const SITE_URL = "https://progressphotos.app";
 const root = new URL("..", import.meta.url).pathname;
 const headerPartial = readFileSync(join(root, "partials/header.html"), "utf8").trim();
 const footerPartial = readFileSync(join(root, "partials/footer.html"), "utf8").trim();
+const themeBoot = readFileSync(join(root, "partials/theme-boot.html"), "utf8").trim();
 
 const skip = new Set([
   "privacy.html",
@@ -132,6 +133,31 @@ function setAttr(markup, attr, value) {
   return markup.replace(/\/?>$/, (end) => ` ${attr}="${value}"${end}`);
 }
 
+function stampTheme(html) {
+  const rendered = (spaces) => {
+    const pad = " ".repeat(spaces);
+    const body = themeBoot
+      .split("\n")
+      .map((line) => (line.length ? pad + line : line))
+      .join("\n");
+    return `${pad}<!-- chrome:theme -->\n${body}\n${pad}<!-- /chrome:theme -->`;
+  };
+
+  const existing = html.match(/^([ \t]*)<!-- chrome:theme -->/m);
+  if (existing) {
+    return html.replace(
+      /^[ \t]*<!-- chrome:theme -->[\s\S]*?<!-- \/chrome:theme -->/m,
+      rendered(existing[1].length),
+    );
+  }
+
+  return html.replace(/<meta charset="utf-8"\s*\/?>/i, (meta, offset) => {
+    const lineStart = html.lastIndexOf("\n", offset) + 1;
+    const spaces = html.slice(lineStart, offset).match(/^[ \t]*/)[0].length;
+    return `${meta}\n${rendered(spaces)}`;
+  });
+}
+
 function stampHead(html, url) {
   let canonicals = 0;
   let next = html.replace(tag("link"), (el) => {
@@ -212,7 +238,7 @@ for (const rel of targets) {
     continue;
   }
   if (!before.includes("site-footer") && !before.includes("chrome:footer")) continue;
-  const after = stampHead(apply(before), publicUrl(rel));
+  const after = stampHead(stampTheme(apply(before)), publicUrl(rel));
   if (after !== before) {
     writeFileSync(path, after);
     changed += 1;
