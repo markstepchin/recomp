@@ -89,20 +89,10 @@
       </header>
       <!-- /chrome:header -->
 
-      <main class="mx-auto w-full max-w-[800px] flex-1 px-gutter py-12">
+      <main class="mx-auto flex w-full max-w-[800px] flex-1 flex-col px-gutter py-12">
         <p class="text-micro text-muted pb-3">Blog</p>
-        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-4">
-          Progress photos, without the noise
-        </h1>
-        <p class="text-muted pb-12 max-w-[var(--measure-lead)]">
-          How to shoot check-ins you can actually compare — and why a camera
-          roll is a bad archive.
-        </p>
 
         <section aria-labelledby="published-heading">
-          <h2 id="published-heading" class="text-h4 font-bold tracking-h4 pb-4">
-            Published
-          </h2>
           <div class="flex flex-col gap-4">
             <article
               class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
@@ -140,59 +130,46 @@
           </div>
         </section>
 
-        <h2 id="backlog-heading" class="text-h4 font-bold tracking-h4 pb-4">
-            Coming soon
-          </h2>
-
-          <ul class="grid list-none gap-[0.65rem] p-0">
-            <li class="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-4 gap-y-2 rounded-[14px] border border-card-border bg-card px-[1.1rem] py-[0.95rem]">
-              <span class="text-muted"
-                >Local-First Progress Photo Apps That Don't Upload Your Physique
-                Pics</span>
+        <div class="mt-auto pt-12">
+          <section
+            class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+            aria-labelledby="article-cta-heading"
+          >
+            <h2 id="article-cta-heading" class="text-h3 font-bold tracking-h3">
+              See the progress buried in your camera roll
+            </h2>
+            <p class="pt-3 text-muted">
+              Import your photos and weight in under a minute. Compare progress
+              photos on a before-and-after timeline, scroll to any date
+              instantly, and align photos on the fly. Your photos and data never
+              leave your device.
+            </p>
+            <p class="pt-6">
+              <a
+                class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85]"
+                href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download on the App Store"
               >
-              <span class="shrink-0 rounded-full bg-accent-tint px-[0.6rem] py-[0.2rem] text-[12px] font-semibold text-fg">Coming soon</span>
-            </li>
-          </ul>
-        </section>
-
-        <section
-          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] mt-12"
-          aria-labelledby="article-cta-heading"
-        >
-          <h2 id="article-cta-heading" class="text-h3 font-bold tracking-h3">
-            See the progress buried in your camera roll
-          </h2>
-          <p class="pt-3 text-muted">
-            Import your photos and weight in under a minute. Compare progress
-            photos on a before-and-after timeline, scroll to any date instantly,
-            and align photos on the fly. Your photos and data never leave your
-            device.
-          </p>
-          <p class="pt-6">
-            <a
-              class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85]"
-              href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Download on the App Store"
-            >
-              <img
-                class="hidden h-auto w-[140px] light:block"
-                src="../assets/download-on-the-app-store-black.svg"
-                alt=""
-                width="140"
-                height="47"
-              />
-              <img
-                class="h-auto w-[140px] light:hidden"
-                src="../assets/download-on-the-app-store-white.svg"
-                alt=""
-                width="140"
-                height="47"
-              />
-            </a>
-          </p>
-        </section>
+                <img
+                  class="hidden h-auto w-[140px] light:block"
+                  src="../assets/download-on-the-app-store-black.svg"
+                  alt=""
+                  width="140"
+                  height="47"
+                />
+                <img
+                  class="h-auto w-[140px] light:hidden"
+                  src="../assets/download-on-the-app-store-white.svg"
+                  alt=""
+                  width="140"
+                  height="47"
+                />
+              </a>
+            </p>
+          </section>
+        </div>
       </main>
 
       <!-- chrome:footer depth="1" -->
@@ -215,18 +192,6 @@
                   class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="../about/"
                   >About</a
-                >
-                <a
-                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
-                  href="../faq/"
-                  >FAQ</a
-                >
-                <a
-                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
-                  href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >App Store</a
                 >
               </div>
               <div class="flex flex-wrap gap-x-6 gap-y-1">
