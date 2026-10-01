@@ -2,6 +2,39 @@
 <html lang="en" class="scroll-smooth motion-reduce:scroll-auto" data-theme="system">
   <head>
     <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Post title — Recomp</title>
     <meta name="description" content="One-sentence description." />
@@ -22,13 +55,21 @@
       <!-- chrome:header current="blog" depth="2" -->
       <header class="border-b border-card-border">
         <div
-          class="mx-auto flex w-full max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
+          class="mx-auto flex w-full text-xl max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
         >
           <a
-            class="text-fg font-bold tracking-wordmark no-underline hover:no-underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+            class="inline-flex items-center gap-2 text-fg font-medium tracking-wordmark no-underline hover:no-underline max-md:min-h-11"
             href="../../"
-            >Recomp</a
           >
+            <img
+              class="size-8 shrink-0 rounded-[22%] border border-card-border"
+              src="../../assets/recomp-app-icon.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Recomp
+          </a>
           <nav
             class="ml-auto flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
             aria-label="Site"
@@ -41,7 +82,7 @@
             >
             <a
               class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
-              href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Download on the App Store"
@@ -92,7 +133,7 @@
           <p class="pt-6">
             <a
               class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85]"
-              href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Download on the App Store"
@@ -136,18 +177,6 @@
                   class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
                   href="../../about/"
                   >About</a
-                >
-                <a
-                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
-                  href="../../faq/"
-                  >FAQ</a
-                >
-                <a
-                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
-                  href="https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >App Store</a
                 >
               </div>
               <div class="flex flex-wrap gap-x-6 gap-y-1">

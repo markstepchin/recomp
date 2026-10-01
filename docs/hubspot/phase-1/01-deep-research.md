@@ -1063,7 +1063,7 @@ The pattern to avoid: a final CTA that says "Get notified when we launch." The r
 
 - **"Get in touch" or "Contact us" as final CTA.** The final CTA is the same as the primary CTA is the same as the only CTA: install.
 - **A second CTA — "Follow us on TikTok."** Social follows are a leak. The user who's at the final CTA is worth an install, not a follow. Put social links in the footer if you must, but never near a CTA.
-- **A "we'll email you when it's ready" capture.** If Recomp is live (it is: [App Store link](https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125)), there is nothing to capture. Ship the install.
+- **A "we'll email you when it's ready" capture.** If Recomp is live (it is: [App Store link](https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125)), there is nothing to capture. Ship the install.
 - **A pricing block right above the CTA.** Handle pricing in the FAQ. A pricing block at the final CTA introduces last-minute cognitive load — is $5 worth it? — right when you want the user acting on emotion + evidence.
 
 ---
@@ -1846,7 +1846,7 @@ That set gives prompt #2 everything it needs to produce a complete, opinionated,
 
 **Recomp-specific inputs:**
 - [docs/app-context/chatgpt-context.md](../../app-context/chatgpt-context.md) — product vision, positioning, messaging hierarchy (used throughout).
-- [Recomp on the App Store](https://apps.apple.com/us/app/recomp-your-physique-tracker/id6760444125) — live product.
+- [Recomp on the App Store](https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125) — live product.
 
 ---
 
