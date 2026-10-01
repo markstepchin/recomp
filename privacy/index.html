@@ -83,9 +83,11 @@
       <main class="mx-auto w-full max-w-[800px] flex-1 px-gutter py-12">
         <p class="text-micro text-muted pb-3">Privacy</p>
         <h1 class="text-h2 font-bold tracking-h2 text-balance pb-3">
-          Your data stays on your device
+          Your photos and check-ins stay on your device
         </h1>
-        <p class="text-micro text-muted pb-8">Effective date: September 14, 2026</p>
+        <p class="text-micro text-muted pb-8">
+          Effective date: September 14, 2026. Last updated: 2026-10-01
+        </p>
 
         <div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5">
           <p>
@@ -116,6 +118,25 @@
             <li>No advertising SDKs in the app for selling your data</li>
             <li>No tracking you across other apps or websites from the app</li>
           </ul>
+
+          <h2>Anonymous usage analytics</h2>
+          <p>
+            The app can send anonymous usage analytics through PostHog: basic
+            events such as a check-in created or edited, the compare screen
+            opened, or a permission prompt answered, with simple counts and
+            categories, plus device and app info (model, iOS version, app
+            version, locale) and a random ID for that install. It does not use
+            an account, identify you, or track you across apps (no IDFA), and
+            it never sends photos, weight values, dates, measurements, notes,
+            or any other text. Analytics include approximate location (city,
+            region, and country) derived from your IP address, used only for
+            anonymous analytics and not linked to your identity. The IP address
+            itself is not stored. The app also sends anonymous error reports
+            when something breaks: the error type and where in the app's code
+            it happened, plus the same device and app info and random install
+            ID, with messages trimmed so they do not include notes, photo
+            names, or file paths.
+          </p>
 
           <h2>This website</h2>
           <p>
