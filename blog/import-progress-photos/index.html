@@ -1,0 +1,505 @@
+<!doctype html>
+<html
+  lang="en"
+  class="scroll-smooth motion-reduce:scroll-auto"
+  data-theme="system"
+>
+  <head>
+    <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Import Progress Photos in Bulk on iPhone | Recomp</title>
+    <meta
+      name="description"
+      content="Import up to 500 progress photos at once. Recomp groups them into check-ins by date, can add weights from a CSV, and leaves your originals untouched."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="stylesheet" href="../../styles/output.css" />
+    <link
+      rel="canonical"
+      href="https://progressphotos.app/blog/import-progress-photos/"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta
+      property="og:title"
+      content="Import Years of Progress Photos into Recomp at Once"
+    />
+    <meta
+      property="og:description"
+      content="Import up to 500 progress photos at once. Recomp groups them into check-ins by date, can add weights from a CSV, and leaves your originals untouched."
+    />
+    <meta
+      property="og:url"
+      content="https://progressphotos.app/blog/import-progress-photos/"
+    />
+    <meta
+      property="og:image"
+      content="https://progressphotos.app/assets/step-compare.webp?v=5"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Import Years of Progress Photos into Recomp at Once"
+    />
+    <meta
+      name="twitter:description"
+      content="Import up to 500 progress photos at once. Recomp groups them into check-ins by date, can add weights from a CSV, and leaves your originals untouched."
+    />
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Import Years of Progress Photos into Recomp at Once",
+        "description": "Import up to 500 progress photos at once. Recomp groups them into check-ins by date, can add weights from a CSV, and leaves your originals untouched.",
+        "author": {
+          "@type": "Person",
+          "name": "Mark Stepchin",
+          "url": "https://progressphotos.app/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Recomp",
+          "url": "https://progressphotos.app/"
+        },
+        "url": "https://progressphotos.app/blog/import-progress-photos/",
+        "mainEntityOfPage": "https://progressphotos.app/blog/import-progress-photos/",
+        "image": "https://progressphotos.app/assets/step-compare.webp?v=5"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does importing change or delete photos in my Photos app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Recomp reads your photos and saves copies in its own storage. Nothing in the Photos app is moved, edited, or deleted."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What format does the weight CSV need?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A header row with a \"date\" column and a \"weight\" column. Dates use the YYYY-MM-DD format, and anything after the date, like a time, is ignored. The easiest start is the dates file Recomp exports during import."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many photos can I import at once?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Up to 500 per import. The photo picker stops at 500, and an album with more than 500 is rejected. Split a larger library into albums and import them one at a time."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body
+    class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]"
+  >
+    <div class="flex min-h-dvh flex-col">
+      <!-- chrome:header current="blog" depth="2" -->
+      <header class="border-b border-card-border">
+        <div
+          class="mx-auto flex w-full text-xl max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
+        >
+          <a
+            class="inline-flex items-center gap-2 text-fg font-medium tracking-wordmark no-underline hover:no-underline max-md:min-h-11"
+            href="../../"
+          >
+            <img
+              class="size-8 shrink-0 rounded-[22%] border border-card-border"
+              src="../../assets/recomp-app-icon.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Recomp
+          </a>
+          <nav
+            class="ml-auto flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
+            aria-label="Site"
+          >
+            <a
+              class="text-fg no-underline hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              href="../"
+              aria-current="page"
+              >Blog</a
+            >
+            <a
+              class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <!-- /chrome:header -->
+
+      <main class="mx-auto w-full max-w-[800px] flex-1 px-gutter py-12">
+        <p class="text-micro text-muted pb-3">
+          <a class="text-muted" href="../">Blog</a>
+          · Mark Stepchin
+        </p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-8">
+          Import Years of Progress Photos into Recomp at Once
+        </h1>
+
+        <aside
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-labelledby="quick-answer-heading"
+        >
+          <h2 id="quick-answer-heading" class="text-h4 font-bold tracking-h4">
+            Quick Answer
+          </h2>
+          <p class="mt-3 text-muted">
+            I built bulk import because I had 450 progress photos in my camera
+            roll, and none of the 10+ apps I tried could import them. Recomp
+            takes an album or a selection of up to 500 photos, groups them into
+            check-ins by the day each photo was taken, and can fill in weights
+            from a CSV. It works on copies, so the originals in your Photos app
+            stay unchanged.
+          </p>
+        </aside>
+
+        <div
+          class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4"
+        >
+          <p>
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[SCREENSHOT: Import screen with "Choose photos" and "Import an album"]</mark>
+          </p>
+          <h2>Pick an album, get dated check-ins</h2>
+          <p>
+            <strong
+              >Bulk import turns a pile of photos into dated check-ins without
+              typing a single date.</strong
+            >
+            You can choose individual photos for a small batch or import a whole
+            album. The album list shows every album with photos in it, including
+            Favorites and Recents. I keep mine in an album called "progress
+            photos."
+          </p>
+          <p>
+            <strong
+              >Recomp reads each photo's date and groups photos from the same
+              calendar day into one check-in.</strong
+            >
+            The first three photos of a day fill the front, side, and back slots
+            in the order you took them. Extra photos from that day and photos
+            with no usable date are skipped and are listed in the summary after
+            you save. Days that already have a check-in are skipped too, so
+            importing the same album twice doesn't create duplicates.
+          </p>
+          <p>
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[SCREENSHOT: "Import weights" step with the found dates and the CSV preview]</mark>
+          </p>
+          <p>
+            <strong>Weights come in from a CSV file.</strong> Recomp lists the
+            dates it found and exports them as a two-column file, Date and
+            Weight. Fill in the weights in Numbers, Excel, or Google Sheets,
+            then import the file back. Recomp shows how many dates matched your
+            photos and how many rows didn't. The step is optional, and Apple
+            Health sync is coming later.
+          </p>
+          <p>
+            <strong>Before anything is saved, you review every check-in.</strong>
+            You can swap front, side, and back if a photo landed in the wrong
+            slot, and type in any missing weight. A filter narrows the list to
+            check-ins missing a weight or a photo. Dates come from the photos
+            and can't be changed here.
+          </p>
+          <p>
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[SCREENSHOT: Review step with the missing-weight filter open]</mark>
+          </p>
+          <p>
+            <strong>This replaces work nobody would do by hand.</strong> My 450
+            photos were 150 weekly check-ins. Entering each one means setting a
+            date, picking three photos, and typing a weight. That adds up to
+            hours and thousands of taps, which is why my photos sat in my camera
+            roll for so long.
+          </p>
+
+          <h2>Why I spent so much time making it fast</h2>
+          <p>
+            <strong>Importing photos is a data-heavy operation.</strong> For
+            every photo, Recomp saves a full-resolution copy, a display-size
+            version for the compare timeline, and a thumbnail. A 450-photo
+            import saves 1,350 files to your iPhone. Done all at once after you
+            tap Save, that would mean a long stare at a progress bar.
+          </p>
+          <p>
+            <strong
+              >So Recomp starts part of that work while you're still
+              reviewing.</strong
+            >
+            As you add weights and check poses, it builds thumbnails and display
+            versions in the background. Review doesn't wait for it, and every
+            check-in is visible right away. When you tap Save, Recomp copies the
+            originals and finishes the rest behind a progress bar. In one test
+            on an iPhone, about 450 photos took roughly 40 seconds in total,
+            most of it during review. Times vary by phone.
+          </p>
+          <p>
+            <strong
+              >Import is the first thing anyone with years of photos does in
+              Recomp.</strong
+            >
+            One of my four principles for the app is top performance across
+            hundreds or thousands of photos. A slow import would break that
+            promise before the timeline ever loads.
+          </p>
+
+          <h2>What happens to your original photos</h2>
+          <p>
+            <strong
+              >Recomp copies your photos and never changes the originals.</strong
+            >
+            It only reads from your photo library and saves the copy in its own
+            storage on your iPhone. Your originals, albums, and edits in the
+            Photos app stay as they were. If you edited a photo in Photos,
+            Recomp copies the edited version. Your photos never leave your
+            device.
+          </p>
+          <p>
+            <strong>Each import is limited to 500 photos.</strong> An album with
+            more than 500 is rejected as a whole, not partially imported. For a
+            larger library, split it into albums by date range, such as one per
+            year, and import them one at a time. Dates you already imported are
+            skipped, so re-running an album is safe.
+          </p>
+          <p>
+            <strong
+              >Album photos must be downloaded to your iPhone, not stored only
+              in iCloud.</strong
+            >
+            With Optimize iPhone Storage turned on, older photos are often
+            iCloud-only. If any photo in an album is iCloud-only, Recomp stops
+            and tells you how many aren't downloaded. Recomp doesn't download
+            them itself, so open them in Photos and try again. This requirement
+            may change later.
+          </p>
+          <p>
+            <strong
+              >Nothing shows up in your timeline until Save finishes.</strong
+            >
+            Before it saves, Recomp checks that there is enough free space. If
+            there isn't, or Save fails, or the app closes in the middle, you
+            won't see a half-finished check-in. Leaving the import screen
+            cancels the import.
+          </p>
+
+          <h2>Questions about bulk import</h2>
+          <h3>Does importing change or delete photos in my Photos app?</h3>
+          <p>
+            No. Recomp reads your photos and saves copies in its own storage.
+            Nothing in the Photos app is moved, edited, or deleted.
+          </p>
+          <h3>What format does the weight CSV need?</h3>
+          <p>
+            A header row with a "date" column and a "weight" column. Dates use
+            the YYYY-MM-DD format, and anything after the date, like a time, is
+            ignored. The easiest start is the dates file Recomp exports during
+            import.
+          </p>
+          <h3>How many photos can I import at once?</h3>
+          <p>
+            Up to 500 per import. The photo picker stops at 500, and an album
+            with more than 500 is rejected. Split a larger library into albums
+            and import them one at a time.
+          </p>
+
+          <h2>What I still want to fix</h2>
+          <p>
+            The 500-photo limit and the iCloud requirement are the two
+            constraints I'd most like to remove <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: Mark's priorities]</mark>. If your library runs into either one, or anything else breaks
+            during import, I'd love to hear from you at
+            <a href="mailto:markstepchin@gmail.com">markstepchin@gmail.com</a>.
+          </p>
+          <p>
+            Recomp is free, with no in-app purchases and no account.
+            <a
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Download Recomp on the App Store</a
+            >.
+          </p>
+        </div>
+
+        <section
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] mt-12"
+          aria-labelledby="article-cta-heading"
+        >
+          <h2 id="article-cta-heading" class="text-h3 font-bold tracking-h3">
+            See the progress buried in your camera roll
+          </h2>
+          <p class="pt-3 text-muted">
+            Import your photos and weight in under a minute. Compare progress
+            photos on a before-and-after timeline, scroll to any date instantly,
+            and align photos on the fly. Your photos and weight never leave your
+            device.
+          </p>
+          <p class="pt-6">
+            <a
+              class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85]"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+              data-cta-location="article_footer"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </p>
+        </section>
+      </main>
+
+      <!-- chrome:footer depth="2" -->
+      <footer class="pt-8 pb-8">
+        <div class="mx-auto w-full max-w-[800px] px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 max-md:flex-col max-md:justify-center max-md:gap-y-1">
+            <nav class="grid min-w-0 gap-y-1 text-micro max-md:w-full max-md:justify-items-center max-md:gap-y-0" aria-label="Footer">
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../"
+                  >Home</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../"
+                  >Blog</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../about/"
+                  >About</a
+                >
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../privacy/"
+                  >Privacy</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../support/"
+                  >Support</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../roadmap/"
+                  >Roadmap</a
+                >
+              </div>
+            </nav>
+            <div
+              class="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-card-border bg-card p-1.5 max-md:ml-0"
+              role="group"
+              aria-label="Color theme"
+            >
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="system"
+                aria-pressed="true"
+              >
+                Auto
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="light"
+                aria-pressed="false"
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="dark"
+                aria-pressed="false"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /chrome:footer -->
+    </div>
+    <script src="../../js/posthog.js"></script>
+    <script src="../../js/theme.js"></script>
+  </body>
+</html>
