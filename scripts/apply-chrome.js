@@ -39,22 +39,23 @@ function pages(dir = root) {
   return found;
 }
 
-function urls(depth) {
-  const up = "../".repeat(depth);
+// Root paths, so a page at any depth resolves the same place.
+// depth >= 2 used to set Blog to "../", which is /blog/ only when the page already lives under /blog/.
+function urls() {
   return {
-    home: depth === 0 ? "./" : up,
-    blog: depth >= 2 ? "../" : `${up}blog/`,
-    about: `${up}about/`,
-    privacy: `${up}privacy/`,
-    faq: `${up}faq/`,
-    support: `${up}support/`,
-    roadmap: `${up}roadmap/`,
-    assets: `${up}assets/`,
+    home: "/",
+    blog: "/blog/",
+    about: "/about/",
+    privacy: "/privacy/",
+    faq: "/faq/",
+    support: "/support/",
+    roadmap: "/roadmap/",
+    assets: "/assets/",
   };
 }
 
 function render(partial, depth, current) {
-  const map = urls(depth);
+  const map = urls();
   let html = partial;
   for (const [key, href] of Object.entries(map)) {
     html = html.replaceAll(`{{${key}}}`, href);
