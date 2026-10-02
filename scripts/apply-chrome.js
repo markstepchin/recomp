@@ -78,6 +78,14 @@ function render(partial, depth, current) {
     .join("\n");
 }
 
+// Page-specific App Store campaign. The shared header partial has no query, and a later build would otherwise drop one pasted into a stamped header.
+function withCampaign(html, campaign) {
+  if (!campaign) return html;
+  const base =
+    "https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125";
+  return html.replaceAll(`${base}"`, `${base}?ct=${campaign}"`);
+}
+
 function indentBlock(html, spaces) {
   const pad = " ".repeat(spaces);
   return html
@@ -194,7 +202,14 @@ function apply(html) {
       const attrs = parseAttrs(attrSource);
       const depth = Number(attrs.depth ?? inferred.depth);
       const current = attrs.current ?? inferred.current;
-      return marked("header", { current, depth }, render(headerPartial, depth, current), spaces.length);
+      const headerAttrs = { current, depth };
+      if (attrs.campaign) headerAttrs.campaign = attrs.campaign;
+      return marked(
+        "header",
+        headerAttrs,
+        withCampaign(render(headerPartial, depth, current), attrs.campaign),
+        spaces.length,
+      );
     },
   );
 
