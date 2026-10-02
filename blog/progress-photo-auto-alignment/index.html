@@ -1,0 +1,840 @@
+<!doctype html>
+<html
+  lang="en"
+  class="scroll-smooth motion-reduce:scroll-auto"
+  data-theme="system"
+>
+  <head>
+    <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Does auto-alignment work on progress photos? I tested it on my own archive — Recomp
+    </title>
+    <meta
+      name="description"
+      content="I scored image registration, body-pose landmarks and face detection against my own manual alignment of my progress photos. [RESULT: one-line verdict]."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="stylesheet" href="../../styles/output.css" />
+    <link
+      rel="canonical"
+      href="https://progressphotos.app/blog/progress-photo-auto-alignment/"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta
+      property="og:title"
+      content="Does auto-alignment work on progress photos? I tested it on my own archive"
+    />
+    <meta
+      property="og:description"
+      content="I scored image registration, body-pose landmarks and face detection against my own manual alignment of my progress photos. [RESULT: one-line verdict]."
+    />
+    <meta
+      property="og:url"
+      content="https://progressphotos.app/blog/progress-photo-auto-alignment/"
+    />
+    <meta
+      property="og:image"
+      content="https://progressphotos.app/assets/step-compare.webp?v=5"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Does auto-alignment work on progress photos? I tested it on my own archive"
+    />
+    <meta
+      name="twitter:description"
+      content="I scored image registration, body-pose landmarks and face detection against my own manual alignment of my progress photos. [RESULT: one-line verdict]."
+    />
+    <meta
+      property="article:published_time"
+      content="[CONFIRM: publish date, YYYY-MM-DD]"
+    />
+    <meta
+      property="article:modified_time"
+      content="[CONFIRM: publish date, YYYY-MM-DD]"
+    />
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Does auto-alignment work on progress photos? I tested it on my own archive",
+        "description": "I scored image registration, body-pose landmarks and face detection against my own manual alignment of my progress photos. [RESULT: one-line verdict].",
+        "datePublished": "[CONFIRM: publish date, YYYY-MM-DD]",
+        "dateModified": "[CONFIRM: publish date, YYYY-MM-DD]",
+        "author": {
+          "@type": "Person",
+          "name": "Mark Stepchin",
+          "url": "https://progressphotos.app/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Recomp",
+          "url": "https://progressphotos.app/"
+        },
+        "url": "https://progressphotos.app/blog/progress-photo-auto-alignment/",
+        "mainEntityOfPage": "https://progressphotos.app/blog/progress-photo-auto-alignment/",
+        "image": "https://progressphotos.app/assets/step-compare.webp?v=5"
+      }
+    </script>
+  </head>
+  <body
+    class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]"
+  >
+    <div class="flex min-h-dvh flex-col">
+      <!-- chrome:header current="blog" depth="2" campaign="auto-align-article" -->
+      <header class="border-b border-card-border">
+        <div
+          class="mx-auto flex w-full text-xl max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
+        >
+          <a
+            class="inline-flex items-center gap-2 text-fg font-medium tracking-wordmark no-underline hover:no-underline max-md:min-h-11"
+            href="../../"
+          >
+            <img
+              class="size-8 shrink-0 rounded-[22%] border border-card-border"
+              src="../../assets/recomp-app-icon.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Recomp
+          </a>
+          <nav
+            class="ml-auto flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
+            aria-label="Site"
+          >
+            <a
+              class="text-fg no-underline hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              href="../"
+              aria-current="page"
+              >Blog</a
+            >
+            <a
+              class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125?ct=auto-align-article"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <!-- /chrome:header -->
+
+      <main id="top" class="mx-auto w-full max-w-[800px] flex-1 overflow-x-clip px-gutter py-12">
+        <p class="text-micro text-muted pb-3">
+          <a class="text-muted" href="../">Blog</a>
+          ·
+          <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: publish date, YYYY-MM-DD]</mark>
+          · Mark Stepchin
+        </p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-8">
+          Does auto-alignment work on progress photos? I tested it on my own archive
+        </h1>
+
+        <p class="text-muted pb-3">
+          <em>By Mark Stepchin · <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: publish date]</mark></em>
+        </p>
+        <p class="text-muted pb-8">
+          I scored image registration, body-pose landmarks and face detection against my own manual alignment of my progress photos.
+          <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: one-line verdict]</mark>.
+        </p>
+
+        <aside
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-labelledby="quick-answer-heading"
+        >
+          <h2 id="quick-answer-heading" class="text-h4 font-bold tracking-h4">
+            Quick answer
+          </h2>
+          <p class="mt-3 text-muted">
+            I tested the techniques these apps describe, not the apps themselves. On my
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: ~450]</mark>
+            front, side and back photos,
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: best technique]</mark>
+            matched my manual alignment on
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: % of photos]</mark>.
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: pose]</mark>
+            photos failed most often. It ran offline on my Mac at
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: seconds per photo]</mark>
+            for $0, and
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: number]</mark>
+            photos still needed a manual fix.
+          </p>
+        </aside>
+
+        <nav
+          class="mt-8 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-label="On this page"
+        >
+          <h2 id="on-this-page" class="text-h4 font-bold tracking-h4">On this page</h2>
+          <ol class="mt-3 list-decimal space-y-1 pl-5 text-micro text-muted">
+            <li>
+              <a href="#kept-this-fair">I build a manual-only app, so here's how I kept this fair</a>
+            </li>
+            <li>
+              <a href="#harder-than-a-selfie">Why is a body photo harder to align than a selfie?</a>
+            </li>
+            <li>
+              <a href="#what-auto-align-means">What can "auto-align" mean?</a>
+            </li>
+            <li>
+              <a href="#what-apps-say">What do the apps say they do?</a>
+            </li>
+            <li>
+              <a href="#how-i-tested">How I tested it</a>
+            </li>
+            <li>
+              <a href="#what-the-test-found">What the test found</a>
+              <ol class="mt-1 list-decimal space-y-1 pl-5">
+                <li>
+                  <a href="#how-close">How close did each technique get to my alignment?</a>
+                </li>
+                <li>
+                  <a href="#by-pose">Did front, side and back photos behave differently?</a>
+                </li>
+                <li>
+                  <a href="#where-it-failed">Where did it fail?</a>
+                </li>
+                <li>
+                  <a href="#chained-vs-fixed">Is matching the last photo better than matching one reference?</a>
+                </li>
+                <li>
+                  <a href="#runtime">How long did it take, and how many photos still needed my hand?</a>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <a href="#what-id-do">What I'd do with my own photos now</a>
+            </li>
+            <li>
+              <a href="#unresolved">What's still unresolved</a>
+            </li>
+            <li>
+              <a href="#methods">Methods (for developers)</a>
+            </li>
+          </ol>
+        </nav>
+
+        <div
+          class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:scroll-mt-32 [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:scroll-mt-32 [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4"
+        >
+          <h2 id="kept-this-fair">I build a manual-only app, so here's how I kept this fair</h2>
+          <p>
+            <strong>I build <a href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125?ct=auto-align-article" target="_blank" rel="noopener">Recomp</a>, a progress-photo app for iPhone.</strong>
+            Recomp aligns manually (pan, zoom, rotate) and has no auto-align. That makes this test a conflict of interest. I'm scoring auto-align against my own manual alignment, and a fail makes my app look better.
+          </p>
+          <p>So I set the rules before I saw a single number:</p>
+          <ol>
+            <li>
+              I locked the pass thresholds on
+              <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: date]</mark>,
+              before the first run, and used them unchanged.
+            </li>
+            <li>
+              I published the harness code and the per-photo results, with no photos:
+              <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: public repo URL]</mark>.
+            </li>
+            <li>I report every result, including any where a tool beat my own hand.</li>
+          </ol>
+          <p>If auto-align passes my bar, this post says so in plain words, starting with the Quick Answer.</p>
+          <p class="text-right text-micro">
+            <a href="#top">↑ Back to top</a>
+          </p>
+
+          <h2 id="harder-than-a-selfie">Why is a body photo harder to align than a selfie?</h2>
+          <p>
+            <strong>Alignment has to hold the camera constant while the body changes.</strong>
+            The change is what you want to see: a smaller waist, a wider back. The camera's distance, height and tilt should match between dates. A tool that lines up the wrong thing can hide real change or create fake change.
+          </p>
+          <p>
+            <strong>Over years, almost everything around the body changes too.</strong>
+            My photos span
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: years]</mark>,
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: number of rooms]</mark>,
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: phones and lenses]</mark>
+            and
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: mirror vs. timer shots]</mark>.
+            Apple's own image-alignment sample
+            <a href="https://developer.apple.com/documentation/vision/aligning-similar-images" target="_blank" rel="noopener nofollow">says</a>
+            "The best alignment occurs when the content of the input images is very similar." Two check-ins a year apart aren't similar. That's the point of taking them.
+          </p>
+          <p class="text-right text-micro">
+            <a href="#top">↑ Back to top</a>
+          </p>
+
+          <h2 id="what-auto-align-means">What can "auto-align" mean?</h2>
+          <p>
+            Apps use three different techniques under one label. Each anchors on something different, so each should break in a different place. The last column is my prediction, which the test checks.
+          </p>
+          <div class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" tabindex="0" role="region" aria-label="What each auto-align technique lines up">
+            <table class="w-full min-w-[52rem] border-collapse text-left text-micro">
+              <thead>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Technique</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">What it lines up</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">What it ignores</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Where I expect it to break</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">Image registration</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">The pixels of the whole frame, mostly background</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">The body</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">A new room, a moved camera</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">Body-pose landmarks</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Shoulders and hips found by a model</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">The background</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Side photos, loose clothing, hidden hips</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">Face detection</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">The eyes</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">The torso</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Back photos, a tilted head</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <figure class="m-0">
+            <div
+              class="flex min-h-48 items-center justify-center rounded-card border border-dashed border-card-border bg-placeholder px-6 py-8 text-center"
+              role="img"
+              aria-label="Chart 1 placeholder, pending design"
+            >
+              <p class="m-0 max-w-[36rem]">
+                <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CHART 1: what each technique anchors on (whole frame, joints, eyes), drawn on a generic figure, pending design]</mark>
+              </p>
+            </div>
+          </figure>
+          <p>
+            <strong>Image registration aligns the scene, not you.</strong>
+            Apple's Vision framework offers
+            <a href="https://developer.apple.com/documentation/vision/vntranslationalimageregistrationrequest" target="_blank" rel="noopener nofollow">translational</a>
+            registration, which solves a shift only. Its
+            <a href="https://developer.apple.com/documentation/vision/vnhomographicimageregistrationrequest" target="_blank" rel="noopener nofollow">homographic</a>
+            version solves a perspective warp, which can also bend the body. With a tripod in one room, the background stands in for the camera. In a new room, it doesn't.
+          </p>
+          <p>
+            <strong>Body-pose landmarks anchor on joints.</strong>
+            A pose model finds points like shoulders and hips, and a fit scales, rotates and shifts each photo to line them up. Apple's model finds up to
+            <a href="https://developer.apple.com/documentation/vision/detecting-human-body-poses-in-images" target="_blank" rel="noopener nofollow">19 points</a>,
+            and Google's
+            <a href="https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker" target="_blank" rel="noopener nofollow">MediaPipe</a>
+            finds 33. Apple
+            <a href="https://developer.apple.com/videos/play/wwdc2020/10653/" target="_blank" rel="noopener nofollow">lists</a>
+            its weak spots: people "bent over or upside down" and "obstructive flowing clothing." Subjects "close to the edges of the screen" also do worse.
+          </p>
+          <p>
+            <strong>Face detection anchors on the eyes.</strong>
+            That suits selfie timelapses.
+            <a href="https://apps.apple.com/us/app/agelapse/id6503668205" target="_blank" rel="noopener nofollow">AgeLapse</a>
+            aligns "every photo on your eyes." On a body photo, the head turns on its own, and a back photo has no face.
+          </p>
+          <p>Apple's 3D pose needs depth that old photos don't have to measure real size, so I left it out.</p>
+          <p class="text-right text-micro">
+            <a href="#top">↑ Back to top</a>
+          </p>
+
+          <h2 id="what-apps-say">What do the apps say they do?</h2>
+          <p>
+            I tested the techniques these apps describe, not the apps themselves. Each row quotes the developer's public wording, checked on October 2, 2026.
+          </p>
+          <div class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" tabindex="0" role="region" aria-label="What progress-photo apps say about auto-alignment">
+            <table class="w-full min-w-[52rem] border-collapse text-left text-micro">
+              <thead>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">App</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">What the developer says</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Technique the wording points to</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">
+                    <a href="https://apps.apple.com/us/app/progress-pics-body-tracker/id6758867697" target="_blank" rel="noopener nofollow">Progress Pics</a>
+                    (Thumbstone Labs)
+                  </th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"detects your pose and automatically crops and rotates each photo to match your previous shots"</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Body pose</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">
+                    <a href="https://apps.apple.com/us/app/body-progress-pics-metamorph/id6544789120" target="_blank" rel="noopener nofollow">Metamorph</a>
+                  </th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">
+                    "Automatic alignment and overlays for consistent progress pics"; the founders
+                    <a href="https://tinyideas.net/about/" target="_blank" rel="noopener nofollow">write</a>
+                    that at WWDC 24 they "spotted a tiny mention of some new tech for image alignment"
+                  </td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Not stated; the founders' note suggests Apple's image alignment</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">
+                    <a href="https://progresscam.keremuslular.com/" target="_blank" rel="noopener nofollow">ProgressCam</a>
+                  </th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"On-device facial and body landmark detection auto-aligns your photos"</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Face and body pose</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">
+                    <a href="https://apps.apple.com/us/app/shapelapse-gym-progress-pics/id6801393577" target="_blank" rel="noopener nofollow">ShapeLapse</a>
+                  </th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"detects your shoulders and hips and auto-aligns every photo"</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Body pose</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">
+                    <a href="https://apps.apple.com/us/app/formlapse/id6780141102" target="_blank" rel="noopener nofollow">FormLapse</a>
+                  </th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"automatically aligns position, tilt, and scale"</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Body pose (its 1.3 notes mention a skeleton)</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">
+                    <a href="https://apps.apple.com/us/app/fitness-trackr-progress/id6755519347" target="_blank" rel="noopener nofollow">Fitness Trackr</a>
+                  </th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"Auto-align snaps your photos into the same pose automatically (Pro)"</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Not stated</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">
+                    <a href="https://web.archive.org/web/20260407211330/https://apps.apple.com/us/app/gainframe-gym-progress-photos/id6759252082" target="_blank" rel="noopener nofollow">GainFrame</a>
+                    (v1.1 notes, Mar 13, 2026, archived)
+                  </th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"Side-by-side and swipe slider comparison with auto body alignment"</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Not stated</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            <strong>Even the apps that ship it give you a way to turn it off or fix it by hand.</strong>
+            Lasmit's
+            <a href="https://apps.apple.com/us/app/body-measurements-tracker-app/id583840813" target="_blank" rel="noopener nofollow">Progress</a>
+            app turned Smart Overlay, which tries to "line up the images," off by default in 2026.6 (February 11, 2026). Its note says "when it didn't work, it was causing a lot of confusion." FormLapse 1.3 added "Fine-tune any photo whose auto-alignment was off" and a "Review alignment" list.
+          </p>
+          <p>
+            <strong>GainFrame's 2.32 update (July 22) was a bug fix that brought the feature back.</strong>
+            Its notes say photos "are once again aligned to your pose reference when saved."
+          </p>
+          <p class="text-right text-micro">
+            <a href="#top">↑ Back to top</a>
+          </p>
+
+          <h2 id="how-i-tested">How I tested it</h2>
+          <p>
+            <strong>My manual alignment is the answer key.</strong>
+            Recomp keeps the pan, zoom and rotation I set for each photo, so every photo already has an alignment I accepted. Each technique produces its own alignment, and I measure the gap between the two. Photos I never adjusted are left out, because I can't tell "already lined up" from "never touched." That excluded
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: number]</mark>
+            photos.
+          </p>
+          <p>
+            <strong>The gap is measured in torso lengths.</strong>
+            For each photo, I take the shoulder and hip points and compare where my alignment and the tool's alignment put them. The distance is divided by my torso length, from the shoulder line to the hip line. On me, 0.05 torso lengths is about
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: cm]</mark>,
+            roughly
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: plain-language comparison]</mark>.
+          </p>
+          <p>
+            <strong>The pass line comes from my own consistency.</strong>
+            Before the run, I re-aligned 30 random photos without looking at my first attempt. My two attempts differed by
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: torso lengths]</mark>,
+            and that spread sets the bar if it's larger than 0.05. A photo passes if the tool lands within that bar, within 2° of rotation and within 3% of scale. A technique "works" if 90% of photos pass in every pose.
+          </p>
+          <p>
+            <strong>Everything ran offline on my Mac.</strong>
+            Apple Vision and
+            <a href="https://github.com/Tau-J/rtmlib" target="_blank" rel="noopener nofollow">RTMPose</a>
+            both run locally. MediaPipe keeps images on the device, but Google's
+            <a href="https://developers.google.com/edge/mediapipe/solutions/tasks#mediapipe_tasks_privacy_notice" target="_blank" rel="noopener nofollow">notice</a>
+            says its Tasks APIs "send metrics about the performance and utilization of the APIs" to Google. So I downloaded every model first and ran the whole test with the network off
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: run done with network off]</mark>.
+            No photo left the Mac.
+          </p>
+          <p class="text-right text-micro">
+            <a href="#top">↑ Back to top</a>
+          </p>
+
+          <h2 id="what-the-test-found">What the test found</h2>
+          <h3 id="how-close">How close did each technique get to my alignment?</h3>
+          <p>
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: median error per technique, in torso lengths and cm]</mark>.
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: pass rate per technique against the locked bar]</mark>.
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: one sentence naming the best technique and by how much]</mark>.
+          </p>
+          <figure class="m-0">
+            <div
+              class="flex min-h-48 items-center justify-center rounded-card border border-dashed border-card-border bg-placeholder px-6 py-8 text-center"
+              role="img"
+              aria-label="Chart 3 placeholder, pending data"
+            >
+              <p class="m-0 max-w-[36rem]">
+                <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CHART 3: histogram of error in torso lengths per technique, pass line marked, pending data]</mark>
+              </p>
+            </div>
+          </figure>
+
+          <h3 id="by-pose">Did front, side and back photos behave differently?</h3>
+          <p>
+            I expected side photos to fail most, because one shoulder and hip hide behind the other.
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: pass rate per pose per technique, and whether the prediction held]</mark>.
+          </p>
+          <figure class="m-0">
+            <div
+              class="flex min-h-48 items-center justify-center rounded-card border border-dashed border-card-border bg-placeholder px-6 py-8 text-center"
+              role="img"
+              aria-label="Chart 4 placeholder, pending data"
+            >
+              <p class="m-0 max-w-[36rem]">
+                <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CHART 4: pass rate by technique and pose, grouped bars, pending data]</mark>
+              </p>
+            </div>
+          </figure>
+          <figure class="m-0">
+            <div
+              class="flex min-h-48 flex-col items-center justify-center gap-3 rounded-card border border-dashed border-error bg-placeholder px-6 py-8 text-center"
+              role="img"
+              aria-label="Chart 5 blocked until Mark approves"
+            >
+              <div class="text-micro font-semibold uppercase tracking-h4 text-error">BLOCKED</div>
+              <p class="m-0 max-w-[36rem]">
+                <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CHART 5: silhouette outlines only, unaligned vs. auto vs. manual. BLOCKED until Mark approves]</mark>
+              </p>
+            </div>
+          </figure>
+
+          <h3 id="where-it-failed">Where did it fail?</h3>
+          <p>
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: counts per failure type, such as no person found, wrong hip, new room, mirror flip, arms raised]</mark>.
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: which failures a quick manual nudge fixed and which needed a full re-align]</mark>.
+          </p>
+          <figure class="m-0">
+            <div
+              class="flex min-h-48 items-center justify-center rounded-card border border-dashed border-card-border bg-placeholder px-6 py-8 text-center"
+              role="img"
+              aria-label="Chart 6 placeholder, pending data"
+            >
+              <p class="m-0 max-w-[36rem]">
+                <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CHART 6: failure examples as keypoint skeletons on a blank background, labeled by type, pending data]</mark>
+              </p>
+            </div>
+          </figure>
+
+          <h3 id="chained-vs-fixed">Is matching the last photo better than matching one reference?</h3>
+          <p>
+            Thumbstone describes matching "your previous shots," and ProgressCam's listing
+            <a href="https://apps.apple.com/us/app/progresscam-progress-photos/id6760968159" target="_blank" rel="noopener nofollow">says</a>
+            it "registers each new shot against the last." Chaining photo to photo can let small errors add up over years. I ran both ways: each photo against the one before it, and each against one fixed reference per pose.
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: error after <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: years]</mark> for chained vs. fixed]</mark>.
+          </p>
+          <figure class="m-0">
+            <div
+              class="flex min-h-48 items-center justify-center rounded-card border border-dashed border-card-border bg-placeholder px-6 py-8 text-center"
+              role="img"
+              aria-label="Chart 8 placeholder, pending data"
+            >
+              <p class="m-0 max-w-[36rem]">
+                <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CHART 8: error over time, chained vs. fixed reference, pending data]</mark>
+              </p>
+            </div>
+          </figure>
+
+          <h3 id="runtime">How long did it take, and how many photos still needed my hand?</h3>
+          <p>
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: seconds per photo per technique, and total minutes for the archive]</mark>
+            on
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: Mac model]</mark>.
+            The cost was $0, since nothing ran in the cloud.
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: number]</mark>
+            photos failed the bar and needed a manual fix. By hand, I take about
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: seconds per photo, from the 30-photo re-align]</mark>
+            per photo.
+          </p>
+          <figure class="m-0">
+            <div
+              class="flex min-h-48 items-center justify-center rounded-card border border-dashed border-card-border bg-placeholder px-6 py-8 text-center"
+              role="img"
+              aria-label="Chart 7 placeholder, pending data"
+            >
+              <p class="m-0 max-w-[36rem]">
+                <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CHART 7: seconds per photo by technique, with the total for the archive, pending data]</mark>
+              </p>
+            </div>
+          </figure>
+          <p class="text-right text-micro">
+            <a href="#top">↑ Back to top</a>
+          </p>
+
+          <h2 id="what-id-do">What I'd do with my own photos now</h2>
+          <p>
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[RESULT: written after the run, from whichever outcome happened. One paragraph that names the technique to use, or none, for each pose. No product mention.]</mark>
+          </p>
+          <p>
+            None of this replaces a consistent setup. The routine I use is in
+            <a href="https://progressphotos.app/blog/how-to-take-progress-photos-for-recomp/">How to Take Progress Photos for a Recomp</a>.
+          </p>
+          <p class="text-right text-micro">
+            <a href="#top">↑ Back to top</a>
+          </p>
+
+          <h2 id="unresolved">What's still unresolved</h2>
+          <p>
+            <strong>This is one body, my phones and my rooms.</strong>
+            It doesn't test any app directly, only the techniques the apps describe. Other bodies, cameras and poses could land differently.
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[MARK: one sentence on what you'll do with the result, written after the run.]</mark>
+            If you run the harness on your own archive, on your own machine, I'd like to see your numbers:
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[MARK: contact email — Gmail or the address on /support/]</mark>.
+          </p>
+          <p class="text-right text-micro">
+            <a href="#top">↑ Back to top</a>
+          </p>
+
+          <hr class="border-card-border" />
+
+          <h2 id="methods">Methods (for developers)</h2>
+          <p>
+            <strong>Data.</strong>
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: count]</mark>
+            photos from
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: count]</mark>
+            check-ins, each tagged front, side or back with its date. The answer key is the manual alignment Recomp stores per photo: a similarity transform (uniform scale, rotation, shift) on a 9:16 canvas. It was exported from my phone to my Mac. Photos with an untouched (identity) adjustment are excluded.
+          </p>
+          <p><strong>Techniques and versions.</strong></p>
+          <ul>
+            <li>
+              Apple Vision, legacy API: <code>VNTranslationalImageRegistrationRequest</code> and <code>VNHomographicImageRegistrationRequest</code> (iOS 11+, macOS 10.13+), returning <code>alignmentTransform</code> and <code>warpTransform</code> (<a href="https://developer.apple.com/documentation/vision/vnimagetranslationalignmentobservation" target="_blank" rel="noopener nofollow">docs</a>, <a href="https://developer.apple.com/documentation/vision/vnimagehomographicalignmentobservation" target="_blank" rel="noopener nofollow">docs</a>). <code>VNDetectHumanBodyPoseRequest</code> (iOS 14+, macOS 11+, 19 points). <code>VNDetectFaceLandmarksRequest</code> for the eyes-only baseline (<a href="https://developer.apple.com/documentation/vision/vndetectfacelandmarksrequest" target="_blank" rel="noopener nofollow">docs</a>).
+            </li>
+            <li>
+              Apple Vision, Swift API (iOS 18+, macOS 15+): <a href="https://developer.apple.com/documentation/vision/detecthumanbodyposerequest" target="_blank" rel="noopener nofollow"><code>DetectHumanBodyPoseRequest</code></a>, and registration as <a href="https://developer.apple.com/documentation/vision/tracktranslationalimageregistrationrequest" target="_blank" rel="noopener nofollow"><code>TrackTranslationalImageRegistrationRequest</code></a> / <a href="https://developer.apple.com/documentation/vision/trackhomographicimageregistrationrequest" target="_blank" rel="noopener nofollow"><code>TrackHomographicImageRegistrationRequest</code></a>, run through <a href="https://developer.apple.com/documentation/vision/targetedimagerequesthandler" target="_blank" rel="noopener nofollow"><code>TargetedImageRequestHandler</code></a> on two images.
+            </li>
+            <li>
+              3D pose, not used: <a href="https://developer.apple.com/documentation/vision/vndetecthumanbodypose3drequest" target="_blank" rel="noopener nofollow"><code>VNDetectHumanBodyPose3DRequest</code></a> (iOS 17+, macOS 14+) returns 17 joints in meters for the most prominent person. It uses depth when present. Without LiDAR capture, <code>bodyHeight</code> returns "a reference height of 1.8 meters" (<a href="https://developer.apple.com/documentation/vision/identifying-3d-human-body-poses-in-images" target="_blank" rel="noopener nofollow">article</a>).
+            </li>
+            <li>
+              MediaPipe Pose Landmarker: BlazePose GHUM, lite/full/heavy bundles, 33 landmarks (<a href="https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker" target="_blank" rel="noopener nofollow">guide</a>); <code>mediapipe</code> 1.0.1, released Aug 14, 2026 (<a href="https://pypi.org/project/mediapipe/" target="_blank" rel="noopener nofollow">PyPI</a>). Run fully offline (see above).
+            </li>
+            <li>
+              RTMPose through <code>rtmlib</code> 0.0.16 (Aug 2026), on ONNX Runtime with no mmcv (<a href="https://github.com/Tau-J/rtmlib" target="_blank" rel="noopener nofollow">repo</a>). The <a href="https://arxiv.org/abs/2303.07399" target="_blank" rel="noopener nofollow">RTMPose paper</a> reports RTMPose-m at 75.8% AP on COCO with 90+ FPS on an Intel i7-11700 CPU. On the authors' COCO-SinglePerson set it reports 82.4 AP vs. 35.4 for BlazePose-Full. Those are the authors' 2023 numbers on strangers, not alignment of one person over years. MMPose's last release is <a href="https://github.com/open-mmlab/mmpose/releases" target="_blank" rel="noopener nofollow">1.3.2</a> (July 2024).
+            </li>
+          </ul>
+          <figure class="m-0">
+            <div
+              class="flex min-h-48 items-center justify-center rounded-card border border-dashed border-card-border bg-placeholder px-6 py-8 text-center"
+              role="img"
+              aria-label="Chart 2 placeholder, pending design"
+            >
+              <p class="m-0 max-w-[36rem]">
+                <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CHART 2: joint maps for Vision (19 points), MediaPipe (33) and COCO-style RTMPose (17), drawn as skeletons on a blank background from the docs, pending design]</mark>
+              </p>
+            </div>
+          </figure>
+          <p>
+            <strong>Fit.</strong>
+            Pose techniques fit a least-squares similarity transform on shoulders and hips. Side photos use the visible-side shoulder and hip plus
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: third point]</mark>.
+            Registration uses Vision's own output.
+          </p>
+          <p>
+            <strong>Error.</strong>
+            Map each photo's shoulder and hip points through the tool's transform and through the manual one. Take the mean distance, divided by torso length in the manual frame. Points are detected with a different model than the one that aligned, so a pose model never grades itself. "p90" means the error that 90% of photos fall under. "p95" for runtime is the same idea at 95%.
+          </p>
+          <p>
+            <strong>Pass/fail, locked <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: date]</mark>.</strong>
+            Bar T = max(0.05 torso lengths, my 95th-percentile disagreement with myself over 30 blind re-alignments). Per photo: detection found, error ≤ T, rotation within 2°, scale within 3%. A technique works if ≥ 90% pass in every pose and its median error ≤ T. It partly works if ≥ 90% pass in at least one pose.
+          </p>
+          <p>
+            <strong>Reference modes.</strong>
+            Fixed: my earliest manually aligned photo per pose. Chained: the previous check-in.
+          </p>
+          <p>
+            <strong>Runtime and cost.</strong>
+            Seconds per photo (median, p95) and the total, on
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: Mac model, macOS version]</mark>.
+            $0 marginal cost.
+          </p>
+          <p>
+            <strong>Published artifacts.</strong>
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: repo URL]</mark>:
+            harness code and a CSV with photo index, date, pose, technique, error, rotation and scale deltas, pass flag and runtime. No photos and no weights.
+          </p>
+          <p class="text-right text-micro">
+            <a href="#top">↑ Back to top</a>
+          </p>
+        </div>
+
+        <section
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] mt-12"
+          aria-labelledby="article-cta-heading"
+        >
+          <h2 id="article-cta-heading" class="text-h3 font-bold tracking-h3">
+            See the progress buried in your camera roll
+          </h2>
+          <p class="pt-3 text-muted">
+            Import your photos and weight in under a minute. Compare progress
+            photos on a before-and-after timeline, scroll to any date instantly,
+            and align photos on the fly. Your photos and weight never leave your
+            device.
+          </p>
+          <p class="pt-6">
+            <a
+              class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85]"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125?ct=auto-align-article"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+              data-cta-location="article_footer"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </p>
+        </section>
+      </main>
+
+      <!-- chrome:footer depth="2" -->
+      <footer class="pt-8 pb-8">
+        <div class="mx-auto w-full max-w-[800px] px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 max-md:flex-col max-md:justify-center max-md:gap-y-1">
+            <nav class="grid min-w-0 gap-y-1 text-micro max-md:w-full max-md:justify-items-center max-md:gap-y-0" aria-label="Footer">
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../"
+                  >Home</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../"
+                  >Blog</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../about/"
+                  >About</a
+                >
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../privacy/"
+                  >Privacy</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../support/"
+                  >Support</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../roadmap/"
+                  >Roadmap</a
+                >
+              </div>
+            </nav>
+            <div
+              class="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-card-border bg-card p-1.5 max-md:ml-0"
+              role="group"
+              aria-label="Color theme"
+            >
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="system"
+                aria-pressed="true"
+              >
+                Auto
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="light"
+                aria-pressed="false"
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="dark"
+                aria-pressed="false"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /chrome:footer -->
+    </div>
+    <script src="../../js/posthog.js"></script>
+    <script src="../../js/theme.js"></script>
+  </body>
+</html>
