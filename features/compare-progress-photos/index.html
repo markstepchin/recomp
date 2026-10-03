@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto" data-theme="system">
+  <head>
+    <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Compare and Align Progress Photos Side by Side | Recomp</title>
+    <meta
+      name="description"
+      content="Line up two progress photos while you compare them in Recomp. Pan, pinch and rotate either photo in one gesture, and it saves when you lift your finger."
+    />
+    <link rel="stylesheet" href="../../styles/output.css" />
+    <link rel="canonical" href="https://progressphotos.app/features/compare-progress-photos/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta property="og:title" content="Compare and Align Progress Photos Side by Side | Recomp" />
+    <meta
+      property="og:description"
+      content="Line up two progress photos while you compare them in Recomp. Pan, pinch and rotate either photo in one gesture, and it saves when you lift your finger."
+    />
+    <meta property="og:url" content="https://progressphotos.app/features/compare-progress-photos/" />
+    <meta
+      property="og:image"
+      content="https://progressphotos.app/assets/step-compare.webp?v=5"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Compare and Align Progress Photos Side by Side | Recomp" />
+    <meta
+      name="twitter:description"
+      content="Line up two progress photos while you compare them in Recomp. Pan, pinch and rotate either photo in one gesture, and it saves when you lift your finger."
+    />
+    <meta
+      name="twitter:image"
+      content="https://progressphotos.app/assets/step-compare.webp?v=5"
+    />
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does \"align on the fly\" mean?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You fix framing on the Compare screen itself, with both photos in view. There's no edit mode or Save button."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Recomp align photos automatically?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, and it has no pose detection. You align by hand with pan, zoom and rotate, and I explain why in why auto-alignment for progress photos is hard to do well."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does aligning change my original photo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Recomp saves the alignment as data and renders a new display image from the original."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I undo an adjustment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For about 3 seconds after each change, a reset button returns that photo to unaligned."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I take photos that need less aligning?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use the same spot, height and light every time. My setup is in how to take progress photos for a recomp."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]">
+    <div class="flex min-h-dvh flex-col">
+      <!-- chrome:header depth="2" campaign="compare-page" -->
+      <header class="border-b border-card-border">
+        <div
+          class="mx-auto flex w-full text-xl max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
+        >
+          <a
+            class="inline-flex items-center gap-2 text-fg font-medium tracking-wordmark no-underline hover:no-underline max-md:min-h-11"
+            href="/"
+          >
+            <img
+              class="size-8 shrink-0 rounded-[22%] border border-card-border"
+              src="/assets/recomp-app-icon.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Recomp
+          </a>
+          <nav
+            class="ml-auto flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
+            aria-label="Site"
+          >
+            <a
+              class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              href="/blog/"
+              >Blog</a
+            >
+            <a
+              class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125?ct=compare-page"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="/assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="/assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <!-- /chrome:header -->
+
+      <main id="top" class="mx-auto w-full max-w-[800px] flex-1 overflow-x-clip px-gutter py-12">
+        <p class="text-micro text-muted pb-3">
+          Features
+        </p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-8">
+          Compare progress photos side by side and align them on the fly
+        </h1>
+
+        <aside
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-labelledby="quick-answer-heading"
+        >
+          <h2 id="quick-answer-heading" class="text-h4 font-bold tracking-h4">
+            Quick answer
+          </h2>
+          <p class="mt-3 text-muted">Aligning on the fly means lining up two progress photos on the comparison itself, while you look at both. In Recomp's Compare screen, put your fingers on either photo to move, pinch-zoom and rotate it until it matches the other side. It saves when you lift your finger, and that alignment stays with the photo in every comparison. Recomp has no auto-alignment, so every adjustment is yours.</p>
+        </aside>
+
+        <nav
+          class="mt-8 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-label="On this page"
+        >
+          <h2 id="on-this-page" class="text-h4 font-bold tracking-h4">On this page</h2>
+          <ol class="mt-3 list-decimal space-y-1 pl-5 text-micro text-muted">
+            <li><a href="#why-does-alignment-decide-what-you-see">Why does alignment decide what you see?</a></li>
+            <li><a href="#what-aligning-on-the-fly-looks-like">What aligning on the fly looks like</a></li>
+            <li><a href="#small-nudges-with-three-guardrails">Small nudges, with three guardrails</a></li>
+            <li><a href="#align-once-and-it-follows-the-photo">Align once, and it follows the photo</a></li>
+            <li><a href="#sharing-the-result">Sharing the result</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#try-it-on-your-own-photos">Try it on your own photos</a></li>
+          </ol>
+        </nav>
+
+        <div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:scroll-mt-32 [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:scroll-mt-32 [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4">
+          <h2 id="why-does-alignment-decide-what-you-see">Why does alignment decide what you see?</h2>
+          <p><strong>Two photos framed differently can fake progress or hide it.</strong> A phone held lower makes your legs look longer, and a step closer to the mirror makes your shoulders look wider. When the frames don't match, the comparison ends up measuring the camera instead of your body.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="what-aligning-on-the-fly-looks-like">What aligning on the fly looks like</h2>
+          <p><strong>You align on the comparison itself, with no Edit button, crop screen or Save.</strong> One finger moves a photo, a pinch zooms it from 0.8× to 4×, and a two-finger twist rotates it. All three work at the same time, the way you move a map, and the change saves the moment you lift your finger.</p>
+          <p><strong>The photo you're matching sits right next to the one you move.</strong> A separate editor would mean leaving the comparison, adjusting blind, saving and coming back to check. Here, you see the fit as you go. A single tap still opens the check-in, and a double tap likes it.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="small-nudges-with-three-guardrails">Small nudges, with three guardrails</h2>
+          <p><strong>Rotation snaps straight within 3°.</strong> As a photo comes within 3° of level, you feel a haptic tick, and it lands straight when you let go. Pan and zoom never snap, so small nudges stay small.</p>
+          <p><strong>An optional grid gives you lines to match, and a reset covers mistakes.</strong> Turn the grid on from the Compare toolbar to line up shoulders and hips. After each change, a reset button shows on that photo for about 3 seconds and returns it to unaligned, so it's a reset rather than a step-by-step undo.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="align-once-and-it-follows-the-photo">Align once, and it follows the photo</h2>
+          <p><strong>Alignment belongs to one photo, not to one comparison.</strong> Line up your front photo from March once, and it stays aligned in every pair it appears in and in the Logs thumbnails. Recomp re-renders the aligned version from your original into a 2000 px display image in the background, so a zoomed photo stays sharp.</p>
+          <p><strong>The original file is never changed.</strong> Check-in detail and the fullscreen viewer still show each photo as you took it. Front, Side and Back each keep their own alignment, so switching poses from the toolbar shows the framing you gave each photo.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="sharing-the-result">Sharing the result</h2>
+          <p><strong>The share button exports one JPG of exactly what you lined up.</strong> It holds both photos side by side with the date and weight under them, and there's no watermark or logo. The grid and buttons are hidden, and the image goes straight to the iOS share sheet.</p>
+          <p><strong>Recomp never uploads your photos.</strong> There's no account and no tracking, and the only data the app sends is anonymous usage analytics and crash reports.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="faq">FAQ</h2>
+          <h3>What does "align on the fly" mean?</h3>
+          <p>You fix framing on the Compare screen itself, with both photos in view. There's no edit mode or Save button.</p>
+          <h3>Does Recomp align photos automatically?</h3>
+          <p>No, and it has no pose detection. You align by hand with pan, zoom and rotate, and I explain why in <a href="/blog/progress-photo-auto-alignment/">why auto-alignment for progress photos is hard to do well</a>.</p>
+          <h3>Does aligning change my original photo?</h3>
+          <p>No. Recomp saves the alignment as data and renders a new display image from the original.</p>
+          <h3>Can I undo an adjustment?</h3>
+          <p>For about 3 seconds after each change, a reset button returns that photo to unaligned.</p>
+          <h3>How do I take photos that need less aligning?</h3>
+          <p>Use the same spot, height and light every time. My setup is in <a href="/blog/how-to-take-progress-photos-for-recomp/">how to take progress photos for a recomp</a>.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="try-it-on-your-own-photos">Try it on your own photos</h2>
+          <p>Recomp is on the App Store for iPhone. <a href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125?ct=compare-page" target="_blank" rel="noopener noreferrer">Download Recomp on the App Store</a>.</p>
+          <p>If you hit an edge case with alignment, email me at markstepchin@gmail.com.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+        </div>
+      </main>
+
+      <!-- chrome:footer depth="2" -->
+      <footer class="pt-8 pb-8">
+        <div class="mx-auto w-full max-w-[800px] px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 max-md:flex-col max-md:justify-center max-md:gap-y-1">
+            <nav class="grid min-w-0 gap-y-1 text-micro max-md:w-full max-md:justify-items-center max-md:gap-y-0" aria-label="Footer">
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/"
+                  >Home</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/blog/"
+                  >Blog</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/about/"
+                  >About</a
+                >
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/privacy/"
+                  >Privacy</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/support/"
+                  >Support</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/roadmap/"
+                  >Roadmap</a
+                >
+              </div>
+            </nav>
+            <div
+              class="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-card-border bg-card p-1.5 max-md:ml-0"
+              role="group"
+              aria-label="Color theme"
+            >
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="system"
+                aria-pressed="true"
+              >
+                Auto
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="light"
+                aria-pressed="false"
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="dark"
+                aria-pressed="false"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /chrome:footer -->
+    </div>
+    <script src="../../js/posthog.js"></script>
+    <script src="../../js/theme.js"></script>
+  </body>
+</html>

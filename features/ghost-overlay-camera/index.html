@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto" data-theme="system">
+  <head>
+    <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Progress Photo Ghost Overlay Camera, Coming in 3.6 | Recomp</title>
+    <meta
+      name="description"
+      content="Coming in Recomp 3.6: an in-app camera that shows your last photo of the same pose as a see-through ghost, so each new check-in starts closer to the last."
+    />
+    <link rel="stylesheet" href="../../styles/output.css" />
+    <link rel="canonical" href="https://progressphotos.app/features/ghost-overlay-camera/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta property="og:title" content="Progress Photo Ghost Overlay Camera, Coming in 3.6 | Recomp" />
+    <meta
+      property="og:description"
+      content="Coming in Recomp 3.6: an in-app camera that shows your last photo of the same pose as a see-through ghost, so each new check-in starts closer to the last."
+    />
+    <meta property="og:url" content="https://progressphotos.app/features/ghost-overlay-camera/" />
+    <meta
+      property="og:image"
+      content="https://progressphotos.app/assets/step-compare.webp?v=5"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Progress Photo Ghost Overlay Camera, Coming in 3.6 | Recomp" />
+    <meta
+      name="twitter:description"
+      content="Coming in Recomp 3.6: an in-app camera that shows your last photo of the same pose as a see-through ghost, so each new check-in starts closer to the last."
+    />
+    <meta
+      name="twitter:image"
+      content="https://progressphotos.app/assets/step-compare.webp?v=5"
+    />
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is the ghost camera available now?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not yet. It's coming in Recomp 3.6, and today you add photos from your library and align them in Compare."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the camera align my photos automatically?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The ghost is a guide for you to match, and Recomp has no auto-alignment. I explain why in why auto-alignment is hard to do well."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the best setup for the camera?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use the same spot, height and light every time. My setup is in how to take progress photos for a recomp."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]">
+    <div class="flex min-h-dvh flex-col">
+      <!-- chrome:header depth="2" campaign="ghost-camera-page" -->
+      <header class="border-b border-card-border">
+        <div
+          class="mx-auto flex w-full text-xl max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
+        >
+          <a
+            class="inline-flex items-center gap-2 text-fg font-medium tracking-wordmark no-underline hover:no-underline max-md:min-h-11"
+            href="/"
+          >
+            <img
+              class="size-8 shrink-0 rounded-[22%] border border-card-border"
+              src="/assets/recomp-app-icon.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Recomp
+          </a>
+          <nav
+            class="ml-auto flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
+            aria-label="Site"
+          >
+            <a
+              class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              href="/blog/"
+              >Blog</a
+            >
+            <a
+              class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125?ct=ghost-camera-page"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="/assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="/assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <!-- /chrome:header -->
+
+      <main id="top" class="mx-auto w-full max-w-[800px] flex-1 overflow-x-clip px-gutter py-12">
+        <p class="text-micro text-muted pb-3">
+          Features
+        </p>
+        <p class="pb-3 text-micro font-semibold text-fg">Coming in 3.6</p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-8">
+          A ghost overlay camera for progress photos
+        </h1>
+
+        <aside
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-labelledby="quick-answer-heading"
+        >
+          <h2 id="quick-answer-heading" class="text-h4 font-bold tracking-h4">
+            Quick answer
+          </h2>
+          <p class="mt-3 text-muted">Recomp 3.6 adds an in-app camera for check-ins. It shows your most recent photo of the same pose as a see-through ghost over the live view. You match your stance and framing before you take the shot, and the camera walks you through Front, Side and Back.</p>
+        </aside>
+
+        <nav
+          class="mt-8 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-label="On this page"
+        >
+          <h2 id="on-this-page" class="text-h4 font-bold tracking-h4">On this page</h2>
+          <ol class="mt-3 list-decimal space-y-1 pl-5 text-micro text-muted">
+            <li><a href="#why-line-up-at-capture">Why line up at capture</a></li>
+            <li><a href="#your-last-photo-as-a-guide">Your last photo, as a guide</a></li>
+            <li><a href="#front-side-back-in-order">Front, Side, Back, in order</a></li>
+            <li><a href="#rear-or-front-camera">Rear or front camera</a></li>
+            <li><a href="#a-self-timer-so-you-can-step-back">A self-timer so you can step back</a></li>
+            <li><a href="#your-shots-stay-in-the-app">Your shots stay in the app</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#get-recomp-before-3-6-lands">Get Recomp before 3.6 lands</a></li>
+          </ol>
+        </nav>
+
+        <div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:scroll-mt-32 [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:scroll-mt-32 [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4">
+          <h2 id="why-line-up-at-capture">Why line up at capture</h2>
+          <p><strong>Some differences can't be fixed after the shot.</strong> Pan, zoom and rotate can't undo a turned hip or a camera held lower. Today you <a href="/features/compare-progress-photos/">align on the fly in Compare</a>, and a photo taken from the same spot and stance needs less of it.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="your-last-photo-as-a-guide">Your last photo, as a guide</h2>
+          <p><strong>The ghost is your most recent photo of the pose you're taking.</strong> A side photo shows your latest side photo as the ghost, and if you lined that photo up in Compare, the ghost uses the aligned version. If there's no earlier photo of that pose yet, there's no ghost.</p>
+          <p><strong>A 0 to 100 slider sets how see-through it is.</strong> It starts at 50, the camera remembers your setting next time, and the slider shows only when there's a ghost to adjust.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="front-side-back-in-order">Front, Side, Back, in order</h2>
+          <p><strong>The camera walks you through the poses you haven't filled yet.</strong> The header shows where you are, like "Front · 1 of 3". Taking the shot moves you to the next pose, Skip leaves a pose empty and moves on, and Done ends the walk.</p>
+          <p><strong>Your photo library stays the default source for new check-ins.</strong> Choose Camera or Photos when you add a check-in, and Recomp remembers your last choice. A reminder tap opens whichever one you used last.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="rear-or-front-camera">Rear or front camera</h2>
+          <p><strong>The rear camera is the default, and a button flips to the front camera.</strong> On the front camera, the ghost is mirrored so it lines up with the preview. The photo you save is never mirrored, so front and rear shots face the same way.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="a-self-timer-so-you-can-step-back">A self-timer so you can step back</h2>
+          <p><strong>The timer has three settings: Off, 3 seconds and 10 seconds.</strong> Tap the timer button to cycle through them, and the camera remembers your choice for next time. A large countdown runs on screen, and tapping the shutter cancels it.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="your-shots-stay-in-the-app">Your shots stay in the app</h2>
+          <p><strong>Camera shots are saved into Recomp's own storage, not your Photos library, and Recomp never uploads them.</strong> Each shot is dated today unless you change the date, and the camera doesn't ask for microphone access.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="faq">FAQ</h2>
+          <h3>Is the ghost camera available now?</h3>
+          <p>Not yet. It's coming in Recomp 3.6, and today you add photos from your library and align them in Compare.</p>
+          <h3>Does the camera align my photos automatically?</h3>
+          <p>No. The ghost is a guide for you to match, and Recomp has no auto-alignment. I explain why in <a href="/blog/progress-photo-auto-alignment/">why auto-alignment is hard to do well</a>.</p>
+          <h3>What's the best setup for the camera?</h3>
+          <p>Use the same spot, height and light every time. My setup is in <a href="/blog/how-to-take-progress-photos-for-recomp/">how to take progress photos for a recomp</a>.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="get-recomp-before-3-6-lands">Get Recomp before 3.6 lands</h2>
+          <p>Recomp is on the App Store for iPhone. <a href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125?ct=ghost-camera-page" target="_blank" rel="noopener noreferrer">Download Recomp on the App Store</a>.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+        </div>
+      </main>
+
+      <!-- chrome:footer depth="2" -->
+      <footer class="pt-8 pb-8">
+        <div class="mx-auto w-full max-w-[800px] px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 max-md:flex-col max-md:justify-center max-md:gap-y-1">
+            <nav class="grid min-w-0 gap-y-1 text-micro max-md:w-full max-md:justify-items-center max-md:gap-y-0" aria-label="Footer">
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/"
+                  >Home</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/blog/"
+                  >Blog</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/about/"
+                  >About</a
+                >
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/privacy/"
+                  >Privacy</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/support/"
+                  >Support</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/roadmap/"
+                  >Roadmap</a
+                >
+              </div>
+            </nav>
+            <div
+              class="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-card-border bg-card p-1.5 max-md:ml-0"
+              role="group"
+              aria-label="Color theme"
+            >
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="system"
+                aria-pressed="true"
+              >
+                Auto
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="light"
+                aria-pressed="false"
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="dark"
+                aria-pressed="false"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /chrome:footer -->
+    </div>
+    <script src="../../js/posthog.js"></script>
+    <script src="../../js/theme.js"></script>
+  </body>
+</html>

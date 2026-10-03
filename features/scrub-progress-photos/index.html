@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto" data-theme="system">
+  <head>
+    <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scrub Through Your Progress Photos by Date | Recomp</title>
+    <meta
+      name="description"
+      content="Tap a date in Recomp's Compare screen and drag through every check-in, with a haptic tick on each and your weight chart under the ruler."
+    />
+    <link rel="stylesheet" href="../../styles/output.css" />
+    <link rel="canonical" href="https://progressphotos.app/features/scrub-progress-photos/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta property="og:title" content="Scrub Through Your Progress Photos by Date | Recomp" />
+    <meta
+      property="og:description"
+      content="Tap a date in Recomp's Compare screen and drag through every check-in, with a haptic tick on each and your weight chart under the ruler."
+    />
+    <meta property="og:url" content="https://progressphotos.app/features/scrub-progress-photos/" />
+    <meta
+      property="og:image"
+      content="https://progressphotos.app/assets/step-compare.webp?v=5"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Scrub Through Your Progress Photos by Date | Recomp" />
+    <meta
+      name="twitter:description"
+      content="Tap a date in Recomp's Compare screen and drag through every check-in, with a haptic tick on each and your weight chart under the ruler."
+    />
+    <meta
+      name="twitter:image"
+      content="https://progressphotos.app/assets/step-compare.webp?v=5"
+    />
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is this a before and after slider?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Recomp shows two photos side by side, and scrubbing changes which dates you see."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I type in a date?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not today. You find a date by scrubbing, and the readout shows where you are."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it work with photos I imported?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Bulk import brings in up to 500 photos at a time and groups them into check-ins, one per date. It skips dates that already have a check-in, and every imported check-in shows up on the ruler."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does scrubbing stay smooth with a big library?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mid-scrub, Compare shows small thumbnails and loads the sharp photo when you stop. More on the timeline page."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Recomp upload my photos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Recomp never uploads your photos, and there's no account."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]">
+    <div class="flex min-h-dvh flex-col">
+      <!-- chrome:header depth="2" campaign="scrub-page" -->
+      <header class="border-b border-card-border">
+        <div
+          class="mx-auto flex w-full text-xl max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
+        >
+          <a
+            class="inline-flex items-center gap-2 text-fg font-medium tracking-wordmark no-underline hover:no-underline max-md:min-h-11"
+            href="/"
+          >
+            <img
+              class="size-8 shrink-0 rounded-[22%] border border-card-border"
+              src="/assets/recomp-app-icon.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Recomp
+          </a>
+          <nav
+            class="ml-auto flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
+            aria-label="Site"
+          >
+            <a
+              class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              href="/blog/"
+              >Blog</a
+            >
+            <a
+              class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125?ct=scrub-page"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="/assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="/assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <!-- /chrome:header -->
+
+      <main id="top" class="mx-auto w-full max-w-[800px] flex-1 overflow-x-clip px-gutter py-12">
+        <p class="text-micro text-muted pb-3">
+          Features
+        </p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-8">
+          Scrub through your progress photos by date
+        </h1>
+
+        <aside
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-labelledby="quick-answer-heading"
+        >
+          <h2 id="quick-answer-heading" class="text-h4 font-bold tracking-h4">
+            Quick answer
+          </h2>
+          <p class="mt-3 text-muted">In Recomp's Compare screen, tap the date under the before or after photo, and a ruler with one tick per check-in slides up. Drag it, and that photo changes with every check-in you pass, with a haptic tick on each one. The other side stays put, so you always compare against a fixed point.</p>
+        </aside>
+
+        <nav
+          class="mt-8 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-label="On this page"
+        >
+          <h2 id="on-this-page" class="text-h4 font-bold tracking-h4">On this page</h2>
+          <ol class="mt-3 list-decimal space-y-1 pl-5 text-micro text-muted">
+            <li><a href="#why-first-vs-last-isnt-enough">Why first vs last isn't enough</a></li>
+            <li><a href="#how-scrubbing-works">How scrubbing works</a></li>
+            <li><a href="#feel-every-check-in">Feel every check-in</a></li>
+            <li><a href="#where-compare-starts-and-what-stays-put">Where Compare starts, and what stays put</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#scrub-your-own-timeline">Scrub your own timeline</a></li>
+          </ol>
+        </nav>
+
+        <div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:scroll-mt-32 [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:scroll-mt-32 [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4">
+          <h2 id="why-first-vs-last-isnt-enough">Why first vs last isn't enough</h2>
+          <p><strong>The comparison that answers your question is rarely your first photo against your latest.</strong> During a recomp, the scale can sit still for months while your body changes. What you want to know is whether this month looks better than the same weight last spring, or which week a cut started to show.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="how-scrubbing-works">How scrubbing works</h2>
+          <p><strong>Tap the date and weight under either photo.</strong> A sheet slides up with a horizontal ruler, one tick per check-in, your weight chart behind the ticks and the date and weight in large type. Fling or drag it, and it snaps to each check-in as that side's photo follows your finger.</p>
+          <p><strong>The sheet takes at most the bottom half of the screen, with no dimmed backdrop.</strong> Both photos stay in view above it the whole time. Between scrubs, you can still pan, zoom and rotate either photo without closing the sheet.</p>
+          <p><strong>Each side scrubs on its own.</strong> Pin your before photo to the day you started, then scrub only the after side through the months since. On a flat scale, scrub the before side to an earlier check-in at the same weight and see what changed.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="feel-every-check-in">Feel every check-in</h2>
+          <p><strong>Every check-in you pass gives one haptic tick.</strong> The tick fires in step with your finger, not a beat behind it, so you can count check-ins without looking at the ruler.</p>
+          <p><strong>Liked check-ins tick harder.</strong> Double tap a photo to like it, and while you scrub, those check-ins give a stronger tick, so your best weeks are easy to find by feel.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="where-compare-starts-and-what-stays-put">Where Compare starts, and what stays put</h2>
+          <p><strong>Compare opens on your earliest liked check-in against your latest liked one.</strong> With no liked check-ins, it opens on your first check-in against your latest, and the older photo always sits on the left.</p>
+          <p><strong>Switching Front, Side or Back keeps the dates you picked.</strong> If one of those check-ins has no photo for that pose, the slot says so, for example "No side photo", instead of jumping to another date. Once you've picked two dates, <a href="/features/compare-progress-photos/">align them on the fly</a>.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="faq">FAQ</h2>
+          <h3>Is this a before and after slider?</h3>
+          <p>No. Recomp shows two photos side by side, and scrubbing changes which dates you see.</p>
+          <h3>Can I type in a date?</h3>
+          <p>Not today. You find a date by scrubbing, and the readout shows where you are.</p>
+          <h3>Does it work with photos I imported?</h3>
+          <p>Yes. Bulk import brings in up to 500 photos at a time and groups them into check-ins, one per date. It skips dates that already have a check-in, and every imported check-in shows up on the ruler.</p>
+          <h3>Does scrubbing stay smooth with a big library?</h3>
+          <p>Mid-scrub, Compare shows small thumbnails and loads the sharp photo when you stop. More on <a href="/features/progress-photo-timeline/">the timeline page</a>.</p>
+          <h3>Does Recomp upload my photos?</h3>
+          <p>No. Recomp never uploads your photos, and there's no account.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="scrub-your-own-timeline">Scrub your own timeline</h2>
+          <p>Recomp is on the App Store for iPhone. <a href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125?ct=scrub-page" target="_blank" rel="noopener noreferrer">Download Recomp on the App Store</a>.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+        </div>
+      </main>
+
+      <!-- chrome:footer depth="2" -->
+      <footer class="pt-8 pb-8">
+        <div class="mx-auto w-full max-w-[800px] px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 max-md:flex-col max-md:justify-center max-md:gap-y-1">
+            <nav class="grid min-w-0 gap-y-1 text-micro max-md:w-full max-md:justify-items-center max-md:gap-y-0" aria-label="Footer">
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/"
+                  >Home</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/blog/"
+                  >Blog</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/about/"
+                  >About</a
+                >
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/privacy/"
+                  >Privacy</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/support/"
+                  >Support</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/roadmap/"
+                  >Roadmap</a
+                >
+              </div>
+            </nav>
+            <div
+              class="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-card-border bg-card p-1.5 max-md:ml-0"
+              role="group"
+              aria-label="Color theme"
+            >
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="system"
+                aria-pressed="true"
+              >
+                Auto
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="light"
+                aria-pressed="false"
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="dark"
+                aria-pressed="false"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /chrome:footer -->
+    </div>
+    <script src="../../js/posthog.js"></script>
+    <script src="../../js/theme.js"></script>
+  </body>
+</html>

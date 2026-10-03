@@ -6,6 +6,11 @@
 - [Blog](https://progressphotos.app/blog/): Articles on progress photos and recomp tracking
 - [How to Take Progress Photos for a Recomp (Cut or Bulk)](https://progressphotos.app/blog/how-to-take-progress-photos-for-recomp/): Published guide — lighting, poses, cadence, reviewing a flat scale
 - [Why I Built Recomp](https://progressphotos.app/blog/why-i-built-recomp/): Founder post — weekly progress photos, comparison, and why the app exists
+- [Compare and Align Progress Photos Side by Side | Recomp](https://progressphotos.app/features/compare-progress-photos/): Line up two progress photos while you compare them in Recomp. Pan, pinch and rotate either photo in one gesture, and it saves when you lift your finger.
+- [Scrub Through Your Progress Photos by Date | Recomp](https://progressphotos.app/features/scrub-progress-photos/): Tap a date in Recomp's Compare screen and drag through every check-in, with a haptic tick on each and your weight chart under the ruler.
+- [Progress Photo Timeline: Fling Through Years of Check-Ins | Recomp](https://progressphotos.app/features/progress-photo-timeline/): Fling Recomp's timeline and watch years of progress photos change at every check-in, like a flip-book of your own body. Small thumbnails keep it smooth.
+- [Progress Photo Ghost Overlay Camera, Coming in 3.6 | Recomp](https://progressphotos.app/features/ghost-overlay-camera/): Coming in Recomp 3.6: an in-app camera that shows your last photo of the same pose as a see-through ghost, so each new check-in starts closer to the last.
+- [Why Progress Photo Auto-Alignment Is Hard to Do Well | Recomp](https://progressphotos.app/blog/progress-photo-auto-alignment/): Finding a body in a photo is easy. Lining up years of progress photos without faking change isn't. What breaks, and why I align by hand.
 - [About](https://progressphotos.app/about/): Mark Stepchin, independent developer
 - [Privacy](https://progressphotos.app/privacy/): App data never leaves the device; no upload
 - [FAQ](https://progressphotos.app/faq/): Short answers (longer FAQ coming)
