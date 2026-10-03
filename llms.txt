@@ -12,6 +12,6 @@
 - [Progress Photo Ghost Overlay Camera, Coming in 3.6 | Recomp](https://progressphotos.app/features/ghost-overlay-camera/): Coming in Recomp 3.6: an in-app camera that shows your last photo of the same pose as a see-through ghost, so each new check-in starts closer to the last.
 - [Why Progress Photo Auto-Alignment Is Hard to Do Well | Recomp](https://progressphotos.app/blog/progress-photo-auto-alignment/): Finding a body in a photo is easy. Lining up years of progress photos without faking change isn't. What breaks, and why I align by hand.
 - [About](https://progressphotos.app/about/): Mark Stepchin, independent developer
-- [Privacy](https://progressphotos.app/privacy/): App data never leaves the device; no upload
+- [Privacy](https://progressphotos.app/privacy/): Recomp never uploads your photos. It sends anonymous usage analytics and crash reports, with no account and no tracking.
 - [FAQ](https://progressphotos.app/faq/): Short answers (longer FAQ coming)
 - [App Store](https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125): Download Recomp for iPhone
