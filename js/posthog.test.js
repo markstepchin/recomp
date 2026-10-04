@@ -76,7 +76,7 @@ assert.strictEqual(
 assert.strictEqual(ph.isAppStoreHref("http://itunes.apple.com/app/id6760444125"), true);
 assert.strictEqual(ph.isAppStoreHref("https://example.com/apps.apple.com"), false);
 assert.strictEqual(ph.isAppStoreHref("https://apps.apple.com.evil.test/app"), false);
-assert.strictEqual(ph.isAppStoreHref("mailto:markstepchin@gmail.com"), false);
+assert.strictEqual(ph.isAppStoreHref("mailto:support@progressphotos.app"), false);
 assert.strictEqual(ph.isAppStoreHref("#hero"), false);
 
 var header = el("header");
