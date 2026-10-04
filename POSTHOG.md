@@ -4,7 +4,7 @@ Website analytics lives in one shared file: `js/posthog.js`. That file is the of
 
 ## Pages that load it
 
-Each real page includes the file next to `theme.js` (home page: before the inline script). Redirect stubs `privacy.html` and `support.html` do not.
+Each real page includes the file with `defer`, next to `theme.js` (home page: before the inline script). Redirect stubs `privacy.html` and `support.html` do not. The tag does not run during HTML parse. `posthog.init` waits until the window `load` event, then `requestIdleCallback` with a 2000ms timeout. Browsers without `requestIdleCallback` use `setTimeout`. Nothing in the init config is turned off: session recording, surveys, autocapture, and dead-click capture stay on whatever the project enables today.
 
 | Page | File |
 | --- | --- |
@@ -33,7 +33,7 @@ Website analytics is separate from the iOS app. Recomp check-ins stay on device.
 
 Visitors on this site are never identified, so person properties such as `$initial_utm_source` would not be saved. Switching to `person_profiles: "always"` would create a person profile for every anonymous visit. This MVP keeps `identified_only` and writes attribution onto events instead.
 
-On load, `js/posthog.js` reads the landing query string and, inside PostHog's `loaded` callback (which runs before the first `$pageview`):
+After the deferred init, `js/posthog.js` reads the landing query string and, inside PostHog's `loaded` callback (which runs before the first `$pageview`):
 
 - `posthog.register(...)` — latest touch: `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `gclid`, `ttclid` when present. Later landings overwrite these.
 - `posthog.register_once(...)` — first non-empty touch: `initial_utm_source`, `initial_utm_medium`, `initial_utm_campaign`, `initial_utm_content`, `initial_gclid`, `initial_ttclid`. Stored in the PostHog cookie / localStorage and attached to later events in this browser, including `$pageview` and `app_store_click`.
@@ -44,7 +44,7 @@ Break down Live events and insights by `utm_source` or `initial_utm_source`, and
 
 ## Conversion
 
-`app_store_click` fires on a primary click or middle-click of an `apps.apple.com` or `itunes.apple.com` link. The listener lives in `js/posthog.js` and does not change page markup.
+`app_store_click` fires on a primary click or middle-click of an `apps.apple.com` or `itunes.apple.com` link. The listener lives in `js/posthog.js` and does not change page markup. A click before init is queued and flushed into the SDK stub when init runs, so it is not dropped. The file does not call `posthog.capture("$pageview")`. The SDK still sends that event once per page load, from init. A visit that leaves before `load` plus idle (at most about 2s after load, sooner when the browser is idle) never starts PostHog, so that `$pageview` is not sent.
 
 | Property | Value |
 | --- | --- |
@@ -92,3 +92,5 @@ Replace the loader and `posthog.init` block in `js/posthog.js` with a fresh copy
 - `person_profiles: "identified_only"`
 - the `loaded` callback that calls `register` / `register_once`
 - the App Store click listener above the guard
+- the deferral (after `load`, then `requestIdleCallback`) and the capture queue
+- do not set `disable_session_recording`, `disable_surveys`, or `capture_dead_clicks`
