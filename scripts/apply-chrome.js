@@ -184,6 +184,19 @@ function stampHead(html, url) {
   return next;
 }
 
+const RECOMP_STORE =
+  "https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125";
+
+function addRoundupCampaign(html) {
+  return html.replace(
+    new RegExp(`${RECOMP_STORE.replaceAll(".", "\\.")}(?:\\?[^"'\\s]*)?`, "g"),
+    (url) => {
+      if (/[?&]ct=roundup(?:&|$)/.test(url)) return url;
+      return url.includes("?") ? `${url}&ct=roundup` : `${url}?ct=roundup`;
+    },
+  );
+}
+
 function apply(html) {
   const inferred = infer(html);
   let next = html;
@@ -238,7 +251,8 @@ for (const rel of targets) {
     continue;
   }
   if (!before.includes("site-footer") && !before.includes("chrome:footer")) continue;
-  const after = stampHead(stampTheme(apply(before)), publicUrl(rel));
+  let after = stampHead(stampTheme(apply(before)), publicUrl(rel));
+  if (rel === "blog/best-progress-photo-apps/index.html") after = addRoundupCampaign(after);
   if (after !== before) {
     writeFileSync(path, after);
     changed += 1;
