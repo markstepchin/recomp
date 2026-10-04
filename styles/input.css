@@ -239,6 +239,11 @@ html[data-theme="dark"] .device__frame {
   background: var(--color-placeholder);
 }
 
+/* Landscape carousel slide. .device__screen's aspect-ratio is unlayered, so a utility cannot override it. */
+.device__screen.device__screen--landscape {
+  aspect-ratio: 2 / 1;
+}
+
 .device__media {
   position: absolute;
   inset: 0;
