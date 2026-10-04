@@ -39,22 +39,23 @@ function pages(dir = root) {
   return found;
 }
 
-function urls(depth) {
-  const up = "../".repeat(depth);
+// Root paths, so a page at any depth resolves the same place.
+// depth >= 2 used to set Blog to "../", which is /blog/ only when the page already lives under /blog/.
+function urls() {
   return {
-    home: depth === 0 ? "./" : up,
-    blog: depth >= 2 ? "../" : `${up}blog/`,
-    about: `${up}about/`,
-    privacy: `${up}privacy/`,
-    faq: `${up}faq/`,
-    support: `${up}support/`,
-    roadmap: `${up}roadmap/`,
-    assets: `${up}assets/`,
+    home: "/",
+    blog: "/blog/",
+    about: "/about/",
+    privacy: "/privacy/",
+    faq: "/faq/",
+    support: "/support/",
+    roadmap: "/roadmap/",
+    assets: "/assets/",
   };
 }
 
 function render(partial, depth, current) {
-  const map = urls(depth);
+  const map = urls();
   let html = partial;
   for (const [key, href] of Object.entries(map)) {
     html = html.replaceAll(`{{${key}}}`, href);
@@ -76,6 +77,14 @@ function render(partial, depth, current) {
     .split("\n")
     .filter((line) => line.trim() !== "")
     .join("\n");
+}
+
+// Page-specific App Store campaign. The shared header partial has no query, and a later build would otherwise drop one pasted into a stamped header.
+function withCampaign(html, campaign) {
+  if (!campaign) return html;
+  const base =
+    "https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125";
+  return html.replaceAll(`${base}"`, `${base}?ct=${campaign}"`);
 }
 
 function indentBlock(html, spaces) {
@@ -194,7 +203,14 @@ function apply(html) {
       const attrs = parseAttrs(attrSource);
       const depth = Number(attrs.depth ?? inferred.depth);
       const current = attrs.current ?? inferred.current;
-      return marked("header", { current, depth }, render(headerPartial, depth, current), spaces.length);
+      const headerAttrs = { current, depth };
+      if (attrs.campaign) headerAttrs.campaign = attrs.campaign;
+      return marked(
+        "header",
+        headerAttrs,
+        withCampaign(render(headerPartial, depth, current), attrs.campaign),
+        spaces.length,
+      );
     },
   );
 
