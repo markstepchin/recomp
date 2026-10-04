@@ -249,6 +249,12 @@ html[data-theme="dark"] .device__frame {
   pointer-events: none;
 }
 
+/* Whole phone captures. .device__media is unlayered, so a utility cannot turn off its cover crop. */
+.device__media.device__media--contain {
+  object-fit: contain;
+  object-position: center;
+}
+
 .device--hero .device__screen {
   /* Same 430×932 canvas as the static phones; video is a 430×836 crop. */
   aspect-ratio: 430 / 932;
