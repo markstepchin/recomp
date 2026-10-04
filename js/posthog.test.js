@@ -167,6 +167,8 @@ assert.ok(source.indexOf('host === "localhost"') !== -1);
 assert.ok(source.indexOf("app_store_click") !== -1);
 assert.ok(source.indexOf("register_once") !== -1);
 assert.ok(source.indexOf("requestIdleCallback") !== -1);
+assert.ok(source.indexOf('addEventListener("DOMContentLoaded"') !== -1);
+assert.ok(source.indexOf('addEventListener("load"') === -1);
 assert.ok(source.indexOf("pendingCaptures") !== -1);
 assert.ok(source.indexOf("disable_session_recording") === -1);
 assert.ok(source.indexOf("disable_surveys") === -1);

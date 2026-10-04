@@ -67,3 +67,41 @@ for (const rel of pages()) {
 
 const hashes = versioned.map((rel) => `${rel}?v=${versions[rel]}`).join(", ");
 console.log(`asset versions stamped (${changed} file${changed === 1 ? "" : "s"}): ${hashes}`);
+
+// Fail the build if any HTML href/src still points at these files with a
+// missing or stale ?v=. Includes files the stamper skips, so a comment-only
+// mention is ignored and a real tag is not.
+const attrRefs = /\b(?:href|src)\s*=\s*(?:"([^"]+)"|'([^']+)')/gi;
+const mismatches = [];
+function allHtml(dir = root) {
+  const found = [];
+  for (const name of readdirSync(dir)) {
+    if (name === "node_modules" || name === "docs" || name === ".git") continue;
+    const path = join(dir, name);
+    if (statSync(path).isDirectory()) {
+      found.push(...allHtml(path));
+      continue;
+    }
+    if (name.endsWith(".html")) found.push(relative(root, path));
+  }
+  return found;
+}
+for (const rel of allHtml()) {
+  const html = readFileSync(join(root, rel), "utf8");
+  for (const match of html.matchAll(attrRefs)) {
+    const url = match[1] || match[2];
+    const bare = url.split("#")[0];
+    const path = bare.split("?")[0];
+    const asset = versioned.find((file) => path.endsWith(file));
+    if (!asset) continue;
+    const expected = `v=${versions[asset]}`;
+    const query = bare.includes("?") ? bare.slice(bare.indexOf("?") + 1) : "";
+    if (query !== expected) mismatches.push(`${rel}: ${url}`);
+  }
+}
+if (mismatches.length) {
+  console.error("asset version mismatch:");
+  for (const line of mismatches) console.error("  " + line);
+  process.exit(1);
+}
+console.log("asset versions match every HTML href/src");

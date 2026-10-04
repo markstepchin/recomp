@@ -201,8 +201,10 @@
     flushPendingCaptures();
   }
 
-  // After window load, then idle (or 2000ms). setTimeout only if
+  // After DOMContentLoaded, then idle (or 2000ms). setTimeout only if
   // requestIdleCallback is missing. The script tag itself is `defer`.
+  // Not `load`: the homepage video (preload=auto) holds `load` until the
+  // mp4 finishes, and a short visit would leave before init.
   function startPosthogWhenIdle() {
     if (typeof win.requestIdleCallback === "function") {
       win.requestIdleCallback(startPosthog, { timeout: 2000 });
@@ -211,6 +213,9 @@
     }
   }
 
-  if (win.document.readyState === "complete") startPosthogWhenIdle();
-  else win.addEventListener("load", startPosthogWhenIdle, { once: true });
+  if (win.document.readyState === "loading") {
+    win.addEventListener("DOMContentLoaded", startPosthogWhenIdle, { once: true });
+  } else {
+    startPosthogWhenIdle();
+  }
 })(typeof window !== "undefined" ? window : typeof globalThis !== "undefined" ? globalThis : this);

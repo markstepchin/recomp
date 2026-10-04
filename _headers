@@ -3,8 +3,10 @@
 # and stays max-age=0. Do not add a `/*` Cache-Control rule.
 
 # CSS and JS URLs carry a content hash (?v=) from scripts/stamp-asset-versions.js.
-# The filename is stable; the query string is the version, so the browser
-# cache key changes when the file changes.
+# wrangler deploy runs `npm run build` (see wrangler.jsonc), which stamps those
+# hashes and fails if any HTML href/src does not match the file. The filename
+# is stable; the query string is the version, so the browser cache key changes
+# when the file changes.
 /styles/output.css
   Cache-Control: public, max-age=31536000, immutable
 

@@ -632,7 +632,7 @@
       <!-- /chrome:footer -->
     </div>
 
-    <script src="js/posthog.js?v=fa2e395f" defer></script>
+    <script src="js/posthog.js?v=11b6cbc8" defer></script>
     <script>
       (function () {
         const storageKey = "recomp-theme";
@@ -673,6 +673,22 @@
         const revealSections = document.querySelectorAll("[data-reveal]");
         function revealSection(el) {
           el.classList.add("is-revealed");
+          // Chromium ignores an opacity:0 paint for LCP, and this section's
+          // fade is a compositor transition, so it never paints the hero
+          // again. Re-set the video's own width once opacity is non-zero.
+          // CSS already sizes the video, so the attribute value does not change.
+          if (el.id !== "hero") return;
+          const video = el.querySelector(".device--hero .device__media");
+          if (!video) return;
+          const paintHeroForLcp = () => {
+            if (Number(getComputedStyle(el).opacity) === 0) {
+              requestAnimationFrame(paintHeroForLcp);
+              return;
+            }
+            const width = video.getAttribute("width");
+            if (width) video.setAttribute("width", width);
+          };
+          requestAnimationFrame(paintHeroForLcp);
         }
 
         function whenImageReady(img) {
