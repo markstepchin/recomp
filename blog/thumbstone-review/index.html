@@ -311,7 +311,7 @@
 
         <!-- chrome:author-bio depth="2" -->
         <aside
-          class="mt-12 flex items-start gap-4 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          class="mt-12 flex flex-wrap items-center gap-4 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] sm:flex-nowrap sm:items-start"
           aria-labelledby="author-bio-heading"
         >
           <!-- TODO(Mark): pick a photo. Replace this div with <img class="shrink-0 rounded-full" src="../../assets/mark-stepchin.webp" alt="Mark Stepchin" width="64" height="64" loading="lazy" decoding="async" style="width:64px;height:64px;object-fit:cover" />. The 64×64 box is reserved so nothing shifts. -->
@@ -323,9 +323,9 @@
           >
             <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">TODO photo</mark>
           </div>
-          <div class="min-w-0">
-            <h2 id="author-bio-heading" class="text-h4 font-bold tracking-h4">About the author</h2>
-            <p class="pt-2 text-muted">
+          <div class="contents sm:block sm:min-w-0 sm:flex-1">
+            <h2 id="author-bio-heading" class="min-w-0 flex-1 text-h4 font-bold tracking-h4">About the author</h2>
+            <p class="w-full shrink-0 pt-2 text-muted">
               <strong class="text-fg">I'm Mark Stepchin, and I make Recomp, so read what I say about other apps with that in mind.</strong>
               I'm a software engineer who has worked at Silicon Valley startups, with some time at Apple.
               I've trained for years: I bulked from 145 to 195 lb, cut to 155, and now sit around 165.
