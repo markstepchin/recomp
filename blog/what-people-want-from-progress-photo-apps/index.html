@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto" data-theme="system">
+  <head>
+    <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>What People Want From Progress Photo Apps: 732 App Store Reviews | Recomp</title>
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="I searched 732 written App Store reviews of seven progress photo apps for the features they advertise. Reminders and notes get thanked; tags, streaks and feeds get silence." />
+    <link rel="stylesheet" href="../../styles/output.css" />
+    <link rel="canonical" href="https://progressphotos.app/blog/what-people-want-from-progress-photo-apps/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta property="og:title" content="What People Want From Progress Photo Apps: 732 App Store Reviews" />
+    <meta property="og:description" content="I searched 732 written App Store reviews of seven progress photo apps for the features they advertise. Reminders and notes get thanked; tags, streaks and feeds get silence." />
+    <meta property="og:url" content="https://progressphotos.app/blog/what-people-want-from-progress-photo-apps/" />
+    <meta property="og:image" content="https://progressphotos.app/assets/step-compare.webp?v=5" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="What People Want From Progress Photo Apps: 732 App Store Reviews" />
+    <meta name="twitter:description" content="I searched 732 written App Store reviews of seven progress photo apps for the features they advertise. Reminders and notes get thanked; tags, streaks and feeds get silence." />
+    <!-- TODO before publishing: add article:published_time, article:modified_time, and datePublished/dateModified in the JSON-LD; remove noindex; add to sitemap.xml, llms.txt and the /blog/ index. -->
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What people actually want from a progress photo app: I read 732 App Store reviews",
+  "description": "I searched 732 written App Store reviews of seven progress photo apps for the features they advertise. Reminders and notes get thanked; tags, streaks and feeds get silence.",
+  "author": {
+    "@type": "Person",
+    "name": "Mark Stepchin",
+    "url": "https://progressphotos.app/about/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Recomp",
+    "url": "https://progressphotos.app/"
+  },
+  "url": "https://progressphotos.app/blog/what-people-want-from-progress-photo-apps/",
+  "mainEntityOfPage": "https://progressphotos.app/blog/what-people-want-from-progress-photo-apps/",
+  "image": "https://progressphotos.app/assets/step-compare.webp?v=5",
+  "isPartOf": {
+    "@type": "WebPage",
+    "url": "https://progressphotos.app/blog/best-progress-photo-apps/"
+  }
+}
+    </script>
+  </head>
+  <body class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]">
+    <div class="flex min-h-dvh flex-col">
+      <!-- chrome:header current="blog" depth="2" -->
+      <header class="border-b border-card-border">
+        <div
+          class="mx-auto flex w-full text-xl max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
+        >
+          <a
+            class="inline-flex items-center gap-2 text-fg font-medium tracking-wordmark no-underline hover:no-underline max-md:min-h-11"
+            href="../../"
+          >
+            <img
+              class="size-8 shrink-0 rounded-[22%] border border-card-border"
+              src="../../assets/recomp-app-icon.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Recomp
+          </a>
+          <nav
+            class="ml-auto flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
+            aria-label="Site"
+          >
+            <a
+              class="text-fg no-underline hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              href="../"
+              aria-current="page"
+              >Blog</a
+            >
+            <a
+              class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <!-- /chrome:header -->
+
+      <main class="mx-auto w-full max-w-[800px] flex-1 px-gutter py-12">
+        <p class="text-micro text-muted pb-3">
+          <a class="text-muted" href="../">Blog</a>
+          · <a class="text-muted" href="../best-progress-photo-apps/">Best progress photo apps</a>
+          · <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[DRAFT: noindex, not published; publish date TBD]</mark> · Mark Stepchin
+        </p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-8">What people actually want from a progress photo app: I read 732 App Store reviews</h1>
+        <aside
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-labelledby="quick-answer-heading"
+        >
+          <h2 id="quick-answer-heading" class="text-h4 font-bold tracking-h4">
+            Quick Answer
+          </h2>
+          <div class="mt-3 text-muted"><p><strong>Reminders are the feature people thank progress photo apps for, and notes are a small real need.</strong> In 732 written App Store reviews, nobody asked for tags, streaks, themes or a social feed. AI body fat is wanted, but the complaints are about accuracy. Measurements matter mostly to a measurement tracker's audience, and timelapses and collages belong to a different kind of app.</p></div>
+        </aside>
+
+        <div
+          class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4"
+        >
+<p><strong>Full disclosure: I build Recomp, a progress photo app, and I used this study to decide what not to build.</strong> That's a reason to read my conclusions skeptically, so every count below comes with its method. This study backs the <a href="/blog/best-progress-photo-apps/#features-people-use">features section of my roundup</a> of the <a href="/blog/best-progress-photo-apps/">best progress photo apps</a>.</p>
+<h2 id="the-reviews-i-read">The reviews I read</h2>
+<p><strong>I pulled every written review in Apple's public feeds for seven progress photo apps, 732 in all, deduplicated by review ID.</strong> None had an empty body. Check-In: Physique had 0 written reviews, so it isn't in the corpus.</p>
+<div class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" tabindex="0" role="region" aria-label="Reviews by app"><table class="w-max min-w-full border-collapse text-left text-micro">
+<thead>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">App</th>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Written reviews</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Lasmit "Progress"</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">511</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Fit-Stitch</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">126</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Metamorph</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">32</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Photo Journey</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">25</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">GainFrame</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">24</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Thumbstone Progress Pics</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">10</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Then &amp; Now</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">4</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Total</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">732</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Two caveats shape everything below.</strong> Lasmit, a measurement-first app, holds 511 of the 732, or 70%. And only 159 reviews date from 2024 or later, so this mostly reflects older apps and older asks.</p>
+<div class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" tabindex="0" role="region" aria-label="Reviews by year"><table class="w-max min-w-full border-collapse text-left text-micro">
+<thead>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Year</th>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Reviews</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">2012</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">1</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">2014</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">61</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">2015</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">65</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">2016</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">42</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">2017</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">88</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">2018</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">79</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">2019</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">69</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">2020</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">77</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">2021</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">43</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">2022</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">30</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">2023</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">18</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">2024</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">39</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">2025</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">51</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">2026</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">69</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="method">How I counted</h2>
+<ol>
+<li><strong>One case-insensitive regex per feature, run over each review's title and body.</strong> The regexes are in <a href="#regexes">the method table</a>.</li>
+<li><strong>I read every hit and coded it as an ask, a complaint, praise or a false positive.</strong> That covers tags, sharing, AI and body fat, badges, streaks, widgets, Watch, themes, reminders, notes and phases.</li>
+<li><strong>For measurements I didn't hand-code all 220 Lasmit hits.</strong> I report mentions and read every non-Lasmit hit.</li>
+<li><strong>Compare, ghost and align, backup, import, lock and Apple Health are raw keyword counts,</strong> for scale only.</li>
+</ol>
+<p><strong>"Apps with it" counts the 10 other apps I checked, as a confirmed minimum.</strong> They are Fit-Stitch, GainFrame, Thumbstone, Metamorph, Lasmit, Check-In, Then &amp; Now, Hevy, Photo Journey and MyFitnessPal. I searched descriptions, release notes and competitor reports, so an app missing from a count may still have the feature. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[TODO: Hevy and MyFitnessPal are no longer graded in the roundup, so "of 10 others" mixes in two out-of-scope apps. Restate the scope or recount over the eight dedicated apps.]</mark></p>
+<h2 id="results">The results</h2>
+<div class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" tabindex="0" role="region" aria-label="Feature demand in 732 reviews"><table class="w-max min-w-full border-collapse text-left text-micro">
+<thead>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Feature</th>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Apps with it (of 10)</th>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Review evidence (732 reviews)</th>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Free-text tags</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">1</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">0 ask for or praise them</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Unasked</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Social feed or leaderboard</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">3</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">0 ask for a feed; 6 mention sharing results</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Feed unasked; sharing an image is a small real need</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">AI body-fat estimate</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">1</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">5 praise AI analysis (2 name body fat); 7 want body fat calculated from tape or calipers; 1 asks for AI measurements</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Wanted</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Badges</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">3</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">1 praises them, 0 ask</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Unasked</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Streaks</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">4</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">0 mention them</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Unasked, weak evidence</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Body-part measurements</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">4</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">220 of the measurement tracker's 511; 2 asks in the other 221</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Real need, different audience</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Widgets</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">3</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">1 ask</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Barely asked</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Apple Watch app</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">2</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">0 ask for one; 2 want Watch health data synced</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Unasked for photos</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Themes</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">2</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">0 ask</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Unasked</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Reminders</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">8</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">37 mention them, 32 positively</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Real need</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Notes</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">2</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">3 ask, 1 thanks the developer, 2 praise</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Real need, small</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Phases (bulk and cut blocks)</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">1</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">0 mention them</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Unasked so far</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Timelapse or video export</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">4</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">6 mention it</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Separate app category</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Collages and custom layouts</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">1</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">0 mention collages; 3 discuss before/after layouts, all 2014 to 2016</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Separate app category</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="reminders">Reminders: the feature people thank</h2>
+<p><strong>Of the 37 reviews that mention reminders, 32 are positive.</strong> Lasmit has 19 of them, Fit-Stitch 12 and Photo Journey 1. One Lasmit reviewer wrote, "The reminders are helpful but not intrusive." The 5 complaints are about reminders that don't fire, ignore the chosen schedule, spam you daily, or can't be set less often than weekly.</p>
+<p><strong>Recomp has a weekly reminder, and 3.6 adds daily and biweekly options</strong> <mark class="rounded-sm bg-sky-200 px-1 text-black box-decoration-clone">[after 3.6]</mark>. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: which reminder options ship in 3.4 vs 3.6, and whether the reminder opens the last-used source (inconsistency #9)]</mark></p>
+<h2 id="notes">Notes: small, but real</h2>
+<p><strong>Three reviews ask for notes, one thanks a developer for adding them, and two praise them.</strong> A Photo Journey reviewer wrote, "I wanted somewhere where I can add notes like what makeup I’m wearing, cycle, food etc that impact appearance." That 2-star review is dated Jun 12, 2025, and Photo Journey added notes in 1.9.0 on Jun 17, five days later. On Jun 21, another reviewer wrote, "I am thrilled to see the notes section!" Recomp has notes on every check-in.</p>
+<h2 id="tags-feeds-badges-and-streaks-silence">Tags, feeds, badges and streaks: silence</h2>
+<p><strong>Nobody asked for tags.</strong> One app of the 10 has free-text tags, Fit-Stitch since Aug 11, 2026, and no review asks for them or praises them. The only "label" complaint wanted front and side labels. People describe context in sentences instead, which is what notes are for. Fit-Stitch has about one written review since tags shipped, so there's no evidence yet on how they landed.</p>
+<p><strong>Feeds, badges, streaks, widgets, themes and Watch apps barely come up.</strong> The 732 reviews hold 0 asks for a feed, streaks or themes, 1 for widgets and none for a Watch photo app. One review praises "cool milestone badges." The four apps with streaks have 25, 4, 24 and 0 written reviews here, so that silence proves less.</p>
+<p><strong>Sharing an image is the real need behind "social."</strong> Six reviews mention sending results to a coach, friends or Facebook. One 2015 Fit-Stitch reviewer wanted to share "directly with my coach instead of having to save the photos and email to her!" Recomp's share button builds a before/after image and sends it through the share sheet.</p>
+<h2 id="ai-body-fat">AI body fat: wanted, and accuracy is the problem</h2>
+<p><strong>Five reviews praise GainFrame's AI analysis, two of them its body-fat number.</strong> One reads, "Finally found an app that lets my track body fat week over week." A cluster of warm 5-star GainFrame reviews landed Mar 21 to 23, 2026, and may come from its tester group. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: tester-group inference is unverified]</mark></p>
+<p><strong>Seven more complain that Lasmit won't calculate body fat from tape or calipers.</strong> One reads, "Thought this app would take caliper measurements and calculate body fat." They want a calculation from their own numbers, not a photo estimate. One Metamorph reviewer asked for "AI to approximate measurements." Recomp has no AI or body-fat estimate, by design. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[TODO: link the AI body-fat accuracy article (REC-80, PR #19) once it's live]</mark></p>
+<h2 id="measurements">Measurements: a different audience</h2>
+<p><strong>In Lasmit, 220 of 511 reviews mention measurements, more than mention photos (125).</strong> Of those 220, 65 are 1 or 2 stars, mostly about the redesign, the paywall and data entry. In the six photo-first apps, only 2 of 221 reviews ask for measurements. Recomp 3.6 adds eight optional measurements anyway <mark class="rounded-sm bg-sky-200 px-1 text-black box-decoration-clone">[after 3.6]</mark>. It's a bet on lifters who track a tape measure, not something these reviews asked for. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: Mark's own reason for adding measurements]</mark></p>
+<h2 id="timelapses-and-collages-a-different-kind-of-app">Timelapses and collages: a different kind of app</h2>
+<p><strong>Only 6 of the 732 reviews mention a timelapse or video, and none mention a collage.</strong> One asks for a timelapse export, one wants a broken progress video fixed, and two praise one. The other two complain about a low-resolution, watermarked video and an app that "only allows you to take photos and export them as a “time lapse”" with no side-by-side. Compare and side-by-side terms appear in 67 reviews.</p>
+<p><strong>Two of these apps started as timelapse makers.</strong> Metamorph began as a stop-motion app for renovations, plants and kids, and Photo Journey as a daily timelapse app. Three Fit-Stitch reviews from 2014 to 2016 discuss its before/after layouts, and one asks it to "go back to the old before/after set up."</p>
+<h2 id="phases-no-demand-yet">Phases: no demand yet</h2>
+<p><strong>One app groups check-ins into bulk and cut blocks, and none of the 732 reviews mention bulk, cut, deload or a GLP-1 drug.</strong> I'll build phases only once readers ask. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: Mark's call on phases]</mark></p>
+<h2 id="what-else-the-reviews-talk-about">What else the reviews talk about</h2>
+<p><strong>These are raw keyword counts, not hand-checked, so treat them as scale.</strong></p>
+<div class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" tabindex="0" role="region" aria-label="Raw keyword counts"><table class="w-max min-w-full border-collapse text-left text-micro">
+<thead>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Topic</th>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Reviews matching</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Compare or side by side</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">67</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Backup, sync, export or lost data</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">56</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Reminders</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">41 (37 after reading)</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Ghost, overlay or align</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">27</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Lock or privacy</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">26 (10 are Fit-Stitch, mostly praising its passcode)</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Import</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">17</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Apple Health</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">14</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Timelapse or video</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">6</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Backup and lost data is the second-largest count, after compare.</strong> That's why my roundup covers <a href="/blog/best-progress-photo-apps/#switch-phones">what happens when you switch phones</a>. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[TODO: hand-check the backup and lock hits before drawing conclusions from them]</mark></p>
+<h2 id="regexes">The regexes</h2>
+<div class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" tabindex="0" role="region" aria-label="Regex per feature"><table class="w-max min-w-full border-collapse text-left text-micro">
+<thead>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Feature</th>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Regex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Tags</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted"><code>\btag(s|ged|ging)?\b|\blabel(s|ed|ing)?\b</code></td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Sharing and social</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted"><code>\bshar(e|es|ed|ing)\b|\bsocial\b|\bfeed\b|\bcommunity\b|\bfriends?\b|\bfollowers?\b|\binstagram\b|\btiktok\b|\bleaderboard</code></td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">AI and body fat</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted"><code>body ?-?fat|\bbf\b|\bbf%|\bai\b|artificial intelligence|\bestimat|\bscore[sd]?\b|\brating my\b</code></td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Badges</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted"><code>\bbadges?\b|\bachievements?\b|\btroph(y|ies)\b|\bawards?\b|\bmilestones?\b|\bgamif</code></td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Streaks</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted"><code>\bstreaks?\b</code></td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Measurements</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted"><code>measur|\bwaist\b|\bchest\b|\bbiceps?\b|\bthighs?\b|\bhips?\b|\binch(es)?\b|\bcm\b|\btape\b</code></td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Widgets</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted"><code>\bwidgets?\b</code></td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Apple Watch</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted"><code>\bapple watch\b|\bwatch ?os\b|\bwatch app\b|\bon (my|the) watch\b|\bwatch\b</code></td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Themes</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted"><code>\bthemes?\b|\bdark mode\b|\blight mode\b|\bcolou?rs?\b|\bicons?\b|\bappearance\b|\bwallpaper</code></td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Reminders</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted"><code>\bremind|\bnotification|\bnotify|\balert</code></td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Notes</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted"><code>\bnotes?\b|\bjournal(ing)?\b|\bcomments?\b|\bdiary\b</code></td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Phases</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted"><code>\bphases?\b|\bbulk(ing)?\b|\bcut(ting)?\b|\bdeload|\bglp|\bozempic|\bmounjaro|\bwegovy|\bzepbound|\bsemaglutide|\btirzepatide</code></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="what-this-study-cant-tell-you">What this study can't tell you</h2>
+<p><strong>Reviews show what people bother to write about, not what they use every week.</strong> Most of them predate 2024, and one app dominates. The silence on tags and streaks is mostly from apps that didn't have them yet. I didn't use Reddit quotes, because I couldn't verify them. If you'd use a feature nobody here asked for, email me at <a href="mailto:support@progressphotos.app">support@progressphotos.app</a>.</p>
+        </div>
+
+        <section
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] mt-12"
+          aria-labelledby="article-cta-heading"
+        >
+          <h2 id="article-cta-heading" class="text-h3 font-bold tracking-h3">
+            See the progress buried in your camera roll
+          </h2>
+          <p class="pt-3 text-muted">
+            Compare progress photos on a before-and-after timeline, scroll to
+            any date instantly, and align photos on the fly. Recomp never
+            uploads your photos. It sends anonymous usage analytics and crash
+            reports, with no account and no tracking.
+          </p>
+          <p class="pt-6">
+            <a
+              class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85]"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+              data-cta-location="article_footer"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </p>
+        </section>
+
+      </main>
+
+      <!-- chrome:footer depth="2" -->
+      <footer class="pt-8 pb-8">
+        <div class="mx-auto w-full max-w-[800px] px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 max-md:flex-col max-md:justify-center max-md:gap-y-1">
+            <nav class="grid min-w-0 gap-y-1 text-micro max-md:w-full max-md:justify-items-center max-md:gap-y-0" aria-label="Footer">
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../"
+                  >Home</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../"
+                  >Blog</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../about/"
+                  >About</a
+                >
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../privacy/"
+                  >Privacy</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../support/"
+                  >Support</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../roadmap/"
+                  >Roadmap</a
+                >
+              </div>
+            </nav>
+            <div
+              class="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-card-border bg-card p-1.5 max-md:ml-0"
+              role="group"
+              aria-label="Color theme"
+            >
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="system"
+                aria-pressed="true"
+              >
+                Auto
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="light"
+                aria-pressed="false"
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="dark"
+                aria-pressed="false"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /chrome:footer -->
+    </div>
+    <script src="../../js/posthog.js"></script>
+    <script src="../../js/theme.js"></script>
+  </body>
+</html>
