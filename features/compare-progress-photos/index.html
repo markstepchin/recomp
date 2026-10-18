@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto" data-theme="system">
+  <head>
+    <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <meta name="apple-itunes-app" content="app-id=6760444125" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Compare Progress Photos Side by Side, Any Two Dates | Recomp</title>
+    <meta
+      name="description"
+      content="Put any two progress photos side by side or wipe between them with a slider, with the weight and date under each. Scrub every check-in and share one image."
+    />
+    <link rel="stylesheet" href="../../styles/output.css" />
+    <link rel="canonical" href="https://progressphotos.app/features/compare-progress-photos/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta property="og:title" content="Compare Progress Photos Side by Side, Any Two Dates | Recomp" />
+    <meta
+      property="og:description"
+      content="Put any two progress photos side by side or wipe between them with a slider, with the weight and date under each. Scrub every check-in and share one image."
+    />
+    <meta property="og:url" content="https://progressphotos.app/features/compare-progress-photos/" />
+    <meta property="og:image" content="https://progressphotos.app/assets/og-compare.webp?v=6" />
+    <meta
+      property="og:image:alt"
+      content="Recomp compare screen with two physique photos side by side, including weights and dates"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Compare Progress Photos Side by Side, Any Two Dates | Recomp" />
+    <meta
+      name="twitter:description"
+      content="Put any two progress photos side by side or wipe between them with a slider, with the weight and date under each. Scrub every check-in and share one image."
+    />
+    <meta name="twitter:image" content="https://progressphotos.app/assets/og-compare.webp?v=6" />
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+  </head>
+  <body class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]">
+    <div class="flex min-h-dvh flex-col">
+      <!-- chrome:header depth="2" -->
+      <header class="border-b border-card-border">
+        <div
+          class="mx-auto flex w-full text-xl max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
+        >
+          <a
+            class="inline-flex items-center gap-2 text-fg font-medium tracking-wordmark no-underline hover:no-underline max-md:min-h-11"
+            href="../../"
+          >
+            <img
+              class="size-8 shrink-0 rounded-[22%] border border-card-border"
+              src="../../assets/recomp-app-icon.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Recomp
+          </a>
+          <nav
+            class="ml-auto flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
+            aria-label="Site"
+          >
+            <a
+              class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              href="../"
+              >Blog</a
+            >
+            <a
+              class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <!-- /chrome:header -->
+
+      <main class="mx-auto w-full max-w-[800px] flex-1 overflow-x-clip px-gutter py-12">
+        <p class="text-micro text-muted pb-3">Features</p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-8">Compare progress photos side by side</h1>
+        <div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_figure]:mx-auto [&_figure]:my-8 [&_figure]:w-full [&_figure]:max-w-[280px]">
+          <p><strong>I built Compare because I couldn’t see my own progress.</strong> When my coaching ended, I had 450 front, side and back photos. iOS Photos stored them but had no side-by-side view, so I flicked between two photos and guessed. During a recomp the scale can sit still for months while your body changes. The photos are the only evidence.</p>
+          <figure>
+            <img
+              class="block h-auto w-full rounded-card border border-card-border"
+              src="../../assets/step-compare.webp"
+              alt="Compare showing Jul 18, 2024 at 184.8 lbs next to Aug 18, 2025 at 159.4 lbs, with the date ruler open"
+              width="472"
+              height="1024"
+            />
+          </figure>
+          <p><strong>Any two check-ins sit side by side, with the weight and date under each.</strong> Compare opens on your earliest liked check-in against your latest liked one, with the older photo on the left. With one like, it pairs that check-in with your latest, or with your first if the liked one is the latest. With no likes, it’s your first against your latest. Double tap a photo to like it.</p>
+          <p><strong>Switch to Slider to wipe between the two.</strong> Both photos share one frame, and dragging across it reveals the before photo over the after.</p>
+          <!-- SCREENSHOT NEEDED: Compare in Slider mode, with the wipe partway across. -->
+          <p><strong>Tap a date to scrub through your whole progress photo timeline.</strong> A ruler slides up with one tick per check-in and your weight chart behind it. Fling or drag, and it snaps to each check-in as that side’s photo changes. Each side moves on its own, so you can keep your start date and scroll only the other photo. When the scale hasn’t moved, pick an old check-in at the same weight and compare.</p>
+          <p><strong>You can feel your best weeks.</strong> Every check-in you pass gives a haptic tick, and liked check-ins tick harder. You can find them without watching the ruler.</p>
+          <figure>
+            <video
+              class="block h-auto w-full rounded-card border border-card-border"
+              poster="../../assets/compare-preview-poster.webp"
+              width="370"
+              height="720"
+              autoplay
+              muted
+              loop
+              playsinline
+              aria-label="Scrubbing the before photo through a year of check-ins"
+            >
+              <source src="../../assets/compare-preview.mp4" type="video/mp4" />
+            </video>
+          </figure>
+          <p><strong>Front, Side and Back keep your dates.</strong> Switch pose and both dates stay put. If a check-in has no photo for that pose, the slot says “No side photo” instead of jumping to another date.</p>
+          <p><strong>Line them up on the photo itself.</strong> Drag, pinch or rotate either photo until your shoulders and hips match. The alignment saves to that photo, so it stays lined up in every comparison. More on lining up photos, and on the in-app camera, is on the <a href="../align-progress-photos/">Align page</a>. I wrote about <a href="../../blog/progress-photo-auto-alignment/">where auto-alignment fails</a> separately.</p>
+          <figure>
+            <img
+              class="block h-auto w-full rounded-card border border-card-border"
+              src="../../assets/step-align.webp"
+              alt="Two front photos, May 21, 2024 at 198.0 lbs and Aug 4, 2025 at 157.6 lbs, lined up with the Alignment grid on"
+              width="472"
+              height="1024"
+            />
+          </figure>
+          <p><strong>Share one before and after image.</strong> The share button makes one JPG of what’s on screen, with the date and weight under each photo. In Slider, it shares the wipe instead of two full photos. It has no watermark or logo, and it opens the iOS share sheet.</p>
+          <!-- SCREENSHOT NEEDED: an exported share JPG from Compare. No existing asset shows it. -->
+          <p><strong>Start with the photos you already have.</strong> Until your second check-in, Compare offers Bulk import. Pick up to 500 photos, and Recomp groups them into check-ins by the date each was taken. A CSV with date and weight columns fills in your weights.</p>
+          <p>Recomp never uploads your photos. It sends anonymous usage analytics and crash reports, with no account and no tracking.</p>
+          <p>
+            <a
+              class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85]"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download Recomp, free on iPhone"
+            >
+              <img class="hidden h-auto w-[140px] light:block" src="../../assets/download-on-the-app-store-black.svg" alt="" width="140" height="47" />
+              <img class="h-auto w-[140px] light:hidden" src="../../assets/download-on-the-app-store-white.svg" alt="" width="140" height="47" />
+            </a>
+          </p>
+          <p>If a comparison doesn’t show what you need, email me at <a href="mailto:support@progressphotos.app">support@progressphotos.app</a>.</p>
+          <!--
+          ADD BACK LATER (when PR 13, the REC-42 roundup, is published at /blog/best-progress-photo-apps/):
+          See how other apps compare progress photos. I put Recomp next to other apps in my roundup of the best progress photo apps (/blog/best-progress-photo-apps/).
+          Place it after the import paragraph, before the privacy line.
+          -->
+        </div>
+      </main>
+
+      <!-- chrome:footer depth="2" -->
+      <footer class="pt-8 pb-8">
+        <div class="mx-auto w-full max-w-[800px] px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 max-md:flex-col max-md:justify-center max-md:gap-y-1">
+            <nav class="grid min-w-0 gap-y-1 text-micro max-md:w-full max-md:justify-items-center max-md:gap-y-0" aria-label="Footer">
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../"
+                  >Home</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../"
+                  >Blog</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../about/"
+                  >About</a
+                >
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../privacy/"
+                  >Privacy</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../support/"
+                  >Support</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../roadmap/"
+                  >Roadmap</a
+                >
+              </div>
+            </nav>
+            <div
+              class="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-card-border bg-card p-1.5 max-md:ml-0"
+              role="group"
+              aria-label="Color theme"
+            >
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="system"
+                aria-pressed="true"
+              >
+                Auto
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="light"
+                aria-pressed="false"
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="dark"
+                aria-pressed="false"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /chrome:footer -->
+      <script src="../../js/posthog.js"></script>
+      <script src="../../js/theme.js"></script>
+    </div>
+  </body>
+</html>

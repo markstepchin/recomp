@@ -201,8 +201,9 @@
                 <p
                   class="mx-auto max-w-[var(--measure-lead)] text-lead text-muted pb-16"
                 >
-                  A side-by-side timeline of your progress photos, weight, and
-                  more.
+                  A side-by-side
+                  <a href="features/compare-progress-photos/">timeline</a> of
+                  your progress photos, weight, and more.
                 </p>
                 <a
                   class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] mb-2 justify-self-center"
@@ -367,11 +368,19 @@
                           2
                         </div>
                         <h4 class="text-h4 font-bold tracking-h4">
-                          Compare your progress
+                          <a
+                            class="text-fg no-underline hover:underline"
+                            href="features/compare-progress-photos/"
+                            >Compare your progress</a
+                          >
                         </h4>
                       </div>
                       <p class="text-muted text-sm">
-                        Quickly navigate between photos & weights
+                        <a
+                          class="text-muted no-underline hover:text-fg hover:underline"
+                          href="features/compare-progress-photos/"
+                          >Quickly navigate between photos &amp; weights</a
+                        >
                       </p>
                     </div>
                   </article>
@@ -408,7 +417,11 @@
                           3
                         </div>
                         <h4 class="text-h4 font-bold tracking-h4">
-                          Align your photos
+                          <a
+                            class="text-fg no-underline hover:underline"
+                            href="features/align-progress-photos/"
+                            >Align your photos</a
+                          >
                         </h4>
                       </div>
                       <p class="text-muted text-sm">Pan, zoom, and rotate</p>
@@ -461,8 +474,54 @@
           </section>
         </div>
 
-        <!-- Section 7: FAQ -->
         <section
+          class="translate-y-2 opacity-0 transition-[opacity,transform] duration-[650ms] ease-out [&.is-revealed]:translate-none [&.is-revealed]:opacity-100 motion-reduce:!translate-none motion-reduce:!opacity-100 relative bg-bg py-section"
+          id="also-in-3-6"
+          data-reveal="scroll"
+          aria-labelledby="also-heading"
+        >
+          <div class="mx-auto w-full max-w-[800px] px-gutter">
+            <h2
+              id="also-heading"
+              class="text-center text-h1 font-bold tracking-h1 text-balance"
+            >
+              Also in 3.6
+            </h2>
+            <ul class="mt-10 grid list-none gap-5 p-0">
+              <li class="text-body leading-body text-muted">
+                <strong class="font-semibold text-fg">Face ID lock.</strong>
+                Turn on Require Face ID under Privacy in Settings, and Recomp
+                locks every time you leave it. Your photos are hidden in the
+                app switcher.
+              </li>
+              <li class="text-body leading-body text-muted">
+                <strong class="font-semibold text-fg">Dark mode.</strong>
+                Recomp follows your iPhone’s appearance, or you can pick Light
+                or Dark.
+              </li>
+              <li class="text-body leading-body text-muted">
+                <strong class="font-semibold text-fg">Reminders.</strong>
+                Get a nudge daily, weekly or biweekly, at the time you choose.
+                The Next progress photo card on Logs shows when it’s due.
+              </li>
+              <li class="text-body leading-body text-muted">
+                <strong class="font-semibold text-fg"
+                  >Units and measurements.</strong
+                >
+                Log weight in pounds or kilograms, and up to eight body
+                measurements, from neck to calf, in inches or centimeters.
+              </li>
+              <li class="text-body leading-body text-muted">
+                <strong class="font-semibold text-fg">Date-only check-ins.</strong>
+                A check-in needs only a date. Photos, weight and notes are
+                optional.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Section 7: FAQ -->
+        <section>
           class="translate-y-2 opacity-0 transition-[opacity,transform] duration-[650ms] ease-out [&.is-revealed]:translate-none [&.is-revealed]:opacity-100 motion-reduce:!translate-none motion-reduce:!opacity-100 relative bg-bg py-section"
           id="faq"
           data-reveal="scroll"
