@@ -1,0 +1,35 @@
+{
+ "app": {
+  "slug": "checkin-pro",
+  "app_id": 6785522011,
+  "name": "CheckIn Pro: Physique Tracker",
+  "developer": "Steve Yu",
+  "in_roundup": false,
+  "genre": "Health & Fitness",
+  "price": 0.0,
+  "rating_count_us": 3,
+  "rating_avg_us": 4.33,
+  "first_released": "2026-09-16",
+  "last_updated": "2026-10-08",
+  "version": "1.0.12",
+  "store_url": "https://apps.apple.com/us/app/id6785522011",
+  "reviews_collected": 1,
+  "feed_pages_mostrecent": 1,
+  "feed_rows_mostrecent": 1,
+  "feed_rows_mosthelpful": 1,
+  "oldest_review": "2026-09-25",
+  "newest_review": "2026-09-25"
+ },
+ "fetched_at": "2026-10-17T20:19:21.968082-07:00",
+ "reviews": [
+  {
+   "id": "14592189287",
+   "rating": 3,
+   "title": "Needs work, great idea, but a ways to go",
+   "text": "1. Listening to music while check-in 2.Needs to be a way to change your order of photos (side tricep right is missing), but what if I want to add more poses and don’t want to have to go back and touch my phone? Like I do abs and thighs, then most muscular, but 2 most muscular poses, then I do Arnold pose, but no way to have it automatically do those poses. 3 Needs a better way to save photos without having to back them all up. You can save each photo one by one, but if I want to save a whole session, no easy way to do that.",
+   "date": "2026-09-25T08:49:34-07:00",
+   "version": "1.0.6",
+   "author": "pats_fan_4_ever"
+  }
+ ]
+}

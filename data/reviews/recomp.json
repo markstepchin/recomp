@@ -1,0 +1,25 @@
+{
+ "app": {
+  "slug": "recomp",
+  "app_id": 6760444125,
+  "name": "Recomp: Progress Photo Tracker",
+  "developer": "Mark Stepchin",
+  "in_roundup": true,
+  "genre": "Health & Fitness",
+  "price": 0.0,
+  "rating_count_us": 0,
+  "rating_avg_us": null,
+  "first_released": "2026-04-27",
+  "last_updated": "2026-10-05",
+  "version": "3.4",
+  "store_url": "https://apps.apple.com/us/app/id6760444125",
+  "reviews_collected": 0,
+  "feed_pages_mostrecent": 1,
+  "feed_rows_mostrecent": 0,
+  "feed_rows_mosthelpful": 0,
+  "oldest_review": null,
+  "newest_review": null
+ },
+ "fetched_at": "2026-10-17T20:19:22.893362-07:00",
+ "reviews": []
+}

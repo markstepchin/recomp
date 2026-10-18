@@ -1,0 +1,80 @@
+{
+ "app": {
+  "slug": "progress-snapshot",
+  "app_id": 1547114493,
+  "name": "Progress Snapshot Body Tracker",
+  "developer": "Onat Cipli",
+  "in_roundup": false,
+  "genre": "Photo & Video",
+  "price": 0.0,
+  "rating_count_us": 229,
+  "rating_avg_us": 4.15,
+  "first_released": "2021-02-18",
+  "last_updated": "2026-02-16",
+  "version": "2.2.5",
+  "store_url": "https://apps.apple.com/us/app/id1547114493",
+  "reviews_collected": 6,
+  "feed_pages_mostrecent": 1,
+  "feed_rows_mostrecent": 6,
+  "feed_rows_mosthelpful": 6,
+  "oldest_review": "2022-01-27",
+  "newest_review": "2026-07-12"
+ },
+ "fetched_at": "2026-10-17T20:19:15.127658-07:00",
+ "reviews": [
+  {
+   "id": "14293650532",
+   "rating": 1,
+   "title": "offers nothing",
+   "text": "yet another app that you download that has ZERO FUNCTIONALITY unless you pay. So its not a freemium app. It’s a fake paid app. \n\nthis means if you pay for it for months and months then stop paying, you dont have anything. you cant go in and export because that needs a subscription. \n\nif the app dev is lying about the cost of the app, can you trust them with your photo data?",
+   "date": "2026-07-12T03:47:23-07:00",
+   "version": "2.2.5",
+   "author": "That's Not Important, Presently"
+  },
+  {
+   "id": "13614512564",
+   "rating": 1,
+   "title": "Can not open after update",
+   "text": "Can not open after update",
+   "date": "2026-01-09T13:16:51-07:00",
+   "version": "2.1.2",
+   "author": "JP.owen"
+  },
+  {
+   "id": "13557506422",
+   "rating": 1,
+   "title": "Deceptive",
+   "text": "Progressive auto insurance informed me I needed to download this app but your app showed me no way to proceed without paying a fee which was not explained to me by Progressive",
+   "date": "2025-12-26T08:27:51-07:00",
+   "version": "2.0.5",
+   "author": "DogDogDog777333"
+  },
+  {
+   "id": "13001446721",
+   "rating": 5,
+   "title": "Thanks for this beautiful application",
+   "text": "Beautiful application. Please keep adding more features, and thanks again for this awesome application. \n\nWith Kind Regards- BR",
+   "date": "2025-08-10T21:18:15-07:00",
+   "version": "2.0.5",
+   "author": "Sherap6"
+  },
+  {
+   "id": "12880127413",
+   "rating": 5,
+   "title": "Progressive Snapshot",
+   "text": "Muy buena",
+   "date": "2025-07-11T11:27:43-07:00",
+   "version": "2.0.5",
+   "author": "Elnarrador"
+  },
+  {
+   "id": "8289809469",
+   "rating": 2,
+   "title": "doesn’t upload",
+   "text": "it glitches when i try to add the picture up",
+   "date": "2022-01-27T13:29:46-07:00",
+   "version": "1.3.0",
+   "author": "57494😍😍"
+  }
+ ]
+}
