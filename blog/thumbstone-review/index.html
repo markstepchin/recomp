@@ -54,6 +54,7 @@
     <!-- TODO before publishing: add article:published_time, article:modified_time, and datePublished/dateModified in the JSON-LD; remove noindex; add to sitemap.xml, llms.txt and the /blog/ index. -->
     <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
     <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+    <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -62,8 +63,10 @@
   "description": "I tested Thumbstone's Progress Pics with my own progress photos. Auto-align landed about 3 in 4 shirtless photos, and it has the most compare modes I found.",
   "author": {
     "@type": "Person",
+    "@id": "https://progressphotos.app/about/#mark",
     "name": "Mark Stepchin",
-    "url": "https://progressphotos.app/about/"
+    "url": "https://progressphotos.app/about/",
+    "jobTitle": "Software engineer"
   },
   "publisher": {
     "@type": "Organization",
@@ -147,7 +150,7 @@
         <p class="text-micro text-muted pb-3">
           <a class="text-muted" href="../">Blog</a>
           · <a class="text-muted" href="../best-progress-photo-apps/">Best progress photo apps</a>
-          · <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[DRAFT: noindex, not published; publish date TBD]</mark> · Mark Stepchin
+          · <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[DRAFT: noindex, not published; publish date TBD]</mark> · <a class="text-muted" href="../../about/" rel="author">Mark Stepchin</a>
         </p>
         <h1 class="text-h2 font-bold tracking-h2 text-balance pb-8">Progress Pics: Body Tracker review: the auto-align that works as a first pass</h1>
         <aside
@@ -305,6 +308,35 @@
 <h2 id="what-i-havent-tested-yet">What I haven't tested yet</h2>
 <p><strong>I still need its design and performance scores, a clothed-photo auto-align run, and a restore test.</strong> The full-library test decides whether its stacks stay fast with hundreds of photos. If you've used Thumbstone's auto-align on clothed photos, email me at <a href="mailto:support@progressphotos.app">support@progressphotos.app</a>.</p>
         </div>
+
+        <!-- chrome:author-bio depth="2" -->
+        <aside
+          class="mt-12 flex items-start gap-4 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-labelledby="author-bio-heading"
+        >
+          <!-- TODO(Mark): pick a photo. Replace this div with <img class="shrink-0 rounded-full" src="../../assets/mark-stepchin.webp" alt="Mark Stepchin" width="64" height="64" loading="lazy" decoding="async" style="width:64px;height:64px;object-fit:cover" />. The 64×64 box is reserved so nothing shifts. -->
+          <div
+            class="shrink-0 rounded-full border border-card-border text-center text-micro text-muted"
+            style="width:64px;height:64px;display:flex;align-items:center;justify-content:center"
+            role="img"
+            aria-label="Photo of Mark Stepchin coming soon"
+          >
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">TODO photo</mark>
+          </div>
+          <div class="min-w-0">
+            <h2 id="author-bio-heading" class="text-h4 font-bold tracking-h4">About the author</h2>
+            <p class="pt-2 text-muted">
+              <strong class="text-fg">I'm Mark Stepchin, and I make Recomp, so read what I say about other apps with that in mind.</strong>
+              I'm a software engineer who has worked at Silicon Valley startups, with some time at Apple.
+              I've trained for years: I bulked from 145 to 195 lb, cut to 155, and now sit around 165.
+              Before building Recomp in my evenings and weekends from San Diego, I tried more than 10 progress photo apps.
+              <a href="../../about/">More about me</a>
+            </p>
+            <!-- TODO(Mark): the weight history comes from your Oct 17 brief and isn't on /about/ yet. Confirm the numbers before publishing. -->
+            <!-- TODO(Mark): "tried more than 10" is the public claim from /blog/why-i-built-recomp/. Don't say "tested 36 apps": 36 is the proposed candidate list in the how-i-test draft, with no screening log yet, and hands-on scoring is partial (6 of 10 apps have proposed scores). Once testing is done, this could read "I screened 36 apps and tested N hands-on." -->
+          </div>
+        </aside>
+        <!-- /chrome:author-bio -->
 
         <section
           class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] mt-12"

@@ -63,6 +63,18 @@
     <meta name="twitter:description" content="I've taken 450+ weekly progress photos [CONFIRM]. I ran the same set through 10 progress photo apps and compared capture, alignment, comparison, privacy, backup and price." />
     <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
     <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+    <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
+    <!-- TODO: no Article JSON-LD on this page yet. When one is added, set "author" to {"@id": "https://progressphotos.app/about/#mark"} or this full node. -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://progressphotos.app/about/#mark",
+  "name": "Mark Stepchin",
+  "url": "https://progressphotos.app/about/",
+  "jobTitle": "Software engineer"
+}
+    </script>
   </head>
   <body
     class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]"
@@ -126,7 +138,7 @@
       <main class="mx-auto w-full max-w-[800px] flex-1 overflow-x-clip px-gutter py-12 lg:overflow-x-visible">
         <p class="text-micro text-muted pb-3">
           <a class="text-muted" href="../">Blog</a>
-          · Mark Stepchin
+          · <a class="text-muted" href="../../about/" rel="author">Mark Stepchin</a>
         </p>
         <h1 id="top" class="scroll-mt-32 text-h2 font-bold tracking-h2 text-balance pb-8">Best Progress Photo Apps in 2026: 10 Apps, Same Photos, Same Scorecard</h1>
 
@@ -174,7 +186,7 @@
         <div
           class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:scroll-mt-32 [&_h2]:text-[clamp(1.5rem,2.1875vw,1.75rem)] [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:scroll-mt-32 [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_h3.entry-name]:text-[clamp(1.25rem,1.72vw,1.375rem)] [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5"
         >
-          <p><em>By Mark Stepchin · Updated <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: publish date]</mark></em></p>
+          <p><em>By <a class="text-muted" href="../../about/" rel="author">Mark Stepchin</a> · Updated <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: publish date]</mark></em></p>
           <p><strong>My top pick is <a href="#recomp">Recomp</a>, the free app I built.</strong> It's the only free app here that runs the whole weekly check-in and also takes in years of camera-roll photos <mark class="rounded-sm bg-sky-200 px-1 text-black box-decoration-clone">[after 3.6: in-app camera]</mark> <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: after hands-on testing]</mark>. <strong>Use something else if you want:</strong></p>
           <ol><li><strong>iCloud sync for one payment:</strong> <a href="#fit-stitch">Fit-Stitch</a>, $4.99.</li><li><strong>Automatic alignment:</strong> <a href="#thumbstone">Thumbstone's Progress Pics</a>.</li><li><strong>Apple Health and measurement history:</strong> <a href="#lasmit">Lasmit's &quot;Progress.&quot;</a></li><li><strong>The cleanest privacy label:</strong> <a href="#check-in">Check-In: Physique</a>.</li><li><strong>Hands-free capture:</strong> <a href="#then-and-now">Then &amp; Now</a>.</li></ol>
           <p>AI body-fat apps, workout and calorie trackers, and timelapse or collage makers are <a href="#what-i-tested">out of scope</a>.</p>
@@ -377,9 +389,39 @@
           <p>I retest after any major version, table-column change or reader report of data loss, and date every pick change here. Found a mistake? Email <a href="mailto:support@progressphotos.app">support@progressphotos.app</a> <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: corrections address]</mark>.</p>
           <hr class="border-0 border-t border-card-border" />
           <p><em>About the author: I'm Mark Stepchin, a lifter and software engineer. Here's <a href="/blog/why-i-built-recomp/">why I built Recomp</a>. If you use an app I missed or hit an edge case in one I covered, email me.</em></p>
+          <!-- TODO Mark: this older one-line bio duplicates the new bio box; remove one if you want. -->
           <p class="lg:absolute lg:right-full lg:top-0 lg:mr-6 lg:!mt-0"><a class="inline-flex size-11 items-center justify-center rounded-full border border-card-border text-fg no-underline hover:bg-card hover:text-fg hover:no-underline" href="#contents" aria-label="Back to contents"><span aria-hidden="true">↑</span></a></p></section>
 
         </div>
+
+        <!-- chrome:author-bio depth="2" -->
+        <aside
+          class="mt-12 flex items-start gap-4 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-labelledby="author-bio-heading"
+        >
+          <!-- TODO(Mark): pick a photo. Replace this div with <img class="shrink-0 rounded-full" src="../../assets/mark-stepchin.webp" alt="Mark Stepchin" width="64" height="64" loading="lazy" decoding="async" style="width:64px;height:64px;object-fit:cover" />. The 64×64 box is reserved so nothing shifts. -->
+          <div
+            class="shrink-0 rounded-full border border-card-border text-center text-micro text-muted"
+            style="width:64px;height:64px;display:flex;align-items:center;justify-content:center"
+            role="img"
+            aria-label="Photo of Mark Stepchin coming soon"
+          >
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">TODO photo</mark>
+          </div>
+          <div class="min-w-0">
+            <h2 id="author-bio-heading" class="text-h4 font-bold tracking-h4">About the author</h2>
+            <p class="pt-2 text-muted">
+              <strong class="text-fg">I'm Mark Stepchin, and I make Recomp, so read what I say about other apps with that in mind.</strong>
+              I'm a software engineer who has worked at Silicon Valley startups, with some time at Apple.
+              I've trained for years: I bulked from 145 to 195 lb, cut to 155, and now sit around 165.
+              Before building Recomp in my evenings and weekends from San Diego, I tried more than 10 progress photo apps.
+              <a href="../../about/">More about me</a>
+            </p>
+            <!-- TODO(Mark): the weight history comes from your Oct 17 brief and isn't on /about/ yet. Confirm the numbers before publishing. -->
+            <!-- TODO(Mark): "tried more than 10" is the public claim from /blog/why-i-built-recomp/. Don't say "tested 36 apps": 36 is the proposed candidate list in the how-i-test draft, with no screening log yet, and hands-on scoring is partial (6 of 10 apps have proposed scores). Once testing is done, this could read "I screened 36 apps and tested N hands-on." -->
+          </div>
+        </aside>
+        <!-- /chrome:author-bio -->
 
         <section
           class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] mt-12"

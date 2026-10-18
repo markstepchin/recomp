@@ -1,5 +1,7 @@
 /**
  * Stamp partials/header.html and partials/footer.html into static pages,
+ * restamp partials/author-bio.html wherever a page has the
+ * <!-- chrome:author-bio --><!-- /chrome:author-bio --> markers,
  * and set each page's canonical and og:url from its path.
  * Cloudflare serves the HTML as-is, so the filled markup is what gets committed.
  * Edit the partials, then run `npm run build`.
@@ -13,6 +15,7 @@ const root = new URL("..", import.meta.url).pathname;
 const headerPartial = readFileSync(join(root, "partials/header.html"), "utf8").trim();
 const footerPartial = readFileSync(join(root, "partials/footer.html"), "utf8").trim();
 const themeBoot = readFileSync(join(root, "partials/theme-boot.html"), "utf8").trim();
+const authorBioPartial = readFileSync(join(root, "partials/author-bio.html"), "utf8").trim();
 
 const skip = new Set([
   "privacy.html",
@@ -235,6 +238,16 @@ function apply(html) {
       return marked("footer", { depth: inferred.depth }, render(footerPartial, inferred.depth, ""), spaces);
     });
   }
+
+  // Opt-in: only pages that already carry the markers get the bio box.
+  next = next.replace(
+    /^([ \t]*)<!-- chrome:author-bio\b(.*?)-->([\s\S]*?)<!-- \/chrome:author-bio -->/m,
+    (match, spaces, attrSource) => {
+      const attrs = parseAttrs(attrSource);
+      const depth = Number(attrs.depth ?? inferred.depth);
+      return marked("author-bio", { depth }, render(authorBioPartial, depth, ""), spaces.length);
+    },
+  );
 
   return next;
 }
