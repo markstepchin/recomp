@@ -1,0 +1,598 @@
+<!doctype html>
+<html
+  lang="en"
+  class="scroll-smooth motion-reduce:scroll-auto"
+  data-theme="system"
+>
+  <head>
+    <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <meta name="apple-itunes-app" content="app-id=6760444125" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>What to Look For in a Progress Photo App: My Principles | Recomp</title>
+    <meta
+      name="description"
+      content="After 450 progress photos and more than 10 apps, here's what I think a progress photo app should be: a good photos app, a good fitness app, and no friction."
+    />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="../../styles/output.css" />
+    <link
+      rel="canonical"
+      href="https://progressphotos.app/blog/what-to-look-for-in-a-progress-photo-app/"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta property="og:title" content="What to look for in a progress photo app" />
+    <meta
+      property="og:description"
+      content="After 450 progress photos and more than 10 apps, here's what I think a progress photo app should be: a good photos app, a good fitness app, and no friction."
+    />
+    <meta
+      property="og:url"
+      content="https://progressphotos.app/blog/what-to-look-for-in-a-progress-photo-app/"
+    />
+    <meta
+      property="og:image"
+      content="https://progressphotos.app/assets/step-compare.webp?v=5"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="What to look for in a progress photo app" />
+    <meta
+      name="twitter:description"
+      content="After 450 progress photos and more than 10 apps, here's what I think a progress photo app should be: a good photos app, a good fitness app, and no friction."
+    />
+    <meta property="article:published_time" content="[CONFIRM: publish date, YYYY-MM-DD]" />
+    <meta property="article:modified_time" content="[CONFIRM: publish date, YYYY-MM-DD]" />
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "What to look for in a progress photo app",
+        "description": "After 450 progress photos and more than 10 apps, here's what I think a progress photo app should be: a good photos app, a good fitness app, and no friction.",
+        "datePublished": "[CONFIRM: publish date, YYYY-MM-DD]",
+        "dateModified": "[CONFIRM: publish date, YYYY-MM-DD]",
+        "author": {
+          "@type": "Person",
+          "name": "Mark Stepchin",
+          "url": "https://progressphotos.app/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Recomp",
+          "url": "https://progressphotos.app/"
+        },
+        "url": "https://progressphotos.app/blog/what-to-look-for-in-a-progress-photo-app/",
+        "mainEntityOfPage": "https://progressphotos.app/blog/what-to-look-for-in-a-progress-photo-app/",
+        "image": "https://progressphotos.app/assets/step-compare.webp"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://progressphotos.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://progressphotos.app/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "What to look for in a progress photo app",
+            "item": "https://progressphotos.app/blog/what-to-look-for-in-a-progress-photo-app/"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body
+    class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]"
+  >
+    <div class="flex min-h-dvh flex-col">
+      <!-- chrome:header current="blog" depth="2" -->
+      <header class="border-b border-card-border">
+        <div
+          class="mx-auto flex w-full text-xl max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
+        >
+          <a
+            class="inline-flex items-center gap-2 text-fg font-medium tracking-wordmark no-underline hover:no-underline max-md:min-h-11"
+            href="../../"
+          >
+            <img
+              class="size-8 shrink-0 rounded-[22%] border border-card-border"
+              src="../../assets/recomp-app-icon.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Recomp
+          </a>
+          <nav
+            class="ml-auto flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
+            aria-label="Site"
+          >
+            <a
+              class="text-fg no-underline hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              href="../"
+              aria-current="page"
+              >Blog</a
+            >
+            <a
+              class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <!-- /chrome:header -->
+
+      <main class="mx-auto w-full max-w-[800px] flex-1 px-gutter py-12">
+        <p class="text-micro text-muted pb-3">
+          <a class="text-muted" href="../">Blog</a>
+          · [CONFIRM: publish date] · Mark Stepchin
+        </p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-8">
+          What to look for in a progress photo app
+        </h1>
+
+        <div
+          class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4"
+        >
+          <!-- HERO: Compare screenshot from Mark's library, e.g. /assets/step-compare.webp. Final pick is Mark's. Must show 3.4 side-by-side Compare (no Slider control) unless this publishes with 3.6. -->
+          <figure class="m-0 mx-auto mt-12 w-1/2 max-w-[280px]">
+            <img
+              class="block h-auto w-full rounded-card border border-card-border"
+              src="/assets/step-compare.webp"
+              alt="Two progress photos side by side in Recomp's Compare screen, with date and weight under each"
+              width="472"
+              height="1024"
+            />
+          </figure>
+          <p>
+            Five photos work fine in any progress photo app. An app only matters
+            once you have the habit, with dozens or hundreds of photos, and that
+            person is who it should be built for. It should be a good photos app
+            and a good fitness app, with almost nothing in the way between them.
+          </p>
+          <p>
+            I build <a href="/">Recomp</a>, so weigh my opinions with that in
+            mind. Where Recomp falls short of something on this page, I say so.
+          </p>
+          <h2>Why I have opinions about this</h2>
+          <p>
+            <strong
+              >I've taken weekly progress photos for years, and most apps
+              couldn't handle my library.</strong
+            >
+            Working with a coach left me with hundreds of front, side and back
+            photos, and I wrote about
+            <a href="/blog/why-i-built-recomp/">why I built Recomp</a> because
+            nothing fit. Before building it, I downloaded more than 10 dedicated
+            apps and paid for a few subscriptions. None stuck.
+          </p>
+          <p>
+            <strong
+              >In October 2026 I tested the category again, end to end.</strong
+            >
+            It changed how I see these apps. Most feel like a minimal first
+            version, and only a few look like someone put real care into them.
+            That gap, more than any feature list, is what this page is about.
+          </p>
+          <!-- ADD WHEN methodology page ships: link "tested the category again" to the methodology page. -->
+          <!-- ADD WHEN #13 ships: "See the full roundup" link to /blog/best-progress-photo-apps/ -->
+          <h2>My principles</h2>
+          <p>
+            <strong
+              >These come from building Recomp, but you can hold any app to
+              them.</strong
+            >
+          </p>
+          <ol>
+            <li>
+              <strong>Tracking takes under a minute and a few taps.</strong>
+              Past that, consistency drops, and consistency is the whole point
+              of progress photos.
+            </li>
+            <li>
+              <strong>The app stays out of the way.</strong> You're there to see
+              your photos, not my buttons.
+            </li>
+            <li>
+              <strong
+                >It stays fast across hundreds or thousands of photos.</strong
+              >
+              The person with a big library is the real user, not an edge case.
+            </li>
+            <li>
+              <strong>It does one job well.</strong> It should sit next to Hevy
+              and MyFitnessPal in your routine instead of trying to replace
+              them.
+            </li>
+            <li>
+              <strong>It works without an account.</strong> Body photos are
+              personal. Recomp never uploads your photos. It sends anonymous
+              usage analytics and crash reports, with no account and no
+              tracking.
+            </li>
+            <!-- 3.6: The verbatim privacy line describes 3.6. Recomp 3.4 (f55413c) has no analytics or crash-reporting SDK in package.json, so it sends neither. If this publishes before 3.6, Alfred/Mark to choose: keep the line (accurate from 3.6) or use "Recomp never uploads your photos, and there's no account." -->
+            <li>
+              <strong>Motion is subtle and native to iOS.</strong> The app
+              should feel like it came with your iPhone.
+            </li>
+            <li>
+              <strong>Success means people stick with it.</strong> I want Recomp
+              to be the best tool for people who take this seriously. I measure
+              that by whether people keep coming back each week, not by what the
+              app charges.
+            </li>
+          </ol>
+          <h2>A progress photo app is a photos app first</h2>
+          <p>
+            <strong
+              >Most of the work in a photos app is the part nobody
+              notices.</strong
+            >
+            A gallery sounds easy to build. In practice it comes with a mountain
+            of small decisions that you only notice when one is wrong: smooth
+            zoom and swiping, loading states, a filmstrip to jump between
+            photos, dark mode. Those details separate an app you keep from one
+            you delete in the first session. Recomp follows your iPhone's light
+            or dark setting, or you can pick one in Settings.
+          </p>
+          <!-- 3.6: filmstrip photo viewer ships in 3.6. Do not claim it for Recomp while 3.4 is live. -->
+          <h3>It has to stay fast with a real library</h3>
+          <p>
+            <strong>Speed is where good-looking apps fall apart.</strong>
+            GainFrame is the most polished app I tested, with great colors,
+            spacing and loading states. Its bulk import took about 15 minutes
+            and stopped at my latest 250 photos, so most of my history never
+            made it in. I haven't published speed numbers for Recomp yet. Until
+            I do, judge any app, mine included, by loading your own library into
+            it and scrolling.
+          </p>
+          <!-- ADD WHEN #13 ships: link "Speed" to /blog/best-progress-photo-apps/#hundreds-of-photos -->
+          <!-- ADD WHEN GainFrame review ships: link "GainFrame" to the review. -->
+          <h3>Picking two photos should take seconds</h3>
+          <p>
+            <strong>The photo picker is where I lose the most patience.</strong>
+            In GainFrame, choosing a before or after photo opens a grid with
+            thumbnails about a third of the screen tall. With hundreds of
+            photos, you can't really find a specific one. In Recomp, you tap the
+            date under either photo and drag a ruler with one tick per check-in,
+            drawn over your weight chart. Each check-in you pass gives a small
+            haptic tap, stronger on photos you've liked, and the photo changes
+            as you drag.
+          </p>
+          <!-- ADD WHEN PR #26 ships: link "In Recomp" to /features/compare-progress-photos/ -->
+          <h3>The photos come first, not the features</h3>
+          <p>
+            <strong>An app can be beautiful and still miss the job.</strong> In
+            GainFrame, photo comparison comes second, and the UI is built around
+            AI first. Photos sit in small boxes with AI labels over them. My
+            verdict: great polish, but at the core it doesn't do the job for me.
+            Polish is easy to copy. A photo you can't find or see clearly is the
+            bigger problem.
+          </p>
+          <h3>More than one way to look</h3>
+          <p>
+            <strong
+              >People want to see their progress in different ways, and the app
+              should let them.</strong
+            >
+            Across the category, the same modes keep coming up: side by side, an
+            overlay with an opacity slider, a wipe slider, timelapse, and photos
+            stacked vertically. Stacked never works for me. I'll build my
+            preferred view first and offer the others, so people can look at
+            their progress however they like. Today Recomp shows side by side
+            only, which is a real gap. Thumbstone's Progress Pics has every one
+            of those modes.
+          </p>
+          <!-- 3.6: Slider (wipe) mode ships in 3.6. Change to "Recomp has side by side and a slider; overlay and timelapse aren't built yet." Overlay and timelapse are not shipped in 3.4 or 3.6. -->
+          <h2>It's also a fitness app</h2>
+          <h3>Make the fitness decisions for me</h3>
+          <p>
+            <strong
+              >You shouldn't have to design a system before your first
+              check-in.</strong
+            >
+            A progress photo app should decide the poses, the framing and how
+            photos line up. Recomp gives each check-in a front, side and back
+            slot. You line photos up by dragging, pinching and rotating them
+            right in Compare, with an alignment grid you can turn on, and your
+            original photo never changes.
+          </p>
+          <p>
+            <strong>Recomp doesn't have its own camera yet.</strong> You take
+            photos with the iPhone camera and add them from your library.
+          </p>
+          <!-- 3.6: in-app camera ships in 3.6: walks front, side, back with Skip/Done, timer Off/3/5/10 s, pinch zoom. Replace this paragraph with that. -->
+          <p>
+            <strong>Auto-alignment is the biggest piece I'm missing.</strong>
+            I'm building it and testing it now. Thumbstone's auto-align landed
+            about three photos in four [CONFIRM: Mark's "75%" wording] in my
+            test, a good first pass, though my shirtless photos probably helped.
+          </p>
+          <!-- ADD WHEN PR #26 ships: link "line photos up" to /features/align-progress-photos/ and "Auto-alignment" to /blog/progress-photo-auto-alignment/ -->
+          <!-- ADD WHEN Thumbstone review ships: link "Thumbstone" to the review. -->
+          <h3>A check-in is one unit</h3>
+          <p>
+            <strong>Photos from the same morning belong together.</strong> In
+            Recomp, a check-in is one date with its photos, weight and notes,
+            and later measurements. Many apps keep separate comparison albums
+            for front, back, side and biceps instead, so three photos from one
+            session end up in three unrelated places. Every app also organizes
+            differently, and each new pattern is one more thing to learn before
+            you see any progress.
+          </p>
+          <!-- 3.6: optional measurements (8 fields, cm/in) and date-only check-ins ship in 3.6. Then drop "and later". -->
+          <h3>Weight belongs next to the photo</h3>
+          <p>
+            <strong
+              >Your weight should sit under the photo, not in a separate
+              app.</strong
+            >
+            Before Recomp, I tried a setup with iOS Photos, weight in Notes, and
+            Calendar reminders. It worked until I wanted to compare, because
+            nothing put the two together. In Recomp, each compared photo shows
+            its date and weight, and a check-in without a weight shows no weight
+            rather than a zero. That lets you put two dates at the same weight
+            side by side, which tells you something the scale can't.
+          </p>
+          <h3>Comparing is what brings you back</h3>
+          <p>
+            <strong
+              >The comparison is the payoff, so it should take no effort to
+              reach.</strong
+            >
+            The loop I wanted was a Monday morning notification, a photo and a
+            weigh-in, then a look at last week. Reminders start the loop, and
+            the comparison is what makes you do it again next Monday. Recomp
+            sends a weekly reminder on the day and time you choose. Its share
+            button turns the comparison into one image with both dates and
+            weights, ready to send to a coach.
+          </p>
+          <!-- 3.6: reminders become Daily, Weekly or Biweekly, plus a "Next progress photo" card. -->
+          <!-- ADD WHEN #13 ships: link "The comparison is the payoff" to /blog/best-progress-photo-apps/#feedback-loop -->
+          <h2>Friction is why people quit</h2>
+          <p>
+            <strong
+              >Adding photos takes too many taps and too much thinking in most
+              apps.</strong
+            >
+            Most people probably see a mess and quit. Every app lays things out
+            differently, so you have to work out where the buttons and inputs
+            are and what each one means. I gave up on some apps right away
+            because they didn't look like quality work.
+          </p>
+          <p>
+            <strong
+              >The worst friction is getting your existing photos in.</strong
+            >
+            None of the apps I first tried could import mine, and adding 450
+            photos one by one would have taken hours and thousands of taps.
+            Recomp imports up to 500 photos at a time from Settings, groups them
+            into check-ins by date, and can fill in weights from a CSV. If you
+            already have a library, try importing it before you judge anything
+            else. For new photos, I wrote
+            <a href="/blog/how-to-take-progress-photos-for-recomp/"
+              >a guide to taking progress photos</a
+            >.
+          </p>
+          <!-- 3.6: Bulk import is offered only from the Compare empty state before your second check-in; the Settings row is dev-only. Change "at a time from Settings" to "when you set up the app". -->
+          <!-- ADD WHEN #13 ships: link "Friction" heading copy to /blog/best-progress-photo-apps/#why-apps-fall-short -->
+          <h2>Your photos should outlive the app</h2>
+          <p>
+            <strong
+              >An app might not be maintained forever, so check the exits before
+              you commit.</strong
+            >
+            Ask how easily you can bring your data in, and how easily you can
+            get it out. I think of Recomp as a UI over your own data. It handles
+            import, formatting and alignment, but the data stays yours.
+          </p>
+          <p>
+            <strong>Recomp doesn't fully live up to that yet.</strong> It can
+            export your check-in dates and weights as a CSV from Settings, under
+            Advanced settings. It can't export your photos or back them up.
+            Until it can, keep your originals in Photos. Importing copies them
+            into Recomp and leaves the originals where they were.
+          </p>
+          <!-- 3.6: CSV export moves to hidden developer settings in 3.6. Then change to "It can't export your photos, weights or a backup yet." -->
+          <h2>What I haven't figured out</h2>
+          <p>
+            <strong>A few of these principles pull against each other.</strong>
+            Every viewing mode I add is another button between you and your
+            photos. Auto-alignment has to be right on clothed photos in bad
+            light, not only on my shirtless ones, before I'll ship it. And I
+            don't yet know the right way to give you a backup without asking for
+            an account.
+          </p>
+          <p>
+            If you've used progress photo apps for a while and see something I
+            missed, email me at
+            <a href="mailto:support@progressphotos.app"
+              >support@progressphotos.app</a
+            >.
+          </p>
+        </div>
+
+        <section
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] mt-12"
+          aria-labelledby="article-cta-heading"
+        >
+          <h2 id="article-cta-heading" class="text-h3 font-bold tracking-h3">
+            See the progress buried in your camera roll
+          </h2>
+          <p class="pt-3 text-muted">
+            Import your photos and weight in under a minute. Compare progress
+            photos on a before-and-after timeline, scroll to any date instantly,
+            and align photos on the fly. Your photos and data never leave your
+            device.
+          </p>
+          <p class="pt-6">
+            <a
+              class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85]"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+              data-cta-location="article_footer"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </p>
+        </section>
+      </main>
+
+      <!-- chrome:footer depth="2" -->
+      <footer class="pt-8 pb-8">
+        <div class="mx-auto w-full max-w-[800px] px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 max-md:flex-col max-md:justify-center max-md:gap-y-1">
+            <nav class="grid min-w-0 gap-y-1 text-micro max-md:w-full max-md:justify-items-center max-md:gap-y-0" aria-label="Footer">
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../"
+                  >Home</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../"
+                  >Blog</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../about/"
+                  >About</a
+                >
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../privacy/"
+                  >Privacy</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../support/"
+                  >Support</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../roadmap/"
+                  >Roadmap</a
+                >
+              </div>
+            </nav>
+            <div
+              class="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-card-border bg-card p-1.5 max-md:ml-0"
+              role="group"
+              aria-label="Color theme"
+            >
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="system"
+                aria-pressed="true"
+              >
+                Auto
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="light"
+                aria-pressed="false"
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="dark"
+                aria-pressed="false"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /chrome:footer -->
+    </div>
+    <script src="../../js/posthog.js"></script>
+    <script src="../../js/theme.js"></script>
+  </body>
+</html>
