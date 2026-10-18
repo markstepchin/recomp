@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto" data-theme="system">
+  <head>
+    <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Progress Photo Timeline: Fling Through Years of Check-Ins | Recomp</title>
+    <meta
+      name="description"
+      content="Fling Recomp's timeline and watch years of progress photos change at every check-in, like a flip-book of your own body. Small thumbnails keep it smooth."
+    />
+    <link rel="stylesheet" href="../../styles/output.css" />
+    <link rel="canonical" href="https://progressphotos.app/features/progress-photo-timeline/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta property="og:title" content="Progress Photo Timeline: Fling Through Years of Check-Ins | Recomp" />
+    <meta
+      property="og:description"
+      content="Fling Recomp's timeline and watch years of progress photos change at every check-in, like a flip-book of your own body. Small thumbnails keep it smooth."
+    />
+    <meta property="og:url" content="https://progressphotos.app/features/progress-photo-timeline/" />
+    <meta
+      property="og:image"
+      content="https://progressphotos.app/assets/step-compare.webp?v=5"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Progress Photo Timeline: Fling Through Years of Check-Ins | Recomp" />
+    <meta
+      name="twitter:description"
+      content="Fling Recomp's timeline and watch years of progress photos change at every check-in, like a flip-book of your own body. Small thumbnails keep it smooth."
+    />
+    <meta
+      name="twitter:image"
+      content="https://progressphotos.app/assets/step-compare.webp?v=5"
+    />
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How fast is it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I haven't measured it on a real phone with a real library yet, so I don't quote a number."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a limit on how many photos I can keep?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I haven't set a cap on total check-ins or photos. Before saving new photos, Recomp checks that your phone has enough storage for them."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does a photo look soft for a moment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You're seeing the thumbnail while you move. The sharp version replaces it when you stop."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Recomp upload my photos to load them faster?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Everything loads from your phone, and Recomp never uploads your photos."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]">
+    <div class="flex min-h-dvh flex-col">
+      <!-- chrome:header depth="2" campaign="timeline-page" -->
+      <header class="border-b border-card-border">
+        <div
+          class="mx-auto flex w-full text-xl max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
+        >
+          <a
+            class="inline-flex items-center gap-2 text-fg font-medium tracking-wordmark no-underline hover:no-underline max-md:min-h-11"
+            href="/"
+          >
+            <img
+              class="size-8 shrink-0 rounded-[22%] border border-card-border"
+              src="/assets/recomp-app-icon.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Recomp
+          </a>
+          <nav
+            class="ml-auto flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
+            aria-label="Site"
+          >
+            <a
+              class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              href="/blog/"
+              >Blog</a
+            >
+            <a
+              class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125?ct=timeline-page"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="/assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="/assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <!-- /chrome:header -->
+
+      <main id="top" class="mx-auto w-full max-w-[800px] flex-1 overflow-x-clip px-gutter py-12">
+        <p class="text-micro text-muted pb-3">
+          Features
+        </p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-8">
+          A progress photo timeline you can fling through
+        </h1>
+
+        <aside
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-labelledby="quick-answer-heading"
+        >
+          <h2 id="quick-answer-heading" class="text-h4 font-bold tracking-h4">
+            Quick answer
+          </h2>
+          <p class="mt-3 text-muted">Recomp's timeline is a ruler you fling. One swipe can carry the photo through years of check-ins, and it changes at every check-in you pass, like a flip-book of your own body. To stay smooth, it shows a small thumbnail while you move and loads the full photo when you stop.</p>
+        </aside>
+
+        <nav
+          class="mt-8 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-label="On this page"
+        >
+          <h2 id="on-this-page" class="text-h4 font-bold tracking-h4">On this page</h2>
+          <ol class="mt-3 list-decimal space-y-1 pl-5 text-micro text-muted">
+            <li><a href="#what-one-fling-shows-you">What one fling shows you</a></li>
+            <li><a href="#why-a-big-library-gets-slow">Why a big library gets slow</a></li>
+            <li><a href="#how-it-stays-smooth">How it stays smooth</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#fling-through-your-own-history">Fling through your own history</a></li>
+          </ol>
+        </nav>
+
+        <div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:scroll-mt-32 [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:scroll-mt-32 [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4">
+          <h2 id="what-one-fling-shows-you">What one fling shows you</h2>
+          <p><strong>Watching every week go by shows change that two photos can't.</strong> When my coaching ended, I had 450 front, side and back photos. Two photos side by side show where you ended up. Flinging through every check-in shows the weeks in between, in order.</p>
+          <p><strong>Tap the date under either photo to open the ruler, then fling it.</strong> It snaps to each check-in, and the photo above changes at every one you pass, while the other side stays where you left it. Switch to Side or Back and fling again to watch the same months from another angle. Picking the exact two dates to compare is on <a href="/features/scrub-progress-photos/">the scrubbing page</a>.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="why-a-big-library-gets-slow">Why a big library gets slow</h2>
+          <p><strong>A 12 MP iPhone photo takes about 49 MB of memory once it's decoded</strong> (4032 × 3024 pixels at 4 bytes each). Decoding dozens of those while your finger moves is how a photo timeline starts to stutter.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="how-it-stays-smooth">How it stays smooth</h2>
+          <p><strong>Every photo has a small thumbnail, a sharp display image and the original.</strong> While you fling, Compare shows the thumbnail, which is enough to see your shape. When you stop, the sharp display image takes its place. The thumbnail is the display image scaled down with the same framing, so nothing jumps when the sharp version lands.</p>
+          <p><strong>Recomp loads the photos around each side before you reach them.</strong> It keeps thumbnails and display images ready for the 6 check-ins on either side of each photo you're comparing. When you start scrubbing, it also loads every thumbnail for that pose, so the far end of your timeline starts loading before you fling to it.</p>
+          <p><strong>How each photo keeps its alignment and stays sharp is on <a href="/features/compare-progress-photos/">the Compare page</a>.</strong></p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="faq">FAQ</h2>
+          <h3>How fast is it?</h3>
+          <p>I haven't measured it on a real phone with a real library yet, so I don't quote a number.</p>
+          <h3>Is there a limit on how many photos I can keep?</h3>
+          <p>I haven't set a cap on total check-ins or photos. Before saving new photos, Recomp checks that your phone has enough storage for them.</p>
+          <h3>Why does a photo look soft for a moment?</h3>
+          <p>You're seeing the thumbnail while you move. The sharp version replaces it when you stop.</p>
+          <h3>Does Recomp upload my photos to load them faster?</h3>
+          <p>No. Everything loads from your phone, and Recomp never uploads your photos.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+          <h2 id="fling-through-your-own-history">Fling through your own history</h2>
+          <p>Recomp is on the App Store for iPhone. <a href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125?ct=timeline-page" target="_blank" rel="noopener noreferrer">Download Recomp on the App Store</a>.</p>
+          <p class="text-right text-micro"><a href="#top">↑ Back to top</a></p>
+        </div>
+      </main>
+
+      <!-- chrome:footer depth="2" -->
+      <footer class="pt-8 pb-8">
+        <div class="mx-auto w-full max-w-[800px] px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 max-md:flex-col max-md:justify-center max-md:gap-y-1">
+            <nav class="grid min-w-0 gap-y-1 text-micro max-md:w-full max-md:justify-items-center max-md:gap-y-0" aria-label="Footer">
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/"
+                  >Home</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/blog/"
+                  >Blog</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/about/"
+                  >About</a
+                >
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/privacy/"
+                  >Privacy</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/support/"
+                  >Support</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="/roadmap/"
+                  >Roadmap</a
+                >
+              </div>
+            </nav>
+            <div
+              class="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-card-border bg-card p-1.5 max-md:ml-0"
+              role="group"
+              aria-label="Color theme"
+            >
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="system"
+                aria-pressed="true"
+              >
+                Auto
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="light"
+                aria-pressed="false"
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="dark"
+                aria-pressed="false"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /chrome:footer -->
+    </div>
+    <script src="../../js/posthog.js"></script>
+    <script src="../../js/theme.js"></script>
+  </body>
+</html>
