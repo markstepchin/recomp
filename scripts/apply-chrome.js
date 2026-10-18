@@ -1,5 +1,7 @@
 /**
  * Stamp partials/header.html and partials/footer.html into static pages,
+ * restamp partials/author-bio.html wherever a page has the
+ * <!-- chrome:author-bio --><!-- /chrome:author-bio --> markers,
  * and set each page's canonical and og:url from its path.
  * Cloudflare serves the HTML as-is, so the filled markup is what gets committed.
  * Edit the partials, then run `npm run build`.
@@ -13,6 +15,7 @@ const root = new URL("..", import.meta.url).pathname;
 const headerPartial = readFileSync(join(root, "partials/header.html"), "utf8").trim();
 const footerPartial = readFileSync(join(root, "partials/footer.html"), "utf8").trim();
 const themeBoot = readFileSync(join(root, "partials/theme-boot.html"), "utf8").trim();
+const authorBioPartial = readFileSync(join(root, "partials/author-bio.html"), "utf8").trim();
 
 const skip = new Set([
   "privacy.html",
@@ -184,6 +187,19 @@ function stampHead(html, url) {
   return next;
 }
 
+const RECOMP_STORE =
+  "https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125";
+
+function addRoundupCampaign(html) {
+  return html.replace(
+    new RegExp(`${RECOMP_STORE.replaceAll(".", "\\.")}(?:\\?[^"'\\s]*)?`, "g"),
+    (url) => {
+      if (/[?&]ct=roundup(?:&|$)/.test(url)) return url;
+      return url.includes("?") ? `${url}&ct=roundup` : `${url}?ct=roundup`;
+    },
+  );
+}
+
 function apply(html) {
   const inferred = infer(html);
   let next = html;
@@ -223,6 +239,16 @@ function apply(html) {
     });
   }
 
+  // Opt-in: only pages that already carry the markers get the bio box.
+  next = next.replace(
+    /^([ \t]*)<!-- chrome:author-bio\b(.*?)-->([\s\S]*?)<!-- \/chrome:author-bio -->/m,
+    (match, spaces, attrSource) => {
+      const attrs = parseAttrs(attrSource);
+      const depth = Number(attrs.depth ?? inferred.depth);
+      return marked("author-bio", { depth }, render(authorBioPartial, depth, ""), spaces.length);
+    },
+  );
+
   return next;
 }
 
@@ -238,7 +264,8 @@ for (const rel of targets) {
     continue;
   }
   if (!before.includes("site-footer") && !before.includes("chrome:footer")) continue;
-  const after = stampHead(stampTheme(apply(before)), publicUrl(rel));
+  let after = stampHead(stampTheme(apply(before)), publicUrl(rel));
+  if (rel === "blog/best-progress-photo-apps/index.html") after = addRoundupCampaign(after);
   if (after !== before) {
     writeFileSync(path, after);
     changed += 1;

@@ -1,0 +1,53 @@
+{
+ "app": {
+  "slug": "snaplapse",
+  "app_id": 6791902298,
+  "name": "SnapLapse: Progress Photos",
+  "developer": "Jingjin Li",
+  "in_roundup": false,
+  "genre": "Photo & Video",
+  "price": 0.0,
+  "rating_count_us": 3,
+  "rating_avg_us": 5,
+  "first_released": "2026-07-27",
+  "last_updated": "2026-10-09",
+  "version": "2.1.6",
+  "store_url": "https://apps.apple.com/us/app/id6791902298",
+  "reviews_collected": 3,
+  "feed_pages_mostrecent": 1,
+  "feed_rows_mostrecent": 3,
+  "feed_rows_mosthelpful": 3,
+  "oldest_review": "2026-08-09",
+  "newest_review": "2026-08-29"
+ },
+ "fetched_at": "2026-10-17T20:19:21.817761-07:00",
+ "reviews": [
+  {
+   "id": "14485805590",
+   "rating": 5,
+   "title": "A great photo tracker",
+   "text": "Easy to use and perfect for keeping track of things. It’s better than cluttering up your camera roll. I use it to keep track of progress with my car builds and renovations around the houses.",
+   "date": "2026-08-29T05:33:48-07:00",
+   "version": "1.8.2",
+   "author": "tomcworld"
+  },
+  {
+   "id": "14455952421",
+   "rating": 5,
+   "title": "Keep track of my home projects",
+   "text": "I plan to use it to keep track of my home projects that I never seem to finish. Hopefully this help me realize my goals.",
+   "date": "2026-08-21T12:15:00-07:00",
+   "version": "1.6.7",
+   "author": "Takeoutchick"
+  },
+  {
+   "id": "14409220274",
+   "rating": 5,
+   "title": "So much fun",
+   "text": "I’ve been using SnapLapse to track the progress of my scarf knitting project and it’s so cool to see the progress pics as a gif! Would recommend to any crafters out there!",
+   "date": "2026-08-09T21:55:03-07:00",
+   "version": "1.5.3",
+   "author": "Alice_Eru"
+  }
+ ]
+}

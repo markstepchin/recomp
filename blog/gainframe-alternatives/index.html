@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto" data-theme="system">
+  <head>
+    <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>GainFrame Alternatives (2026): 6 Progress Photo Apps by What You Need | Recomp</title>
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="GainFrame is polished, but it imports at most 250 photos and its picker struggles with hundreds. Here are the alternatives I tested, sorted by why you&#x27;re leaving." />
+    <link rel="stylesheet" href="../../styles/output.css" />
+    <link rel="canonical" href="https://progressphotos.app/blog/gainframe-alternatives/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta property="og:title" content="GainFrame Alternatives (2026): 6 Progress Photo Apps by What You Need" />
+    <meta property="og:description" content="GainFrame is polished, but it imports at most 250 photos and its picker struggles with hundreds. Here are the alternatives I tested, sorted by why you&#x27;re leaving." />
+    <meta property="og:url" content="https://progressphotos.app/blog/gainframe-alternatives/" />
+    <meta property="og:image" content="https://progressphotos.app/assets/step-compare.webp?v=5" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GainFrame Alternatives (2026): 6 Progress Photo Apps by What You Need" />
+    <meta name="twitter:description" content="GainFrame is polished, but it imports at most 250 photos and its picker struggles with hundreds. Here are the alternatives I tested, sorted by why you&#x27;re leaving." />
+    <!-- TODO before publishing: add article:published_time, article:modified_time, and datePublished/dateModified in the JSON-LD; remove noindex; add to sitemap.xml, llms.txt and the /blog/ index. -->
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+    <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GainFrame alternatives: which progress photo app to use instead, by the job",
+  "description": "GainFrame is polished, but it imports at most 250 photos and its picker struggles with hundreds. Here are the alternatives I tested, sorted by why you're leaving.",
+  "author": {
+    "@type": "Person",
+    "@id": "https://progressphotos.app/about/#mark",
+    "name": "Mark Stepchin",
+    "url": "https://progressphotos.app/about/",
+    "jobTitle": "Software engineer"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Recomp",
+    "url": "https://progressphotos.app/"
+  },
+  "url": "https://progressphotos.app/blog/gainframe-alternatives/",
+  "mainEntityOfPage": "https://progressphotos.app/blog/gainframe-alternatives/",
+  "image": "https://progressphotos.app/assets/step-compare.webp?v=5",
+  "isPartOf": {
+    "@type": "WebPage",
+    "url": "https://progressphotos.app/blog/best-progress-photo-apps/"
+  }
+}
+    </script>
+  </head>
+  <body class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]">
+    <div class="flex min-h-dvh flex-col">
+      <!-- chrome:header current="blog" depth="2" -->
+      <header class="border-b border-card-border">
+        <div
+          class="mx-auto flex w-full text-xl max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
+        >
+          <a
+            class="inline-flex items-center gap-2 text-fg font-medium tracking-wordmark no-underline hover:no-underline max-md:min-h-11"
+            href="../../"
+          >
+            <img
+              class="size-8 shrink-0 rounded-[22%] border border-card-border"
+              src="../../assets/recomp-app-icon.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Recomp
+          </a>
+          <nav
+            class="ml-auto flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
+            aria-label="Site"
+          >
+            <a
+              class="text-fg no-underline hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              href="../"
+              aria-current="page"
+              >Blog</a
+            >
+            <a
+              class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <!-- /chrome:header -->
+
+      <main class="mx-auto w-full max-w-[800px] flex-1 px-gutter py-12">
+        <p class="text-micro text-muted pb-3">
+          <a class="text-muted" href="../">Blog</a>
+          · <a class="text-muted" href="../best-progress-photo-apps/">Best progress photo apps</a>
+          · <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[DRAFT: noindex, not published; publish date TBD]</mark> · <a class="text-muted" href="../../about/" rel="author">Mark Stepchin</a>
+        </p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-8">GainFrame alternatives: which progress photo app to use instead, by the job</h1>
+        <p><em>By <a class="text-muted" href="../../about/" rel="author">Mark Stepchin</a> · Updated <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: publish date]</mark></em></p>
+        <aside
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-labelledby="quick-answer-heading"
+        >
+          <h2 id="quick-answer-heading" class="text-h4 font-bold tracking-h4">
+            Quick Answer
+          </h2>
+          <div class="mt-3 text-muted"><p><strong>Pick the alternative by why you're leaving GainFrame.</strong> For a big camera-roll archive, Recomp, the free app I built, imports up to 500 photos at a time. For auto-align and more compare modes, Thumbstone's Progress Pics. For a one-time price, Fit-Stitch at $4.99. For no tracking label and no AI, Check-In: Physique. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: provisional quick answer; most scores are still TBD]</mark></p></div>
+        </aside>
+
+        <div
+          class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4"
+        >
+<p><strong>Full disclosure: I build Recomp, one of the alternatives below.</strong> Recomp is free with no in-app purchases, and no app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: no ads, affiliate links or partner deals]</mark>. Every app here went through <a href="/blog/how-i-test-progress-photo-apps/">the same test kit</a> as my <a href="/blog/best-progress-photo-apps/">roundup of the best progress photo apps</a>.</p>
+<h2 id="why-people-look-for-a-gainframe-alternative">Why people look for a GainFrame alternative</h2>
+<p><strong>GainFrame is the most polished app I tested, and the slowest with my real library.</strong> I proposed 4 out of 5 for design and 2 for performance. From my <a href="/blog/gainframe-review/">GainFrame review</a>:</p>
+<ol>
+<li><strong>Import stops at 250.</strong> It took my 475-photo album in one pick but imports at most the 250 most recent, and the import took about 15 minutes. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: whether all 250 imported; the review screen showed "Import 59 Photos"]</mark></li>
+<li><strong>Finding one date is slow.</strong> The photo picker shows thumbnails about a third of the screen tall, so finding one week among hundreds means long scrolling.</li>
+<li><strong>AI comes first.</strong> The compare screen shows weight, an AI body-fat estimate and a score, and AI labels cover the photos. AI features send photos to Google's Gemini, which discards them, per its policy.</li>
+<li><strong>The privacy label includes "Data Used to Track You."</strong></li>
+<li><strong>Price.</strong> It sells $3.99 a week, $5.99 or $9.99 a month, and $39.99 or $49.99 a year.</li>
+</ol>
+<h2 id="at-a-glance">The alternatives at a glance</h2>
+<div class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" tabindex="0" role="region" aria-label="GainFrame alternatives compared"><table class="w-max min-w-full border-collapse text-left text-micro">
+<thead>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Leaving because</th>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Alternative</th>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Price</th>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">What it does better</th>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">What it does worse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Import cap, big archive</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Recomp</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Free, no IAP</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Bulk import up to 500 photos at a time, grouped into check-ins by date, with CSV weights</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">No auto-align; side by side only until the 3.6 slider <mark class="rounded-sm bg-sky-200 px-1 text-black box-decoration-clone">[after 3.6]</mark></td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Want auto-align</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Thumbstone Progress Pics</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Free trial, then from $4.99/mo</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Auto-align landed about 3 in 4 of my shirtless photos; comparison 4 of 5</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Manual alignment is sluggish</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Subscription</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Fit-Stitch</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">$4.99 once</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">No subscription; optional iCloud sync</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">No alignment; comparison 1 of 5</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Tracking label, AI</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Check-In: Physique</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Free, no IAP</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Data Not Collected; no AI by design</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Needs iOS 26; untested hands-on</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Old photos with dates</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Then &amp; Now</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Free + IAP, from $4.99/mo</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Import reads each photo's date; Data Not Collected</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Align tool buried per photo</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Want measurements</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Lasmit "Progress"</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Free + IAP, from $3.99/mo</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Two-way Apple Health sync, measurement history</td>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Compare in landscape only</td>
+</tr>
+</tbody>
+</table></div>
+<p><mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[TODO: scores in this table are proposed and partial; every app needs a rescore on the v8 rubric or the Oct 4 measured tiers.]</mark></p>
+<h2 id="recomp">For a big archive: Recomp</h2>
+<p><strong>Recomp is built for the job GainFrame struggled with: hundreds of old photos.</strong> Bulk import takes up to 500 photos at a time and groups them into check-ins by date, with past weights from a CSV. I built it, so weigh my view of it accordingly. You align by hand with pan, pinch zoom and rotate, scrub the timeline to any date, and compare two dates side by side. Share comparison saves the pair as one JPG with dates and weights, and no watermark.</p>
+<p><strong>Recomp never uploads your photos. It sends anonymous usage analytics and crash reports, with no account and no tracking.</strong> It has no AI body-fat estimate, by design. It also has no auto-align, no photo export and no iCloud sync.</p>
+<p><mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[TODO: Recomp's measured import time and scroll test. The roundup's CTA says import takes "under a minute"; that's unmeasured (rough estimate ~25 s prep plus ~15 s save for ~450 photos). Don't claim a time until it's measured.]</mark></p>
+<h2 id="thumbstone">For auto-align and more compare modes: Thumbstone</h2>
+<p><strong>If GainFrame's Auto button is why you liked it, Thumbstone's Progress Pics has the auto-align I'd recommend as a first pass.</strong> It snaps shoulders and hips to guides after capture, and about 3 in 4 of my shirtless photos landed right. It has side by side, a slider, an overlay and a time-lapse. There's no account, and the label says Data Not Linked to You. <a href="/blog/thumbstone-review/">Full Thumbstone review</a>.</p>
+<figure class="m-0 mx-auto w-1/2 max-w-[280px]"><picture><source srcset="../../assets/blog/best-progress-photo-apps/thumbstone-compare-slider-280.webp 280w, ../../assets/blog/best-progress-photo-apps/thumbstone-compare-slider.webp 560w" sizes="280px" type="image/webp" /><img class="block h-auto w-full rounded-card border border-card-border" src="../../assets/blog/best-progress-photo-apps/thumbstone-compare-slider.jpg" alt="Thumbstone slider compare between Day 1 and Day 441" width="560" height="1214" loading="lazy" decoding="async" /></picture><figcaption class="mt-[0.65rem] text-center text-caption leading-[1.4] text-muted">Thumbstone's slider compare, Day 1 vs 441.</figcaption></figure>
+
+<h2 id="fit-stitch">For no subscription: Fit-Stitch</h2>
+<p><strong>Fit-Stitch is $4.99 once, the only paid app I tested with no subscription.</strong> It syncs to your own iCloud and locks with Face ID. Comparing is the weak spot: every comparison is a card built in its own form, with no alignment, and nothing imports in bulk. <a href="/blog/fit-stitch-review/">Full Fit-Stitch review</a>.</p>
+<h2 id="check-in">For no tracking and no AI: Check-In: Physique</h2>
+<p><strong>Check-In is free, labeled Data Not Collected, and uses no AI by design.</strong> It has a ghost overlay at capture and a same-pose slider compare. It needs iOS 26 and has no ratings yet, and I haven't scored it hands-on. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[TODO: hands-on test before recommending it here]</mark></p>
+<h2 id="then-and-now">For old photos with their dates: Then &amp; Now</h2>
+<p><strong>Then &amp; Now's bulk import reads each photo's date taken and asks for a weight.</strong> It's labeled Data Not Collected, with no account. Its voice timer and ghost overlay are Premium, and its Crop &amp; Align is buried in each photo's Adjust &amp; Crop. <a href="/blog/then-and-now-review/">Full Then &amp; Now review</a>.</p>
+<h2 id="lasmit">For measurements and Apple Health: Lasmit</h2>
+<p><strong>If you used GainFrame's Apple Health link for body stats, Lasmit is the measurement tracker.</strong> It syncs two ways with Apple Health and tracks 17 body measurements. It's a measurement app first, with compare in landscape only. <a href="/blog/lasmit-review/">Full Lasmit review</a>.</p>
+<h2 id="if-you-want-ai-body-fat-estimates">If you want AI body-fat estimates</h2>
+<p><strong>I don't grade AI body-fat estimates, so none of these replaces that part of GainFrame.</strong> AI scores are noisy across the category: in Rate My Physique, one photo I posted twice scored 9.6, then 8.5. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[TODO: link the AI body-fat accuracy article (REC-80, PR #19) once it's live]</mark></p>
+<h2 id="when-to-stay-with-gainframe">When to stay with GainFrame</h2>
+<p><strong>With 20 to 30 photos, GainFrame probably works very well.</strong> If you're starting fresh, care about polish, and want the AI analysis, the import cap and picker may never bite. Its 4.89 average on 65 ratings says early users like it.</p>
+<h2 id="what-i-havent-tested-yet">What I haven't tested yet</h2>
+<p><strong>I haven't finished GainFrame's alignment score or re-checked its other compare screens.</strong> Check-In and Recomp still need hands-on scores. If you switched away from GainFrame, tell me what made you leave at <a href="mailto:support@progressphotos.app">support@progressphotos.app</a>.</p>
+        </div>
+
+        <!-- chrome:author-bio depth="2" -->
+        <aside
+          class="mt-12 flex flex-wrap items-center gap-4 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] sm:flex-nowrap sm:items-start"
+          aria-labelledby="author-bio-heading"
+        >
+          <!-- TODO(Mark): pick a photo. Replace this div with <img class="shrink-0 rounded-full" src="../../assets/mark-stepchin.webp" alt="Mark Stepchin" width="64" height="64" loading="lazy" decoding="async" style="width:64px;height:64px;object-fit:cover" />. The 64×64 box is reserved so nothing shifts. -->
+          <div
+            class="shrink-0 rounded-full border border-card-border text-center text-micro text-muted"
+            style="width:64px;height:64px;display:flex;align-items:center;justify-content:center"
+            role="img"
+            aria-label="Photo of Mark Stepchin coming soon"
+          >
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">TODO photo</mark>
+          </div>
+          <div class="contents sm:block sm:min-w-0 sm:flex-1">
+            <h2 id="author-bio-heading" class="min-w-0 flex-1 text-h4 font-bold tracking-h4">About the author</h2>
+            <p class="w-full shrink-0 pt-2 text-muted">
+              <strong class="text-fg">I'm Mark Stepchin, and I make Recomp, so read what I say about other apps with that in mind.</strong>
+              I'm a software engineer who has worked at Silicon Valley startups, with some time at Apple.
+              I've trained for years: I bulked from 145 to 195 lb, cut to 155, and now sit around 165.
+              Before building Recomp in my evenings and weekends from San Diego, I tried more than 10 progress photo apps.
+              <a href="../../about/">More about me</a>
+            </p>
+            <!-- TODO(Mark): the weight history comes from your Oct 17 brief and isn't on /about/ yet. Confirm the numbers before publishing. -->
+            <!-- TODO(Mark): "tried more than 10" is the public claim from /blog/why-i-built-recomp/. Don't say "tested 36 apps": 36 is the proposed candidate list in the how-i-test draft, with no screening log yet, and hands-on scoring is partial (6 of 10 apps have proposed scores). Once testing is done, this could read "I screened 36 apps and tested N hands-on." -->
+          </div>
+        </aside>
+        <!-- /chrome:author-bio -->
+
+        <section
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] mt-12"
+          aria-labelledby="article-cta-heading"
+        >
+          <h2 id="article-cta-heading" class="text-h3 font-bold tracking-h3">
+            See the progress buried in your camera roll
+          </h2>
+          <p class="pt-3 text-muted">
+            Compare progress photos on a before-and-after timeline, scroll to
+            any date instantly, and align photos on the fly. Recomp never
+            uploads your photos. It sends anonymous usage analytics and crash
+            reports, with no account and no tracking.
+          </p>
+          <p class="pt-6">
+            <a
+              class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85]"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+              data-cta-location="article_footer"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </p>
+        </section>
+
+      </main>
+
+      <!-- chrome:footer depth="2" -->
+      <footer class="pt-8 pb-8">
+        <div class="mx-auto w-full max-w-[800px] px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 max-md:flex-col max-md:justify-center max-md:gap-y-1">
+            <nav class="grid min-w-0 gap-y-1 text-micro max-md:w-full max-md:justify-items-center max-md:gap-y-0" aria-label="Footer">
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../"
+                  >Home</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../"
+                  >Blog</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../about/"
+                  >About</a
+                >
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../privacy/"
+                  >Privacy</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../support/"
+                  >Support</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../roadmap/"
+                  >Roadmap</a
+                >
+              </div>
+            </nav>
+            <div
+              class="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-card-border bg-card p-1.5 max-md:ml-0"
+              role="group"
+              aria-label="Color theme"
+            >
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="system"
+                aria-pressed="true"
+              >
+                Auto
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="light"
+                aria-pressed="false"
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="dark"
+                aria-pressed="false"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /chrome:footer -->
+    </div>
+    <script src="../../js/posthog.js"></script>
+    <script src="../../js/theme.js"></script>
+  </body>
+</html>

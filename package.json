@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/apply-chrome.js && concurrently -k -n css,web -c cyan,magenta \"npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css --watch\" \"python3 -m http.server 3000\"",
-    "build": "node scripts/apply-chrome.js && npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css --minify"
+    "build": "node scripts/apply-chrome.js && npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css --minify && node scripts/inline-roundup-css.js"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.3.3",

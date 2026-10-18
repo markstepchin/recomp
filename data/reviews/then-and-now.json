@@ -1,0 +1,89 @@
+{
+ "app": {
+  "slug": "then-and-now",
+  "app_id": 6758411454,
+  "name": "Progress Pics Photo Then & Now",
+  "developer": "Mahalo Mochi LLC",
+  "in_roundup": true,
+  "genre": "Photo & Video",
+  "price": 0.0,
+  "rating_count_us": 18,
+  "rating_avg_us": 5,
+  "first_released": "2026-02-26",
+  "last_updated": "2026-07-04",
+  "version": "2.3",
+  "store_url": "https://apps.apple.com/us/app/id6758411454",
+  "reviews_collected": 7,
+  "feed_pages_mostrecent": 1,
+  "feed_rows_mostrecent": 7,
+  "feed_rows_mosthelpful": 7,
+  "oldest_review": "2026-03-08",
+  "newest_review": "2026-10-12"
+ },
+ "fetched_at": "2026-10-17T20:19:19.381907-07:00",
+ "reviews": [
+  {
+   "id": "14656936787",
+   "rating": 5,
+   "title": "Absolutely what I need",
+   "text": "Thanks for the wonderful app idea",
+   "date": "2026-10-12T01:15:02-07:00",
+   "version": "2.3",
+   "author": "Dentkhatib"
+  },
+  {
+   "id": "14655140922",
+   "rating": 5,
+   "title": "Very useful features.",
+   "text": "Thanks for making it exciting to track my weight loss;  I had already started my journey, but looking forward to documenting the rest.  \n\nWill also use it to track my house extension work. Thanks again for developing this wonderful app.",
+   "date": "2026-10-11T12:55:53-07:00",
+   "version": "2.3",
+   "author": "KP4*"
+  },
+  {
+   "id": "14653851634",
+   "rating": 5,
+   "title": "Great app",
+   "text": "A well designed app with great features and performance. Smooth, reliable, and easy to use.",
+   "date": "2026-10-11T06:37:43-07:00",
+   "version": "2.3",
+   "author": "Etori🇺🇬"
+  },
+  {
+   "id": "13888533321",
+   "rating": 5,
+   "title": "Simple, private and useful",
+   "text": "This is the perfect tool for taking daily progress pics. It’s simple and private with an album level lock -  no need to flood your photos roll with pics in an underwear.\nPlus the developer is very responsive and been adding more useful features since I  got the app. Love it !",
+   "date": "2026-03-26T04:01:32-07:00",
+   "version": "1.4",
+   "author": "Iampr"
+  },
+  {
+   "id": "13856426306",
+   "rating": 5,
+   "title": "Transformation in progress",
+   "text": "Packed full of features for someone trying to lose weight and build muscle. I used to stare at two pictures side by side but this makes it much more pleasant.",
+   "date": "2026-03-16T20:44:40-07:00",
+   "version": "1.4",
+   "author": "lxWyndxl"
+  },
+  {
+   "id": "13851414404",
+   "rating": 5,
+   "title": "Great way to visually track progress",
+   "text": "This a clean and simple app without all the bloat to track progress. I have been using it to track my latte art every day. My progress is slow but I’m noticing the difference with this app. Also worth noting, the app keeps all your photos on your phone, so no privacy concerns here.",
+   "date": "2026-03-15T09:58:38-07:00",
+   "version": "1.3",
+   "author": "Quizim"
+  },
+  {
+   "id": "13827692296",
+   "rating": 5,
+   "title": "Wish I found this sooner",
+   "text": "been taking progress pics for months but just saving them to my camera roll with no organization. this actually lets me compare them side by side and the ghost overlay helps me take the photo from the same spot every time. also nice that theres no account to set up, i just opened it and started using it.",
+   "date": "2026-03-08T11:41:19-07:00",
+   "version": "1.3",
+   "author": "Zetochi"
+  }
+ ]
+}
