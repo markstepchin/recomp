@@ -1,0 +1,1146 @@
+<!doctype html>
+<html
+  lang="en"
+  class="scroll-smooth motion-reduce:scroll-auto"
+  data-theme="system"
+>
+  <head>
+    <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Body Fat Percentage Pictures: Which Are Real? (DEXA vs AI Charts) — Recomp</title>
+    <meta
+      name="description"
+      content="Most body-fat charts pair stock or AI images with guessed numbers. These are the photo sets where real people were measured by DEXA, from 50% down to 5%."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="stylesheet" href="../../styles/output.css" />
+    <link
+      rel="canonical"
+      href="https://progressphotos.app/blog/body-fat-percentage-pictures/"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta
+      property="og:title"
+      content="What Body-Fat Percentages Actually Look Like: The Measured Photos, Not the Charts"
+    />
+    <meta
+      property="og:description"
+      content="Most body-fat charts pair stock or AI images with guessed numbers. These are the photo sets where real people were measured by DEXA, from 50% down to 5%."
+    />
+    <meta
+      property="og:url"
+      content="https://progressphotos.app/blog/body-fat-percentage-pictures/"
+    />
+    <meta
+      property="og:image"
+      content="https://progressphotos.app/assets/step-compare.webp?v=5"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="What Body-Fat Percentages Actually Look Like: The Measured Photos, Not the Charts"
+    />
+    <meta
+      name="twitter:description"
+      content="Most body-fat charts pair stock or AI images with guessed numbers. These are the photo sets where real people were measured by DEXA, from 50% down to 5%."
+    />
+    <meta
+      property="article:published_time"
+      content="[CONFIRM: publish date, YYYY-MM-DD]"
+    />
+    <meta
+      property="article:modified_time"
+      content="[CONFIRM: publish date, YYYY-MM-DD]"
+    />
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "What Body-Fat Percentages Actually Look Like: The Measured Photos, Not the Charts",
+        "description": "Most body-fat charts pair stock or AI images with guessed numbers. These are the photo sets where real people were measured by DEXA, from 50% down to 5%.",
+        "datePublished": "[CONFIRM: publish date, YYYY-MM-DD]",
+        "dateModified": "[CONFIRM: publish date, YYYY-MM-DD]",
+        "author": {
+          "@type": "Person",
+          "name": "Mark Stepchin",
+          "url": "https://progressphotos.app/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Recomp",
+          "url": "https://progressphotos.app/"
+        },
+        "url": "https://progressphotos.app/blog/body-fat-percentage-pictures/",
+        "mainEntityOfPage": "https://progressphotos.app/blog/body-fat-percentage-pictures/",
+        "image": "https://progressphotos.app/assets/step-compare.webp?v=5"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does 15% body fat look like on a man?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In Nippard's DEXA panel, Shamar at 15.3% shows \"clear muscle separation, even some vascularity,\" with abs visible under average lighting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does 25% body fat look like on a woman?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Menno calls 25% \"still a very lean, good healthy body fat percentage for women.\" His women's video shows Dr. Natalia Spierings at 25% by DEXA."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are body fat percentage charts accurate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most aren't measured. BuiltLean's chart uses mostly stock photos, and FitCommit labels its images AI-generated."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the average body fat percentage in the US?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "By DEXA in 2017 to 2018, it was 33.0% for adults aged 20 to 59: about 25% to 29% for men and 37% to 40% for women."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body
+    class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]"
+  >
+    <div class="flex min-h-dvh flex-col">
+      <!-- chrome:header current="blog" depth="2" campaign="bf-pictures" -->
+      <header class="border-b border-card-border">
+        <div
+          class="mx-auto flex w-full text-xl max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
+        >
+          <a
+            class="inline-flex items-center gap-2 text-fg font-medium tracking-wordmark no-underline hover:no-underline max-md:min-h-11"
+            href="../../"
+          >
+            <img
+              class="size-8 shrink-0 rounded-[22%] border border-card-border"
+              src="../../assets/recomp-app-icon.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Recomp
+          </a>
+          <nav
+            class="ml-auto flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
+            aria-label="Site"
+          >
+            <a
+              class="text-fg no-underline hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              href="../"
+              aria-current="page"
+              >Blog</a
+            >
+            <a
+              class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125?ct=bf-pictures"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <!-- /chrome:header -->
+
+      <main class="mx-auto w-full max-w-[800px] flex-1 overflow-x-clip px-gutter py-12">
+        <p class="text-micro text-muted pb-3">
+          <a class="text-muted" href="../">Blog</a>
+          ·
+          <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: publish date, YYYY-MM-DD]</mark>
+          · Mark Stepchin
+        </p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-8">
+          What Body-Fat Percentages Actually Look Like: The Measured Photos, Not the Charts
+        </h1>
+
+        <p class="text-muted pb-8">
+          <em>By Mark Stepchin · <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: publish date]</mark></em>
+        </p>
+
+        <aside
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-labelledby="quick-answer-heading"
+        >
+          <h2 id="quick-answer-heading" class="text-h4 font-bold tracking-h4">
+            Quick Answer
+          </h2>
+          <p class="mt-3 text-muted">
+            Most body-fat charts online pair stock or AI-generated images with
+            guessed numbers. The measured sets I found are Jeff Nippard's DEXA
+            panel, from about 50% down to 5%, and Menno Henselmans' DEXA photos,
+            which include the same people at two or three levels. Muscle, frame,
+            fat distribution and lighting all change how one percentage looks.
+          </p>
+        </aside>
+
+        <div
+          class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:scroll-mt-32 [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:scroll-mt-32 [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4"
+        >
+          <p>
+            I build Recomp: Progress Photo Tracker, a free progress photo app
+            with no AI and no body-fat estimates. No app or creator in this
+            article pays me
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: no affiliate or sponsor deals]</mark>.
+            This isn't medical advice.
+          </p>
+
+          <h2 id="why-charts">Why can't most body-fat charts be trusted?</h2>
+          <p>
+            <strong>I couldn't tell which body-fat charts were real, so I traced where the images came from.</strong>
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[MARK: one sentence on where you kept seeing these charts, for example Reddit, Instagram or a coach's handout.]</mark>
+          </p>
+          <p>
+            <strong>The widely copied charts use stock or AI images.</strong>
+            BuiltLean's author, Marc Perry,
+            <a href="https://www.builtlean.com/body-fat-percentage-men-women/" target="_blank" rel="noopener nofollow">writes</a>:
+            "Most of the images I purchased from stock photography websites."
+            FitCommit labels its pictures
+            <a href="https://fitcommit.ai/body-fat" target="_blank" rel="noopener nofollow">"AI-generated visual references"</a>.
+            GainFrame's body-fat pages show
+            <a href="https://gainframe.app/body-fat/" target="_blank" rel="noopener nofollow">"photorealistic reference physique"</a>
+            images. RippedBody uses
+            <a href="https://rippedbody.com/body-fat-guide/" target="_blank" rel="noopener nofollow">real client photos</a>
+            but doesn't say the numbers were measured.
+          </p>
+          <p>
+            <strong>Creators who measured people agree.</strong>
+            Menno Henselmans: "Somebody just took a bunch of stock photos and put some numbers on them"
+            (<a href="https://mennohenselmans.com/what-body-fat-percentages-really-look-like-50-actual-mens-dexa-scans/" target="_blank" rel="noopener nofollow">men's DEXA page</a>).
+            Jeff Nippard says the rest come from "calipers or handheld devices"
+            (<a href="https://www.youtube.com/watch?v=5K9QhkPww44" target="_blank" rel="noopener nofollow">video</a>).
+            How far those miss is in
+            <a href="../ai-body-fat-estimate-accuracy/">How Accurate Are AI Body-Fat Estimates?</a>
+          </p>
+
+          <h2 id="measured-sets">Which photo sets were actually measured?</h2>
+          <p>
+            <strong>Three video sets show real people with lab measurements, and all three can be embedded here.</strong>
+            None gives every subject's height and weight.
+          </p>
+          <div class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" tabindex="0" role="region" aria-label="Measured photo sets">
+            <table class="w-full min-w-[52rem] border-collapse text-left text-micro">
+              <thead>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Set</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Method</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Range</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Same lighting?</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Same person at several levels?</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Height and weight</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">
+                    Jeff Nippard,
+                    <a href="https://www.youtube.com/watch?v=5K9QhkPww44" target="_blank" rel="noopener nofollow">50% to 5% panel</a>,
+                    Nov 2025
+                  </th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">DEXA plus BIA, measured by him</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">About 50% to 5%, men and women</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Yes, "under the exact same lighting"</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Nippard himself, 20.6% and 9.0%</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Only Nippard's: 5'5", 160 to 180 lb (73 to 82 kg) <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: panel heights and weights, if shown on screen]</mark></td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">
+                    Menno Henselmans,
+                    <a href="https://www.youtube.com/watch?v=bZavPkacBhM" target="_blank" rel="noopener nofollow">men's DEXA scans</a>,
+                    Aug 2025
+                  </th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Mostly DEXA, other lab methods named</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">4.1% to 43%</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">No</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Yes, four men, from 6:07</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Not given</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">
+                    Menno Henselmans,
+                    <a href="https://www.youtube.com/watch?v=4jVmJ5w3fF8" target="_blank" rel="noopener nofollow">women's DEXA scans</a>,
+                    Aug 2025
+                  </th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Mostly DEXA, other lab methods named</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">14% to 44%</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">No</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Yes, three women</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Not given</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <figure class="m-0">
+            <div class="relative aspect-video overflow-hidden rounded-card border border-card-border bg-card">
+              <button
+                type="button"
+                class="absolute inset-0 cursor-pointer border-0 bg-transparent p-0"
+                data-youtube-id="5K9QhkPww44"
+                data-youtube-title="What Every Body Fat % Actually Looks Like (50% to 5%)"
+              >
+                <img
+                  class="h-full w-full object-cover"
+                  src="https://i.ytimg.com/vi/5K9QhkPww44/hqdefault.jpg"
+                  alt=""
+                  width="480"
+                  height="360"
+                />
+                <span class="absolute inset-0 bg-black/30" aria-hidden="true"></span>
+                <span class="absolute top-1/2 left-1/2 flex size-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-black/80 text-white" aria-hidden="true">
+                  <svg class="ml-1 size-7" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z" /></svg>
+                </span>
+                <span class="sr-only">Play Jeff Nippard, What Every Body Fat % Actually Looks Like (50% to 5%)</span>
+              </button>
+            </div>
+            <figcaption class="mt-[0.65rem] text-caption leading-[1.4] text-muted">
+              Jeff Nippard, What Every Body Fat % Actually Looks Like (50% to 5%).
+            </figcaption>
+          </figure>
+
+          <p>
+            <strong>Menno's photos come from his clients and students,</strong>
+            used with their "explicit permission"
+            (<a href="https://mennohenselmans.com/what-body-fat-percentages-really-look-like-50-actual-womens-dexa-scans/" target="_blank" rel="noopener nofollow">women's DEXA page</a>).
+            That permission is his, so this page embeds the videos instead of copying stills.
+          </p>
+
+          <h2 id="men">What do 40%, 30%, 20%, 15%, 10% and 5% look like on men?</h2>
+          <p>
+            <strong>Each row is one to three real men measured by DEXA in Nippard's video,</strong>
+            with the chapter where they appear. The descriptions are his words.
+          </p>
+          <div class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" tabindex="0" role="region" aria-label="What DEXA levels look like on men in Nippard's video">
+            <table class="w-full min-w-[48rem] border-collapse text-left text-micro">
+              <thead>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">DEXA level</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Who</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Chapter</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">What Nippard points out</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">About 40%</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Hmonish 37.2%, Matthew 43.8%</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">5:39</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"The waistline is down" from 50%, "but overall body fat distribution is still similar"</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">About 30%</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Septari 33.3%, Greg 32.5%</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">8:37</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"30% can look quite different depending on your structure"</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">About 20%</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Jay 20.8%, Nicholas 19%, Nippard 20.6%</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">11:54</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"Under good lighting, you should even see the outline of your abs when you flex them"</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">About 15%</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Shamar 15.3%</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">15:03</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"Clear muscle separation, even some vascularity," abs "clearly visible, even under average lighting"</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">About 12%</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Jimmy 12.1%</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">18:58</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"A fully defined six-pack with just a little fat covering the lower abdominals"</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">About 10%</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Nicholas 10.5%, Ali 9.0% <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: spelling, Ali or Olly]</mark>, Nippard 9.0%</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">21:27</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"Visible separation in all the heads of any given muscle"</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">About 8%</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Luke 8.4%, natural physique pro</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">25:42</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"Clear deep striations in almost all your muscle groups"</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">About 5%</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Lachlan 5.5%, 3 weeks before a show</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">27:57</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"Dense, grainy muscle separation"</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            <strong>Abs show up at a higher percentage than most lifters expect.</strong>
+            Menno's rule of thumb: if you can't see your abs "not even when you flex," you're likely "above 15% body fat, probably closer to 20%"
+            (<a href="https://mennohenselmans.com/what-body-fat-percentages-really-look-like-50-actual-mens-dexa-scans/" target="_blank" rel="noopener nofollow">men's DEXA page</a>).
+          </p>
+          <p>
+            <strong>The bottom rows are a contest-prep state, not a target.</strong>
+            Nippard calls 5% "an extreme, borderline dangerous level of leanness" that "generally only makes sense in the context of bodybuilding contest prep."
+          </p>
+
+          <h2 id="women">What do 40%, 30%, 25%, 20%, 15% and 10% look like on women?</h2>
+          <p>
+            <strong>These rows combine Nippard's panel with Menno's women's video,</strong>
+            whose comparisons all sit in one chapter from 1:09.
+          </p>
+          <div class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" tabindex="0" role="region" aria-label="What DEXA levels look like on women">
+            <table class="w-full min-w-[48rem] border-collapse text-left text-micro">
+              <thead>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">DEXA level</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Who</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Source</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">What the creator points out</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">About 40%</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Katie 37.6%; Dr. Natalia Spierings 39%</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Nippard, 5:39; Menno</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Menno on Spierings: "She carries it very well, she has a very even body fat distribution"</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">About 30%</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Breen 28.4%</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Nippard, 8:37</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"30% on a woman is about the same as 20% on a man"</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">About 25%</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Spierings 25%, others at 25% and 26%</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Menno</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">25% is "still a very lean, good healthy body fat percentage"; 26% shows "a little bit of love handles"</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">About 20%</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Christina 21.4%</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Nippard, 11:54</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"Visible muscle shape and more definition through the midsection"</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">About 15%</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Vanessa 15.7%; Spierings 14%</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Nippard, 15:03; Menno</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Nippard: "typically only seen in serious athletes preparing for a specific event"</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">About 10%</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">AJ 9.9%, pro bikini competitor; Gia 9.1%, national-level competitor</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Nippard, 21:27 <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: chapter]</mark></td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">AJ <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: speaker]</mark>: hair coming out when brushed, and "my last period might have been May"</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            <strong>Women look leaner than men at the same number.</strong>
+            Nippard says women "store about 10 to 12% more essential fat than men," so "40% on a woman is visually more like 28 to 30% on a man."
+          </p>
+          <p>
+            <strong>The two creators disagree on how low women can go.</strong>
+            Menno says 13% is "the upper end of essential body fat levels" for women. Getting below it is "very, very difficult." Nippard's DEXA put AJ and Gia under 10%. Three DEXA machines scanning the same 99 people gave averages 2 points apart
+            (<a href="../ai-body-fat-estimate-accuracy/">details</a>),
+            so I can't settle this.
+          </p>
+
+          <h2 id="same-person">Can you see one person at several body-fat levels?</h2>
+          <p>
+            <strong>Yes, at two or three levels, measured the same way each time.</strong>
+            These are the same-person series I found:
+          </p>
+          <ol>
+            <li>Sigvar Garfors at 6%, 11% and 17% on DEXA. Menno coached him throughout.</li>
+            <li>A Menno client at 16%, 11% and 8%, who built muscle while cutting.</li>
+            <li>A Menno client at 14% to 10% "across four different DEXA scans," also building muscle.</li>
+            <li>Dr. Natalia Spierings at 39%, 25% and 14%, before she turned IFBB pro.</li>
+            <li>One woman at 27% vs 16%, and a Menno student at 22% vs 17%.</li>
+            <li>Jeff Nippard at 20.6% after a bulk and 9.0% on his latest scan <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: his weight at each scan]</mark>.</li>
+            <li>Nicholas at 19% and 10.5% in Nippard's panel <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: same person on two dates]</mark>.</li>
+          </ol>
+          <p>Items 1 to 3 start at 6:07 in Menno's men's video, and items 4 and 5 are in his women's video.</p>
+
+          <figure class="m-0">
+            <div class="relative aspect-video overflow-hidden rounded-card border border-card-border bg-card">
+              <button
+                type="button"
+                class="absolute inset-0 cursor-pointer border-0 bg-transparent p-0"
+                data-youtube-id="bZavPkacBhM"
+                data-youtube-start="367"
+                data-youtube-title="What body fat percentages REALLY look like: 50 actual men's DEXA scans"
+              >
+                <img
+                  class="h-full w-full object-cover"
+                  src="https://i.ytimg.com/vi/bZavPkacBhM/hqdefault.jpg"
+                  alt=""
+                  width="480"
+                  height="360"
+                />
+                <span class="absolute inset-0 bg-black/30" aria-hidden="true"></span>
+                <span class="absolute top-1/2 left-1/2 flex size-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-black/80 text-white" aria-hidden="true">
+                  <svg class="ml-1 size-7" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z" /></svg>
+                </span>
+                <span class="sr-only">Play Menno Henselmans, 50 actual men's DEXA scans, starting at 6:07, Within individual</span>
+              </button>
+            </div>
+            <figcaption class="mt-[0.65rem] text-caption leading-[1.4] text-muted">
+              Menno Henselmans, 50 actual men's DEXA scans, "Within individual," from 6:07.
+            </figcaption>
+          </figure>
+
+          <figure class="m-0">
+            <div class="relative aspect-video overflow-hidden rounded-card border border-card-border bg-card">
+              <button
+                type="button"
+                class="absolute inset-0 cursor-pointer border-0 bg-transparent p-0"
+                data-youtube-id="4jVmJ5w3fF8"
+                data-youtube-title="What body fat percentages REALLY look like: 50 actual women's DEXA scans"
+              >
+                <img
+                  class="h-full w-full object-cover"
+                  src="https://i.ytimg.com/vi/4jVmJ5w3fF8/hqdefault.jpg"
+                  alt=""
+                  width="480"
+                  height="360"
+                />
+                <span class="absolute inset-0 bg-black/30" aria-hidden="true"></span>
+                <span class="absolute top-1/2 left-1/2 flex size-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-black/80 text-white" aria-hidden="true">
+                  <svg class="ml-1 size-7" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z" /></svg>
+                </span>
+                <span class="sr-only">Play Menno Henselmans, 50 actual women's DEXA scans</span>
+              </button>
+            </div>
+            <figcaption class="mt-[0.65rem] text-caption leading-[1.4] text-muted">
+              Menno Henselmans, 50 actual women's DEXA scans.
+            </figcaption>
+          </figure>
+
+          <p>
+            <strong>The longest one-person record I found has numbers but no photos.</strong>
+            In a
+            <a href="https://pubmed.ncbi.nlm.nih.gov/23412685/" target="_blank" rel="noopener nofollow">12-month case study</a>,
+            a natural bodybuilder aged 26 to 27 went from 14.8% to 4.5% body fat for a contest, then back to 14.6%. His testosterone fell from 9.22 to 2.27 ng/mL during prep.
+          </p>
+
+          <h2 id="why-different">Why does the same percentage look different on two people?</h2>
+          <p>
+            <strong>Muscle changes the look the most.</strong>
+            Septari read 33.3% and Greg 32.5%, but Septari carried 97 lb (44 kg) of lean mass and Greg 150 lb (68 kg). By my calculation, Septari weighed about 145 lb (66 kg) with 48 lb (22 kg) of fat, and Greg about 222 lb (101 kg) with 72 lb (33 kg). Menno: "with more muscle mass, you can basically have more fat and still be at a lower body fat percentage."
+          </p>
+
+          <figure class="m-0">
+            <figcaption class="text-muted">
+              <strong class="text-fg">Same percentage, different bodies.</strong>
+              Calculated from the lean mass and DEXA % stated in Jeff Nippard's video.
+              Bar length is pounds, scaled to Greg's 222 lb.
+            </figcaption>
+            <div class="mt-4 grid gap-5" aria-hidden="true">
+              <div>
+                <p class="text-micro font-semibold text-fg">Septari · 33.3% · 145 lb (66 kg)</p>
+                <div class="mt-2 w-[65.32%]">
+                  <div class="flex h-10 overflow-hidden rounded-md">
+                    <div class="flex h-full w-[66.9%] items-center justify-center bg-accent px-1 text-center text-helper leading-tight font-semibold text-white">97 lb<span class="block font-normal">44 kg lean</span></div>
+                    <div class="flex h-full w-[33.1%] items-center justify-center bg-fg px-1 text-center text-helper leading-tight font-semibold text-bg">48 lb<span class="block font-normal">22 kg fat</span></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p class="text-micro font-semibold text-fg">Greg · 32.5% · 222 lb (101 kg)</p>
+                <div class="mt-2 flex h-10 overflow-hidden rounded-md">
+                  <div class="flex h-full w-[67.57%] items-center justify-center bg-accent px-1 text-center text-helper leading-tight font-semibold text-white">150 lb<span class="block font-normal">68 kg lean</span></div>
+                  <div class="flex h-full w-[32.43%] items-center justify-center bg-fg px-1 text-center text-helper leading-tight font-semibold text-bg">72 lb<span class="block font-normal">33 kg fat</span></div>
+                </div>
+              </div>
+            </div>
+            <table class="sr-only">
+              <caption>Same percentage, different bodies. Calculated from the lean mass and DEXA % stated in Jeff Nippard's video.</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Person</th>
+                  <th scope="col">Lean</th>
+                  <th scope="col">Fat</th>
+                  <th scope="col">Total</th>
+                  <th scope="col">DEXA</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Septari</th>
+                  <td>97 lb (44 kg)</td>
+                  <td>48 lb (22 kg)</td>
+                  <td>145 lb (66 kg)</td>
+                  <td>33.3%</td>
+                </tr>
+                <tr>
+                  <th scope="row">Greg</th>
+                  <td>150 lb (68 kg)</td>
+                  <td>72 lb (33 kg)</td>
+                  <td>222 lb (101 kg)</td>
+                  <td>32.5%</td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+
+          <p>
+            <strong>Height and frame change it too.</strong>
+            Nicholas read 19% and Jay 20.8%, but Nicholas looks different "because he's shorter and he carries more muscle," Nippard says.
+            <a href="https://medlineplus.gov/ency/imagepages/17182.htm" target="_blank" rel="noopener nofollow">MedlinePlus</a>
+            classes a man over 5'5" with a 5.5- to 6.5-inch wrist as small-framed and over 7.5 inches as large. In 437 adults, wrist and ankle breadth tracked fat-free mass, not body fat
+            (<a href="https://pubmed.ncbi.nlm.nih.gov/4025658/" target="_blank" rel="noopener nofollow">Himes and Bouchard, 1985</a>).
+          </p>
+          <p>
+            <strong>I skip endomorph, mesomorph and ectomorph.</strong>
+            Even the measurable version, the
+            <a href="https://afitpilot.com/heritage/somatotype-2019-app/Heath-CarterManual.pdf" target="_blank" rel="noopener nofollow">Heath-Carter somatotype</a>,
+            calls its rating "phenotypical": it describes your body today, not a fixed type
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: an official host for Carter's manual]</mark>.
+          </p>
+          <p>
+            <strong>Where you store fat shifts the look.</strong>
+            Men store more "around their stomach, lower back, and neck," Nippard says. Women store more "around their hips and thighs." Menno adds that some people look lean at 15% because "they store much of their fat on their legs."
+          </p>
+          <p>
+            <strong>Lighting can hide a 7-point difference.</strong>
+            In Menno's photos of one man at 12% and 19%, bad lighting hides most of the gap. His note: "lighting can have a huge effect on how lean somebody looks."
+          </p>
+
+          <h2 id="pounds">How many pounds of fat is that on you?</h2>
+          <p>
+            <strong>Multiply your body weight by the percentage.</strong>
+            A 175-lb (79 kg) person at 20% carries about 35 lb (16 kg) of fat, and at 30% about 52 lb (24 kg). What 1 lb (0.45 kg) of fat actually looks like next to a pound of muscle is in
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[LINK: C article]</mark>.
+          </p>
+
+          <figure class="m-0">
+            <figcaption class="mb-3 text-muted">
+              <strong class="text-fg">Pounds of fat by body weight and body-fat %.</strong>
+              My calculation: body weight × body-fat %. Averages below come from two different national samples, so they're rough.
+            </figcaption>
+            <div class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" tabindex="0" role="region" aria-label="Pounds of fat by body weight and body-fat percentage">
+              <table class="w-full min-w-[44rem] border-collapse text-left text-micro">
+                <caption class="sr-only">Pounds of fat by body weight and body-fat percentage. Each cell is pounds, with kilograms in parentheses.</caption>
+                <thead>
+                  <tr>
+                    <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Body weight</th>
+                    <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">10%</th>
+                    <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">15%</th>
+                    <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">20%</th>
+                    <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">25%</th>
+                    <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">30%</th>
+                    <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">35%</th>
+                    <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">40%</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">130 lb (59 kg)</th>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">13 (6)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">20 (9)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">26 (12)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">33 (15)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">39 (18)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">46 (21)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">52 (24)</td>
+                  </tr>
+                  <tr>
+                    <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">150 lb (68 kg)</th>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">15 (7)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">23 (10)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">30 (14)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">38 (17)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">45 (20)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">53 (24)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">60 (27)</td>
+                  </tr>
+                  <tr>
+                    <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">175 lb (79 kg)</th>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">18 (8)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">26 (12)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">35 (16)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">44 (20)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">53 (24)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">61 (28)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">70 (32)</td>
+                  </tr>
+                  <tr>
+                    <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">200 lb (91 kg)</th>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">20 (9)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">30 (14)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">40 (18)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">50 (23)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">60 (27)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">70 (32)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">80 (36)</td>
+                  </tr>
+                  <tr>
+                    <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">225 lb (102 kg)</th>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">23 (10)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">34 (15)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">45 (20)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">56 (25)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">68 (31)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">79 (36)</td>
+                    <td class="border-b border-card-border px-3 py-2 align-top text-muted">90 (41)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </figure>
+
+          <p>
+            <strong>By my rough calculation, the average American man carries 51 to 57 lb of fat, and the average woman 64 to 69 lb.</strong>
+            The CDC's 2021 to 2023 averages are 68.9 in and 199.0 lb (90 kg) for men, and 63.5 in and 171.8 lb (78 kg) for women
+            (<a href="https://www.cdc.gov/nchs/fastats/body-measurements.htm" target="_blank" rel="noopener nofollow">CDC FastStats</a>).
+            DEXA in 2017 to 2018 put men aged 20 to 59 at 25.5% to 28.6%, and women at 37.1% to 40.0%
+            (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7961695/" target="_blank" rel="noopener nofollow">Liu et al., BMJ 2021</a>).
+          </p>
+
+          <figure class="m-0">
+            <figcaption class="text-muted">
+              <strong class="text-fg">Average US body fat by DEXA, adults 20 to 59, 2017 to 2018.</strong>
+              Age-adjusted. The scale runs from 0 to 50%.
+              Source:
+              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7961695/" target="_blank" rel="noopener nofollow">Liu et al., BMJ 2021, Table 3</a>.
+            </figcaption>
+            <div class="mt-4" aria-hidden="true">
+              <p class="flex flex-wrap gap-x-4 gap-y-2 text-micro text-muted">
+                <span class="inline-flex items-center gap-2"><span class="size-3 shrink-0 rounded-sm bg-accent"></span>Men</span>
+                <span class="inline-flex items-center gap-2"><span class="size-3 shrink-0 rounded-sm bg-fg"></span>Women</span>
+              </p>
+              <div class="mt-4 grid gap-4">
+                <div>
+                  <p class="text-micro font-semibold text-fg">Hispanic</p>
+                  <div class="mt-1 grid grid-cols-[4.25rem_1fr] items-center gap-x-3 gap-y-1">
+                    <span class="text-micro text-muted">Men</span>
+                    <div class="h-7 rounded-sm bg-card"><div class="flex h-full w-[57.2%] items-center justify-end rounded-sm bg-accent pr-2 text-helper font-semibold text-white">28.6%</div></div>
+                    <span class="text-micro text-muted">Women</span>
+                    <div class="h-7 rounded-sm bg-card"><div class="flex h-full w-[80%] items-center justify-end rounded-sm bg-fg pr-2 text-helper font-semibold text-bg">40.0%</div></div>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-micro font-semibold text-fg">Non-Hispanic white</p>
+                  <div class="mt-1 grid grid-cols-[4.25rem_1fr] items-center gap-x-3 gap-y-1">
+                    <span class="text-micro text-muted">Men</span>
+                    <div class="h-7 rounded-sm bg-card"><div class="flex h-full w-[54.4%] items-center justify-end rounded-sm bg-accent pr-2 text-helper font-semibold text-white">27.2%</div></div>
+                    <span class="text-micro text-muted">Women</span>
+                    <div class="h-7 rounded-sm bg-card"><div class="flex h-full w-[76%] items-center justify-end rounded-sm bg-fg pr-2 text-helper font-semibold text-bg">38.0%</div></div>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-micro font-semibold text-fg">Non-Hispanic Black</p>
+                  <div class="mt-1 grid grid-cols-[4.25rem_1fr] items-center gap-x-3 gap-y-1">
+                    <span class="text-micro text-muted">Men</span>
+                    <div class="h-7 rounded-sm bg-card"><div class="flex h-full w-[51%] items-center justify-end rounded-sm bg-accent pr-2 text-helper font-semibold text-white">25.5%</div></div>
+                    <span class="text-micro text-muted">Women</span>
+                    <div class="h-7 rounded-sm bg-card"><div class="flex h-full w-[78.4%] items-center justify-end rounded-sm bg-fg pr-2 text-helper font-semibold text-bg">39.2%</div></div>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-micro font-semibold text-fg">Non-Hispanic Asian</p>
+                  <div class="mt-1 grid grid-cols-[4.25rem_1fr] items-center gap-x-3 gap-y-1">
+                    <span class="text-micro text-muted">Men</span>
+                    <div class="h-7 rounded-sm bg-card"><div class="flex h-full w-[56.4%] items-center justify-end rounded-sm bg-accent pr-2 text-helper font-semibold text-white">28.2%</div></div>
+                    <span class="text-micro text-muted">Women</span>
+                    <div class="h-7 rounded-sm bg-card"><div class="flex h-full w-[74.2%] items-center justify-end rounded-sm bg-fg pr-2 text-helper font-semibold text-bg">37.1%</div></div>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-micro font-semibold text-fg">All adults</p>
+                  <div class="mt-1 grid grid-cols-[4.25rem_1fr] items-center gap-x-3">
+                    <span class="text-micro text-muted">20 to 59</span>
+                    <div class="h-7 rounded-sm bg-card"><div class="flex h-full w-[66%] items-center justify-end rounded-sm bg-accent pr-2 text-helper font-semibold text-white">33.0%</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <table class="sr-only">
+              <caption>Average US body fat by DEXA, adults 20 to 59, 2017 to 2018. Age-adjusted. Source: Liu et al., BMJ 2021, Table 3.</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Group</th>
+                  <th scope="col">Men</th>
+                  <th scope="col">Women</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Hispanic</th>
+                  <td>28.6%</td>
+                  <td>40.0%</td>
+                </tr>
+                <tr>
+                  <th scope="row">Non-Hispanic white</th>
+                  <td>27.2%</td>
+                  <td>38.0%</td>
+                </tr>
+                <tr>
+                  <th scope="row">Non-Hispanic Black</th>
+                  <td>25.5%</td>
+                  <td>39.2%</td>
+                </tr>
+                <tr>
+                  <th scope="row">Non-Hispanic Asian</th>
+                  <td>28.2%</td>
+                  <td>37.1%</td>
+                </tr>
+                <tr>
+                  <th scope="row">All adults</th>
+                  <td colspan="2">33.0%</td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+
+          <p>
+            <strong>Body fat rises with age.</strong>
+            In DEXA scans from 1999 to 2004, men averaged 22.9% at ages 16 to 19 and 30.9% at 60 to 79
+            (<a href="https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5751a4.htm" target="_blank" rel="noopener nofollow">CDC MMWR QuickStats</a>).
+            Women went from 32.0% at ages 8 to 11 to 42.4% at 60 to 79.
+          </p>
+
+          <figure class="m-0">
+            <img
+              class="h-auto w-full rounded-card border border-card-border"
+              src="../../assets/blog/body-fat-percentage-pictures/mean-percentage-body-fat-1999-2004.webp"
+              alt="QuickStats chart of mean percentage body fat by age group and sex, United States, 1999 to 2004. Males: 22.9% at ages 16 to 19, then 26.1%, 28.2%, and 30.9% at 60 to 79. Females: 32.0% at ages 8 to 11, then 32.7%, 32.5%, 36.1%, 39.9%, and 42.4% at 60 to 79."
+              width="485"
+              height="337"
+            />
+            <figcaption class="mt-[0.65rem] text-caption leading-[1.4] text-muted">
+              Source: CDC, MMWR QuickStats, Dec 26, 2008
+              <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: issue date]</mark>.
+              Public domain.
+              <a href="https://commons.wikimedia.org/wiki/File:Mean_Percentage_Body_Fat_1999-2004.gif" target="_blank" rel="noopener nofollow">Wikimedia Commons file page</a>.
+            </figcaption>
+          </figure>
+
+          <h2 id="compare-yourself">What should you compare yourself with instead?</h2>
+          <p>
+            <strong>Compare yourself with yourself, not with a stranger's chart.</strong>
+            Shoot the same light, pose, distance and time of day each week, and log your weight with each set. My
+            <a href="../how-to-take-progress-photos-for-recomp/">progress photo guide</a>
+            covers the setup.
+          </p>
+          <p>
+            I built
+            <a href="https://apps.apple.com/app/id6760444125?ct=bf-pictures" target="_blank" rel="noopener">Recomp</a>
+            around that routine: a weekly reminder, photos with your weight, and any two dates side by side. It has no AI and gives no body-fat number.
+          </p>
+
+          <h2 id="unresolved">What's still unresolved</h2>
+          <p>
+            <strong>I haven't found a measured series of one person from about 30% down to 10%, with height and weight at every scan.</strong>
+            The closest are Spierings' three DEXA levels and Menno's clients, and those still carry DEXA's own error. If you've had several DEXA scans with photos on the same days, I'd like to see them:
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[MARK: contact email — Gmail or the address on /support/]</mark>.
+          </p>
+
+          <h2 id="faq">FAQ</h2>
+          <h3>What does 15% body fat look like on a man?</h3>
+          <p>In Nippard's DEXA panel, Shamar at 15.3% shows "clear muscle separation, even some vascularity," with abs visible under average lighting.</p>
+          <h3>What does 25% body fat look like on a woman?</h3>
+          <p>Menno calls 25% "still a very lean, good healthy body fat percentage for women." His women's video shows Dr. Natalia Spierings at 25% by DEXA.</p>
+          <h3>Are body fat percentage charts accurate?</h3>
+          <p>Most aren't measured. BuiltLean's chart uses mostly stock photos, and FitCommit labels its images AI-generated.</p>
+          <h3>What is the average body fat percentage in the US?</h3>
+          <p>By DEXA in 2017 to 2018, it was 33.0% for adults aged 20 to 59: about 25% to 29% for men and 37% to 40% for women.</p>
+
+          <h2 id="sources">Sources</h2>
+          <h3 id="sources-videos">Videos and creator pages</h3>
+          <ul>
+            <li>
+              Jeff Nippard.
+              <a href="https://www.youtube.com/watch?v=5K9QhkPww44" target="_blank" rel="noopener nofollow">What Every Body Fat % Actually Looks Like (50% to 5%)</a>,
+              Nov 9, 2025. Sponsored by MacroFactor, his own app.
+            </li>
+            <li>
+              Menno Henselmans.
+              <a href="https://www.youtube.com/watch?v=bZavPkacBhM" target="_blank" rel="noopener nofollow">What body fat percentages REALLY look like: 50 actual men's DEXA scans</a>,
+              Aug 26, 2025, with
+              <a href="https://mennohenselmans.com/what-body-fat-percentages-really-look-like-50-actual-mens-dexa-scans/" target="_blank" rel="noopener nofollow">transcript</a>.
+            </li>
+            <li>
+              Menno Henselmans.
+              <a href="https://www.youtube.com/watch?v=4jVmJ5w3fF8" target="_blank" rel="noopener nofollow">What body fat percentages REALLY look like: 50 actual women's DEXA scans</a>,
+              Aug 29, 2025, with
+              <a href="https://mennohenselmans.com/what-body-fat-percentages-really-look-like-50-actual-womens-dexa-scans/" target="_blank" rel="noopener nofollow">transcript</a>.
+            </li>
+          </ul>
+
+          <h3 id="sources-studies">Studies and data</h3>
+          <ol>
+            <li>
+              Rossow LM, Fukuda DH, Fahs CA, Loenneke JP, Stout JR.
+              <a href="https://pubmed.ncbi.nlm.nih.gov/23412685/" target="_blank" rel="noopener nofollow">Natural bodybuilding competition preparation and recovery: a 12-month case study</a>.
+              <em>Int J Sports Physiol Perform</em>, 2013.
+            </li>
+            <li>
+              Liu B, Du Y, Wu Y, et al.
+              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7961695/" target="_blank" rel="noopener nofollow">Trends in obesity and adiposity measures by race or ethnicity among adults in the United States 2011-18</a>.
+              <em>BMJ</em>, 2021.
+            </li>
+            <li>
+              CDC National Center for Health Statistics.
+              <a href="https://www.cdc.gov/nchs/fastats/body-measurements.htm" target="_blank" rel="noopener nofollow">FastStats: Body Measurements</a>,
+              NHANES August 2021 to August 2023.
+            </li>
+            <li>
+              CDC.
+              <a href="https://www.cdc.gov/mmwr/preview/mmwrhtml/mm5751a4.htm" target="_blank" rel="noopener nofollow">QuickStats: Mean Percentage Body Fat, by Age Group and Sex, NHANES 1999–2004</a>.
+              <em>MMWR</em>, 2008.
+            </li>
+            <li>
+              Himes JH, Bouchard C.
+              <a href="https://pubmed.ncbi.nlm.nih.gov/4025658/" target="_blank" rel="noopener nofollow">Do the new Metropolitan Life Insurance weight-height tables correctly assess body frame and body fat relationships?</a>
+              <em>Am J Public Health</em>, 1985.
+            </li>
+            <li>
+              MedlinePlus.
+              <a href="https://medlineplus.gov/ency/imagepages/17182.htm" target="_blank" rel="noopener nofollow">Determining body frame size</a>.
+            </li>
+            <li>
+              Carter JEL.
+              <a href="https://afitpilot.com/heritage/somatotype-2019-app/Heath-CarterManual.pdf" target="_blank" rel="noopener nofollow">The Heath-Carter Anthropometric Somatotype: Instruction Manual</a>,
+              San Diego State University, 2002. Method first published by
+              <a href="https://pubmed.ncbi.nlm.nih.gov/6049820/" target="_blank" rel="noopener nofollow">Heath and Carter, 1967</a>.
+            </li>
+          </ol>
+
+          <h3 id="sources-charts">Charts I checked</h3>
+          <ul>
+            <li>
+              BuiltLean.
+              <a href="https://www.builtlean.com/body-fat-percentage-men-women/" target="_blank" rel="noopener nofollow">Body Fat Percentage Photos of Men &amp; Women</a>.
+              Mostly stock photos, per the author.
+            </li>
+            <li>
+              FitCommit.
+              <a href="https://fitcommit.ai/body-fat" target="_blank" rel="noopener nofollow">Body fat</a>.
+              AI-generated images, per the page.
+            </li>
+            <li>
+              GainFrame.
+              <a href="https://gainframe.app/body-fat/" target="_blank" rel="noopener nofollow">Body fat</a>.
+              "Photorealistic reference physique" images, per the page.
+            </li>
+            <li>
+              RippedBody.
+              <a href="https://rippedbody.com/body-fat-guide/" target="_blank" rel="noopener nofollow">Body fat guide</a>.
+              Real client photos, measurement not stated.
+            </li>
+          </ul>
+        </div>
+
+        <section
+          class="mt-12 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-labelledby="article-cta-heading"
+        >
+          <h2 id="article-cta-heading" class="text-h3 font-bold tracking-h3">
+            See the progress buried in your camera roll
+          </h2>
+          <p class="pt-3 text-muted">
+            Import your photos and weight in under a minute. Compare progress
+            photos on a before-and-after timeline, scroll to any date instantly,
+            and align photos on the fly. Your photos and weight never leave your
+            device.
+          </p>
+          <p class="pt-6">
+            <a
+              class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85]"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125?ct=bf-pictures"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+              data-cta-location="article_footer"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </p>
+        </section>
+      </main>
+
+      <!-- chrome:footer depth="2" -->
+      <footer class="pt-8 pb-8">
+        <div class="mx-auto w-full max-w-[800px] px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 max-md:flex-col max-md:justify-center max-md:gap-y-1">
+            <nav class="grid min-w-0 gap-y-1 text-micro max-md:w-full max-md:justify-items-center max-md:gap-y-0" aria-label="Footer">
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../"
+                  >Home</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../"
+                  >Blog</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../about/"
+                  >About</a
+                >
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../privacy/"
+                  >Privacy</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../support/"
+                  >Support</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../roadmap/"
+                  >Roadmap</a
+                >
+              </div>
+            </nav>
+            <div
+              class="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-card-border bg-card p-1.5 max-md:ml-0"
+              role="group"
+              aria-label="Color theme"
+            >
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="system"
+                aria-pressed="true"
+              >
+                Auto
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="light"
+                aria-pressed="false"
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="dark"
+                aria-pressed="false"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /chrome:footer -->
+    </div>
+    <script>
+      document.querySelectorAll("[data-youtube-id]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          var id = button.getAttribute("data-youtube-id");
+          var start = button.getAttribute("data-youtube-start");
+          var src =
+            "https://www.youtube-nocookie.com/embed/" +
+            encodeURIComponent(id) +
+            "?autoplay=1";
+          if (start) src += "&start=" + encodeURIComponent(start);
+          var iframe = document.createElement("iframe");
+          iframe.src = src;
+          iframe.title = button.getAttribute("data-youtube-title") || "YouTube video";
+          iframe.allow =
+            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+          iframe.allowFullscreen = true;
+          iframe.className = "absolute inset-0 h-full w-full border-0";
+          button.parentElement.replaceChildren(iframe);
+        });
+      });
+    </script>
+    <script src="../../js/posthog.js"></script>
+    <script src="../../js/theme.js"></script>
+  </body>
+</html>
