@@ -1,0 +1,928 @@
+<!doctype html>
+<html
+  lang="en"
+  class="scroll-smooth motion-reduce:scroll-auto"
+  data-theme="system"
+>
+  <head>
+    <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How Accurate Is AI Body Fat? Apps vs DEXA, Studies (2026) — Recomp</title>
+    <meta
+      name="description"
+      content="I read the validation studies on AI body-fat apps, phone 3D scans, DEXA, BIA scales, calipers and the Navy tape method. Here's how far off each one runs."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="stylesheet" href="../../styles/output.css" />
+    <link
+      rel="canonical"
+      href="https://progressphotos.app/blog/ai-body-fat-estimate-accuracy/"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta
+      property="og:title"
+      content="How Accurate Are AI Body-Fat Estimates? What the Studies Show in 2026"
+    />
+    <meta
+      property="og:description"
+      content="I read the validation studies on AI body-fat apps, phone 3D scans, DEXA, BIA scales, calipers and the Navy tape method. Here's how far off each one runs."
+    />
+    <meta
+      property="og:url"
+      content="https://progressphotos.app/blog/ai-body-fat-estimate-accuracy/"
+    />
+    <meta
+      property="og:image"
+      content="https://progressphotos.app/assets/step-compare.webp?v=5"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="How Accurate Are AI Body-Fat Estimates? What the Studies Show in 2026"
+    />
+    <meta
+      name="twitter:description"
+      content="I read the validation studies on AI body-fat apps, phone 3D scans, DEXA, BIA scales, calipers and the Navy tape method. Here's how far off each one runs."
+    />
+    <meta
+      property="article:published_time"
+      content="[CONFIRM: publish date, YYYY-MM-DD]"
+    />
+    <meta
+      property="article:modified_time"
+      content="[CONFIRM: publish date, YYYY-MM-DD]"
+    />
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How Accurate Are AI Body-Fat Estimates? What the Studies Show in 2026",
+        "description": "I read the validation studies on AI body-fat apps, phone 3D scans, DEXA, BIA scales, calipers and the Navy tape method. Here's how far off each one runs.",
+        "datePublished": "[CONFIRM: publish date, YYYY-MM-DD]",
+        "dateModified": "[CONFIRM: publish date, YYYY-MM-DD]",
+        "author": {
+          "@type": "Person",
+          "name": "Mark Stepchin",
+          "url": "https://progressphotos.app/about/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Recomp",
+          "url": "https://progressphotos.app/"
+        },
+        "url": "https://progressphotos.app/blog/ai-body-fat-estimate-accuracy/",
+        "mainEntityOfPage": "https://progressphotos.app/blog/ai-body-fat-estimate-accuracy/",
+        "image": "https://progressphotos.app/assets/step-compare.webp?v=5"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can ChatGPT estimate body fat from a photo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It will give a number, but I found no peer-reviewed study of its accuracy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is DEXA accurate for body fat?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It's the usual reference, but three DEXA machines scanning the same people gave averages 2 points apart."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the most accurate way to measure body fat at home?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No home method gives one person an accurate percentage. For tracking change, I'd use a caliper sum, a waist tape and weekly photos under fixed conditions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the Navy body fat method accurate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It's close on average for groups, but in one study only 31% of sailors landed within 1 point of DEXA."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are body fat scales accurate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not for one person. Every BIA device in Amazon's study showed significant bias against DEXA."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body
+    class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]"
+  >
+    <div class="flex min-h-dvh flex-col">
+      <!-- chrome:header current="blog" depth="2" campaign="ai-bodyfat-article" -->
+      <header class="border-b border-card-border">
+        <div
+          class="mx-auto flex w-full text-xl max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
+        >
+          <a
+            class="inline-flex items-center gap-2 text-fg font-medium tracking-wordmark no-underline hover:no-underline max-md:min-h-11"
+            href="../../"
+          >
+            <img
+              class="size-8 shrink-0 rounded-[22%] border border-card-border"
+              src="../../assets/recomp-app-icon.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Recomp
+          </a>
+          <nav
+            class="ml-auto flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
+            aria-label="Site"
+          >
+            <a
+              class="text-fg no-underline hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              href="../"
+              aria-current="page"
+              >Blog</a
+            >
+            <a
+              class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125?ct=ai-bodyfat-article"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <!-- /chrome:header -->
+
+      <main class="mx-auto w-full max-w-[800px] flex-1 overflow-x-clip px-gutter py-12">
+        <p class="text-micro text-muted pb-3">
+          <a class="text-muted" href="../">Blog</a>
+          ·
+          <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: publish date, YYYY-MM-DD]</mark>
+          · Mark Stepchin
+        </p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-8">
+          How Accurate Are AI Body-Fat Estimates? What the Studies Show in 2026
+        </h1>
+
+        <p class="text-muted pb-8">
+          <em>By Mark Stepchin · <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: publish date]</mark></em>
+        </p>
+
+        <aside
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-labelledby="quick-answer-heading"
+        >
+          <h2 id="quick-answer-heading" class="text-h4 font-bold tracking-h4">
+            Quick Answer
+          </h2>
+          <p class="mt-3 text-muted">
+            AI photo estimates and phone 3D scans repeat themselves closely. In
+            studies, they still miss DEXA or a lab reference by about 2 to 6
+            points on average. DEXA, smart scales, calipers and the Navy tape
+            method each miss in their own direction too. For a lifter, the same
+            photos under the same conditions, plus a weight trend, say more than
+            any single number.
+          </p>
+        </aside>
+
+        <div
+          class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:scroll-mt-32 [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:scroll-mt-32 [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4"
+        >
+          <p>
+            I build Recomp: Progress Photo Tracker, a free progress photo app
+            with no AI and no body-fat estimates. It's a different company and
+            app from Recomp AI – 3D Body Scanner by ISO Labs. No app in this
+            article pays me
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: no affiliate deals]</mark>.
+          </p>
+
+          <h2 id="why-one-number">Why one body-fat number misled me</h2>
+          <p>
+            <strong><mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[MARK: your DEXA/scale/AI reading, if any, and how far it was from what you saw in your photos.]</mark></strong>
+            I was
+            <a href="../why-i-built-recomp/">terrible at seeing progress in my own photos</a>,
+            so a number felt like a shortcut.
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[MARK: what happened when you trusted it, or a short test you ran, for example the same photo through an AI app three times.]</mark>
+          </p>
+          <p>
+            <strong>The same percentage looks different on different people.</strong>
+            Jeff Nippard measured a panel from 50% down to 5% with DEXA and BIA
+            in
+            <a href="https://www.youtube.com/watch?v=5K9QhkPww44" target="_blank" rel="noopener nofollow">What Every Body Fat % Actually Looks Like (50% to 5%)</a>.
+            Muscle, frame and where you store fat change how a given number
+            looks. So a percentage can't tell you on its own whether your last
+            cut worked.
+          </p>
+
+          <h2 id="what-accurate-means">What does "accurate" mean for body fat?</h2>
+          <p>
+            <strong>Three different questions get mixed together.</strong>
+            Accuracy is how close a reading lands to a reference. Repeatability
+            is whether you get the same reading twice in one session. Tracking
+            is whether a real 1-point drop shows up as a 1-point drop.
+          </p>
+          <p>
+            <strong>The reference is usually DEXA, and DEXA is an estimate too.</strong>
+            The best lab standard is a 4-compartment model, which combines
+            DEXA, body volume and body water. Almost no gym offers it, so most
+            app studies compare against DEXA or a Bod Pod instead.
+          </p>
+          <p>
+            <strong>Tracking change is where most devices struggle.</strong>
+            In a
+            <a href="https://pubmed.ncbi.nlm.nih.gov/34325758/" target="_blank" rel="noopener nofollow">6-week study of resistance-trained men</a>
+            eating in a surplus, most methods blunted or exaggerated changes
+            when pre-test eating and activity weren't controlled. Eric Trexler's
+            <a href="https://www.strongerbyscience.com/research-spotlight-changes-in-body-composition/" target="_blank" rel="noopener nofollow">summary at Stronger By Science</a>
+            puts the limits for change above ±2 points for DEXA, Bod Pod and
+            BIA. His example: a reading of 15% could realistically mean 12% or
+            18%.
+          </p>
+
+          <h2 id="method-comparison">How accurate are DEXA, Bod Pod, BIA scales, calipers and the Navy tape?</h2>
+          <div class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" tabindex="0" role="region" aria-label="Body-fat methods compared with the evidence">
+            <table class="w-full min-w-[52rem] border-collapse text-left text-micro">
+              <thead>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Method</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Cost</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">How far off, per the evidence</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">What throws it off</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Tracks change?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">DEXA</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Clinic visit <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: local price]</mark></td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Three machines gave the same 99 people averages from 34.4% to 36.4%</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Machine and software, food, water, glycogen</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">More robust than most, still above ±2 points</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">Bod Pod</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Clinic or lab visit <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: local price]</mark></td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Read 4.6 points above DEXA on average in 45 Navy men</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Bone density</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Above ±2 points</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">BIA scale or handheld</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Bought once <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: typical price]</mark></td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Every BIA device in Amazon's study had significant bias against DEXA</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Eating, drinking and training beforehand</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Above ±2 points for single-frequency BIA</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">Skinfold calipers</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Bought once <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: typical price]</mark></td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Formula choice moved one lifter from 4.1% to 8.3%</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Tester skill, conversion formula</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Track the millimeter sum, not the %</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">Navy tape</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">A tape measure</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Only 31% of 45 sailors landed within 1 point of DEXA</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Exact measuring sites</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Missed changes after a small weight gain</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Sources for each row are linked in the sections below.</p>
+
+          <h3 id="dexa">DEXA</h3>
+          <p>
+            <strong>DEXA is the usual reference, and DEXA machines disagree with each other.</strong>
+            In a
+            <a href="https://www.nature.com/articles/s41366-026-02148-6" target="_blank" rel="noopener nofollow">2026 study</a>,
+            three DEXA systems scanned the same 99 adults on one day. Their
+            averages were 36.4%, 35.2% and 34.4%. That's a 2-point spread before
+            any app enters the picture.
+          </p>
+          <p>
+            <strong>Water and glycogen move DEXA too.</strong>
+            In
+            <a href="https://pubmed.ncbi.nlm.nih.gov/28410328/" target="_blank" rel="noopener nofollow">18 trained cyclists</a>,
+            48 hours of carb loading raised DEXA lean mass by 2.0%. Combined
+            with creatine loading, it rose 3.0%. The authors attribute this to
+            muscle glycogen, creatine and water, over a span when little muscle
+            protein changes. A
+            <a href="https://pubmed.ncbi.nlm.nih.gov/25029265/" target="_blank" rel="noopener nofollow">DEXA methods review</a>
+            recommends scans rested, overnight-fasted, in minimal clothing and
+            in a standard position.
+          </p>
+          <p>
+            <strong>One lifter's DEXA reading dropped 8 points in three weeks.</strong>
+            Per RP's write-up of
+            <a href="https://www.youtube.com/watch?v=cJ-7-gqztkk" target="_blank" rel="noopener nofollow">Are Dexa Scans Accurate? My Results Were Alarming</a>,
+            Dr. Mike Israetel read 14.4% on one DEXA. About three weeks later,
+            he read 6.0% on a different machine
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: watch to verify numbers]</mark>.
+            He lost about 13 pounds in between, and RP argues at least one scan
+            was wrong.
+          </p>
+          <p>
+            <strong>Nippard ran the same comparison on himself in 2017.</strong>
+            <a href="https://www.youtube.com/watch?v=mV--9Grthec" target="_blank" rel="noopener nofollow">My METABOLISM and BODYFAT %</a>
+            puts DEXA, BIA, ultrasound and calipers side by side in a university
+            lab
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: watch to verify numbers]</mark>.
+          </p>
+
+          <h3 id="bod-pod">Bod Pod and underwater weighing</h3>
+          <p>
+            <strong>Density methods can miss in either direction.</strong>
+            On RP's
+            <a href="https://rpstrength.com/blogs/videos/i-got-my-body-fat-tested-every-way-possible" target="_blank" rel="noopener nofollow">results page</a>
+            for
+            <a href="https://www.youtube.com/watch?v=Y6xv3dACPss" target="_blank" rel="noopener nofollow">I Got My Body Fat Tested Every Way</a>,
+            Dr. Mike read 4.4% in a Bod Pod and 3.2% underwater. He puts his
+            real number at 7 to 8%
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: watch to verify numbers]</mark>.
+            In
+            <a href="https://journals.lww.com/acsm-msse/fulltext/2019/06001/accuracy_of_body_fat_estimation_using.2715.aspx" target="_blank" rel="noopener nofollow">45 male Navy sailors</a>,
+            the Bod Pod averaged 26.2% against DEXA's 21.6%. It read higher than
+            DEXA in 42 of the 45.
+          </p>
+
+          <h3 id="bia">BIA scales and handhelds</h3>
+          <p>
+            <strong>Smart scales and handhelds were off in every comparison I found.</strong>
+            In Amazon's
+            <a href="https://www.nature.com/articles/s41746-022-00628-3" target="_blank" rel="noopener nofollow">Halo study</a>,
+            three consumer and two professional BIA devices all showed
+            significant bias against DEXA. On RP's results page, a standing BIA
+            scale put Dr. Mike at 32.8% and a handheld at 20.4%
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: watch to verify numbers]</mark>.
+          </p>
+          <p>
+            <strong>A 12-week home test points the same way.</strong>
+            In
+            <a href="https://www.youtube.com/watch?v=ICVDVqOv9yA" target="_blank" rel="noopener nofollow">I Tested 5 Body Fat Scales Over 12 Weeks</a>,
+            9to5strength used five scales every week, then got a DEXA
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: watch to verify numbers]</mark>.
+            He bought four of the scales and was sent the fifth.
+          </p>
+
+          <h3 id="calipers">Skinfold calipers</h3>
+          <p>
+            <strong>Calipers work best when you skip the percentage.</strong>
+            A
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8065383/" target="_blank" rel="noopener nofollow">2021 review of sports practice</a>
+            found skinfolds the least affected by day-to-day variability of the
+            methods it compared. Trexler adds that converting skinfolds to a
+            body-fat percentage is "generally unnecessary and unhelpful." The
+            conversion formula changes the answer. On RP's results page, Dr.
+            Mike's same-day skinfolds gave 4.1%, 5.9% or 8.3% with the 3-, 9-
+            or 7-site formula
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: watch to verify numbers]</mark>.
+          </p>
+
+          <h3 id="navy-tape">The Navy tape method</h3>
+          <p>
+            <strong>The Navy tape is close on average and loose for one person.</strong>
+            In an ACSM conference abstract on
+            <a href="https://journals.lww.com/acsm-msse/fulltext/2019/06001/accuracy_of_body_fat_estimation_using.2715.aspx" target="_blank" rel="noopener nofollow">45 male sailors</a>,
+            the tape method averaged 21.9% against DEXA's 21.6%. Only 31.1%
+            landed within 1 point, 57.7% were overestimated, and the worst miss
+            was 7.1 points. In
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4831679/" target="_blank" rel="noopener nofollow">21 Army ROTC cadets</a>,
+            the Defense Department's tape equation failed to track body-fat
+            changes after a small weight gain.
+          </p>
+
+          <h2 id="phone-3d-scans">How accurate are phone 3D body scans?</h2>
+          <p>
+            <strong>Phone scans repeat well, read lower than DEXA, and disagree with each other.</strong>
+            In a
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42303133/" target="_blank" rel="noopener nofollow">2026 study of 57 adults</a>,
+            MeThreeSixty, Bodygram and ZOZOFIT all underestimated body fat
+            against DEXA, by 1.2 to 2.1 points on average. ZOZOFIT, which takes
+            12 photos per scan, came closest, with a typical error (RMSE) of
+            2.95 points. None matched DEXA within 2 points, and the authors
+            found the three apps not interchangeable.
+          </p>
+          <p>
+            <strong>The best phone result so far was company-funded.</strong>
+            A
+            <a href="https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2024.1485450/full" target="_blank" rel="noopener nofollow">2024 study of 131 adults</a>
+            found a phone 3D app equivalent to DEXA on average, within ±2
+            points. For one person, the typical miss was still about 3.5 points.
+            Repeat scans differed by only 0.5 to 0.7 points. Prism Labs, the
+            scanner's maker, funded the study and reviewed the technical
+            description.
+          </p>
+          <p>
+            <strong>Gym 3D scanners do no better on body fat.</strong>
+            In
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32113641/" target="_blank" rel="noopener nofollow">171 people</a>,
+            Fit3D, Naked Labs, Size Stream and Styku repeated closely. Against a
+            4-compartment model, their typical errors still ran 3.7 to 6.1
+            points. Ali Spagnola compares Spren with a ZOZOFIT suit scan, plus
+            DEXA and InBody, in
+            <a href="https://www.youtube.com/watch?v=Bp5zYN3XQqo" target="_blank" rel="noopener nofollow">I Find the Best Home BODY FAT SCAN</a>.
+            Her description carries a ZOZOFIT affiliate link.
+          </p>
+
+          <h2 id="ai-photo-estimates">How accurate are AI body-fat estimates from one photo?</h2>
+          <p>
+            <strong>The best published photo result is company-run, and the product is gone.</strong>
+            Amazon's
+            <a href="https://www.nature.com/articles/s41746-022-00628-3" target="_blank" rel="noopener nofollow">Halo study</a>
+            found an average miss of 2.16 points against DEXA in 134 adults.
+            Eight of its 12 authors worked at Amazon. Amazon
+            <a href="https://www.aboutamazon.com/news/company-news/amazon-halo-discontinued" target="_blank" rel="noopener nofollow">discontinued Halo</a>
+            on July 31, 2023.
+          </p>
+          <p>
+            <strong>Independent tests find larger misses.</strong>
+            Against a 4-compartment model in
+            <a href="https://pubmed.ncbi.nlm.nih.gov/36215866/" target="_blank" rel="noopener nofollow">184 adults</a>,
+            Halo and myBVI had typical errors of 3.9 to 6.2 points. Accuracy
+            varied by sex and race, and only Halo's percentage passed the
+            equivalence test. In a
+            <a href="https://journals.plos.org/digitalhealth/article?id=10.1371%2Fjournal.pdig.0000983" target="_blank" rel="noopener nofollow">2026 study of 49 adults</a>,
+            Spren read 2.2 points above a Bod Pod overall and 3.9 points above
+            it in women. The authors support only "cautious use" for
+            within-person monitoring under similar conditions.
+          </p>
+          <p>
+            <strong>A university team got the strongest independent result.</strong>
+            Researchers in Rio de Janeiro tested the Shaped app on
+            <a href="https://www.nature.com/articles/s41746-024-01380-6" target="_blank" rel="noopener nofollow">1,273 adults</a>
+            and found close agreement with DEXA (concordance 0.98). They
+            declare no competing interests. They also list what breaks it: loose
+            clothing, dark or blurry images, extreme camera tilt and excess
+            distance.
+          </p>
+          <p>
+            <strong>Small setup changes move the number.</strong>
+            In a
+            <a href="https://pubmed.ncbi.nlm.nih.gov/38282462/" target="_blank" rel="noopener nofollow">2024 agreement study</a>,
+            a black background read 32.0%. The reference photo, on white, read
+            26.8%.
+          </p>
+
+          <h3 id="chatgpt-gemini">Can ChatGPT or Gemini estimate your body fat?</h3>
+          <p>
+            <strong>I found no peer-reviewed study that tests a general chatbot on this.</strong>
+            A PubMed search on Oct 2, 2026 turned up none. GainFrame's blog
+            says "the app sends your photo to Google Gemini AI for analysis."
+          </p>
+          <p>
+            <strong>The rest is company claims and anecdotes.</strong>
+            GainFrame's company-run test on a "women's dataset" reports: "Its
+            average miss was 3.77 percentage points." It adds that "29 of 36
+            estimates landed within five points." RP's every-method video has a
+            "Using AI" segment at 7:22, which is one person's anecdote
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: watch to verify what the AI estimated]</mark>.
+          </p>
+
+          <h3 id="what-apps-say">What the apps say about themselves</h3>
+          <div class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" tabindex="0" role="region" aria-label="What body-fat apps say versus what studies found">
+            <table class="w-full min-w-[52rem] border-collapse text-left text-micro">
+              <thead>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">App (developer)</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">What the US App Store listing says (Oct 2, 2026)</th>
+                  <th class="border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">What studies found</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">GainFrame (Michael Rode)</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"Body-fat estimates from progress photos"; "Precision estimates from multiple poses"; "approximations based on photo analysis and should not be used for diagnosis or treatment"</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Only its own company-run test: a 3.77-point average miss on 36 photos. I found no independent study.</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">Spren (Elite HRV)</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"results are comparable to DEXA scans"; "validated by several independent peer-reviewed studies"</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">2.2 points above a Bod Pod overall, 3.9 in women (2026, independent)</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">MeThreeSixty (Size Stream)</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"A SMARTER ALTERNATIVE TO DEXA SCANS"</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Read lower than DEXA and wasn't interchangeable with other apps (2026, independent)</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">ZOZOFIT (ZOZO Apparel USA)</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"precise measurements, body fat percentage calculations"</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">Closest of three apps, typical error 2.95 points, not equivalent within 2 points (2026, independent)</td>
+                </tr>
+                <tr>
+                  <th class="border-b border-card-border px-3 py-2 align-top text-left font-semibold text-fg" scope="row">trackBod (SHOOTFORTHEMOON)</th>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">"Get your body composition analysis (requires a subscription)"</td>
+                  <td class="border-b border-card-border px-3 py-2 align-top text-muted">I found no published validation.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Several newer "AI body fat scanner" apps have under 10 ratings and no published validation that I found.</p>
+
+          <h2 id="untested">What no study has tested yet</h2>
+          <p>
+            <strong>No validation study I found tests whether an app can tell flat from full, bloated or holding water.</strong>
+            Studies remove those states on purpose. Halo participants fasted for
+            4 hours. Spren's study added no exercise, alcohol or excess caffeine
+            for 24 hours. Amazon's paper lists scanning "after a large meal or
+            an intense workout" and flexing as error sources.
+          </p>
+          <p>
+            <strong>Tracking a cut or bulk over months is untested for photo AI.</strong>
+            The Spren study measured one session, and Halo's was a single visit.
+            Shaped's study was cross-sectional, and the three-app study tested
+            repeat scans, not change. So none of them shows whether an app
+            catches a real 1-point drop in one person.
+          </p>
+
+          <h2 id="what-id-use">What I'd use instead</h2>
+          <p>
+            <strong>Every tool here repeats itself better than it matches the truth, so fix the conditions and read the trend.</strong>
+            Shoot the same light, pose, distance and time of day, at the same
+            point in your meals. The validation studies above standardized
+            exactly these conditions. If you use a scanning app, keep the same
+            app, because the 2026 study found three apps not interchangeable.
+          </p>
+          <p>
+            <strong>Pair photos with a weight trend and one tape or caliper number.</strong>
+            In a
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32437055/" target="_blank" rel="noopener nofollow">74-person study</a>,
+            consistent weeks of weighing predicted less weight regain, and the
+            total count of weigh-ins didn't. A waist measurement or a caliper
+            sum in millimeters adds a number that doesn't depend on lighting.
+          </p>
+          <p>
+            <strong>Learn to read your own photos.</strong>
+            Nippard's panel shows what DEXA-measured percentages look like.
+            RP's
+            <a href="https://www.youtube.com/watch?v=bGOt-UvWnV0" target="_blank" rel="noopener nofollow">You Might Be Fatter Than You Think!</a>
+            covers visual markers for men and women. For a lab number, book
+            DEXA on the same machine each time, rested and fasted.
+          </p>
+          <p>
+            This is the routine I built
+            <a href="https://apps.apple.com/app/id6760444125?ct=ai-bodyfat-article" target="_blank" rel="noopener">Recomp</a>
+            around: a weekly reminder, photos with your weight, and any two
+            dates side by side. It has no AI and gives no body-fat number.
+          </p>
+
+          <h2 id="unresolved">What's still unresolved</h2>
+          <p>
+            <strong>The study I want hasn't been run: an AI photo app followed against DEXA or a 4-compartment model through months of a cut or bulk.</strong>
+            Until then, I treat any app's body-fat number as a rough range. This
+            isn't medical advice. If you've tested an app against a DEXA, I'd
+            like to see your numbers:
+            <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[MARK: contact email — Gmail or the address on /support/]</mark>.
+          </p>
+
+          <h2 id="faq">FAQ</h2>
+          <h3>Can ChatGPT estimate body fat from a photo?</h3>
+          <p>It will give a number, but I found no peer-reviewed study of its accuracy.</p>
+          <h3>Is DEXA accurate for body fat?</h3>
+          <p>It's the usual reference, but three DEXA machines scanning the same people gave averages 2 points apart.</p>
+          <h3>What's the most accurate way to measure body fat at home?</h3>
+          <p>No home method gives one person an accurate percentage. For tracking change, I'd use a caliper sum, a waist tape and weekly photos under fixed conditions.</p>
+          <h3>Is the Navy body fat method accurate?</h3>
+          <p>It's close on average for groups, but in one study only 31% of sailors landed within 1 point of DEXA.</p>
+          <h3>Are body fat scales accurate?</h3>
+          <p>Not for one person. Every BIA device in Amazon's study showed significant bias against DEXA.</p>
+
+          <h2 id="sources">Sources</h2>
+          <h3 id="sources-studies">Studies</h3>
+          <p>Funding or company ties are noted where they exist.</p>
+          <ol>
+            <li>
+              Ramirez S, Bustami M, Rodriguez C, et al., Tinsley GM, Heymsfield SB.
+              <a href="https://www.nature.com/articles/s41366-026-02148-6" target="_blank" rel="noopener nofollow">Reference method matters: DXA system differences influence agreement with 3D optical imaging body composition estimates</a>.
+              <em>Int J Obes</em>, 2026. NIH-funded. One author advises Prism Labs.
+            </li>
+            <li>
+              Bone JL, Ross ML, Tomcik KA, et al.
+              <a href="https://pubmed.ncbi.nlm.nih.gov/28410328/" target="_blank" rel="noopener nofollow">Manipulation of Muscle Creatine and Glycogen Changes Dual X-ray Absorptiometry Estimates of Body Composition</a>.
+              <em>Med Sci Sports Exerc</em>, 2017.
+            </li>
+            <li>
+              Nana A, Slater GJ, Stewart AD, Burke LM.
+              <a href="https://pubmed.ncbi.nlm.nih.gov/25029265/" target="_blank" rel="noopener nofollow">Methodology review: using DXA for the assessment of body composition in athletes and active people</a>.
+              <em>Int J Sport Nutr Exerc Metab</em>, 2015.
+            </li>
+            <li>
+              Tinsley GM, Harty PS, Stratton MT, et al.
+              <a href="https://pubmed.ncbi.nlm.nih.gov/34325758/" target="_blank" rel="noopener nofollow">Tracking changes in body composition: comparison of methods and influence of pre-assessment standardisation</a>.
+              <em>Br J Nutr</em>, 2022. No financial support. A supplement company donated the dietary supplement used.
+            </li>
+            <li>
+              Kasper AM, Langan-Evans C, Hudson JF, et al.
+              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8065383/" target="_blank" rel="noopener nofollow">Come Back Skinfolds, All Is Forgiven</a>.
+              <em>Nutrients</em>, 2021.
+            </li>
+            <li>
+              Wilson KM, Weller RS, Ordille AJ, et al.
+              <a href="https://journals.lww.com/acsm-msse/fulltext/2019/06001/accuracy_of_body_fat_estimation_using.2715.aspx" target="_blank" rel="noopener nofollow">Accuracy of Body Fat Estimation Using Circumferences and Air Displacement Plethysmograph on Male Navy Sailors</a>.
+              <em>Med Sci Sports Exerc</em>, 2019. Conference abstract.
+            </li>
+            <li>
+              Schuna JM Jr, Hilgers SJ, Manikowske TL, et al.
+              <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4831679/" target="_blank" rel="noopener nofollow">The Evaluation of a Circumference-based Prediction Equation to Assess Body Composition Changes in Men</a>.
+              <em>Int J Exerc Sci</em>, 2013.
+            </li>
+            <li>
+              Encarnação IGAD, Cerqueira MS, Tinsley GM, et al.
+              <a href="https://pubmed.ncbi.nlm.nih.gov/42303133/" target="_blank" rel="noopener nofollow">Accuracy, repeatability, and interchangeability of smartphone-based digital anthropometry using multi- and dual-image approaches for body fat estimation</a>.
+              <em>Clin Nutr ESPEN</em>, 2026. No conflicts declared.
+            </li>
+            <li>
+              Tinsley GM, Rodriguez C, Florez CM, et al.
+              <a href="https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2024.1485450/full" target="_blank" rel="noopener nofollow">Smartphone three-dimensional imaging for body composition assessment using non-rigid avatar reconstruction</a>.
+              <em>Front Med</em>, 2024. Company-funded (Prism Labs).
+            </li>
+            <li>
+              Tinsley GM, Moore ML, Benavides ML, et al.
+              <a href="https://pubmed.ncbi.nlm.nih.gov/32113641/" target="_blank" rel="noopener nofollow">3-Dimensional optical scanning for body composition assessment: a 4-component model comparison of four commercially available scanners</a>.
+              <em>Clin Nutr</em>, 2020. No competing interests declared.
+            </li>
+            <li>
+              Majmudar MD, Chandra S, Yakkala K, et al.
+              <a href="https://www.nature.com/articles/s41746-022-00628-3" target="_blank" rel="noopener nofollow">Smartphone camera based assessment of adiposity: a validation study</a>.
+              <em>npj Digit Med</em>, 2022. Company-run (8 of 12 authors at Amazon).
+            </li>
+            <li>
+              Graybeal AJ, Brandner CF, Tinsley GM.
+              <a href="https://pubmed.ncbi.nlm.nih.gov/36215866/" target="_blank" rel="noopener nofollow">Visual body composition assessment methods: a 4-compartment model comparison of smartphone-based artificial intelligence for body composition estimation in healthy adults</a>.
+              <em>Clin Nutr</em>, 2022. Independent. One author has received in-kind scanner equipment from Size Stream, Naked Labs and Prism Labs.
+            </li>
+            <li>
+              Sisohor J, Ambegaonkar JP, Lindsey B, et al.
+              <a href="https://journals.plos.org/digitalhealth/article?id=10.1371%2Fjournal.pdig.0000983" target="_blank" rel="noopener nofollow">Assessing body composition via a smartphone computer vision application</a>.
+              <em>PLOS Digit Health</em>, 2026. No competing interests declared.
+            </li>
+            <li>
+              Ferreira TJ, Salvador IC, Pessanha CR, et al.
+              <a href="https://www.nature.com/articles/s41746-024-01380-6" target="_blank" rel="noopener nofollow">Advances in the estimation of body fat percentage using an artificial intelligence 2D-photo method</a>.
+              <em>npj Digit Med</em>, 2025. University-run. No competing interests declared.
+            </li>
+            <li>
+              Metoyer CJ, Sullivan K, Winchester LJ, et al.
+              <a href="https://pubmed.ncbi.nlm.nih.gov/38282462/" target="_blank" rel="noopener nofollow">Body composition estimates using a 2D image analysis system across different environmental conditions</a>.
+              <em>J Biophotonics</em>, 2024.
+            </li>
+            <li>
+              Brockmann AN, Eastman A, Ross KM.
+              <a href="https://pubmed.ncbi.nlm.nih.gov/32437055/" target="_blank" rel="noopener nofollow">Frequency and Consistency of Self-Weighing to Promote Weight-Loss Maintenance</a>.
+              <em>Obesity</em>, 2020.
+            </li>
+          </ol>
+
+          <h3 id="sources-articles">Articles and company pages</h3>
+          <ul>
+            <li>
+              Trexler E.
+              <a href="https://www.strongerbyscience.com/research-spotlight-changes-in-body-composition/" target="_blank" rel="noopener nofollow">How to effectively track changes in body composition</a>.
+              Stronger By Science, Oct 19, 2022.
+            </li>
+            <li>
+              Amazon.
+              <a href="https://www.aboutamazon.com/news/company-news/amazon-halo-discontinued" target="_blank" rel="noopener nofollow">Amazon discontinues Amazon Halo effective July 31</a>.
+            </li>
+            <li>
+              GainFrame.
+              <a href="https://gainframe.app/blog/ai-body-fat-estimator-accuracy-dexa-test/" target="_blank" rel="noopener nofollow">AI Body Fat Estimator Accuracy: We Tested GainFrame Against 36 DEXA Results</a>
+              (company-run) and
+              <a href="https://gainframe.app/blog/body-transformation-tracker-apps/" target="_blank" rel="noopener nofollow">body transformation tracker apps</a>.
+            </li>
+            <li>
+              Renaissance Periodization.
+              <a href="https://rpstrength.com/blogs/videos/i-got-my-body-fat-tested-every-way-possible" target="_blank" rel="noopener nofollow">Dr. Mike Gets His Body Fat Tested Every Way Possible</a>
+              and
+              <a href="https://rpstrength.com/blogs/videos/dr-mike-israetel-tests-which-body-fat-scan-is-best" target="_blank" rel="noopener nofollow">Which Body Fat Scan Is Best?</a>
+            </li>
+          </ul>
+
+          <h3 id="sources-videos">Videos</h3>
+          <ul>
+            <li>
+              Jeff Nippard.
+              <a href="https://www.youtube.com/watch?v=5K9QhkPww44" target="_blank" rel="noopener nofollow">What Every Body Fat % Actually Looks Like (50% to 5%)</a>,
+              2025.
+            </li>
+            <li>
+              Jeff Nippard.
+              <a href="https://www.youtube.com/watch?v=mV--9Grthec" target="_blank" rel="noopener nofollow">My METABOLISM and BODYFAT % | DEXA, BIA, Ultrasound, Calipers</a>,
+              2017.
+            </li>
+            <li>
+              Renaissance Periodization.
+              <a href="https://www.youtube.com/watch?v=cJ-7-gqztkk" target="_blank" rel="noopener nofollow">Are Dexa Scans Accurate? My Results Were Alarming</a>,
+              2026.
+            </li>
+            <li>
+              Renaissance Periodization.
+              <a href="https://www.youtube.com/watch?v=Y6xv3dACPss" target="_blank" rel="noopener nofollow">I Got My Body Fat Tested Every Way- Which Is Most Accurate?</a>,
+              2026.
+            </li>
+            <li>
+              Renaissance Periodization.
+              <a href="https://www.youtube.com/watch?v=bGOt-UvWnV0" target="_blank" rel="noopener nofollow">You Might Be Fatter Than You Think! How To Tell Body Fat Percentage ACCURATELY</a>,
+              2023.
+            </li>
+            <li>
+              9to5strength.
+              <a href="https://www.youtube.com/watch?v=ICVDVqOv9yA" target="_blank" rel="noopener nofollow">I Tested 5 Body Fat Scales Over 12 Weeks + DEXA Scan Comparison</a>,
+              2025.
+            </li>
+            <li>
+              Ali Spagnola's Fitness Outrageous.
+              <a href="https://www.youtube.com/watch?v=Bp5zYN3XQqo" target="_blank" rel="noopener nofollow">I Find the Best Home BODY FAT SCAN</a>,
+              2023.
+            </li>
+          </ul>
+        </div>
+
+        <section
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] mt-12"
+          aria-labelledby="article-cta-heading"
+        >
+          <h2 id="article-cta-heading" class="text-h3 font-bold tracking-h3">
+            See the progress buried in your camera roll
+          </h2>
+          <p class="pt-3 text-muted">
+            Import your photos and weight in under a minute. Compare progress
+            photos on a before-and-after timeline, scroll to any date instantly,
+            and align photos on the fly. Your photos and weight never leave your
+            device.
+          </p>
+          <p class="pt-6">
+            <a
+              class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85]"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125?ct=ai-bodyfat-article"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+              data-cta-location="article_footer"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </p>
+        </section>
+      </main>
+
+      <!-- chrome:footer depth="2" -->
+      <footer class="pt-8 pb-8">
+        <div class="mx-auto w-full max-w-[800px] px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 max-md:flex-col max-md:justify-center max-md:gap-y-1">
+            <nav class="grid min-w-0 gap-y-1 text-micro max-md:w-full max-md:justify-items-center max-md:gap-y-0" aria-label="Footer">
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../"
+                  >Home</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../"
+                  >Blog</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../about/"
+                  >About</a
+                >
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../privacy/"
+                  >Privacy</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../support/"
+                  >Support</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../roadmap/"
+                  >Roadmap</a
+                >
+              </div>
+            </nav>
+            <div
+              class="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-card-border bg-card p-1.5 max-md:ml-0"
+              role="group"
+              aria-label="Color theme"
+            >
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="system"
+                aria-pressed="true"
+              >
+                Auto
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="light"
+                aria-pressed="false"
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="dark"
+                aria-pressed="false"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /chrome:footer -->
+    </div>
+    <script src="../../js/posthog.js"></script>
+    <script src="../../js/theme.js"></script>
+  </body>
+</html>
