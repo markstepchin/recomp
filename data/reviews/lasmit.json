@@ -1,0 +1,3212 @@
+{
+ "app": {
+  "slug": "lasmit",
+  "app_id": 583840813,
+  "name": "Body Measurements Tracker App",
+  "developer": "Lasmit TLB Ltd",
+  "in_roundup": true,
+  "genre": "Health & Fitness",
+  "price": 0.0,
+  "rating_count_us": 9361,
+  "rating_avg_us": 4.63,
+  "first_released": "2012-12-17",
+  "last_updated": "2026-10-13",
+  "version": "2026.23",
+  "store_url": "https://apps.apple.com/us/app/id583840813",
+  "reviews_collected": 354,
+  "feed_pages_mostrecent": 8,
+  "feed_rows_mostrecent": 354,
+  "feed_rows_mosthelpful": 354,
+  "oldest_review": "2014-01-22",
+  "newest_review": "2026-10-16"
+ },
+ "fetched_at": "2026-10-17T20:19:11.085919-07:00",
+ "reviews": [
+  {
+   "id": "14673612679",
+   "rating": 3,
+   "title": "Measurements",
+   "text": "The measurements need to use the decimal, not fractions.",
+   "date": "2026-10-16T07:15:54-07:00",
+   "version": "2026.23",
+   "author": "charlieflyboy"
+  },
+  {
+   "id": "14626363251",
+   "rating": 5,
+   "title": "Handy app",
+   "text": "I wanted an app to let me track progress and not rely on a scale. Takes readings from my sale and tracks measurements and pictures. Works well, wash to use.",
+   "date": "2026-10-04T04:27:51-07:00",
+   "version": "2026.22",
+   "author": "Michelle.loves.dogs"
+  },
+  {
+   "id": "14587351634",
+   "rating": 1,
+   "title": "Disappointed",
+   "text": "I used to enjoy this app. I even paid for the upgraded version which was “lifetime” but now in order to log more than 4 measurements I have to pay $20 annually….. I’ll use a pen and paper",
+   "date": "2026-09-24T04:02:20-07:00",
+   "version": "2026.22",
+   "author": "246728"
+  },
+  {
+   "id": "14450217576",
+   "rating": 1,
+   "title": "Stop asking for reviews",
+   "text": "Everytime an app asks me to rate them, they’re getting this awful review since that is an annoyance that destroys the app experience.",
+   "date": "2026-08-20T03:05:33-07:00",
+   "version": "2026.20",
+   "author": "I Tried So Many Times"
+  },
+  {
+   "id": "14304595452",
+   "rating": 5,
+   "title": "Don’t let a glitch slide",
+   "text": "Updated review: I made the mistake of letting a glitch go without reporting it. \n\nI’ve got two devices, three if I count my iPad and the app started only letting me log from one device. Which was annoying because app purchases are tied to the Apple ID, not the device. I kept putting off reporting this weird glitch this year until it finally stopped letting me track with the Pro Membership altogether this month. I’ve been a loyal subscriber since 2018.\n\nOnce I reported it to the App team this week, they immediately jumped on it. Couldn’t have been nicer and fixed it fast. I was so relieved. I apologize for thinking they were pulling something on me by making me buy the subscription again when I had had purchased a lifetime membership. Again, if you have a glitch- report it. \n\nGreat app. Great people. Say something when it breaks. Don’t just shrug it off like I did.",
+   "date": "2026-07-14T20:26:45-07:00",
+   "version": "2026.19",
+   "author": "LVLau"
+  },
+  {
+   "id": "14292894601",
+   "rating": 1,
+   "title": "Lame",
+   "text": "I have been happily using this app for YEARS to track my progress after 150 pound weight loss. I opened it for the first time in a while today to now be told I can only track 5 things and I lost all the data points of my progress since 2019. That sucks so much. Terrible customer service to give no warning or option to even see my previous tracking.",
+   "date": "2026-07-11T22:33:10-07:00",
+   "version": "2026.18",
+   "author": "Megelyn"
+  },
+  {
+   "id": "14290030059",
+   "rating": 5,
+   "title": "Great measurement options!",
+   "text": "I decided to track my weight loss by focusing on inches lost. This app has user friendly options for doing just that. Set what measurements you want to keep track of and set a weekly reminder to take those measurements. I love the data report it keeps for this. It’s easy to see where you currently are and how far you’ve come by scrolling through the history!",
+   "date": "2026-07-11T05:53:47-07:00",
+   "version": "2026.18",
+   "author": "AS Mof2"
+  },
+  {
+   "id": "14143505463",
+   "rating": 5,
+   "title": "Another helpful tool",
+   "text": "I was hesitant about why it was important to take progress photos..mainly just keeping track of them. But this app makes it easy for me to keep track of my progress all in one place :) And it helps keep my motivated to see the side my side comparisons of my fat loss journey 🙌🏽",
+   "date": "2026-06-04T09:17:14-07:00",
+   "version": "2026.18",
+   "author": "Munchichi457"
+  },
+  {
+   "id": "13995939608",
+   "rating": 1,
+   "title": "Perfect tracker (update: not anymore!)",
+   "text": "I absolutely HATE the new redesign. It’s harder to use, uglier, and (in every way) a HUGE step backwards. At this rate I will not be continuing to subscribe and will find something, anything, else. Astonishing how they had an app that was essentially perfect and then destroyed it so quickly in the space of 1-2 releases. \n\nOLD REVIEW:\nI’ve been using this app for years. It works great, and I find it easy, intuitive, and beautiful. I look forward to inputting my weight and body fat into it every day and appreciate its effective visualizations for motivating me. It’s great! I highly recommend it! Oh and my wife is now using it and loving it too. I’ll also say that the developer is great to work with should you ever have a question or concern.",
+   "date": "2026-04-25T09:09:55-07:00",
+   "version": "2026.16",
+   "author": "Laughfactory"
+  },
+  {
+   "id": "13813356809",
+   "rating": 5,
+   "title": "LOVE, LOVE, LOVE Progress!!!",
+   "text": "I use to track everything on paper but now I have this amazing app and it keeps getting better with each release. I recommend it for all my clients. Thank you, Progress!!!",
+   "date": "2026-03-04T08:38:54-07:00",
+   "version": "2026.8",
+   "author": "Totally Ruthless!"
+  },
+  {
+   "id": "13752449390",
+   "rating": 1,
+   "title": "Free version became more limiting",
+   "text": "It only gives 5 options for measurements. Before, it was 15",
+   "date": "2026-02-15T08:40:41-07:00",
+   "version": "2026.6",
+   "author": "lkg2018"
+  },
+  {
+   "id": "13617669764",
+   "rating": 5,
+   "title": "Apple health doesn’t sync",
+   "text": "Hasn’t synced in 4 years.   I deleted the app, re installed.   It says it is enabled but noting syncs",
+   "date": "2026-01-10T08:29:42-07:00",
+   "version": "2026.2",
+   "author": "my iWorld"
+  },
+  {
+   "id": "13599448353",
+   "rating": 2,
+   "title": "I wanted measurement app",
+   "text": "This app doesn’t have a section to log your measurements. I’ll be looking for another app",
+   "date": "2026-01-05T15:24:54-07:00",
+   "version": "2026.2",
+   "author": "223chick"
+  },
+  {
+   "id": "13579089923",
+   "rating": 3,
+   "title": "Sheila’s Progress",
+   "text": "Progress",
+   "date": "2025-12-31T17:19:43-07:00",
+   "version": "2026.1",
+   "author": "Brush of Heart"
+  },
+  {
+   "id": "13557428361",
+   "rating": 1,
+   "title": "Poor app",
+   "text": "I have purchased this app long time ago, it hasn’t evolved n through the year and I regret my purchase of this app, it doesn’t add anything for me, the layout and the design is not very practical. Its installed on my iPhone but I never use it . I have found better free app than this one. \n\nThis one has a very poor and basic design. And today the app icon has been redesigned and it’s awful. \n\nThe vote here link doesn’t work on iOS and when developer run events to fill a survey with a chance to win gift card , they never announce the winner on social network so it ends up feeling like scam",
+   "date": "2025-12-26T08:04:44-07:00",
+   "version": "2025.21",
+   "author": "featherbabylove"
+  },
+  {
+   "id": "13518956335",
+   "rating": 3,
+   "title": "Kind of bummed",
+   "text": "I liked this app, and I tracked a bunch of body measurements  back in 2022. Bought the pro version early on. Haven’t used it a year or more and went back and measured again. All my initial measurements are gone. Really bummed about that. There was no interruption to my subscription. 🥲",
+   "date": "2025-12-15T21:10:38-07:00",
+   "version": "2025.18",
+   "author": "dralquijay2"
+  },
+  {
+   "id": "13513043356",
+   "rating": 1,
+   "title": "Lost FIVE YEARS of data in latest upgrade",
+   "text": "I have been using this app for years to keep track of health and measurement data. This morning when I logged in after the latest upgrade it was ALL gone. I am livid. There was no warning to back up data, no hint that this was going to happen with the new version.",
+   "date": "2025-12-14T07:26:43-07:00",
+   "version": "2025.19",
+   "author": "KateESK1072"
+  },
+  {
+   "id": "13506326888",
+   "rating": 3,
+   "title": "Data Loss",
+   "text": "A year or two ago, my wife’s data was wiped from your app. This morning, mine was wiped. No rhyme or reason. Just opened the app and it was as though I had not been logging my weight in it for the last 7 or so years. There was the option to import, but who regularly exports. \n\nLuckily all the data was stored in Health. I know have a shortcut set up for logging weight, which was the only feature of this app I was really using.",
+   "date": "2025-12-12T14:11:51-07:00",
+   "version": "2025.19",
+   "author": "Nickname12333365432345"
+  },
+  {
+   "id": "13506083015",
+   "rating": 5,
+   "title": "Love this app",
+   "text": "This is a great tracker.",
+   "date": "2025-12-12T12:37:25-07:00",
+   "version": "2025.19",
+   "author": "I8veggies"
+  },
+  {
+   "id": "13503006355",
+   "rating": 1,
+   "title": "New update erased my entire history",
+   "text": "0 stars. Multiple years of tracking is gone.",
+   "date": "2025-12-11T17:04:39-07:00",
+   "version": "2025.18",
+   "author": "SLBPB76"
+  },
+  {
+   "id": "13163375067",
+   "rating": 1,
+   "title": "Horrible Interface",
+   "text": "I messed up creating my profile. There was no option to purge everything and start from scratch (including the purge data and clean slate options). Since I seem to now not be able to create any new profile why would I keep using?",
+   "date": "2025-09-20T16:11:35-07:00",
+   "version": "2025.9",
+   "author": "KnightRyder189851"
+  },
+  {
+   "id": "13110564317",
+   "rating": 1,
+   "title": "Always crashing",
+   "text": "8 times out of 10, I can’t even open the app. It’s always crashing. Kind of annoyed that I just bought the lifetime premium.",
+   "date": "2025-09-07T10:58:02-07:00",
+   "version": "2025.8",
+   "author": "sleepylawyer"
+  },
+  {
+   "id": "13098938362",
+   "rating": 1,
+   "title": "Most thing paywalled now",
+   "text": "It was great but now you have to pay to have more than 5 measurements and track your photos. I’ve used this app for years but not anymore",
+   "date": "2025-09-04T12:22:36-07:00",
+   "version": "2025.8",
+   "author": "Kylie69420"
+  },
+  {
+   "id": "13002386708",
+   "rating": 5,
+   "title": "Great incentive",
+   "text": "I love this app. It gives me incentive to go on each day on my diet. Great recipes and excellent support.",
+   "date": "2025-08-11T03:48:40-07:00",
+   "version": "2025.8",
+   "author": "Peg1963"
+  },
+  {
+   "id": "12940991378",
+   "rating": 4,
+   "title": "Photos feature stinks",
+   "text": "I’d love to give this 5 stars but the photo progress feature zooms in on some pictures and out on others making it hard to actually compare. Hope they fix it, or at least give me control to resize within the app, either cropping or zooming in and out to make the comparisons better.",
+   "date": "2025-07-26T20:05:56-07:00",
+   "version": "2025.8",
+   "author": "Katietrz"
+  },
+  {
+   "id": "12934976864",
+   "rating": 5,
+   "title": "Love this app!",
+   "text": "I’ve been using this for years. It’s so helpful to have actual data to look at as I track my health journey. It works well for me. I’ve tried other apps but the is one is my favorite.",
+   "date": "2025-07-25T07:31:45-07:00",
+   "version": "2025.8",
+   "author": "Cchid1"
+  },
+  {
+   "id": "12860960207",
+   "rating": 4,
+   "title": "Export inches not CM please",
+   "text": "I like to export the data into CSV but the measurements are showing cm and I need inches to compare it to older data I have from another app.",
+   "date": "2025-07-06T15:36:17-07:00",
+   "version": "2025.7",
+   "author": "carlvjack"
+  },
+  {
+   "id": "12754799707",
+   "rating": 5,
+   "title": "Great",
+   "text": "Great visuals and super simple to use.",
+   "date": "2025-06-09T09:21:40-07:00",
+   "version": "2025.4",
+   "author": "JoaChlo"
+  },
+  {
+   "id": "12438629706",
+   "rating": 1,
+   "title": "Where are the results",
+   "text": "I added this app to find Body fat percentage using tape measurements of specific body parts and weight and I put all the info into app, but it doesn’t give the Body fat % anywhere. Just tracks measurements????? That’s a waste of",
+   "date": "2025-03-19T05:33:33-07:00",
+   "version": "2024.10",
+   "author": "lucerito"
+  },
+  {
+   "id": "12394813507",
+   "rating": 5,
+   "title": "Perfect tracking app",
+   "text": "Love this app. Have used it over a year. It tracks everything I need & even does side by side pics!",
+   "date": "2025-03-07T19:17:35-07:00",
+   "version": "2024.10",
+   "author": "Runaway girl 47"
+  },
+  {
+   "id": "12234120986",
+   "rating": 3,
+   "title": "Ok",
+   "text": "Overall app is pretty good but it fails on the main goal: photo comparison. You should be able to notate the weight change as well and not such MASSIVE borders around each photo. The borders are so big that it makes it difficult to compare even when photos are side by side.",
+   "date": "2025-01-26T10:39:00-07:00",
+   "version": "2024.10",
+   "author": "Carg17835"
+  },
+  {
+   "id": "12081237156",
+   "rating": 1,
+   "title": "Disappointed",
+   "text": "Paid for the pro version, app updated and deleted a years worth of data. Tried to restore, only progress pics returned, no measurements or weigh ins.",
+   "date": "2024-12-19T06:09:25-07:00",
+   "version": "2024.10",
+   "author": "DawniellW"
+  },
+  {
+   "id": "12081083955",
+   "rating": 1,
+   "title": "Not clear instructions",
+   "text": "The app showed multiple locations for measurements, but progressing through the standard options doesn’t give you those measurements. It asked for water mass without any explanation of how to calculate that.",
+   "date": "2024-12-19T05:21:31-07:00",
+   "version": "2024.10",
+   "author": "Arroyoteam"
+  },
+  {
+   "id": "12001923370",
+   "rating": 5,
+   "title": "Everything I need",
+   "text": "I had an app I liked but it only tracked weight and I wanted to also track my measurements and body fat percentage. This one also automatically calculates BMI and waist to hip ratio which means I don’t have to pull up the online calculators I had been using! \nPredictions for weight loss based on current or historical trends would be a nice feature to add if the developers are interested in desirable features.",
+   "date": "2024-11-28T08:22:08-07:00",
+   "version": "2024.9",
+   "author": "Dulcinea14tx"
+  },
+  {
+   "id": "11848809738",
+   "rating": 5,
+   "title": "Great app",
+   "text": "Been using this app for years the best app in the market for better health management.",
+   "date": "2024-10-18T14:50:31-07:00",
+   "version": "2024.8",
+   "author": "Jay saket"
+  },
+  {
+   "id": "11828157018",
+   "rating": 2,
+   "title": "Good tracker",
+   "text": "I’m so sad I updated this app. I do not like the new look. I mainly came here because I wanted to make a comment about how things get recorded. I get where you’re coming from top to bottom chest then biceps, but it’s not exactly top to bottom because next is hips and then waist followed by thighs. I would really like it if we could control the order because I am not shrinking my retractable measuring tape from my chest to my biceps because I have to increase it again for my waist and my hips. I’ve recently decided I want to record my biceps, but if I can’t control the order then I’m not going to use the app to record it. The other thing that I would update is I would like the choice if I measure my right side or left side first. I don’t want to be told you have to measure do your left side then right when I would prefer to measure my right side first.\nI reduced stars for the new look as well as the inability to choose the order of what I measure, and the order of which side I measure first.",
+   "date": "2024-10-12T22:57:47-07:00",
+   "version": "2024.8",
+   "author": "pleasejustread"
+  },
+  {
+   "id": "11539083736",
+   "rating": 4,
+   "title": "Please add widgets!",
+   "text": "This is a great app which would be perfect if it had widgets.",
+   "date": "2024-07-26T18:45:30-07:00",
+   "version": "2024.8",
+   "author": "Justinjason"
+  },
+  {
+   "id": "11499689617",
+   "rating": 4,
+   "title": "Few issues but made whole",
+   "text": "My photos somehow stopped working. All I get is a black image. Contacted the developer and they tried to correct it but could not. They did make it right and I use the app to this day.",
+   "date": "2024-07-16T06:43:21-07:00",
+   "version": "2024.8",
+   "author": "Zoro.PrinceOfDarkness"
+  },
+  {
+   "id": "11360997211",
+   "rating": 5,
+   "title": "Martina 6/24",
+   "text": "Great",
+   "date": "2024-06-09T04:10:47-07:00",
+   "version": "2024.8",
+   "author": "MartinaLIng"
+  },
+  {
+   "id": "10863840766",
+   "rating": 5,
+   "title": "Love This App",
+   "text": "I really love the simplicity of this app. It keeps track of all the things I care about in my fitness journey - weight, measurements, and progress pics. I wish I could get the progress video to work, but that’s the only problem I have with the app, and it would be a fun feature.",
+   "date": "2024-01-25T14:20:56-07:00",
+   "version": "2024.1",
+   "author": "Hills4Tacos"
+  },
+  {
+   "id": "10817545199",
+   "rating": 3,
+   "title": "Entering Data",
+   "text": "When entering data almost can’t see enter button. Need more time for better review.",
+   "date": "2024-01-13T07:29:59-07:00",
+   "version": "2023.13",
+   "author": "lion tigar"
+  },
+  {
+   "id": "10775823813",
+   "rating": 1,
+   "title": "Deleted all my old data and hid it behind paywall",
+   "text": "This app deleted all my old measurements from only a few months ago and won’t let me see them without subscribing to a monthly payment plan, even though this feature was free when I got the app. There was also no warning so I never had a chance to get my old numbers. Don’t get this app, it’s terrible.",
+   "date": "2024-01-02T11:14:14-07:00",
+   "version": "2023.13",
+   "author": "Wish it worked sk"
+  },
+  {
+   "id": "10245987465",
+   "rating": 2,
+   "title": "Update ruined everything",
+   "text": "I purchased this app for pro a while back.. now the update messed everything up. I sign on to see that I’m no longer pro and now requires a monthly fee. I deleted the app. I’ve been using it for years but sadly I lost all my info and I’ve already paid in the past so I won’t be doing a subscription.",
+   "date": "2023-08-11T09:09:13-07:00",
+   "version": "2023.8",
+   "author": "Laura1983marie"
+  },
+  {
+   "id": "10229167077",
+   "rating": 5,
+   "title": "Progress 😍❤️😍",
+   "text": "I really like the things I can track with this app. I able to take my measurements and see the progress I have made over time. I especially like that my images can be overlaid, it gives me a clearer picture of my progress. I recommend this app to anyone who's wants to track their transformation.",
+   "date": "2023-08-07T02:25:24-07:00",
+   "version": "2023.7",
+   "author": "SheilaTweety"
+  },
+  {
+   "id": "10226142005",
+   "rating": 3,
+   "title": "Pro access",
+   "text": "Lost my pro access and I cannot figure out how to contact support",
+   "date": "2023-08-06T06:19:31-07:00",
+   "version": "2023.7",
+   "author": "Krystallazuli"
+  },
+  {
+   "id": "10225654943",
+   "rating": 3,
+   "title": "Paying Again?!",
+   "text": "I paid for full lifetime access to this app YEARS AGO for less than $5.  Now I’m being asked to upgrade again as if I never did for $11.99. I’d like to know why????",
+   "date": "2023-08-06T03:25:35-07:00",
+   "version": "2023.7",
+   "author": "MariG."
+  },
+  {
+   "id": "10173857407",
+   "rating": 5,
+   "title": "Straight forward",
+   "text": "Simple, decently cheap, has just enough bells and whistles to make it worth while but not so much that you feel like you’re sorting through red tape. Everything I need, almost everything I want.",
+   "date": "2023-07-23T12:06:32-07:00",
+   "version": "2023.6",
+   "author": "Bitter Rind"
+  },
+  {
+   "id": "9968701079",
+   "rating": 4,
+   "title": "Glitchy - Update",
+   "text": "Please fix the add weight and date function for progress entry - no way to press enter.\n\nNever mind updated, love this app. 👍",
+   "date": "2023-05-26T16:16:12-07:00",
+   "version": "2023.5",
+   "author": "Mya. 🌚"
+  },
+  {
+   "id": "9954335211",
+   "rating": 1,
+   "title": "NOT FREE",
+   "text": "I wish apps were transparent about their price before wasting my time!!!",
+   "date": "2023-05-22T09:32:30-07:00",
+   "version": "2023.5",
+   "author": "Kelseyalexandra1993"
+  },
+  {
+   "id": "9939671327",
+   "rating": 3,
+   "title": "Can’t enter weight at all",
+   "text": "For what you have to pay this should not be a feature issue but when you enter weight and select done nothing happens.",
+   "date": "2023-05-18T06:01:49-07:00",
+   "version": "2023.4",
+   "author": "EmzItunes"
+  },
+  {
+   "id": "9737618138",
+   "rating": 1,
+   "title": "How do I record the food I eat with fat grams to track daily calories and fat grams?",
+   "text": "How do I record food I eat with fat grams / calories/day to see how to chart fat gram counter and calories counter",
+   "date": "2023-03-21T12:54:42-07:00",
+   "version": "2023.3",
+   "author": "PVeronicaC"
+  },
+  {
+   "id": "9654427357",
+   "rating": 1,
+   "title": "Too many requests for a review",
+   "text": "I’ve just installed the app about 5 minutes ago and am just starting to explore it, but it’s already asked me to provide a review at least 5 times! So here it is. Now stop asking",
+   "date": "2023-02-25T08:02:12-07:00",
+   "version": "2023.2",
+   "author": "ForumDiver"
+  },
+  {
+   "id": "9590010589",
+   "rating": 3,
+   "title": "Photos are Gone",
+   "text": "I liked this app a lot, but once the upgrade happened, all of my photos are gone, even though I have a pro membership. It was years ago when I took these and don’t have them anywhere else, and it is scary to know these pictures are gone, and I don’t know where they are.",
+   "date": "2023-02-06T09:07:57-07:00",
+   "version": "2023.1",
+   "author": "lbixman"
+  },
+  {
+   "id": "9583520268",
+   "rating": 3,
+   "title": "Cost$$$",
+   "text": "Can you tell me if this is a free app or is there a monthly fee?",
+   "date": "2023-02-04T13:09:23-07:00",
+   "version": "2023.1",
+   "author": "GinGin_04"
+  },
+  {
+   "id": "9550422464",
+   "rating": 1,
+   "title": "Stuck",
+   "text": "No. Not my Progress. Only, extremely frustrating that, while using the app, it keeps asking for a review and the “Review” box will not clear. Literally have to stop using and keep checking to see if it is gone. It freezes the screen and nothing can be viewed. Every time it happens, will come here to leave a negative review. That is, until I delete the app over frustration. Ugh.",
+   "date": "2023-01-26T13:14:06-07:00",
+   "version": "2023.1",
+   "author": "GiveEmKel"
+  },
+  {
+   "id": "9498284430",
+   "rating": 5,
+   "title": "Simple",
+   "text": "This app is great and really helps you on your journey of health. Having to measure the inches helps because sometimes you don’t necessarily lose a pound but you might still lose inches so it’s encouraging to see! Simple, effective and useful!",
+   "date": "2023-01-11T23:50:19-07:00",
+   "version": "2022.9",
+   "author": "Questionqueen92"
+  },
+  {
+   "id": "9414976289",
+   "rating": 1,
+   "title": "Misleading",
+   "text": "You download it and have to pay right away which was not in the description. Literally use any other app, save your money. What a joke.",
+   "date": "2022-12-19T20:40:29-07:00",
+   "version": "2022.8",
+   "author": "MadelineFloretta"
+  },
+  {
+   "id": "9236881325",
+   "rating": 4,
+   "title": "Almost perfect",
+   "text": "But… very much needs ability to sync to iCloud or other cloud drives so I can easily update my data from another iPad or iPhone and all three show the change. I have three iOS devices and would love if I could enjoy the excellence of this app from any of them.",
+   "date": "2022-10-30T04:03:41-07:00",
+   "version": "2022.8",
+   "author": "workPhoneE"
+  },
+  {
+   "id": "9214464435",
+   "rating": 3,
+   "title": "I love it but the measurements…",
+   "text": "I love it but the measurements are frustrating. I wish you could just type in the amount. The sliding measurement is frustrating",
+   "date": "2022-10-23T09:17:09-07:00",
+   "version": "2022.8",
+   "author": "Gogogaget77"
+  },
+  {
+   "id": "8925508499",
+   "rating": 1,
+   "title": "Not free anymore?",
+   "text": "I have been using this for a very long time. I opened it tonight and now it wants me to pay! All my data gone! 😡",
+   "date": "2022-07-29T17:49:31-07:00",
+   "version": "2022.7",
+   "author": "Jennmw"
+  },
+  {
+   "id": "8876695844",
+   "rating": 5,
+   "title": "Version 2022.7!!!",
+   "text": "Exactly what we been wanting for so long!\n\nOverlay, Guided lines, Trackers & Comparisons!\n\nOnly app I found still supported by the Devs, great work! 🙌🏾",
+   "date": "2022-07-15T07:22:30-07:00",
+   "version": "2022.7",
+   "author": "GhassanIdris"
+  },
+  {
+   "id": "8829602856",
+   "rating": 5,
+   "title": "Great!!",
+   "text": "This app works great for tracking all weight & measurements with time. Even the photos on any given day.",
+   "date": "2022-07-01T07:10:10-07:00",
+   "version": "2022.5",
+   "author": "Someonesmom"
+  },
+  {
+   "id": "8829421969",
+   "rating": 2,
+   "title": "Never Opens Consistently",
+   "text": "I really like the app and I’ve had it for over 6 months but it never opens consistently. I have to hope that when I measure and weigh myself on Friday’s, that the app will actually open & let me use it. Today is apparently a no open day for me. It just sits at an all white screen and this has been happening since I downloaded it, even with having all my app updates & phone updated.",
+   "date": "2022-07-01T06:14:17-07:00",
+   "version": "2022.5",
+   "author": "ABP197"
+  },
+  {
+   "id": "8763528425",
+   "rating": 5,
+   "title": "Easy to use",
+   "text": "Just entered first measurements",
+   "date": "2022-06-11T07:18:11-07:00",
+   "version": "2022.5",
+   "author": "Xman8089"
+  },
+  {
+   "id": "8639287440",
+   "rating": 5,
+   "title": "Awesome app and customer service",
+   "text": "I been having this application for YEARS. It allows you to put in the measurements we all need. I personally love the way it looks now compared to the past. They had a bug issue recently and instead ignoring their clients they fixed the issue. I personally emailed them about the problem, they sent a work around link solution so I could continue to measure myself, then when they fixed the problem they personally followed up and sent an updated link that connected both the old and the new app. Awesome customer service!!!",
+   "date": "2022-05-05T04:06:51-07:00",
+   "version": "2022.4",
+   "author": "cdtaylor5"
+  },
+  {
+   "id": "8572268723",
+   "rating": 1,
+   "title": "Love but… Cannot Open!",
+   "text": "This app was vital to me tracking body changes during an illness. It’s really fantastic for what it does, and I’ve successfully recommended it to friends and family. I’m shy, I don’t normally do that! So you know I’ve found it helpful. \n\nAlarmingly, the app crashes upon opening for the last week or two now. I haven’t tried reinstalling because I don’t know if I’ll lose my data. Please help or fix. Too many of us with this bug.",
+   "date": "2022-04-15T21:40:40-07:00",
+   "version": "2022.3",
+   "author": "Team Guillotine"
+  },
+  {
+   "id": "8566119274",
+   "rating": 1,
+   "title": "Crashes",
+   "text": "Have not been able to open the app for several days now. Every time it crashes. Please fix the problem",
+   "date": "2022-04-14T04:47:21-07:00",
+   "version": "2022.3",
+   "author": "bnicole33"
+  },
+  {
+   "id": "8549137275",
+   "rating": 3,
+   "title": "What happened with that update?",
+   "text": "I love this program but since the update I haven’t been able to open it. I have deleted it and reinstalled it but all it does is crash when I try to open it.",
+   "date": "2022-04-09T08:38:29-07:00",
+   "version": "2022.3",
+   "author": "A2xv"
+  },
+  {
+   "id": "8545643487",
+   "rating": 1,
+   "title": "Where did it go?!",
+   "text": "I have attempted to open the app several times to no avail. Instead I am kicked out. I would like to update my progress and see where I am.",
+   "date": "2022-04-08T09:38:56-07:00",
+   "version": "2022.3",
+   "author": "Yoga momma"
+  },
+  {
+   "id": "8541219080",
+   "rating": 5,
+   "title": "Issues?",
+   "text": "It worked great in the beginning and now for the past two weeks I can’t even open the app. I paid for the upgrade and now I can’t even use it 😖. Hope the issue get fixed because I do like the way the app is set up.\n\nUpdate: got an answer from support fairly quickly and fixed my issue.",
+   "date": "2022-04-07T04:43:10-07:00",
+   "version": "2022.3",
+   "author": "lmmann"
+  },
+  {
+   "id": "8532498971",
+   "rating": 3,
+   "title": "No longer working",
+   "text": "I’ve used this app for a few years now and it’s always worked flawlessly. Now it won’t open. Just crashes",
+   "date": "2022-04-04T17:08:40-07:00",
+   "version": "2022.3",
+   "author": "Kaittea"
+  },
+  {
+   "id": "8493769770",
+   "rating": 1,
+   "title": "No communication from developers",
+   "text": "3 seconds is NOT enough time to get situated for a photo.. submitted a question, still waiting for an answer a week later…",
+   "date": "2022-03-25T05:54:01-07:00",
+   "version": "2022.2",
+   "author": "thankfulone64"
+  },
+  {
+   "id": "8481027897",
+   "rating": 1,
+   "title": "Not user friendly at all!!!",
+   "text": "Tried to add historical information and pictures and it would not save any of the information I added. I also tried adding pics and it would not save them either",
+   "date": "2022-03-21T14:19:08-07:00",
+   "version": "2022.2",
+   "author": "emilystranger99999"
+  },
+  {
+   "id": "8343102818",
+   "rating": 1,
+   "title": "Bad stuff",
+   "text": "Not sure what we get from this app",
+   "date": "2022-02-11T02:29:42-07:00",
+   "version": "2022.1",
+   "author": "Arup’s"
+  },
+  {
+   "id": "8303275699",
+   "rating": 1,
+   "title": "Lost all progress",
+   "text": "I purchased this pro version and I’ve been using it for a couple years and today when I went to open the app all my weekly updates and photos were gone. Not a bit of info in there!",
+   "date": "2022-01-31T05:09:14-07:00",
+   "version": "2022.1",
+   "author": "Ashlee Stiegwardt"
+  },
+  {
+   "id": "8238742457",
+   "rating": 5,
+   "title": "Lost 66 lbs and 53” in 7 months! Glad I tracked it!!",
+   "text": "Progress app has made my health journey easier and kept me motivated. Highly recommend for anyone getting healthy as a tool for celebrating victories and seeing the trends to keep them on track!",
+   "date": "2022-01-14T01:51:48-07:00",
+   "version": "2022.1",
+   "author": "Sharing Hope"
+  },
+  {
+   "id": "8218075588",
+   "rating": 5,
+   "title": "My favorite app",
+   "text": "I love this app because all my progress is stored in one place and is easy to access. I look back often to see my measurements when ordering clothes and it is so encouraging to see the total inches and total pounds lost.",
+   "date": "2022-01-08T06:33:25-07:00",
+   "version": "2022.1",
+   "author": "DestinTeacherMom"
+  },
+  {
+   "id": "8091639214",
+   "rating": 5,
+   "title": "User friendly and I appreciate that!!",
+   "text": "I am a senior and I have used this app on and off over the years. I’ve always loved it because even I can easily move through it and track my weight and progress l, along with BMI and other things, even water intake! It also syncs to my Fitbit and that helps a lot!  Thanks!",
+   "date": "2021-12-03T13:33:22-07:00",
+   "version": "2021.11",
+   "author": "Reddebbee"
+  },
+  {
+   "id": "8082504989",
+   "rating": 5,
+   "title": "Great",
+   "text": "Great way to track progress",
+   "date": "2021-12-01T00:14:49-07:00",
+   "version": "2021.11",
+   "author": "tarKnauuls"
+  },
+  {
+   "id": "8025417721",
+   "rating": 1,
+   "title": "All progress lost",
+   "text": "After updating to ios 15 all of my progress has been erased.",
+   "date": "2021-11-14T20:25:59-07:00",
+   "version": "2021.11",
+   "author": "kamikazekenzie"
+  },
+  {
+   "id": "8019693611",
+   "rating": 5,
+   "title": "Easy weight tracking",
+   "text": "I use for tracking my weight. It reminds me every day to log my weight, which I find key to success in pushing the trajectory down. \n\nI just wish the screen rotated on my iPad. ☹️",
+   "date": "2021-11-13T06:19:51-07:00",
+   "version": "2021.11",
+   "author": "Z@lli@"
+  },
+  {
+   "id": "7751503265",
+   "rating": 5,
+   "title": "Great App!",
+   "text": "Love this app! Great way to see progress, customer service is fantastic. I highly recommend it.",
+   "date": "2021-08-30T05:35:32-07:00",
+   "version": "2021.9",
+   "author": "LRFE4ever"
+  },
+  {
+   "id": "7730109199",
+   "rating": 3,
+   "title": "Tedious slider",
+   "text": "Tedious to slide the measurements for the number instead of just entering it. Graphs should be more visible to find ; would be nice to be able to see all charts on the same page for overall trending across the limbs",
+   "date": "2021-08-24T11:58:32-07:00",
+   "version": "2021.9",
+   "author": "devyniti"
+  },
+  {
+   "id": "7712398441",
+   "rating": 1,
+   "title": "So Disappointed. Do NOT waste your money",
+   "text": "I had high hopes for this app but very disappointed. I have logged my measurements and photos for 4 weeks and when I went in to log my measurements again everything was gone and I had to start over. Do not pay for this app. Weight loss is stressful enough and this doesn’t help.  1 star is way to high for this app",
+   "date": "2021-08-19T16:37:28-07:00",
+   "version": "2021.9",
+   "author": "Bournes Apprentice"
+  },
+  {
+   "id": "7597664839",
+   "rating": 5,
+   "title": "Great Tracker & Customer Service",
+   "text": "When I first downloaded the app I had issues with it and emailed support. They were most helpful and upgraded me to pro for all my issues. I just emailed again with a question and heard within hours. The developers care about their app and their customers who use it which is getting to be rare it seems. \n\nI love being able to easily track different measurements and although I haven’t used the photo section yet it is a nice way of viewing progress. \n\nWhat I’m not sure about is how it works with FitBit because I don’t see any updates in FitBit coming from Progress but that being said I may not know what it’s doing and my FitBit app has been acting up so I cannot fault Progress for that. I’m sure if it is on Progress side their wonderful Support will take care of the issue. \n\nThey do have a free measurement guide that they email. I wish it was part of the measurements themselves so you can see how to measure directly in the same screen you add it. That would be my only recommendation. \n\nIf you want a simple tracker and great support, this app is definitely for you.",
+   "date": "2021-07-20T05:05:10-07:00",
+   "version": "2021.9",
+   "author": "Nrdog"
+  },
+  {
+   "id": "7587559738",
+   "rating": 1,
+   "title": "Pay to measure",
+   "text": "No idea. I had to do monthly subscription to add measurements, like waistline. So many free app or pencil and paper! Why would I do that?",
+   "date": "2021-07-17T10:10:03-07:00",
+   "version": "2021.9",
+   "author": "uma2000"
+  },
+  {
+   "id": "7541953477",
+   "rating": 3,
+   "title": "Too restrictive",
+   "text": "You can track a lot of measurements, but you have to do all of them, every time. So if you want to just record your weight, you also have to record the 10-15 other measurements every single time.",
+   "date": "2021-07-05T07:02:57-07:00",
+   "version": "2021.8",
+   "author": "No nickname works gggfggt"
+  },
+  {
+   "id": "7504655176",
+   "rating": 5,
+   "title": "Best weight & measure app ever",
+   "text": "I have tried using numerous apps for weight and measurements along with BMI, and this is the best app out there. If I could give it 10 stars I would. The support that goes along with the app is incredible. Every time I have an issue, my issue is addressed almost immediately. Keep up the great work! I love your app.",
+   "date": "2021-06-25T07:57:24-07:00",
+   "version": "2021.8",
+   "author": "poolnutt17"
+  },
+  {
+   "id": "7446744876",
+   "rating": 5,
+   "title": "Great app with helpful updates",
+   "text": "I’ve used this app for years. Wish I was as good at following a healthy lifestyle as they are at providing a great app!  Anytime I’ve had a little glitch I get a prompt and helpful reply. Those glitches are few and far between but I never worry because I know these folks are focused on helping make things work even better.",
+   "date": "2021-06-09T18:01:46-07:00",
+   "version": "2021.7",
+   "author": "djack44"
+  },
+  {
+   "id": "7278273347",
+   "rating": 5,
+   "title": "On Top of the issue",
+   "text": "I needed to know whether I could delete my previous records and start over. Lewis was on top of my dilemma and gave me a couple options to try. Needless to say the one I chose worked perfect. KUDOS to this support team. 💃🏼💃🏼💃🏼👊🏻👊🏻😁",
+   "date": "2021-04-29T12:38:11-07:00",
+   "version": "2021.6",
+   "author": "ChillyWilly51"
+  },
+  {
+   "id": "7275346210",
+   "rating": 1,
+   "title": "Crash",
+   "text": "The app crashed as I was editing my measurements. It completely deleted my first set of pics that I was looking forward to comparing to this months. Completely gone. Customer service claims to get back to you within a few hours but has not yet.",
+   "date": "2021-04-28T17:45:45-07:00",
+   "version": "2021.6",
+   "author": "mattf44"
+  },
+  {
+   "id": "7266812270",
+   "rating": 5,
+   "title": "Awesome",
+   "text": "Awesome app only thing i would like to add another user for someone who doesn’t have a phone, is that possible?",
+   "date": "2021-04-26T09:59:56-07:00",
+   "version": "2021.6",
+   "author": "ksonnier12345"
+  },
+  {
+   "id": "7131014900",
+   "rating": 5,
+   "title": "Almost all I need - enjoying it",
+   "text": "I’ve only been using the upgraded version for a week but I really like it. I was looking for an app that will track measurements, weight, progress photos all in one and this does the job well.  I sent in a question about usage and they were also quick to respond which was great.  I would like to see it be able to add a type of food photo to journal to it so that I didn’t have to use a separate app for that.  But outside of that I would recommend this.",
+   "date": "2021-03-22T03:16:46-07:00",
+   "version": "2021.6",
+   "author": "2bzmom2sleep"
+  },
+  {
+   "id": "7103050958",
+   "rating": 4,
+   "title": "Good",
+   "text": "Wish can sync to my Apple Watch health too!",
+   "date": "2021-03-14T12:07:53-07:00",
+   "version": "2021.4",
+   "author": "Love 4 Ever!!"
+  },
+  {
+   "id": "7062795964",
+   "rating": 3,
+   "title": "Disappointed - hidden extra costs",
+   "text": "I was in the market to find a body progress tracker that was user friendly (which it is) and take progress pictures so it wasn’t on my photo album. I may not have read the fine print but if you want progression photo option you will NEED to pay $3.99 per month or $11.99 per year. Also, this app only tracks 6 or so measurements. Needless to say, so far it’s user friendly but if you are looking to capture your body transformation photos you will need to pay extra.",
+   "date": "2021-03-03T20:44:14-07:00",
+   "version": "2021.4",
+   "author": "klcaok"
+  },
+  {
+   "id": "7040918741",
+   "rating": 1,
+   "title": "Go Pro",
+   "text": "This app doesn’t let you truly access it unless you pay for a subscription. I’m only looking for a place to log #’s and photos. I’m not paying for that.",
+   "date": "2021-02-26T05:50:18-07:00",
+   "version": "2021.4",
+   "author": "Trailing Sister"
+  },
+  {
+   "id": "6957734565",
+   "rating": 5,
+   "title": "Great app",
+   "text": "This is such an easy app to use and the developers are super responsive.",
+   "date": "2021-02-05T09:05:57-07:00",
+   "version": "2021.4",
+   "author": "Iam2Legit"
+  },
+  {
+   "id": "6955198063",
+   "rating": 5,
+   "title": "Love the App",
+   "text": "I like this app because it’s simple and provides a place to track my progress.",
+   "date": "2021-02-04T18:55:21-07:00",
+   "version": "2021.4",
+   "author": "FANNER_GURL"
+  },
+  {
+   "id": "6920732155",
+   "rating": 5,
+   "title": "Almost Perfect",
+   "text": "This will be great for what we want to track. Might I make a suggestion though. Add the ability to add a weight check daily. Obviously I don’t want to measure everything daily but most people like to check their weight each day. Currently you have to do everything for an update. Next it would be great to see some trend charts possibly using something like PowerBI reporting. I haven’t exported data yet so I might be able to do that later but it would be great to have it all in one place. Add those features and this would be a perfect app for me. I would be even willing to pay a slightly higher cost for the subscription fee to have a one stop shop. Overall easy to navigate and I recommend. I did have trouble entering my name where it took a couple tries as it only captured one or two characters but once manipulated and updated it now stays.",
+   "date": "2021-01-27T11:36:01-07:00",
+   "version": "2021.3",
+   "author": "cjbrucks"
+  },
+  {
+   "id": "6904579539",
+   "rating": 5,
+   "title": "Great when it works; been having issues for the last couple months",
+   "text": "Great when it works!\n\nI’m currently using the free version to see if I like the app.  I measure every Saturday, but put weight in every day.  I’ve noticed over the last couple months that between my Saturday’s, my results get all messed up.  For example, 43” all of a sudden becomes 17”, and this really messes up my overall tracking and it takes a long time to go back and edit all the wrong entries, so that I can see my actual results.\n\nVery frustrating and makes me not interested in purchasing the full version.\n\nI realize I’m using the free version, but if the few things there don’t even work properly, then why would I want to pay for the full version?",
+   "date": "2021-01-23T08:36:11-07:00",
+   "version": "2021.2",
+   "author": "jedi0303"
+  },
+  {
+   "id": "6889047842",
+   "rating": 3,
+   "title": "Why??",
+   "text": "Why dose it not calculate body fat percentage for you?\nYou put in all these measurements your weight and then you still have to do the calculations your self and on top of that your asking for a subscription. That is ridiculous.",
+   "date": "2021-01-19T08:39:27-07:00",
+   "version": "2021.2",
+   "author": "rahxephone1"
+  },
+  {
+   "id": "6877493539",
+   "rating": 5,
+   "title": "Years of progress data",
+   "text": "I thought I lost my data but it was there. I’m happy and the app is awesome",
+   "date": "2021-01-16T09:35:17-07:00",
+   "version": "2021.1",
+   "author": "Trendyoldelisi"
+  },
+  {
+   "id": "6861547709",
+   "rating": 1,
+   "title": "It’s great when it works",
+   "text": "The app glitches all the time and makes it impossible to set my goals and keep up with them.",
+   "date": "2021-01-12T08:30:57-07:00",
+   "version": "2021.1",
+   "author": "ambuuuuuurrrrr"
+  },
+  {
+   "id": "6856972230",
+   "rating": 5,
+   "title": "Great App & Fast Support",
+   "text": "This app is great for tracking your visual and weight based aspects of fat loss. Love seeing the analytics and graphs which save me from making my own in excel. I had a very small technical challenge and the team deployed a fix to the App Store in record time. Highly recommend for anyone going on a weight loss journey.",
+   "date": "2021-01-11T05:13:18-07:00",
+   "version": "2021.1",
+   "author": "reviewerty14253"
+  },
+  {
+   "id": "6855769803",
+   "rating": 1,
+   "title": "Doesn’t work",
+   "text": "I paid to upgrade this app and it says I’ve gained 15 pounds when I’ve actually LOST! Super disappointing",
+   "date": "2021-01-10T21:07:23-07:00",
+   "version": "2020.15",
+   "author": "Neednewhair!"
+  },
+  {
+   "id": "6850800931",
+   "rating": 1,
+   "title": "Lost All Infromation",
+   "text": "I tracked my measurements on this app for two months and today when I went to track the app crashed and when I reopened it, all information was gone. My photos. My measurements. Everything. Most disappointing experience ever.",
+   "date": "2021-01-09T14:23:52-07:00",
+   "version": "2020.15",
+   "author": "Rebelrae06"
+  },
+  {
+   "id": "6799617377",
+   "rating": 3,
+   "title": "Decent for tracking just annoying",
+   "text": "You set the reminder for a certain day but it continues to spam you every single day to track. Who tracks every day? Why is this a thing",
+   "date": "2020-12-27T07:02:08-07:00",
+   "version": "2020.14",
+   "author": "tye3749636"
+  },
+  {
+   "id": "6684147300",
+   "rating": 4,
+   "title": "Seems nice",
+   "text": "Seems like a nice app but I hate the monthly fee and I’ll never upgrade because of it.",
+   "date": "2020-11-25T05:12:48-07:00",
+   "version": "2020.11",
+   "author": "QweenLybra"
+  },
+  {
+   "id": "6673413907",
+   "rating": 4,
+   "title": "Great app!",
+   "text": "I use this app daily to track my progress and it gives great objective insight into the effectiveness of my lifestyle changes. Easy to use and interpret.",
+   "date": "2020-11-22T04:38:49-07:00",
+   "version": "2020.11",
+   "author": "MSR1021"
+  },
+  {
+   "id": "6545057946",
+   "rating": 5,
+   "title": "Great App!!",
+   "text": "Tracks all the areas that I need to measure. Easy to use. Reminder feature helps me stay current in my inputs.",
+   "date": "2020-10-17T08:23:46-07:00",
+   "version": "2020.11",
+   "author": "Toffbell"
+  },
+  {
+   "id": "6537390776",
+   "rating": 5,
+   "title": "Love this app!",
+   "text": "This app is perfect for anyone trying to keep track of their weight loss progress. You can easily keep track of all the measurements you want you are loosing, the weight you are loosing, as well as taking progress pictures (front, side, and back). You can then view and share those progress pictures side by side from when you began to where you are now and even overlay them. There is so much you can do with this app. It’s all here!",
+   "date": "2020-10-15T04:51:10-07:00",
+   "version": "2020.11",
+   "author": "CrisHush"
+  },
+  {
+   "id": "6520963537",
+   "rating": 5,
+   "title": "Great app",
+   "text": "Good so far",
+   "date": "2020-10-10T09:15:11-07:00",
+   "version": "2020.11",
+   "author": "ggghPj"
+  },
+  {
+   "id": "6480122814",
+   "rating": 2,
+   "title": "Difficult on purpose",
+   "text": "I used to love this app and rave about its. Then all of a sudden they made changes for the worse. Now, if you change the orientation on the phone (even accidentally) or switch to another app (to get your weight, pics, etc), everything you entered will erase and you’ll have to start over again from square one by measuring each part of your body again. It’s already a tedious process and they’ve made it even more so. And when you write to support, they tell you it’s on purpose. So if you don’t want to be frustrated beyond belief tearing out your hair as you measure each body part over and over and over, you better write down each measurement first and only use this app as a way to organize those pen and paper notes. Because this. app. will. frustrate. you. to. tears.",
+   "date": "2020-09-29T00:36:41-07:00",
+   "version": "2020.11",
+   "author": "CosmicSquirt"
+  },
+  {
+   "id": "6472216311",
+   "rating": 1,
+   "title": "Not impressed so far...",
+   "text": "Having a problem and hearing nothing back. Not too impressed so far.",
+   "date": "2020-09-26T16:31:34-07:00",
+   "version": "2020.11",
+   "author": "Suzzee"
+  },
+  {
+   "id": "6454316245",
+   "rating": 5,
+   "title": "Great app! Easy to use and great support team",
+   "text": "Very easy to input information and, as more of a  visual person myself, I really like the line graph that tracks my progress and that I’m able add pics to go along with the measurements.\n\nHighly recommend it!",
+   "date": "2020-09-21T16:28:55-07:00",
+   "version": "2020.11",
+   "author": "Villainous_"
+  },
+  {
+   "id": "6411169919",
+   "rating": 5,
+   "title": "Fantastic tracking app",
+   "text": "I’ve tried many different progress trackers. This is hands-down the best. It has an intuitive UI and it manages the difficult balancing act of being full-featured without feeling cluttered.",
+   "date": "2020-09-09T05:49:58-07:00",
+   "version": "2020.11",
+   "author": "AJ-Brillig"
+  },
+  {
+   "id": "6388300709",
+   "rating": 4,
+   "title": "Great product but.....",
+   "text": "I would like to access this app on my Mac.",
+   "date": "2020-09-02T11:47:26-07:00",
+   "version": "2020.11",
+   "author": "Lg46rox"
+  },
+  {
+   "id": "6385203571",
+   "rating": 5,
+   "title": "Awesome app",
+   "text": "Great tracker! Not many apps track both fat and body weight. Important to see both to know true progress!",
+   "date": "2020-09-01T14:12:18-07:00",
+   "version": "2020.11",
+   "author": "jillzb"
+  },
+  {
+   "id": "6377298617",
+   "rating": 3,
+   "title": "Easy",
+   "text": "Easy to use but it has been freezing up the last few days. I have to completely exit the program and open it up again. Frustrating!",
+   "date": "2020-08-30T06:15:37-07:00",
+   "version": "2020.11",
+   "author": "GoGrlTX"
+  },
+  {
+   "id": "6363154627",
+   "rating": 1,
+   "title": "Lost all my data",
+   "text": "This started as a great app and had everything I wanted.  But now it has lost all my data.  Data that I can’t recover.  Can’t rely on this app!!",
+   "date": "2020-08-26T07:27:28-07:00",
+   "version": "2020.11",
+   "author": "dmbjewel"
+  },
+  {
+   "id": "6346215005",
+   "rating": 4,
+   "title": "So far I love it!",
+   "text": "While I like the app overall and it seems to be an effective weight/measurement tracker so far, there are a couple things that have been driving me nuts. If you want to go in and change/log a certain measurement, you have to go through all your selected measurements in order to do so (ex. You want to just update weight without doing waist/hip/etc, you have to still click through them).  Not horrible, but a bit obnoxious. It’s the same to add photos (it would be a lot better if you could add progress photos without making an entire new entry with all the measurements). Also, be sure you have SCREEN LOCK turned ON! If your phone happens to accidentally rotate while working on a new entry ALL of the measurements you’ve already entered for it are erased, it takes you back to the home page, and you have to start over >_<",
+   "date": "2020-08-21T13:47:24-07:00",
+   "version": "2020.11",
+   "author": "Theonetheycallbenjumin"
+  },
+  {
+   "id": "6291961585",
+   "rating": 4,
+   "title": "Love it! But one suggestion.",
+   "text": "I wish we could see each data point on the graphs Instead of just the line. I know I can see the numbers on the results tab, but I’d also like to see them on the graph. Other than that I love it!",
+   "date": "2020-08-07T11:53:55-07:00",
+   "version": "2020.11",
+   "author": "Caroline12006"
+  },
+  {
+   "id": "6278877814",
+   "rating": 4,
+   "title": "Best input app for body measures",
+   "text": "Usability is amazingly easy to use and feeds apple’s health app and any other app connected to it. Did a lot of research and this ended up being the best input app for body measures. Follow-up graphs and reports are not great but you can use other apps if necessary focusing primeraly on input for this one.",
+   "date": "2020-08-04T06:02:46-07:00",
+   "version": "2020.11",
+   "author": "Marcelo::Miranda"
+  },
+  {
+   "id": "6240861533",
+   "rating": 5,
+   "title": "CoolApp",
+   "text": "Love that it’s easy and helpful plus syncs with Apple health",
+   "date": "2020-07-25T09:33:42-07:00",
+   "version": "2020.9",
+   "author": "pris187"
+  },
+  {
+   "id": "6205428639",
+   "rating": 5,
+   "title": "I love the app",
+   "text": "This really helped me track my weight and get a big fat ass to flex on my ex",
+   "date": "2020-07-16T09:06:58-07:00",
+   "version": "2020.6",
+   "author": "emmaxos"
+  },
+  {
+   "id": "6172161850",
+   "rating": 5,
+   "title": "Worth Every Penny!",
+   "text": "SUCH a great way to track your progress. You can get as involved as tracking measurements for everything from your neck to your waist to both biceps, both forearms, both calves... Or, if you’re not into going to quite THAT extent (I’m no bodybuilder that’s striving for symmetry!), then you can track your weight, water percentage, muscle mass, bone mass, waist-to-hip ratio, BMI...\nUltimately, all the bells & whistles are there (including places for photos, if you’d like to track using as many pics as you’d like!)- but you don’t have to use everything that is offered if it’s too much or stresses you out. This is a nice, simple, user friendly interface that lets YOU decide what is best for you, what to track, and how often. I’ve tried multiple progress trackers, and this is the one I swear by as it doesn’t badger me, stress me out, and yet still allows me to pick & choose exactly what data points are important to me personally from a tracking perspective. They also have great graph reporting to help you see your progress/patterns, if you choose to take advantage of that.",
+   "date": "2020-07-08T06:03:26-07:00",
+   "version": "2020.5",
+   "author": "Tiff420420420"
+  },
+  {
+   "id": "6149063984",
+   "rating": 3,
+   "title": "Reduced amount of features",
+   "text": "I liked it until they decided to suddenly reduce the amount of features included in the free version",
+   "date": "2020-07-02T09:34:58-07:00",
+   "version": "2020.5",
+   "author": "cristìna"
+  },
+  {
+   "id": "6120297202",
+   "rating": 5,
+   "title": "The best measure tracker app",
+   "text": "I love this app. It has more than all the features I look for in a tracker app. It is easy to use and the costumer service is amazing, they reply quite quick if you reach to them with any doubt you may have about how to use the app. I strongly recommend it for tracking your weight loss journey.",
+   "date": "2020-06-25T06:46:29-07:00",
+   "version": "2020.5",
+   "author": "Llomera"
+  },
+  {
+   "id": "6109578877",
+   "rating": 3,
+   "title": "Easy to Use but Could use Some Upgrades",
+   "text": "This app is good for tracking but when I saw body fat percentage I thought it calculated it for you, not that you had to input it yourself. Paying just to track progress seems a little steep to me, wish it calculated lean body mass, body fat percentage, etc for you.",
+   "date": "2020-06-22T13:21:04-07:00",
+   "version": "2020.5",
+   "author": "Shakelolita"
+  },
+  {
+   "id": "6040554911",
+   "rating": 2,
+   "title": "Potential but restrictive",
+   "text": "The app provides all the features I need but I couldn’t bring myself to use consistently it due to the limit of tracking only 2 body part measurements. In a sense you can use this as a “trial” but I’d much rather use a different app that gives you more and uses that as an incentive to purchase/upgrade rather than begin with such tight restrictions.",
+   "date": "2020-06-05T18:12:43-07:00",
+   "version": "2020.5",
+   "author": "Moses D."
+  },
+  {
+   "id": "6029549098",
+   "rating": 2,
+   "title": "Pro Price change?",
+   "text": "It looks like in your comments that the pro version used to be a one time fee.   Now it only gives a monthly or yearly subscription price.   That is a huge difference financially speaking.  (For your potential customers and yourself no doubt)   I’m not sure you can justify a monthly subscription without any new content each month.   Please bring back a one time option.",
+   "date": "2020-06-03T04:17:23-07:00",
+   "version": "2020.5",
+   "author": "SonnyJo"
+  },
+  {
+   "id": "5997084716",
+   "rating": 1,
+   "title": "Crashing",
+   "text": "I’ve been using this app for a while and I like it but lately it keeps force closing / crashing every time I try to open it. Please fix!",
+   "date": "2020-05-26T10:26:49-07:00",
+   "version": "2020.5",
+   "author": "KLois94"
+  },
+  {
+   "id": "5992765167",
+   "rating": 2,
+   "title": "Calculation Error",
+   "text": "When I opened the app today, it had some calculation errors. In the free version you can’t add historic entries. So there was no way to fix the error in my baseline measurements. Had to delete.",
+   "date": "2020-05-25T10:00:51-07:00",
+   "version": "2020.5",
+   "author": "Elle7387"
+  },
+  {
+   "id": "5988360951",
+   "rating": 3,
+   "title": "Free version not useful",
+   "text": "Free version extremely limited allowing tracking of only 5 measurements. App should be offered as paid only given how striped the free version is",
+   "date": "2020-05-24T08:39:18-07:00",
+   "version": "2020.5",
+   "author": "shsifu"
+  },
+  {
+   "id": "5902467034",
+   "rating": 5,
+   "title": "Awesome app",
+   "text": "I have been using this app for about a year now and it has been the best app I have found it allows me to keep accurate track of my progress and the customer support is awesome. Highly recommend this app.",
+   "date": "2020-05-04T09:50:29-07:00",
+   "version": "2020.5",
+   "author": "anna con2"
+  },
+  {
+   "id": "5598641215",
+   "rating": 1,
+   "title": "Limited features",
+   "text": "Only records 4 body measurements unless you subscribe. Not worth It.",
+   "date": "2020-02-29T14:57:59-07:00",
+   "version": "2020.3",
+   "author": "QKARAF"
+  },
+  {
+   "id": "5579230269",
+   "rating": 1,
+   "title": "Very limited without paid subscription",
+   "text": "Free version is literally only good for measurements",
+   "date": "2020-02-25T08:33:52-07:00",
+   "version": "2020.2",
+   "author": "Starstar77"
+  },
+  {
+   "id": "5575864432",
+   "rating": 2,
+   "title": "Crashing",
+   "text": "App seems to be crashing any time the screen sleeps, which means you have to rush to take measurements to beat your phone. Details says the last update fixed this bug but I have the latest version. Not worth $5.",
+   "date": "2020-02-24T14:36:11-07:00",
+   "version": "2020.2",
+   "author": "M987Ce"
+  },
+  {
+   "id": "5517274114",
+   "rating": 4,
+   "title": "Not What I Expected",
+   "text": "App is great for tracking progress. Only reason I purchased the premium version is because I was under the impression all measurements would sync to the health app. Unfortunately they don’t. The only information that synced was waist circumference, weight, and BMI. The specific body parts did not and that was the reason why I downloaded the app.\n\nI am aware of the limited amount of data that can sync to Health App but the description makes it sound like any data in this app will sync but it won’t.",
+   "date": "2020-02-11T06:28:17-07:00",
+   "version": "2020.2",
+   "author": "BDG_23"
+  },
+  {
+   "id": "5512651476",
+   "rating": 5,
+   "title": "Easy to use",
+   "text": "I think this app is very user friendly. I do have a question on how to see a review of my progress photos? I can only find an original and the most recent. Is there anyway to see the photos in between?",
+   "date": "2020-02-10T04:52:57-07:00",
+   "version": "2020.2",
+   "author": "natjon1807"
+  },
+  {
+   "id": "5509357332",
+   "rating": 5,
+   "title": "Great App",
+   "text": "Very user friendly! Easy to use. Clean layout. Highly recommended!",
+   "date": "2020-02-09T10:30:40-07:00",
+   "version": "2020.2",
+   "author": "CMH8987"
+  },
+  {
+   "id": "5504733156",
+   "rating": 4,
+   "title": "One time or recurring",
+   "text": "Is it 5.99 per year or per month?",
+   "date": "2020-02-08T09:36:29-07:00",
+   "version": "2020.2",
+   "author": "busridet_101"
+  },
+  {
+   "id": "5492433041",
+   "rating": 5,
+   "title": "Size matters!",
+   "text": "Measuring inches and the shift of my size and weight helps me stay on track diet wise. When I go through plateaus it’s easy to give up but watching inches really shows progress and I love it.",
+   "date": "2020-02-05T13:16:03-07:00",
+   "version": "2020.2",
+   "author": "Size Matters!"
+  },
+  {
+   "id": "5487725303",
+   "rating": 1,
+   "title": "Don’t buy",
+   "text": "The app can’t organize progress photos.",
+   "date": "2020-02-04T09:16:56-07:00",
+   "version": "2020.2",
+   "author": "SaraSmithJonesBrown"
+  },
+  {
+   "id": "5487519425",
+   "rating": 5,
+   "title": "Great little app!",
+   "text": "I’m really enjoying the pro version of this app. It’s a great tool for people that need an easy way to track their fitness progress. Even the free version has plenty to offer. I’ve already recommended it to friends.",
+   "date": "2020-02-04T08:10:13-07:00",
+   "version": "2020.2",
+   "author": "allsmiths"
+  },
+  {
+   "id": "5470410474",
+   "rating": 5,
+   "title": "Great app",
+   "text": "Great app! Just one issue - I can’t figure out how to clear the history and start fresh. Is there a ‘reset’ button?",
+   "date": "2020-01-31T06:25:32-07:00",
+   "version": "2020.2",
+   "author": "BaroqueFan"
+  },
+  {
+   "id": "5462689312",
+   "rating": 4,
+   "title": "Great!",
+   "text": "I love this app. I love how easy it is to track measurements and that I can set it up for exactly what I need. My one compliant is that several times when I’ve been entering measurements, I set my phone down and when I pick it back up, I accidentally press one of the buttons and lose everything I just put in.",
+   "date": "2020-01-29T07:24:49-07:00",
+   "version": "2020.2",
+   "author": "Belgirl81"
+  },
+  {
+   "id": "5451434140",
+   "rating": 3,
+   "title": "Good app, but needs one thing to be great",
+   "text": "Update 1/26/2020: Really hoping the promised updates for this year will include an option to enter body measurements as decimals rather than the ruler option. Other measurements (water, muscle mass, bone mass) are entered this way. So frustrating because it’s not accurate and tracking exactly with my digital measuring tool. \n\nI have been testing out different apps and I keep coming back to this one. It has a great tracking feature- you can see total inches lost/gained as well as inches for individual measurements. It also tracks weight, BMI, lbm, body fat percentage and more. The only thing that would make this app perfect is the option to just direct data enter measurements using decimals instead of the sliding ruler. I have a digital body measurement tool and unfortunately the ruler measurement system this app uses leaves accuracy lacking.",
+   "date": "2020-01-26T07:44:41-07:00",
+   "version": "2020.2",
+   "author": "Leetx"
+  },
+  {
+   "id": "5447189936",
+   "rating": 2,
+   "title": "Nice but not enough",
+   "text": "The app is nice, but what is the point if you can measure all these things but can only set one goal? I don’t want to set a goal of total inches. I want my arms and chest to get bigger while my waist gets smaller",
+   "date": "2020-01-25T06:53:17-07:00",
+   "version": "2020.2",
+   "author": "Professor BlackKat"
+  },
+  {
+   "id": "5430870710",
+   "rating": 2,
+   "title": "Annoying App",
+   "text": "I just wanted something to track inches lost.   This app only gives you 5 measurements and continuously naga you to upgrade to pro for more than it’s worth.  You can’t track a goal except for weight.    I will look for other apps that offer more value for less money.",
+   "date": "2020-01-21T05:03:40-07:00",
+   "version": "2020.2",
+   "author": "bruzerj"
+  },
+  {
+   "id": "5406941457",
+   "rating": 5,
+   "title": "Great app!",
+   "text": "This app is awesome to see your progress!",
+   "date": "2020-01-15T06:42:00-07:00",
+   "version": "2020.2",
+   "author": "Imgodsson2"
+  },
+  {
+   "id": "5396189484",
+   "rating": 5,
+   "title": "Disappointed",
+   "text": "Thought this app would take caliper measurements and calculate body fat. All it does is store and display data?  Waste of money.",
+   "date": "2020-01-12T16:08:06-07:00",
+   "version": "2020.2",
+   "author": "E4197"
+  },
+  {
+   "id": "5390901939",
+   "rating": 5,
+   "title": "Great app",
+   "text": "This app is great to see progress and track measurements. It motivated me to see pics from two years ago (when I got real serious w diet) to start again this Jan 2020. The picture overlay and comparison over time are awesome!",
+   "date": "2020-01-11T10:58:02-07:00",
+   "version": "2020.2",
+   "author": "Tweety95020"
+  },
+  {
+   "id": "5383963765",
+   "rating": 5,
+   "title": "I had an issue",
+   "text": "I had an issue and after contacting support, they were willing to work with me.",
+   "date": "2020-01-09T23:19:18-07:00",
+   "version": "2020.1",
+   "author": "2JJ1"
+  },
+  {
+   "id": "5368151390",
+   "rating": 5,
+   "title": "Great tool!",
+   "text": "The best way to understand what happened to your body is to be able to measure  this spot gives you all the necessary angles  to do that I will continue to recommend it",
+   "date": "2020-01-06T05:11:14-07:00",
+   "version": "2019.20",
+   "author": "Angelinap09"
+  },
+  {
+   "id": "5360033614",
+   "rating": 1,
+   "title": "Terrible",
+   "text": "I purchased the extra settings to track more information and it doesn’t recognize it. Resets every time I use this silly app. Would not recommend",
+   "date": "2020-01-04T06:26:48-07:00",
+   "version": "2019.20",
+   "author": "need a refun"
+  },
+  {
+   "id": "5340065507",
+   "rating": 1,
+   "title": "Said purchase complete but still wants me to pay again to upgrade",
+   "text": "I just bought the upgrade it said it was complete and it won’t let me enter info it asks me to pay again. Not a good first experience with the ap",
+   "date": "2019-12-30T13:02:27-07:00",
+   "version": "2019.20",
+   "author": "Latinacowgirl"
+  },
+  {
+   "id": "5337158908",
+   "rating": 1,
+   "title": "Quit asking to rate an app I just installed",
+   "text": "Can’t click between pages without being spammed by “rate this app” here is the rating. 1 star.",
+   "date": "2019-12-29T20:10:07-07:00",
+   "version": "2019.19",
+   "author": "goodeffinluk"
+  },
+  {
+   "id": "5331836592",
+   "rating": 4,
+   "title": "Upgrading to pro version does not save an app",
+   "text": "Paid for pro version, but no settings saved and it appeared app was not purchased. Was prompted again to pay. Once I restored the purchase it works now.",
+   "date": "2019-12-28T12:40:07-07:00",
+   "version": "2019.18",
+   "author": "Pray-4-Mojo"
+  },
+  {
+   "id": "5296400987",
+   "rating": 5,
+   "title": "Love this app!!",
+   "text": "It’s helped me stay on track! And watch results build over time!! I use my withings scale daily and this app weekly!! So for down 20Lbs since the summer! (Eating better and excising is key!)",
+   "date": "2019-12-20T09:06:28-07:00",
+   "version": "2019.18",
+   "author": "Danild"
+  },
+  {
+   "id": "5259894777",
+   "rating": 4,
+   "title": "Problems with the app",
+   "text": "Lewis, \nIt appears the app has some issues. I could not get the message to send in the contact us section so I’m messaging you here. It kept saying to fill in all fields but there is only a subject line and message field. The two attachments were grayed out. ?? \nMy other issue is I have tried to upgrade several times but it isn’t working. I will be asking for a refund of anything I’m billed over the one upgrade fee of 4.99 in the event I’m charged for all of my attempts. The tap her to pay is on the upper right hand side of the screen which is odd and it doesn’t appear to be functioning. I think this will be a great app if I can actually get started with it. \nThank you.\nD. Thomas",
+   "date": "2019-12-11T06:59:56-07:00",
+   "version": "2019.17",
+   "author": "Dmt12268"
+  },
+  {
+   "id": "5199906796",
+   "rating": 1,
+   "title": "Not worth it",
+   "text": "Very basic and very expensive for the overall look. Would not advise anyone to buy the app.",
+   "date": "2019-11-26T07:43:37-07:00",
+   "version": "2019.16",
+   "author": "Teachontherun"
+  },
+  {
+   "id": "4925026059",
+   "rating": 5,
+   "title": "So far- this app is the bomb.com!",
+   "text": "I rarely leave reviews, good or bad. But I am doing so today, because I believe I have found the perfect app for the way my mind works! Weight, measurements, pics, and journal entries. And it isn’t complicated to figure out! Way to go! I’ve already upgraded to the ad free version!!!",
+   "date": "2019-10-11T12:40:33-07:00",
+   "version": "2019.16",
+   "author": "Stuiegirl1176"
+  },
+  {
+   "id": "4873015968",
+   "rating": 1,
+   "title": "Doesn’t transfer to a new phone",
+   "text": "A years worth of tracking wasted as the only way to get your data transferred is to back up to a cloud, then import the data.\nThe import function doesn’t work.\nUpdated- I did ‘reach out to you’ with 3 emails and you didn’t reach back\nI did recommend this to others, however I made a mistake.\nNo support as well. I know $6 isn’t much, but for an app I would expect to use it on another device without paying again. I would also expect help when I had issues.\nThere are better less expensive apps.",
+   "date": "2019-10-02T04:20:10-07:00",
+   "version": "2019.16",
+   "author": "Scottbofaustintx"
+  },
+  {
+   "id": "4842330170",
+   "rating": 4,
+   "title": "Good App - Missing One Thing",
+   "text": "I really enjoy using this app. The one thing that frustrates me is the lack of icloud support. Just had to get a new phone and forgot to download the back up file and ended up losing months of progress photos. Other than that it’s a great progress tracker",
+   "date": "2019-09-26T15:11:49-07:00",
+   "version": "2019.16",
+   "author": "_Willis_"
+  },
+  {
+   "id": "4797290121",
+   "rating": 5,
+   "title": "I love this app",
+   "text": "I love the ease of this app. I do have a question though. Does it sync between my iPhone and iPad?",
+   "date": "2019-09-17T15:03:22-07:00",
+   "version": "2019.16",
+   "author": "mtnhbt"
+  },
+  {
+   "id": "4788355616",
+   "rating": 1,
+   "title": "DONT WASTE YOUR MONEY",
+   "text": "I was so stupid and paid to upgrade the app before really trying it out. When you go to enter measurements, you have to enter them all in at the same time and THEY DONT SAVE UNTIL YOU ENTER THEM ALL. Then the app times out if your screen turns off and you have to start over from scratch. So, so frustrating. After three attempts to take my measurements and fighting the urge to throw my phone across the room, I deleted this app. Only way I could use this app is to take my measurements and write them all down, then enter them which defeats the point of this app.",
+   "date": "2019-09-15T18:31:03-07:00",
+   "version": "2019.16",
+   "author": "Agauen86"
+  },
+  {
+   "id": "4512332858",
+   "rating": 4,
+   "title": "Crash as soon as I bought pro version",
+   "text": "Used free version and has no problems and today finally bought pro and it’s constantly crushing when I’m trying to add weight:( restarted app few times and even restarted phone but app keep crashing. So it’s just waste of money.",
+   "date": "2019-07-24T16:02:23-07:00",
+   "version": "2019.15",
+   "author": "desertsnow555"
+  },
+  {
+   "id": "4508254795",
+   "rating": 5,
+   "title": "Just what I needed!",
+   "text": "This app is well worth the money. Has me staying on track. Down 26lbs",
+   "date": "2019-07-23T17:39:17-07:00",
+   "version": "2019.15",
+   "author": "Porterhouse0"
+  },
+  {
+   "id": "4450242435",
+   "rating": 1,
+   "title": "Don’t pay for the pro version",
+   "text": "I’ve had this app for less than an hour and it’s crashed 5+ times.",
+   "date": "2019-07-12T16:21:11-07:00",
+   "version": "2019.12",
+   "author": "Gmegs"
+  },
+  {
+   "id": "4443315300",
+   "rating": 5,
+   "title": "Missing some Health sharing",
+   "text": "This app works well and is simple to use. The user interface is clean and unconfusing. The data entries are fast and easy. It’s the best app I’ve used so far in this field.\n\nSingle small drawback is that the use cannot mix metric & US measurements - you can’t have weight in pounds and waist in cm. It should be a simple fix.",
+   "date": "2019-07-11T06:58:44-07:00",
+   "version": "2019.12",
+   "author": "JDelage"
+  },
+  {
+   "id": "4442729793",
+   "rating": 5,
+   "title": "I Want To Recommend...but Can’t",
+   "text": "I become more frustrated with the app. I can’t find any docs to help with questions I have about inputting information. There are no FAQs and you need to send an email every time you have a question \n\nMy BIGGEST and most important issues...it DOES NOT SYNC ACROSS DEVICES.  I want to use this on my iPad and there’s no way to log in to open it.   I sent a message to the page and they don’t have servers that save to the cloud. \n\nEDIT TO ADD:  I’ve had nothing but issues with the app. This last issue was I was told I needed to delete and reinstall the app. Well...don’t do that because YOU LOSE ALL YOUR DATA.  Someone was supposed to be in contact with me about this issue and never did. Thankfully, I had backup data and put it all in by hand!  But...I lost all of the pictures I uploaded. Now, even though I have everything set up correctly to have Apple Health to send data back to the app, it doesn’t work.  \n\nVery, very disappointed. The price of the app is high compared to others. This could be a great app.",
+   "date": "2019-07-11T04:27:00-07:00",
+   "version": "2019.12",
+   "author": "Spin-Diva"
+  },
+  {
+   "id": "4404418710",
+   "rating": 5,
+   "title": "Great for measuring other than body weight",
+   "text": "This is for the paid version. So easy to use; it’ll track body fat percentage and muscle mass; body measurements and many more  and it’s so easy to log and keep track of your progress. I use it with a scale that gives me body composition info, but it’s not a smart scale that feeds to an app, so I needed an app that I could input manual entries, and this is perfect. *** Note to developer: please change the color of the changes to muscle mass. It indicates green when muscle mass decreases, it should show as green if muscle mass increases and red if it decreases. (When weight, BMI and body fat % decreases, the app indicates this with a green circle to indicate you’re doing good, If they increase, there’s a red circle, meaning you’re going in the wrong direction) Thanks!",
+   "date": "2019-07-03T01:57:39-07:00",
+   "version": "2019.9",
+   "author": "LeeshaGoldeyes"
+  },
+  {
+   "id": "4377040688",
+   "rating": 5,
+   "title": "Simplicity!",
+   "text": "If you have a weight plan, this works great if you just need to track simple results. I love the weight, pics, and timeline",
+   "date": "2019-06-27T06:51:50-07:00",
+   "version": "2019.9",
+   "author": "Kraggzilla"
+  },
+  {
+   "id": "4370796363",
+   "rating": 5,
+   "title": "Progress great app",
+   "text": "Excellent app for tracking weight / muscle mass gain progress",
+   "date": "2019-06-25T23:00:44-07:00",
+   "version": "2019.9",
+   "author": "Mattisratinrgthisapp"
+  },
+  {
+   "id": "4370126592",
+   "rating": 4,
+   "title": "Imaworkingmom",
+   "text": "This looks like a great app, howeverI just downloaded it tonight and it is frozen… What do I do? Please help me.",
+   "date": "2019-06-25T19:04:49-07:00",
+   "version": "2019.9",
+   "author": "Inawirkingmom"
+  },
+  {
+   "id": "4359815722",
+   "rating": 5,
+   "title": "I love this app!!",
+   "text": "Highly recommend - the app reminds me Saturday mornings to do my measurements and so so super easy to use!\n\nLove seeing my progress on the charts and the overview/images.\n\nOnly change I could think to make would be to be able to change the measurements to 1/10ths to be the same as my measuring tape. It something measures at 5 4/10th i just round to 5 1/2 instead of converting 4/1 to x/16.",
+   "date": "2019-06-23T11:42:09-07:00",
+   "version": "2019.9",
+   "author": "Mõnnaa"
+  },
+  {
+   "id": "4269106390",
+   "rating": 1,
+   "title": "Paid for premium and no longer have it",
+   "text": "Don’t shell out the money for premium because when you get a new phone you’ll have to pay again. Finding another app ASAP.",
+   "date": "2019-06-05T13:33:29-07:00",
+   "version": "2019.7",
+   "author": "Thestiine"
+  },
+  {
+   "id": "4253787973",
+   "rating": 1,
+   "title": "Keeps crashing",
+   "text": "Keeps crashing. I want my money back :/",
+   "date": "2019-06-02T14:11:50-07:00",
+   "version": "2019.6",
+   "author": "Bebe890"
+  },
+  {
+   "id": "4253278342",
+   "rating": 4,
+   "title": "Good",
+   "text": "You do have to pay up front to utilize all of the features, there is no trial to see if it has what you are looking for. Must specify in settings what type of measurements you want to record. It asks you to enter body mass percentage, fat percentage, water percentage. I was hoping these would be calculated FOR you with the body info you provide and the price of the app. I manually copy these points from my Withings Smart Scale app. App has crashed a few times. Overall does include the information I want to record.",
+   "date": "2019-06-02T12:12:21-07:00",
+   "version": "2019.6",
+   "author": "Doodleloverrrr"
+  },
+  {
+   "id": "4194472413",
+   "rating": 5,
+   "title": "Fantastic Tracking App",
+   "text": "This is a great app. I love being able to see how I am progressing over time at a glance. I also really like the reminders it gives me so I don’t forget and I get a better picture of how well I’m doing. The only thing I wish I could do is add past measurements. I switched from another app to this one because of the better data it gives you but it would be nice to bring my past with me.",
+   "date": "2019-05-22T23:49:08-07:00",
+   "version": "2019.5",
+   "author": "Mad Vape"
+  },
+  {
+   "id": "4148977636",
+   "rating": 5,
+   "title": "Best App",
+   "text": "Love this App! It really has helped me with my weight loss & get healthy goal. Recommend highly for anyone to take full potential of this App & pay the small fee & purchase it. Free version is great, but full version is awesome!",
+   "date": "2019-05-14T06:38:05-07:00",
+   "version": "2019.5",
+   "author": "Bebemc63"
+  },
+  {
+   "id": "4085176892",
+   "rating": 5,
+   "title": "If you’re trying to lose weight or tone up, you NEED this app.",
+   "text": "The Progress app has helped me a ton in my weight loss journey. \n\nThe feature I love most is that I can track any measurements I want and it reminds me to do. It shows you if you’ve gone up or down in weight, has cool milestone badges and has kept me really motivated. The graphs and how the app reports is really helpful and easy to understand.\n\nOnly tracking weight is a mistake. The times I didn’t lose weight I found I lost inches so I knew I was still making progress. 😊\n\nYou can also take before and after photos and upload them and it will overlay the photos so you can actually see the changes in how your body looks. Such a cool feature! \n\nProgress has awesome customer support and I even got an email from the app’s creator, Lewis, to thank me! If you’re trying to lose weight or even just tone up, this app is a must!",
+   "date": "2019-05-01T05:47:48-07:00",
+   "version": "2019.5",
+   "author": "goldielocks78"
+  },
+  {
+   "id": "4084577946",
+   "rating": 1,
+   "title": "Terrible for last Month",
+   "text": "I loved this app and paid for the subscription; however, it kept failing (even after all updates) and would freeze on my last measurement. It has since wiped all of my data from the last 2 months and I can’t restore it. For an app that I pay for, there should be a login that stores my data and it shouldn’t freeze after simply entering a measurement. I’m furious.",
+   "date": "2019-05-01T02:58:42-07:00",
+   "version": "2019.5",
+   "author": "ashley nichole"
+  },
+  {
+   "id": "4025788103",
+   "rating": 5,
+   "title": "Good App",
+   "text": "Glad I downloaded this app. I can keep track of measurements as well as weight loss. Easy to use, too.",
+   "date": "2019-04-17T15:28:07-07:00",
+   "version": "2019.5",
+   "author": "dgramm12"
+  },
+  {
+   "id": "4024603075",
+   "rating": 1,
+   "title": "A waste of $5.99. Buying good reviews?",
+   "text": "The one star is too high. They don’t even answer questions from the app. \n\nThe rest of the rating is for the app itself and its price. \n\n1. You can set one goal and if it’s inches, you better know exactly how many you’d like to lose from each of your body parts and add it all up. There is no guidance at all, it is cumbersome and not useful. \n\n2. The interface of the app is not attractive and it greets you with seemingly one option, which is a giant green circle that states, “Lets add today’s measurements.”\n\n3. Even the 10 low carb recipes is not included after you pay $6 for the app (ALREADY AN ABSURD PRICE) you have to pay additional fee for stuff that is free on the internet. \n\n4. This app gives you ZERO INSIGHT or guidance, whether it’s about how to calculate you lean mass or even your BMI. I get it, I could figure it out myself, but for this price, they could at least include the calculators. \n\n5. I find it tacky that when you go to “Me” section, the default selection is to tip the developers for a not very useful and already much too expensive app. Really?\n\nI fear I wasted almost $6. I don’t mind paying for something that is useful, but “Progress” is just not.",
+   "date": "2019-04-17T08:15:22-07:00",
+   "version": "2019.5",
+   "author": "Chykcha"
+  },
+  {
+   "id": "4023887780",
+   "rating": 4,
+   "title": "Not bad",
+   "text": "Not bad. Only gripe is the order of inputting measurements and if you go back to one, it clears what you just input.",
+   "date": "2019-04-17T05:08:07-07:00",
+   "version": "2019.5",
+   "author": "Jericho711"
+  },
+  {
+   "id": "3900374766",
+   "rating": 1,
+   "title": "Constant Crashing",
+   "text": "This app hasn’t stopped crashing since I paid for an upgraded version without ads. Nothing is more frustrating than having to enter in information and then the app closes.",
+   "date": "2019-03-19T06:07:30-07:00",
+   "version": "2019.4",
+   "author": "Lien Jez"
+  },
+  {
+   "id": "3890256380",
+   "rating": 5,
+   "title": "Great way to track!",
+   "text": "This app is reliable and easy to use. Has every option I need to change dates, measurements etc. Prompts help get those measurements done fast. I love this app!",
+   "date": "2019-03-16T16:57:55-07:00",
+   "version": "2019.3",
+   "author": "Hootie hoo 11345"
+  },
+  {
+   "id": "3861256982",
+   "rating": 5,
+   "title": "The Best",
+   "text": "This is easy to use. Displays data in a clear and useful way. I love the moving average line. The ability to look at overlapping photos before, during, and after is amazing! The reminders are helpful but not intrusive. Just enough customization to be personal, but not too much to be cluttered or confusing. Can be up to allow small frequent goals if one chooses. It really helps keep the motivation going. Great app!! \n💪😊",
+   "date": "2019-03-09T05:49:40-07:00",
+   "version": "2019.3",
+   "author": "StJamesJr73"
+  },
+  {
+   "id": "3840216390",
+   "rating": 4,
+   "title": "Overall I like it",
+   "text": "I purchased this app to track inches lost and weight. It does a great job. The only thing  I would like is to be able to link my apple watch to track things like steps and such.",
+   "date": "2019-03-03T20:43:44-07:00",
+   "version": "2019.3",
+   "author": "Herrera0519"
+  },
+  {
+   "id": "3837562846",
+   "rating": 2,
+   "title": "Entering data to time consuming",
+   "text": "I don't like that I have to use the scroll bar to enter the data points. There should be an option to type in the numbers vs only have to use the scroll bar.  Also the data points should be rearrangeable so I can put them in the order that I measure rather than having to jump around. All data points names should be editable so I can put it in any language I'd like, only have a few ones that I can edit defeats the purpose. Those enhancements should be part of the premium app.",
+   "date": "2019-03-03T06:30:22-07:00",
+   "version": "2019.3",
+   "author": "Leggzorcist"
+  },
+  {
+   "id": "3746321290",
+   "rating": 1,
+   "title": "App crash almost every time",
+   "text": "The app will crash just about every time I use it. I can still use the app but it is counterproductive.\n\nThere needs to be a way to review progress photos starting on a certain date. Swiping through 50 photos in order to compare current with last month is a huge annoyance and frustrating.",
+   "date": "2019-02-08T03:58:07-07:00",
+   "version": "10.7",
+   "author": "JJUpMove"
+  },
+  {
+   "id": "3725597108",
+   "rating": 2,
+   "title": "The ‘free’ version is impossible to use with all the adds",
+   "text": "Am deleting this app because I can look at a screen for kore than two seconds with out an add piping up prompting me to buy the full version",
+   "date": "2019-02-02T11:51:17-07:00",
+   "version": "10.7",
+   "author": "Use this for frustrating runs!"
+  },
+  {
+   "id": "3697953511",
+   "rating": 1,
+   "title": "Disappointed",
+   "text": "Does not work.  Stuck on on screen.  Got a message that said it crashed, and I needed to renter my info.  UpdTed the app.  Still does not work.",
+   "date": "2019-01-26T12:15:21-07:00",
+   "version": "10.7",
+   "author": "zootizoo"
+  },
+  {
+   "id": "3673418968",
+   "rating": 1,
+   "title": "😩",
+   "text": "I downloaded this app, paid for the upgrade, used it once and when I went to use it again all of my data was gone and it was treating me like a new customer. It wanted me to pay for the upgrade again!",
+   "date": "2019-01-20T04:41:45-07:00",
+   "version": "10.7",
+   "author": "charsize"
+  },
+  {
+   "id": "3633219452",
+   "rating": 1,
+   "title": "Crashes",
+   "text": "Downloaded the free version and app has already crashed twice. It seems to freeze",
+   "date": "2019-01-10T02:04:10-07:00",
+   "version": "10.6.2",
+   "author": "cmearl"
+  },
+  {
+   "id": "3626486580",
+   "rating": 5,
+   "title": "SO helpful",
+   "text": "Progress was exactly what I was looking for in terms of an app for fitness tracking. I especially wanted something that would let me track my measurements and include pictures as well, and the paid version lets me do both. It’s really simple and easy to use and their customer support is excellent as well. I’ve recommended Progress to a number of people already and I’m so happy I found this gem.",
+   "date": "2019-01-08T05:55:46-07:00",
+   "version": "10.6.2",
+   "author": "calv2013"
+  },
+  {
+   "id": "3619836554",
+   "rating": 5,
+   "title": "I like it. Does almost everything",
+   "text": "This app covers almost all the bases for what I need to track. It’s easy to input information and is a great single point of reference for those of us wanting to track all these parameters. \nMy only suggestion would be that on the CUSTOM labels, allow us to use a measurement besides just inches/centimeters. A whole number would be cool so I could track my blood glucose number - usually XXX.X format. Then I wouldn’t need my glucose meter app. \n\nThanks for the awesome work on this",
+   "date": "2019-01-06T09:31:22-07:00",
+   "version": "10.6.2",
+   "author": "Miltrez"
+  },
+  {
+   "id": "3613458888",
+   "rating": 1,
+   "title": "Confusing and lots of pop ups",
+   "text": "I’m new to weight loss and had to google everything this app was asking me. Come to find out all the data it wanted should have allowed it to calculate my fat and muscle mass. So i had to do the calculations and figure out those numbers. I didn’t find this app helpful at all. Lots of pop ups to that ask me to do challenges that lock it up and I cont do anything but kill the app.",
+   "date": "2019-01-04T19:24:45-07:00",
+   "version": "10.6.2",
+   "author": "PsychoDave"
+  },
+  {
+   "id": "3603464611",
+   "rating": 5,
+   "title": "Love this App!",
+   "text": "I absolutely love using this app! I have recommended it to several of my friends and they love it too!",
+   "date": "2019-01-02T05:44:57-07:00",
+   "version": "10.6.1",
+   "author": "VanessaMS"
+  },
+  {
+   "id": "3581286838",
+   "rating": 1,
+   "title": "Not sure what I paid for",
+   "text": "I’m assuming they’re purchasing these good reviews because my money was wasted on this thing. It’s barely more than a notepad of stats. It gives zero insights and doesn’t give you motivation either. Super irritated that I spent money on something that’s so lousy when My Fitness Pal and Lose It offer free versions that BLOW THIS JOKE AWAY. Calling this an app is being really generous. Don’t waste your time or money on this since it will not help you achieve any goal in weight loss or putting on mass.",
+   "date": "2018-12-27T14:31:15-07:00",
+   "version": "10.6.1",
+   "author": "Stinktopia"
+  },
+  {
+   "id": "3534671585",
+   "rating": 1,
+   "title": "Disappointing",
+   "text": "I got the paid version of this app, because you can only track 5 criteria, I believe, with the free version. \n\nHere are the problems that I experienced that were not obvious from the description:\n1. It does not track either body fat or lean muscle mass percentages. You have to figure that out for yourself and enter it. That required me to GOOGLE two different websites. I tried to back up in the data entry on the app to get my measurements, but that erased them. I had to remeasure myself, write them down, and enter them in the app, the body fat online calculator, and the muscle mass calculator I found. What an inconvenient, long drawn out process. \n2. The app requires the iPad to be in portrait mode for all data entry, not just taking the photos. It cannot toggle between landscape and portrait mode. That is difficult for people like me whose iPad is in a keyboard. If you turn it on its side, it might fall out. If you pop it out of the keyboard every single time you use the app, you’re going to wear out the anchoring tabs on he keyboard. Why in the world would they require this? \n3. You cannot choose a start date. If you know your starting weight from a week ago, but you go the app and entered your data today, your start date is today. You also cannot enter past data if you’ve been writing down your progress and want to transfer it to this app. \n\nI have only had this app for a few days, and am beginning to hate it. I’ll probably just delete it. Learn from my mistake and steer clear.",
+   "date": "2018-12-15T12:13:43-07:00",
+   "version": "10.6",
+   "author": "Shdfx1"
+  },
+  {
+   "id": "3509127899",
+   "rating": 2,
+   "title": "Just now trying and not impressed yet",
+   "text": "It is hard for me to read as the print is so small, but I will try it and update if it does what it claims.",
+   "date": "2018-12-08T13:22:46-07:00",
+   "version": "10.4.1",
+   "author": "Nonna51"
+  },
+  {
+   "id": "3508481811",
+   "rating": 5,
+   "title": "Very helpful",
+   "text": "Love this app!  I used to track weight and measurements manually or in my notes on my phone.  I love having a secure place to keep track that charts everything and allows me to store progress photos that can only be accessed by me.  It allows fingerprint ID access and you can customize and add additional measurements you’d like to keep.  Sends a reminder when it’s time to track and it’s easy to use.  It also syncs with iPhone’s health app if that’s something you want to allow.  Very well done.",
+   "date": "2018-12-08T08:56:24-07:00",
+   "version": "10.4.1",
+   "author": "FroMamma"
+  },
+  {
+   "id": "3474535970",
+   "rating": 4,
+   "title": "All right",
+   "text": "A suggestion-  I see now need to measure in sixteenths. And all fractions should be reduced. This would simplify measuring. 1/16th of an inch is kind of ridiculous to measure and meaningless.",
+   "date": "2018-11-29T10:37:51-07:00",
+   "version": "10.4",
+   "author": "swryss"
+  },
+  {
+   "id": "3273795864",
+   "rating": 2,
+   "title": "Great But...",
+   "text": "I was a stark raving fan for this app...until I changed devices. I tried to export data from my old device to my new one as it indicated I could.  Nothing exported.  So, I figured I’d just start over.  No big deal. Until it asked me to go premium again. I’ll pay once to be able to track all of my measurements but c’mon. The data should seamlessly move from device to device without having to bend over backward.",
+   "date": "2018-10-07T03:34:43-07:00",
+   "version": "10.3.5",
+   "author": "Jade2099"
+  },
+  {
+   "id": "3233353457",
+   "rating": 3,
+   "title": "Started it",
+   "text": "You have to buy the app if you want more measured, which I did (wish I was slightly cheaper) but you can measure whatever, when you buy it. The only thing is, it doesn’t calculate your body mass and water percentage and muscle mass, you have to do that on your own and if you don’t know it. Well I don’t know! (Unless of course I’m missing something.) I don’t know the instructions aren’t super clear, you get an email to help you, but I’ll see how it goes. Im also frustrated that I can only pick one “gain/lose option” because I’m trying to lose weight/fat and gain muscle. I’m just trying to be more fit, but I don’t really know how to work this app completely.",
+   "date": "2018-09-26T13:16:10-07:00",
+   "version": "10.3.5",
+   "author": "socks.95"
+  },
+  {
+   "id": "3201090022",
+   "rating": 5,
+   "title": "Great support",
+   "text": "I like the app a lot but I'm particularly impressed with the support I've received from the developer. I had a couple of years of measurement data that I wanted to import into Progress and Lewis merged that data with the data I already entered into the app to create a database that I could load into Progress. Worked like a charm! Thank you, Lewis.",
+   "date": "2018-09-17T17:47:00-07:00",
+   "version": "10.3.5",
+   "author": "sholloway"
+  },
+  {
+   "id": "3198205947",
+   "rating": 4,
+   "title": "Measurements don’t save",
+   "text": "I’ve been using this app for about four months. However, none of the measurements I’ve recorded over the last two months or so have saved. Kind of useless.",
+   "date": "2018-09-16T21:54:00-07:00",
+   "version": "10.3.5",
+   "author": "Camsfyh"
+  },
+  {
+   "id": "3192567845",
+   "rating": 4,
+   "title": "Wow",
+   "text": "This is the app I’ve been looking for. Not only can I keep track of inches lost I can also take progress pictures. I love it",
+   "date": "2018-09-15T08:31:12-07:00",
+   "version": "10.3.5",
+   "author": "AnnRDH"
+  },
+  {
+   "id": "3154511675",
+   "rating": 1,
+   "title": "I didn’t know you had to pay 😑",
+   "text": "I was excited by the high rating and the description of the app. I starting inputting my data and information only to realize that you have to basically pay for a lot of things. The free version is very limited. At least, make the progress photos part of the free version!",
+   "date": "2018-09-04T20:57:44-07:00",
+   "version": "10.3.5",
+   "author": "User20170305"
+  },
+  {
+   "id": "3149487780",
+   "rating": 5,
+   "title": "Love!",
+   "text": "I use weekly and it’s very easy to use. Love the photo comparisons. Highly recommend!",
+   "date": "2018-09-03T11:10:52-07:00",
+   "version": "10.3.5",
+   "author": "Beachymichelle48"
+  },
+  {
+   "id": "3126197722",
+   "rating": 1,
+   "title": "Not worth the money",
+   "text": "Not worth the money even free.",
+   "date": "2018-08-28T14:41:52-07:00",
+   "version": "10.3.5",
+   "author": "aap103"
+  },
+  {
+   "id": "3117704303",
+   "rating": 4,
+   "title": "Nice app for tracking",
+   "text": "I was trying to do all my tracking in notes, but I needed something more concrete. I love how it shows the progress on multiple levels. My only gripe is I wish the photo section would let you line up your photos so the overlay worked flawlessly because taking the same photo exactly level doesn’t always work. Until then, four stars because I no longer have to excel or write down my measurements! It does all the guesswork for me! Yay!",
+   "date": "2018-08-26T12:24:21-07:00",
+   "version": "10.3.5",
+   "author": "Twilight Jewel"
+  },
+  {
+   "id": "2935794100",
+   "rating": 5,
+   "title": "Exactly what I wanted!!",
+   "text": "I’ve been looking everywhere for a way to track body fat and weight and this app delivers with a simple user interface that is fun to use and nice to look at!! I love it. Highly recommend!!",
+   "date": "2018-07-19T12:42:59-07:00",
+   "version": "5.3.3",
+   "author": "laurenbare"
+  },
+  {
+   "id": "2928462060",
+   "rating": 1,
+   "title": "Didn’t store entry",
+   "text": "I measured two weeks and both sets of data didn’t save. I thought I had just missed a step the first week, but paid close attention the second week.... 4 days later, info is gone again.",
+   "date": "2018-07-18T03:34:24-07:00",
+   "version": "5.3.3",
+   "author": "Mk778172"
+  },
+  {
+   "id": "2920540661",
+   "rating": 1,
+   "title": "Can’t take pics",
+   "text": "Am I crazy, or did the description infer that I could take progress photos? That was my whole reason for this app, but you can’t add photos (at all!) unless you upgrade for $4.99. I certainly do upgrade and pay for apps all the time, but I didn’t even get to try it first! Fail.",
+   "date": "2018-07-16T20:36:07-07:00",
+   "version": "5.3.3",
+   "author": "Helenliz"
+  },
+  {
+   "id": "2901639194",
+   "rating": 1,
+   "title": "Doesn’t save results",
+   "text": "I’ve entered measurements for 7/12 three times now and when I go back in they aren’t there. So it’s worthless as a tracking app.",
+   "date": "2018-07-13T11:49:15-07:00",
+   "version": "5.3.2",
+   "author": "tln524"
+  },
+  {
+   "id": "2828740637",
+   "rating": 5,
+   "title": "Great tool",
+   "text": "Great tool, never any crashes or bugs",
+   "date": "2018-07-03T08:58:11-07:00",
+   "version": "5.3.2",
+   "author": "Mustanggt87"
+  },
+  {
+   "id": "2817373792",
+   "rating": 1,
+   "title": "Keeps crashing",
+   "text": "I paid for the pro version of the app and ever since I did it crashes on opening all the time. If this isn’t fixed I can’t really rate the app as it doesn’t work.",
+   "date": "2018-07-02T00:08:46-07:00",
+   "version": "5.3.1",
+   "author": "Kauinoa"
+  },
+  {
+   "id": "2720200340",
+   "rating": 5,
+   "title": "Great app!",
+   "text": "I wanted an app to record my weight and measurements. This is perfect. I take my measurements weekly but my weight daily. I paid for the full version because I wanted to input my info from the past 2 months so I needed the full version. I couldn’t figure out how to put in just my weight without measurements. I sent the developer that question and he got right back to me and it’s simple. Definitely worth the $5. Great graphs. And love having an app instead of a paper journal.",
+   "date": "2018-06-18T13:16:23-07:00",
+   "version": "5.2.6",
+   "author": "Mermac1"
+  },
+  {
+   "id": "2638375149",
+   "rating": 5,
+   "title": "How do I change my photos that I uploaded ?",
+   "text": "I am trying to change my before and after photos and can’t seem to figure out how to change them. I am doing 16 week challenges and want to change them after each challenge. Can someone please help and tell me step by step on how to do it?",
+   "date": "2018-06-03T19:08:46-07:00",
+   "version": "5.2.6",
+   "author": "Bahamasgal24"
+  },
+  {
+   "id": "2637282447",
+   "rating": 5,
+   "title": "Finally",
+   "text": "No app will do the hard work for you. But this is just the best. I’ve tested a lot if them. None comes even close ( in my opinion) The interface and especially the possibility to take pictures is just great. Lots of customizing if you really want to track almost your entire body. Great work. Love it. Worth every penny.",
+   "date": "2018-06-03T11:57:40-07:00",
+   "version": "5.2.6",
+   "author": "Securityjunky"
+  },
+  {
+   "id": "2623705706",
+   "rating": 3,
+   "title": "Wrong Measurements",
+   "text": "I’m a little frustrated. I paid the $5 for the pro version, and I was loving how it took all my measurements And I was able to upload pictures. But today was my second day of measurements and it saying that I’m up 96 inches which I’m down 8 inches. It’s a little frustrating has anybody else had an issue with this?",
+   "date": "2018-05-31T15:55:12-07:00",
+   "version": "5.2.6",
+   "author": "Armesgirl13"
+  },
+  {
+   "id": "2591630411",
+   "rating": 4,
+   "title": "This app is great... for nobody",
+   "text": "Unless you are fine with only 5 measurements, this app is pretty much great but only if you pay 5 dollars. My recommendation to the developers is to make this app cost 5 dollars instead of potential surprising people with the few measurements you get to choose. I would defiantly recommend this app to those willing to pay a quick 5 dollars.",
+   "date": "2018-05-24T17:01:09-07:00",
+   "version": "5.2.6",
+   "author": "ActualReviews"
+  },
+  {
+   "id": "2590825466",
+   "rating": 5,
+   "title": "Five stars!",
+   "text": "Costumer service is fantastic!",
+   "date": "2018-05-24T11:12:10-07:00",
+   "version": "5.2.6",
+   "author": "lolfosho225"
+  },
+  {
+   "id": "2557144115",
+   "rating": 3,
+   "title": "Good app, could use better charts",
+   "text": "My smart scale records weight to Apple Health. While I see this app as enabled to read weight in the health sources, it does not pull weight data and requires manual entry making it not very useful. So my search for a better app continues. Also the graphs are not as pretty as other apps.\n\n*Update* turning off access from Apple Health and turning it back on fixed the issue. Thanks. Hoping for improved charts in the new versions.",
+   "date": "2018-05-16T19:24:24-07:00",
+   "version": "5.2.6",
+   "author": "foosball_p"
+  },
+  {
+   "id": "2532085986",
+   "rating": 5,
+   "title": "Easy!",
+   "text": "So easy to teach weight and measurements!",
+   "date": "2018-05-11T04:25:33-07:00",
+   "version": "5.2.6",
+   "author": "Joshyee 09 1021"
+  },
+  {
+   "id": "2528818259",
+   "rating": 5,
+   "title": "Love it!",
+   "text": "App makes it easy to track. I love the reminders it sends me at the days and times I choose.",
+   "date": "2018-05-10T09:22:59-07:00",
+   "version": "5.2.6",
+   "author": "Ajsm557"
+  },
+  {
+   "id": "2510376112",
+   "rating": 1,
+   "title": "Locked out",
+   "text": "My password reset itself and I and locked out of the app.  I emailed the creator and asked how do I reset my password and I was told that there is no way to unlock it. I paid for this app and when I asked for my money back no response.  Very angry.",
+   "date": "2018-05-05T20:55:39-07:00",
+   "version": "5.2.6",
+   "author": "Amanda42079"
+  },
+  {
+   "id": "2497684490",
+   "rating": 1,
+   "title": "Not worth 4.95",
+   "text": "I bought the pro version right off the bat. Usually with a pro version, there aren’t ads. The first thing that came up was an ad. Then I put my measurements in. End of story. I could write them in a notebook if all I wanted was a tracker. “Pluses and take-aways” are taught in 2nd grade. That’s all this app does. No info re: your overall health based on measurements. Height is not taken into account. It is literally a 2nd grade math program. & I’m a doctor as well as a mother, so I’m pretty clear on all points.",
+   "date": "2018-05-02T17:36:11-07:00",
+   "version": "5.2.6",
+   "author": "drperi123"
+  },
+  {
+   "id": "2489515821",
+   "rating": 5,
+   "title": "Love this ap !!",
+   "text": "This is a very easy to use straightforward ap to help in weight loss and maintaining your weight. Plus now I’m starting to lift weights and use it for muscle gains 💪I recommend it !",
+   "date": "2018-04-30T15:49:36-07:00",
+   "version": "5.2.6",
+   "author": "sm gattie"
+  },
+  {
+   "id": "2487805333",
+   "rating": 5,
+   "title": "Best Tracking App",
+   "text": "I have downloaded many tracking apps hoping to like them but non compare this! This is most comprehensive, user friendly and helpful tracking app out there!",
+   "date": "2018-04-30T06:58:16-07:00",
+   "version": "5.2.6",
+   "author": "Fix errors and update"
+  },
+  {
+   "id": "2483120323",
+   "rating": 2,
+   "title": "Paid for pro doesn’t import Apple health",
+   "text": "Neat app but won’t import my Apple health info.",
+   "date": "2018-04-29T05:26:39-07:00",
+   "version": "5.2.6",
+   "author": "ImagineAPP"
+  },
+  {
+   "id": "2431483173",
+   "rating": 5,
+   "title": "Worth it",
+   "text": "I’m very happy with the app and I like that it’s a one time payment to upgrade not some stupid monthly payments",
+   "date": "2018-04-16T19:25:43-07:00",
+   "version": "5.2.3",
+   "author": "JJJ_Action"
+  },
+  {
+   "id": "2427290012",
+   "rating": 4,
+   "title": "Good, with a caveat",
+   "text": "Great app, but if you skip inputting your measurements, it counts as 0, which throws off your tracking. Please fix",
+   "date": "2018-04-15T15:37:09-07:00",
+   "version": "5.2.3",
+   "author": "pls_fix1212"
+  },
+  {
+   "id": "2415457394",
+   "rating": 5,
+   "title": "Perfect!",
+   "text": "This has all the things I was looking for rolled into one app. ☺️",
+   "date": "2018-04-12T17:51:59-07:00",
+   "version": "5.2.3",
+   "author": "abitofbrit"
+  },
+  {
+   "id": "2390653998",
+   "rating": 5,
+   "title": "Great App!",
+   "text": "As a software engineer I’m not extremely tolerant of glitches, bad layout, etc. This app is well thought out and has worked flawlessly.  I had a couple of suggestions I felt might be useful and the dev team was very open to suggestions which is definitely not the norm. \n\nAs a user trying to get healthier, it was great to see before and after dated pics side by side and I loved that I could export them very easily. \n\nI think this is a great app. I did purchase the upgrade but it was well worth it. I am recommending this app to all my friends and to anyone reading this.",
+   "date": "2018-04-06T06:38:59-07:00",
+   "version": "5.2.3",
+   "author": "Audacitygirl"
+  },
+  {
+   "id": "2350241907",
+   "rating": 1,
+   "title": "Only can measure 4 things",
+   "text": "You can only measure 4 body parts on the free app. To use more you have to buy the upgrade for $4.99; an absurd price for a tracking app.  App description is too deceiving and should have made it more clear and I may have considered purchasing. Instead I’ve wasted time downloaded a useless app.",
+   "date": "2018-03-26T17:18:28-07:00",
+   "version": "5.2.2",
+   "author": "IrishMrs17"
+  },
+  {
+   "id": "2331012763",
+   "rating": 5,
+   "title": "Love this app!",
+   "text": "I tried a bunch of apps for tracking body measurements and this one was the best!",
+   "date": "2018-03-21T11:18:08-07:00",
+   "version": "5.2.2",
+   "author": "kitwhelan"
+  },
+  {
+   "id": "2330737519",
+   "rating": 5,
+   "title": "Fantastic care and detail",
+   "text": "Great app! I find tracking measurements really motivating because oftentimes my scale stays the same, but the measurements go down.\n\nHelps on those tough days!",
+   "date": "2018-03-21T09:29:01-07:00",
+   "version": "5.2.2",
+   "author": "The Grim Enchilada"
+  },
+  {
+   "id": "2329166727",
+   "rating": 5,
+   "title": "Excellent! Easy to use.",
+   "text": "Any glitches, have been temporary!! Help staff on point and quick to respond! All tabs respond quickly and accurately!! Simple to use.",
+   "date": "2018-03-20T23:29:29-07:00",
+   "version": "5.2.2",
+   "author": "Ge mommie"
+  },
+  {
+   "id": "2328323665",
+   "rating": 3,
+   "title": "Looks interesting but Pro is broken",
+   "text": "Looks like the app I was looking for. Problem is that when I try to upgrade to pro, nothing happens. It acts as if it’s contacting the Apple store and then nothing",
+   "date": "2018-03-20T17:54:33-07:00",
+   "version": "5.2.1",
+   "author": "Zeal of Pinchas"
+  },
+  {
+   "id": "2327497511",
+   "rating": 1,
+   "title": "Buggy :(",
+   "text": "I was really into the app bc the UI looked so nice but then it crashed 4 times, each time after doing all of my measurements so I’d have to go back and do them all again. Pretty annoying.",
+   "date": "2018-03-20T11:37:38-07:00",
+   "version": "5.2.1",
+   "author": "coolmarblebronze"
+  },
+  {
+   "id": "2324243222",
+   "rating": 1,
+   "title": "SIR-CRASH-ALOT",
+   "text": "I’m trying to give you money, trying to upgrade to pro, crashes every time. Restart? Doesn’t work. Uninstall and reinstall? Doesn’t work! Frustrating",
+   "date": "2018-03-19T13:31:20-07:00",
+   "version": "5.2",
+   "author": "TiaZia"
+  },
+  {
+   "id": "2300322880",
+   "rating": 2,
+   "title": "I like, but not compatible with iwatch?!?!??",
+   "text": "Like this weight tracking app the most, but not compatible with iwatch?!?!!!!!? Would be 5 stars if so.",
+   "date": "2018-03-12T20:33:33-07:00",
+   "version": "5.1.1",
+   "author": "e.tigress"
+  },
+  {
+   "id": "2270295328",
+   "rating": 3,
+   "title": "Great app to use with the HCG diet",
+   "text": "Tracks everything for you I love it",
+   "date": "2018-03-04T06:43:14-07:00",
+   "version": "5.1.1",
+   "author": "@Mber1982"
+  },
+  {
+   "id": "2153839583",
+   "rating": 5,
+   "title": "Love this app!!",
+   "text": "This app is super easy to use and allows me to see my progress. I am able to track my weight loss (or gain 🙁) as well as see where I am trimming down (such as thighs, arms, and waist).",
+   "date": "2018-02-01T06:44:40-07:00",
+   "version": "5.1",
+   "author": "Silly_Monkey07"
+  },
+  {
+   "id": "2110400431",
+   "rating": 5,
+   "title": "Easy to use",
+   "text": "Easy to use and motivating to keep working hard. I like to keep track of inches lost more than weight. I am gaining muscle and losing inches, this app makes it easy to see progress.",
+   "date": "2018-01-20T21:27:51-07:00",
+   "version": "5.0.8",
+   "author": "weight lifting mama"
+  },
+  {
+   "id": "2102127315",
+   "rating": 5,
+   "title": "Lots of nice features and potential",
+   "text": "This is really a great app, and I’ve been looking for this type of app for a long time.  The immediate feedback from the developer is a sure sign that they want this app to be the best.  They are working out the tiny kinks, but the app has all the potential to be amazing.  I’d definitely would recommend the app.",
+   "date": "2018-01-18T11:19:32-07:00",
+   "version": "5.0.8",
+   "author": "teechadeb"
+  },
+  {
+   "id": "2097942373",
+   "rating": 5,
+   "title": "Awesome",
+   "text": "Amazing app recommend everyone with goals to download",
+   "date": "2018-01-17T04:54:46-07:00",
+   "version": "5.0.8",
+   "author": "cflyboii"
+  },
+  {
+   "id": "2096076645",
+   "rating": 5,
+   "title": "Best Tracker Out There",
+   "text": "This is by far the most accessible tracker I have used. One of the major pros is the progress pictures where you can overlay a previous picture to match the same pose and then see your progress that way. I like the custom measurements features and seeing my progress in more ways like body fat %, measurements, ratios, and BMI than just weight. \n\nI was also using a previous tracker but was happy I could input previous info to this one.",
+   "date": "2018-01-16T15:20:50-07:00",
+   "version": "5.0.8",
+   "author": "Christine Einsel"
+  },
+  {
+   "id": "2059625406",
+   "rating": 5,
+   "title": "Worth it",
+   "text": "This app is great to track your measurements every week! The reminder is great, and the charts really show your progress.",
+   "date": "2018-01-05T07:35:05-07:00",
+   "version": "5.0.8",
+   "author": "rhiannon.e"
+  },
+  {
+   "id": "2036453952",
+   "rating": 5,
+   "title": "Well worth the money",
+   "text": "When searching for an app to track measurements, I came across a recommendation for this one and another app. I downloaded the free versions of both and got started. I was tempted to buy the full version to access the photo feature, but hesitant to spend $5 (the other app had similar features and was only $2), but the reviews and the developer’s care and investment in the app impressed me so I decided to go for it. I’m so glad I did. It really matters to me that my info isn’t being sold and that my photos are secure, and that seems to be a priority for this developer. The app is easy to use and really helpful in tracking my fitness journey. I was able to check out a friend who had purchased the full version of the other app I had considered and again I’m impressed by the features and layout of this one- definitely made the right choice.",
+   "date": "2017-12-28T16:41:02-07:00",
+   "version": "5.0.8",
+   "author": "NellllSs"
+  },
+  {
+   "id": "1972586347",
+   "rating": 3,
+   "title": "Updated",
+   "text": "I gave the app another try and this time it took all the measurements. I am not sure what happened the first time around. I had reset my iphone X in the interval. So I am going to work with it a couple of more weeks, and see how it goes. If it continues to work I will further update and upgrade my review. When I wasn’t happy the developer contacted me quickly to try to help, which was great.",
+   "date": "2017-12-05T06:52:16-07:00",
+   "version": "5.0.7",
+   "author": "Beckster48"
+  },
+  {
+   "id": "1942740427",
+   "rating": 5,
+   "title": "Makes me accountable",
+   "text": "For me, the reminder aspect that you set to your specifications is AWESOME. Because if I grab something to eat that I know I shouldn’t eat, for a second I think about tomorrow morning when I weigh in. And this also works for if I don’t want to work out.",
+   "date": "2017-11-23T05:24:27-07:00",
+   "version": "5.0.7",
+   "author": "Relivinglifeloco"
+  },
+  {
+   "id": "1902431170",
+   "rating": 5,
+   "title": "Love this app",
+   "text": "Easy to use",
+   "date": "2017-11-06T14:15:34-07:00",
+   "version": "5.0.3",
+   "author": "Nahnahof4"
+  },
+  {
+   "id": "1896674339",
+   "rating": 4,
+   "title": "Easy To Use",
+   "text": "I’ve used a few tracking apps over the years. I love how easy this one is to use. The numbers include for fractional parts allowing for you to record even the smallest movements toward success. I also like that the body measurements are clearly defined (smallest part of waist, just above navel) to create the most consistency.",
+   "date": "2017-11-04T05:09:50-07:00",
+   "version": "5.0.3",
+   "author": "MsrG5"
+  },
+  {
+   "id": "1864316239",
+   "rating": 5,
+   "title": "Great customer service",
+   "text": "I wanted an app for tracking changes in my size and this is the best I’ve found that allows me to do that. It enables me to measure my body parts with a tape measure and set a goal to lose or gain a specific number of inches, including setting weekly notifications to weigh myself and input the new measurement. I’m extremely pleased with the user interface and the responsive customer service. This app is a great option for anyone who doesn’t want to restrict themselves to just weight tracking or who wants to avoid weight tracking altogether and just focus on tracking body size.",
+   "date": "2017-10-21T05:37:15-07:00",
+   "version": "5.0.2",
+   "author": "M102117RC"
+  },
+  {
+   "id": "1861721930",
+   "rating": 4,
+   "title": "Great but...",
+   "text": "My only issue is with the reminder feature. I track weight weekly but measure monthly as changes are slower on that front. It would be nice to have an option that allows for tracking less frequently than weekly.",
+   "date": "2017-10-20T03:47:02-07:00",
+   "version": "5.0.2",
+   "author": "Surrealterria"
+  },
+  {
+   "id": "1835054808",
+   "rating": 1,
+   "title": "Might be ok, but it's NOT FREE!",
+   "text": "I downloaded this app To help me track progress as it seemed to be one of the better rated ones on the App Store. Upon opening it and trying to set it up it pops up a message that you have to have \"pro\" version to track more than five measurements! So if you wanna track weight, hips, calves, shoulders, fat% that's it you can't track waist or neck or anything else without paying 4.99 for PRO! \n\nNOWHERE in the description does it tell you this at the time I was looking. I even went back and looked to see if I missed it but nope nothing there telling you that. This feels like a bait and switch tactic and I refuse to be tricked into buying an app that way. I would have been more inclined to buy it out right if it had just said the real cost up front!  I deleted this immediately and chose a different app!",
+   "date": "2017-10-08T05:51:48-07:00",
+   "version": "5.0.1",
+   "author": "kem1139"
+  },
+  {
+   "id": "1815149849",
+   "rating": 5,
+   "title": "FINALLY — Fitness Enthusiasts Rejoice!",
+   "text": "I have always been looking for a simple app to upload stats and photos and track/monitor my progress over time.\n\nThe wait is over.\n\nI had been searching for an app like this for the past 2-3 years thinking that someone, anyone would have created it. Nope\n\nThat all changed when downloaded Progress. Free tracking of 3 stats and $5 for unlimited was well worth it. A very responsive, and caring developer as well!\n\nNow I can’t wait to track each and every week!\n\nCheers!",
+   "date": "2017-09-28T09:07:23-07:00",
+   "version": "5.0",
+   "author": "Mpolo9944"
+  },
+  {
+   "id": "1805913993",
+   "rating": 5,
+   "title": "Love!",
+   "text": "Great!   This app is worth the money.  The pictures especially keep you motivated!",
+   "date": "2017-09-23T11:07:11-07:00",
+   "version": "4.8",
+   "author": "Pink Packer"
+  },
+  {
+   "id": "1794854764",
+   "rating": 5,
+   "title": "Great app for tracking",
+   "text": "I love this app, it is easy to track your measurements, allows you to see pictures of your progress, persistent when it time to take measurements and the app creator actually responds to surveys filled out with a personal email! I find myself looking forward to measurement day to see the results.",
+   "date": "2017-09-17T09:57:52-07:00",
+   "version": "4.8",
+   "author": "Empie1983"
+  },
+  {
+   "id": "1791012152",
+   "rating": 5,
+   "title": "Helpful",
+   "text": "I love this app. It keeps me going...",
+   "date": "2017-09-15T04:00:42-07:00",
+   "version": "4.8",
+   "author": "anjonka"
+  },
+  {
+   "id": "1727859184",
+   "rating": 5,
+   "title": "Great options",
+   "text": "I've downloaded quite a few apps for keeping my measurements... this has been the best. It give me a lot of options and customizable sections. It also reminds me to enter my info. 👍",
+   "date": "2017-08-14T15:16:01-07:00",
+   "version": "4.8",
+   "author": "Mkarnes82"
+  },
+  {
+   "id": "1725084879",
+   "rating": 3,
+   "title": "Not bad but could use refinement",
+   "text": "Useful but I wish you could choose to record measurements in tenths (I use a digital measuring tool) instead of continually doing math in my head to convert .2 of an inch or whatever.",
+   "date": "2017-08-12T16:06:20-07:00",
+   "version": "4.8",
+   "author": "jteampresident"
+  },
+  {
+   "id": "1715769562",
+   "rating": 5,
+   "title": "Really useful app!",
+   "text": "Well thought out and useful app 👍",
+   "date": "2017-08-06T07:24:58-07:00",
+   "version": "4.8",
+   "author": "aam1r"
+  },
+  {
+   "id": "1714768404",
+   "rating": 5,
+   "title": "Excellent app! The upgrade is worth the money!!",
+   "text": "I have been using this app for about two years now. This is an excellent app to track your progress and making lifelong dietary changes to make yourself a healthier person! One of the newer thing that I like about this app is the photo overlay. You can use pictures of yourself and overlap your photos to see the changes in your overall body! I recently completed a survey regarding questions about what I liked and what things I would like to see in the future from the app developer. When of the things that I was concerned about is my picture is being hacked. The developer tickets time to email me and assure me that nobody has access to my photos! As I have never had a reply from an app developer before I was super impressed! Like I said, I've been using this app for 2 years and sometimes I will go awhile before updating my measurements. This app helps keep me motivated and reminds me of the progress I've made. When I started my healthy journey I was 280 lbs. (in 2010)now I'm a healthy 119 lbs and a daily runner!! Daily walking and working up to running daily, helped be loose 151 lbs in a year. I am able to do all the physical things I love doing. And I have muscle!! It easily integrates with my iOS health app. It is WELL WORTH the upgrade price!\nThanks for a great app and for caring about your app users!!",
+   "date": "2017-08-05T16:44:49-07:00",
+   "version": "4.8",
+   "author": "Me7895623"
+  },
+  {
+   "id": "1714228121",
+   "rating": 5,
+   "title": "Awesome",
+   "text": "I searched and read and searched for hours for an app, that would calculate your inches lost. Being more muscular than the average woman, I like to also track my measurements, not just weight. Well this app is awesome, easy to use and includes limb by limb tracking of measurements as well as weight, BMI, and fat percentage. It's an awesome user friendly app. The added benefit was that it allowed me to go back and enter my measurements prior to finding the app. Win!",
+   "date": "2017-08-05T06:12:09-07:00",
+   "version": "4.8",
+   "author": "SLJNON"
+  },
+  {
+   "id": "1698153292",
+   "rating": 5,
+   "title": "Wish it weren't needed but....",
+   "text": "works like a charm!",
+   "date": "2017-07-25T15:51:09-07:00",
+   "version": "4.8",
+   "author": "GorhamNouveau"
+  },
+  {
+   "id": "1697814246",
+   "rating": 5,
+   "title": "Exactly what I've been looking for",
+   "text": "I have a scale that was reasonably priced that is not bluetooth w/ a compatible app. I'm so glad to have found this app where I can put the info in and track my progress. I also love that it doesn't tell you \"where you should be\".",
+   "date": "2017-07-25T08:29:33-07:00",
+   "version": "4.8",
+   "author": "iCustomer"
+  },
+  {
+   "id": "1693417902",
+   "rating": 5,
+   "title": "Very easy to use!",
+   "text": "I love the dials. They make measurements super accurate. I especially love how you are the one that controls what you measure and keep track of along the way. Setting the goals to be in weight, inches, or body fat makes you feel more in control of your goals. Track what you want when you want!",
+   "date": "2017-07-22T05:41:50-07:00",
+   "version": "4.8",
+   "author": "Angdebo"
+  },
+  {
+   "id": "1658082668",
+   "rating": 5,
+   "title": "Super easy to use!",
+   "text": "Love this app! It's amazing and easy to use! Recommend it to all my friends and family.",
+   "date": "2017-06-26T01:26:40-07:00",
+   "version": "4.8",
+   "author": "they call me deedee"
+  },
+  {
+   "id": "1646426046",
+   "rating": 5,
+   "title": "Great at progression",
+   "text": "I love this app and being able to see progression of my journey. It just showed me Notifications today to remind me to put my measurements in. It takes pics right then and there! It is a great app!",
+   "date": "2017-06-16T05:27:44-07:00",
+   "version": "4.8",
+   "author": "rheathgirl"
+  },
+  {
+   "id": "1646404301",
+   "rating": 4,
+   "title": "We improve what we record",
+   "text": "Being able to track vital data is the key to making improvements.  The data entry is intuitive and trend analysis is easy.",
+   "date": "2017-06-16T05:03:41-07:00",
+   "version": "4.8",
+   "author": "Gamoody"
+  },
+  {
+   "id": "1642301709",
+   "rating": 5,
+   "title": "Huge help",
+   "text": "I love this app.  It helps me track my measurements and I absolutely love the overlay feature. I also like how it tracks how I feel.",
+   "date": "2017-06-12T15:08:59-07:00",
+   "version": "4.8",
+   "author": "Lanescovedesign"
+  },
+  {
+   "id": "1642138182",
+   "rating": 2,
+   "title": "Limited",
+   "text": "App only allows you to track a small number of things. Pretty disappointed. \nMoving on.",
+   "date": "2017-06-12T09:44:49-07:00",
+   "version": "4.8",
+   "author": "Leese"
+  },
+  {
+   "id": "1630698614",
+   "rating": 1,
+   "title": "Waste of time",
+   "text": "Only allows you to record 5 measurements",
+   "date": "2017-06-01T12:06:20-07:00",
+   "version": "4.8",
+   "author": "denny1128"
+  },
+  {
+   "id": "1630087711",
+   "rating": 3,
+   "title": "Photos",
+   "text": "Can I add my own photos that I have previously taken or do I have to use the camera icon and take new photos?",
+   "date": "2017-05-31T21:22:48-07:00",
+   "version": "4.8",
+   "author": "VickySalmeron"
+  },
+  {
+   "id": "1627634707",
+   "rating": 5,
+   "title": "Me & Couple Enjoying This",
+   "text": "Love it! Great Inversion!",
+   "date": "2017-05-29T03:35:02-07:00",
+   "version": "4.8",
+   "author": "Superhearth"
+  },
+  {
+   "id": "1626859111",
+   "rating": 5,
+   "title": "Great progress tracker!! 🤙🏼🤙🏼🤙🏼",
+   "text": "I used the free version for a long time and loved it, so I didn't mind paying the $3.99 for full access!! It's a great and easy way to track your progress! Love the look too!!",
+   "date": "2017-05-28T07:33:24-07:00",
+   "version": "4.8",
+   "author": "Bissessar"
+  },
+  {
+   "id": "1625950573",
+   "rating": 1,
+   "title": "Have to pay to get photos pass on that🙁",
+   "text": "No good",
+   "date": "2017-05-27T10:09:17-07:00",
+   "version": "4.8",
+   "author": "cheap wod"
+  },
+  {
+   "id": "1622895197",
+   "rating": 5,
+   "title": "Progress App",
+   "text": "Love it!  Really helps to see the gains made in inches. The scale can be detrimental as it seems to not change, however, Progress allows you to see inches disappearing.  Even slow progress is Progress!",
+   "date": "2017-05-24T04:42:45-07:00",
+   "version": "4.8",
+   "author": "Thelimas"
+  },
+  {
+   "id": "1620358566",
+   "rating": 4,
+   "title": "Good app",
+   "text": "Good app. I wish it allowed you to keep track of a couple more things but overall great",
+   "date": "2017-05-21T12:34:59-07:00",
+   "version": "4.8",
+   "author": "Shelby619"
+  },
+  {
+   "id": "1587599071",
+   "rating": 3,
+   "title": "Seems not polished",
+   "text": "As paid customer:\n\nPositive: input for overall lots of measurement areas (+one star)\n\nNegatives:\nNo way to rearange input order. You will always have to follow an order set in the app. You want to enter just weight? Too bad you need to swipe many many times just to get to weight which is at the end! This has to be improved\n\nCustom made measurement are only in cm/inch. So if you want custom % (as for example muscle % or lean mass % or fat in kg) you cant. You can but it looks stupid with cm/inch after it\n- update 20170413: almost fully addresed in new update introducing new default % measurements\n\nIn my progress, biggest numbers there relate to number of days (since first entry) I have no idea why? What added value? If it would be days from last measurement ok, even better put there the actual measurement result (instead of at the bottom in much smaller font size as it is now) or put there difference to target. Basically whatever else but \"days\" which males no sense\n\nI like the app, but imho those things are too big problems at the moment\n\nUpdate base on developers comment 20170413:\nbumped up to 3/5 stars due to:\nconstructive and helpful reply from developer showing interest\nrecent update addressing issue of some % inputs",
+   "date": "2017-04-13T01:11:21-07:00",
+   "version": "4.7",
+   "author": "Step473"
+  },
+  {
+   "id": "1584059504",
+   "rating": 5,
+   "title": "Great Tool To Track Progress",
+   "text": "Love that you can enter your measurements AND take a photo of yourself so you can track over time. This is more convenient than picstitching your photos together, and easy to use too!",
+   "date": "2017-04-08T13:30:37-07:00",
+   "version": "4.6.5",
+   "author": "RLay."
+  },
+  {
+   "id": "1573612562",
+   "rating": 5,
+   "title": "Perfect app found after deleting several others!",
+   "text": "I just started using this app but I can say, that I truly do love it already. It has everything I was looking for an after downloading and deleting several other apps, this one is a keeper! First, let me start by saying that when you have an issue, the app creator is incredibly responsive at addressing the issue or question you're having. The app itself is great. My favorite feature is actually one that I did not see highlighted in the description but that you actually can lock the app on your phone so that people can't arbitrarily look at your pictures or weight loss information. I went ahead and right away upgraded to the full version for the $4, i'm not sure what else it unlocked but it immediately got rid of the ads and allowed me to chart many more measurements. That alone was worth it for me. The app starts by letting you pick and choose exactly what measurements you'd like to track. They give you a relatively easy way to enter the numbers and then it will prompt you to take photos as well. It's very clear in telling you to take back front side views. And then it takes all this information and it categorizes it for you and allows you to access it through the tabs on the bottom. For me, when I'm feeling like I don't want to work out, I click on my Photos button and remind myself of why am doing this - trust me, this is very motivating vs having a phone picture you took of yourself that someone could happen upon or you could accidentally download and other people see it without you realizing it. Plus the photo is right away at your fingertips with one click so you're not searching for anything. As you enter your measurements, I love the fact that it breaks it down for you and does the math to tell you how close you are to your goal as well as what exactly was lost on each body part you measured. I find that motivating to see the actual progress. It does your progress in a few ways, you get a total inches tally that tabulates everything you measured into one big measurement and then it will document how many inches you lost off your total which I think is kind of nice. Then each body part is broken down separately and it has a very clear circle that's highlighted that shows you immediately how much you've lost without any calculations on your part. I haven't gotten to use it yet, but the photo comparison seems like it's going to be very motivating, it allows you to scroll through photos from different dates and show them side-by-side or even an overlay formation. Again, I was simply looking for something to help me track my progress, help keep me motivated to stay on track, and let me see results in an easy fashion. It's a bonus that it actually has a lock on it. For me, this app meets all my needs.\n\n***update: I believe I figured out what happened with the one negative review for this app. I was reviewing my progress and since it was technically my day to \"measure\", I got excited as I spot checked one of the measurements just for fun and just naturally started moving the sliders and entering all my new numbers (all smaller BTW) and as I got to the last one, I realized I was actually overwriting the prior week . . . I was in the RESULTS tab under the prior date vs. where I needed to be which was the ADD RESULTS tab to make a new entry!!!! Operator error and had nothing to do with the app. Just be aware - it was a bummer not to be able to see my actual progress because of my error. Lesson learned.",
+   "date": "2017-03-26T22:23:12-07:00",
+   "version": "4.6.5",
+   "author": "Melissa0015"
+  },
+  {
+   "id": "1566340243",
+   "rating": 5,
+   "title": "Love it!",
+   "text": "I have the upgraded app and I love it. It offers all the flexibility I could ask for. Favorite part - I get to choose which measurements are tracked.",
+   "date": "2017-03-17T05:34:37-07:00",
+   "version": "4.6.5",
+   "author": "Nbsartwell"
+  },
+  {
+   "id": "1562145245",
+   "rating": 5,
+   "title": "It keeps me motivated!",
+   "text": "This app goes way beyond the number on the scale. I have been using Progress for around a year now. I have lost over 40 pounds and 50 inches. I don't think I would have stayed so motivated without seeing consistent loss through pictures and measurements when the scale wasn't budging!",
+   "date": "2017-03-11T04:31:40-07:00",
+   "version": "4.6.5",
+   "author": "JulieAnn3748"
+  },
+  {
+   "id": "1559450013",
+   "rating": 2,
+   "title": "Bummed",
+   "text": "Won't keep track of the measurement I created. Didn't save the measurement from prior week. Tried again and didn't work. Can't edit once a measurement is added for the day.",
+   "date": "2017-03-07T07:08:35-07:00",
+   "version": "4.6.5",
+   "author": "Flyinonflame"
+  },
+  {
+   "id": "1550242281",
+   "rating": 5,
+   "title": "very useful",
+   "text": "The app lets you track a LOT of measurements, and I like how it summarizes your progress and lets you look at the bigger picture (my scale hasn't moved much but this app helps me remember not everything is on the scale). I like the picture comparisons too. Also, the customer service is awesome. Worth the couple bucks for pro.",
+   "date": "2017-02-22T11:32:38-07:00",
+   "version": "4.6.5",
+   "author": "Heydw"
+  },
+  {
+   "id": "1544081330",
+   "rating": 5,
+   "title": "Awesome!",
+   "text": "I love everything about this app. Very easy to use. I paid extra to unlock all & it wasn't expensive & it's so worth it. Didn't realize what an asset it was to track pictures each week.",
+   "date": "2017-02-13T21:34:51-07:00",
+   "version": "4.6.5",
+   "author": "Mtown Babs"
+  },
+  {
+   "id": "1540742690",
+   "rating": 5,
+   "title": "This App is just what I needed!!!!",
+   "text": "This is the best app I have found for taking progress pictures and tracking all my measurements for my weight loss journey. Thanks developers",
+   "date": "2017-02-09T06:36:08-07:00",
+   "version": "4.6.5",
+   "author": "Undead4now"
+  },
+  {
+   "id": "1539477813",
+   "rating": 5,
+   "title": "Very efficient App",
+   "text": "I really like this app as it is the most efficient one on the market now.",
+   "date": "2017-02-07T14:18:57-07:00",
+   "version": "4.6.5",
+   "author": "Saad Hagras"
+  },
+  {
+   "id": "1539267820",
+   "rating": 1,
+   "title": "Can only track 4 measurements",
+   "text": "The app only let me select like 4 measurements to track (it kept saying no slots available). I downloaded the app to track ALL my measurements. Delete",
+   "date": "2017-02-07T05:54:14-07:00",
+   "version": "4.6.4",
+   "author": "HopeStar78"
+  },
+  {
+   "id": "1535478020",
+   "rating": 5,
+   "title": "User friendly and excellent customer service",
+   "text": "I tried another app for body measurements and pictures, had to delete it because it was difficult to navigate. This app is very user friendly and customer service is excellent. I had a response to my question the same day. I did upgrade because I love the feature of being able to view your results side by side. So far, loving this app, it has everything I was looking for!",
+   "date": "2017-02-02T03:37:14-07:00",
+   "version": "4.6.3",
+   "author": "Ohio Vol"
+  },
+  {
+   "id": "1535107258",
+   "rating": 4,
+   "title": "LOVE IT!!",
+   "text": "I rated this app only 4 stars because I wish with the upgrade (for 2.99) I would be able to unlock all the other measurements, instead of only being able to track 6 of them. I thought the upgrade said it included additional measurements? Either way, the app is sleek, well-designed, and extremely motivational. \n\nWould definitely recommend for those who want to keep track of their weight! The chart is just what I was looking for!",
+   "date": "2017-02-01T14:30:44-07:00",
+   "version": "4.6.3",
+   "author": "Bec Mae"
+  },
+  {
+   "id": "1528307447",
+   "rating": 5,
+   "title": "Helped me so much with weight loss",
+   "text": "I struggled at first staying motivated when losing weight because I wasn't really losing pounds. Since I was exercising and building muscle my loss wasn't showing up as much on the scale. Thanks to this app I was able to track my measurements and stay motivated. I noticed within weeks of using the app, I may not have been losing pounds but I was losing inches all over my body. It also gives you a great overview of where you are in your goal and how well you're staying on track. I would definitely recommend the paid version so that you can track all areas of your body.",
+   "date": "2017-01-22T14:07:33-07:00",
+   "version": "4.6.1",
+   "author": "sbbentley"
+  },
+  {
+   "id": "1527395133",
+   "rating": 5,
+   "title": "Consistently great and getting better",
+   "text": "I've used this app for well over a year and it continues to improve. If you want an easy way to track your weight/measurements this is the way to go. Latest version with the ability to rotate phone to see a side by side of oldest and most recent photos is really nice.",
+   "date": "2017-01-21T09:09:33-07:00",
+   "version": "4.6.3",
+   "author": "Brianwhite06"
+  },
+  {
+   "id": "1525164920",
+   "rating": 5,
+   "title": "Solid weight loss tracking!",
+   "text": "Ok first off this app looks really nice, I love how all my measurement information is presented in a super easy to read manner and the graph makes it simple to track my weight loss over time. The app reminds you to put in your measurements each day so you'll never forget! (that's my biggest problem with these kind of things haha) I'm thinking about upgrading to the paid version so I can add photos, since you can also view your progress in photos day by day.",
+   "date": "2017-01-18T11:49:46-07:00",
+   "version": "4.6.3",
+   "author": "Floralprintpumps"
+  },
+  {
+   "id": "1524557054",
+   "rating": 5,
+   "title": "Amazing tracker",
+   "text": "I really love this app. It's intuitive and easy to use while still offering great features. I especially love the photo and graph progress comparisons. The ability to set a goal keeps me motivated. Get this app, you won't regret it.",
+   "date": "2017-01-17T18:23:02-07:00",
+   "version": "4.6.3",
+   "author": "xentek"
+  },
+  {
+   "id": "1524356531",
+   "rating": 5,
+   "title": "Great app",
+   "text": "This application is such a great app. It's really helpful for me and people who want to get lost their weight. I now can track my weight everyday because of the notification function which is really useful. The other thing that I like about this app is that I can choose the start point and the end point. Then I can see my weight lost day by day visually.",
+   "date": "2017-01-17T09:34:09-07:00",
+   "version": "4.6.3",
+   "author": "Vusinh1812"
+  },
+  {
+   "id": "1523023900",
+   "rating": 1,
+   "title": "App resets if Force Quit or restarted",
+   "text": "On both my iPad and iPhone, the app resets if you Force Quit the app or restart your phone. Very frustrating, as I found this out only after having tracked for a couple weeks, losing all of my progress stats.",
+   "date": "2017-01-15T16:33:31-07:00",
+   "version": "4.6.2",
+   "author": "MU60"
+  },
+  {
+   "id": "1522468453",
+   "rating": 5,
+   "title": "Love this App!!!",
+   "text": "I have used this app (and its predecessor) for several years now to track various body measurements.  It is a very good app to see your progress and you can customize to track specific measurements. I have used it while undergoing breast cancer reconstruction and the weekly measurements were very useful to see how my body was shifting. I highly recommend the app to anyone who is wanting to track their weight and body measurements.  An added plus - The is developer extremely helpful and responsive!!",
+   "date": "2017-01-14T22:22:45-07:00",
+   "version": "4.5.1",
+   "author": "F86workman"
+  },
+  {
+   "id": "1516012571",
+   "rating": 5,
+   "title": "Everything I want!",
+   "text": "This app has everything I want! As a \"skinny fat\" I love that I can choose a main goal focusing on body fat percentage, instead of weight. So many apps make it all about the weight, and body fat percentage is a side note (if there at all). Being able to choose which body measurements I want, and now being able to see not only the total progress but each measurements progress, has been a huge help. I love that it syncs with Apple Health, so it pulls my Withings Scale information for me. I've made great progress with this app!",
+   "date": "2017-01-05T12:34:40-07:00",
+   "version": "4.6",
+   "author": "adultbarbie"
+  },
+  {
+   "id": "1515205432",
+   "rating": 5,
+   "title": "Love the App",
+   "text": "This is a great App for tracking your stats.  I love how it does side by side comparisons of your pics to see your progress",
+   "date": "2017-01-04T05:27:55-07:00",
+   "version": "4.6",
+   "author": "WAKIII"
+  },
+  {
+   "id": "1514829040",
+   "rating": 3,
+   "title": "No timelapse",
+   "text": "Really want to be able to export a timelapse video of my progress.",
+   "date": "2017-01-03T17:24:40-07:00",
+   "version": "4.6",
+   "author": "Jimmarch"
+  },
+  {
+   "id": "1514312112",
+   "rating": 3,
+   "title": "Limited functionality",
+   "text": "I like the tracking layout of the app, however it does not allow you to remove duplicate entries or make corrections to bad data. It is also not very intuitive how to change your measurement selections after you purchase the pro version.",
+   "date": "2017-01-02T21:05:24-07:00",
+   "version": "4.5.1",
+   "author": "Sprite1der"
+  },
+  {
+   "id": "1494315820",
+   "rating": 5,
+   "title": "Love this app",
+   "text": "Lots of features! It took me a while to figure out how to do everything, but now I love it and find it easy to navigate. Being able to see progress pictures side by side when I turn my phone is really cool. When I emailed the developers with a question, they got right back to me. Great support and a great app!",
+   "date": "2016-12-01T18:49:55-07:00",
+   "version": "4.4.1",
+   "author": "Cm237379"
+  },
+  {
+   "id": "1475780646",
+   "rating": 1,
+   "title": "Don't Bother!",
+   "text": "I didn't get a very good feeling about this app from the beginning. A little too basic...limited to only 5 measurements (why?)...repeated pop-up to upgrade to Premium (maybe thats because they already know that their free app is pretty bad)!  Lastly, no matter what I do, my app won't \"progress\" to my new entries...it's just stuck on the original ones. This app is just a waste of time.",
+   "date": "2016-10-30T07:20:18-07:00",
+   "version": "4.4",
+   "author": "Roseskd"
+  },
+  {
+   "id": "1459240511",
+   "rating": 1,
+   "title": "Disappointment",
+   "text": "Thought this would be a great free app but yet again you download it, set it up, an then it tells you to upgrade to get certain parts of the app. Disappointed in this, i had high hopes.",
+   "date": "2016-10-01T12:35:01-07:00",
+   "version": "4.4",
+   "author": "Aubrey423"
+  },
+  {
+   "id": "1453205634",
+   "rating": 1,
+   "title": "False advertising",
+   "text": "I deleted this app almost immediately after downloading it. Most of the tools it shows on the free download screen is only for the premium app. Also you can only measure about four things, theres a limit. Yes, for a measuring app. Plenty of other apps that are actually free and do everything you need them to do.",
+   "date": "2016-09-20T21:09:53-07:00",
+   "version": "4.4",
+   "author": "Cdubs4444"
+  },
+  {
+   "id": "1450107701",
+   "rating": 2,
+   "title": "Disappointed",
+   "text": "First, I thought this app would calculate Body Fat %, but it's actually a manual entry.  Second, I thought it would import BMI and the other calculated measurements into the Health app, but only Weight and Body Fat % (both manual entries) are integrated.  On the positive side, the interface isn't bad.",
+   "date": "2016-09-15T05:41:48-07:00",
+   "version": "4.4",
+   "author": "dfscheibel"
+  },
+  {
+   "id": "1442242737",
+   "rating": 5,
+   "title": "Like the app",
+   "text": "I like the app, I just wish you could add a couple of more measurements rather than being limited to 5.",
+   "date": "2016-08-31T04:39:21-07:00",
+   "version": "4.4",
+   "author": "njbikerchick"
+  },
+  {
+   "id": "1384343972",
+   "rating": 5,
+   "title": "Great App",
+   "text": "Really simple to use and just the right amount of info!",
+   "date": "2016-05-26T05:35:04-07:00",
+   "version": "4.4",
+   "author": "Shannonree"
+  },
+  {
+   "id": "1375992180",
+   "rating": 5,
+   "title": "Love!",
+   "text": "This is my favorite app for keeping track of measurements. I use the photo feature as well.",
+   "date": "2016-05-09T08:01:36-07:00",
+   "version": "4.4",
+   "author": "Pamtown"
+  },
+  {
+   "id": "1365986090",
+   "rating": 2,
+   "title": "Please fix this!!!",
+   "text": "I want to love this Ap but I don't. The ui is not intuitive to begin with. Hard to figure out. I do love how easy it is to enter in your measurements and info but.... Comparing photos is a crapshoot as to whether it will or won't work at any given time. I feel like they just stuck it out there and forgot about it. I don't believe the support or update it. And my biggest gripe... You can take a front view photo and a side view photo but... And I should say butt... No back view??? This must have been made and designed by men. Nuff said. If you find a better choice please tell us all.",
+   "date": "2016-04-19T22:03:35-07:00",
+   "version": "4.4",
+   "author": "Mama bear o 2"
+  },
+  {
+   "id": "1354722639",
+   "rating": 1,
+   "title": "$4 to record ur measurements!",
+   "text": "Too pricey for me",
+   "date": "2016-03-27T22:17:31-07:00",
+   "version": "4.4",
+   "author": "Jennharshfield"
+  },
+  {
+   "id": "1341515956",
+   "rating": 4,
+   "title": "Good",
+   "text": "Works well. Had a little trouble figuring it out but had good helpful support.",
+   "date": "2016-03-02T05:10:43-07:00",
+   "version": "4.4",
+   "author": "Smithalite"
+  },
+  {
+   "id": "1341125123",
+   "rating": 1,
+   "title": "Pointless",
+   "text": "The free version does so little and has so many offers to upgrade that one can't determine if the paid app is worth while.",
+   "date": "2016-03-01T08:58:15-07:00",
+   "version": "4.4",
+   "author": "CraigsReviewNickname777"
+  },
+  {
+   "id": "1339580914",
+   "rating": 1,
+   "title": "Frustrating, cumbersome",
+   "text": "Very frustrating to use. Pop-up on nearly every screen trying to get you to upgrade to premium version. Can't track past measurements, limited to no more than 5 different body parts. And if you don't want to make \"weight\" one of the five things you're tracking, most of the features don't work.",
+   "date": "2016-02-27T08:39:47-07:00",
+   "version": "4.4",
+   "author": "PR33333"
+  },
+  {
+   "id": "1334296227",
+   "rating": 4,
+   "title": "Love it.",
+   "text": "It keeps me on track during my weightloss journey.  The only down part you have to go through to many screens just to put in weight. Because I don't measure myself that often.",
+   "date": "2016-02-17T02:15:58-07:00",
+   "version": "4.4",
+   "author": "Schmidlj"
+  },
+  {
+   "id": "1329947312",
+   "rating": 5,
+   "title": "Good choice for tracking body comp",
+   "text": "Needed something to track my measurements week to week and this app does the job well. I did opt to do the paid version so I can include photos.",
+   "date": "2016-02-08T10:21:14-07:00",
+   "version": "4.4",
+   "author": "Jltcummings"
+  },
+  {
+   "id": "1318940337",
+   "rating": 5,
+   "title": "So many ways",
+   "text": "I love that it has so many ways to track progress. I love it.",
+   "date": "2016-01-19T06:21:13-07:00",
+   "version": "4.4",
+   "author": "mac_hine82"
+  },
+  {
+   "id": "1315110301",
+   "rating": 1,
+   "title": "Won't access photos from Phone",
+   "text": "You can only add photos you take with the app. Body shots are hard to take. Taking several and choosing the best from my album is preferred. Wish I knew this before purchasing.",
+   "date": "2016-01-11T18:27:27-07:00",
+   "version": "4.4",
+   "author": "Eopl"
+  },
+  {
+   "id": "1300293584",
+   "rating": 5,
+   "title": "This is my Go-To Tracking App!",
+   "text": "I’ve tried a lot of different tracking apps for weight, inches, body fat, etc.  And often they are so full of extraneous things like tutorials or advice or whatever, or even just seriously cluttered interfaces.  I just want a clean, simple app that does exactly what I want, to track my weight, inches, and body fat, even set a goal if I wish, and to look back over progress (or lack thereof!!).  I found this app (well, the old bodytrack.it) and threw away all the others.  This is exactly what I was looking for.  I was very disappointed but then happy when bodytrack.it disappeared but was morphed into Progress (still pretty much the same app!) and my data was easily converted over from the old app to the new without issue by the creator (who is super nice and responsive).  It has a clean and easy to use interface, you can set a goal if you like, you can take comparison photos, you can track progress.  You can set custom items to track as well.   I highly recommend this app, and would love to see more tracking apps with this interface, like for vitamins/meds, or customizable “track whatever” sort of thing.  Thanks!!!",
+   "date": "2015-12-13T18:26:22-07:00",
+   "version": "4.3",
+   "author": "TooFyrii"
+  },
+  {
+   "id": "1295790923",
+   "rating": 5,
+   "title": "My favorite tracking app",
+   "text": "I was one of the users of BodyTrack.it whose data didn’t seamlessly migrate over to Progress. To his credit, Lewis took my data for me and created a file that Progress could use and, voila, I’m back to tracking. \n\nIt’s such a lovely clean interface, unlike all the other apps. As for the negative reviewers who are displeased with a small number of measurements allowed on the free version… you know, I get it—paying for apps can be a drag when there are so many free ones out there. But $4 is not a heck of a lot (a lot of us spend more than that on our lattes) and these developers spend a lot of time making these apps. Can you make an app? Probably not (don’t get me wrong some of you, no doubt, can). \n\nIf you like it, bit the bullet and buy it. It’s lovely interface that is pleasant to use and has tremendous customer service. You can’t say that often.",
+   "date": "2015-12-04T09:24:53-07:00",
+   "version": "4.3",
+   "author": "C_Coy"
+  },
+  {
+   "id": "1294502425",
+   "rating": 3,
+   "title": "Graphs don't work",
+   "text": "Would be perfect 5/5 if the app didn't crash every time the phone is turned to the right to check graphs. Nice interface. Simple to use, clean.",
+   "date": "2015-12-01T15:27:25-07:00",
+   "version": "4.3",
+   "author": "Gracie-Ann"
+  },
+  {
+   "id": "1293885063",
+   "rating": 1,
+   "title": "REALLY?",
+   "text": "Only 5 measurements allowed??  Really? Glad this was free cuz I'm deleting it",
+   "date": "2015-11-30T06:16:46-07:00",
+   "version": "4.3",
+   "author": "Krissy0044"
+  },
+  {
+   "id": "1293021323",
+   "rating": 4,
+   "title": "Love the customization!!",
+   "text": "I love how you can add\ncustomized measurements\nfor tracking! I am having one bug issue- when I go to upload pictures (under results- after I entered my new measurements) - it crashes; only when I am uploading pictures from my phone- once this bug is fixed - it would be 5stars!!",
+   "date": "2015-11-28T12:38:32-07:00",
+   "version": "4.3",
+   "author": "Riah525"
+  },
+  {
+   "id": "1290329969",
+   "rating": 5,
+   "title": "Love it",
+   "text": "Very simple app for keeping track of weight and measurements. I especially like the feature for taking photos. It helped me see my weight loss when I couldn't always see it in the mirror.",
+   "date": "2015-11-22T15:01:14-07:00",
+   "version": "4.2",
+   "author": "Faeryqueen21"
+  },
+  {
+   "id": "1289802874",
+   "rating": 5,
+   "title": "Great app",
+   "text": "This app is exactly what I have been looking for. Is helps you track your measurements and see changes of your body shape every day. Happy I found it.",
+   "date": "2015-11-21T13:42:56-07:00",
+   "version": "4.3",
+   "author": "vinooska"
+  },
+  {
+   "id": "1282496372",
+   "rating": 1,
+   "title": "Tricked me into paying for Pro",
+   "text": "While I was exploring the app, a popup tried to get me to upgrade to Pro. It had two buttons; as far as I can tell based on my experience they BOTH charge you money.",
+   "date": "2015-11-05T16:58:18-07:00",
+   "version": "4.2",
+   "author": "oud315"
+  },
+  {
+   "id": "1275110046",
+   "rating": 2,
+   "title": "Tricked me into upgrading to \"pro\" for $4",
+   "text": "I just downloaded this app yesterday and so far enjoyed it. But today I rotated the screen to see my stats and a pop up came up and said \"upgrade to pro to see your graph\" it had two things to click on. One said \"upgrade now\" and the other said something else that I interpreted as \"resume app\" (I can't remember what it said now, like \"integrate app\" or something. Sorry, brain fart).\n\nAs soon as I clicked it, it said \"Thank you for upgrading to pro!!\" O_o\n\n(I did NOT click on the \"upgrade to pro\" button)\n\nI didn't want to upgrade to pro nor did I need to.\n\nI know it's just $4, but it's $4 wasted that I was tricked into paying.\n\nI like the app but I am not okay with such a sneaky trick.\n\nPlus, the app \"Happy Scale\" shows you graphs for free without any upgrade or payment.\n\nI was pleased with the app until they tricked me into an upgrade I didn't want or need 👎🏼😠",
+   "date": "2015-10-21T13:29:51-07:00",
+   "version": "4.2",
+   "author": "staay"
+  },
+  {
+   "id": "1266048162",
+   "rating": 2,
+   "title": "Health Integration Broken",
+   "text": "Health kit integration broken. Probably from iOS 9.",
+   "date": "2015-10-02T17:49:59-07:00",
+   "version": "4.2",
+   "author": "Tessie Kat 89"
+  },
+  {
+   "id": "1261764502",
+   "rating": 5,
+   "title": "Great update!",
+   "text": "Yay, it's working again! Everything's fixed now and I'm back on track.",
+   "date": "2015-09-23T10:34:56-07:00",
+   "version": "4.2",
+   "author": "MyNameisTickles"
+  },
+  {
+   "id": "1260847061",
+   "rating": 2,
+   "title": "Adding measurements",
+   "text": "I can't add or delete any measurements. The app is totally nonfunctional and useless right now",
+   "date": "2015-09-21T11:24:02-07:00",
+   "version": "4.1",
+   "author": "AnneKeli"
+  },
+  {
+   "id": "1260791122",
+   "rating": 1,
+   "title": "Update for iOS 9",
+   "text": "Loved this app before but it doesn't seem to work at all with the new software update. Update soon please!!!",
+   "date": "2015-09-21T08:38:53-07:00",
+   "version": "4.1",
+   "author": "Amylynnpro"
+  },
+  {
+   "id": "1260334410",
+   "rating": 3,
+   "title": "Needs updates?",
+   "text": "Downloaded it but couldn't get it to work. Maybe needs to be updated to work with iOS9? Seems like it'd be a good app to use",
+   "date": "2015-09-20T10:04:48-07:00",
+   "version": "4.1",
+   "author": "Shortegurl21"
+  },
+  {
+   "id": "1252474809",
+   "rating": 3,
+   "title": "So far ok",
+   "text": "It won't let me adjust what I want to track. Can't even get to the screen without an \"upgrade\". I don't want to track my bmi since I have no way of measuring",
+   "date": "2015-09-03T04:33:44-07:00",
+   "version": "4.1",
+   "author": "figment767"
+  },
+  {
+   "id": "1240476184",
+   "rating": 3,
+   "title": "Good but needs some improvement",
+   "text": "I really like the app, but would like to see comparisons of weights and measurements. I think it would take it to the next level.",
+   "date": "2015-08-09T09:09:42-07:00",
+   "version": "4.0.8",
+   "author": "Jennyninny"
+  },
+  {
+   "id": "1236066016",
+   "rating": 3,
+   "title": "Would be perfect if...",
+   "text": "I really like the layout of this app and have a couple suggestions that I feel would be nice improvements.  First for some reason, on the graphs the dates don't go all across the bottom.  I'm wondering if this changes after you've had it for a month.  Also it would be nice to compare weight, and measurements on the graph.  With those two changes I would be giving this app a 5 for sure.",
+   "date": "2015-07-31T11:29:11-07:00",
+   "version": "4.1",
+   "author": "Dj koz"
+  },
+  {
+   "id": "1210802896",
+   "rating": 5,
+   "title": "Camera works!",
+   "text": "Figured out camera issue; make sure you allow access to camera through privacy settings.  Great app!",
+   "date": "2015-06-11T10:27:01-07:00",
+   "version": "4.0.8",
+   "author": "Kiminchi"
+  },
+  {
+   "id": "1199244274",
+   "rating": 3,
+   "title": "Great potential",
+   "text": "I love the interface, but every time I try to save a side view picture, the app crashes. Super frustrating.",
+   "date": "2015-05-18T09:50:47-07:00",
+   "version": "4.0.7",
+   "author": "Mamatron"
+  },
+  {
+   "id": "1188199755",
+   "rating": 1,
+   "title": "Zero Stars (It made pick a star.)",
+   "text": "It a great user interface, BUT when you go to take pictures OR look at charts it crashes. It crash four or five time in minute. I urge you look for a different app, at least until they find and fix the crashing. It's unusable at this point.",
+   "date": "2015-04-25T23:43:34-07:00",
+   "version": "4.0.6",
+   "author": "harlsimsy"
+  },
+  {
+   "id": "1184112224",
+   "rating": 5,
+   "title": "Handy for health goals",
+   "text": "I like that I can view charts of my progress and add photos. Nice interface, and I keep track of body fat, weight, and more. Very handy and useful app.",
+   "date": "2015-04-17T10:46:11-07:00",
+   "version": "4.0.6",
+   "author": "Jim591710401"
+  },
+  {
+   "id": "1156201166",
+   "rating": 2,
+   "title": "Frustrated",
+   "text": "I really want this app to work because it has everything I need, BUT every. single. time. I open the app it crashes. It can take three tries to get it work. Ugh. Please send a fix.",
+   "date": "2015-02-22T07:30:50-07:00",
+   "version": "4.0.5",
+   "author": "MRSJJ1"
+  },
+  {
+   "id": "1143684531",
+   "rating": 4,
+   "title": "Great except",
+   "text": "I've this app for its simple, clean layout and its ability to track the things I want to document. My only complaint is with the photos. You can't input photos you have on your camera roll, and it doesn't have timer capabilities. I take my photos using a tripod not a mirror. I can figure out any way to add those photos to Bodytrackit.",
+   "date": "2015-02-08T05:11:08-07:00",
+   "version": "4.0.5",
+   "author": "EbonyR"
+  },
+  {
+   "id": "1139465704",
+   "rating": 1,
+   "title": "Disappointed",
+   "text": "Loved this app when I first started using it; however, like others, my data became lost.   Tried starting over, but it continues to lose my data.  Time for a new app . . .\n\nPros:  easy to use,  tracks all the right info,  includes before / after photos\n\nCons:  looses your data, hence the 1 star rating, otherwise I would have rated it 5 stars",
+   "date": "2015-01-31T12:50:16-07:00",
+   "version": "4.0.5",
+   "author": "Jessnickate"
+  },
+  {
+   "id": "996186901",
+   "rating": 5,
+   "title": "Most beautiful and useful weight app",
+   "text": "This app has the most pleasing design I've found so far and I've scoured the App Store for something simple, useful, and beautiful. \n\nIt has enough functionality to be very useful, but no so much you're deterred from using due to being overwhelmed with complexity.",
+   "date": "2014-05-20T19:47:40-07:00",
+   "version": "4.0.5",
+   "author": "spammealso"
+  },
+  {
+   "id": "985386136",
+   "rating": 5,
+   "title": "Just perfect",
+   "text": "Works great and is no more and no less than needed to track and achieve results.",
+   "date": "2014-04-30T10:06:03-07:00",
+   "version": "4.0.3",
+   "author": "Cooper176"
+  },
+  {
+   "id": "929294508",
+   "rating": 5,
+   "title": "Erik J Paquet",
+   "text": "Very good for my gym routine.  I have a 3 day cycle of pull (Biceps, Back, Abs), Push (Shoulders, chest, triceps), and legs (quads, hamstrings, calfs).  With all these exercises, and living in a country that uses kilograms, this app helps me keep track of my weight and the weight I use for exercises.  I would recommend this app for anyone needing a simple and easy to use gym rat application.  Thanks a lot!",
+   "date": "2014-01-22T07:33:29-07:00",
+   "version": "4.0.1",
+   "author": "JorginhoBarzinho"
+  }
+ ]
+}

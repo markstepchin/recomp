@@ -1,0 +1,25 @@
+{
+ "app": {
+  "slug": "check-in",
+  "app_id": 6761781961,
+  "name": "Check-In: Physique",
+  "developer": "Bryan Mc Namara",
+  "in_roundup": true,
+  "genre": "Health & Fitness",
+  "price": 0.0,
+  "rating_count_us": 0,
+  "rating_avg_us": null,
+  "first_released": "2026-04-12",
+  "last_updated": "2026-10-06",
+  "version": "2.7",
+  "store_url": "https://apps.apple.com/us/app/id6761781961",
+  "reviews_collected": 0,
+  "feed_pages_mostrecent": 1,
+  "feed_rows_mostrecent": 0,
+  "feed_rows_mosthelpful": 0,
+  "oldest_review": null,
+  "newest_review": null
+ },
+ "fetched_at": "2026-10-17T20:19:22.618073-07:00",
+ "reviews": []
+}

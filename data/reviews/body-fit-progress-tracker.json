@@ -1,0 +1,476 @@
+{
+ "app": {
+  "slug": "body-fit-progress-tracker",
+  "app_id": 1131633112,
+  "name": "Body Fit Progress Tracker - Photo & Measurements",
+  "developer": "Zinitt",
+  "in_roundup": false,
+  "genre": "Health & Fitness",
+  "price": 0.0,
+  "rating_count_us": 33,
+  "rating_avg_us": 3.45,
+  "first_released": "2016-09-23",
+  "last_updated": "2017-01-18",
+  "version": "1.2.0",
+  "store_url": "https://apps.apple.com/us/app/id1131633112",
+  "reviews_collected": 50,
+  "feed_pages_mostrecent": 2,
+  "feed_rows_mostrecent": 50,
+  "feed_rows_mosthelpful": 50,
+  "oldest_review": "2016-09-23",
+  "newest_review": "2021-06-07"
+ },
+ "fetched_at": "2026-10-17T20:19:19.035882-07:00",
+ "reviews": [
+  {
+   "id": "7437099351",
+   "rating": 1,
+   "title": "Won’t open",
+   "text": "Maybe this app isn’t supported anymore, but when I try to open it, it stops on the intro screen and then nothing happens.",
+   "date": "2021-06-07T05:46:06-07:00",
+   "version": "1.2.0",
+   "author": "dnxhdi"
+  },
+  {
+   "id": "2805270186",
+   "rating": 1,
+   "title": "Don’t buy!",
+   "text": "Despite charging you $.99 for taking the picture of your “back” it doesn’t allow you to use the front camera on the iPhone which means it’s impossible to take a good back picture! Total rip off until they add that capability!",
+   "date": "2018-06-30T08:58:00-07:00",
+   "version": "1.2.0",
+   "author": "MedicalConcepts"
+  },
+  {
+   "id": "2504421244",
+   "rating": 1,
+   "title": "Don’t bother",
+   "text": "Useless. Interface is not user friendly.",
+   "date": "2018-05-04T09:23:13-07:00",
+   "version": "1.2.0",
+   "author": "Analeesia"
+  },
+  {
+   "id": "2335970113",
+   "rating": 4,
+   "title": "The app used to be better than now",
+   "text": "I don’t know what update have been done to the app, but it was much better to use and I was able to open and zoom in my recorded pics .. no I can’t!",
+   "date": "2018-03-22T21:39:26-07:00",
+   "version": "1.2.0",
+   "author": "Zeeeeegyitvicututuf"
+  },
+  {
+   "id": "2289148469",
+   "rating": 2,
+   "title": "Monthly stats not working",
+   "text": "The stats showing daily changes but selected monthly.\n\nClicking on monthly shows no options.\n\nMaking it really hard to track month to month improvements",
+   "date": "2018-03-09T17:53:08-07:00",
+   "version": "1.2.0",
+   "author": "PedroAssisBorges"
+  },
+  {
+   "id": "2245035459",
+   "rating": 1,
+   "title": "Paid twice and still can’t get the Pro version benefits",
+   "text": "I’ve paid twice (first time my daughter deleted the app) and paid again and still cannot get the benefits from the Pro Version! Kinda frustrating",
+   "date": "2018-02-24T23:01:37-07:00",
+   "version": "1.2.0",
+   "author": "Anapau6"
+  },
+  {
+   "id": "2108370552",
+   "rating": 1,
+   "title": "This is crap",
+   "text": "Hard to navigate. Loses data.",
+   "date": "2018-01-20T07:08:27-07:00",
+   "version": "1.2.0",
+   "author": "SpiritHawk64"
+  },
+  {
+   "id": "1836474254",
+   "rating": 1,
+   "title": "No good",
+   "text": "I don’t understand why it has so many good reviews. It’s not user friendly, I downloaded it and within 2 seconds an ad popped up and then it froze. It looks really outdated. Deleted from my phone immediately.",
+   "date": "2017-10-08T22:04:04-07:00",
+   "version": "1.2.0",
+   "author": "Dianita1"
+  },
+  {
+   "id": "1659815204",
+   "rating": 5,
+   "title": "This app is what I needed!",
+   "text": "Seeing the results of your hard work in terms other than in pounds is such a huge motivator. Being able to see inches that I've lost and having pictures where I can actually see that I look different is huge! I wish I'd thought to look for an app like this (and then found this exact app!) a lot earlier!",
+   "date": "2017-06-27T10:33:29-07:00",
+   "version": "1.2.0",
+   "author": "EmilyNeedsSleep"
+  },
+  {
+   "id": "1651297571",
+   "rating": 1,
+   "title": "Not too useful",
+   "text": "Would be better if I can change the kg to a different unit, such as pounds.",
+   "date": "2017-06-20T10:51:14-07:00",
+   "version": "1.2.0",
+   "author": "McCoy27😀"
+  },
+  {
+   "id": "1576543428",
+   "rating": 5,
+   "title": "Fitness",
+   "text": "I love that you can add exact measurements and photos to help monitor your progress",
+   "date": "2017-03-30T12:50:45-07:00",
+   "version": "1.2.0",
+   "author": "johnsmith19911"
+  },
+  {
+   "id": "1571088007",
+   "rating": 4,
+   "title": "Good App",
+   "text": "I like how you can enter all the appropriate variables into this app to get a more accurate reading vs. just using your weight which is not a useful tool for measuring your fitness. This app allows you to upload pics and measurements to keep strict progress on how you are doing. Excellent!",
+   "date": "2017-03-23T15:58:06-07:00",
+   "version": "1.2.0",
+   "author": "LesGrossman"
+  },
+  {
+   "id": "1563982544",
+   "rating": 5,
+   "title": "Awesome",
+   "text": "Great body tracker!",
+   "date": "2017-03-13T20:59:33-07:00",
+   "version": "1.2.0",
+   "author": "Glen reed"
+  },
+  {
+   "id": "1548942898",
+   "rating": 5,
+   "title": "Not a bad idea!",
+   "text": "For those who love taking selfies of their fitness bodies, this app is perfect for you to track your real progress!",
+   "date": "2017-02-20T18:30:56-07:00",
+   "version": "1.2.0",
+   "author": "Treasi"
+  },
+  {
+   "id": "1547822616",
+   "rating": 5,
+   "title": "Track your body shape to stay accountable",
+   "text": "This app goes further than just tracking your weight and BMI. Tracking your body shape and other parameters daily will help keep you accountable when working out. This app helps me stick to my routine and see my results! Day-to-day changes are hard to notice and with this app you're able to record beyond that. The app is robust with a smooth UI.",
+   "date": "2017-02-19T03:15:45-07:00",
+   "version": "1.2.0",
+   "author": "Alexis.Pena"
+  },
+  {
+   "id": "1547791283",
+   "rating": 4,
+   "title": "Nice",
+   "text": "Good and simple app to track your body activity!",
+   "date": "2017-02-19T02:24:22-07:00",
+   "version": "1.2.0",
+   "author": "LittleGnome95"
+  },
+  {
+   "id": "1545521992",
+   "rating": 5,
+   "title": "great app for the fitness enthusiasts!",
+   "text": "it keeps professional data and always pushes you to lead a healthy life. i can show my efforts among friends through this app, which is the most important🌝",
+   "date": "2017-02-16T00:33:08-07:00",
+   "version": "1.2.0",
+   "author": "dragonslayer cheung"
+  },
+  {
+   "id": "1540501193",
+   "rating": 5,
+   "title": "Useful app!",
+   "text": "Very powerful instrument for workouts! 🏋️‍♀️ nice version on iPad 👍😎",
+   "date": "2017-02-09T00:02:49-07:00",
+   "version": "1.2.0",
+   "author": "Igory^"
+  },
+  {
+   "id": "1535750788",
+   "rating": 5,
+   "title": "Great",
+   "text": "Comprehensive workout app to see your progress. Highly recommend if you are serious with goals.",
+   "date": "2017-02-02T12:26:04-07:00",
+   "version": "1.2.0",
+   "author": "Lingonberrydev"
+  },
+  {
+   "id": "1535319830",
+   "rating": 5,
+   "title": "Nice app!",
+   "text": "Best of Body fitness app.\nGood UI!",
+   "date": "2017-02-01T22:25:15-07:00",
+   "version": "1.2.0",
+   "author": "SONIC_THE_HEDGEHOG"
+  },
+  {
+   "id": "1535085312",
+   "rating": 5,
+   "title": "Good app!",
+   "text": "Very good app for tracking all body parts measurements that matter. Also can include front, sides, and even back photos with each new entry. Breaks down results on to graphs. Could not ask for more.",
+   "date": "2017-02-01T13:18:51-07:00",
+   "version": "1.2.0",
+   "author": "Tony Krop"
+  },
+  {
+   "id": "1530063289",
+   "rating": 5,
+   "title": "Helpful!",
+   "text": "Professionally made app, easy to understand and use. I've been waiting for something like this app. \nIncredibly useful and well-designed app with great UI/UX! Thanks:)",
+   "date": "2017-01-25T01:01:26-07:00",
+   "version": "1.2.0",
+   "author": "wcm1016"
+  },
+  {
+   "id": "1517382360",
+   "rating": 1,
+   "title": "Complete Crap",
+   "text": "Terrible app! It is clunky and outdated looking. You cannot even view the pictures you upload side by side, or even view them larger than a tiny thumbnail. The app deceptively has pop-ups to upgrade so I accidentally upgraded. It's Just as crappy after the upgrade no real change in quality . Do not waste your time with crap.",
+   "date": "2017-01-07T12:39:43-07:00",
+   "version": "1.1.0",
+   "author": "Karrahboo"
+  },
+  {
+   "id": "1515504692",
+   "rating": 1,
+   "title": "Very limited app! Even the Pro version.",
+   "text": "Dislike this app very much! I upload pictures from a different date into a slot and tried to substitute with the right ones it won't let me save. Photos don't save into your album if you use their app cam and the pictures can't be zoom in or see them in full size. It's terrible, not easy to use and only don't have the option of imperial measurements. Waste of my money!",
+   "date": "2017-01-04T17:42:01-07:00",
+   "version": "1.1.0",
+   "author": "Mayka007"
+  },
+  {
+   "id": "1512606371",
+   "rating": 5,
+   "title": "Whoa",
+   "text": "Concept - sexy. Clean work you have here. Cannot train without the app - looks like I am addicted",
+   "date": "2016-12-31T03:40:28-07:00",
+   "version": "1.1.0",
+   "author": "markleinad11"
+  },
+  {
+   "id": "1503865466",
+   "rating": 5,
+   "title": "If you love your bod...",
+   "text": "Use this app! It's great! Helped me\nKeep track and stay healthy.",
+   "date": "2016-12-17T18:25:33-07:00",
+   "version": "1.1.0",
+   "author": "ChronoGawd"
+  },
+  {
+   "id": "1503128471",
+   "rating": 5,
+   "title": "Great app",
+   "text": "If you are serious about your workouts you must get this app! You really keep track of your progress easily wherever you are, you just need to have your phone, it's easy to upload the pictures and analyze your progress :-)",
+   "date": "2016-12-16T13:51:59-07:00",
+   "version": "1.1.0",
+   "author": "Roplt"
+  },
+  {
+   "id": "1500220663",
+   "rating": 5,
+   "title": "Great body tracker",
+   "text": "Very simple to use and input all the data. Keep tracking progress and see results of your efforts over time.",
+   "date": "2016-12-11T15:57:23-07:00",
+   "version": "1.1.0",
+   "author": "Neha M."
+  },
+  {
+   "id": "1500164141",
+   "rating": 5,
+   "title": "Good workout tracker",
+   "text": "Interesting idea. Ease to follow your progress. Good for everyone who wants to set exercises goals.",
+   "date": "2016-12-11T12:31:18-07:00",
+   "version": "1.1.0",
+   "author": "VideoW"
+  },
+  {
+   "id": "1497357319",
+   "rating": 4,
+   "title": "Idea is nice !",
+   "text": "Keep saving photos of body and see the progress. The idea is nice. But maybe there is a room to improve UI-wise.",
+   "date": "2016-12-06T21:16:06-07:00",
+   "version": "1.1.0",
+   "author": "Brian26734"
+  },
+  {
+   "id": "1496602534",
+   "rating": 5,
+   "title": "Nice tracker",
+   "text": "It's cool to be able to add photos to your different check-ins. It really helps you see the progress you're making.",
+   "date": "2016-12-05T11:20:47-07:00",
+   "version": "1.1.0",
+   "author": "bfkew84"
+  },
+  {
+   "id": "1495502649",
+   "rating": 5,
+   "title": "Nice fitness app",
+   "text": "New apps help keep me motivated!!!",
+   "date": "2016-12-03T16:39:39-07:00",
+   "version": "1.1.0",
+   "author": "PartyDude4Life"
+  },
+  {
+   "id": "1493264314",
+   "rating": 5,
+   "title": "Lets build our body!!",
+   "text": "I really enjoy this kind of fitness app. The functions of this one are so great for all users.Trace my body fit progress at any time, show the achievements after training to the friends and clear-smart report to view your bodyfit progress.  All of these functions can help myself to improve the quality of fitness. Such a nice fitness app, keep going!!!",
+   "date": "2016-11-29T23:28:29-07:00",
+   "version": "1.1.0",
+   "author": "Jayleon!"
+  },
+  {
+   "id": "1489712489",
+   "rating": 4,
+   "title": "Good idea",
+   "text": "This app is sort of confusing. I recommend upgrading the app to be more simple and aesthetic. However, the app in itself is a great concept and I definitely see potential. 4 stars for its near-future rating ;). Keep it up! Good luck.",
+   "date": "2016-11-23T10:25:49-07:00",
+   "version": "1.1.0",
+   "author": "sean10han"
+  },
+  {
+   "id": "1489691297",
+   "rating": 5,
+   "title": "Great app",
+   "text": "Amazing Great app.... I loved it...",
+   "date": "2016-11-23T09:26:09-07:00",
+   "version": "1.1.0",
+   "author": "Sergey Levchuk"
+  },
+  {
+   "id": "1488843461",
+   "rating": 5,
+   "title": "Useful",
+   "text": "Good app to track your workout progress.",
+   "date": "2016-11-21T23:29:35-07:00",
+   "version": "1.1.0",
+   "author": "Lu20184652"
+  },
+  {
+   "id": "1488195569",
+   "rating": 5,
+   "title": "Good concept",
+   "text": "Just downloaded. Is enticing me to go exercise and see how it goes. Hopefully the results will be good.",
+   "date": "2016-11-20T18:45:25-07:00",
+   "version": "1.1.0",
+   "author": "toiavalle"
+  },
+  {
+   "id": "1480736973",
+   "rating": 1,
+   "title": "Waste of money",
+   "text": "This app is hard to use. The images look squashed when uploaded and it keeps freezing.",
+   "date": "2016-11-07T23:22:50-07:00",
+   "version": "1.0.0",
+   "author": "Epic Arts"
+  },
+  {
+   "id": "1478550234",
+   "rating": 5,
+   "title": "Great fitness tracker",
+   "text": "This is the best way to get fit by far. You can keep track of everything and it's just awesome.",
+   "date": "2016-11-04T09:56:50-07:00",
+   "version": "1.0.0",
+   "author": "Sicstik13"
+  },
+  {
+   "id": "1469156347",
+   "rating": 4,
+   "title": "Ok",
+   "text": "Ok",
+   "date": "2016-10-18T19:03:59-07:00",
+   "version": "1.0.0",
+   "author": "Mikethemike66"
+  },
+  {
+   "id": "1462670295",
+   "rating": 5,
+   "title": "Great app",
+   "text": "A fine and practical app, and it's very easy to use. Recommended :-)",
+   "date": "2016-10-07T07:08:55-07:00",
+   "version": "1.0.0",
+   "author": "P Bovin"
+  },
+  {
+   "id": "1458632335",
+   "rating": 5,
+   "title": "Great fitness app",
+   "text": "This app is great for keeping track of changes to weight/muscle over time. It can be hard to see a difference since changes are so gradual, but this app really helps see the difference!",
+   "date": "2016-09-30T14:07:01-07:00",
+   "version": "1.0.0",
+   "author": "Led-better"
+  },
+  {
+   "id": "1458132232",
+   "rating": 3,
+   "title": "Has a potential",
+   "text": "It's not perfect at this moment. Anyway the functions are work as they said. Look forward to getting better UX!",
+   "date": "2016-09-29T18:33:16-07:00",
+   "version": "1.0.0",
+   "author": "TracksToday"
+  },
+  {
+   "id": "1457894619",
+   "rating": 5,
+   "title": "Higlhy Recommended!",
+   "text": "So easy and simple to track your progress. Great idea executed brilliantly!",
+   "date": "2016-09-29T07:32:56-07:00",
+   "version": "1.0.0",
+   "author": "appxllence"
+  },
+  {
+   "id": "1457831254",
+   "rating": 5,
+   "title": "Track progress",
+   "text": "Handy app to track your progress. Neat and helpful",
+   "date": "2016-09-29T05:43:55-07:00",
+   "version": "1.0.0",
+   "author": "Chiara_ferragni"
+  },
+  {
+   "id": "1457640577",
+   "rating": 5,
+   "title": "Good app!",
+   "text": "Good 😎",
+   "date": "2016-09-28T22:42:05-07:00",
+   "version": "1.0.0",
+   "author": "BobJohan"
+  },
+  {
+   "id": "1457407726",
+   "rating": 5,
+   "title": "Great Workout Tracker",
+   "text": "This app keeps track of how my body changes in reaction to my workout, which keeps me highly motivated. Really easy to use. Recommend!",
+   "date": "2016-09-28T11:06:12-07:00",
+   "version": "1.0.0",
+   "author": "Bleachp"
+  },
+  {
+   "id": "1457401541",
+   "rating": 5,
+   "title": "Fitness",
+   "text": "Excellent app to check your progress, just only to start of training but it is very intuitive",
+   "date": "2016-09-28T10:47:09-07:00",
+   "version": "1.0.0",
+   "author": "redfish80"
+  },
+  {
+   "id": "1457016527",
+   "rating": 5,
+   "title": "Great app",
+   "text": "Easy to use app but it it help me so much . True body fit app . Nice app",
+   "date": "2016-09-27T19:51:50-07:00",
+   "version": "1.0.0",
+   "author": "Evanro1"
+  },
+  {
+   "id": "1454467341",
+   "rating": 5,
+   "title": "Very nice",
+   "text": "The app is very nice. I noticed that the graphs for the empty areas shouldn’t mark as zero, it doesn’t represent the graph properly. \n\nRecommended to see the progress with graphs.",
+   "date": "2016-09-23T05:25:03-07:00",
+   "version": "1.0.0",
+   "author": "Lucidreamer1971"
+  }
+ ]
+}
