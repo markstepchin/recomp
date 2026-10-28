@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto" data-theme="system">
+  <head>
+    <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <meta name="apple-itunes-app" content="app-id=6760444125" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>How I Review Progress Photo Apps | Recomp</title>
+    <!-- Copy: Mark's "How I Review Progress Photo Apps" (Oct 28, 2026), used verbatim. The URL stays /blog/how-i-test-progress-photo-apps/ so existing links keep working. Earlier versions of this page are in git history. -->
+    <meta name="description" content="How I review progress photo apps: I download each one, pay for the subscription, and test it with real photos and weights from my own transformation." />
+    <link rel="stylesheet" href="../../styles/output.css?v=aef3e022" />
+    <link rel="canonical" href="https://progressphotos.app/blog/how-i-test-progress-photo-apps/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta property="og:title" content="How I Review Progress Photo Apps" />
+    <meta property="og:description" content="How I review progress photo apps: I download each one, pay for the subscription, and test it with real photos and weights from my own transformation." />
+    <meta property="og:url" content="https://progressphotos.app/blog/how-i-test-progress-photo-apps/" />
+    <meta property="og:image" content="https://progressphotos.app/assets/step-compare.webp?v=5" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How I Review Progress Photo Apps" />
+    <meta name="twitter:description" content="How I review progress photo apps: I download each one, pay for the subscription, and test it with real photos and weights from my own transformation." />
+    <!-- TODO before publishing: add article:published_time, article:modified_time, and datePublished/dateModified in the JSON-LD; add to llms.txt. -->
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+    <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How I Review Progress Photo Apps",
+  "description": "How I review progress photo apps: I download each one, pay for the subscription, and test it with real photos and weights from my own transformation.",
+  "author": {
+    "@type": "Person",
+    "@id": "https://progressphotos.app/about/#mark",
+    "name": "Mark Stepchin",
+    "url": "https://progressphotos.app/about/",
+    "jobTitle": "Software engineer"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Recomp",
+    "url": "https://progressphotos.app/"
+  },
+  "url": "https://progressphotos.app/blog/how-i-test-progress-photo-apps/",
+  "mainEntityOfPage": "https://progressphotos.app/blog/how-i-test-progress-photo-apps/",
+  "image": "https://progressphotos.app/assets/step-compare.webp?v=5"
+}
+    </script>
+  </head>
+  <body class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]">
+    <div class="flex min-h-dvh flex-col">
+      <!-- chrome:header current="blog" depth="2" -->
+      <header class="border-b border-card-border">
+        <div
+          class="mx-auto flex w-full text-xl max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
+        >
+          <a
+            class="inline-flex items-center gap-2 text-fg font-medium tracking-wordmark no-underline hover:no-underline max-md:min-h-11"
+            href="../../"
+          >
+            <img
+              class="size-8 shrink-0 rounded-[22%] border border-card-border"
+              src="../../assets/recomp-app-icon.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Recomp
+          </a>
+          <nav
+            class="ml-auto flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
+            aria-label="Site"
+          >
+            <a
+              class="text-fg no-underline hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              href="../"
+              aria-current="page"
+              >Blog</a
+            >
+            <a
+              class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <!-- /chrome:header -->
+
+      <main class="mx-auto w-full max-w-[800px] flex-1 px-gutter py-12">
+        <p class="text-micro text-muted pb-3">
+          <a class="text-muted" href="../">Blog</a>
+          · Best progress photo apps
+        </p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-4">How I Review Progress Photo Apps</h1>
+        <p class="pb-6"><em>By <a class="text-muted" href="../../about/" rel="author">Mark Stepchin</a> · Published Oct 27, 2026. Tested October 2026.</em></p>
+        <aside
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-labelledby="summary-heading"
+        >
+          <h2 id="summary-heading" class="text-h4 font-bold tracking-h4">
+            Summary
+          </h2>
+          <div class="mt-3 text-muted"><p>I download every app I review, pay for the subscription if there is one, and test it with real photos and weights from my own fitness transformation. I measure how many taps and how much time it takes to add a check-in, compare dates, and align photos. The app I'm looking for lets me finish a check-in in under 30 seconds, lets me compare hundreds of photos effortlessly, keeps the photos front and center, and never sends my photos to a third-party server.</p></div>
+        </aside>
+
+        <div
+          class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4"
+        >
+<h2 id="why-are-my-reviews-different">Why are my reviews different?</h2>
+<p>Most of the reviews I read when I was looking for an app for myself hadn't downloaded and tested the app. They relied mostly on the App Store listing for their information.</p>
+<p>For my reviews, I download the app, set up an account, and pay for the subscription if one exists. I use real photos and weights from my fitness transformation.</p>
+<p>Full disclosure: I build Recomp, a free progress photo app, and I hold it to the same bar as every other app.</p>
+<figure class="mx-auto w-1/2 max-w-[280px]">
+  <img
+    class="block h-auto w-full rounded-card border border-card-border"
+    src="../../assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp"
+    alt="iOS Photos album showing hundreds of weekly front, side, and back progress photos from years of coaching check-ins"
+    width="1290"
+    height="2635"
+  />
+</figure>
+
+<h2 id="who-am-i">Who am I?</h2>
+<p>I've taken progress photos every week since June 6, 2023. During this time, I bulked from 165 to 195 lb from June 6, 2023 to May 21, 2024, then cut to 155 lb from May 21, 2024 to August 18, 2025. You can read more about me on my <a href="/about/">About page</a>.</p>
+<p>Photo comparison kept me confident in my plan and my progress even when I couldn't see the progress in the mirror. Tracking my progress with photos was an essential part of my strategy and my feedback loop.</p>
+<p>I'd used my trainer's app, so I already knew what I did and didn't need. Today I have a Photos collection with 450+ progress photos from my years of tracking, and it's the library I test every app with.</p>
+<h2 id="what-does-a-great-check-in-look-like">What does a great user experience look like?</h2>
+<p>Photos only work as a feedback loop if you take them every week. If a check-in takes more than a minute and a few taps, consistency drops.</p>
+<p>My check-in itself takes under 30 seconds. First thing in the morning, I snap my photos with my camera app and weigh myself. As I'm walking over to the coffee machine, I open the notification for my check-in, add the 3 photos, and update the date if it changed.</p>
+<p>Then I hit save and compare my results to last week, 2 weeks ago, and a month ago. The whole thing takes a minute or two, including the comparison. Every app I test gets measured against that routine.</p>
+<h2 id="what-does-a-progress-photo-app-need">What does a progress photo app need?</h2>
+<p>Not only should the app have the baseline features outlined in <a href="/blog/why-i-built-recomp/">Why I built Recomp</a>, it should do them well. There's quite a range in how well an app does each of these jobs.</p>
+<h3 id="1-a-check-in-should-be-effortless">1. A check-in should be effortless</h3>
+<p>A check-in should take minimal taps. Weight should come from a smart scale through Apple Health when that's available. When it isn't, a weight slider is 1 tap plus a drag, which beats typing the weight in. I should be able to select all 3 photos in the same photo picker instead of opening the picker 3 times.</p>
+<p>What I measure: how many taps and how much time it takes to add a new check-in.</p>
+<h3 id="2-alignment-should-be-effortless">2. Alignment should be effortless</h3>
+<p>Different people prefer different approaches to alignment, so the more an app offers, the better. Auto-align technology is fairly advanced, but it can be hit or miss. Even in ideal situations, it will only get you 90% of the way there, so the app needs easy access to manual alignment as well. Manual alignment approaches include a ghost overlay, gridline variations for different photo-taking styles, and alignment in the comparison mode with photos side by side.</p>
+<p>What I measure: ease of alignment, gridline quality, whether there's a ghost overlay and auto-align, and whether I can align in the side-by-side view.</p>
+<h3 id="3-comparison-should-be-effortless">3. Comparison should be effortless</h3>
+<p>I judge how cumbersome the navigation gets with dozens or hundreds of photos. I also check how easy it is to align photos during a compare session.</p>
+<p>What I measure: how easy it is to compare, and how long and how many taps it takes to compare several dates in quick succession. Comparing dozens or hundreds of photos should be effortless.</p>
+<h3 id="4-the-photos-are-the-star">4. The photos are the star</h3>
+<p>A progress photo app is a photo album app. Photos should be front and center and take up most of the screen. The buttons and any other info shouldn't distract from the main job of the app, which is to display and compare the photos.</p>
+<p>What I measure: how much of the screen the photos take, and whether the buttons get in their way.</p>
+<h3 id="5-data-privacy">5. Data privacy</h3>
+<p>Are your photos ever sent to a third-party server? This is distinct from iCloud backups.</p>
+<p>What I measure: whether photos stay on the device, and what the App Store privacy label and privacy policy say.</p>
+<h2 id="quality-of-life-once-the-basics-work">Quality of life features, if the basics work</h2>
+<ol>
+<li>Bulk import: Can I import my past photos in bulk, does it read the dates from the photo metadata, and how does it handle hundreds of photos?</li>
+<li>Data import and export: Can I import my weight from a CSV, get my photos back out, and leave without being locked in?</li>
+<li>Apple Health: Does it sync my weight from Apple Health?</li>
+<li>Screen privacy: Can I lock the app with Face ID or an app lock, and does it hide my photos in the app switcher?</li>
+<li>Backup and a new phone: Are my photos backed up, for example to iCloud, and can I move everything to a new phone?</li>
+<li>Reminders: Can I set the day, the time and how often I get reminded?</li>
+<li>In-app camera: Does it have a camera with a ghost overlay and pose guides, such as upper body, full body and a 3x3 grid?</li>
+<li>Units: Does it support both metric and imperial?</li>
+<li>Body measurements: Can I add body measurements if I want them, without being forced to?</li>
+<li>Sharing: Can I make a shareable before/after image?</li>
+<li>Timelapse: Can it make a timelapse of my photos?</li>
+<li>Account and originals: Does it work without an account, and does it leave my originals untouched in Photos?</li>
+<li>Editing: Can I edit a check-in's date, and save a partial check-in when I skip a pose?</li>
+<li>Polish: Does it have dark mode, and is it free of ads?</li>
+</ol>
+<h2 id="how-do-i-test-each-app">How do I test each app?</h2>
+<p>I run every app through the same 7 steps, using photos from my 450+ progress photo collection.</p>
+<ol>
+<li>Download the app, go through onboarding, and pay for the subscription.</li>
+<li>Add a few check-ins, each with a weight and front, side and back photos.</li>
+<li>Check whether the app reads the date from the photos. If it doesn't, enter each date manually.</li>
+<li>Check whether the app imports health data. If it doesn't, enter the weight manually.</li>
+<li>Test the alignment and comparison features.</li>
+<li>Test the quality of life features.</li>
+<li>Test bulk import if it's available: how long the import takes, and how the app performs with hundreds of photos.</li>
+</ol>
+<p>If there's an app you like that you want me to review, email me at <a href="mailto:support@progressphotos.app">support@progressphotos.app</a>.</p>
+        </div>
+
+
+        <section
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] mt-12"
+          aria-labelledby="article-cta-heading"
+        >
+          <h2 id="article-cta-heading" class="text-h3 font-bold tracking-h3">
+            See the progress buried in your camera roll
+          </h2>
+          <p class="pt-3 text-muted">
+            Compare progress photos on a before-and-after timeline, scroll to
+            any date instantly, and align photos on the fly. Recomp never
+            uploads your photos or weight data.
+          </p>
+          <p class="pt-6">
+            <a
+              class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85]"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+              data-cta-location="article_footer"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </p>
+        </section>
+
+      </main>
+
+      <!-- chrome:footer depth="2" -->
+      <footer class="pt-8 pb-8">
+        <div class="mx-auto w-full max-w-[800px] px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 max-md:flex-col max-md:justify-center max-md:gap-y-1">
+            <nav class="grid min-w-0 gap-y-1 text-micro max-md:w-full max-md:justify-items-center max-md:gap-y-0" aria-label="Footer">
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../"
+                  >Home</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../"
+                  >Blog</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../about/"
+                  >About</a
+                >
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../privacy/"
+                  >Privacy</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../support/"
+                  >Support</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../roadmap/"
+                  >Roadmap</a
+                >
+              </div>
+            </nav>
+            <div
+              class="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-card-border bg-card p-1.5 max-md:ml-0"
+              role="group"
+              aria-label="Color theme"
+            >
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="system"
+                aria-pressed="true"
+              >
+                Auto
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="light"
+                aria-pressed="false"
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="dark"
+                aria-pressed="false"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /chrome:footer -->
+    </div>
+    <script src="../../js/posthog.js?v=11b6cbc8"></script>
+    <script src="../../js/theme.js?v=a7491962"></script>
+  </body>
+</html>
