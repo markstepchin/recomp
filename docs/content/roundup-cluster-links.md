@@ -120,3 +120,9 @@ Per the spin-off plan: the homepage, /faq/ and the founder post (/blog/why-i-bui
 3. Add to sitemap.xml, llms.txt and the /blog/ index.
 4. Turn on the section 3 links that point to it, in the roundup and in other published pages.
 5. Clear every highlighted [TODO] and [CONFIRM] on the page.
+
+## 9. Split: per-app reviews moved to their own PR (Oct 27, 2026)
+
+The eight per-app reviews (`/blog/*-review/`: Check-In, Fit-Stitch, GainFrame, Lasmit, Metamorph, Photo Journey, Then & Now, Thumbstone) moved off PR #13 to branch `rec42-app-reviews`, together with three new drafts (Body Tracker by Igor Korolev, Photo Compare, Progress Photo Journal). PR #13 keeps the roundup (hub), the methodology, the review study, best free and GainFrame alternatives.
+
+While the reviews aren't on this branch, every link that pointed at a review now points at that app's section in the roundup (`/blog/best-progress-photo-apps/#fit-stitch`, `#thumbstone`, `#lasmit`, `#then-and-now`, `#metamorph`, `#gainframe`), so nothing 404s on PR #13's build. The roundup's own #most-reviewed list now uses in-page anchors. Once both PRs are in, switch these back to the review URLs per section 3.
