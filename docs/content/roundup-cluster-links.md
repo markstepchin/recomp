@@ -129,4 +129,4 @@ While the reviews aren't on this branch, every link that pointed at a review now
 
 ## 10. How I review: methodology page replaced (Oct 27, 2026)
 
-`/blog/how-i-test-progress-photo-apps/` now carries the final "How I Review Progress Photo Apps" copy. The URL is unchanged. The old rubric, scores and data tables (and their `#rubric`, `#scores`, `#store-data`, `#comparison-table` and `#import-tests` anchors) are gone; links to those anchors now land at the top of the page. The review drafts in PR #28 still link `#store-data`.
+`/blog/how-i-test-progress-photo-apps/` now carries Mark's "How I Review Progress Photo Apps" copy (Oct 28, 2026, verbatim; no scores). The URL is unchanged. The old rubric, scores and data tables (and their `#rubric`, `#scores`, `#store-data`, `#comparison-table` and `#import-tests` anchors) are gone; links to those anchors now land at the top of the page. The review drafts in PR #28 still link `#store-data`.
