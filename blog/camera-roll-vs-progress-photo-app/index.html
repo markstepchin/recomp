@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto" data-theme="system">
+  <head>
+    <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <meta name="apple-itunes-app" content="app-id=6760444125" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    <title>Camera Roll vs a Progress Photo App: Where to Keep Your Progress Photos | Recomp</title>
+    <!-- Copy: /workspace/articles/roundup-cluster/camera-roll-vs-app-draft.md, used verbatim. [CONFIRM] items and the Health screenshot placeholder are left visible on purpose. -->
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Photos is enough if you check in once or twice a month and mostly want a record. A dedicated app earns its place once you check in weekly and want to compare dates with your weight next to each photo." />
+    <link rel="stylesheet" href="../../styles/output.css?v=70f4526a" />
+    <link rel="canonical" href="https://progressphotos.app/blog/camera-roll-vs-progress-photo-app/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta property="og:title" content="Camera Roll vs a Progress Photo App: Where to Keep Your Progress Photos" />
+    <meta property="og:description" content="Photos is enough if you check in once or twice a month and mostly want a record. A dedicated app earns its place once you check in weekly and want to compare dates with your weight next to each photo." />
+    <meta property="og:url" content="https://progressphotos.app/blog/camera-roll-vs-progress-photo-app/" />
+    <meta property="og:image" content="https://progressphotos.app/assets/step-compare.webp?v=5" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Camera Roll vs a Progress Photo App: Where to Keep Your Progress Photos" />
+    <meta name="twitter:description" content="Photos is enough if you check in once or twice a month and mostly want a record. A dedicated app earns its place once you check in weekly and want to compare dates with your weight next to each photo." />
+    <!-- TODO before publishing: add article:published_time, article:modified_time, and datePublished/dateModified in the JSON-LD; remove noindex and the draft badge; add to sitemap.xml, llms.txt and the /blog/ index. -->
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+    <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Camera Roll vs a Progress Photo App: Where to Keep Your Progress Photos",
+  "description": "Photos is enough if you check in once or twice a month and mostly want a record. A dedicated app earns its place once you check in weekly and want to compare dates with your weight next to each photo.",
+  "author": {
+    "@type": "Person",
+    "@id": "https://progressphotos.app/about/#mark",
+    "name": "Mark Stepchin",
+    "url": "https://progressphotos.app/about/",
+    "jobTitle": "Software engineer"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Recomp",
+    "url": "https://progressphotos.app/"
+  },
+  "url": "https://progressphotos.app/blog/camera-roll-vs-progress-photo-app/",
+  "mainEntityOfPage": "https://progressphotos.app/blog/camera-roll-vs-progress-photo-app/",
+  "image": "https://progressphotos.app/assets/step-compare.webp?v=5"
+}
+    </script>
+  <body class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]">
+    <div class="flex min-h-dvh flex-col">
+      <!-- chrome:header current="blog" depth="2" -->
+      <header class="border-b border-card-border">
+        <div
+          class="mx-auto flex w-full text-xl max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
+        >
+          <a
+            class="inline-flex items-center gap-2 text-fg font-medium tracking-wordmark no-underline hover:no-underline max-md:min-h-11"
+            href="../../"
+          >
+            <img
+              class="size-8 shrink-0 rounded-[22%] border border-card-border"
+              src="../../assets/recomp-app-icon.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Recomp
+          </a>
+          <nav
+            class="ml-auto flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
+            aria-label="Site"
+          >
+            <a
+              class="text-fg no-underline hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              href="../"
+              aria-current="page"
+              >Blog</a
+            >
+            <a
+              class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <!-- /chrome:header -->
+
+
+      <main class="mx-auto w-full max-w-[800px] flex-1 px-gutter py-12">
+        <p class="text-micro text-muted pb-3">
+          <a class="text-muted" href="../">Blog</a>
+          · <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[DRAFT: noindex, not published; publish date TBD]</mark> · <a class="text-muted" href="../../about/" rel="author">Mark Stepchin</a>
+        </p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-4">Camera Roll vs a Progress Photo App: Where to Keep Your Progress Photos</h1>
+        <p class="pb-6"><em>Published <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: publish date]</mark>. Apple Photos details checked against Apple Support in October 2026.</em></p>
+        <div
+          class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pb-8"
+        >
+<p>Apple Photos stored my progress photos for two years, and for a lot of people it's all they need. I've taken front, side and back photos every week since June 6, 2023. I bulked from 165 to 195 lb by May 21, 2024, then cut to 155 lb by August 18, 2025, and every check-in went into one Photos album.</p>
+<p>By the end of the cut, that album held 450+ photos. Storing them was never the problem. To see week 1 next to week 40, I scrolled back months and flicked between two photos, trying to remember what the first one looked like.</p>
+<p>Full disclosure: I build Recomp, a free progress photo app. I hold it to the same <a href="/blog/how-i-test-progress-photo-apps/">review criteria</a> I use for every other app, and I hold Photos to them below.</p>
+        </div>
+        <aside
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
+          aria-labelledby="summary-heading"
+        >
+          <h2 id="summary-heading" class="text-h4 font-bold tracking-h4">
+            Summary
+          </h2>
+          <div class="mt-3 text-muted"><p>Photos is enough if you check in once or twice a month and mostly want a record. A dedicated app earns its place once you check in weekly and want to compare dates with your weight next to each photo. Whichever you pick, keep your originals somewhere you fully control.</p></div>
+        </aside>
+
+        <div
+          class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4"
+        >
+<h2 id="when-the-camera-roll-is-enough">When the camera roll is enough</h2>
+<p><strong>If you take photos once or twice a month and look back a few times a year, Photos covers it.</strong> It costs nothing, and the habit is the same habit you'd need in any app.</p>
+<p><strong>Photos also wins if you live in iCloud.</strong> With iCloud Photos on, your progress album syncs to your iPad and Mac and survives a lost phone. No progress photo app I've tested matches that for free. Recomp doesn't sync to iCloud at all.</p>
+<h2 id="how-to-set-up-the-camera-roll-for-progress-photos">How to set up the camera roll for progress photos</h2>
+<p>Photos has no check-in, so the setup is three habits spread across Apple's own apps.</p>
+<ol>
+<li><strong>Schedule a reminder.</strong> Photos has no notifications, so the nudge comes from a repeating reminder in Apple Reminders or a recurring event in Calendar. Pick a day and time you can repeat every week.</li>
+<li><strong>Take the progress photos.</strong> Shoot front, side and back in Camera, in the same spot and light each time. Camera has a <a href="https://support.apple.com/guide/iphone/use-camera-tools-iph3dc593597/ios">3, 5 or 10 second timer</a> if you prop the phone up instead of using a mirror.</li>
+<li><strong>Log your weight somewhere else.</strong> Photos has nowhere to put it, so use Notes, a spreadsheet, or Apple Health. In Health, open Browse, tap Body Measurements, then Weight, and <a href="https://support.apple.com/en-us/108779">tap Add Data</a> to enter the date and number.</li>
+</ol>
+<p><mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[Screenshot: Apple Health add weight form]</mark></p>
+<p>Then decide where the photos live. You have two options, and both leak.</p>
+<p><strong>A separate album keeps them organized, not out of sight.</strong> Make an album called "Progress" and add each check-in to it. Every photo in an album still shows up in your main Library view, next to screenshots and family photos.</p>
+<p><strong>The Hidden album works great if you don't have other hidden photos.</strong> Hidden photos move out of your Library, your other albums and the Photos widget. Since iOS 16, the Hidden album is locked by default and opens with Face ID, Touch ID or your passcode. With iCloud Photos on, a photo you hide on your iPhone is hidden on your other devices too. If you already hide other photos, your check-ins land in the same pile, and you're back to the same mixing problem.</p>
+<p><strong>Memories are easy to control.</strong> Hidden photos don't show up in Memories or featured photos. If you'd rather not hide them, open your account in the Collections tab and turn off Show Featured Content. Photos then stops making Memories and featured photos.</p>
+<h2 id="where-photos-gets-in-the-way">Where Photos gets in the way</h2>
+<p>Once I checked in weekly, five things slowed me down. None of them are bugs. Photos was built for vacations and receipts, not 3 poses across a year.</p>
+<h3 id="alignment-isnt-built-for-progress-photos">Alignment isn't built for progress photos</h3>
+<p><strong>No two weeks are shot identically.</strong> I stand a step closer, the phone sits an inch lower, the light comes from a different window. Put two of those photos next to each other and the camera change looks like body change. Camera's <a href="https://support.apple.com/guide/iphone/use-camera-tools-iph3dc593597/ios">grid and level</a> help you hold the phone straight, but they can't show where your shoulders sat last week. There's no ghost overlay of your last photo, and Photos crops and rotates one photo at a time.</p>
+<h3 id="theres-no-compare-view">There's no compare view</h3>
+<p><strong>Photos shows one photo at a time, so every comparison is a scroll and a memory test.</strong> To put week 1 beside week 40, you flick back and forth or build a collage in another app. Doing that once is fine. Doing it every week, for 3 poses, against last week, 2 weeks ago and a month ago, is where I gave up on Photos.</p>
+<h3 id="weight-photos-and-notes-live-in-separate-places">Weight, photos and notes live in separate places</h3>
+<p><strong>Your photos are in Photos, your weight is in Health or a spreadsheet, and your notes are in Notes.</strong> Nothing links them, so it's impossible to quickly answer a question like "show me all the photos where I weighed 185 lb." I passed 185 lb on the way up and again on the way down. Two photos at that weight mean something different on a bulk and a cut, and Photos can't show you the number next to the picture.</p>
+<h3 id="your-progress-photos-mix-with-everything-else">Your progress photos mix with everything else</h3>
+<p><strong>A separate album still puts your shirtless check-ins in the same Library grid as everything else.</strong> Hand someone your phone to show a vacation picture, and one swipe too far shows your morning side pose. Hiding fixes that only if nothing else is hidden. Either way it's an extra step on every check-in, and hidden photos are harder to browse.</p>
+<h3 id="the-notification-setup-is-convoluted">The notification setup is convoluted</h3>
+<p><strong>Photos can't remind you, so the reminder lives in Reminders or Calendar.</strong> Tapping it doesn't open a check-in. You go from the reminder to Camera, then to Photos to file the shots, then to Health or Notes for your weight. That's three or four apps for one weekly habit.</p>
+<h2 id="how-the-camera-roll-does-on-my-review-criteria">How the camera roll does on my review criteria</h2>
+<p>I didn't run Photos through my <a href="/blog/how-i-test-progress-photo-apps/">testing steps</a> the way I test apps, and this isn't a scored review. It's based on Apple's public documentation and how Photos works. I held it to the same 5 needs I laid out in <a href="/blog/why-i-built-recomp/">Why I built Recomp</a>.</p>
+<ol>
+<li><strong>Effortless check-in: bad.</strong> Camera saves straight to your library, and you can select all 3 photos at once and add them to an album. The rest of the check-in happens in other apps. The closest Photos gets to a weight field is the photo's <a href="https://support.apple.com/guide/iphone/see-photo-and-video-information-iph0edb9c18f/ios">caption field</a>, which means typing your weight on every photo.</li>
+<li><strong>Effortless alignment: bad.</strong> The tools exist, but none of them line one week up against the last.</li>
+<li><strong>Effortless comparison: bad.</strong> Sorting an album oldest first gets you to week 1 fast, but you still see it alone. With hundreds of photos, that's the job I wanted an app for.</li>
+<li><strong>Photos are the star: good.</strong> A photo fills the screen, and a tap hides the controls. No buttons or charts compete with the picture.</li>
+<li><strong>Data privacy: good.</strong> Photos is Apple's own app, so no third-party server sees your photos. With iCloud Photos on, Apple stores them encrypted and holds the keys by default. Turning on <a href="https://support.apple.com/en-us/102651">Advanced Data Protection</a> makes Photos end-to-end encrypted, so only your devices can read them.</li>
+</ol>
+<p>On the quality-of-life questions, Photos splits cleanly.</p>
+<p><strong>It wins on everything a library should do.</strong> Backup and a new phone are solved by iCloud Photos, with 5 GB free. Your photos are already files, so there's no lock-in and nothing to export. You can <a href="https://support.apple.com/guide/iphone/see-photo-and-video-information-iph0edb9c18f/ios">fix a photo's date</a> with Adjust Date &amp; Time, for one photo or a batch. Dark mode follows your system setting, and there are no ads.</p>
+<p><strong>It has nothing for the progress side.</strong> With no weight in Photos, CSV import, Apple Health sync, units and body measurements don't apply. There's no before/after image, no pose guides, and no notifications. The nearest thing to a timelapse is a <a href="https://support.apple.com/guide/iphone/make-a-slideshow-iph3c8f64e92/ios">slideshow</a> of the album, which Photos sets to music automatically.</p>
+<h2 id="what-a-progress-photo-app-adds">What a progress photo app adds</h2>
+<p><strong>A dedicated app turns a pile of photos into check-ins: front, side and back, with a date and a weight.</strong> That's the unit you actually compare. Here's what Recomp does with it.</p>
+<ol>
+<li><strong>Check-ins in about 30 seconds.</strong> A reminder notification opens a new check-in. I add the 3 photos and my weight, fix the date if needed, and save.</li>
+<li><strong>Side by side compare for any two dates.</strong> The photos take up most of the screen, same pose next to same pose. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: slider and overlay views are shipped in the app; canon lists side by side only]</mark></li>
+<li><strong>A timeline you can scrub.</strong> A weight chart runs under the photos, and you drag across it to pick the before and after dates.</li>
+<li><strong>Manual alignment in the compare view.</strong> Pan, pinch to zoom and rotate each photo until the two line up.</li>
+<li><strong>A shareable before/after.</strong> Share comparison saves both dates as one image, with the date and weight under each photo and no watermark.</li>
+</ol>
+<p>My morning routine is the test. I snap 3 photos with my camera app, weigh myself, and add the check-in on the way to the coffee machine. Then I compare against last week, 2 weeks ago and a month ago. The whole thing takes a minute or two.</p>
+<p><strong>Recomp is free, has no account, and keeps your photos on your iPhone.</strong> Recomp never uploads your photos. It sends anonymous usage analytics and crash reports, with no account and no tracking.</p>
+<p><strong>Here's what it doesn't do yet.</strong> There's no iCloud backup or sync, no photo export, no in-app camera or timer, and no automatic alignment. Weight doesn't sync from Apple Health. If you want the app itself behind Face ID, iPhone can lock any downloaded app: touch and hold its icon and tap Require Face ID.</p>
+<h2 id="moving-photos-out-of-your-camera-roll">Moving photos out of your camera roll</h2>
+<p>You don't have to start over with an empty timeline. Bulk import is how I moved my 450+ photos into check-ins.</p>
+<ol>
+<li><strong>Gather your progress photos into one album in Photos.</strong> Pull them out of your camera roll by date. This takes the longest, and it's worth doing carefully.</li>
+<li><strong>Import the album into Recomp.</strong> Bulk import takes up to 500 photos at a time and groups them into check-ins by the date each photo was taken.</li>
+<li><strong>Add your past weights from a CSV.</strong> A file with a date and a weight per row fills in the weight for each matching check-in. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: exact CSV column format to describe]</mark></li>
+<li><strong>Check the dates.</strong> Fix any check-in whose date looks off before you start comparing.</li>
+<li><strong>Keep the originals in Photos.</strong> Import doesn't touch them. Move the album to Hidden if you want it out of sight.</li>
+</ol>
+<p><strong>Even if you use an app, keep a copy you 100% control.</strong> Apps change and get abandoned. Your Photos library is the data, and a progress photo app should sit on top of it as the UI for check-ins and comparisons. Recomp has no backup or export yet, so for now your Photos album is that copy. Recomp has no camera either, so every new check-in starts in Photos anyway, on the same timeline as the old ones.</p>
+<h2 id="faq">FAQ</h2>
+<h3 id="wheres-the-safest-place-to-keep-progress-photos-on-iphone">Where's the safest place to keep progress photos on iPhone?</h3>
+<p>Somewhere outside your main library and behind Face ID. Apple's Hidden album does both and is locked by default since iOS 16. An app that never uploads your photos keeps them out of your camera roll too, and you can lock any downloaded app with Face ID.</p>
+<h3 id="do-hidden-photos-back-up-to-icloud">Do hidden photos back up to iCloud?</h3>
+<p>Yes, if iCloud Photos is on. Hidden photos stay in your iCloud library and stay hidden on your other devices. If iCloud Photos is off, they're only on your iPhone and in your device backup.</p>
+<h3 id="how-do-i-keep-progress-photos-out-of-memories">How do I keep progress photos out of Memories?</h3>
+<p>Hide them. Hidden photos don't appear anywhere else in Photos, including Memories and featured photos. You can also turn off Show Featured Content to stop Photos from making Memories at all.</p>
+<h3 id="should-i-delete-progress-photos-from-my-camera-roll-after-importing-them-into-an-app">Should I delete progress photos from my camera roll after importing them into an app?</h3>
+<p>Not unless the app backs them up somewhere you trust. Recomp leaves your originals in Photos and has no iCloud sync or export, so I keep mine in a Photos album. Hiding them gets them out of your grid without losing them.</p>
+<h3 id="can-i-compare-progress-photos-side-by-side-in-apple-photos">Can I compare progress photos side by side in Apple Photos?</h3>
+<p>Not directly. Photos shows one photo at a time, so you flick between two or build a collage in another app. A progress photo app puts two dates on one screen and lets you line them up.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p><strong>Photos is a great photo album app.</strong> It has no collage features, no weight tracking and no notifications. Alignment tools exist, but they weren't built for progress photos. If you check in weekly, keep your photos there and put an app on top.</p>
+        </div>
+
+        <section
+          class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] mt-12"
+          aria-labelledby="article-cta-heading"
+        >
+          <h2 id="article-cta-heading" class="text-h3 font-bold tracking-h3">
+            Try it with your own photos
+          </h2>
+          <p class="pt-3 text-muted">
+            If your progress photos are sitting in your camera roll, import them into Recomp and put your first and latest check-ins side by side. It's free, with no account.
+          </p>
+          <p class="pt-6">
+            <a
+              class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85]"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+              data-cta-location="article_footer"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </p>
+          <p class="pt-6 text-muted">I'm still working on backup and export. If you hit an edge case or want a feature, email me at <a href="mailto:support@progressphotos.app">support@progressphotos.app</a>.</p>
+        </section>
+
+      </main>
+
+      <!-- chrome:footer depth="2" -->
+      <footer class="pt-8 pb-8">
+        <div class="mx-auto w-full max-w-[800px] px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 max-md:flex-col max-md:justify-center max-md:gap-y-1">
+            <nav class="grid min-w-0 gap-y-1 text-micro max-md:w-full max-md:justify-items-center max-md:gap-y-0" aria-label="Footer">
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../"
+                  >Home</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../"
+                  >Blog</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../about/"
+                  >About</a
+                >
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../privacy/"
+                  >Privacy</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../support/"
+                  >Support</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../roadmap/"
+                  >Roadmap</a
+                >
+              </div>
+            </nav>
+            <div
+              class="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-card-border bg-card p-1.5 max-md:ml-0"
+              role="group"
+              aria-label="Color theme"
+            >
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="system"
+                aria-pressed="true"
+              >
+                Auto
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="light"
+                aria-pressed="false"
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="dark"
+                aria-pressed="false"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /chrome:footer -->
+    </div>
+    <script src="../../js/posthog.js?v=11b6cbc8"></script>
+    <script src="../../js/theme.js?v=a7491962"></script>
+  </body>
+</html>
