@@ -148,6 +148,8 @@ var tracked = [
   "privacy/index.html",
   "faq/index.html",
   "support/index.html",
+  "roadmap/index.html",
+  "partials/post.html",
 ];
 tracked.forEach(function (file) {
   var html = fs.readFileSync(path.join(root, file), "utf8");
@@ -164,5 +166,22 @@ assert.ok(source.indexOf('person_profiles: "identified_only"') !== -1);
 assert.ok(source.indexOf('host === "localhost"') !== -1);
 assert.ok(source.indexOf("app_store_click") !== -1);
 assert.ok(source.indexOf("register_once") !== -1);
+assert.ok(source.indexOf("requestIdleCallback") !== -1);
+assert.ok(source.indexOf('addEventListener("DOMContentLoaded"') !== -1);
+assert.ok(source.indexOf('addEventListener("load"') === -1);
+assert.ok(source.indexOf("pendingCaptures") !== -1);
+assert.ok(source.indexOf("disable_session_recording") === -1);
+assert.ok(source.indexOf("disable_surveys") === -1);
+assert.ok(source.indexOf("capture_dead_clicks") === -1);
+assert.ok(source.indexOf('"$pageview"') === -1);
+assert.ok(source.indexOf("'$pageview'") === -1);
+
+tracked.forEach(function (file) {
+  var html = fs.readFileSync(path.join(root, file), "utf8");
+  assert.ok(
+    /<script\s+src="[^"]*posthog\.js(?:\?v=[0-9a-f]+)?"\s+defer><\/script>/.test(html),
+    file + " should defer posthog.js"
+  );
+});
 
 console.log("posthog tests passed");

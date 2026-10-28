@@ -1,0 +1,107 @@
+# Workers Static Assets. Duplicate header names are joined with a comma,
+# so each URL matches one Cache-Control rule. HTML is listed on its own
+# and stays max-age=0. Do not add a `/*` Cache-Control rule.
+
+# CSS and JS URLs carry a content hash (?v=) from scripts/stamp-asset-versions.js.
+# wrangler deploy runs `npm run build` (see wrangler.jsonc), which stamps those
+# hashes and fails if any HTML href/src does not match the file. The filename
+# is stable; the query string is the version, so the browser cache key changes
+# when the file changes.
+/styles/output.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/posthog.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/theme.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# /assets/* names are not content-hashed (compare-preview.mp4, icons, etc.).
+# A year of immutable would pin a replaced image. One day fresh, then
+# serve stale while revalidating against the ETag Workers already sends.
+/assets/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/how-to-take-progress-photos-for-recomp
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/how-to-take-progress-photos-for-recomp/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/how-to-take-progress-photos-for-recomp/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/why-i-built-recomp
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/why-i-built-recomp/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/why-i-built-recomp/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/about
+  Cache-Control: public, max-age=0, must-revalidate
+
+/about/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/about/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/privacy
+  Cache-Control: public, max-age=0, must-revalidate
+
+/privacy/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/privacy/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/privacy.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/faq
+  Cache-Control: public, max-age=0, must-revalidate
+
+/faq/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/faq/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/support
+  Cache-Control: public, max-age=0, must-revalidate
+
+/support/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/support/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/support.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/roadmap
+  Cache-Control: public, max-age=0, must-revalidate
+
+/roadmap/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/roadmap/index.html
+  Cache-Control: public, max-age=0, must-revalidate
