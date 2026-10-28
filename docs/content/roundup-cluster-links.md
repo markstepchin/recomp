@@ -126,3 +126,7 @@ Per the spin-off plan: the homepage, /faq/ and the founder post (/blog/why-i-bui
 The eight per-app reviews (`/blog/*-review/`: Check-In, Fit-Stitch, GainFrame, Lasmit, Metamorph, Photo Journey, Then & Now, Thumbstone) moved off PR #13 to branch `rec42-app-reviews`, together with three new drafts (Body Tracker by Igor Korolev, Photo Compare, Progress Photo Journal). PR #13 keeps the roundup (hub), the methodology, the review study, best free and GainFrame alternatives.
 
 While the reviews aren't on this branch, every link that pointed at a review now points at that app's section in the roundup (`/blog/best-progress-photo-apps/#fit-stitch`, `#thumbstone`, `#lasmit`, `#then-and-now`, `#metamorph`, `#gainframe`), so nothing 404s on PR #13's build. The roundup's own #most-reviewed list now uses in-page anchors. Once both PRs are in, switch these back to the review URLs per section 3.
+
+## 10. How I review: methodology page replaced (Oct 27, 2026)
+
+`/blog/how-i-test-progress-photo-apps/` now carries the final "How I Review Progress Photo Apps" copy. The URL is unchanged. The old rubric, scores and data tables (and their `#rubric`, `#scores`, `#store-data`, `#comparison-table` and `#import-tests` anchors) are gone; links to those anchors now land at the top of the page. The review drafts in PR #28 still link `#store-data`.
