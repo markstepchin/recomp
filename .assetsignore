@@ -2,3 +2,7 @@ node_modules
 .git
 .wrangler
 .DS_Store
+# Markdown article sources (may hold TODO comments and draft copy); the built index.html is served.
+blog/**/*.md
+# Build tests and fixtures
+tests
