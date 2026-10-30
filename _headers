@@ -55,6 +55,24 @@
 /blog/why-i-built-recomp/index.html
   Cache-Control: public, max-age=0, must-revalidate
 
+/blog/camera-roll-vs-progress-photo-app
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/camera-roll-vs-progress-photo-app/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/camera-roll-vs-progress-photo-app/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/how-i-test-progress-photo-apps
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/how-i-test-progress-photo-apps/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/how-i-test-progress-photo-apps/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
 /about
   Cache-Control: public, max-age=0, must-revalidate
 
