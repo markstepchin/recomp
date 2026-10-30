@@ -26,6 +26,11 @@ import { checkFrontmatter, checkPost, isPostPath, jsonLd, postData, slugOf, sort
 import { SIZES, markdown } from "./_config/markdown.js";
 
 const FIXTURES = process.env.BLOG_FIXTURES === "1";
+// `npm run dev` sets RECOMP_DEV=1: Tailwind watches into .cache/dev/output.css (gitignored)
+// and that file is served as /styles/output.css, so dev never rewrites the committed CSS.
+// Production builds (no RECOMP_DEV) are unchanged.
+const DEV = process.env.RECOMP_DEV === "1";
+const DEV_CSS = ".cache/dev/output.css";
 const RASTER = new Set([".png", ".jpg", ".jpeg", ".webp", ".avif", ".tif", ".tiff"]);
 const OUTPUT = "_site";
 
@@ -84,9 +89,15 @@ export default function (eleventyConfig) {
     "index.html", "claude-version.html", "google6d053ef5debca997.html", "privacy.html", "support.html",
     "robots.txt", "_headers",
     "about/**", "faq/**", "privacy/**", "support/**", "roadmap/**",
-    "assets/**", "js/!(*.test).js", "styles/**",
+    "assets/**", "js/!(*.test).js", DEV ? "styles/!(output).css" : "styles/**",
   ]) {
     eleventyConfig.addPassthroughCopy(glob);
+  }
+  if (DEV) {
+    eleventyConfig.addPassthroughCopy({ [DEV_CSS]: "styles/output.css" });
+    // .cache/ is gitignored, so Eleventy's own watcher skips it; the dev server watches it
+    // instead and live-reloads the stylesheet when Tailwind rewrites it.
+    eleventyConfig.setServerOptions({ watch: [DEV_CSS] });
   }
   // Hand-written blog posts are copied whole. Markdown post folders only copy
   // non-raster extras (svg, gif, mp4); their photos go through Eleventy Image.
