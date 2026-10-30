@@ -114,12 +114,12 @@ export default function (eleventyConfig) {
 
   // Public files, copied byte-for-byte. Globs skip dotfiles (assets/.DS_Store).
   // Not copied (private): *.md, docs/, scripts/, partials/, _config/, _includes/, _pages/,
-  // tests/, package*.json, wrangler.jsonc, eleventy.config.js.
+  // tests/, js/*.test.js, package*.json, wrangler.jsonc, eleventy.config.js.
   for (const glob of [
     "index.html", "claude-version.html", "google6d053ef5debca997.html", "privacy.html", "support.html",
     "robots.txt", "_headers",
     "about/**", "faq/**", "privacy/**", "support/**", "roadmap/**",
-    "assets/**", "js/**", "styles/**",
+    "assets/**", "js/!(*.test).js", "styles/**",
   ]) {
     eleventyConfig.addPassthroughCopy(glob);
   }
