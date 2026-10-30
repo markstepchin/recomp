@@ -8,6 +8,7 @@
 <!-- posts:end -->
 - [How to Take Progress Photos for a Recomp (Cut or Bulk)](https://progressphotos.app/blog/how-to-take-progress-photos-for-recomp/): Published guide — lighting, poses, cadence, reviewing a flat scale
 - [Why I Built Recomp](https://progressphotos.app/blog/why-i-built-recomp/): Founder post — weekly progress photos, comparison, and why the app exists
+- [Camera Roll vs a Progress Photo App](https://progressphotos.app/blog/camera-roll-vs-progress-photo-app/): Where to keep progress photos: the camera roll's limits, a DIY Hidden or album setup, and what a dedicated app adds
 - [About](https://progressphotos.app/about/): Mark Stepchin, independent developer
 - [Privacy](https://progressphotos.app/privacy/): Recomp never uploads your photos. It sends anonymous usage analytics and crash reports, with no account and no tracking.
 - [FAQ](https://progressphotos.app/faq/): Short answers (longer FAQ coming)
