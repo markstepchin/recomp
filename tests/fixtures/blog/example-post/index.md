@@ -42,3 +42,16 @@ Headings take an explicit id so existing `#` links never change.
 Visible review markers like <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: a fact to check]</mark> only print a warning.
 
 ![Co-located screenshot of an example progress photo](./example.png "Caption from the image title.")
+
+Add `{.phone}` after an image for a phone screenshot: a narrower, centered figure.
+
+![Example phone screenshot](./example.png "Phone screenshot caption."){.phone}
+
+Brackets in ordinary text are fine, like [Draft your plan] or a [todo list]. Code keeps its markers:
+
+```html
+<!-- TODO: this comment stays, it is a code sample -->
+<p>[TODO] and [DRAFT] in code never fail the build.</p>
+```
+
+Inline code too: `<!-- TODO -->` and `[DRAFT]`.

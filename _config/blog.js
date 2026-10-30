@@ -1,7 +1,10 @@
 /**
- * Markdown blog posts: frontmatter -> page data, JSON-LD, list entries, and the one content check.
+ * Markdown blog posts: frontmatter -> page data, JSON-LD, list entries, and the build checks.
  * Used by eleventy.config.js, _includes/post.njk and _pages/*.11ty.js.
  */
+import { TODO_COMMENT, markdown } from "./markdown.js";
+
+export { TODO_COMMENT };
 export const SITE_URL = "https://progressphotos.app";
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/assets/step-compare.webp?v=5`;
 
@@ -20,35 +23,91 @@ const PUBLISHER = { "@type": "Organization", name: "Recomp", url: `${SITE_URL}/`
  */
 export const DEFAULT_CTA = {
   heading: "See the progress buried in your camera roll",
-  text: "Compare progress photos on a before-and-after timeline, scroll to any date instantly, and align photos on the fly. Recomp never uploads your photos or weight data.",
+  text: "Compare progress photos on a before-and-after timeline, scroll to any date instantly, and align photos on the fly. Recomp never uploads your photos. It sends anonymous usage analytics and crash reports, with no account and no tracking.",
   location: "article_footer",
 };
 
-// ---------------------------------------------------------------- the check
+// ---------------------------------------------------------------- the checks
 
-/** `<!-- TODO … -->`, any case, across lines. Always stripped from output. */
-export const TODO_COMMENT = /<!--\s*TODO\b[\s\S]*?-->/gi;
-/** Visible markers that block publishing. */
-const BLOCKING_MARKER = /\[\s*(TODO|DRAFT)\b[^\]]*\]/gi;
-/** Visible markers that only warn. */
-const WARNING_MARKER = /\[\s*CONFIRM\b[^\]]*\]/gi;
+/** Visible markers that block publishing: exactly [TODO], [DRAFT], [TODO: …] or [DRAFT: …]. */
+const BLOCKING_MARKER = /\[(TODO|DRAFT)(:[^\]]*)?\]/g;
+/** Visible markers that only warn: [CONFIRM] or [CONFIRM: …]. */
+const WARNING_MARKER = /\[CONFIRM(:[^\]]*)?\]/g;
 
-const lineOf = (text, index) => text.slice(0, index).split("\n").length;
+const newlines = (text) => (text.match(/\n/g) ?? []).length;
+const show = (text) => text.replace(/\s+/g, " ").slice(0, 80);
+
+/**
+ * Prose and raw HTML in a post body, from markdown-it tokens, as { text, html, line }
+ * pieces (line is 0-based in the body). Code spans, fences and indented code are skipped.
+ */
+let parser;
+function proseOf(body) {
+  const pieces = [];
+  let blockLine = 0;
+  for (const token of (parser ??= markdown()).parse(body, {})) {
+    if (token.map) blockLine = token.map[0];
+    if (token.type === "html_block") pieces.push({ html: true, text: token.content, line: blockLine });
+    if (token.type !== "inline") continue;
+    let line = blockLine;
+    for (const child of token.children ?? []) {
+      if (child.type === "softbreak" || child.type === "hardbreak") line += 1;
+      if (child.type === "text") pieces.push({ html: false, text: child.content, line });
+      if (child.type === "html_inline") pieces.push({ html: true, text: child.content, line });
+      if (child.type !== "softbreak" && child.type !== "hardbreak") line += newlines(child.content);
+    }
+  }
+  return pieces;
+}
 
 /**
  * Check one post's Markdown body. A non-draft with a TODO comment, [TODO] or [DRAFT]
- * fails; [CONFIRM] only warns. Returns { errors, warnings } as "file:line: text".
+ * fails; [CONFIRM] only warns. Code is ignored. Returns { errors, warnings } as "file:line: text".
  */
 export function checkPost(file, body, draft, bodyLineOffset = 0) {
   const errors = [];
   const warnings = [];
-  const at = (m) => `${file}:${lineOf(body, m.index) + bodyLineOffset}: ${m[0].replace(/\s+/g, " ").slice(0, 80)}`;
-  if (!draft) {
-    for (const m of body.matchAll(TODO_COMMENT)) errors.push(at(m));
-    for (const m of body.matchAll(BLOCKING_MARKER)) errors.push(at(m));
+  for (const piece of proseOf(body)) {
+    const at = (m) => `${file}:${piece.line + newlines(piece.text.slice(0, m.index)) + 1 + bodyLineOffset}: ${show(m[0])}`;
+    if (!draft) {
+      if (piece.html) for (const m of piece.text.matchAll(TODO_COMMENT)) errors.push(at(m));
+      for (const m of piece.text.matchAll(BLOCKING_MARKER)) errors.push(at(m));
+    }
+    for (const m of piece.text.matchAll(WARNING_MARKER)) warnings.push(at(m) + (draft ? "" : " (non-draft)"));
   }
-  for (const m of body.matchAll(WARNING_MARKER)) warnings.push(at(m) + (draft ? "" : " (non-draft)"));
   return { errors, warnings };
+}
+
+/** Frontmatter keys a post may use. Anything else is a typo and fails the build. */
+export const FRONTMATTER_KEYS = new Set([
+  "title", "seo_title", "description", "published", "updated", "tested", "draft", "noindex",
+  "og_image", "breadcrumb", "summary", "summary_heading", "card_blurb", "llms_blurb", "cta", "faq",
+]);
+const CTA_KEYS = new Set(["heading", "text", "location"]);
+
+/** Top-level keys of a file's YAML frontmatter (comments and nested lines ignored). */
+export function frontmatterKeys(raw) {
+  const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!m) return [];
+  return [...m[1].matchAll(/^([A-Za-z_][\w-]*)\s*:/gm)].map((k) => k[1]);
+}
+
+/**
+ * Frontmatter checks for one post: unknown keys, cta shape, and a co-located og_image
+ * that must exist. `raw` is the whole file, `data` the parsed frontmatter.
+ */
+export function checkFrontmatter(file, raw, data, exists) {
+  const errors = [];
+  for (const key of frontmatterKeys(raw)) {
+    if (!FRONTMATTER_KEYS.has(key)) errors.push(`${file}: unknown frontmatter key "${key}" (allowed: ${[...FRONTMATTER_KEYS].join(", ")})`);
+  }
+  if (data.cta !== undefined && data.cta !== false) {
+    if (typeof data.cta !== "object" || data.cta === null) errors.push(`${file}: cta must be a mapping or false`);
+    else for (const key of Object.keys(data.cta)) if (!CTA_KEYS.has(key)) errors.push(`${file}: unknown cta key "${key}" (allowed: heading, text, location)`);
+  }
+  const og = data.og_image ? String(data.og_image) : "";
+  if (og.startsWith("./") && !exists(og)) errors.push(`${file}: og_image ${og} not found next to the post`);
+  return errors;
 }
 
 // ---------------------------------------------------------------- page data

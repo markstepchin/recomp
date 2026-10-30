@@ -9,60 +9,25 @@
  * - /blog/, /sitemap.xml and /llms.txt are the hand-written files with the post lists
  *   filled in (_pages/*.11ty.js). Drafts get noindex and stay out of all three.
  * - Local images in a post go through Eleventy Image: WebP, 800/1600w, width/height set,
- *   metadata stripped, inside <figure> with the image title as <figcaption>.
- * - One content check: a non-draft post with a TODO comment, [TODO] or [DRAFT] fails the
- *   build; [CONFIRM] only warns. TODO comments are always stripped from the output.
+ *   metadata stripped, inside <figure> with the image title as <figcaption>. `{.phone}`
+ *   after an image makes a narrow phone-screenshot figure (see _config/markdown.js).
+ * - Build checks: a non-draft post with a TODO comment, [TODO] or [DRAFT] (outside code)
+ *   fails the build; [CONFIRM] only warns. Unknown frontmatter keys and a missing co-located
+ *   og_image fail too. TODO comments are always stripped from the output (not from code).
  *
  * BLOG_FIXTURES=1 also builds tests/fixtures/blog/*, the example draft post.
  */
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { basename, dirname, extname, join } from "node:path";
 import Image from "@11ty/eleventy-img";
-import markdownIt from "markdown-it";
-import markdownItAttrs from "markdown-it-attrs";
 import { chrome } from "./scripts/apply-chrome.js";
 import { findMismatches, stamp } from "./scripts/stamp-asset-versions.js";
-import { TODO_COMMENT, checkPost, isPostPath, jsonLd, postData, slugOf, sortPosts } from "./_config/blog.js";
+import { checkFrontmatter, checkPost, isPostPath, jsonLd, postData, slugOf, sortPosts } from "./_config/blog.js";
+import { SIZES, markdown } from "./_config/markdown.js";
 
 const FIXTURES = process.env.BLOG_FIXTURES === "1";
 const RASTER = new Set([".png", ".jpg", ".jpeg", ".webp", ".avif", ".tif", ".tiff"]);
 const OUTPUT = "_site";
-
-// Figure markup matches the hand-written posts (blog/why-i-built-recomp).
-const FIGURE_CLASS = "m-0";
-const IMG_CLASS = "block h-auto w-full rounded-card border border-card-border";
-const CAPTION_CLASS = "mt-[0.65rem] text-center text-caption leading-[1.4] text-muted";
-const SIZES = "(min-width: 800px) 752px, 100vw";
-
-function markdown() {
-  const md = markdownIt({ html: true, linkify: false, typographer: false });
-  // Explicit heading ids: `## Heading {#existing-id}`.
-  md.use(markdownItAttrs, { allowedAttributes: ["id", "class"] });
-  // A paragraph holding only an image becomes <figure>; the image title is the caption.
-  md.core.ruler.push("figure", (state) => {
-    const t = state.tokens;
-    for (let i = 0; i + 2 < t.length; i += 1) {
-      if (t[i].type !== "paragraph_open" || t[i + 2].type !== "paragraph_close") continue;
-      const kids = t[i + 1].children ?? [];
-      if (kids.length !== 1 || kids[0].type !== "image") continue;
-      t[i].hidden = t[i + 2].hidden = true;
-      kids[0].meta = { ...kids[0].meta, figure: true };
-    }
-  });
-  const escape = md.utils.escapeHtml;
-  md.renderer.rules.image = (tokens, idx, options, env, self) => {
-    const token = tokens[idx];
-    const caption = token.attrGet("title");
-    if (caption) token.attrs = token.attrs.filter(([name]) => name !== "title");
-    token.attrSet("alt", self.renderInlineAsText(token.children, options, env));
-    if (!token.attrGet("class")) token.attrSet("class", IMG_CLASS);
-    const img = self.renderToken(tokens, idx, options);
-    if (!token.meta?.figure) return img;
-    const cap = caption ? `<figcaption class="${CAPTION_CLASS}">${escape(caption)}</figcaption>` : "";
-    return `<figure class="${FIGURE_CLASS}">${img}${cap}</figure>\n`;
-  };
-  return md;
-}
 
 const attr = (tag, name) => tag.match(new RegExp(`\\s${name}="([^"]*)"`))?.[1];
 
@@ -91,7 +56,7 @@ async function optimizeImages(html, srcDir, outDir) {
       .join("");
     const replacement =
       `<img src="./${sizes[0].filename}"` +
-      (sizes.length > 1 ? ` srcset="${sizes.map((s) => `./${s.filename} ${s.width}w`).join(", ")}" sizes="${SIZES}"` : "") +
+      (sizes.length > 1 ? ` srcset="${sizes.map((s) => `./${s.filename} ${s.width}w`).join(", ")}" sizes="${attr(tag, "sizes") ?? SIZES}"` : "") +
       ` alt="${attr(tag, "alt") ?? ""}"${extra} width="${largest.width}" height="${largest.height}" loading="lazy" decoding="async">`;
     html = html.split(tag).join(replacement);
   }
@@ -145,7 +110,12 @@ export default function (eleventyConfig) {
     sortPosts(api.getAll().filter((item) => isPostPath(item.inputPath)).map((item) => postData(item.data))),
   );
 
-  // The one check, on the Markdown source before render. Also strips TODO comments.
+  // Build checks, on the Markdown source before render: frontmatter keys, og_image, and
+  // TODO/DRAFT markers. A failing post is skipped and the problems print once at the end
+  // (Eleventy would print a thrown error several times). TODO comments are stripped by the
+  // markdown renderer (_config/markdown.js), outside code.
+  const problems = new Map();
+  eleventyConfig.on("eleventy.before", () => problems.clear());
   eleventyConfig.addPreprocessor("blog-check", "md", (data, content) => {
     if (!isPostPath(data.page.inputPath)) return;
     const file = data.page.inputPath.replace(/^\.\//, "");
@@ -154,12 +124,11 @@ export default function (eleventyConfig) {
     const draft = data.draft === true;
     const { errors, warnings } = checkPost(file, content, draft, offset);
     for (const w of warnings) console.warn(`[blog] warning: ${w}`);
-    if (errors.length) {
-      throw new Error(
-        `[blog] ${file} is not a draft but still has TODO/DRAFT markers. Resolve them or set draft: true.\n  ${errors.join("\n  ")}`,
-      );
-    }
-    return content.replace(TODO_COMMENT, "");
+    if (errors.length) errors.unshift(`${file} is not a draft but still has TODO/DRAFT markers. Resolve them or set draft: true.`);
+    errors.push(...checkFrontmatter(file, raw, data, (rel) => existsSync(join(dirname(file), rel))));
+    if (!errors.length) return;
+    problems.set(file, errors);
+    return false;
   });
 
   eleventyConfig.addFilter("jsonLd", (post) => jsonLd(post));
@@ -190,9 +159,15 @@ export default function (eleventyConfig) {
     return stamp(html);
   });
 
-  // Same guard as stamp-asset-versions.js, against what will be served.
   eleventyConfig.on("eleventy.after", ({ runMode }) => {
-    if (runMode === "serve" || runMode === "watch") return;
+    const live = runMode === "serve" || runMode === "watch";
+    if (problems.size) {
+      const lines = [...problems.values()].flat();
+      console.error(`\n[blog] ${problems.size} post(s) failed the build checks and were skipped:\n  ${lines.join("\n  ")}\n`);
+      if (!live) process.exitCode = 1;
+    }
+    // Same guard as stamp-asset-versions.js, against what will be served.
+    if (live) return;
     const mismatches = findMismatches(OUTPUT);
     if (mismatches.length) throw new Error(`asset version mismatch in ${OUTPUT}/:\n  ${mismatches.join("\n  ")}`);
   });
