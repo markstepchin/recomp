@@ -1,0 +1,44 @@
+---
+title: "Roadmap — Recomp"
+description: "What's shipping in Recomp: anonymous in-app analytics now, an in-app camera and Apple Health weight sync next, and optional encrypted iCloud backup later."
+posthog_defer: true
+---
+{% extends "base.njk" %}
+{% block main %}
+      <main class="mx-auto w-full max-w-[800px] flex-1 px-gutter py-12">
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-6">Roadmap</h1>
+        <div
+          class="[&>*+*]:mt-[1em] [&_h3]:mt-[2.25em] [&_h3]:text-h3 [&_h3]:leading-h3 [&_h3]:tracking-h3 [&_h3]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5"
+        >
+          <p>What Recomp is working on now, and what’s planned next.</p>
+
+          <h3>Now</h3>
+          <p>
+            The app currently does an excellent job of tracking and comparing
+            progress photos. I'm focused SEO and AEO work that helps people find
+            the app
+          </p>
+
+          <h3>Next</h3>
+          <ul>
+            <li>
+              Upgrade the weight input from a simple number input to a slider
+              with haptic feedbac
+            </li>
+            <li>Add measurement tracking (arms, chest, stomach, etc)</li>
+            <li>In-app camera</li>
+            <li>Apple Health weight sync</li>
+          </ul>
+
+          <h3>Future</h3>
+          <p>Optional encrypted user iCloud backup</p>
+
+          <div class="!mt-24">
+            <p>
+              Have feedback?
+              <a href="../support/">Send it from the support page</a>.
+            </p>
+          </div>
+        </div>
+      </main>
+{%- endblock %}
