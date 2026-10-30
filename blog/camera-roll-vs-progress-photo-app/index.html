@@ -51,6 +51,7 @@
     <meta property="og:url" content="https://progressphotos.app/blog/camera-roll-vs-progress-photo-app/" />
     <meta property="og:image" content="https://progressphotos.app/assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp" />
     <meta property="og:image:alt" content="iOS Photos album showing hundreds of weekly front, side, and back progress photos from years of coaching check-ins" />
+    <!-- TODO at publish: add <meta property="article:published_time"> and <meta property="article:modified_time"> with the real dates (ISO 8601). Do not add placeholder dates. -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Camera Roll vs a Progress Photo App: What 2 Years Taught Me" />
     <meta name="twitter:description" content="The camera roll stores progress photos, but it can't compare two dates, remind you, or keep them apart. My DIY setup, and when an app is worth it." />
@@ -74,10 +75,17 @@
   "publisher": {
     "@type": "Organization",
     "name": "Recomp",
-    "url": "https://progressphotos.app/"
+    "url": "https://progressphotos.app/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://progressphotos.app/assets/recomp-app-icon.png"
+    }
   },
   "url": "https://progressphotos.app/blog/camera-roll-vs-progress-photo-app/",
-  "mainEntityOfPage": "https://progressphotos.app/blog/camera-roll-vs-progress-photo-app/",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://progressphotos.app/blog/camera-roll-vs-progress-photo-app/"
+  },
   "image": "https://progressphotos.app/assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp"
 }
     </script>
@@ -239,16 +247,16 @@
 </ol>
 <p>The camera roll and the iOS photo editor are great for taking photos, storing them, and cropping. You'll need other apps or workflows for tracking weight, photo comparison, alignment, and reminders. Dedicated apps also add quality-of-life improvements across the whole workflow.</p>
 <h2 id="camera-roll-drawbacks">Camera roll drawbacks</h2>
-<h3 id="camera-and-photo-viewing-storage">1. Camera &amp; photo viewing/storage</h3>
-<p><strong>Your shirtless progress photos are mixed with everything else.</strong> A separate album keeps them organized, but every photo in an album still shows up in your main Library grid next to screenshots and family photos. Some dedicated apps take photos in their own camera, so they never land in your camera roll.</p>
-<h3 id="weight-and-notes-tracking">2. Weight &amp; notes tracking</h3>
-<p><strong>Photos and weight live in separate places, so analyzing progress is harder.</strong> Potential solutions for tracking weight include Notes, Apple Health, or a spreadsheet. Nothing in Photos links a number to the picture on that date.</p>
-<h3 id="comparison">3. Comparison</h3>
-<p><strong>The camera roll has no side-by-side photo view.</strong> To compare two check-ins you flick between them or export to Photoshop, Canva, or a collage-style app. Doing that once is fine; doing it every week for three poses is where DIY setups wear thin.</p>
-<h3 id="alignment">4. Alignment</h3>
-<p><strong>Aligning photos consistently in post is difficult.</strong> Camera's <a href="/blog/how-to-take-progress-photos-for-recomp/">grid and level</a> help you hold the phone straight, but they can't show where your shoulders sat last week. Photos crops and rotates one photo at a time. Some dedicated apps offer manual alignment in compare view; others use AI alignment so small framing differences don't look like body change.</p>
-<h3 id="reminders-for-consistency">5. Reminders for consistency</h3>
-<p><strong>Photos can't remind you to check in.</strong> The nudge has to live in Reminders or Calendar, and tapping it doesn't open a check-in. You still hop through Camera, Photos, and wherever you log weight.</p>
+<h3 id="your-progress-photos-are-mixed-with-everything-else">Your progress photos are mixed with everything else</h3>
+<p>A separate album keeps them organized, but every photo in an album still shows up in your main Library grid next to screenshots and family photos. Some dedicated apps take photos in their own camera, so they never land in your camera roll.</p>
+<h3 id="your-weight-lives-somewhere-else">Your weight lives somewhere else</h3>
+<p>Photos and weight live in separate places, so analyzing progress is harder. Potential solutions for tracking weight include Notes, Apple Health, or a spreadsheet. Nothing in Photos links a number to the picture on that date.</p>
+<h3 id="theres-no-side-by-side-view">There's no side-by-side view</h3>
+<p>To compare two check-ins you flick between them or export to Photoshop, Canva, or a collage-style app. Doing that once is fine; doing it every week for three poses is where DIY setups wear thin.</p>
+<h3 id="lining-photos-up-is-hard">Lining photos up is hard</h3>
+<p>Camera's <a href="/blog/how-to-take-progress-photos-for-recomp/">grid and level</a> help you hold the phone straight, but they can't show where your shoulders sat last week. Photos crops and rotates one photo at a time. Some dedicated apps offer manual alignment in compare view; others use AI alignment so small framing differences don't look like body change.</p>
+<h3 id="photos-cant-remind-you-to-check-in">Photos can't remind you to check in</h3>
+<p>The nudge has to live in Reminders or Calendar, and tapping it doesn't open a check-in. You still hop through Camera, Photos, and wherever you log weight.</p>
 
 <h2 id="where-the-camera-roll-shines-data-ownership-and-backup">Where the camera roll shines: data ownership &amp; backup</h2>
 <p><strong>Photos in your camera roll are truly under your control.</strong> That freedom lets you switch progress photo setups from one app to another without losing the originals. iCloud Photos adds backup and sync across devices; with Advanced Data Protection, your library can be end-to-end encrypted.</p>
@@ -276,12 +284,12 @@
 </figure>
 <p><strong>The tradeoff: privacy, not organization.</strong> Hidden photos also leave your other albums, so every check-in sits in one Hidden album with anything else you've hidden, and you unlock it each time you want to look back.</p>
 <h3 id="separate-collection">Separate collection</h3>
-<p><strong>Keep check-ins in their own album and open it from the Collections tab.</strong> Tap Collections, then Albums, and create a new album (for example, “Progress”). After each check-in, add your front, side, and back shots to that album. You can pin the album under Pinned so it stays at the top. Touch and hold the album, then tap Pin. Apple's guide to <a href="https://support.apple.com/guide/iphone/browse-your-photo-collections-iph4f36c4148/ios">browse your photo collections</a> covers the Collections view, reordering, and pinning.</p>
+<p><strong>Keep check-ins in their own album and open it from the Collections tab.</strong> Tap Collections, then Albums, and create a new album (for example, “Progress”). After each check-in, add your front, side, and back shots to that album. To add the album to Pinned so it stays at the top, touch and hold it, then tap Pin. Apple's guide to <a href="https://support.apple.com/guide/iphone/browse-your-photo-collections-iph4f36c4148/ios">browse your photo collections</a> covers the Collections view, reordering, and pinning.</p>
 <figure class="m-0 mx-auto mt-6 w-1/2 max-w-[280px]">
   <img
     class="block h-auto w-full rounded-card border border-card-border"
     src="../../assets/blog/camera-roll-vs-progress-photo-app/ios-photos-collections-tab.webp"
-    alt="Photos app with Collections selected, showing Memories, Pinned, Albums, and Recent Days"
+    alt="iPhone Photos app with Collections selected, showing Memories, Pinned, Albums, and Recent Days."
     width="490"
     height="1008"
     loading="lazy"
@@ -294,7 +302,6 @@
     <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: this is Apple's screenshot from Apple Support. Mark, swap in your own screenshot before publishing.]</mark>
   </figcaption>
 </figure>
-<p><strong>The tradeoff: organization, not privacy.</strong> Every photo in the album still appears in your main Library grid next to everything else, so a separate album sorts check-ins without hiding them.</p>
 <p>To round out the DIY setup, set a weekly repeating reminder for check-in day in Reminders, and use a collage app to put two check-ins side by side.</p>
 <h2 id="what-a-dedicated-app-adds">What a dedicated app adds</h2>
 <p>A dedicated app puts the pieces the camera roll leaves to other apps in one place. In Recomp, each check-in keeps your front, side, and back photos next to that date's weight and notes. Compare puts two check-ins side by side and saves your alignment per photo, and the share button makes one before/after image. If you're choosing an app, here's <a href="/blog/how-i-test-progress-photo-apps/">how I review progress photo apps</a>.</p>
@@ -314,7 +321,7 @@
 <h3 id="faq-5">How do I track weight alongside my progress photos?</h3>
 <p>Every Recomp check-in holds your weight next to that date's photos. If you logged weight somewhere else, import a CSV of dates and weights and Recomp matches them to your check-ins.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p><mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[TODO: one or two lines.]</mark></p>
+<p>The camera roll is a place to keep your photos, not a place to compare them.</p>
 <p><mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[TODO: CTA]</mark></p>
         </div>
 
