@@ -3,11 +3,18 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node scripts/apply-chrome.js && concurrently -k -n css,web -c cyan,magenta \"npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css --watch\" \"python3 -m http.server 3000\"",
-    "build": "node scripts/apply-chrome.js && npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css --minify && node scripts/stamp-asset-versions.js"
+    "dev": "node scripts/apply-chrome.js && concurrently -k -n css,web -c cyan,magenta \"npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css --watch\" \"eleventy --serve --port 3000\"",
+    "build": "node -e \"require('fs').rmSync('_site',{recursive:true,force:true})\" && node scripts/apply-chrome.js && npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css --minify && node scripts/stamp-asset-versions.js && eleventy",
+    "build:example": "BLOG_FIXTURES=1 npm run build",
+    "diff-site": "node scripts/diff-site.js",
+    "test": "node --test tests/*.test.js"
   },
   "dependencies": {
+    "@11ty/eleventy": "^3.1.7",
+    "@11ty/eleventy-img": "^7.1.1",
     "@tailwindcss/cli": "^4.3.3",
+    "markdown-it": "^14.3.3",
+    "markdown-it-attrs": "^4.5.0",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
