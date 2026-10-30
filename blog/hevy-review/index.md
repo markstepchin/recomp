@@ -40,6 +40,8 @@ Hevy is one of the 12 apps I've tested so far, and one of three fitness apps wit
 
 ![Hevy Progress Pictures screen in Comparison mode with photos from 10 Oct 2024 and 4 Aug 2025 side by side above a filmstrip of check-ins](./hevy-comparison.webp "Progress Pictures, Comparison mode, with the filmstrip below."){.phone}
 
+![Hevy Progress Pictures screen in Single mode showing a photo from 4 Aug 2025 at 155 lbs with grey bars on both sides, above a filmstrip of three check-ins](./hevy-single-view.webp "Progress Pictures, Single mode. The photo doesn't fill the width."){.phone}
+
 ### Alignment app {#alignment}
 
 - Manual alignment during upload only.
@@ -49,6 +51,8 @@ Hevy is one of the 12 apps I've tested so far, and one of three fitness apps wit
 - No alignment after check-in, and realigning means deleting the entry, which deletes its weight and measurements.
 
 ![Hevy Transform screen cropping a progress photo at 3:4 with a grid overlay and a rotation dial](./hevy-crop-grid.webp "Transform: a 3:4 crop with a grid and rotation dial."){.phone}
+
+![Hevy in-app camera with Overlay turned on, showing a faded ghost of the previous progress photo over the live view, with Timer and Overlay buttons beside the shutter](./hevy-camera-overlay.webp "The in-app camera with Overlay on."){.phone}
 
 ### Collage app {#compare}
 
@@ -65,6 +69,10 @@ Hevy is one of the 12 apps I've tested so far, and one of three fitness apps wit
 - Doesn't get the date from the photo.
 - Some measurements free (weight and waist), the rest paid.
 - Exports measurement data but not photos.
+
+![Hevy Log Measurements screen dated 30 October 2026 with one progress picture, then Body Weight and Waist fields open to fill in and Body Fat and the measurements below it showing a lock icon](./hevy-log-measurements.webp "Log Measurements: one progress picture, and weight and waist are free."){.phone}
+
+![Hevy Log Measurements screen scrolled down, with Body Fat, Lean Body Mass, Neck, Shoulder, Chest, biceps, forearms, Abdomen, Hips, thighs and calves all showing a lock icon](./hevy-locked-measurements.webp "The rest of the measurements are locked."){.phone}
 
 ## 4. A note on sharing {#sharing}
 
