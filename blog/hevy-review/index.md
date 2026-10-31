@@ -1,11 +1,11 @@
 ---
-# Outline skeleton for Mark to write into. draft: true keeps it noindex and out of /blog/, the sitemap and llms.txt.
+# draft: true keeps it noindex and out of /blog/, the sitemap and llms.txt.
 title: "Hevy Progress Photos Review"
 seo_title: "Hevy Progress Photos and Measurements, Tested | Recomp"
 description: "I tested Hevy's progress photos, overlay camera, side-by-side compare and measurements. It works for one weekly photo, but allows only one photo a day."
-tested: October 2026
 draft: true
 breadcrumb: "Best progress photo apps"
+cta: false
 faq:
   - q: "Can you add front, side and back photos on the same day in Hevy?"
     a: "No. Hevy allows one progress photo per day."
@@ -17,30 +17,21 @@ faq:
     a: "Hevy exports measurements as a CSV. Photos aren't in the export."
 ---
 
-<!-- TODO(Mark): final title, seo_title and description once the verdict is written. Add card_blurb if the /blog/ card needs a shorter line. -->
-<!-- TODO(Mark): set "published: YYYY-MM-DD" in the frontmatter and remove draft: true when this is ready. -->
-
-<!-- Outline approved by Mark, in his chosen structure. Each point is word for word from the outline; write the prose from it. -->
-
 ## Summary {#summary}
 
 Hevy is a workout tracker with progress photos built in, under Profile > Measures. It has an overlay in the capture camera, side-by-side progress photo comparisons, and photos next to your weight and measurements. The biggest drawbacks: only one photo per day, so front, side and back can't share a date; no auto-align; no way to align after a check-in without deleting the entry and its weight and measurements; and you set the date by hand.
 
-**Verdict:** <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[TODO]</mark>
+**Verdict:** <!-- TODO(Mark): verdict. -->
 
 ## Who should use Hevy for progress photos? {#who-its-for}
 
 If you already log workouts in Hevy, here's what its progress photos can and can't do.
 
-<mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[TODO]</mark> Who should use it and who shouldn't. Suggestion: people already logging workouts in Hevy who want a simple weekly photo next to their weight.
+<!-- TODO(Mark): who should use it and who shouldn't. Suggestion: people already logging workouts in Hevy who want a simple weekly photo next to their weight. -->
 
-I used Hevy for my workouts (see [Why I built Recomp](/blog/why-i-built-recomp/)). <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[TODO]</mark> Confirm wording.
+I used Hevy for my workouts (see [Why I built Recomp](/blog/why-i-built-recomp/)). <!-- TODO(Mark): confirm wording. -->
 
-**Full disclosure: I build Recomp, a free progress photo app, and I hold it to the same bar as every other app.** I don't run ads, and I don't use affiliate links.
-
-Hevy is one of the 12 apps I've tested so far, and one of three fitness apps with a photo feature I tested alongside the dedicated progress photo apps. I tested it the way I test every app, with real photos and weights from my own transformation. [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) explains the method.
-
-<!-- TODO(Mark): check the "12 apps I've tested so far" count. -->
+Full disclosure: I build Recomp, a progress photo app. <!-- TODO(Mark): method paragraph and link to How I Review (check the "12 apps I've tested so far" count). -->
 
 ## Hevy vs Recomp for progress photos {#hevy-vs-recomp}
 
@@ -72,7 +63,7 @@ Hevy is one of the 12 apps I've tested so far, and one of three fitness apps wit
 
 <!-- TODO(Mark): image needed: delete prompt on an entry. -->
 
-<mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[TODO]</mark> Does "replace it" (per Hevy's help article) let you realign without deleting weight and measurements?
+<!-- TODO(Mark): does "replace it" (per Hevy's help article) let you realign without deleting weight and measurements? -->
 
 ## Can Hevy make a before and after? {#compare}
 
@@ -109,32 +100,25 @@ Sources: [Hevy's help article on measurements and progress photos](https://help.
 
 ## My verdict on Hevy's progress photos {#verdict}
 
-<mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[TODO]</mark> (qualitative, no score)
-
-<!-- FAQ: keep these answers word for word in sync with the faq: frontmatter (FAQPage JSON-LD). -->
+<!-- TODO(Mark): verdict (qualitative, no score). -->
 
 ## FAQ {#faq}
 
-### Can you add front, side and back photos on the same day in Hevy? {#faq-same-day}
-
+**Can you add front, side and back photos on the same day in Hevy?**\
 No. Hevy allows one progress photo per day.
 
-### Can other people see my Hevy progress photos? {#faq-privacy}
-
+**Can other people see my Hevy progress photos?**\
 No. Photos in Measures stay private even with a public profile. Photos or videos you attach to a workout are visible.
 
-### Are Hevy body measurements free? {#faq-measurements}
-
+**Are Hevy body measurements free?**\
 Weight and waist are free. Body fat and the other measurements need Hevy Pro.
 
-### Can you export progress photos from Hevy? {#faq-export}
-
+**Can you export progress photos from Hevy?**\
 Hevy exports measurements as a CSV. Photos aren't in the export.
 
 ---
 
-Published: <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[TODO]</mark> <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
-
-Tested: <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[TODO]</mark> (October 2026?) {#when-tested}
+Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter and remove draft: true). -->\
+Tested: <!-- TODO(Mark): tested date (October 2026?); also set tested: in the frontmatter. --> {#when-tested}
 
 Questions or corrections: support@progressphotos.app
