@@ -1,13 +1,20 @@
 /**
  * Eleventy builds the site into _site/, the only folder Cloudflare serves (wrangler.jsonc).
  *
- * - Hand-written pages, assets and root files are copied as-is (passthrough), so they
- *   are byte-identical to the committed files. apply-chrome and stamp-asset-versions
- *   still run on those source files first (see npm run build).
- * - blog/<slug>/index.md is a Markdown post rendered with _includes/post.njk, then given
- *   the same header/footer/canonical (apply-chrome) and ?v= hashes (stamp-asset-versions).
- * - /blog/, /sitemap.xml and /llms.txt are the hand-written files with the post lists
- *   filled in (_pages/*.11ty.js). Drafts get noindex and stay out of all three.
+ * - Pages: about/, faq/, privacy/, roadmap/, support/ and blog/ are Nunjucks templates
+ *   (<dir>/index.njk) that extend _includes/base.njk. The header, footer, theme boot,
+ *   canonical and og:url come from partials/*.html via chrome() and the ?v= hashes via
+ *   stamp() after render, so nothing generated is committed for them.
+ * - The home page (index.html), the redirect stubs (privacy.html, support.html),
+ *   claude-version.html, the Google verification file, assets and root files are copied
+ *   as-is (passthrough). apply-chrome and stamp-asset-versions still run on index.html
+ *   first (see npm run build).
+ * - blog/<slug>/index.md is a Markdown post rendered with _includes/post.njk (which
+ *   extends base.njk).
+ * - /blog/ fills its post cards from the posts collection; /sitemap.xml and /llms.txt are
+ *   the hand-written files with the post lists filled in (_pages/*.11ty.js). Drafts get
+ *   noindex and stay out of all three, and so do hand_listed posts (their entries are
+ *   written by hand).
  * - Local images in a post go through Eleventy Image: WebP, 800/1600w, width/height set,
  *   metadata stripped, inside <figure> with the image title as <figcaption>. `{.phone}`
  *   after an image makes a narrow phone-screenshot figure (see _config/markdown.js).
@@ -18,11 +25,11 @@
  * BLOG_FIXTURES=1 also builds tests/fixtures/blog/*, the example draft post.
  */
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
-import { basename, dirname, extname, join } from "node:path";
+import { basename, dirname, extname, join, relative } from "node:path";
 import Image from "@11ty/eleventy-img";
 import { chrome } from "./scripts/apply-chrome.js";
 import { findMismatches, stamp } from "./scripts/stamp-asset-versions.js";
-import { checkFrontmatter, checkPost, isPostPath, jsonLd, postData, slugOf, sortPosts } from "./_config/blog.js";
+import { checkFrontmatter, checkPost, indexCards, isPostPath, jsonLdBlocks, postData, slugOf, sortPosts } from "./_config/blog.js";
 import { SIZES, markdown } from "./_config/markdown.js";
 
 const FIXTURES = process.env.BLOG_FIXTURES === "1";
@@ -68,15 +75,17 @@ async function optimizeImages(html, srcDir, outDir) {
   return html;
 }
 
+const depthOf = (url) => (typeof url === "string" ? url.split("/").filter(Boolean).length : 0);
+
 /** Folders under blog/ that are Markdown posts. */
 const markdownPostDirs = () =>
   readdirSync("blog").filter((name) => statSync(join("blog", name)).isDirectory() && existsSync(join("blog", name, "index.md")));
 
 export default function (eleventyConfig) {
-  eleventyConfig.setTemplateFormats(["md", "11ty.js"]);
+  eleventyConfig.setTemplateFormats(["md", "njk", "11ty.js"]);
   eleventyConfig.setLibrary("md", markdown());
 
-  // Only blog posts and _pages are templates. Everything else is copied or private.
+  // Only blog posts, <dir>/index.njk pages and _pages are templates. Everything else is copied or private.
   for (const glob of ["*.md", "docs/**", "scripts/**", "partials/**", "_config/**", "node_modules/**"]) {
     eleventyConfig.ignores.add(glob);
   }
@@ -88,7 +97,6 @@ export default function (eleventyConfig) {
   for (const glob of [
     "index.html", "claude-version.html", "google6d053ef5debca997.html", "privacy.html", "support.html",
     "robots.txt", "_headers",
-    "about/**", "faq/**", "privacy/**", "support/**", "roadmap/**",
     "assets/**", "js/!(*.test).js", DEV ? "styles/!(output).css" : "styles/**",
   ]) {
     eleventyConfig.addPassthroughCopy(glob);
@@ -99,15 +107,15 @@ export default function (eleventyConfig) {
     // instead and live-reloads the stylesheet when Tailwind rewrites it.
     eleventyConfig.setServerOptions({ watch: [DEV_CSS] });
   }
-  // Hand-written blog posts are copied whole. Markdown post folders only copy
-  // non-raster extras (svg, gif, mp4); their photos go through Eleventy Image.
+  // Hand-written blog posts (none left) would be copied whole. Markdown post folders only
+  // copy non-raster extras (svg, gif, mp4); their photos go through Eleventy Image.
   const mdDirs = new Set(markdownPostDirs());
   for (const name of readdirSync("blog")) {
     if (!statSync(join("blog", name)).isDirectory()) continue;
     eleventyConfig.addPassthroughCopy(mdDirs.has(name) ? `blog/${name}/*.{svg,gif,mp4}` : `blog/${name}/**`);
   }
 
-  for (const file of ["blog/index.html", "sitemap.xml", "llms.txt", "styles/output.css", "partials/"]) {
+  for (const file of ["sitemap.xml", "llms.txt", "styles/output.css", "partials/"]) {
     eleventyConfig.addWatchTarget(file);
   }
 
@@ -116,6 +124,10 @@ export default function (eleventyConfig) {
     layout: (data) => (isPostPath(data.page.inputPath) ? "post.njk" : data.layout),
     permalink: (data) => (isPostPath(data.page.inputPath) ? `/blog/${slugOf(data.page.inputPath)}/index.html` : data.permalink),
     post: (data) => (isPostPath(data.page.inputPath) ? postData(data) : undefined),
+    // Folder depth of the page URL ("/" 0, "/about/" 1, "/blog/x/" 2) and the matching
+    // relative prefix for assets, used by _includes/base.njk.
+    depth: (data) => depthOf(data.page.url),
+    root: (data) => "../".repeat(depthOf(data.page.url)),
   });
   eleventyConfig.addCollection("posts", (api) =>
     sortPosts(api.getAll().filter((item) => isPostPath(item.inputPath)).map((item) => postData(item.data))),
@@ -142,9 +154,11 @@ export default function (eleventyConfig) {
     return false;
   });
 
-  eleventyConfig.addFilter("jsonLd", (post) => jsonLd(post));
+  eleventyConfig.addFilter("jsonLdBlocks", (post) => jsonLdBlocks(post));
+  eleventyConfig.addFilter("indexCards", (posts) => indexCards(posts));
   const md = markdown();
   eleventyConfig.addFilter("md", (text) => md.render(String(text)).trim());
+  eleventyConfig.addFilter("mdInline", (text) => md.renderInline(String(text)).trim());
 
   // og:image: writes <name>-og.webp (1200w) for a co-located og_image and returns the URL.
   eleventyConfig.addAsyncShortcode("ogImage", async function (post) {
@@ -161,12 +175,15 @@ export default function (eleventyConfig) {
     return post.ogImage;
   });
 
-  // Posts get the site chrome, optimized images and ?v= hashes after render.
-  eleventyConfig.addTransform("blog-post", async function (content) {
-    if (!isPostPath(this.page.inputPath)) return content;
-    const slug = slugOf(this.page.inputPath);
-    let html = chrome(content, `blog/${slug}/index.html`);
-    html = await optimizeImages(html, dirname(this.page.inputPath), dirname(this.page.outputPath));
+  // Template pages (base.njk) and posts get the site chrome and ?v= hashes after render;
+  // posts also get optimized images.
+  eleventyConfig.addTransform("chrome", async function (content) {
+    const out = this.page.outputPath;
+    if (typeof out !== "string" || !out.endsWith(".html")) return content;
+    let html = chrome(content, relative(OUTPUT, out));
+    if (isPostPath(this.page.inputPath)) {
+      html = await optimizeImages(html, dirname(this.page.inputPath), dirname(out));
+    }
     return stamp(html);
   });
 
