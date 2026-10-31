@@ -82,6 +82,11 @@ export function checkPost(file, body, draft, bodyLineOffset = 0) {
 export const FRONTMATTER_KEYS = new Set([
   "title", "seo_title", "description", "published", "updated", "tested", "draft", "noindex",
   "og_image", "breadcrumb", "summary", "summary_heading", "card_blurb", "llms_blurb", "cta", "faq",
+  // Optional, mostly for posts converted from hand-written HTML so their output stays the same
+  // (see docs/blog-markdown.md): og_title, og_description, og_image_alt, twitter_text,
+  // article_dates, byline, prose_wrapper, json_ld, hand_listed.
+  "og_title", "og_description", "og_image_alt", "twitter_text", "article_dates", "byline",
+  "prose_wrapper", "json_ld", "hand_listed",
 ]);
 const CTA_KEYS = new Set(["heading", "text", "location"]);
 
@@ -101,6 +106,11 @@ export function checkFrontmatter(file, raw, data, exists) {
   for (const key of frontmatterKeys(raw)) {
     if (!FRONTMATTER_KEYS.has(key)) errors.push(`${file}: unknown frontmatter key "${key}" (allowed: ${[...FRONTMATTER_KEYS].join(", ")})`);
   }
+  for (const key of ["twitter_text", "article_dates", "prose_wrapper", "hand_listed"]) {
+    if (data[key] !== undefined && typeof data[key] !== "boolean") errors.push(`${file}: ${key} must be true or false`);
+  }
+  if (data.byline !== undefined && data.byline !== false && typeof data.byline !== "string") errors.push(`${file}: byline must be text or false`);
+  if (data.json_ld !== undefined && (typeof data.json_ld !== "object" || data.json_ld === null)) errors.push(`${file}: json_ld must be a JSON-LD object or a list of them`);
   if (data.cta !== undefined && data.cta !== false) {
     if (typeof data.cta !== "object" || data.cta === null) errors.push(`${file}: cta must be a mapping or false`);
     else for (const key of Object.keys(data.cta)) if (!CTA_KEYS.has(key)) errors.push(`${file}: unknown cta key "${key}" (allowed: heading, text, location)`);
@@ -138,13 +148,30 @@ export function postData(data) {
   const url = `${SITE_URL}/blog/${slug}/`;
   const og = data.og_image ? String(data.og_image) : null;
   const ogLocal = og && og.startsWith("./") ? og : null;
+  const handListed = data.hand_listed === true;
   return {
     file, slug, url, draft,
     noindex: draft || data.noindex === true,
-    listed: !draft && data.noindex !== true,
+    // hand_listed: the /blog/ card, sitemap and llms.txt lines are written by hand, not generated.
+    handListed,
+    listed: !draft && data.noindex !== true && !handListed,
     title: String(data.title),
     seoTitle: data.seo_title ? String(data.seo_title) : `${data.title} — Recomp`,
     description: String(data.description),
+    // og:title / og:description, also used for twitter:title / twitter:description.
+    ogTitle: data.og_title ? String(data.og_title) : String(data.title),
+    ogDescription: data.og_description ? String(data.og_description) : String(data.description),
+    ogImageAlt: data.og_image_alt ? String(data.og_image_alt) : null,
+    // twitter_text: false leaves out twitter:title and twitter:description.
+    twitterText: data.twitter_text !== false,
+    // article_dates: false leaves out article:published_time / article:modified_time.
+    articleDates: data.article_dates !== false,
+    // byline: false drops the byline line (the h1 gets pb-8); text replaces it (inline Markdown/HTML).
+    byline: data.byline === false ? false : data.byline ? String(data.byline) : null,
+    // prose_wrapper: false means the body brings its own wrapper <div>s (raw HTML around Markdown).
+    proseWrapper: data.prose_wrapper !== false,
+    // json_ld: used as-is instead of the generated BlogPosting/FAQPage; a list gives one <script> per item.
+    jsonLdOverride: data.json_ld ?? null,
     published, updated,
     publishedShort: published ? shortDate(published) : null,
     tested: data.tested ? String(data.tested) : null,
@@ -199,6 +226,13 @@ export function jsonLd(post) {
   return JSON.stringify(out, null, 2).replace(/<\//g, "<\\/");
 }
 
+/** The JSON-LD <script> bodies for a post: the json_ld override (one per list item) or the generated one. */
+export function jsonLdBlocks(post) {
+  if (!post.jsonLdOverride) return [jsonLd(post)];
+  const items = Array.isArray(post.jsonLdOverride) ? post.jsonLdOverride : [post.jsonLdOverride];
+  return items.map((item) => JSON.stringify(item, null, 2).replace(/<\//g, "<\\/"));
+}
+
 // ---------------------------------------------------------------- lists
 
 const escapeHtml = (s) =>
@@ -217,7 +251,7 @@ export function replaceRegion(text, name, inner, file) {
 
 export const sitemapEntries = (posts) =>
   posts
-    .filter((p) => !p.noindex)
+    .filter((p) => !p.noindex && !p.handListed)
     .map((p) => {
       const lastmod = p.updated || p.published;
       return `  <url>\n    <loc>${p.url}</loc>\n${lastmod ? `    <lastmod>${lastmod}</lastmod>\n` : ""}  </url>\n`;

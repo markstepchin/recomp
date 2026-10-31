@@ -1,0 +1,47 @@
+{#-
+  Shared page layout for the Eleventy-built pages (static pages and Markdown posts).
+  A page extends it and fills the blocks:
+    head        everything in <head> after the theme boot (default: the site's standard
+                website meta from title, description, og_title, og_description)
+    extra_head  added at the end of the default head (JSON-LD, preloads)
+    main        the page's <main>
+  Page data: title, description, og_title, og_description, nav (header link to mark as
+  current: blog, about or privacy), posthog_defer (true adds defer to posthog.js).
+  `root` ("", "../", "../../") and `depth` come from the page URL (eleventy.config.js).
+  The header, footer, theme boot, canonical and og:url are filled after render from
+  partials/*.html by chrome() (scripts/apply-chrome.js), and ?v= hashes by stamp().
+-#}
+<!doctype html>
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto" data-theme="system">
+  <head>
+    <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <!-- /chrome:theme -->
+{% block head %}    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}" />
+    <link rel="stylesheet" href="{{ root }}styles/output.css" />
+    <link rel="canonical" href="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta property="og:title" content="{{ og_title or title }}" />
+    <meta property="og:description" content="{{ og_description or description }}" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="https://progressphotos.app/assets/step-compare.webp?v=5" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="{{ root }}assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="{{ root }}assets/recomp-app-icon.png" />
+{% block extra_head %}{% endblock %}{% endblock %}  </head>
+  <body class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]">
+    <div class="flex min-h-dvh flex-col">
+      <!-- chrome:header current="{{ nav }}" depth="{{ depth }}" -->
+      <!-- /chrome:header -->
+{% block main %}{% endblock %}
+
+      <!-- chrome:footer depth="{{ depth }}" -->
+      <!-- /chrome:footer -->
+    </div>
+    <script src="{{ root }}js/posthog.js"{% if posthog_defer %} defer{% endif %}></script>
+    <script src="{{ root }}js/theme.js"></script>
+  </body>
+</html>

@@ -20,6 +20,12 @@ cta:                         # optional; any field overrides the default CTA. `c
   heading: Line up your progress photos
   text: Recomp aligns your check-ins so you can see the change.
   location: article_footer
+# Rarely needed (used to keep the posts converted from hand-written HTML identical):
+# og_title / og_description: og + twitter text when it differs from title / description
+# og_image_alt: og:image:alt   twitter_text: false drops twitter:title/description
+# article_dates: false drops article:*_time   byline: false (no byline) or custom inline text
+# prose_wrapper: false (body brings its own wrapper <div>s as raw HTML)
+# json_ld: JSON-LD used as-is (a list gives one <script> each)   hand_listed: true (lists written by hand)
 faq:                         # optional: FAQPage JSON-LD (write the visible FAQ section in the body)
   - q: Is this an example?
     a: Yes. It proves the Markdown pipeline.

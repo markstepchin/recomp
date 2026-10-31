@@ -9,13 +9,16 @@ Each real page includes the file with `defer`, next to `theme.js` (home page: be
 | Page | File |
 | --- | --- |
 | Home | `index.html` |
-| Blog index | `blog/index.html` |
-| Progress photos article | `blog/how-to-take-progress-photos-for-recomp/index.html` |
-| Founder post | `blog/why-i-built-recomp/index.html` |
-| About | `about/index.html` |
-| Privacy | `privacy/index.html` |
-| FAQ | `faq/index.html` |
-| Support | `support/index.html` |
+| Blog index | `blog/index.njk` |
+| Progress photos article | `blog/how-to-take-progress-photos-for-recomp/index.md` (via `_includes/post.njk`) |
+| Founder post | `blog/why-i-built-recomp/index.md` (via `_includes/post.njk`) |
+| About | `about/index.njk` |
+| Privacy | `privacy/index.njk` |
+| FAQ | `faq/index.njk` |
+| Support | `support/index.njk` |
+| Other pages and posts | `roadmap/index.njk`, other `blog/<slug>/index.md` |
+
+Template pages get the tag from `_includes/base.njk` (`posthog_defer: true` in a page's frontmatter adds `defer`).
 
 ## Config
 
