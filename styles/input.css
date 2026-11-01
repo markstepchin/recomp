@@ -480,9 +480,14 @@ html[data-theme="dark"] .phone-shot { box-shadow: 0 0 0 1px rgba(255,255,255,0.0
 /* Review scorecard (_includes/scorecard.njk). The status word takes the status colour; the
    word is always there, so colour is never the only signal. Light values are in the light blocks. */
 @layer components {
+  /* MailCheap-style marks: green check, muted dash and cross; facts for missing rows are muted. */
   .scorecard [data-status="has"] .sc-status { color: var(--color-success); }
-  .scorecard [data-status="partial"] .sc-status { color: var(--color-warning); }
-  .scorecard [data-status="missing"] .sc-status { color: var(--color-error); }
+  .scorecard [data-status="partial"] .sc-status,
+  .scorecard [data-status="missing"] .sc-status,
   .scorecard [data-status="confirm"] .sc-status { color: var(--color-muted); }
+  .scorecard [data-status="has"] .sc-fact,
+  .scorecard [data-status="partial"] .sc-fact { color: var(--color-fg); }
+  .scorecard [data-status="missing"] .sc-fact { color: var(--color-muted); }
+  .scorecard tbody:last-child > tr:last-child > * { border-bottom: 0; }
   .scorecard tbody + tbody > tr:first-child > th { border-top: 0; }
 }

@@ -6,35 +6,36 @@
 <section class="mt-12" aria-labelledby="scorecard-heading">
   <h2 id="scorecard-heading">{{ post.appStore.shortName or post.appStore.name }} against my checklist</h2>
   <div class="mt-2 text-muted">Each row is one thing I check in every app. The criteria come from <a href="/blog/how-i-test-progress-photo-apps/">How I review progress photo apps</a>.</div>
-  <div class="-mx-gutter mt-4 overflow-x-auto overscroll-x-contain px-gutter" role="region" aria-labelledby="scorecard-caption" tabindex="0">
-    <table class="scorecard w-full border-collapse text-left">
+  <div class="mt-5 overflow-x-auto overscroll-x-contain rounded-card border border-card-border bg-card" role="region" aria-labelledby="scorecard-caption" tabindex="0">
+    <table class="scorecard w-full border-collapse text-left text-micro">
       <caption id="scorecard-caption" class="sr-only">What {{ post.appStore.name }} has, checked against my review criteria</caption>
-      <colgroup><col class="w-[42%]" /><col /></colgroup>
+      <colgroup><col class="w-[45%]" /><col /></colgroup>
       <thead>
         <tr>
-          <th scope="col" class="border-b border-card-border px-3 py-2 text-micro font-semibold text-muted">What I check</th>
-          <th scope="col" class="border-b border-card-border px-3 py-2 text-micro font-semibold text-fg">{{ post.appStore.name }}</th>
+          <th scope="col" class="border-b border-card-border px-5 py-4 font-normal text-muted">What I check</th>
+          <th scope="col" class="border-b border-card-border px-5 py-4 font-semibold text-fg">{{ post.appStore.shortName or post.appStore.name }}</th>
         </tr>
       </thead>
       {%- for g in sc.groups %}
       <tbody>
         <tr>
-          <th scope="rowgroup" colspan="2" class="bg-card px-3 pb-2 pt-5 text-[1.0625rem] font-bold tracking-h4 text-fg">
-            <a class="text-fg no-underline hover:underline" href="/blog/how-i-test-progress-photo-apps/#{{ g.anchor }}">{{ g.label }}</a>
+          <th scope="rowgroup" colspan="2" class="border-b border-card-border px-5 pb-2 pt-6 text-helper font-semibold uppercase tracking-wide text-muted">
+            <a class="text-muted no-underline hover:underline" href="/blog/how-i-test-progress-photo-apps/#{{ g.anchor }}">{{ g.label }}</a>
           </th>
         </tr>
         {%- for r in g.rows %}
         <tr id="sc-{{ r.id | replace('_', '-') }}">
-          <th scope="row" class="border-b border-card-border px-3 py-3 align-top text-micro font-normal text-fg">{{ r.label }}</th>
-          <td class="border-b border-card-border px-3 py-3 align-top text-micro" data-status="{{ r.status }}">
-            <span class="sc-status inline-flex items-center gap-1.5 font-semibold">
-              {%- include "scorecard-icon.njk" %}<span>{{ r.statusLabel }}</span>
+          <th scope="row" class="border-b border-card-border px-5 py-3.5 align-top font-normal text-fg">{{ r.label }}</th>
+          <td class="border-b border-card-border px-5 py-3.5 align-top" data-status="{{ r.status }}">
+            <span class="flex items-start gap-2.5">
+              <span class="sc-status mt-[0.2em] shrink-0">{%- include "scorecard-icon.njk" %}</span>
+              <span class="sr-only">{{ r.statusLabel }}:</span>
+              {%- if r.status == "confirm" %}
+              <span class="sc-fact"><mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM]</mark></span>
+              {%- else %}
+              <span class="sc-fact">{{ r.fact }}</span>
+              {%- endif %}
             </span>
-            {%- if r.status == "confirm" %}
-            <span class="block"><mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM]</mark></span>
-            {%- else %}
-            <span class="block pt-0.5 text-muted">{{ r.fact }}</span>
-            {%- endif %}
           </td>
         </tr>
         {%- endfor %}
