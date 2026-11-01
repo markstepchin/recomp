@@ -246,6 +246,7 @@ test("checkInternalLinks: a published page linking a draft or a missing page fai
   assert.deepEqual(errors, ["/blog/live/: links /blog/draft/, which is a draft", "/blog/live/: links /blog/gone/, which is not on the site"]);
   assert.deepEqual(warnings, ["/blog/draft/: links /blog/gone/, which is not on the site"]);
   assert.deepEqual(internalLinks('<a href="https://progressphotos.app/faq/">x</a>', "/blog/a/").map((l) => l.path), ["/faq/"]);
+  assert.deepEqual(internalLinks('<a class="x" href="/blog/draft/" data-draft-link>d</a> <a\n  data-draft-link\n  href="/blog/gone/">g</a>', "/blog/a/"), []);
 });
 
 test("the review fixture's frontmatter passes the checks", () => {
