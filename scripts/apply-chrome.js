@@ -3,9 +3,11 @@
  * and set each page's canonical and og:url from its path.
  * Cloudflare serves the HTML as-is, so the filled markup is what gets committed.
  * Edit the partials, then run `npm run build`.
+ * Markdown posts get the same chrome from eleventy.config.js via `chrome()`.
  */
 import { readFileSync, writeFileSync, readdirSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
+import { pathToFileURL } from "node:url";
 
 const SITE_URL = "https://progressphotos.app";
 
@@ -24,7 +26,7 @@ const skip = new Set([
 function pages(dir = root) {
   const found = [];
   for (const name of readdirSync(dir)) {
-    if (name === "node_modules" || name === "docs" || name === ".git") continue;
+    if (name === "node_modules" || name === "docs" || name === ".git" || name === "_site") continue;
     const path = join(dir, name);
     if (statSync(path).isDirectory()) {
       if (name === "partials") continue;
@@ -226,23 +228,30 @@ function apply(html) {
   return next;
 }
 
-const targets = pages();
-targets.push("partials/post.html");
-let changed = 0;
-for (const rel of targets) {
-  const path = join(root, rel);
-  let before;
-  try {
-    before = readFileSync(path, "utf8");
-  } catch {
-    continue;
-  }
-  if (!before.includes("site-footer") && !before.includes("chrome:footer")) continue;
-  const after = stampHead(stampTheme(apply(before)), publicUrl(rel));
-  if (after !== before) {
-    writeFileSync(path, after);
-    changed += 1;
-    console.log("updated", rel);
-  }
+/** Header, footer, theme boot, canonical and og:url for one page (used by Eleventy for Markdown posts). */
+export function chrome(html, rel) {
+  return stampHead(stampTheme(apply(html)), publicUrl(rel));
 }
-console.log(`chrome applied (${changed} file${changed === 1 ? "" : "s"})`);
+
+if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
+  const targets = pages();
+  targets.push("partials/post.html");
+  let changed = 0;
+  for (const rel of targets) {
+    const path = join(root, rel);
+    let before;
+    try {
+      before = readFileSync(path, "utf8");
+    } catch {
+      continue;
+    }
+    if (!before.includes("site-footer") && !before.includes("chrome:footer")) continue;
+    const after = stampHead(stampTheme(apply(before)), publicUrl(rel));
+    if (after !== before) {
+      writeFileSync(path, after);
+      changed += 1;
+      console.log("updated", rel);
+    }
+  }
+  console.log(`chrome applied (${changed} file${changed === 1 ? "" : "s"})`);
+}
