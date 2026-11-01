@@ -1,0 +1,14 @@
+{#- Author box, variant B: a card near the top, after the summary.
+    Copy: name and jobTitle from about/index.njk; the first two bio sentences from How I Review "Who am I?";
+    "Recomp is the app I wish I'd had when I started." from the About page; the method from How I Review "Why are my reviews different?". -#}
+        <section class="mt-4 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]" aria-labelledby="author-box-heading" id="author-box" data-author-box="b">
+          <div class="flex items-center gap-4">
+            {% set avatarClass = "h-14 w-14" %}{% include "author-avatar.njk" %}
+            <div class="min-w-0">
+              <h2 id="author-box-heading" class="text-h4 font-bold tracking-h4"><a class="text-fg no-underline hover:underline" href="../../about/" rel="author">Mark Stepchin</a></h2>
+              <p class="text-micro text-muted">Founder of Recomp</p>
+            </div>
+          </div>
+          <p class="mt-3 text-muted">I've taken progress photos every week since June 6, 2023. I bulked from 165 to 195 lb, then cut to 155 lb. Recomp is the app I wish I'd had when I started.</p>
+          <p class="mt-3 text-micro text-muted"><span class="font-semibold text-fg">How I review:</span> I download the app, set up an account, and pay for the subscription if one exists. I use real photos and weights from my fitness transformation. <a class="text-muted" href="/blog/how-i-test-progress-photo-apps/">How I review apps</a></p>
+        </section>
