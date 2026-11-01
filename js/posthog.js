@@ -125,34 +125,97 @@
   var win = root && root.document ? root : null;
   if (!win) return;
 
+  var host = win.location.hostname;
+  var skip = host === "localhost" || host === "127.0.0.1";
+  // Captures that happen before posthog.init. Flushed into the SDK stub
+  // once init runs, so an App Store click during deferral is not dropped.
+  // Not used for $pageview: the SDK sends that once, from init.
+  var pendingCaptures = [];
+  var booted = false;
+
+  function track(name, props, options) {
+    if (skip) return;
+    if (booted && win.posthog && typeof win.posthog.capture === "function") {
+      win.posthog.capture(name, props, options);
+      return;
+    }
+    pendingCaptures.push([name, props, options]);
+  }
+
+  function flushPendingCaptures() {
+    booted = true;
+    var batch = pendingCaptures.splice(0, pendingCaptures.length);
+    for (var i = 0; i < batch.length; i++) {
+      win.posthog.capture(batch[i][0], batch[i][1], batch[i][2]);
+    }
+  }
+
+  if (!skip) {
+    // Array, matching the official snippet, which queues with `.push`.
+    // capture stays ours until init() replaces it with the SDK stub.
+    var bridge = [];
+    bridge.capture = function (name, props, options) {
+      track(name, props, options);
+    };
+    win.posthog = bridge;
+  }
+
   function captureAppStoreClick(event) {
-    var posthog = win.posthog;
-    if (!posthog || typeof posthog.capture !== "function") return;
     var props = appStoreClickProps(event, win.location.pathname, win.location.href);
     if (!props) return;
     // Same-tab App Store navigations unload the page immediately.
-    posthog.capture("app_store_click", props, { transport: "sendBeacon" });
+    // Queued until init, then sent with sendBeacon via the SDK stub.
+    track("app_store_click", props, { transport: "sendBeacon" });
   }
 
   win.document.addEventListener("click", captureAppStoreClick, true);
   win.document.addEventListener("auxclick", captureAppStoreClick, true);
 
-  var host = win.location.hostname;
-  if (host === "localhost" || host === "127.0.0.1") return;
+  if (skip) return;
 
-  !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="du vu fu pu yu init Bu Hu Nu qu Vu Kl ju Zu Ou Yu Xu th capture getExtension zu hu nh calculateEventProperties ih register register_once register_for_session unregister unregister_for_session ah Lu sh getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync uh identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset hh shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty rh Ku createPersonProfile setInternalOrTestUser oh bu opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Qu debug Yl Os getPageViewId captureTraceFeedback captureTraceMetric Pu".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+  var started = false;
 
-  posthog.init("phc_xodXQZqTdFLNgATiavzQaXRFg2b98MAwNytsS8udcRiA", {
-    api_host: "https://us.i.posthog.com",
-    defaults: "2026-05-30",
-    // Anonymous visitors are never identified on this site. Person properties
-    // would not stick, and `always` would create a profile per visitor.
-    // Attribution is stored as event super properties instead. See POSTHOG.md.
-    person_profiles: "identified_only",
-    // The SDK fires the first $pageview on a timeout after `loaded`, so
-    // register() here is on that pageview and on later events.
-    loaded: function (ph) {
-      applyAttribution(ph, win.location.search);
-    },
-  });
+  function startPosthog() {
+    if (started) return;
+    started = true;
+
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],Object.defineProperty(u,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e}}),Object.defineProperty(u.people,"toString",{configurable:!0,enumerable:!0,writable:!0,value:function(){return u.toString(1)+".people (stub)"}}),o="du vu fu pu yu init Bu Hu Nu qu Vu Kl ju Zu Ou Yu Xu th capture getExtension zu hu nh calculateEventProperties ih register register_once register_for_session unregister unregister_for_session ah Lu sh getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync uh identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset hh shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty rh Ku createPersonProfile setInternalOrTestUser oh bu opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Qu debug Yl Os getPageViewId captureTraceFeedback captureTraceMetric Pu".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+
+    posthog.init("phc_xodXQZqTdFLNgATiavzQaXRFg2b98MAwNytsS8udcRiA", {
+      api_host: "https://us.i.posthog.com",
+      defaults: "2026-05-30",
+      // Anonymous visitors are never identified on this site. Person properties
+      // would not stick, and `always` would create a profile per visitor.
+      // Attribution is stored as event super properties instead. See POSTHOG.md.
+      person_profiles: "identified_only",
+      // The SDK fires the first $pageview once, on a timeout after `loaded`.
+      // Do not capture $pageview here. register() still lands on that pageview.
+      loaded: function (ph) {
+        applyAttribution(ph, win.location.search);
+      },
+    });
+
+    // init() has replaced bridge.capture with the SDK queue. Flush in this
+    // same turn, before array.js can run, so earlier captures are replayed
+    // once and the automatic $pageview is not duplicated.
+    flushPendingCaptures();
+  }
+
+  // After DOMContentLoaded, then idle (or 2000ms). setTimeout only if
+  // requestIdleCallback is missing. The script tag itself is `defer`.
+  // Not `load`: the homepage video (preload=auto) holds `load` until the
+  // mp4 finishes, and a short visit would leave before init.
+  function startPosthogWhenIdle() {
+    if (typeof win.requestIdleCallback === "function") {
+      win.requestIdleCallback(startPosthog, { timeout: 2000 });
+    } else {
+      win.setTimeout(startPosthog, 1);
+    }
+  }
+
+  if (win.document.readyState === "loading") {
+    win.addEventListener("DOMContentLoaded", startPosthogWhenIdle, { once: true });
+  } else {
+    startPosthogWhenIdle();
+  }
 })(typeof window !== "undefined" ? window : typeof globalThis !== "undefined" ? globalThis : this);
