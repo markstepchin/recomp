@@ -5,7 +5,7 @@
   <img class="size-16 shrink-0 rounded-[14px] border border-card-border" src="{{ root }}{{ app.icon }}" alt="" width="64" height="64" loading="lazy" decoding="async" />
   <div class="min-w-0 flex-1">
     <div class="text-[1.0625rem] font-semibold leading-snug tracking-h4 text-fg">{{ app.name }}</div>
-    <div class="truncate text-micro text-muted">{{ app.developer }}</div>
+    <div class="text-micro leading-snug text-muted">{{ app.developer }}</div>
     <div class="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-helper leading-none text-muted" title="US App Store rating, checked {{ app.checkedLong }}">
       {% include "app-store-stars.njk" %}
       <span><span class="font-semibold text-fg">{{ app.ratingText }}</span> · {{ app.ratingCountShort }} ratings</span>
