@@ -26,6 +26,25 @@ faq:
 
 Hevy is one of the 12 apps I've tested so far, and one of three fitness apps with a photo feature I tested alongside the dedicated progress photo apps. I tested it the way I test every app, with real photos and weights from my own transformation. [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) explains the method.
 
+## Built for workouts, not photos {#design-tradeoffs}
+
+<!-- TODO: outline, write into prose -->
+
+1. Hevy is one of the best and most popular workout trackers.
+2. Every design decision in Hevy serves workout tracking. That's the app's priority.
+3. Photo and weight tracking aren't a priority.
+4. Designing an app means making trade-offs.
+5. If you optimize for workout tracking, you can't also optimize for photo tracking.
+6. Apple's own apps show this. Calendar, Reminders, Photos, Calculator, Notes and Health are all separate apps.
+7. Each of those apps is optimized for a different job, and that's why Apple split them up.
+8. Apple could combine them into one app. Separate apps are just much more usable.
+
+Apple keeps each pair separate because each app is optimized for a different job:
+
+- Camera and Photos both handle your pictures.
+- Health and Fitness both track your body. It could combine them into one app. They're just much easier to use apart.
+- Notes and Numbers are both pages you type into.
+
 A progress photo app is really four apps in one: a camera roll, an alignment app, a collage app for comparisons, and a data app that keeps photos with your weight and measurements. Hevy is a workout tracker first, and its photos live under Profile > Measures. Here's how each of the four holds up through a normal weekly check-in.
 
 ## The morning reminder {#reminders}
