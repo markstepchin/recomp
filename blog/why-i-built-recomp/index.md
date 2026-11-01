@@ -11,26 +11,12 @@ cta:
 hand_listed: true
 json_ld:
   - {"@context": "https://schema.org", "@type": "Article", "headline": "Why I created Recomp", "description": "I built Recomp because I couldn't find an app that made weekly progress photos fast to take, align, and compare. A weekly check-in takes under a minute.", "datePublished": "2026-09-21", "dateModified": "2026-09-27", "author": {"@type": "Person", "name": "Mark Stepchin", "url": "https://progressphotos.app/about/", "jobTitle": "Founder of Recomp"}, "publisher": {"@type": "Organization", "name": "Recomp", "url": "https://progressphotos.app/"}, "url": "https://progressphotos.app/blog/why-i-built-recomp/", "mainEntityOfPage": "https://progressphotos.app/blog/why-i-built-recomp/", "image": "https://progressphotos.app/assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp"}
+summary: "I built Recomp because after years of progress photos, I couldn't find an app that made it fast to take, align, and compare them. Recomp focuses on effortless photo and weight check-ins, with a side-by-side comparison timeline that lets you instantly switch between dates. It's built to sit alongside the apps you already use, like Hevy and MyFitnessPal."
 ---
 
-<aside
-  class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
-  aria-labelledby="quick-answer-heading"
->
-  <h2 id="quick-answer-heading" class="text-h4 font-bold tracking-h4">
-    Quick Answer
-  </h2>
-  <p class="mt-3 text-muted">
-    I built Recomp because after years of progress photos, I couldn't
-    find an app that made it fast to take, align, and compare them.
-    Recomp focuses on effortless photo and weight check-ins, with a
-    side-by-side comparison timeline that lets you instantly switch
-    between dates. It's built to sit alongside the apps you already use,
-    like Hevy and MyFitnessPal.
-  </p>
-</aside>
-
 <div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4">
+
+**Full disclosure: I build Recomp, a free progress photo app.**
 
 <figure class="m-0 mx-auto mt-12 w-1/2 max-w-[280px]"><img class="block h-auto w-full rounded-card border border-card-border" src="../../assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp" alt="iOS Photos album showing hundreds of weekly front, side, and back progress photos from years of coaching check-ins" width="1290" height="2635"><figcaption class="mt-[0.65rem] text-center text-caption leading-[1.4] text-muted">Years of weekly check-ins, still stuck in my camera roll.</figcaption></figure>
 
@@ -51,7 +37,7 @@ What I wanted going forward
 1. A Monday morning notification reminding me to take photos and weigh in
 2. A way to track my weight
 3. A way to track my photos
-4. A way to compare and align my photos against last week, last month, and so on
+4. A way to [compare](../../features/compare-progress-photos/) and [align](../../features/align-progress-photos/) my photos against last week, last month, and so on
 
 Most importantly, I wanted the entire loop, from opening the notification to seeing a comparison with last week, to take less than a minute, all on my iPhone.
 
@@ -71,5 +57,11 @@ Next, I tried dedicated apps designed specifically for progress photo tracking. 
 4. It's a specialized tool, designed to fit into the suite of specialized apps power users already rely on.
 
 I quickly realized that building a performant, intuitive photo gallery and editor sounds easy. In practice it comes with a mountain of invisible work that nobody notices until something goes wrong. That also explained why the apps I'd tried felt the way they did. I'm still actively working to make every interaction feel truly seamless and delightful. If you run into an edge case or have any feedback, I'd love to hear from you at [support@progressphotos.app](mailto:support@progressphotos.app).
+
+---
+
+Published: September 21, 2026
+
+Questions or corrections: support@progressphotos.app
 
 </div>

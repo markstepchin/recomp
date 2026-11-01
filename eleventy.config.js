@@ -100,7 +100,7 @@ export default function (eleventyConfig) {
   // tests/, js/*.test.js, package*.json, wrangler.jsonc, eleventy.config.js.
   for (const glob of [
     "index.html", "claude-version.html", "google6d053ef5debca997.html", "privacy.html", "support.html",
-    "robots.txt", "_headers",
+    "robots.txt", "_headers", "features/**",
     "assets/**", "data/**", "js/!(*.test).js", DEV ? "styles/!(output).css" : "styles/**",
   ]) {
     eleventyConfig.addPassthroughCopy(glob);

@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto" data-theme="system">
+  <head>
+    <meta charset="utf-8" />
+    <!-- chrome:theme -->
+    <meta name="apple-itunes-app" content="app-id=6760444125" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("recomp-theme");
+          if (saved === "light" || saved === "dark" || saved === "system") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <style>
+      /* Canvas color before the stylesheet. The theme script at the end of the page would otherwise paint the light background first. */
+      html {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+      @media (prefers-color-scheme: light) {
+        html:not([data-theme="dark"]) {
+          background-color: #fafaf9;
+          color-scheme: light;
+        }
+      }
+      html[data-theme="light"] {
+        background-color: #fafaf9;
+        color-scheme: light;
+      }
+      html[data-theme="dark"] {
+        background-color: #0a0a0b;
+        color-scheme: dark;
+      }
+    </style>
+    <!-- /chrome:theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Align Progress Photos and Take Consistent Shots | Recomp</title>
+    <meta
+      name="description"
+      content="Line up progress photos by hand with drag, pinch and rotate, match them on a 3×3 grid, and take front, side and back in order with Recomp's camera."
+    />
+    <link rel="stylesheet" href="../../styles/output.css" />
+    <link rel="canonical" href="https://progressphotos.app/features/align-progress-photos/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Recomp" />
+    <meta property="og:title" content="Align Progress Photos and Take Consistent Shots | Recomp" />
+    <meta
+      property="og:description"
+      content="Line up progress photos by hand with drag, pinch and rotate, match them on a 3×3 grid, and take front, side and back in order with Recomp's camera."
+    />
+    <meta property="og:url" content="https://progressphotos.app/features/align-progress-photos/" />
+    <!-- CONFIRM: no align OG image exists yet -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Align Progress Photos and Take Consistent Shots | Recomp" />
+    <meta
+      name="twitter:description"
+      content="Line up progress photos by hand with drag, pinch and rotate, match them on a 3×3 grid, and take front, side and back in order with Recomp's camera."
+    />
+    <link rel="icon" href="../../assets/recomp-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="../../assets/recomp-app-icon.png" />
+  </head>
+  <body class="bg-bg font-sans text-body leading-body text-fg transition-[background-color,color,border-color] duration-300 ease-[ease]">
+    <div class="flex min-h-dvh flex-col">
+      <!-- chrome:header depth="2" -->
+      <header class="border-b border-card-border">
+        <div
+          class="mx-auto flex w-full text-xl max-w-[800px] flex-wrap items-center justify-between gap-x-6 gap-y-3 px-gutter py-4 max-md:py-1"
+        >
+          <a
+            class="inline-flex items-center gap-2 text-fg font-medium tracking-wordmark no-underline hover:no-underline max-md:min-h-11"
+            href="../../"
+          >
+            <img
+              class="size-8 shrink-0 rounded-[22%] border border-card-border"
+              src="../../assets/recomp-app-icon.png"
+              alt=""
+              width="32"
+              height="32"
+            />
+            Recomp
+          </a>
+          <nav
+            class="ml-auto flex flex-wrap items-center gap-x-5 gap-y-2 text-micro"
+            aria-label="Site"
+          >
+            <a
+              class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-11 max-md:items-center"
+              href="../"
+              >Blog</a
+            >
+            <a
+              class="inline-flex shrink-0 no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85] max-md:min-h-11 max-md:items-center"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <img
+                class="hidden h-auto w-[140px] light:block"
+                src="../../assets/download-on-the-app-store-black.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+              <img
+                class="h-auto w-[140px] light:hidden"
+                src="../../assets/download-on-the-app-store-white.svg"
+                alt=""
+                width="140"
+                height="47"
+              />
+            </a>
+          </nav>
+        </div>
+      </header>
+      <!-- /chrome:header -->
+
+      <main class="mx-auto w-full max-w-[800px] flex-1 overflow-x-clip px-gutter py-12">
+        <p class="text-micro text-muted pb-3">Features</p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-8">Line up your progress photos</h1>
+        <div class="[&>*+*]:mt-[1em] [&_p]:text-muted [&_strong]:font-semibold [&_strong]:text-fg [&_figure]:mx-auto [&_figure]:my-8 [&_figure]:w-full [&_figure]:max-w-[280px]">
+          <p><strong>I built Recomp because no app made it fast to take, align and compare progress photos.</strong> Two photos framed differently can hide real change or fake it. A phone held lower makes your legs look longer. A step closer to the mirror makes your shoulders look wider. So Recomp helps at both ends: lining up the photos you have, and taking the next set the same way.</p>
+          <p><strong>Line up any photo right in Compare.</strong> Drag, pinch or rotate either photo until it matches the other, and it saves when you lift your finger. Rotation snaps straight when you’re within 3°. After each change, a Reset button shows for about 3 seconds and puts the photo back the way it was shot.</p>
+          <p><strong>Your original is never changed.</strong> The alignment is saved with that photo, so it carries into every comparison on the <a href="../compare-progress-photos/">Compare page</a> and into your Logs thumbnails. Front, side and back each keep their own.</p>
+          <p><strong>The Alignment grid gives you lines to match.</strong> Turn it on from the Compare toolbar to lay a 3×3 grid over both photos. It’s off by default.</p>
+          <figure>
+            <img
+              class="block h-auto w-full rounded-card border border-card-border"
+              src="../../assets/step-align.webp"
+              alt="Two front photos, May 21, 2024 at 198.0 lbs and Aug 4, 2025 at 157.6 lbs, lined up with the Alignment grid on"
+              width="472"
+              height="1024"
+            />
+          </figure>
+          <p><strong>The in-app camera takes your next set in order.</strong> It walks front, side and back, and fills only the poses you haven’t taken yet. Skip leaves a pose empty, and Done ends the set. Your photo library stays the default, and Recomp remembers whether you last used Camera or Photos. A reminder tap opens Add a Log with that choice.</p>
+          <!-- SCREENSHOT NEEDED: the in-app camera on "Front · 1 of 3" with the timer button. -->
+          <p><strong>A self-timer lets you step back from the phone.</strong> It cycles Off, 3, 5 and 10 seconds and remembers your choice. Pinch to zoom, and flip between the rear camera, the default, and the front. Front photos save unmirrored, so they face the same way as rear shots.</p>
+          <p><strong>Camera shots stay in Recomp.</strong> They save to the app, not your Photos library, and leaving without saving discards them. The camera never asks for your microphone.</p>
+          <p>The better the photo, the less there is to fix. My setup for consistent shots is in <a href="../../blog/how-to-take-progress-photos-for-recomp/">how to take progress photos for a recomp</a>. I’m also testing automatic alignment, and I wrote up <a href="../../blog/progress-photo-auto-alignment/">how progress photo auto-alignment works, and where it fails</a>.</p>
+          <p>Recomp never uploads your photos. It sends anonymous usage analytics and crash reports, with no account and no tracking.</p>
+          <p>
+            <a
+              class="inline-flex no-underline transition-opacity duration-150 hover:no-underline hover:opacity-[0.92] focus-visible:no-underline focus-visible:opacity-[0.92] active:opacity-[0.85]"
+              href="https://apps.apple.com/us/app/recomp-progress-photo-tracker/id6760444125"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download Recomp, free on iPhone"
+            >
+              <img class="hidden h-auto w-[140px] light:block" src="../../assets/download-on-the-app-store-black.svg" alt="" width="140" height="47" />
+              <img class="h-auto w-[140px] light:hidden" src="../../assets/download-on-the-app-store-white.svg" alt="" width="140" height="47" />
+            </a>
+          </p>
+          <p>If a photo won’t line up, email me at <a href="mailto:support@progressphotos.app">support@progressphotos.app</a>.</p>
+          <!--
+          ADD ON AUTO-ALIGN LAUNCH DAY (recomp-ios draft PR #41: full-screen photo editor behind the "Photo editor" switch, default off; behavior per Rozz's C1, C2, C4, C6). Also retitle to "Align Progress Photos Automatically or by Hand | Recomp" and add "auto align progress photos" back to the keywords.
+
+          SCREENSHOT NEEDED: the photo editor with the pose dots on shoulders and hips.
+
+          Align lines up a photo by your shoulders and hips. Open a photo in the editor and tap Align. Recomp finds your pose on your iPhone and scales, shifts and straightens the photo to match. It refuses a photo tilted more than 25°, or one where it can't find both shoulders and both hips, and shows "Couldn't find your pose" so you can fix it by hand.
+
+          Nothing saves until you tap ✓. Reset puts the photo back, and closing with changes asks before it discards them.
+
+          Guides draw body lines to match. Pick Upper body, Full body or Grid from the editor's Guides menu, or turn them off.
+
+          If #10 (ghost overlay, C17) also merges, add after the camera paragraph:
+          Your last photo shows as a ghost in the camera. It's your latest photo of the same pose, and a slider from 0 to 100 sets how see-through it is, starting at 50. On the front camera the ghost is mirrored to match the preview.
+          -->
+        </div>
+      </main>
+
+      <!-- chrome:footer depth="2" -->
+      <footer class="pt-8 pb-8">
+        <div class="mx-auto w-full max-w-[800px] px-gutter">
+          <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-4 max-md:flex-col max-md:justify-center max-md:gap-y-1">
+            <nav class="grid min-w-0 gap-y-1 text-micro max-md:w-full max-md:justify-items-center max-md:gap-y-0" aria-label="Footer">
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../"
+                  >Home</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../"
+                  >Blog</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../about/"
+                  >About</a
+                >
+              </div>
+              <div class="flex flex-wrap gap-x-6 gap-y-1 max-md:justify-center max-md:gap-x-4 max-md:gap-y-0">
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../privacy/"
+                  >Privacy</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../support/"
+                  >Support</a
+                >
+                <a
+                  class="text-muted no-underline hover:text-fg hover:underline max-md:inline-flex max-md:min-h-6 max-md:items-center"
+                  href="../../roadmap/"
+                  >Roadmap</a
+                >
+              </div>
+            </nav>
+            <div
+              class="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border border-card-border bg-card p-1.5 max-md:ml-0"
+              role="group"
+              aria-label="Color theme"
+            >
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="system"
+                aria-pressed="true"
+              >
+                Auto
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="light"
+                aria-pressed="false"
+              >
+                Light
+              </button>
+              <button
+                type="button"
+                class="min-h-8 cursor-pointer rounded-full border-0 bg-transparent px-2.5 py-1.5 text-xs font-medium text-muted transition-colors duration-200 aria-pressed:bg-accent aria-pressed:text-white"
+                data-theme-choice="dark"
+                aria-pressed="false"
+              >
+                Dark
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /chrome:footer -->
+      <script src="../../js/posthog.js"></script>
+      <script src="../../js/theme.js"></script>
+    </div>
+  </body>
+</html>
