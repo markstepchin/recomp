@@ -11,3 +11,11 @@ New Markdown posts go in `blog/<slug>/index.md` and render with `_includes/post.
 Run `npm install` once, then `npm run dev` and open http://localhost:3000. It serves the Eleventy site with live reload: saving a Markdown post, a hand-written page or a template rebuilds and reloads the browser, and Tailwind runs in watch mode alongside, so new classes and edits to `styles/input.css` show up without a restart. Draft posts are served too (for example http://localhost:3000/blog/hevy-review/ on a branch that has it), with the yellow draft marker. Stop it with Ctrl-C.
 
 Dev mode writes nothing to tracked files. Tailwind writes to `.cache/dev/output.css` (gitignored), which Eleventy serves as `/styles/output.css` when `RECOMP_DEV=1`, and the partials and `?v=` hashes are not restamped. Before committing, run `npm run build` to regenerate `styles/output.css`, the stamped header and footer and the `?v=` hashes, then commit those changes.
+
+## Blog articles
+
+- Start every app review from [`blog/_templates/app-review.md`](blog/_templates/app-review.md): copy it to `blog/<slug>/index.md` and fill the slots.
+- Keep the template's order: summary, disclosure, App Store card, opening, sections in the order a user meets them, verdict, FAQ, then the Published, Tested and contact lines.
+- Keep the `faq:` frontmatter and the FAQ section the same.
+- Leave `template: app-review` in. Once `draft: true` is removed, the build fails if the summary, disclosure, `app_store` data or `{#verdict}` heading is missing (`checkTemplate` in `_config/blog.js`, tested in `tests/template.test.js`).
+- `blog/_templates/` is never built, listed or checked.
