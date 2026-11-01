@@ -24,7 +24,7 @@ card_blurb: "The most polished app I tested, and the slowest with my real librar
 
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
 
-**Full disclosure: I build Recomp, a free progress photo app that competes with GainFrame.** Recomp has no in-app purchases, and no app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>. This review expands the [GainFrame entry](/blog/best-progress-photo-apps/#gainframe) in my [roundup of the best progress photo apps](/blog/best-progress-photo-apps/), and every app went through the [same test kit and scorecard](/blog/how-i-test-progress-photo-apps/).
+**Full disclosure: I build Recomp, a free progress photo app that competes with GainFrame.** Recomp has no in-app purchases. This review expands the [GainFrame entry](/blog/best-progress-photo-apps/#gainframe) in my [roundup of the best progress photo apps](/blog/best-progress-photo-apps/), and every app went through the [same test kit and scorecard](/blog/how-i-test-progress-photo-apps/).
 
 <!-- app-store-card -->
 

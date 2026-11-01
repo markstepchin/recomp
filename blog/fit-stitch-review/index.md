@@ -24,7 +24,7 @@ card_blurb: "$4.99 once with iCloud sync, but every comparison is its own form."
 
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
 
-**Full disclosure: I build Recomp, a free progress photo app that competes with this one.** No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>. This review expands the [Fit-Stitch entry](/blog/best-progress-photo-apps/#fit-stitch) in my [roundup of the best progress photo apps](/blog/best-progress-photo-apps/), scored with [the same kit](/blog/how-i-test-progress-photo-apps/). I rewrote it from my hands-on notes on Oct 2, 2026.
+**Full disclosure: I build Recomp, a free progress photo app that competes with this one.** This review expands the [Fit-Stitch entry](/blog/best-progress-photo-apps/#fit-stitch) in my [roundup of the best progress photo apps](/blog/best-progress-photo-apps/), scored with [the same kit](/blog/how-i-test-progress-photo-apps/). I rewrote it from my hands-on notes on Oct 2, 2026.
 
 <!-- app-store-card -->
 

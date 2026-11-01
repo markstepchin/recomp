@@ -23,7 +23,7 @@ card_blurb: "Decent alignment for one before/after, with ads in the free version
 
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
 
-**Full disclosure: I build Recomp, a free progress photo app.** No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>. Photo Compare appears in my [roundup](/blog/best-progress-photo-apps/) and my [free options guide](/blog/best-free-progress-photo-apps/), tested with [the same kit](/blog/how-i-test-progress-photo-apps/).
+**Full disclosure: I build Recomp, a free progress photo app.** Photo Compare appears in my [roundup](/blog/best-progress-photo-apps/) and my [free options guide](/blog/best-free-progress-photo-apps/), tested with [the same kit](/blog/how-i-test-progress-photo-apps/).
 
 <!-- app-store-card -->
 

@@ -11,7 +11,7 @@ card_blurb: "[CONFIRM: summary after Mark's hands-on notes]"
 
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
 
-**Full disclosure: I build Recomp, a free progress photo app that competes with this one.** No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>. It's also the only app here that publishes its own roundup of progress photo apps. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: keep this line\]</mark> Look for the seller name: Lasmit also sells an app called "Progress". <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: Progress: Photo Journal seller name\]</mark>
+**Full disclosure: I build Recomp, a free progress photo app that competes with this one.** It's also the only app here that publishes its own roundup of progress photo apps. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: keep this line\]</mark> Look for the seller name: Lasmit also sells an app called "Progress". <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: Progress: Photo Journal seller name\]</mark>
 
 ## What it costs {#what-it-costs}
 

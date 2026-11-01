@@ -22,7 +22,7 @@ summary: |
   <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: three sentences after hands-on testing.\]</mark>
 ---
 
-**I built Recomp, a free progress photo app that competes with this one.** No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>.
+**I built Recomp, a free progress photo app that competes with this one.**
 
 <!-- app-store-card -->
 
