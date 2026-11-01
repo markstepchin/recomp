@@ -130,9 +130,7 @@ A progress photo app is really four apps in one: a camera roll, an alignment app
 
 **Hevy allows only one photo per day, so front, side and back can't share a date.** Hevy's own suggestion is to spread the set over three days in a row, one photo per day. Source: [Hevy's progress photos page](https://www.hevyapp.com/features/progress-photos/).
 
-**In-app camera.** The camera has an overlay: a faded ghost of your last photo over the live view, so you can match your pose and distance to last week.
-
-**From the camera roll.** Picking an existing photo works, but Hevy doesn't read the date from the photo. You set each photo's date by hand, so importing an old photo means typing in when you took it. There's no overlay here either.
+**From the camera roll.** Picking an existing photo works, but Hevy doesn't read the date from the photo. You set each photo's date by hand, so importing an old photo means typing in when you took it. Unlike the in-app camera, there's no overlay here.
 
 Either way, you can crop, rotate, pan and zoom before saving. That's the only chance you get, and the alignment tools aren't consistent between the camera and the camera roll. The next section covers why.
 
@@ -143,8 +141,6 @@ Either way, you can crop, rotate, pan and zoom before saving. That's the only ch
 Weight and waist are free. Body fat and the other measurements need Hevy Pro.
 
 <div class="phone-row">
-
-![Hevy in-app camera with Overlay turned on, showing a faded ghost of the previous progress photo over the live view, with Timer and Overlay buttons beside the shutter](./hevy-camera-overlay.webp "The in-app camera with Overlay on."){.phone}
 
 ![Hevy Log Measurements screen dated 30 October 2026 with one progress picture, then Body Weight and Waist fields open to fill in and Body Fat and the measurements below it showing a lock icon](./hevy-log-measurements.webp "Log Measurements: one progress picture, and weight and waist are free."){.phone}
 
@@ -160,7 +156,15 @@ There's also no auto-align, no side-by-side alignment, and no overlay when you p
 
 What Hevy does have: the in-app camera's overlay, and a Transform step with crop, rotate, pan and zoom before you save.
 
+**In-app camera overlay.** The camera shows a faded ghost of your last photo over the live view, so you can match your pose and distance to last week.
+
+<div class="phone-row">
+
+![Hevy in-app camera with Overlay turned on, showing a faded ghost of the previous progress photo over the live view, with Timer and Overlay buttons beside the shutter](./hevy-camera-overlay.webp "The in-app camera with Overlay on."){.phone}
+
 ![Hevy Transform screen cropping a progress photo at 3:4 with a grid overlay and a rotation dial](./hevy-crop-grid.webp "Transform: a 3:4 crop with a grid and rotation dial."){.phone}
+
+</div>
 
 ## Comparing with last month {#compare}
 
