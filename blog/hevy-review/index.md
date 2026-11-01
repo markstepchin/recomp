@@ -7,6 +7,7 @@ description: "I tested Hevy's progress photos, overlay camera, side-by-side comp
 tested: October 2026
 draft: true
 breadcrumb: "Best progress photo apps"
+template: app-review
 app_store:
   # Copied from the US App Store listing on the date in checked. Update all values together.
   id: 1458862350
@@ -33,6 +34,63 @@ faq:
     a: "Hevy exports measurements as a CSV. Photos aren't in the export."
   - q: "Does Hevy remind you to take progress photos?"
     a: "No. Hevy's notifications cover workouts and social activity, not progress photos or weigh-ins."
+# Visible 'How I tested' line. Empty until Mark fills it; renders [CONFIRM] on drafts.
+how_tested:
+  device: ""        # e.g. the iPhone model, from Settings > General > About
+  ios: ""           # iOS version during the test
+  app_version: ""   # app version tested, from the App Store page or the app's About screen
+  started: ""       # YYYY-MM-DD, first day of testing
+  ended: ""         # YYYY-MM-DD, last day of testing
+  checkins: ""      # number of check-ins added during the test
+
+# Mark's hand measurements. Leave empty until measured; never estimate.
+measurements:
+  taps_per_checkin: ""      # weight plus front, side and back photos, from the home screen to saved
+  seconds_per_checkin: ""   # same flow, stopwatch
+  import_photo_count: ""    # N photos in the bulk import test
+  import_seconds: ""        # time to import those N photos
+
+scorecard:
+  # A check-in should be effortless
+  checkin_time: { status: confirm, fact: "[CONFIRM]" }  # Not measured yet. Fill measurements.taps_per_checkin / seconds_per_checkin.
+  photo_picker: { status: missing, fact: "One photo per day, so front, side and back can't share a date" }  # L72
+  weight_apple_health: { status: confirm, fact: "[CONFIRM]" }  # Review says weight is typed in by hand and no Apple Health read was found, but L84 carries its own [CONFIRM].
+  weight_quick_entry: { status: missing, fact: "Every weigh-in is typed in by hand" }  # L84
+  data_together: { status: has, fact: "Each photo sits with your weight and measurements" }  # L84
+  # Alignment should be effortless
+  auto_align: { status: missing, fact: "No auto-align" }  # L100
+  ghost_overlay: { status: partial, fact: "Ghost overlay in the in-app camera only, not for camera roll photos" }  # L74, L78, L100
+  gridlines: { status: partial, fact: "A 3:4 crop grid while you transform the photo" }  # L102, L104
+  manual_align: { status: partial, fact: "Crop, rotate, pan and zoom before saving only" }  # L80, L98
+  align_in_compare: { status: confirm, fact: "[CONFIRM]" }  # CONFLICT in the review: L100 says 'no side-by-side alignment', L120 says you can manually align two photos in the compare view but it isn't saved. Mark to settle before publish.
+  # Comparison should be effortless
+  compare_speed: { status: confirm, fact: "[CONFIRM]" }  # Not measured yet.
+  compare_scale: { status: confirm, fact: "[CONFIRM]" }  # Not tested with hundreds of photos in the review.
+  side_by_side: { status: has, fact: "Two photos side by side, edge to edge" }  # L110
+  slider_view: { status: missing, fact: "No slider view" }  # L122
+  overlay_view: { status: missing, fact: "No overlay view" }  # L122
+  # The photos are the star
+  photo_focus: { status: partial, fact: "Single photos leave space; side by side fills the width" }  # L108, L110
+  # Data privacy
+  photos_on_device: { status: missing, fact: "Uploaded to Hevy's servers" }  # L128
+  privacy_label: { status: partial, fact: "The label doesn't list photos, but its help says they're on its servers" }  # L128
+  # Quality of life
+  bulk_import: { status: confirm, fact: "[CONFIRM]" }  # Known: Hevy doesn't read the date from a camera roll photo (L78). Bulk import itself isn't covered.
+  data_import_export: { status: partial, fact: "Measurements export as a CSV, photos don't" }  # L134
+  app_lock: { status: missing, fact: "No app lock found" }  # L132
+  backup_transfer: { status: has, fact: "Stored on Hevy's servers, so a reinstall keeps them" }  # L128
+  reminders: { status: missing, fact: "No photo or weigh-in reminder" }  # L66
+  in_app_camera: { status: has, fact: "In-app camera with a ghost overlay and a timer" }  # L74, L76 | Pose guides not covered in the review.
+  units: { status: confirm, fact: "[CONFIRM]" }
+  body_measurements: { status: partial, fact: "Weight and waist are free; the rest need Pro" }  # L86
+  sharing: { status: has, fact: "Shares two dates side by side as an image" }  # L122
+  timelapse: { status: missing, fact: "No timelapse" }  # L122
+  no_account: { status: missing, fact: "Needs a Hevy account" }  # L128
+  originals_untouched: { status: confirm, fact: "[CONFIRM]" }
+  edit_date: { status: confirm, fact: "[CONFIRM]" }  # You set the date when you add a photo (L78); editing later isn't covered.
+  partial_checkin: { status: confirm, fact: "[CONFIRM]" }  # One photo per day (L72), so a partial check-in is the only option. Mark to decide how to state it.
+  dark_mode: { status: has, fact: "Dark theme" }  # L132
+  no_ads: { status: confirm, fact: "[CONFIRM]" }  # Review doesn't say whether Hevy shows ads.
 ---
 
 **Full disclosure: I build Recomp, a free progress photo app.**
@@ -159,6 +217,8 @@ Hevy exports measurements as a CSV. Photos aren't in the export.
 ### Does Hevy remind you to take progress photos? {#faq-reminders}
 
 No. Hevy's notifications cover workouts and social activity, not progress photos or weigh-ins.
+
+<!-- scorecard -->
 
 ---
 

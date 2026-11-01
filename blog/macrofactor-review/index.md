@@ -6,6 +6,7 @@ description: "I tested MacroFactor's progress photo feature with real photos and
 tested: October 2026
 draft: true
 breadcrumb: "Best progress photo apps"
+template: app-review
 app_store:
   # Copied from the US App Store listing on the date in checked. Update all values together.
   id: 1553503471
@@ -21,6 +22,63 @@ app_store:
   price: "0"
 summary: |
   Each date holds one front, one side and one back photo. You can only adjust a photo in the crop step, before you save it. Every photo is saved square. I didn't find a slider, overlay view or timelapse. MacroFactor doesn't remind you to weigh in or take photos. [TODO: do I recommend MacroFactor for progress photos, and for whom.]
+# Visible 'How I tested' line. Empty until Mark fills it; renders [CONFIRM] on drafts.
+how_tested:
+  device: ""        # e.g. the iPhone model, from Settings > General > About
+  ios: ""           # iOS version during the test
+  app_version: ""   # app version tested, from the App Store page or the app's About screen
+  started: ""       # YYYY-MM-DD, first day of testing
+  ended: ""         # YYYY-MM-DD, last day of testing
+  checkins: ""      # number of check-ins added during the test
+
+# Mark's hand measurements. Leave empty until measured; never estimate.
+measurements:
+  taps_per_checkin: ""      # weight plus front, side and back photos, from the home screen to saved
+  seconds_per_checkin: ""   # same flow, stopwatch
+  import_photo_count: ""    # N photos in the bulk import test
+  import_seconds: ""        # time to import those N photos
+
+scorecard:
+  # A check-in should be effortless
+  checkin_time: { status: confirm, fact: "[CONFIRM]" }
+  photo_picker: { status: partial, fact: "One slot each for front, side and back" }  # L70, L82
+  weight_apple_health: { status: has, fact: "Reads weight from Apple Health, back 30 days when you connect" }  # L70
+  weight_quick_entry: { status: confirm, fact: "[CONFIRM]" }
+  data_together: { status: has, fact: "Photos sit with up to 21 body metrics" }  # L70
+  # Alignment should be effortless
+  auto_align: { status: missing, fact: "No auto-align found" }  # L52
+  ghost_overlay: { status: missing, fact: "No ghost overlay found" }  # L52
+  gridlines: { status: missing, fact: "No posing gridlines; a grid only in the crop step" }  # L52, L54
+  manual_align: { status: partial, fact: "Zoom and rotate in the crop step only" }  # L52
+  align_in_compare: { status: missing, fact: "Once a photo is saved, it can't be realigned" }  # L52
+  # Comparison should be effortless
+  compare_speed: { status: confirm, fact: "[CONFIRM]" }
+  compare_scale: { status: confirm, fact: "[CONFIRM]" }
+  side_by_side: { status: partial, fact: "Before and after stacked, one above the other" }  # L60
+  slider_view: { status: missing, fact: "No slider view" }  # L60
+  overlay_view: { status: missing, fact: "No overlay view" }  # L60
+  # The photos are the star
+  photo_focus: { status: missing, fact: "Square photos use a small part of the screen" }  # L44
+  # Data privacy
+  photos_on_device: { status: missing, fact: "Uploaded to its servers on Google Firebase" }  # L74
+  privacy_label: { status: missing, fact: "The label lists photos as data linked to you" }  # L74
+  # Quality of life
+  bulk_import: { status: confirm, fact: "[CONFIRM]" }  # Known: dates for older photos are picked by hand (L70).
+  data_import_export: { status: partial, fact: "Exports weight and metrics; photos aren't mentioned" }  # L74 | L74 has its own [CONFIRM] on photos.
+  app_lock: { status: missing, fact: "No app lock or Face ID option found" }  # L80
+  backup_transfer: { status: has, fact: "Stored on its servers with your account" }  # L74
+  reminders: { status: missing, fact: "No photo or weigh-in reminder" }  # L78
+  in_app_camera: { status: missing, fact: "Take Photo opens the phone's camera" }  # L52
+  units: { status: has, fact: "Pounds or kilograms" }  # L80
+  body_measurements: { status: has, fact: "Up to 21 body metrics" }  # L70
+  sharing: { status: has, fact: "Before-and-after share image" }  # L60
+  timelapse: { status: missing, fact: "No timelapse" }  # L60
+  no_account: { status: missing, fact: "Needs an account" }  # L74
+  originals_untouched: { status: confirm, fact: "[CONFIRM]" }
+  edit_date: { status: confirm, fact: "[CONFIRM]" }
+  partial_checkin: { status: confirm, fact: "[CONFIRM]" }
+  dark_mode: { status: has, fact: "Dark mode" }  # L80
+  no_ads: { status: confirm, fact: "[CONFIRM]" }
 ---
 
 <!-- TODO(Mark): final title, seo_title and description once the verdict is written. Add card_blurb if the /blog/ card needs a shorter line. -->
@@ -103,6 +161,8 @@ MacroFactor has dark mode and switches between pounds and kilograms. I didn't fi
 ## FAQ {#faq}
 
 <!-- TODO(Mark): questions readers ask about MacroFactor's progress photos, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
+
+<!-- scorecard -->
 
 ---
 

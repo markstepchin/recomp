@@ -6,6 +6,7 @@ description: "I tested MyFitnessPal's progress photo feature with real photos an
 tested: October 2026
 draft: true
 breadcrumb: "Best progress photo apps"
+template: app-review
 app_store:
   # Copied from the US App Store listing on the date in checked. Update all values together.
   id: 341232718
@@ -21,6 +22,63 @@ app_store:
   price: "0"
 summary: |
   MyFitnessPal is built around tracking weight, and photos are an add-on. MyFitnessPal has no alignment tools. Since photos attach to weigh-ins, MyFitnessPal keeps only one photo per date. MyFitnessPal's reminders are for meals, not photos or weigh-ins. [TODO: do I recommend MyFitnessPal for progress photos, and for whom.]
+# Visible 'How I tested' line. Empty until Mark fills it; renders [CONFIRM] on drafts.
+how_tested:
+  device: ""        # e.g. the iPhone model, from Settings > General > About
+  ios: ""           # iOS version during the test
+  app_version: ""   # app version tested, from the App Store page or the app's About screen
+  started: ""       # YYYY-MM-DD, first day of testing
+  ended: ""         # YYYY-MM-DD, last day of testing
+  checkins: ""      # number of check-ins added during the test
+
+# Mark's hand measurements. Leave empty until measured; never estimate.
+measurements:
+  taps_per_checkin: ""      # weight plus front, side and back photos, from the home screen to saved
+  seconds_per_checkin: ""   # same flow, stopwatch
+  import_photo_count: ""    # N photos in the bulk import test
+  import_seconds: ""        # time to import those N photos
+
+scorecard:
+  # A check-in should be effortless
+  checkin_time: { status: confirm, fact: "[CONFIRM]" }
+  photo_picker: { status: missing, fact: "One photo per date" }  # L60
+  weight_apple_health: { status: partial, fact: "Two-way Apple Health sync, only from the day you connect" }  # L62
+  weight_quick_entry: { status: confirm, fact: "[CONFIRM]" }
+  data_together: { status: has, fact: "Each photo attaches to a weigh-in" }  # L40
+  # Alignment should be effortless
+  auto_align: { status: missing, fact: "No auto-align" }  # L46
+  ghost_overlay: { status: missing, fact: "No ghost overlay" }  # L46
+  gridlines: { status: missing, fact: "No gridlines" }  # L46
+  manual_align: { status: missing, fact: "No alignment tools; every photo is cropped square" }  # L46
+  align_in_compare: { status: missing, fact: "No alignment tools" }  # L46
+  # Comparison should be effortless
+  compare_speed: { status: confirm, fact: "[CONFIRM]" }
+  compare_scale: { status: confirm, fact: "[CONFIRM]" }
+  side_by_side: { status: has, fact: "Two photos side by side with their weights" }  # L52, L54
+  slider_view: { status: missing, fact: "No slider view" }  # L52
+  overlay_view: { status: missing, fact: "No overlay view" }  # L52
+  # The photos are the star
+  photo_focus: { status: confirm, fact: "[CONFIRM]" }
+  # Data privacy
+  photos_on_device: { status: missing, fact: "Saved to its servers" }  # L66
+  privacy_label: { status: missing, fact: "The label lists data used to track you" }  # L66
+  # Quality of life
+  bulk_import: { status: confirm, fact: "[CONFIRM]" }
+  data_import_export: { status: partial, fact: "CSV export with Premium, no photos" }  # L66
+  app_lock: { status: confirm, fact: "[CONFIRM]" }
+  backup_transfer: { status: has, fact: "On its servers, so photos show up on a new phone" }  # L66
+  reminders: { status: missing, fact: "Meal reminders only" }  # L70 | L70 carries a [CONFIRM] on a weigh-in reminder.
+  in_app_camera: { status: partial, fact: "Takes photos in the app, with no overlay or guides" }  # L40, L46
+  units: { status: confirm, fact: "[CONFIRM]" }
+  body_measurements: { status: partial, fact: "Waist, hips and neck built in; others on the website" }  # L62
+  sharing: { status: has, fact: "Shares a split before/after photo" }  # L52
+  timelapse: { status: missing, fact: "No timelapse" }  # L52
+  no_account: { status: missing, fact: "Needs an account" }  # L66
+  originals_untouched: { status: confirm, fact: "[CONFIRM]" }  # In-app photos aren't saved to the camera roll (L40); that's a different question.
+  edit_date: { status: has, fact: "You can edit a weigh-in's date" }  # L74
+  partial_checkin: { status: confirm, fact: "[CONFIRM]" }
+  dark_mode: { status: confirm, fact: "[CONFIRM]" }
+  no_ads: { status: missing, fact: "Ad-free needs Premium" }  # L72 | Based on the 'Go Premium for ad-free' screenshot alt text. Mark to confirm wording.
 ---
 
 <!-- TODO(Mark): final title, seo_title and description once the verdict is written. Add card_blurb if the /blog/ card needs a shorter line. -->
@@ -93,6 +151,8 @@ Photos are saved to your MyFitnessPal account on its servers, which is how they 
 ## FAQ {#faq}
 
 <!-- TODO(Mark): questions readers ask about MyFitnessPal's progress photos, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
+
+<!-- scorecard -->
 
 ---
 
