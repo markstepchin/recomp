@@ -6,7 +6,6 @@ draft: true
 breadcrumb: "Best progress photo apps"
 summary: |
   **Progress: Photo Journal has the auto-align I liked most of the new apps.** <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: Mark's verdict; source is an Oct 19 note, not today's test\]</mark> It was a TestFlight beta for iOS 26 when I tested it, not on the App Store. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: still TestFlight-only as of the test date\]</mark>
-summary_heading: "Quick Answer"
 card_blurb: "[CONFIRM: summary after Mark's hands-on notes]"
 ---
 
@@ -74,6 +73,22 @@ card_blurb: "[CONFIRM: summary after Mark's hands-on notes]"
 ## What I haven't tested yet {#what-i-havent-tested-yet}
 
 **Almost everything beyond alignment.** If you've imported a big library into Progress: Photo Journal, email me at [support@progressphotos.app](mailto:support@progressphotos.app).
+
+## My verdict on Progress: Photo Journal {#verdict}
+
+<!-- TODO(Mark): verdict in plain words on whether I recommend Progress: Photo Journal for progress photos, and for whom. No numeric score. -->
+
+## FAQ {#faq}
+
+<!-- TODO(Mark): questions readers ask about Progress: Photo Journal, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
+
+---
+
+Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
+
+Tested: <!-- TODO(Mark): month tested and app version. --> {#when-tested}
+
+Questions or corrections: support@progressphotos.app
 
 <!-- chrome:author-bio depth="2" -->
 <aside

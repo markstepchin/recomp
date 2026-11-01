@@ -19,7 +19,6 @@ app_store:
   checked: 2026-11-01
 summary: |
   **Progress Pics: Body Tracker, by Thumbstone Labs, has the auto-align I'd recommend as a first pass.** About 3 in 4 of my shirtless photos landed right, and clothed photos would likely do worse. It has side by side, a slider, an overlay and a time-lapse, more modes than any other app I graded. It isn't the most intuitive app, and manual alignment is sluggish, but it's quite powerful. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending the full test\]</mark>
-summary_heading: "Quick Answer"
 card_blurb: "Auto-align landed about 3 in 4 of my shirtless photos, with the most compare modes I found."
 ---
 
@@ -196,6 +195,22 @@ card_blurb: "Auto-align landed about 3 in 4 of my shirtless photos, with the mos
 ## What I haven't tested yet {#what-i-havent-tested-yet}
 
 **I still need its design and performance scores, a clothed-photo auto-align run, and a restore test.** The full-library test decides whether its stacks stay fast with hundreds of photos. If you've used Thumbstone's auto-align on clothed photos, email me at [support@progressphotos.app](mailto:support@progressphotos.app).
+
+## My verdict on Progress Pics {#verdict}
+
+<!-- TODO(Mark): verdict in plain words on whether I recommend Progress Pics for progress photos, and for whom. No numeric score. -->
+
+## FAQ {#faq}
+
+<!-- TODO(Mark): questions readers ask about Progress Pics, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
+
+---
+
+Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
+
+Tested: <!-- TODO(Mark): month tested and app version. --> {#when-tested}
+
+Questions or corrections: support@progressphotos.app
 
 <!-- chrome:author-bio depth="2" -->
 <aside

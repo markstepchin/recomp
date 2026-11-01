@@ -19,7 +19,6 @@ app_store:
   checked: 2026-11-01
 summary: |
   **I don't recommend Metamorph.** It's expensive for a general-purpose before/after app: $129.99 lifetime, the most of any app I graded. Its ghost overlay helps at capture, but it has no weight logging, and you place every compare photo by hand. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending the full test\]</mark>
-summary_heading: "Quick Answer"
 card_blurb: "The priciest lifetime plan I found, and you place every compare photo by hand."
 ---
 
@@ -184,6 +183,22 @@ card_blurb: "The priciest lifetime plan I found, and you place every compare pho
 ## What I haven't tested yet {#what-i-havent-tested-yet}
 
 **I still need design, performance, privacy, backup and import scores, and what "iCloud" means in practice.** If you've used Metamorph's cloud sync, email me at [support@progressphotos.app](mailto:support@progressphotos.app).
+
+## My verdict on Metamorph {#verdict}
+
+<!-- TODO(Mark): verdict in plain words on whether I recommend Metamorph for progress photos, and for whom. No numeric score. -->
+
+## FAQ {#faq}
+
+<!-- TODO(Mark): questions readers ask about Metamorph, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
+
+---
+
+Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
+
+Tested: <!-- TODO(Mark): month tested and app version. --> {#when-tested}
+
+Questions or corrections: support@progressphotos.app
 
 <!-- chrome:author-bio depth="2" -->
 <aside

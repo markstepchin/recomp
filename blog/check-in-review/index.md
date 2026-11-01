@@ -2,6 +2,7 @@
 title: "Check-In: Physique Review (2026)"
 description: "By Mark Stepchin · Draft stub, not published [CONFIRM: publish date] Check-In: Physique is free with no in-app purchases and has the cleanest privacy label I found: Data Not."
 draft: true
+breadcrumb: "Best progress photo apps"
 app_store:
   # Copied from the US App Store listing on the date in checked. Update all values together.
   id: 6761781961
@@ -15,21 +16,19 @@ app_store:
   icon: "assets/app-icons/check-in.webp"
   checked: 2026-11-01
 card_blurb: "Free, with the cleanest privacy label I found. No hands-on scores yet."
+summary: |
+  **Check-In: Physique is free with no in-app purchases and has the cleanest privacy label I found: Data Not Collected.** It uses no AI by design. It needs iOS 26, so older iPhones can't run it. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[Sourced: roundup draft-v8\]</mark>
+
+  <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: three sentences after hands-on testing.\]</mark>
 ---
 
-**Check-In: Physique is free with no in-app purchases and has the cleanest privacy label I found: Data Not Collected.** It uses no AI by design. It needs iOS 26, so older iPhones can't run it. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[Sourced: roundup draft-v8\]</mark>
-
-I built Recomp, a free progress photo app that competes with this one. No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>.
+**I built Recomp, a free progress photo app that competes with this one.** No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>.
 
 <!-- app-store-card -->
 
 This review expands the [Check-In entry](/blog/best-progress-photo-apps/#check-in) in my [roundup of the best progress photo apps](/blog/best-progress-photo-apps/), where every app went through the same test kit and scorecard.
 
 <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: Check-In has no hands-on scores yet. Every finding below comes from its listing and the roundup research, not from my testing.\]</mark>
-
-## Quick answer {#quick-answer}
-
-<mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: three sentences after hands-on testing.\]</mark>
 
 ## What it costs {#what-it-costs}
 
@@ -70,3 +69,19 @@ This review expands the [Check-In entry](/blog/best-progress-photo-apps/#check-i
 ## What I haven't tested yet {#what-i-havent-tested-yet}
 
 <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: open questions after testing.\]</mark> If you use this app and hit something I missed, email me at [support@progressphotos.app](mailto:support@progressphotos.app).
+
+## My verdict on Check-In {#verdict}
+
+<!-- TODO(Mark): verdict in plain words on whether I recommend Check-In for progress photos, and for whom. No numeric score. -->
+
+## FAQ {#faq}
+
+<!-- TODO(Mark): questions readers ask about Check-In, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
+
+---
+
+Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
+
+Tested: <!-- TODO(Mark): month tested and app version. --> {#when-tested}
+
+Questions or corrections: support@progressphotos.app

@@ -19,7 +19,6 @@ app_store:
   checked: 2026-11-01
 summary: |
   **GainFrame is the most polished progress photo app I tested, and with hundreds of photos it was pretty much unusable.** Its colors, icons, spacing and import loading states are the best in the category. But the UI puts AI first, my import stopped at 250 photos after about 15 minutes, and finding one date among hundreds took long scrolling. With 20 to 30 photos it probably works very well. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer; Mark's stub said to write it after re-checking the compare screens\]</mark>
-summary_heading: "Quick Answer"
 card_blurb: "The most polished app I tested, and the slowest with my real library: import stopped at 250 photos."
 ---
 
@@ -188,6 +187,22 @@ card_blurb: "The most polished app I tested, and the slowest with my real librar
 ## What I haven't tested yet {#what-i-havent-tested-yet}
 
 **I still need to check GainFrame's full-screen view, its other compare screens, its camera, and a delete-and-restore.** Those decide the alignment, privacy and backup scores. If you use GainFrame with a big library and see something different, email me at [support@progressphotos.app](mailto:support@progressphotos.app).
+
+## My verdict on GainFrame {#verdict}
+
+<!-- TODO(Mark): verdict in plain words on whether I recommend GainFrame for progress photos, and for whom. No numeric score. -->
+
+## FAQ {#faq}
+
+<!-- TODO(Mark): questions readers ask about GainFrame, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
+
+---
+
+Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
+
+Tested: <!-- TODO(Mark): month tested and app version. --> {#when-tested}
+
+Questions or corrections: support@progressphotos.app
 
 <!-- chrome:author-bio depth="2" -->
 <aside

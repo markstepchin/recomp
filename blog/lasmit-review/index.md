@@ -19,7 +19,6 @@ app_store:
   checked: 2026-11-01
 summary: |
   **Lasmit's "Progress" is the app I'd send you to for measurement history and Apple Health, not for photos.** It has 9,355 ratings since 2012, the most of any dedicated app I tested, and two-way Apple Health sync. I can tell someone put a lot of effort into it, but everything feels awkward, and using it gave me a headache. Compare works only in landscape. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending the full test\]</mark>
-summary_heading: "Quick Answer"
 card_blurb: "A measurement tracker first, with two-way Apple Health sync. Compare works only in landscape."
 ---
 
@@ -196,6 +195,22 @@ card_blurb: "A measurement tracker first, with two-way Apple Health sync. Compar
 ## What I haven't tested yet {#what-i-havent-tested-yet}
 
 **I still need design, performance, privacy, backup and import scores, and an iCloud restore.** I also need to see what Smart Overlay does when it's on. If Lasmit's Smart Overlay works for you, email me at [support@progressphotos.app](mailto:support@progressphotos.app).
+
+## My verdict on Lasmit {#verdict}
+
+<!-- TODO(Mark): verdict in plain words on whether I recommend Lasmit for progress photos, and for whom. No numeric score. -->
+
+## FAQ {#faq}
+
+<!-- TODO(Mark): questions readers ask about Lasmit, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
+
+---
+
+Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
+
+Tested: <!-- TODO(Mark): month tested and app version. --> {#when-tested}
+
+Questions or corrections: support@progressphotos.app
 
 <!-- chrome:author-bio depth="2" -->
 <aside

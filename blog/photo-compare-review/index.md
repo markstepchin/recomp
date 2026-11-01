@@ -18,7 +18,6 @@ app_store:
   checked: 2026-11-01
 summary: |
   **Photo Compare is a before/after image maker, and its alignment is decent.** The free version compares two photos and shows ads. It doesn't keep a weekly record of check-ins, so it fits one before/after, not tracking. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer; "doesn't keep a weekly record" needs Mark's check\]</mark>
-summary_heading: "Quick Answer"
 card_blurb: "Decent alignment for one before/after, with ads in the free version."
 ---
 
@@ -94,6 +93,22 @@ card_blurb: "Decent alignment for one before/after, with ads in the free version
 ## What I haven't tested yet {#what-i-havent-tested-yet}
 
 **I haven't scored it on the full kit or checked its privacy label.** If you use Photo Compare for weekly progress, email me at [support@progressphotos.app](mailto:support@progressphotos.app).
+
+## My verdict on Photo Compare {#verdict}
+
+<!-- TODO(Mark): verdict in plain words on whether I recommend Photo Compare for progress photos, and for whom. No numeric score. -->
+
+## FAQ {#faq}
+
+<!-- TODO(Mark): questions readers ask about Photo Compare, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
+
+---
+
+Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
+
+Tested: <!-- TODO(Mark): month tested and app version. --> {#when-tested}
+
+Questions or corrections: support@progressphotos.app
 
 <!-- chrome:author-bio depth="2" -->
 <aside

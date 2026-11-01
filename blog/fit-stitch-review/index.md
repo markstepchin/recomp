@@ -19,7 +19,6 @@ app_store:
   checked: 2026-11-01
 summary: |
   **Fit-Stitch is the only paid progress photo app I tested with no subscription: $4.99 once.** It syncs to your own iCloud, the likeliest answer here to "what if I lose my phone?" Logging is one clean form. Comparing is the weak spot, because every comparison is a card built in its own form, with no alignment. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending design, performance and backup scores\]</mark>
-summary_heading: "Quick Answer"
 card_blurb: "$4.99 once with iCloud sync, but every comparison is its own form."
 ---
 
@@ -190,6 +189,22 @@ card_blurb: "$4.99 once with iCloud sync, but every comparison is its own form."
 ## What I haven't tested yet {#what-i-havent-tested-yet}
 
 **I still need design and performance scores, and a delete-and-restore with iCloud sync on.** That restore decides whether its sync really answers "what if I lose my phone?" If you've restored Fit-Stitch on a new phone, email me at [support@progressphotos.app](mailto:support@progressphotos.app).
+
+## My verdict on Fit-Stitch {#verdict}
+
+<!-- TODO(Mark): verdict in plain words on whether I recommend Fit-Stitch for progress photos, and for whom. No numeric score. -->
+
+## FAQ {#faq}
+
+<!-- TODO(Mark): questions readers ask about Fit-Stitch, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
+
+---
+
+Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
+
+Tested: <!-- TODO(Mark): month tested and app version. --> {#when-tested}
+
+Questions or corrections: support@progressphotos.app
 
 <!-- chrome:author-bio depth="2" -->
 <aside

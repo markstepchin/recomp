@@ -18,7 +18,6 @@ app_store:
   checked: 2026-11-01
 summary: |
   **Body Tracker by Igor Korolev has a one-time Pro price and a decent camera, but its compare step got in my way.** Pro is $7.99 once. It has manual alignment, but my adjustments didn't save. To change one photo in a comparison, I had to delete the compare view and pick both photos again. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer\]</mark>
-summary_heading: "Quick Answer"
 card_blurb: "A one-time $7.99 Pro, but my manual alignment didn't save."
 ---
 
@@ -173,6 +172,22 @@ card_blurb: "A one-time $7.99 Pro, but my manual alignment didn't save."
 ## What I haven't tested yet {#what-i-havent-tested-yet}
 
 **I still need its import, the free-tier limits, backup and a retest of saving alignment.** The store reviews mention slowdowns, which I haven't checked with a big library. If you use Body Tracker and alignment saves for you, email me at [support@progressphotos.app](mailto:support@progressphotos.app).
+
+## My verdict on Body Tracker {#verdict}
+
+<!-- TODO(Mark): verdict in plain words on whether I recommend Body Tracker for progress photos, and for whom. No numeric score. -->
+
+## FAQ {#faq}
+
+<!-- TODO(Mark): questions readers ask about Body Tracker, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
+
+---
+
+Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
+
+Tested: <!-- TODO(Mark): month tested and app version. --> {#when-tested}
+
+Questions or corrections: support@progressphotos.app
 
 <!-- chrome:author-bio depth="2" -->
 <aside

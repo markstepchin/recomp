@@ -2,6 +2,7 @@
 title: "Body Tracker - Photo Journey Review (2026)"
 description: "By Mark Stepchin · Draft stub, not published [CONFIRM: publish date] Photo Journey is built for fixed-length challenges like 75 Hard, and its privacy label says Data Used to Track."
 draft: true
+breadcrumb: "Best progress photo apps"
 app_store:
   # Copied from the US App Store listing on the date in checked. Update all values together.
   id: 6499454966
@@ -15,21 +16,19 @@ app_store:
   icon: "assets/app-icons/photo-journey.webp"
   checked: 2026-11-01
 card_blurb: "Built for fixed challenges like 75 Hard. No hands-on scores yet."
+summary: |
+  **Photo Journey is built for fixed-length challenges like 75 Hard, and its privacy label says Data Used to Track You.** It started as a daily timelapse app before it turned to body progress. Unlimited photos need a subscription. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[Sourced: roundup draft-v8\]</mark>
+
+  <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: three sentences after hands-on testing.\]</mark>
 ---
 
-**Photo Journey is built for fixed-length challenges like 75 Hard, and its privacy label says Data Used to Track You.** It started as a daily timelapse app before it turned to body progress. Unlimited photos need a subscription. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[Sourced: roundup draft-v8\]</mark>
-
-I built Recomp, a free progress photo app that competes with this one. No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>.
+**I built Recomp, a free progress photo app that competes with this one.** No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>.
 
 <!-- app-store-card -->
 
 This review expands the [Photo Journey entry](/blog/best-progress-photo-apps/#photo-journey) in my [roundup of the best progress photo apps](/blog/best-progress-photo-apps/), where every app went through the same test kit and scorecard.
 
 <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: Photo Journey has no hands-on scores yet. Every finding below comes from its listing, reviews and the roundup research.\]</mark>
-
-## Quick answer {#quick-answer}
-
-<mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: three sentences after hands-on testing.\]</mark>
 
 ## What it costs {#what-it-costs}
 
@@ -63,3 +62,19 @@ This review expands the [Photo Journey entry](/blog/best-progress-photo-apps/#ph
 ## What I haven't tested yet {#what-i-havent-tested-yet}
 
 <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: open questions after testing.\]</mark> If you use this app and hit something I missed, email me at [support@progressphotos.app](mailto:support@progressphotos.app).
+
+## My verdict on Photo Journey {#verdict}
+
+<!-- TODO(Mark): verdict in plain words on whether I recommend Photo Journey for progress photos, and for whom. No numeric score. -->
+
+## FAQ {#faq}
+
+<!-- TODO(Mark): questions readers ask about Photo Journey, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
+
+---
+
+Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
+
+Tested: <!-- TODO(Mark): month tested and app version. --> {#when-tested}
+
+Questions or corrections: support@progressphotos.app
