@@ -26,56 +26,63 @@ faq:
 
 Hevy is one of the 12 apps I've tested so far, and one of three fitness apps with a photo feature I tested alongside the dedicated progress photo apps. I tested it the way I test every app, with real photos and weights from my own transformation. [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) explains the method.
 
-## Is Hevy good for aligning progress photos? {#alignment}
+A progress photo app is really four apps in one: a camera roll, an alignment app, a collage app for comparisons, and a data app that keeps photos with your weight and measurements. Hevy is a workout tracker first, and its photos live under Profile > Measures. Here's how each of the four holds up through a normal weekly check-in.
 
-**Hevy only lets you align a photo while you add it.** Once it's saved, there's no way to adjust it. If the alignment is off, you have to delete the photo and retake or re-upload it. That isn't an option if you took it with the in-app camera and only notice the problem weeks later. [CONFIRM: Hevy's help article mentions "replace it". Does that let you realign without losing the entry?]
-
-When you add a new photo, from your library or the in-app camera, you can crop, rotate, pan and zoom it. The in-app camera also has an overlay: a faded ghost of your last photo over the live view, so you can match your pose and distance.
-
-![Hevy in-app camera with Overlay turned on, showing a faded ghost of the previous progress photo over the live view, with Timer and Overlay buttons beside the shutter](./hevy-camera-overlay.webp "The in-app camera with Overlay on."){.phone}
-
-![Hevy Transform screen cropping a progress photo at 3:4 with a grid overlay and a rotation dial](./hevy-crop-grid.webp "Transform: a 3:4 crop with a grid and rotation dial."){.phone}
-
-Existing photos get much less:
-
-- You can manually align photos in the compare view, but the alignment isn't saved.
-- There's no overlay for imported photos, no auto-align, and no side-by-side alignment.
-
-## Is Hevy good for taking progress photos? {#photo-album}
-
-**The photos look good side by side but small on their own.** In the comparison view, both photos fill the screen edge to edge. In the single view, the photo sits between grey bars and doesn't fill the width.
-
-![Hevy Progress Pictures screen in Single mode showing a photo from 4 Aug 2025 at 155 lbs with grey bars on both sides, above a filmstrip of three check-ins](./hevy-single-view.webp "Progress Pictures, Single mode. The photo doesn't fill the width."){.phone}
-
-![Hevy Progress Pictures screen in Comparison mode with photos from 10 Oct 2024 and 4 Aug 2025 side by side above a filmstrip of check-ins](./hevy-comparison.webp "Progress Pictures, Comparison mode, with the filmstrip below."){.phone}
-
-## Can Hevy make a before and after? {#compare}
-
-**Yes, but only the basic kind.** You pick two dates, see them side by side, and share them as an image. There's no slider, no overlay view and no timelapse, and you can't adjust alignment in the share view.
-
-![Hevy share card with photos from 10 Oct 2024 and 4 Aug 2025 side by side, the Hevy logo and Instagram Stories, More and Download buttons](./hevy-share-card.webp "The share card it makes from a comparison."){.phone}
-
-## Does Hevy keep photos with your weight and measurements? {#data}
-
-**Each photo sits next to your weight and measurements, but only one photo fits per day.** You can't save front, side and back under the same date. You also set each photo's date by hand, so importing an old photo means typing in when you took it. Hevy's own suggestion is to spread the set over three days in a row, one photo per day. Source: [Hevy's progress photos page](https://www.hevyapp.com/features/progress-photos/).
-
-Weight and waist are free. Body fat and the other measurements need Hevy Pro. Hevy exports your measurements as a CSV, but your photos aren't in the export.
+## The morning reminder {#reminders}
 
 **Hevy doesn't remind you to take progress photos or weigh in.** Its notification settings cover the rest timer, new followers, the monthly training report, emails, likes and comments. None of them is for photos, weight or measurements, so the weekly check-in reminder has to come from your own calendar. Source: [Hevy's notification settings](https://help.hevyapp.com/hc/en-us/articles/33845807003671-Account-Settings-Preferences-Profile-Information-Adjust-username-password-or-email-address-Notifications).
 
+## Taking the photos {#taking-photos}
+
+**The in-app camera is the best part of Hevy's photo feature.** It has an overlay: a faded ghost of your last photo over the live view, so you can match your pose and distance to last week.
+
+![Hevy in-app camera with Overlay turned on, showing a faded ghost of the previous progress photo over the live view, with Timer and Overlay buttons beside the shutter](./hevy-camera-overlay.webp "The in-app camera with Overlay on."){.phone}
+
+The problem starts with the second photo. Hevy allows only one photo per day, so front, side and back can't share a date. Hevy's own suggestion is to spread the set over three days in a row, one photo per day. Source: [Hevy's progress photos page](https://www.hevyapp.com/features/progress-photos/).
+
+## Logging weight and measurements {#data}
+
+**Each photo sits next to your weight and measurements, which is what a data app should do.** The check-in still takes more typing than it should. You set each photo's date by hand, so importing an old photo means typing in when you took it.
+
 Hevy's Apple Health help only covers sending workouts to Health. I didn't find a way to read weight from a smart scale, so every weigh-in is typed in by hand. [CONFIRM: in iPhone Settings > Health > Data Access & Devices > Hevy, is there a read permission for Body Mass?] Source: [Hevy's Apple Health help](https://help.hevyapp.com/hc/en-us/sections/36957443687831-Apple-Health).
 
-Hevy has a dark theme. I didn't find an app lock or Face ID option in its help, so hiding the photos means using iOS's own Require Face ID on the app icon. Source: [Hevy's theme setting](https://www.hevyapp.com/help/change-the-theme-android-ios/).
+Weight and waist are free. Body fat and the other measurements need Hevy Pro.
 
 ![Hevy Log Measurements screen dated 30 October 2026 with one progress picture, then Body Weight and Waist fields open to fill in and Body Fat and the measurements below it showing a lock icon](./hevy-log-measurements.webp "Log Measurements: one progress picture, and weight and waist are free."){.phone}
 
 ![Hevy Log Measurements screen scrolled down, with Body Fat, Lean Body Mass, Neck, Shoulder, Chest, biceps, forearms, Abdomen, Hips, thighs and calves all showing a lock icon](./hevy-locked-measurements.webp "The rest of the measurements are locked."){.phone}
 
-## Who can see your Hevy progress photos? {#sharing}
+## Lining it up {#alignment}
 
-Your photos are uploaded to Hevy's servers, not kept on your phone. Hevy's help says everything is stored to your profile on its servers, which is why reinstalling the app doesn't lose them and why you need an account. Hevy's App Store privacy label doesn't list photos among the data it collects. Source: [Hevy's help on reinstalling](https://help.hevyapp.com/hc/en-us/articles/38223672272791-What-will-happen-to-my-information-if-I-uninstall-and-reinstall-the-Hevy-app) and the [App Store listing](https://apps.apple.com/us/app/id1458862350).
+**Hevy only lets you align a photo while you add it.** Whether it comes from your library or the in-app camera, you can crop, rotate, pan and zoom before saving. The overlay only works in the in-app camera, so imported photos get no ghost to line up against.
+
+![Hevy Transform screen cropping a progress photo at 3:4 with a grid overlay and a rotation dial](./hevy-crop-grid.webp "Transform: a 3:4 crop with a grid and rotation dial."){.phone}
+
+Once the check-in is saved, there's no way to adjust it. If the alignment is off, you have to delete the photo and retake or re-upload it. That isn't an option if you took it with the in-app camera and only notice the problem weeks later. There's also no auto-align and no side-by-side alignment. [CONFIRM: Hevy's help article mentions "replace it". Does that let you realign without losing the entry?]
+
+## Comparing with last month {#compare}
+
+**Comparison is where the photos look best.** In the comparison view, both photos fill the screen edge to edge. In the single view, the photo sits between grey bars and doesn't fill the width.
+
+![Hevy Progress Pictures screen in Comparison mode with photos from 10 Oct 2024 and 4 Aug 2025 side by side above a filmstrip of check-ins](./hevy-comparison.webp "Progress Pictures, Comparison mode, with the filmstrip below."){.phone}
+
+![Hevy Progress Pictures screen in Single mode showing a photo from 4 Aug 2025 at 155 lbs with grey bars on both sides, above a filmstrip of three check-ins](./hevy-single-view.webp "Progress Pictures, Single mode. The photo doesn't fill the width."){.phone}
+
+Alignment comes up again here. You can manually align two photos in the compare view, but the alignment isn't saved, so next week you start over.
+
+As a collage app, Hevy covers the basics. You pick two dates, see them side by side, and share them as an image. There's no slider, no overlay view and no timelapse, and you can't adjust alignment in the share view.
+
+![Hevy share card with photos from 10 Oct 2024 and 4 Aug 2025 side by side, the Hevy logo and Instagram Stories, More and Download buttons](./hevy-share-card.webp "The share card it makes from a comparison."){.phone}
+
+## Where the photos live {#sharing}
+
+**Your photos are uploaded to Hevy's servers, not kept on your phone.** Hevy's help says everything is stored to your profile on its servers, which is why reinstalling the app doesn't lose them and why you need an account. Hevy's App Store privacy label doesn't list photos among the data it collects. Source: [Hevy's help on reinstalling](https://help.hevyapp.com/hc/en-us/articles/38223672272791-What-will-happen-to-my-information-if-I-uninstall-and-reinstall-the-Hevy-app) and the [App Store listing](https://apps.apple.com/us/app/id1458862350).
 
 Photos in Measures stay private even if your profile is public. Photos or videos you attach to a shared workout are different, and other people can see them. If you use Hevy's social side, know which one you're posting. Sources: [Hevy's help article on measurements and progress photos](https://help.hevyapp.com/hc/en-us/articles/35385479603479-Body-Composition-Tracking-Measurements-and-Progress-Photos) and [Hevy's progress photos feature page](https://www.hevyapp.com/features/progress-photos/).
+
+Hevy has a dark theme. I didn't find an app lock or Face ID option in its help, so hiding the photos means using iOS's own Require Face ID on the app icon. Source: [Hevy's theme setting](https://www.hevyapp.com/help/change-the-theme-android-ios/).
+
+Getting your data out is only half covered. Hevy exports your measurements as a CSV, but your photos aren't in the export.
 
 ## My verdict on Hevy's progress photos {#verdict}
 
