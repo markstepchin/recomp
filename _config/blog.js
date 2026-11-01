@@ -90,6 +90,8 @@ export const FRONTMATTER_KEYS = new Set([
   // article_dates, byline, prose_wrapper, json_ld, hand_listed.
   "og_title", "og_description", "og_image_alt", "twitter_text", "article_dates", "byline",
   "prose_wrapper", "json_ld", "hand_listed",
+  // template: "app-review" opts a post into the structure check (checkTemplate).
+  "template",
 ]);
 const CTA_KEYS = new Set(["heading", "text", "location"]);
 const APP_STORE_KEYS = ["id", "name", "developer", "developer_url", "rating", "rating_count", "min_ios", "url", "icon", "checked"];
@@ -136,6 +138,26 @@ export function checkFrontmatter(file, raw, data, exists) {
   const og = data.og_image ? String(data.og_image) : "";
   if (og.startsWith("./") && !exists(og)) errors.push(`${file}: og_image ${og} not found next to the post`);
   return errors;
+}
+
+/** Templates a post can opt into with `template:`. The skeletons live in blog/_templates/. */
+export const TEMPLATES = new Set(["app-review"]);
+
+/**
+ * Structure check for a post that opts in with `template: app-review` (blog/_templates/app-review.md).
+ * Drafts and posts without `template` are not checked. A non-draft app review needs a summary,
+ * the bold "Full disclosure:" line, app_store data and a {#verdict} heading.
+ */
+export function checkTemplate(file, data, body) {
+  if (data.template === undefined || data.template === null) return [];
+  if (!TEMPLATES.has(String(data.template))) return [`${file}: unknown template "${data.template}" (allowed: ${[...TEMPLATES].join(", ")})`];
+  if (data.draft === true) return [];
+  const missing = [];
+  if (!data.summary || !String(data.summary).trim()) missing.push("summary (frontmatter)");
+  if (!/^\*\*Full disclosure:/m.test(body)) missing.push('disclosure (a paragraph starting "**Full disclosure:")');
+  if (!data.app_store || typeof data.app_store !== "object") missing.push("app_store (frontmatter)");
+  if (!/^##[ \t]+.*\{#verdict\}[ \t]*$/m.test(body)) missing.push("verdict (an H2 ending in {#verdict})");
+  return missing.map((m) => `${file}: template app-review is missing the ${m}. See blog/_templates/app-review.md.`);
 }
 
 // ---------------------------------------------------------------- page data
