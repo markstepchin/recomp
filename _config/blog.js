@@ -13,7 +13,7 @@ const AUTHOR = {
   "@id": `${SITE_URL}/about/#mark`,
   name: "Mark Stepchin",
   url: `${SITE_URL}/about/`,
-  jobTitle: "Software engineer",
+  jobTitle: "Founder of Recomp",
 };
 const PUBLISHER = { "@type": "Organization", name: "Recomp", url: `${SITE_URL}/` };
 

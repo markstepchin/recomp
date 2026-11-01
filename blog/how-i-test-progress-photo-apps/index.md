@@ -15,7 +15,7 @@ cta:
   text: "Compare progress photos on a before-and-after timeline, scroll to any date instantly, and align photos on the fly. Recomp never uploads your photos or weight data."
 hand_listed: true
 json_ld:
-  - {"@context": "https://schema.org", "@type": "Article", "headline": "How I Review Progress Photo Apps", "description": "How I review progress photo apps: I download each one, pay for the subscription, and test it with real photos and weights from my own transformation.", "author": {"@type": "Person", "@id": "https://progressphotos.app/about/#mark", "name": "Mark Stepchin", "url": "https://progressphotos.app/about/", "jobTitle": "Software engineer"}, "publisher": {"@type": "Organization", "name": "Recomp", "url": "https://progressphotos.app/"}, "url": "https://progressphotos.app/blog/how-i-test-progress-photo-apps/", "mainEntityOfPage": "https://progressphotos.app/blog/how-i-test-progress-photo-apps/", "image": "https://progressphotos.app/assets/step-compare.webp?v=5"}
+  - {"@context": "https://schema.org", "@type": "Article", "headline": "How I Review Progress Photo Apps", "description": "How I review progress photo apps: I download each one, pay for the subscription, and test it with real photos and weights from my own transformation.", "author": {"@type": "Person", "@id": "https://progressphotos.app/about/#mark", "name": "Mark Stepchin", "url": "https://progressphotos.app/about/", "jobTitle": "Founder of Recomp"}, "publisher": {"@type": "Organization", "name": "Recomp", "url": "https://progressphotos.app/"}, "url": "https://progressphotos.app/blog/how-i-test-progress-photo-apps/", "mainEntityOfPage": "https://progressphotos.app/blog/how-i-test-progress-photo-apps/", "image": "https://progressphotos.app/assets/step-compare.webp?v=5"}
 ---
 
 <div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4">
@@ -26,7 +26,7 @@ Most of the reviews I read when I was looking for an app for myself hadn't downl
 
 For my reviews, I download the app, set up an account, and pay for the subscription if one exists. I use real photos and weights from my fitness transformation.
 
-Full disclosure: I build Recomp, a free progress photo app, and I hold it to the same bar as every other app.
+Full disclosure: I build Recomp, a free progress photo app.
 
 <figure class="mx-auto w-1/2 max-w-[280px]"><img class="block h-auto w-full rounded-card border border-card-border" src="../../assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp" alt="iOS Photos album showing hundreds of weekly front, side, and back progress photos from years of coaching check-ins" width="1290" height="2635"></figure>
 
