@@ -52,14 +52,6 @@
           <div class="mt-3 text-muted">{{ post.summary | md | safe }}</div>
         </aside>
 {% endif %}
-{%- if post.template == "app-review" %}
-        <p class="pt-4 text-micro text-muted" id="how-i-tested">
-          <span class="font-semibold text-fg">How I tested:</span>
-          {%- if post.howTested.parts.length %} {{ post.howTested.parts | join(", ") }}.{% endif %}
-          {%- if post.howTested.confirm %} <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: device, iOS, app version, test dates]</mark>{% endif %}
-          <a class="text-muted" href="/blog/how-i-test-progress-photo-apps/">How I review apps</a>
-        </p>
-{%- endif %}
 {#- app_store: the card goes where the body has <!-- app-store-card --> (after the disclosure line).
     scorecard: the table goes where the body has <!-- scorecard -->, or after the body when there is no marker. -#}
 {%- set withCard -%}
@@ -76,12 +68,21 @@
 {%- endfor -%}
 {%- if parts.length == 1 and post.scorecard %}{% include "scorecard.njk" %}{% endif -%}
 {%- endset %}
+{#- author box (app reviews): goes where the body has <!-- author-box --> (before the FAQ), or after the body. -#}
+{%- set withAuthor -%}
+{%- set abParts = body.split("<!-- author-box -->") -%}
+{%- for part in abParts -%}
+{%- if not loop.first and post.template == "app-review" %}{% include "author-box.njk" %}{% endif -%}
+{{ part | safe }}
+{%- endfor -%}
+{%- if abParts.length == 1 and post.template == "app-review" %}{% include "author-box.njk" %}{% endif -%}
+{%- endset %}
 {% if post.proseWrapper %}        <div
           class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4"
         >
-{{ body | safe }}
+{{ withAuthor | safe }}
         </div>
-{% else %}{{ body | safe }}
+{% else %}{{ withAuthor | safe }}
 {% endif %}
 {%- if post.cta %}
         <section

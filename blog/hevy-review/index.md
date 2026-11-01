@@ -196,6 +196,8 @@ Hevy exports your measurements as a CSV, but your photos aren't in the export.
 
 [TODO] Suggested starting point: Hevy's photos work as a quick weekly snapshot next to your weight, and the camera overlay helps you match last week's pose. If you take front, side and back, or want to fix alignment later, it gets in the way.
 
+<!-- author-box -->
+
 ## FAQ {#faq}
 
 ### Can you add front, side and back photos on the same day in Hevy? {#faq-same-day}

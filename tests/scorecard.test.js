@@ -218,7 +218,12 @@ test("rendered review: table semantics, decorative icons, byline dates match the
   const review = ld["@graph"].find((n) => n["@type"] === "Review");
   assert.match(html, new RegExp(`Published <time datetime="${review.datePublished}">`));
   assert.match(html, new RegExp(`Updated <time datetime="${review.dateModified}">`));
-  assert.match(html, /id="how-i-tested"[\s\S]*?\[CONFIRM: device, iOS, app version, test dates\][\s\S]*?href="\/blog\/how-i-test-progress-photo-apps\/"/);
+  assert.ok(!html.includes('id="how-i-tested"'));
+  assert.match(html, /data-author-box="c"[\s\S]*?Who wrote this review\?[\s\S]*?Founder of Recomp[\s\S]*?href="\/blog\/how-i-test-progress-photo-apps\/"/);
+  const marked = render(post, "<p>Body.</p>\n<!-- author-box -->\n<h2>FAQ</h2>");
+  assert.ok(marked.indexOf("Body.") < marked.indexOf('data-author-box="c"'));
+  assert.ok(marked.indexOf('data-author-box="c"') < marked.indexOf("<h2>FAQ</h2>"));
+  assert.equal(marked.split('data-author-box="c"').length, 2);
 });
 
 test("rendered review: the scorecard goes at the marker, or after the body before the CTA", () => {

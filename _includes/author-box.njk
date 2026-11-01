@@ -1,0 +1,14 @@
+{#- Author box, variant C: an end-of-article bio card. Goes where the body has <!-- author-box --> (before the FAQ),
+    or after the body when there is no marker. It sits inside the prose wrapper, so the heading resets the wrapper's h2 styles.
+    Copy: name and jobTitle from about/index.njk; the bio from How I Review "Who am I?" and "Why are my reviews different?". -#}
+<section class="mt-12 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]" aria-labelledby="author-box-heading" id="author-box" data-author-box="c">
+  <div class="flex flex-col gap-4 sm:flex-row sm:items-start">
+    {% set avatarClass = "h-20 w-20" %}{% include "author-avatar.njk" %}
+    <div class="min-w-0">
+      <h2 id="author-box-heading" class="!mt-0 !text-h4 !tracking-h4 font-bold">Who wrote this review?</h2>
+      <p class="!mt-1 text-micro text-muted"><a class="font-semibold text-fg no-underline hover:underline" href="../../about/" rel="author">Mark Stepchin</a> · Founder of Recomp</p>
+      <p class="!mt-3 text-muted">I've taken progress photos every week since June 6, 2023. I bulked from 165 to 195 lb, then cut to 155 lb. I use real photos and weights from my fitness transformation.</p>
+      <p class="!mt-3 text-micro"><a class="text-muted" href="../../about/">About me</a><span class="text-muted"> · </span><a class="text-muted" href="/blog/how-i-test-progress-photo-apps/">How I review apps</a></p>
+    </div>
+  </div>
+</section>
