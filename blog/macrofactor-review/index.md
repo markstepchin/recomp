@@ -97,7 +97,7 @@ MacroFactor is one of the 12 apps I've tested so far, and one of three fitness a
 
 <!-- TODO(Mark): are the photos the star? How much of the screen do they take, and do the buttons get in their way? How does it handle dozens or hundreds of photos? -->
 
-The gallery keeps every photo in one place and switches between front, side and back from the same day. Each photo shows the body metrics you logged that day. The gallery tints its background and buttons to match the photo on screen. Source: [MacroFactor's body metrics announcement](https://macrofactor.com/body-metrics/).
+The gallery keeps every photo in one place and switches between front, side and back from the same day. Each photo shows the body metrics you logged that day. The gallery tints its background and buttons to match the photo on screen. [MacroFactor's body metrics announcement](https://macrofactor.com/body-metrics/).
 
 ![MacroFactor Progress Photos list grouped by month from July 2024 to August 2025, each check-in a row of three small thumbnails, with Open Gallery and Compare Before & After buttons](./macrofactor-progress-photos.webp "Progress Photos: check-ins grouped by month."){.phone}
 
@@ -109,7 +109,7 @@ Neither gallery view uses the screen well. The single view shows one square phot
 
 <!-- TODO(Mark): ease of alignment, gridline quality, ghost overlay, auto align, and whether I can align in the side by side view. -->
 
-**You can only adjust a photo in the crop step, before you save it.** MacroFactor's help says you can zoom and rotate there. Once a photo is uploaded, I can't edit, resize or align it. Every photo is saved square. Take Photo launches the phone's camera, and I didn't find a ghost overlay, gridlines for posing or auto-align in MacroFactor's help. Source: [How to add progress photos](https://help.macrofactorapp.com/en/articles/121-how-to-add-progress-photos).
+**You can only adjust a photo in the crop step, before you save it.** MacroFactor's help says you can zoom and rotate there. Once a photo is uploaded, I can't edit, resize or align it. Every photo is saved square. Take Photo launches the phone's camera, and I didn't find a ghost overlay, gridlines for posing or auto-align in MacroFactor's help. [How to add progress photos](https://help.macrofactorapp.com/en/articles/121-how-to-add-progress-photos).
 
 ![MacroFactor Crop Photo screen with a grid crop box over a mirror selfie](./macrofactor-crop-photo.webp "The Crop Photo step, before the photo is saved."){.phone}
 
@@ -117,7 +117,7 @@ Neither gallery view uses the screen well. The single view shows one square phot
 
 <!-- TODO(Mark): how easy it is to compare, and the taps and time to compare 9 different dates. Can it make a shareable before/after image or a timelapse? -->
 
-Before and after stacks two photos of the same pose, one above the other. You tap the top slot and pick a photo from the ribbon of dates, then do the same for the bottom. The share image can use a plain background or one matched to the photo's colors. I didn't find a slider, overlay view or timelapse. Source: [How to create before-and-after photos](https://help.macrofactorapp.com/en/articles/123-how-to-create-and-share-before-and-after-photos).
+Before and after stacks two photos of the same pose, one above the other. You tap the top slot and pick a photo from the ribbon of dates, then do the same for the bottom. The share image can use a plain background or one matched to the photo's colors. I didn't find a slider, overlay view or timelapse. [How to create before-and-after photos](https://help.macrofactorapp.com/en/articles/123-how-to-create-and-share-before-and-after-photos).
 
 ![MacroFactor gallery compare view with front photos from October 31, 2026 and August 4, 2025 stacked, each a small square photo on the left with Trend Weight and Scale Weight on the right, and mostly empty space around them](./macrofactor-compare-view.webp "Compare view: two small square photos, with the weights beside them."){.phone}
 
@@ -135,7 +135,7 @@ Photos upload to MacroFactor's servers on Google Firebase. They stay there until
 
 <!-- TODO(Mark): any quality-of-life items that matter for MacroFactor (bulk import, reminders, in-app camera, units, body measurements, editing a check-in's date, partial check-ins, dark mode, ads). Fold them into the sections above or below; no separate section or table unless it clearly helps. -->
 
-**MacroFactor doesn't remind you to weigh in or take photos.** The only nudge is a small alert on the Strategy tab when your weekly check-in is due, and you pick the check-in day. That check-in updates calories and macros, not photos. Source: [MacroFactor's check-in help](https://help.macrofactorapp.com/en/articles/247-introduction-to-check-ins-and-coaching-modules).
+**MacroFactor doesn't remind you to weigh in or take photos.** The only nudge is a small alert on the Strategy tab when your weekly check-in is due, and you pick the check-in day. That check-in updates calories and macros, not photos. [MacroFactor's check-in help](https://help.macrofactorapp.com/en/articles/247-introduction-to-check-ins-and-coaching-modules).
 
 MacroFactor has dark mode and switches between pounds and kilograms. I didn't find an app lock or Face ID option. Sources: [dark mode](https://help.macrofactorapp.com/en/articles/73-switch-between-dark-and-light-mode), [units](https://help.macrofactorapp.com/en/articles/353-changing-unit-preferences).
 

@@ -14,6 +14,7 @@ app_store:
   name: "Hevy - Workout Tracker Gym Log"
   developer: "Hevy Studios S.L."
   developer_url: "https://www.hevyapp.com/"
+  price_text: "Free, or Pro for $2.99 a month, $23.99 a year or $74.99 once"
   rating: 4.9
   rating_count: 101232
   min_ios: "15.1"
@@ -125,11 +126,11 @@ A progress photo app is really four apps in one: a camera roll, an alignment app
 
 ### The morning reminder {#reminders}
 
-**Hevy doesn't remind you to take progress photos or weigh in.** Its notification settings cover the rest timer, new followers, the monthly training report, emails, likes and comments. None of them is for photos, weight or measurements, so the weekly check-in reminder has to come from your own calendar. Source: [Hevy's notification settings](https://help.hevyapp.com/hc/en-us/articles/33845807003671-Account-Settings-Preferences-Profile-Information-Adjust-username-password-or-email-address-Notifications).
+**Hevy doesn't remind you to take progress photos or weigh in.** Its notification settings cover the rest timer, new followers, the monthly training report, emails, likes and comments. None of them is for photos, weight or measurements, so the weekly check-in reminder has to come from your own calendar. [Hevy's notification settings](https://help.hevyapp.com/hc/en-us/articles/33845807003671-Account-Settings-Preferences-Profile-Information-Adjust-username-password-or-email-address-Notifications).
 
 ### Adding photos {#adding-photos}
 
-**Hevy allows only one photo per day, so front, side and back can't share a date.** Hevy's own suggestion is to spread the set over three days in a row, one photo per day. Source: [Hevy's progress photos page](https://www.hevyapp.com/features/progress-photos/).
+**Hevy allows only one photo per day, so front, side and back can't share a date.** Hevy's own suggestion is to spread the set over three days in a row, one photo per day. [Hevy's progress photos page](https://www.hevyapp.com/features/progress-photos/).
 
 **From the camera roll.** Picking an existing photo works, but Hevy doesn't read the date from the photo. You set each photo's date by hand, so importing an old photo means typing in when you took it. Unlike the in-app camera, there's no overlay here.
 
@@ -137,7 +138,7 @@ For camera roll photos, you can crop, rotate, pan and zoom before saving. That's
 
 ### Weights and measurements {#weights}
 
-**Each photo sits next to your weight and measurements, which is what a data app should do.** Hevy's Apple Health help only covers sending workouts to Health. I didn't find a way to read weight from a smart scale, so every weigh-in is typed in by hand. [CONFIRM: in iPhone Settings > Health > Data Access & Devices > Hevy, is there a read permission for Body Mass?] Source: [Hevy's Apple Health help](https://help.hevyapp.com/hc/en-us/sections/36957443687831-Apple-Health).
+**Each photo sits next to your weight and measurements, which is what a data app should do.** Hevy's Apple Health help only covers sending workouts to Health. I didn't find a way to read weight from a smart scale, so every weigh-in is typed in by hand. [CONFIRM: in iPhone Settings > Health > Data Access & Devices > Hevy, is there a read permission for Body Mass?] [Hevy's Apple Health help](https://help.hevyapp.com/hc/en-us/sections/36957443687831-Apple-Health).
 
 Weight and waist are free. Body fat and the other measurements need Hevy Pro.
 
@@ -193,11 +194,11 @@ For sharing, you pick two dates and share them side by side as an image. There's
 
 ## Quality of life and privacy {#sharing}
 
-**Your photos are uploaded to Hevy's servers, not kept on your phone.** Hevy's help says everything is stored to your profile on its servers, which is why reinstalling the app doesn't lose them and why you need an account. Hevy's App Store privacy label doesn't list photos among the data it collects. Source: [Hevy's help on reinstalling](https://help.hevyapp.com/hc/en-us/articles/38223672272791-What-will-happen-to-my-information-if-I-uninstall-and-reinstall-the-Hevy-app) and the [App Store listing](https://apps.apple.com/us/app/id1458862350).
+**Your photos are uploaded to Hevy's servers, not kept on your phone.** Hevy's help says everything is stored to your profile on its servers, which is why reinstalling the app doesn't lose them and why you need an account. Hevy's App Store privacy label doesn't list photos among the data it collects. [Hevy's help on reinstalling](https://help.hevyapp.com/hc/en-us/articles/38223672272791-What-will-happen-to-my-information-if-I-uninstall-and-reinstall-the-Hevy-app) and the [App Store listing](https://apps.apple.com/us/app/id1458862350).
 
 Photos in Measures stay private even if your profile is public. Photos or videos you attach to a shared workout are different, and other people can see them. If you use Hevy's social side, know which one you're posting. Sources: [Hevy's help article on measurements and progress photos](https://help.hevyapp.com/hc/en-us/articles/35385479603479-Body-Composition-Tracking-Measurements-and-Progress-Photos) and [Hevy's progress photos feature page](https://www.hevyapp.com/features/progress-photos/).
 
-Hevy has a dark theme. I didn't find an app lock or Face ID option in its help, so hiding the photos means using iOS's own Require Face ID on the app icon. Source: [Hevy's theme setting](https://www.hevyapp.com/help/change-the-theme-android-ios/).
+Hevy has a dark theme. I didn't find an app lock or Face ID option in its help, so hiding the photos means using iOS's own Require Face ID on the app icon. [Hevy's theme setting](https://www.hevyapp.com/help/change-the-theme-android-ios/).
 
 Hevy exports your measurements as a CSV, but your photos aren't in the export.
 

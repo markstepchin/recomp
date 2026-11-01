@@ -101,7 +101,7 @@ const CTA_KEYS = new Set(["heading", "text", "location"]);
 const APP_STORE_KEYS = ["id", "name", "developer", "developer_url", "rating", "rating_count", "min_ios", "url", "icon", "checked", "price"];
 // Optional app_store keys: price_currency (default USD), category (schema.org applicationCategory,
 // default HealthApplication), seller (the App Store "Seller" when it differs from the developer).
-const APP_STORE_OPTIONAL_KEYS = ["price_currency", "category", "seller"];
+const APP_STORE_OPTIONAL_KEYS = ["price_currency", "category", "seller", "price_text"];
 const PERSON_ID = `${SITE_URL}/about/#mark`;
 
 /** Person nodes used as an author anywhere in a JSON-LD value. */
@@ -253,6 +253,7 @@ export function appStoreData(app) {
     name: String(app.name),
     developer: String(app.developer),
     developerUrl: String(app.developer_url),
+    priceText: app.price_text ? String(app.price_text) : null,
     rating,
     ratingText: rating.toFixed(1),
     ratingPercent: Math.round((rating / 5) * 1000) / 10,

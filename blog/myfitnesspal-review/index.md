@@ -97,19 +97,19 @@ MyFitnessPal is one of the 12 apps I've tested so far, and one of three fitness 
 
 <!-- TODO(Mark): are the photos the star? How much of the screen do they take, and do the buttons get in their way? How does it handle dozens or hundreds of photos? -->
 
-**MyFitnessPal is built around tracking weight, and photos are an add-on.** You add a weight record under More > Weight & Measurements and can attach a photo to it. Photos taken in the app aren't saved to your camera roll. Source: [MyFitnessPal's progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
+**MyFitnessPal is built around tracking weight, and photos are an add-on.** You add a weight record under More > Weight & Measurements and can attach a photo to it. Photos taken in the app aren't saved to your camera roll. [MyFitnessPal's progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
 ## How does it handle alignment? {#alignment}
 
 <!-- TODO(Mark): ease of alignment, gridline quality, ghost overlay, auto align, and whether I can align in the side by side view. -->
 
-**MyFitnessPal has no alignment tools.** There's no overlay, gridlines or auto-align, and no way to adjust a photo after you add it. It crops every photo square when you upload it, so anything outside the center gets cut. Source: [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
+**MyFitnessPal has no alignment tools.** There's no overlay, gridlines or auto-align, and no way to adjust a photo after you add it. It crops every photo square when you upload it, so anything outside the center gets cut. [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
 ## How do comparisons and collages work? {#compare}
 
 <!-- TODO(Mark): how easy it is to compare, and the taps and time to compare 9 different dates. Can it make a shareable before/after image or a timelapse? -->
 
-Sharing works from any photo in the Entries list. You can swipe between photos, add a message and save a split photo or send it to Instagram or Facebook. I didn't find a slider, overlay view or timelapse. Source: [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
+Sharing works from any photo in the Entries list. You can swipe between photos, add a message and save a split photo or send it to Instagram or Facebook. I didn't find a slider, overlay view or timelapse. [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
 ![MyFitnessPal Progress Gallery with two front photos side by side labeled 160 lbs and 155 lbs, above a strip of thumbnails](./myfitnesspal-progress-gallery.webp "Progress Gallery: two photos side by side with their weights."){.phone}
 

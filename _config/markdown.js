@@ -26,6 +26,20 @@ export const SIZES = "(min-width: 800px) 752px, 100vw";
 export const PHONE_SIZES = "(min-width: 560px) 280px, 50vw";
 const PHONE = "phone";
 
+/** Source links to an app's own site get that app's icon before the text (posts live at /blog/<slug>/). */
+export const SOURCE_ICONS = [
+  [/(^|\.)hevy(app)?\.com$/, "hevy"],
+  [/(^|\.)macrofactor(app)?\.com$/, "macrofactor"],
+  [/(^|\.)myfitnesspal\.com$/, "myfitnesspal"],
+];
+export const SOURCE_ICON_CLASS = "mr-[0.3em] inline-block size-[1em] rounded-[22%] align-[-0.125em]";
+export function sourceIcon(href) {
+  let host;
+  try { host = new URL(href).hostname; } catch { return null; }
+  const hit = SOURCE_ICONS.find(([re]) => re.test(host));
+  return hit ? hit[1] : null;
+}
+
 export function markdown() {
   const md = markdownIt({ html: true, linkify: false, typographer: false });
   md.use(markdownItAttrs, { allowedAttributes: ["id", "class"] });
@@ -55,6 +69,14 @@ export function markdown() {
     if (!token.meta?.figure) return img;
     const cap = caption ? `<figcaption class="${CAPTION_CLASS}">${escape(caption)}</figcaption>` : "";
     return `<figure class="${phone ? PHONE_FIGURE_CLASS : FIGURE_CLASS}">${img}${cap}</figure>\n`;
+  };
+
+  const defaultLinkOpen = md.renderer.rules.link_open ?? ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options));
+  md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
+    const html = defaultLinkOpen(tokens, idx, options, env, self);
+    const icon = sourceIcon(tokens[idx].attrGet("href") ?? "");
+    if (!icon) return html;
+    return `${html}<img class="${SOURCE_ICON_CLASS}" src="../../assets/app-icons/${icon}.webp" alt="" width="16" height="16" loading="lazy" decoding="async">`;
   };
 
   const strip = (rule) => (tokens, idx, ...rest) => {
