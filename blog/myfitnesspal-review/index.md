@@ -6,6 +6,18 @@ description: "I tested MyFitnessPal's progress photo feature with real photos an
 tested: October 2026
 draft: true
 breadcrumb: "Best progress photo apps"
+app_store:
+  # Copied from the US App Store listing on the date in checked. Update all values together.
+  id: 341232718
+  name: "MyFitnessPal: Calorie Counter"
+  developer: "MyFitnessPal, Inc."
+  developer_url: "https://www.myfitnesspal.com/"
+  rating: 4.7
+  rating_count: 2387079
+  min_ios: "18.0"
+  url: "https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718"
+  icon: "assets/app-icons/myfitnesspal.webp"
+  checked: 2026-11-01
 ---
 
 <!-- TODO(Mark): final title, seo_title and description once the verdict is written. Add card_blurb if the /blog/ card needs a shorter line. -->
@@ -16,6 +28,8 @@ breadcrumb: "Best progress photo apps"
 <!-- TODO(Mark): two or three sentences: do I recommend MyFitnessPal for progress photos, and for whom. -->
 
 **Full disclosure: I build Recomp, a free progress photo app, and I hold it to the same bar as every other app.** I don't run ads, and I don't use affiliate links.
+
+<!-- app-store-card -->
 
 MyFitnessPal is one of the 12 apps I've tested so far, and one of three fitness apps with a photo feature I tested alongside the dedicated progress photo apps. I tested it the way I test every app, with real photos and weights from my own transformation. [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) explains the method.
 

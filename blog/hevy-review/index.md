@@ -7,6 +7,18 @@ description: "I tested Hevy's progress photos, overlay camera, side-by-side comp
 tested: October 2026
 draft: true
 breadcrumb: "Best progress photo apps"
+app_store:
+  # Copied from the US App Store listing on the date in checked. Update all values together.
+  id: 1458862350
+  name: "Hevy - Workout Tracker Gym Log"
+  developer: "Hevy Studios S.L."
+  developer_url: "https://www.hevyapp.com/"
+  rating: 4.9
+  rating_count: 101232
+  min_ios: "15.1"
+  url: "https://apps.apple.com/us/app/hevy-workout-tracker-gym-log/id1458862350"
+  icon: "assets/app-icons/hevy.webp"
+  checked: 2026-11-01
 summary: |
   Hevy is a workout tracker with progress photos built in, under Profile > Measures. It has an overlay in the in-app camera, side-by-side comparisons, and photos stored next to your weight and measurements. It allows only one photo per day, so you can't keep front, side and back photos under the same date. Alignment happens only while you add a photo, and there's no auto-align. Fixing a photo later means deleting it and adding it again.
 faq:
@@ -23,6 +35,8 @@ faq:
 ---
 
 **Full disclosure: I build Recomp, a free progress photo app, and I hold it to the same bar as every other app.** I don't run ads, and I don't use affiliate links.
+
+<!-- app-store-card -->
 
 Hevy is one of the 12 apps I've tested so far, and one of three fitness apps with a photo feature I tested alongside the dedicated progress photo apps. I tested it the way I test every app, with real photos and weights from my own transformation. [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) explains the method.
 

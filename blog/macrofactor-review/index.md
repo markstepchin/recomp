@@ -6,6 +6,18 @@ description: "I tested MacroFactor's progress photo feature with real photos and
 tested: October 2026
 draft: true
 breadcrumb: "Best progress photo apps"
+app_store:
+  # Copied from the US App Store listing on the date in checked. Update all values together.
+  id: 1553503471
+  name: "MacroFactor - Macro Tracker"
+  developer: "Stronger By Science Technologies LLC"
+  developer_url: "https://macrofactor.com/"
+  rating: 4.8
+  rating_count: 23708
+  min_ios: "15.6"
+  url: "https://apps.apple.com/us/app/macrofactor-macro-tracker/id1553503471"
+  icon: "assets/app-icons/macrofactor.webp"
+  checked: 2026-11-01
 ---
 
 <!-- TODO(Mark): final title, seo_title and description once the verdict is written. Add card_blurb if the /blog/ card needs a shorter line. -->
@@ -16,6 +28,8 @@ breadcrumb: "Best progress photo apps"
 <!-- TODO(Mark): two or three sentences: do I recommend MacroFactor for progress photos, and for whom. -->
 
 **Full disclosure: I build Recomp, a free progress photo app, and I hold it to the same bar as every other app.** I don't run ads, and I don't use affiliate links.
+
+<!-- app-store-card -->
 
 MacroFactor is one of the 12 apps I've tested so far, and one of three fitness apps with a photo feature I tested alongside the dedicated progress photo apps. I tested it the way I test every app, with real photos and weights from my own transformation. [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) explains the method.
 
