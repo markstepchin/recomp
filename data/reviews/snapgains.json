@@ -1,0 +1,25 @@
+{
+ "app": {
+  "slug": "snapgains",
+  "app_id": 6804425851,
+  "name": "snapgains - Progress Photos",
+  "developer": "Max Mondelli",
+  "in_roundup": false,
+  "genre": "Health & Fitness",
+  "price": 0.0,
+  "rating_count_us": 4,
+  "rating_avg_us": 5,
+  "first_released": "2026-10-01",
+  "last_updated": "2026-10-13",
+  "version": "1.1.1",
+  "store_url": "https://apps.apple.com/us/app/id6804425851",
+  "reviews_collected": 0,
+  "feed_pages_mostrecent": 1,
+  "feed_rows_mostrecent": 0,
+  "feed_rows_mosthelpful": 0,
+  "oldest_review": null,
+  "newest_review": null
+ },
+ "fetched_at": "2026-10-17T20:19:20.711193-07:00",
+ "reviews": []
+}

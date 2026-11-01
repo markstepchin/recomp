@@ -1,0 +1,323 @@
+{
+ "app": {
+  "slug": "bodyshapr",
+  "app_id": 1331744829,
+  "name": "BodyShapr: Body Progress Photo",
+  "developer": "Jafar Najafov",
+  "in_roundup": false,
+  "genre": "Health & Fitness",
+  "price": 2.99,
+  "rating_count_us": 41,
+  "rating_avg_us": 2.22,
+  "first_released": "2018-08-07",
+  "last_updated": "2021-03-11",
+  "version": "1.0.6",
+  "store_url": "https://apps.apple.com/us/app/id1331744829",
+  "reviews_collected": 33,
+  "feed_pages_mostrecent": 1,
+  "feed_rows_mostrecent": 33,
+  "feed_rows_mosthelpful": 33,
+  "oldest_review": "2018-08-07",
+  "newest_review": "2024-02-19"
+ },
+ "fetched_at": "2026-10-17T20:19:16.969975-07:00",
+ "reviews": [
+  {
+   "id": "10958296355",
+   "rating": 1,
+   "title": "Horrible",
+   "text": "This app is AWFUL. There are so many errors and timed outs that I can’t even register. Don’t waste your money.",
+   "date": "2024-02-19T18:09:49-07:00",
+   "version": "1.0.6",
+   "author": "AndiMarieG"
+  },
+  {
+   "id": "9290614302",
+   "rating": 1,
+   "title": "Scam",
+   "text": "Scam of the year cannot set up",
+   "date": "2022-11-14T18:36:39-07:00",
+   "version": "1.0.6",
+   "author": "parduvi1298"
+  },
+  {
+   "id": "8380919469",
+   "rating": 1,
+   "title": "Terrible",
+   "text": "It doesn’t work. Waste of money",
+   "date": "2022-02-21T07:24:13-07:00",
+   "version": "1.0.6",
+   "author": "jessmohler"
+  },
+  {
+   "id": "8270353039",
+   "rating": 1,
+   "title": "Horrible",
+   "text": "App does not work. Save your money.",
+   "date": "2022-01-22T09:34:00-07:00",
+   "version": "1.0.6",
+   "author": "lrob27"
+  },
+  {
+   "id": "7888130150",
+   "rating": 1,
+   "title": "Doesn’t load",
+   "text": "I can’t even use the app because it won’t load and it keeps sending error messages every time I open it. Honestly I want a refund. This is ridiculous.",
+   "date": "2021-10-07T07:00:14-07:00",
+   "version": "1.0.6",
+   "author": "shfiendowlfheens"
+  },
+  {
+   "id": "7850814327",
+   "rating": 1,
+   "title": "Doesn’t work",
+   "text": "Setting up the app was almost impossible with all the service errors. Every page takes forever to load—if at all. Once i finally got through setup, there’s service errors loading every page, photos will not upload either from the camera or importing from photos. The app either times out, has a service error, or crashes every time. Dark mode also makes the app unusable as menus all have a white background and white text. Really disappointing since this app has features that a lot of apps don’t have. Looks like it may not longer be maintained. Waiting to get a refund from Apple.",
+   "date": "2021-09-27T06:45:11-07:00",
+   "version": "1.0.6",
+   "author": "alj723"
+  },
+  {
+   "id": "7444846279",
+   "rating": 1,
+   "title": "Doesn't work",
+   "text": "Can't even load photos. Been trying for 3 days now and it just says something went wrong try try again after some time",
+   "date": "2021-06-09T06:16:16-07:00",
+   "version": "1.0.6",
+   "author": "Dragonflymom5"
+  },
+  {
+   "id": "6929440454",
+   "rating": 1,
+   "title": "App not working",
+   "text": "It just spins on the terms and conditions page and will not load at all after the initial download",
+   "date": "2021-01-29T12:06:15-07:00",
+   "version": "1.0.5",
+   "author": "matt-kc15"
+  },
+  {
+   "id": "6881241182",
+   "rating": 1,
+   "title": "Not sure what to think",
+   "text": "I bought the app and it will not even open. It is stuck on the terms and conditions and will not open into the app. I’ve reset my iPhone 11, took it off WiFi and I’m completely confused. Feel like I got ripped off",
+   "date": "2021-01-17T08:23:53-07:00",
+   "version": "1.0.5",
+   "author": "angcro81"
+  },
+  {
+   "id": "6775362164",
+   "rating": 1,
+   "title": "Doesn’t open",
+   "text": "Purchased this app and can’t even open it! Refund please!",
+   "date": "2020-12-20T12:30:37-07:00",
+   "version": "1.0.5",
+   "author": "CelestePdx"
+  },
+  {
+   "id": "6728726884",
+   "rating": 1,
+   "title": "no good",
+   "text": "i just downloaded the app and it’s immediately not working",
+   "date": "2020-12-07T16:04:18-07:00",
+   "version": "1.0.5",
+   "author": "jcope65"
+  },
+  {
+   "id": "6725349514",
+   "rating": 1,
+   "title": "Bodyshapr",
+   "text": "App does not open. Says “something went wrong please try again after sometime”. Never worked.",
+   "date": "2020-12-06T16:52:00-07:00",
+   "version": "1.0.5",
+   "author": "ladyvelour"
+  },
+  {
+   "id": "6649562412",
+   "rating": 1,
+   "title": "Report a problem",
+   "text": "App will not open. I selected accept terms and it states there seems to be a problem.\nPls refund money. App is not working",
+   "date": "2020-11-15T13:29:35-07:00",
+   "version": "1.0.5",
+   "author": "Migemma"
+  },
+  {
+   "id": "6544663619",
+   "rating": 1,
+   "title": "Purchase and it won’t open",
+   "text": "I purchased your app and it won’t open.",
+   "date": "2020-10-17T06:13:42-07:00",
+   "version": "1.0.5",
+   "author": "this is_bs"
+  },
+  {
+   "id": "6497062003",
+   "rating": 1,
+   "title": "Dont buy",
+   "text": "It doesnt work.",
+   "date": "2020-10-03T12:56:36-07:00",
+   "version": "1.0.5",
+   "author": "Swank1995"
+  },
+  {
+   "id": "6392770078",
+   "rating": 1,
+   "title": "App crashed",
+   "text": "App won’t load and I’ve lost all my pics...very frustrating",
+   "date": "2020-09-03T19:19:19-07:00",
+   "version": "1.0.5",
+   "author": "Lewis325"
+  },
+  {
+   "id": "3956427994",
+   "rating": 1,
+   "title": "Terms and conditions are intrusive",
+   "text": "As other reviewers have mentioned, their terms and conditions state we're giving them the right and license to use, modify, etc our content that we post to this app. They responded to one review, saying that's not what they meant and they'll update the verbiage...but it's still there today 4/1/2019. That's insane.",
+   "date": "2019-04-01T09:51:11-07:00",
+   "version": "1.0.5",
+   "author": "Shcnnjk😊"
+  },
+  {
+   "id": "3597102827",
+   "rating": 1,
+   "title": "Invasive privacy policy",
+   "text": "I purchased the app, only to find a terms of service forced on users that gives the app makers the right to take my photos and use them as they see fit.  Obviously these are sensitive photos, and in my opinion this is overreaching.\n\nThe text of the terms includes:\n\n“You grant us the right and license to use, modify, perform, display, reproduce and distribute such Content.”",
+   "date": "2018-12-31T14:32:59-07:00",
+   "version": "1.0.5",
+   "author": "MFCrunchy"
+  },
+  {
+   "id": "3464885683",
+   "rating": 3,
+   "title": "Need improve",
+   "text": "Good concept, need function to import photo. Need iPad screen size",
+   "date": "2018-11-26T20:26:49-07:00",
+   "version": "1.0.4",
+   "author": "bdc1s5"
+  },
+  {
+   "id": "3301153934",
+   "rating": 5,
+   "title": "Great app!",
+   "text": "Easy to use. Very dynamic with all the features and logging of previous records and images. Keeps me motivated!",
+   "date": "2018-10-14T07:09:07-07:00",
+   "version": "1.0.4",
+   "author": "RRamos85"
+  },
+  {
+   "id": "3230160088",
+   "rating": 1,
+   "title": "Terms and conditions",
+   "text": "The terms and conditions are\nDrawn under the laws of the Dominican Republic???\n\nWhy?",
+   "date": "2018-09-25T17:19:22-07:00",
+   "version": "1.0.4",
+   "author": "Saggitaurus423"
+  },
+  {
+   "id": "3181172401",
+   "rating": 4,
+   "title": "No native camera support",
+   "text": "App seems great so far, but it does not appear to have native camera support, so I cannot use the timer to take photos. This basically means that I HAVE to have someone else take the photos for me if I don’t want the camera in the shot :( Also, lack of upload support means I cannot upload previously taken progress photos.   The app is great as long as you’re cool with its limitations. Hope these items get addressed.",
+   "date": "2018-09-12T05:33:44-07:00",
+   "version": "1.0.3",
+   "author": "Star101010"
+  },
+  {
+   "id": "3165407095",
+   "rating": 5,
+   "title": "Motivation Boost",
+   "text": "In all honesty, I need all the motivation I can get and stay committed, this app is enticing because I can periodically measure my progress in such a way that makes me want to work harder.",
+   "date": "2018-09-07T17:53:18-07:00",
+   "version": "1.0.3",
+   "author": "mickeys85"
+  },
+  {
+   "id": "3064937472",
+   "rating": 4,
+   "title": "Ability to Delete photo.",
+   "text": "You guys have a really great app here but i think it could be improved by providing the users with outline (to have higher consistency of taking photos thats great for comparison) when taking photos, and give users ability to delete photos.",
+   "date": "2018-08-14T15:06:57-07:00",
+   "version": "1.0.3",
+   "author": "jay940718"
+  },
+  {
+   "id": "3064914808",
+   "rating": 5,
+   "title": "Very Useful for weight loss progress",
+   "text": "I’m doing a lot of cardio and weight training and it’s a bit difficult to monitor your progress by weight. I was really demotivated by the number on the scale. But when I was able to add my pictures and doing a couple of comparisons, I was surprised by how good it works! I’ve just started using it but this really provides a much needed motivation boost.",
+   "date": "2018-08-14T14:58:15-07:00",
+   "version": "1.0.3",
+   "author": "moni2804"
+  },
+  {
+   "id": "3064897827",
+   "rating": 5,
+   "title": "Finally!!",
+   "text": "Awesome app!! Ive been searching for an app where I can keep track of my body transformation and this definitely is the perfect tool. I usually do 3 months of heavy workouts including cardio, weightlifting and some complementary activities. These 3 months sessions are supervised by my personal trainer and often I boost them with some supplements, but I have never been able to tell if they really pay off!! I will be using this tool to find out if its worth the sacrifice and the investment or if i should just continue my regular routine...",
+   "date": "2018-08-14T14:50:55-07:00",
+   "version": "1.0.3",
+   "author": "Gdipino"
+  },
+  {
+   "id": "3060047934",
+   "rating": 5,
+   "title": "Super useful for my training",
+   "text": "I’m an avid fitness apps user and monitor everything from weight to steps taken. Never have I found such a useful way to “truly visualize” my progress, as the app’s description states. I’m happy to say this one’s going to be one of my go-to apps for tracking my progress. The idea of being able to compare my fitness body transformation is extra motivating, to say the least!",
+   "date": "2018-08-13T13:14:35-07:00",
+   "version": "1.0.2",
+   "author": "alanpaie"
+  },
+  {
+   "id": "3045145486",
+   "rating": 5,
+   "title": "Best Performance Tracker App Ever",
+   "text": "Highly recommend this app for beginners like me that are looking to keep the motivation ON and the Fat OFF. Great way to track your progress. Highly recommended.",
+   "date": "2018-08-10T06:50:58-07:00",
+   "version": "1.0.2",
+   "author": "G.Paiewonsky"
+  },
+  {
+   "id": "3042060009",
+   "rating": 5,
+   "title": "BodyShapr 👏🏼👏🏼👏🏼👏🏼",
+   "text": "Excellent app for those who want to track progress!! 👌🏼👌🏼👌🏼",
+   "date": "2018-08-09T15:45:52-07:00",
+   "version": "1.0.2",
+   "author": "icanfeelitinmyplums"
+  },
+  {
+   "id": "3035448567",
+   "rating": 5,
+   "title": "Photo comparison perfection!",
+   "text": "This is such an easy way to track progress!! 100% useful! The type of comparisons I can create with the click of a button are awesome.",
+   "date": "2018-08-08T05:16:16-07:00",
+   "version": "1.0.1",
+   "author": "Joserdelance"
+  },
+  {
+   "id": "3033036006",
+   "rating": 5,
+   "title": "Awesome app to keep track of progress",
+   "text": "It’s a great tool to keep track of my progress. It surely is a motivation to continuously improve my body shape. 100% recommended!!",
+   "date": "2018-08-07T18:20:56-07:00",
+   "version": "1.0.1",
+   "author": "jmarranzini"
+  },
+  {
+   "id": "3032948937",
+   "rating": 5,
+   "title": "Revolutionary!",
+   "text": "“Well, the comparison features definitely work pretty well from my testing, looking forward to see my efforts come to life with this new tool.”",
+   "date": "2018-08-07T17:52:59-07:00",
+   "version": "1.0.1",
+   "author": "JuanLazo"
+  },
+  {
+   "id": "3031964380",
+   "rating": 1,
+   "title": "Not working",
+   "text": "The app let me go through the signup process and then crashes",
+   "date": "2018-08-07T11:54:51-07:00",
+   "version": "1.0.1",
+   "author": "vendawg3234"
+  }
+ ]
+}

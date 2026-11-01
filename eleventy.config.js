@@ -96,6 +96,7 @@ export default function (eleventyConfig) {
   eleventyConfig.ignores.add("blog/_templates/**");
 
   // Public files, copied byte-for-byte. Globs skip dotfiles (assets/.DS_Store).
+  // data/ holds the review study's raw JSON, linked and loaded by the review table.
   // Not copied (private): *.md, docs/, scripts/, partials/, _config/, _includes/, _pages/,
   // tests/, js/*.test.js, package*.json, wrangler.jsonc, eleventy.config.js.
   for (const glob of [

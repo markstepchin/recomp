@@ -1,0 +1,44 @@
+{
+ "app": {
+  "slug": "journey-tracker",
+  "app_id": 6739070128,
+  "name": "Journey Tracker: Progress Pics",
+  "developer": "Novee Group LLC",
+  "in_roundup": false,
+  "genre": "Photo & Video",
+  "price": 0.0,
+  "rating_count_us": 3,
+  "rating_avg_us": 5,
+  "first_released": "2024-12-06",
+  "last_updated": "2026-10-10",
+  "version": "1.3.3",
+  "store_url": "https://apps.apple.com/us/app/id6739070128",
+  "reviews_collected": 2,
+  "feed_pages_mostrecent": 1,
+  "feed_rows_mostrecent": 2,
+  "feed_rows_mosthelpful": 2,
+  "oldest_review": "2025-09-16",
+  "newest_review": "2026-08-17"
+ },
+ "fetched_at": "2026-10-17T20:19:21.640737-07:00",
+ "reviews": [
+  {
+   "id": "14440288523",
+   "rating": 5,
+   "title": "Awesome",
+   "text": "The UI is easy to understand, the ability to add various albums is awesome and the developer is easy to reach out to with suggestions and improvements.   Highly recommend.",
+   "date": "2026-08-17T14:16:26-07:00",
+   "version": "1.2.8",
+   "author": "pjonestexas"
+  },
+  {
+   "id": "13146774058",
+   "rating": 5,
+   "title": "Use this daily!",
+   "text": "Don’t know why it took so long for someone to build this! Such a great tool for tracking my progress both in and out of the gym!",
+   "date": "2025-09-16T19:34:09-07:00",
+   "version": "1.2",
+   "author": "Xam9797"
+  }
+ ]
+}

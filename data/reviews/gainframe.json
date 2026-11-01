@@ -1,0 +1,206 @@
+{
+ "app": {
+  "slug": "gainframe",
+  "app_id": 6759252082,
+  "name": "GainFrame: Gym Progress Photos",
+  "developer": "Michael Rode",
+  "in_roundup": true,
+  "genre": "Health & Fitness",
+  "price": 0.0,
+  "rating_count_us": 70,
+  "rating_avg_us": 4.89,
+  "first_released": "2026-03-08",
+  "last_updated": "2026-10-16",
+  "version": "3.27",
+  "store_url": "https://apps.apple.com/us/app/id6759252082",
+  "reviews_collected": 20,
+  "feed_pages_mostrecent": 1,
+  "feed_rows_mostrecent": 20,
+  "feed_rows_mosthelpful": 20,
+  "oldest_review": "2026-03-09",
+  "newest_review": "2026-10-01"
+ },
+ "fetched_at": "2026-10-17T20:19:15.456104-07:00",
+ "reviews": [
+  {
+   "id": "14615464745",
+   "rating": 5,
+   "title": "Game changer",
+   "text": "it really makes u see change.",
+   "date": "2026-10-01T08:56:47-07:00",
+   "version": "3.23",
+   "author": "@joe0liva"
+  },
+  {
+   "id": "14545016301",
+   "rating": 5,
+   "title": "Brilliant, unique fitness tool!",
+   "text": "GameFrame has been quite the pleasant surprise!\n\nI somehow stumbled across this app when looking for alternatives to Spren and some other body‑scanning tools, and I'm happy I explored it and gave it a chance. \n\nDeveloper Michael has been very helpful and responsive. I think the direction this app is headed will turn it into quite a useful tool and an indispensable one at that. \n\nI really like how it keeps track of photos and turns those into useful insights and suggestions. I’m still learning how to make use of it given the impressive array of features.\n\nAlso one incredible feature I discovered is AI Predict. This takes your current photos and gives you what you could look like based on diet and training parameters that are easy to specify. The end result is a physique photo that, at the very least, can act as an inspiration for pushing ahead. I’d tried this with some of the mainstream AIs and the results were nowhere near as good! I have yet to see any other app do this well. \n\nThere are still some rough edges but no dealbreakers. Deserves five stars and more!",
+   "date": "2026-09-13T06:21:48-07:00",
+   "version": "3.18",
+   "author": "pendolino"
+  },
+  {
+   "id": "14525214084",
+   "rating": 1,
+   "title": "App Crashing",
+   "text": "The app has been crashing ever since I updated both my phone’s operating system and the app itself.",
+   "date": "2026-09-08T06:08:32-07:00",
+   "version": "3.17",
+   "author": "N8Ki"
+  },
+  {
+   "id": "14518794979",
+   "rating": 5,
+   "title": "GainFrame Gary",
+   "text": "Keeping me accountable and great for seeing progress in real time",
+   "date": "2026-09-06T12:36:28-07:00",
+   "version": "3.16",
+   "author": "Hav9785"
+  },
+  {
+   "id": "14441364768",
+   "rating": 5,
+   "title": "Great app!",
+   "text": "Not a single bad thing IVE encountered so far and needing pro features doesn’t seem that important so far. Keep it up!",
+   "date": "2026-08-17T21:12:05-07:00",
+   "version": "3.11",
+   "author": "App reviewer 200.0"
+  },
+  {
+   "id": "14179973658",
+   "rating": 5,
+   "title": "Has Potential with plenty of features",
+   "text": "Update: Developer Michael reached out promptly and found the issue I was having with the Coach AI not working and sent a detailed email about it. Definitely great service!\n\nThe subscription (at a reasonable price) is all about the AI insight. I am just starting out with the free trial. It has a lot more features than the app Shapez I used before. I recommend this app. Already love that it can tell me insights about all my past progress photos and importing a bulk of pictures was very easy.",
+   "date": "2026-06-13T18:30:14-07:00",
+   "version": "2.11",
+   "author": "FriedStuffedTea"
+  },
+  {
+   "id": "13937208877",
+   "rating": 5,
+   "title": "Gain frame",
+   "text": "This app is really helpful for keeping track of my fitness progress over time. The layout is clean and easy to use, and I like how simple it is to upload and compare photos. It makes it easier to stay motivated because you can actually see the changes instead of just guessing. The features feel useful without being complicated, and everything runs smoothly. Definitely a solid app if you’re serious about improving and staying consistent.",
+   "date": "2026-04-08T15:19:54-07:00",
+   "version": "1.14",
+   "author": "dnigf"
+  },
+  {
+   "id": "13910569303",
+   "rating": 5,
+   "title": "Awesome All-In-One App",
+   "text": "For body composition this app is astounding! It's not just a scale tracker, you get to see the body recomp comparisons from each week and get reports back giving you guidance. The creator is also constantly updating which is phenomenal! Keep up the great work 😄",
+   "date": "2026-04-01T06:06:02-07:00",
+   "version": "1.10",
+   "author": "Wonderbread1994"
+  },
+  {
+   "id": "13896897556",
+   "rating": 5,
+   "title": "Easy way to track body fat",
+   "text": "Finally found an app that lets my track body fat week over week and it provides ton of other useful info alongside",
+   "date": "2026-03-28T09:56:32-07:00",
+   "version": "1.10",
+   "author": "Jjjjazzzzz"
+  },
+  {
+   "id": "13894944440",
+   "rating": 5,
+   "title": "The app I’ve been looking for",
+   "text": "Has all the features I need and nothing I don’t",
+   "date": "2026-03-27T21:19:59-07:00",
+   "version": "1.10",
+   "author": "BigCarlss"
+  },
+  {
+   "id": "13880505529",
+   "rating": 5,
+   "title": "Really useful & Actually Works!",
+   "text": "This app is awesome. The AI breakdown and physique scoring gives you a whole new level of insight compared to typical fitness apps. I love being able to track progress visually and see exactly where I’m improving. Super motivating and easy to use!\nI look forward to seeing how much this can help me with my fitness journey!",
+   "date": "2026-03-23T19:08:48-07:00",
+   "version": "1.7",
+   "author": "TayNicole23"
+  },
+  {
+   "id": "13880315832",
+   "rating": 5,
+   "title": "Vivi’s experience with GainFrame",
+   "text": "Great app! It helps me track everything and even tells me what I need to improve on and how I can improve it. Never had a better app to help track my performance! Thanks to this app I will be able to be consistent with my goals all throughout 2026.",
+   "date": "2026-03-23T17:46:30-07:00",
+   "version": "1.7",
+   "author": "Vivianmo080"
+  },
+  {
+   "id": "13878344782",
+   "rating": 5,
+   "title": "Great app for moms",
+   "text": "I’ve been using this fitness app for a little while now, and I genuinely love how simple and motivating it is. Instead of focusing only on numbers like weight or calories, it lets you track your progress through photos. It’s been such a game changer for me.\n\nAs a mom, my body has gone through a lot of changes, and it can be hard to see progress day to day. This app helps me actually see the small changes over time, which is incredibly encouraging during this stage of my life. Some days the scale doesn’t move, but the visual progress reminds me that my efforts are still paying off.\n\nI also appreciate how easy it is to use. It doesn’t feel overwhelming or time-consuming, which is important when you’re juggling a busy schedule with kids. It’s become a really positive, low-pressure way for me to stay consistent and feel good about taking care of myself.\n\nOverall, I’d definitely recommend it to anyone, especially moms or anyone in a season of life where traditional fitness tracking feels discouraging. It’s a refreshing and motivating approach to progress.",
+   "date": "2026-03-23T05:29:46-07:00",
+   "version": "1.7",
+   "author": "Mouseratt28"
+  },
+  {
+   "id": "13875785151",
+   "rating": 5,
+   "title": "Old Jiu Jitsu Guy",
+   "text": "I’ve been using this app for a while now and I couldn’t be happier. It’s been an awesome tool for tracking my progress and staying consistent with my goals. Being able to see real data over time keeps me motivated and accountable. Simple, effective, and a great addition to anyone serious about improving their health and fitness.",
+   "date": "2026-03-22T10:16:11-07:00",
+   "version": "1.7",
+   "author": "Firebasevegas"
+  },
+  {
+   "id": "13875771988",
+   "rating": 5,
+   "title": "Great Progress App",
+   "text": "I’ve really been enjoying this app so far. It’s incredibly easy to set up and very user-friendly. The daily check-ins provide great accountability, and the progress photos are a powerful reminder of how far you’ve come.",
+   "date": "2026-03-22T10:11:46-07:00",
+   "version": "1.7",
+   "author": "MirkatM79"
+  },
+  {
+   "id": "13872614936",
+   "rating": 5,
+   "title": "Great concept.",
+   "text": "Really loving gain frame so far! Hoping this helps me reach my fitness goals!",
+   "date": "2026-03-21T12:34:32-07:00",
+   "version": "1.6",
+   "author": "BBGnaw"
+  },
+  {
+   "id": "13852862408",
+   "rating": 5,
+   "title": "Not just for the gym",
+   "text": "Great motivational tool no matter where you work out!",
+   "date": "2026-03-15T19:27:49-07:00",
+   "version": "1.1",
+   "author": "44Emma"
+  },
+  {
+   "id": "13851384049",
+   "rating": 5,
+   "title": "Simple to setup - surprisingly useful insights",
+   "text": "I came across this app and honestly wasn’t sure how much it could really tell me just from progress photos. After trying it I was pretty impressed. It actually gives useful insights about body fat, muscle groups, and overall progress in a way that’s easy to understand. Setup was quick and the reports are interesting to look through if your tracking your physique over time",
+   "date": "2026-03-15T09:48:36-07:00",
+   "version": "1.1",
+   "author": "OldmanJimR"
+  },
+  {
+   "id": "13845782830",
+   "rating": 5,
+   "title": "Finally!",
+   "text": "I have used many app to track my progress for my fitness journey and they all seem the same. I think I found the one I have been looking for!",
+   "date": "2026-03-13T20:07:11-07:00",
+   "version": "1.1",
+   "author": "@BigLisa"
+  },
+  {
+   "id": "13832157947",
+   "rating": 5,
+   "title": "Helped me track my progress WAY better!",
+   "text": "Before I was just taking photos and losing them in my camera roll. Now I have a place where they are all stored and I don’t have to dig through thousands of photos to find my progress.",
+   "date": "2026-03-09T19:31:06-07:00",
+   "version": "1.0",
+   "author": "Pb29822"
+  }
+ ]
+}

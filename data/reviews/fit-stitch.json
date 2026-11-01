@@ -1,0 +1,800 @@
+{
+ "app": {
+  "slug": "fit-stitch",
+  "app_id": 711835190,
+  "name": "Fit-Stitch Progress Tracker",
+  "developer": "REDSHIFT SYSTEMS INC.",
+  "in_roundup": true,
+  "genre": "Health & Fitness",
+  "price": 4.99,
+  "rating_count_us": 331,
+  "rating_avg_us": 4.77,
+  "first_released": "2014-01-10",
+  "last_updated": "2026-09-30",
+  "version": "7.0.2",
+  "store_url": "https://apps.apple.com/us/app/id711835190",
+  "reviews_collected": 86,
+  "feed_pages_mostrecent": 2,
+  "feed_rows_mostrecent": 86,
+  "feed_rows_mosthelpful": 86,
+  "oldest_review": "2014-01-15",
+  "newest_review": "2026-09-17"
+ },
+ "fetched_at": "2026-10-17T20:19:14.729759-07:00",
+ "reviews": [
+  {
+   "id": "14562774395",
+   "rating": 1,
+   "title": "Disappearing photos",
+   "text": "For the past couple weeks almost all my photos disappear right after I add them. Sometimes right before my eyes, and sometimes they’re just gone when I reopen the app later. Getting really frustrated with it.",
+   "date": "2026-09-17T20:23:01-07:00",
+   "version": "7.0.1",
+   "author": "Jamiemarie2007"
+  },
+  {
+   "id": "13154981766",
+   "rating": 5,
+   "title": "Best tracker",
+   "text": "I have been using this app since 2021 and it perfect. It helps me track both my weight and how I look. I can do year over year comparison as well as weekly comparison. Best part is that it is so easy to use. I have referred fit stitch all my friends including my body builder friends and they all love it 😍😍",
+   "date": "2025-09-18T18:29:42-07:00",
+   "version": "6.0.2",
+   "author": "Tashh305"
+  },
+  {
+   "id": "13074238979",
+   "rating": 2,
+   "title": "No directions? Why?",
+   "text": "The picture function is lacking. It's too hard to add it delete ❌ pictures.",
+   "date": "2025-08-29T05:17:20-07:00",
+   "version": "6.0.2",
+   "author": "MLeon60"
+  },
+  {
+   "id": "12888565055",
+   "rating": 2,
+   "title": "It’s okay",
+   "text": "It’s not really user friendly. Tried uploading a before of front, back , and side and all it will welt me upload it the one from my first progress photo.",
+   "date": "2025-07-13T16:35:21-07:00",
+   "version": "6.0.2",
+   "author": "danaf86"
+  },
+  {
+   "id": "12230007703",
+   "rating": 1,
+   "title": "Stop asking to give reviews!!!",
+   "text": "Gave 1 star because they ask and ask and ask and interrupt me when I’m trying to post!!!!!",
+   "date": "2025-01-25T10:32:03-07:00",
+   "version": "6.0.2",
+   "author": "jessica juliet clausen"
+  },
+  {
+   "id": "6041204674",
+   "rating": 2,
+   "title": "Secure but few features",
+   "text": "I like the security options, but besides that this app has fee useful features. You can’t resize photos, you can’t label by front/side, and there is no option for a ghost image to help line up with previous photos. Would not recommend.",
+   "date": "2020-06-05T21:52:40-07:00",
+   "version": "5.8",
+   "author": "ShackTheShack"
+  },
+  {
+   "id": "5656335149",
+   "rating": 5,
+   "title": "Love it",
+   "text": "I have been using this app for about 1 year and I love it.",
+   "date": "2020-03-13T13:00:47-07:00",
+   "version": "5.8",
+   "author": "MB Paving"
+  },
+  {
+   "id": "5332331328",
+   "rating": 1,
+   "title": "I cannot set any reminders or updated pictures.",
+   "text": "I just got the app excited to use it. However there is a bug or something that prevents me from seeing the scroller to update my weight and to set reminders. It’s just a white screen. Fix this please!",
+   "date": "2019-12-28T15:45:54-07:00",
+   "version": "5.7.1",
+   "author": "CarterCDC"
+  },
+  {
+   "id": "5090072713",
+   "rating": 1,
+   "title": "Lost my progress photos",
+   "text": "Had to get a new iPhone, and now it won’t let me restore the progress photos I added. It is not allowing me to contact support either.",
+   "date": "2019-11-05T09:10:29-07:00",
+   "version": "5.7",
+   "author": "desolateink"
+  },
+  {
+   "id": "4328538124",
+   "rating": 2,
+   "title": "How to add the weight?",
+   "text": "App is not user friendly!",
+   "date": "2019-06-16T22:55:11-07:00",
+   "version": "5.6",
+   "author": "Yasiyasir"
+  },
+  {
+   "id": "1807837675",
+   "rating": 1,
+   "title": "Doesn’t work",
+   "text": "Tried to take photos and add photos.  Both crash with iOS 11.",
+   "date": "2017-09-24T12:12:09-07:00",
+   "version": "5.1",
+   "author": "Holmanak"
+  },
+  {
+   "id": "1714815245",
+   "rating": 4,
+   "title": "Just started using it, but..",
+   "text": "I really love it. Helps me secretly keep a visual record of my progress. I like to take 2 or 3 pics each and \"stitch\" them together, so I get the front, side and back view. Then I scroll down and see the progress. Not much in the few weeks I've been using it, but am excited to see my transition. Think it will help keep me motivated, and i can set reminders every few days. It's a simple pic and track weight app, but that's all I need.",
+   "date": "2017-08-05T17:38:54-07:00",
+   "version": "5.0",
+   "author": "MistiMystified"
+  },
+  {
+   "id": "1655114429",
+   "rating": 5,
+   "title": "Great!",
+   "text": "Great for documenting. Fitness journey! I just wish you could put photos taken the same day in an album to organize",
+   "date": "2017-06-23T15:10:22-07:00",
+   "version": "5.0",
+   "author": "Dbsocnslzoxijs"
+  },
+  {
+   "id": "1653184419",
+   "rating": 5,
+   "title": "FitStitch",
+   "text": "The Side by side feature for photo comparisons is awesome.   TouchID Access is great for privacy.",
+   "date": "2017-06-22T01:25:31-07:00",
+   "version": "5.0",
+   "author": "Royalte33"
+  },
+  {
+   "id": "1600695623",
+   "rating": 5,
+   "title": "Awesome app to see my progress",
+   "text": "I have been taking progress pics for about a year now. Awesome to be able to take progress pics and lock them up with touchID.",
+   "date": "2017-04-29T07:24:15-07:00",
+   "version": "5.0",
+   "author": "DJ yeah buddy"
+  },
+  {
+   "id": "1568029789",
+   "rating": 5,
+   "title": "Great app",
+   "text": "Love it.",
+   "date": "2017-03-19T09:43:03-07:00",
+   "version": "4.9",
+   "author": "detrasco"
+  },
+  {
+   "id": "1565653216",
+   "rating": 5,
+   "title": "Great way to keep you motivated",
+   "text": "Sometimes it's difficult to trust the process, especially when the scale isn't dropping like we like! However seeing side by side pictures of your progress and the inches disappear makes you want to throw away the scale! Fitstich makes it so easy to keep track of your progress!! Love it!",
+   "date": "2017-03-16T06:13:00-07:00",
+   "version": "4.9",
+   "author": "Xry_grl"
+  },
+  {
+   "id": "1546478459",
+   "rating": 5,
+   "title": "Great, yet....",
+   "text": "I like the reminders. Also that I can delete the pictures from my camera roll once I move them to the app. \nThe only thing missing is a place to make a \"note\". (Date and weight are built in to the app.)",
+   "date": "2017-02-17T07:49:55-07:00",
+   "version": "4.7",
+   "author": "Norcalmom530"
+  },
+  {
+   "id": "1488760929",
+   "rating": 4,
+   "title": "Good for progress photos",
+   "text": "Simple app, but good for what I use it for -- before/after pics and progress photos. I don't do anything fancy with it, but the layout is easy and I like to see the photos side by side. the password protection is also a plus. Not a bad experience.",
+   "date": "2016-11-21T19:59:01-07:00",
+   "version": "4.0",
+   "author": "manapualover"
+  },
+  {
+   "id": "1481670214",
+   "rating": 1,
+   "title": "Used to be great",
+   "text": "I used to love this app but can no longer create layouts! You can get as far as selecting the layout you like, but then are unable to choose the photos.",
+   "date": "2016-11-09T16:15:04-07:00",
+   "version": "4.0",
+   "author": "Emily1452"
+  },
+  {
+   "id": "1461598639",
+   "rating": 2,
+   "title": "Hate the update",
+   "text": "Since this was updated, you have to resize the before and after pics individually, making it hard to get them the same size and proportion. When you could resize them just using the pinch gesture while viewing both photos in the frame, it was way better. You can't even adjust the cropping once you've done it the first time. All you can do is double tap, choose the photo again, crop it again, and hope you got it just right this time. Makes no sense. \nAlso the new captions take up SO much space now that they're on top of the photo. The point of the app is to see details in the photo, and the obscuring caption makes that much harder. \nIf the app stays this way, I'm finding another one.",
+   "date": "2016-10-05T10:34:26-07:00",
+   "version": "4.0",
+   "author": "TweeBoy"
+  },
+  {
+   "id": "1397780655",
+   "rating": 3,
+   "title": "Good app",
+   "text": "Would be the best app if the camera allowed a timer!",
+   "date": "2016-06-20T19:17:14-07:00",
+   "version": "3.0.4",
+   "author": "Patrick Kenny"
+  },
+  {
+   "id": "1397321887",
+   "rating": 5,
+   "title": "Love",
+   "text": "Motivation",
+   "date": "2016-06-19T20:56:37-07:00",
+   "version": "3.0.4",
+   "author": "Foreverthedork"
+  },
+  {
+   "id": "1395595748",
+   "rating": 5,
+   "title": "Love it",
+   "text": "Simple and cool",
+   "date": "2016-06-16T17:00:31-07:00",
+   "version": "3.0.4",
+   "author": "Lidia Riggins"
+  },
+  {
+   "id": "1384931249",
+   "rating": 5,
+   "title": "really solid",
+   "text": "love it. simple, works, very helpful. please dont make any major changes",
+   "date": "2016-05-27T09:08:50-07:00",
+   "version": "3.0.4",
+   "author": "purplecrush97"
+  },
+  {
+   "id": "1364371740",
+   "rating": 5,
+   "title": "This app is excellent",
+   "text": "This app is excellent",
+   "date": "2016-04-16T07:33:23-07:00",
+   "version": "3.0.4",
+   "author": "Nwaneri 82"
+  },
+  {
+   "id": "1349142784",
+   "rating": 5,
+   "title": "Easy to use app",
+   "text": "Like the reminders, easy app, does what I need it to",
+   "date": "2016-03-17T04:13:31-07:00",
+   "version": "3.0.3",
+   "author": "Twentythree2"
+  },
+  {
+   "id": "1340062932",
+   "rating": 5,
+   "title": "Great app",
+   "text": "I love that you can password protect the app so no one else can see your pics.",
+   "date": "2016-02-28T05:59:24-07:00",
+   "version": "3.0.3",
+   "author": "StephRuns"
+  },
+  {
+   "id": "1326174676",
+   "rating": 4,
+   "title": "Good app",
+   "text": "I like this app for tracking progress pics and love that I can password protect them. \n\nThe side by side feature isn't great. It shrinks my before/after to half the screen so it's hard to see actual differences. Would prefer larger side by side",
+   "date": "2016-02-01T08:55:09-07:00",
+   "version": "3.0.3",
+   "author": "User1979july1979"
+  },
+  {
+   "id": "1324509689",
+   "rating": 4,
+   "title": "It great for the photos",
+   "text": "Great for the photos side by side but I can't change the weight no option to do so only part in don't like",
+   "date": "2016-01-29T12:45:29-07:00",
+   "version": "3.0.3",
+   "author": "Mrs.Gehrig"
+  },
+  {
+   "id": "1318652009",
+   "rating": 4,
+   "title": "Great so far!",
+   "text": "I've only been using this for a couple of days but so far I have really enjoyed it. It has and easy interface and I love that I can add a password. I only gave it 4 stars because I plan on doing another review after 6 months.",
+   "date": "2016-01-18T15:59:37-07:00",
+   "version": "3.0.3",
+   "author": "jessixalyn"
+  },
+  {
+   "id": "1294436796",
+   "rating": 5,
+   "title": "Great app",
+   "text": "👍",
+   "date": "2015-12-01T11:33:54-07:00",
+   "version": "3.0.3",
+   "author": "warom"
+  },
+  {
+   "id": "1284387826",
+   "rating": 5,
+   "title": "Love it",
+   "text": "Best app for progress photos and such.",
+   "date": "2015-11-09T13:37:05-07:00",
+   "version": "3.0.3",
+   "author": "Krustybacon"
+  },
+  {
+   "id": "1273816555",
+   "rating": 1,
+   "title": "Horrible App!!",
+   "text": "It doesn't let you set current weight nor progress weight. It automatically gives you a weight that you don't have. It doesn't have an edit option and the before and after doesn't work properly. Very disappointed I wasted my time!",
+   "date": "2015-10-18T17:36:56-07:00",
+   "version": "3.0.3",
+   "author": "Becca27luann10hatethisapp"
+  },
+  {
+   "id": "1272069189",
+   "rating": 5,
+   "title": "Awesome!",
+   "text": "Love having a lock on my progress pictures. Just wish I could view more pictures in a frame. I'm so thankful I found this app! It's a great motivator.",
+   "date": "2015-10-15T14:43:47-07:00",
+   "version": "3.0.3",
+   "author": "1234fitness"
+  },
+  {
+   "id": "1271939212",
+   "rating": 5,
+   "title": "Great app",
+   "text": "I love the privacy of this app",
+   "date": "2015-10-15T09:14:06-07:00",
+   "version": "3.0.3",
+   "author": "OZfab5"
+  },
+  {
+   "id": "1222758353",
+   "rating": 4,
+   "title": "Great but needs work",
+   "text": "I use this app daily. It's the best out there but right now there's a glitch where it will just kick you out of the app and not save the image. I love being able to save dates and attach weights to the photo. Please fix this minor glitch and it'll be worth the 5 stars.",
+   "date": "2015-07-05T15:58:57-07:00",
+   "version": "2.6",
+   "author": "DGoff83"
+  },
+  {
+   "id": "1215557612",
+   "rating": 5,
+   "title": "Security fix",
+   "text": "I like that it has a pin code but wean multitasking trough apps you can see this app and its pictures! So it's like it has no security also would love to have the ability to add notes to progress pictures thanks love the app.",
+   "date": "2015-06-21T02:12:42-07:00",
+   "version": "2.6",
+   "author": "mrobatres"
+  },
+  {
+   "id": "1207782673",
+   "rating": 2,
+   "title": "Potential",
+   "text": "Could be good if it didn't crash.",
+   "date": "2015-06-05T17:22:43-07:00",
+   "version": "2.6",
+   "author": "verycool_"
+  },
+  {
+   "id": "1206792835",
+   "rating": 1,
+   "title": "Keeps crashing-- can't upload photos",
+   "text": "The concept is good but this app doesn't work. I have an iPhone and it keeps crashing every time I try to upload photos-- kind of defeats the purpose.",
+   "date": "2015-06-03T12:05:31-07:00",
+   "version": "2.5",
+   "author": "Frankiestarz"
+  },
+  {
+   "id": "1205478065",
+   "rating": 5,
+   "title": "Awesome",
+   "text": "Love this app! Great way to see progress for your health goals! :)",
+   "date": "2015-05-31T13:35:57-07:00",
+   "version": "2.5",
+   "author": "420possum"
+  },
+  {
+   "id": "1202427089",
+   "rating": 4,
+   "title": "Great app!",
+   "text": "The only thing that could make this better is if I fight share my feed directly with my coach instead of having to save the photos and email to her!",
+   "date": "2015-05-25T05:19:30-07:00",
+   "version": "2.5",
+   "author": "cassidyhoff"
+  },
+  {
+   "id": "1182469707",
+   "rating": 5,
+   "title": "Awesome",
+   "text": "Love it only some minor crashes",
+   "date": "2015-04-13T20:29:57-07:00",
+   "version": "2.5",
+   "author": "NicolleJassirI"
+  },
+  {
+   "id": "1179458223",
+   "rating": 5,
+   "title": "Love it!",
+   "text": "This app is great! It lets you track your progress and make multiple 'before and after's, plus this way I don't get embarrassed having workout photos in my regular albums (snoopy friends). Plus it's free, which makes it that much better! Workout hard - see the difference 😛👌💪",
+   "date": "2015-04-07T15:38:55-07:00",
+   "version": "2.5",
+   "author": "Workout Lovuhh"
+  },
+  {
+   "id": "1170845741",
+   "rating": 1,
+   "title": "Crashes",
+   "text": "App is closing right away after open up. Please resolve the problem. I want to use the app",
+   "date": "2015-03-20T13:09:12-07:00",
+   "version": "2.4",
+   "author": "Ijleecm"
+  },
+  {
+   "id": "1163937413",
+   "rating": 5,
+   "title": "Great app",
+   "text": "Easy to navigate, perfect for  those progress photos! 👍👍",
+   "date": "2015-03-05T15:58:28-07:00",
+   "version": "2.4",
+   "author": "skyehigh108"
+  },
+  {
+   "id": "1153121472",
+   "rating": 1,
+   "title": "Unusable",
+   "text": "App crashes every time I try to add a pic. Plus, \"leave feedback\" doesn't work.",
+   "date": "2015-02-18T20:49:12-07:00",
+   "version": "2.4",
+   "author": "kadavy"
+  },
+  {
+   "id": "1151711719",
+   "rating": 5,
+   "title": "Awesome",
+   "text": "Easy to use, really great simple app for keeping track of your progress!",
+   "date": "2015-02-17T08:46:10-07:00",
+   "version": "2.4",
+   "author": "Skyskyskyppp"
+  },
+  {
+   "id": "1151310173",
+   "rating": 5,
+   "title": "Awesome app",
+   "text": "Awesome app for people who are trying to get in shape and want a photo progress journal",
+   "date": "2015-02-17T00:06:41-07:00",
+   "version": "2.4",
+   "author": "Wolftown23"
+  },
+  {
+   "id": "1139563057",
+   "rating": 3,
+   "title": "I like it but....",
+   "text": "I like it but I wish I could take 4 pics in one. Front, sides & back.",
+   "date": "2015-01-31T17:16:34-07:00",
+   "version": "2.4",
+   "author": "Cyndee_M"
+  },
+  {
+   "id": "1138233646",
+   "rating": 5,
+   "title": "Fantastic",
+   "text": "Everything I expected and more!",
+   "date": "2015-01-29T12:20:36-07:00",
+   "version": "2.4",
+   "author": "TheLMiller"
+  },
+  {
+   "id": "1134437316",
+   "rating": 4,
+   "title": "Enjoy using fitstitch",
+   "text": "Not bad for the price",
+   "date": "2015-01-22T16:16:01-07:00",
+   "version": "2.4",
+   "author": "Ruthiet_456"
+  },
+  {
+   "id": "1125290933",
+   "rating": 5,
+   "title": "Nice",
+   "text": "Cool app to keep you motivated and allows you to  see your progress",
+   "date": "2015-01-05T16:25:48-07:00",
+   "version": "2.4",
+   "author": "Jam1517"
+  },
+  {
+   "id": "1124306228",
+   "rating": 4,
+   "title": "It's great but has a bug",
+   "text": "And crashes everytime I try to upload progress pics?! Grr",
+   "date": "2015-01-03T20:39:49-07:00",
+   "version": "2.4",
+   "author": "Stephanie3b"
+  },
+  {
+   "id": "1115384026",
+   "rating": 5,
+   "title": "Hails ya",
+   "text": "SUPERCALIFRAGILISTICEXPIALIDOCIOUS",
+   "date": "2014-12-18T10:28:19-07:00",
+   "version": "2.4",
+   "author": "Buttmuncher323234"
+  },
+  {
+   "id": "1113672508",
+   "rating": 5,
+   "title": "This app has everything you need and nothing you don't!",
+   "text": "No complaints here, get the app right now!",
+   "date": "2014-12-15T05:22:13-07:00",
+   "version": "2.4",
+   "author": "Erickrovo"
+  },
+  {
+   "id": "1112854648",
+   "rating": 5,
+   "title": "Works great, get it now!",
+   "text": "Simple, easy to use- it's exactly what I've needed. Thanks!",
+   "date": "2014-12-13T18:07:58-07:00",
+   "version": "2.4",
+   "author": "Chris92763"
+  },
+  {
+   "id": "1103060035",
+   "rating": 5,
+   "title": "Nice and simple",
+   "text": "So far has been a really good simple to use app. Can add your weight and it time stamps the photos. Also has a reminder. Still waiting to test that out though",
+   "date": "2014-11-25T10:11:34-07:00",
+   "version": "2.3",
+   "author": "Jimbobs76"
+  },
+  {
+   "id": "1097435441",
+   "rating": 5,
+   "title": "It's really good",
+   "text": "I would have payed if I needed to but it's really good and it has a reminder and it doesn't slow your phones like the other workout apps",
+   "date": "2014-11-15T06:34:33-07:00",
+   "version": "2.3",
+   "author": "Freeztylemist"
+  },
+  {
+   "id": "1089505023",
+   "rating": 5,
+   "title": "Perfect for what it does.",
+   "text": "Progress photos with info (date, weight, etc), side by side before & after, and reminders to update your progress. :)",
+   "date": "2014-10-31T17:33:51-07:00",
+   "version": "2.2",
+   "author": "Archous82"
+  },
+  {
+   "id": "1083267577",
+   "rating": 1,
+   "title": "Not Functioning",
+   "text": "Horrible",
+   "date": "2014-10-19T22:22:20-07:00",
+   "version": "2.2",
+   "author": "Ussoccer96"
+  },
+  {
+   "id": "1080052407",
+   "rating": 5,
+   "title": "Great app",
+   "text": "Love the app! Wish there were multiple stitch layouts and could import multiple photos at once but otherwise awesome! Thanks for capturing the date on iPhones! Such a dumb feature missing from iPhone that I've always had to use separate apps to figure out!",
+   "date": "2014-10-13T18:53:49-07:00",
+   "version": "2.2",
+   "author": "Cass8777"
+  },
+  {
+   "id": "1076783895",
+   "rating": 4,
+   "title": "Great motivation",
+   "text": "This app is a great tool to help me stay on track when I become bored or stop caring so much about my diet and exercise routine. It helps me to stay on track and to see the progress that I've made.",
+   "date": "2014-10-07T13:33:46-07:00",
+   "version": "2.2",
+   "author": "Mreeree"
+  },
+  {
+   "id": "1075892591",
+   "rating": 5,
+   "title": "Perfect app!!!",
+   "text": "Love this app! Allows me to track my progress and see before and after pics!!! Then I can share with social media or friends through text message!! So simple to use!!!!",
+   "date": "2014-10-05T21:30:46-07:00",
+   "version": "2.2",
+   "author": "Good nurse79"
+  },
+  {
+   "id": "1074601262",
+   "rating": 5,
+   "title": "its good",
+   "text": "get it .",
+   "date": "2014-10-03T19:21:00-07:00",
+   "version": "2.2",
+   "author": "#1emfan"
+  },
+  {
+   "id": "1071997166",
+   "rating": 5,
+   "title": "Awesome!",
+   "text": "Great app to track your progress and stay motivated.",
+   "date": "2014-09-28T18:47:23-07:00",
+   "version": "2.2",
+   "author": "Xcell3R8"
+  },
+  {
+   "id": "1068768963",
+   "rating": 5,
+   "title": "Great App!",
+   "text": "Love everything about the app, never a problem!",
+   "date": "2014-09-22T16:40:55-07:00",
+   "version": "2.2",
+   "author": "Itsmepee!"
+  },
+  {
+   "id": "1067137034",
+   "rating": 5,
+   "title": "Love love love!!",
+   "text": "Love this app! Keeps me motivated and I love seeing all my progress and all in one place! The only down side is if you take a pic with the app it doesn't seem as good of a quality as the regular camera. But overall love it!",
+   "date": "2014-09-19T20:54:37-07:00",
+   "version": "2.2",
+   "author": "Kamism618"
+  },
+  {
+   "id": "1063750118",
+   "rating": 5,
+   "title": "A-W-E-S-O-M-E-!-!-!",
+   "text": "Pretty sweet app you would be getting here, if not already have :) I'm trying to shrink a little (lose weight, for those not quick enough...) So this really REALLY helps, + motivates me to do more, better, longer, faster, just...it makes me strive to be better than I am...This app can be used for those who strive to be or do anything...Oh, & probably some other things too :-/",
+   "date": "2014-09-13T10:07:26-07:00",
+   "version": "2.2",
+   "author": "christinaxhansen"
+  },
+  {
+   "id": "1059407293",
+   "rating": 5,
+   "title": "best before after photo app",
+   "text": "hey. its the best i have ever used. please include icloud sync. it will be great",
+   "date": "2014-09-05T09:04:04-07:00",
+   "version": "2.2",
+   "author": "denigu"
+  },
+  {
+   "id": "1058606925",
+   "rating": 5,
+   "title": "Great reminders for progress photos!",
+   "text": "If you're looking for something to remind you to take a progress photo each day after the gym, this is the app for you.",
+   "date": "2014-09-03T17:50:20-07:00",
+   "version": "2.2",
+   "author": "Unhappy athlete"
+  },
+  {
+   "id": "1042593995",
+   "rating": 5,
+   "title": "Simple and great",
+   "text": "One of the best tools I've found for a weight loss journey.",
+   "date": "2014-08-07T20:27:07-07:00",
+   "version": "2.2",
+   "author": "Kelzk"
+  },
+  {
+   "id": "1040302887",
+   "rating": 5,
+   "title": "Awesome app",
+   "text": "I love this app!",
+   "date": "2014-08-03T21:03:22-07:00",
+   "version": "2.2",
+   "author": "Cristina C. Fung"
+  },
+  {
+   "id": "1037673743",
+   "rating": 5,
+   "title": "Love it!",
+   "text": "New motivation to keep on improving and meeting higher fitness goals. I love that it shows dates of pictures taken automatically for you and it keeps pictures separate from your photo album.",
+   "date": "2014-07-30T09:47:08-07:00",
+   "version": "2.2",
+   "author": "14375Fl"
+  },
+  {
+   "id": "1029696267",
+   "rating": 5,
+   "title": "Awesome!",
+   "text": "Great way to track your fitness progress!!! Love the app",
+   "date": "2014-07-16T17:29:17-07:00",
+   "version": "2.2",
+   "author": "ConnieW920"
+  },
+  {
+   "id": "1028284337",
+   "rating": 5,
+   "title": "Great app!",
+   "text": "Keeps your potentially embarrassing progress pics separate from your iPhone photos!",
+   "date": "2014-07-14T07:33:26-07:00",
+   "version": "2.2",
+   "author": "pikasof"
+  },
+  {
+   "id": "1026306460",
+   "rating": 5,
+   "title": "Awesome app",
+   "text": "Perfect for all of those wanting to keep track of your natty physiques. would recomend.",
+   "date": "2014-07-11T07:11:49-07:00",
+   "version": "2.2",
+   "author": "pur33z"
+  },
+  {
+   "id": "1021242392",
+   "rating": 5,
+   "title": "Great app",
+   "text": "Just what i needed",
+   "date": "2014-07-02T21:26:59-07:00",
+   "version": "2.2",
+   "author": "itsAustinJordan"
+  },
+  {
+   "id": "996684097",
+   "rating": 4,
+   "title": "Visually representative",
+   "text": "I enjoy seeing the progress over time",
+   "date": "2014-05-21T19:12:39-07:00",
+   "version": "2.1",
+   "author": "JP_McRae"
+  },
+  {
+   "id": "987924507",
+   "rating": 5,
+   "title": "Great to see results",
+   "text": "I have barely started my transformation journey and this will help me see my results instead of weighing myself.",
+   "date": "2014-05-04T21:17:13-07:00",
+   "version": "2.0",
+   "author": "Marti319"
+  },
+  {
+   "id": "975204518",
+   "rating": 5,
+   "title": "Excellent",
+   "text": "Really useful and awesome app- thanks!",
+   "date": "2014-04-11T03:10:53-07:00",
+   "version": "1.0",
+   "author": "reza7"
+  },
+  {
+   "id": "931985201",
+   "rating": 4,
+   "title": "Love it",
+   "text": "It's easy to use and it's an awesome way to see your progress. It's extremely simple and for customization you need to go pro. I also found it on Reddit.",
+   "date": "2014-01-27T09:39:00-07:00",
+   "version": "1.0",
+   "author": "Xxbfaeriexx"
+  },
+  {
+   "id": "930693379",
+   "rating": 5,
+   "title": "Great idea",
+   "text": "Super easy to use, looking forward to using regularly.",
+   "date": "2014-01-25T02:50:20-07:00",
+   "version": "1.0",
+   "author": "A WSJ subscriber"
+  },
+  {
+   "id": "926797771",
+   "rating": 5,
+   "title": "Clean and simple app",
+   "text": "Found a link to here from Reddit's Body Transformation Fitness Challenge and had to try it out. It is great for before and after shots. Having a spot for progress is nice. And that it reminds you is nicer. The app looks good and is easy to use. Great Job!",
+   "date": "2014-01-17T09:44:20-07:00",
+   "version": "1.0",
+   "author": "Braskus"
+  },
+  {
+   "id": "926796992",
+   "rating": 4,
+   "title": "So far so good",
+   "text": "I'd love it to show the same day side by side, but I like how it shows the date and weight.",
+   "date": "2014-01-17T09:42:12-07:00",
+   "version": "1.0",
+   "author": "Ms.WinkyElf"
+  },
+  {
+   "id": "925811883",
+   "rating": 5,
+   "title": "Very nice.",
+   "text": "Saw a post on reddit that made me check this out. Great app design, and easy to use. The reminders is also very motivating. Thanks!",
+   "date": "2014-01-15T08:20:18-07:00",
+   "version": "1.0",
+   "author": "sleepy.bleepy"
+  }
+ ]
+}

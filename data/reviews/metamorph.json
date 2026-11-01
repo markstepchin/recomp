@@ -1,0 +1,161 @@
+{
+ "app": {
+  "slug": "metamorph",
+  "app_id": 6544789120,
+  "name": "Body Progress Pics: Metamorph",
+  "developer": "Tiny Ideas Pty Ltd",
+  "in_roundup": true,
+  "genre": "Photo & Video",
+  "price": 0.0,
+  "rating_count_us": 69,
+  "rating_avg_us": 4.33,
+  "first_released": "2024-10-10",
+  "last_updated": "2026-08-07",
+  "version": "2.17",
+  "store_url": "https://apps.apple.com/us/app/id6544789120",
+  "reviews_collected": 15,
+  "feed_pages_mostrecent": 1,
+  "feed_rows_mostrecent": 15,
+  "feed_rows_mosthelpful": 15,
+  "oldest_review": "2024-10-10",
+  "newest_review": "2026-10-15"
+ },
+ "fetched_at": "2026-10-17T20:19:15.604885-07:00",
+ "reviews": [
+  {
+   "id": "14669611165",
+   "rating": 1,
+   "title": "Overcomplicated and Frustrating",
+   "text": "This app overcomplicates what should be a straightforward task, and I completely regret paying for Pro. The interface is cluttered with unnecessary features that make basic navigation frustrating.\nAll I wanted was a simple tool to take two photos and compare them side by side. Instead, the comparison workflow is unintuitive, and forcing users to manage five separate albums for five specific poses is rigid and annoying. To make matters worse, the AI features barely function..it constantly errors out claiming the background is \"too noisy\"  or something else. I just don’t see any good use of this app",
+   "date": "2026-10-15T06:52:07-07:00",
+   "version": "2.17",
+   "author": "newishere"
+  },
+  {
+   "id": "14293580126",
+   "rating": 1,
+   "title": "zero value",
+   "text": "the app doesnt let you even try it without signing up for a subscription. ive downloaded other pic apps that either dont allow landscape or only use the feont camera. i have no idea if this app is different without signing up for a sub to even take ONE pic to verify the feature. so youre basically downloading an ad or an opportunity to pay for the app. \n\nyou should provide SOMETHING for the download. \n\ni appreciate the devs privacy policy.",
+   "date": "2026-07-12T03:20:04-07:00",
+   "version": "2.16",
+   "author": "That's Not Important, Presently"
+  },
+  {
+   "id": "14181833565",
+   "rating": 1,
+   "title": "Waste of money",
+   "text": "Not worth the money",
+   "date": "2026-06-14T06:52:25-07:00",
+   "version": "2.15",
+   "author": "yxor1"
+  },
+  {
+   "id": "13872042508",
+   "rating": 3,
+   "title": "Make your app cost money",
+   "text": "Garbage. Who makes a subpar app then charges users for the bare minimum ? Why did I have to download this to find out it costs money? Why not just make your app NOT free? Don’t waste your time downloading—can’t even use it.",
+   "date": "2026-03-21T09:14:56-07:00",
+   "version": "2.12",
+   "author": "emkhh"
+  },
+  {
+   "id": "13671525973",
+   "rating": 4,
+   "title": "Used to be free for 1 album but now paid for everything",
+   "text": "The app is fine and used it for about a month when it was free for 1 album until they changed it. Can’t get my old photos anymore oh well. \n\nThe price is too expensive for what it is. Lots of apps that offer free for 1 album and lets you expand later if you decide to pay for it like selfie a day which is a more refined app. Then there is something like Lapsey that does most of what this app does for 1/10 of its price for lifetime access and also free for 1 album. And other body apps that use AI to approximate your measurements as well as keep track of photos \n\nIn order to justify the price, they will need to add more features like AI to approximate measurements.",
+   "date": "2026-01-24T12:38:54-07:00",
+   "version": "2.10",
+   "author": "kfkdks waocifjs"
+  },
+  {
+   "id": "13659221286",
+   "rating": 1,
+   "title": "Broken",
+   "text": "Since I updated to the new iOS, the app has not worked at all. Any time I try to click on a morph, the app freezes completely.\n\nHappy to edit this review once fixed.",
+   "date": "2026-01-21T06:35:18-07:00",
+   "version": "2.10",
+   "author": "OMGsweeet"
+  },
+  {
+   "id": "13621561867",
+   "rating": 1,
+   "title": "Lifetime! Yay? $100?! What?!",
+   "text": "$100 lifetime for a weight loss picture app? Have the developers lost their marbles?",
+   "date": "2026-01-11T07:53:02-07:00",
+   "version": "2.10",
+   "author": "Murse Dad"
+  },
+  {
+   "id": "13116704000",
+   "rating": 1,
+   "title": "App Freezes",
+   "text": "I had high hopes for this app but it keeps freezing on me and I am forced to swipe up to force quit the app and I have to do that twice in order to attempt creating another one. I purchased this and I want my money back. Disappointed!",
+   "date": "2025-09-09T03:53:00-07:00",
+   "version": "2.5",
+   "author": "ManchesterNH"
+  },
+  {
+   "id": "13095863090",
+   "rating": 1,
+   "title": "Pay to use app",
+   "text": "Pay only app - garbage",
+   "date": "2025-09-03T17:26:55-07:00",
+   "version": "2.5",
+   "author": "Onehitkilloneesan"
+  },
+  {
+   "id": "12268583360",
+   "rating": 5,
+   "title": "Clean and Simple",
+   "text": "This app is amazingly easy to use and ticks every box for an app of its kind! The developer also responds quickly to support and suggestions!",
+   "date": "2025-02-03T22:23:23-07:00",
+   "version": "1.7",
+   "author": "PallavHere"
+  },
+  {
+   "id": "12177985141",
+   "rating": 5,
+   "title": "Watermark",
+   "text": "Not sure why a paid app makes it so you can’t remove their watermark.",
+   "date": "2025-01-12T19:50:31-07:00",
+   "version": "1.4",
+   "author": "BD Inc."
+  },
+  {
+   "id": "11992944400",
+   "rating": 5,
+   "title": "Perfect",
+   "text": "This is perfect, I have so many ideas I can create with Morph. 🙏🏻",
+   "date": "2024-11-25T22:29:07-07:00",
+   "version": "1.2",
+   "author": "Ripester"
+  },
+  {
+   "id": "11990688994",
+   "rating": 5,
+   "title": "I’ve been looking for something like this for a long time",
+   "text": "Finally found it.",
+   "date": "2024-11-25T07:42:55-07:00",
+   "version": "1.2",
+   "author": "Takeoutchick"
+  },
+  {
+   "id": "11963912825",
+   "rating": 5,
+   "title": "Great app!!",
+   "text": "Such a great app, love the examples",
+   "date": "2024-11-18T04:47:24-07:00",
+   "version": "1.2",
+   "author": "AppreviewerKing17"
+  },
+  {
+   "id": "11819158378",
+   "rating": 5,
+   "title": "Super useful",
+   "text": "I’ve been trying Morph for a while now, and it has the best interface for capturing timelapse photos that I’ve seen. Lining up each new photo with the previous one is easy, and it will even try to automatically align all the photos to make them match even better. Great app!",
+   "date": "2024-10-10T11:54:40-07:00",
+   "version": "1.0",
+   "author": "Kabuki Adam"
+  }
+ ]
+}

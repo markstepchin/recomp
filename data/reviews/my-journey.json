@@ -1,0 +1,71 @@
+{
+ "app": {
+  "slug": "my-journey",
+  "app_id": 6762496363,
+  "name": "My Journey - progress in pics",
+  "developer": "GREGORY COLTON ADAMS",
+  "in_roundup": false,
+  "genre": "Health & Fitness",
+  "price": 0.0,
+  "rating_count_us": 5,
+  "rating_avg_us": 5,
+  "first_released": "2026-09-13",
+  "last_updated": "2026-10-05",
+  "version": "1.2.0",
+  "store_url": "https://apps.apple.com/us/app/id6762496363",
+  "reviews_collected": 5,
+  "feed_pages_mostrecent": 1,
+  "feed_rows_mostrecent": 5,
+  "feed_rows_mosthelpful": 5,
+  "oldest_review": "2026-09-13",
+  "newest_review": "2026-10-02"
+ },
+ "fetched_at": "2026-10-17T20:19:19.581783-07:00",
+ "reviews": [
+  {
+   "id": "14619458200",
+   "rating": 5,
+   "title": "I hope you like my app!",
+   "text": "I built this because all the other progress pic apps were either bad or crazy expensive.",
+   "date": "2026-10-02T09:20:11-07:00",
+   "version": "1.1.1",
+   "author": "Grayone11"
+  },
+  {
+   "id": "14612306270",
+   "rating": 5,
+   "title": "Simple and easy to use",
+   "text": "I love that the photos stay private, and the timeline makes it easy to look back and see how far you’ve come without overcomplicating the experience",
+   "date": "2026-09-30T13:25:25-07:00",
+   "version": "1.1.1",
+   "author": "GroundedDev"
+  },
+  {
+   "id": "14609102029",
+   "rating": 5,
+   "title": "Simple and easy!",
+   "text": "I love that there’s no subscriptions! So rare these days!",
+   "date": "2026-09-29T17:41:46-07:00",
+   "version": "1.1.1",
+   "author": "Alexis mars"
+  },
+  {
+   "id": "14552828003",
+   "rating": 5,
+   "title": "Woweeee",
+   "text": "The app that you don’t know you need.",
+   "date": "2026-09-15T07:15:58-07:00",
+   "version": "1.1.1",
+   "author": "BigX tha buttplug"
+  },
+  {
+   "id": "14545192255",
+   "rating": 5,
+   "title": "Great for tracking progress!",
+   "text": "Simple, easy to use, and I love being able to see changes over time. The before-and-after feature is awesome, and keeping everything private on your device is a huge plus. Highly recommend!",
+   "date": "2026-09-13T07:11:33-07:00",
+   "version": "1.1",
+   "author": "tstill90"
+  }
+ ]
+}

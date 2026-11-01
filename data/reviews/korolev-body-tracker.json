@@ -1,0 +1,530 @@
+{
+ "app": {
+  "slug": "korolev-body-tracker",
+  "app_id": 1265152738,
+  "name": "Body tracker: Photo & measure",
+  "developer": "Igor Korolev",
+  "in_roundup": false,
+  "genre": "Health & Fitness",
+  "price": 0.0,
+  "rating_count_us": 634,
+  "rating_avg_us": 4.43,
+  "first_released": "2017-08-01",
+  "last_updated": "2026-10-08",
+  "version": "6.1",
+  "store_url": "https://apps.apple.com/us/app/id1265152738",
+  "reviews_collected": 56,
+  "feed_pages_mostrecent": 2,
+  "feed_rows_mostrecent": 56,
+  "feed_rows_mosthelpful": 56,
+  "oldest_review": "2017-08-08",
+  "newest_review": "2026-10-08"
+ },
+ "fetched_at": "2026-10-17T20:19:12.934445-07:00",
+ "reviews": [
+  {
+   "id": "14643111447",
+   "rating": 5,
+   "title": "💪",
+   "text": "Отличное приложение. Будем брать Pro. Единственное хотелось бы более гибкие уведомления 🔔. И приложение на iPad",
+   "date": "2026-10-08T12:04:39-07:00",
+   "version": "6.1",
+   "author": "abakanabakan"
+  },
+  {
+   "id": "14508114360",
+   "rating": 1,
+   "title": "Pay to add in measurements??",
+   "text": "You have to pay to add in measurements. On a body measuring app. Thats insane. And it freezes or crashes every time I even attempted to use it. Don’t download",
+   "date": "2026-09-03T20:52:24-07:00",
+   "version": "v5.96",
+   "author": "bao1k"
+  },
+  {
+   "id": "14299400595",
+   "rating": 1,
+   "title": "Garbage",
+   "text": "Nothing works properly, waste of $4.",
+   "date": "2026-07-13T13:08:48-07:00",
+   "version": "v5.96",
+   "author": "djbrodersen"
+  },
+  {
+   "id": "14139123441",
+   "rating": 1,
+   "title": "No camera timer",
+   "text": "No timer for photos. How can I take a pic with out the timer if I don’t want to hold the phone",
+   "date": "2026-06-03T06:34:53-07:00",
+   "version": "v5.96",
+   "author": "The chairman!"
+  },
+  {
+   "id": "13814210863",
+   "rating": 1,
+   "title": "Used to be good",
+   "text": "Used to really like using this app. Now it’s buggy every single time I open it",
+   "date": "2026-03-04T14:11:01-07:00",
+   "version": "v5.96",
+   "author": "rassyjay06"
+  },
+  {
+   "id": "13696834418",
+   "rating": 1,
+   "title": "Stopped working",
+   "text": "Was fine for years but it just completely stopped working and all old photos are now inaccessible",
+   "date": "2026-01-31T05:35:33-07:00",
+   "version": "v5.96",
+   "author": "Eudaimonian"
+  },
+  {
+   "id": "13090596878",
+   "rating": 1,
+   "title": "App Crashes and Unusable",
+   "text": "I can no longer open the app without it crashing and being buggy with a minute of opening it. Never had this happen before with any other app. Very frustrating experience as I lost a few years worth of progress pictures",
+   "date": "2025-09-02T08:38:41-07:00",
+   "version": "v5.96",
+   "author": "SJ000593"
+  },
+  {
+   "id": "12697112519",
+   "rating": 1,
+   "title": "No longer works — crashes",
+   "text": "This app used to work fine, but now it crashes all the time and most of the functionality is gone.\n\nFor a while, I could reboot my phone and it would work for a little bit but now even that doesn’t help.\n\nI can’t recommend this app",
+   "date": "2025-05-25T09:24:10-07:00",
+   "version": "v5.96",
+   "author": "ErikBryn"
+  },
+  {
+   "id": "12472056315",
+   "rating": 1,
+   "title": "Crashes",
+   "text": "Crashes on startup. Please fix",
+   "date": "2025-03-27T14:28:38-07:00",
+   "version": "v5.96",
+   "author": "Oooooort"
+  },
+  {
+   "id": "11444022268",
+   "rating": 2,
+   "title": "Great concept and features, poor stability",
+   "text": "The app gets slower over time as it saves your pictures and measurements. It works great a first but within a few weeks it starts moving more and more slowly, and what started as a 60 second morning routine of taking pictures and measurements has turned into 5 minutes of frustration. But you deal with it because it already has all of your data in one place. Then eventually it just becomes completely unusable. I cannot enter measurements any more. It just freezes. Other users have reported the same. My phone storage says 15GB for this app. I \n\n I’m disappointed because these app creators did a great job with the idea and user interface, it’s just not reliable and eventually becomes completely unusable. I paid for the premium too. Oh well. I am switching to a different app.",
+   "date": "2024-07-01T04:51:59-07:00",
+   "version": "v5.96",
+   "author": "John356744467886"
+  },
+  {
+   "id": "11056853339",
+   "rating": 1,
+   "title": "Unusable",
+   "text": "Pretty much unusable now. Crashes and freezes. Hasn’t gotten an update in 3 years",
+   "date": "2024-03-17T20:09:37-07:00",
+   "version": "v5.96",
+   "author": "sazmatic"
+  },
+  {
+   "id": "10913290880",
+   "rating": 2,
+   "title": "Confused",
+   "text": "I just got this app and I haven’t been able to use it at all, I opened it up and it asked me some typical questions like goal weight and what not but I couldn’t select anything. I closed it and this time it asked if I would like to synch my health app, and again nothing. It wouldn’t let me press yes or no so I can’t even get to the app itself. I am really confused cus I didn’t see any other reviews like this so I just want to know what is going on",
+   "date": "2024-02-07T11:12:58-07:00",
+   "version": "v5.96",
+   "author": "Shrimpyboo22"
+  },
+  {
+   "id": "10728085946",
+   "rating": 2,
+   "title": "Great app but buggy",
+   "text": "Love the interface and design of the app. Makes looking at progress so easy. The app is really buggy though. Mine lets me use it for a minute and then it freezes like clockwork. I have to restart the app to start using it again, and then it freezes again. Have deleted and reinstalled several times.",
+   "date": "2023-12-21T11:25:36-07:00",
+   "version": "v5.96",
+   "author": "anarchosoupist"
+  },
+  {
+   "id": "10465661700",
+   "rating": 1,
+   "title": "Not a free app.",
+   "text": "You can’t get past screen 2 in measurements unless upgrade.  This is not a free app.  They lie.",
+   "date": "2023-10-12T05:02:22-07:00",
+   "version": "v5.96",
+   "author": "van's brandon"
+  },
+  {
+   "id": "10126070109",
+   "rating": 2,
+   "title": "Poorly optimized | Good features",
+   "text": "Good features but is poorly optimized. Hangs a lot on my iPhone XR.",
+   "date": "2023-07-10T15:05:12-07:00",
+   "version": "v5.96",
+   "author": "Hziiaidh89482"
+  },
+  {
+   "id": "9954312031",
+   "rating": 2,
+   "title": "Are there any FREE apps anymore??",
+   "text": "The whole purpose of this app is to track your progress, it says it’s free but only lets you upload one photo before telling you to pay. That’s a quick way to get your app undownloaded.",
+   "date": "2023-05-22T09:24:11-07:00",
+   "version": "v5.96",
+   "author": "Kelseyalexandra1993"
+  },
+  {
+   "id": "9909950248",
+   "rating": 1,
+   "title": "Garbage",
+   "text": "App will stop keyboard from working so you’re halfway through your measurements and have to restart the app losing those that you already input. When you go to upload the photos (premium has been purchased) it wont always upload them, and sometimes even puts them in the wrong spot so you then have to go back in and edit what perspective the photo is. Don’t waist your money.",
+   "date": "2023-05-09T12:32:35-07:00",
+   "version": "v5.96",
+   "author": "tacomafreediver"
+  },
+  {
+   "id": "9521814931",
+   "rating": 1,
+   "title": "Glitchy",
+   "text": "App frequently crashes. Weight displays as “Nan” despite being logged in health app",
+   "date": "2023-01-18T12:22:57-07:00",
+   "version": "v5.96",
+   "author": "VeganGreg"
+  },
+  {
+   "id": "9447850987",
+   "rating": 2,
+   "title": "Glitching",
+   "text": "This app has been working fine for years, but I went to use it today and I can’t. It’s inoperable. 1/2 the time the shutter button won’t click, and when it does, the save button is inoperable. I’m on my new iPhone 14 Pro with the latest software. Please update, I love this app!",
+   "date": "2022-12-29T06:51:46-07:00",
+   "version": "v5.96",
+   "author": "ElizBethMichelle"
+  },
+  {
+   "id": "9369144804",
+   "rating": 1,
+   "title": "Doesn’t Work",
+   "text": "Please update app so that when you open it, it works.  I’ve reinstalled 2 times now and when app opens it’s frozen",
+   "date": "2022-12-06T20:52:38-07:00",
+   "version": "v5.96",
+   "author": "Ey Big Mike"
+  },
+  {
+   "id": "9216466838",
+   "rating": 1,
+   "title": "Can’t use it after a few weeks",
+   "text": "Well, I liked the app before. But I can’t even open it now because it’s trying to load all the photos in the slide view and it crashes. I have the opportunity to upload new ones, and I continue doing it hoping the developer will fix it.",
+   "date": "2022-10-24T01:12:39-07:00",
+   "version": "v5.96",
+   "author": "ColdLogical"
+  },
+  {
+   "id": "8901621595",
+   "rating": 1,
+   "title": "Without a timer this is horrid",
+   "text": "The navel guideline is also in the two worst possible places for a 6’ man.",
+   "date": "2022-07-22T15:59:16-07:00",
+   "version": "v5.96",
+   "author": "brycedallashoward"
+  },
+  {
+   "id": "8742354440",
+   "rating": 1,
+   "title": "App is great at first.",
+   "text": "The app was fantastic at first. But on a brand new iPhone pro max 13 after about a month of uploading my photos every day its become so laggy and unstable. Crashes about 3 times when trying to add any progress pictures now. I have emailed the developer about it and 2 months has went by and no response. Save your money and use another body tracking app.",
+   "date": "2022-06-04T20:53:06-07:00",
+   "version": "v5.96",
+   "author": "kaynine93"
+  },
+  {
+   "id": "8397253812",
+   "rating": 4,
+   "title": "Works ok.",
+   "text": "Reminders would be great. Less reliance on Apple Watch!!!!",
+   "date": "2022-02-25T22:58:30-07:00",
+   "version": "v5.96",
+   "author": "Bobbett builder buddy"
+  },
+  {
+   "id": "7346233822",
+   "rating": 1,
+   "title": "is non functional",
+   "text": "it used to be great and be the best app there was for this. now does not function and freezes your phone",
+   "date": "2021-05-16T07:05:56-07:00",
+   "version": "v5.96",
+   "author": "Tjfirsty"
+  },
+  {
+   "id": "7096417216",
+   "rating": 3,
+   "title": "This app needs a timer",
+   "text": "This app needs a timer ... I just ordered the pro version but can not take photos of the side or back without a timer sooo",
+   "date": "2021-03-12T18:18:21-07:00",
+   "version": "v5.96",
+   "author": "Linds77777"
+  },
+  {
+   "id": "7027571188",
+   "rating": 3,
+   "title": "Adding stats",
+   "text": "Maybe I’m missing something but I don’t see any way to add weight for any day other than the current day. I weigh myself every day but don’t always remember to track it in the app. I really wish I could go back and add in my weight from days I miss.",
+   "date": "2021-02-22T20:06:28-07:00",
+   "version": "v5.96",
+   "author": "Fluffhead69"
+  },
+  {
+   "id": "6863765540",
+   "rating": 3,
+   "title": "Back photos",
+   "text": "I understand they have to make money somehow but I did not like the way they tease you with back photo progress and then take it away from you. I wish there Was there another way they could have made money off of it. However I fully understand the rest of the app is great.",
+   "date": "2021-01-12T22:59:11-07:00",
+   "version": "v5.96",
+   "author": "will0234"
+  },
+  {
+   "id": "6745909957",
+   "rating": 2,
+   "title": "Missing a shutter timer",
+   "text": "Great app with a fatal flaw. It’s missing a shutter timer is a huge mistake. I actually use another app “Snapsie” to take my pic and then I load it into “body tracker.” Seems like you’re missing an important feature because the mirror selfies are not very accurate week to week. \nCan y’all fix this quickly so I can start recommending this otherwise great app.",
+   "date": "2020-12-12T09:58:53-07:00",
+   "version": "v5.96",
+   "author": "Danoli77"
+  },
+  {
+   "id": "6728718257",
+   "rating": 4,
+   "title": "PLEASE ADD A TIMER TO THE CAMERA",
+   "text": "This is a great app. I love it, really. I’m trying to lose weight, and when I get to my goal weight, I want to make a picture montage/video. This app will make that easy. I also love the measurements guide. Before I started using the app, but now it’s easy. One of my favorite features however, is that when I take a picture, it doesn’t save to my camera roll. I want my weight loss photos in a private place, and if someone rifles through my photos, I’m glad they won’t find them. In fact my ONLY problem with this app is that it doesn’t have a timer on the camera. It makes trying to take photos of my back much harder. I ask you kindly Developers, please, add a timer to the camera function.\n\nThank you for taking your time to read my review. =D\n\nP.S. For the people saying it’s not worth it. It is. It’s only $7. And if you get it within the first two days, it’s only $4.",
+   "date": "2020-12-07T16:00:23-07:00",
+   "version": "v5.96",
+   "author": "ZBM124"
+  },
+  {
+   "id": "6271845108",
+   "rating": 2,
+   "title": "Side photo option",
+   "text": "I can’t get the app to save the side photo. I paid for this feature so why doesn’t it work? I’ll change my rating when it’s fixed.",
+   "date": "2020-08-02T09:53:16-07:00",
+   "version": "v5.95",
+   "author": "janeileen"
+  },
+  {
+   "id": "6264425073",
+   "rating": 1,
+   "title": "Have to pay for everything",
+   "text": "I wanted a simple Measurement tracker. This looked simple enough, I try to enter my waist measurements and 🤯nope. You pay extra for that. Waste of time",
+   "date": "2020-07-31T12:15:40-07:00",
+   "version": "v5.95",
+   "author": "unicornwine"
+  },
+  {
+   "id": "6261331262",
+   "rating": 3,
+   "title": "Great concept but unstable and slow",
+   "text": "I’ll start by saying I’ve been looking for an app like this for a few days and I decided on this one after comparing many. One big selling point is that the pro version on this one is just a one time fee vs a subscription on most other apps. Also I really like their design.\nHowever once I started uploading photos from my progress the app started glitching and crashing pretty constantly. It’s not able to handle the load of many photos.\nAlso, some older photos say “nan lb” instead of the accurate weight that’s logged in my health app for that date.\nHopefully they’ll upgrade their system soon to be able to handle the photos properly. I have maybe 15 progress photos so far, I can’t imagine how it’ll handle weekly progress photos for years.",
+   "date": "2020-07-30T18:08:35-07:00",
+   "version": "v5.95",
+   "author": "Esteban5987"
+  },
+  {
+   "id": "6108427121",
+   "rating": 3,
+   "title": "slow",
+   "text": "i love the idea of this app but it happens to be really glitchy on my phone and is really slow.",
+   "date": "2020-06-22T06:56:18-07:00",
+   "version": "v5.81",
+   "author": "ntlszdls"
+  },
+  {
+   "id": "5351740787",
+   "rating": 1,
+   "title": "Won’t record my measurements",
+   "text": "I have clicked through this app 5 or so times trying to get started and it never records my measurements. I’m not sure if it’s because I haven’t upgraded to the paid version but why would I pay more if the basic version doesn’t work?!",
+   "date": "2020-01-02T08:32:47-07:00",
+   "version": "v5.64",
+   "author": "Cassizle"
+  },
+  {
+   "id": "5142722471",
+   "rating": 4,
+   "title": "Decent app, would like.....",
+   "text": "This is a decent app and it does what I wanted. I would LOVE if the progress points box was gone (i don’t care how I relate to others using this app) and if instead it gave me a total weight lost number and a total inches lost number. I really would like to open the app and see those two numbers immediately. That’s the only thing keeping me from a 5 star review.",
+   "date": "2019-11-15T07:23:20-07:00",
+   "version": "v5.64",
+   "author": "mlinaz22"
+  },
+  {
+   "id": "4620254696",
+   "rating": 1,
+   "title": "Timer setting",
+   "text": "Too bad this app doesn’t have a timer for taking the photos.  It would be a great help if it did!  I would like to see my FULL body, not a camera in the shot masking any part / portion of my body.  Can a photo timer be added?  Thanks for your time.",
+   "date": "2019-08-15T07:26:37-07:00",
+   "version": "v5.64",
+   "author": "YogaVeggie"
+  },
+  {
+   "id": "4564627398",
+   "rating": 1,
+   "title": "Not free",
+   "text": "Need full version to upload more than 1 picture or measure more than 1 body part",
+   "date": "2019-08-03T17:20:26-07:00",
+   "version": "v5.64",
+   "author": "jweenze"
+  },
+  {
+   "id": "4479754570",
+   "rating": 1,
+   "title": "Not impressed",
+   "text": "Doesn’t even have a stomach measurement. Probably the most important measurement and doesn’t have. 😡",
+   "date": "2019-07-18T05:27:53-07:00",
+   "version": "v5.64",
+   "author": "marvgk"
+  },
+  {
+   "id": "4159821684",
+   "rating": 3,
+   "title": "Too glitchy",
+   "text": "I love the concept of this app. However, it could take me an hour to use because it’s always either too slow and/or it just shuts off in the middle of your use. Make it run normally and at a reasonable speed, and you’ve got yourself a useful tool!",
+   "date": "2019-05-16T07:54:08-07:00",
+   "version": "v5.64",
+   "author": "Rossi117"
+  },
+  {
+   "id": "4114943776",
+   "rating": 3,
+   "title": "Good idea but app Doesn’t work",
+   "text": "Out 6 times that I open the app to enter my results only 1 or 2 of those times the app will actually work. The rest of the time it freezes and can’t really enter my results. It would be a great app but never works for me...Disappointed",
+   "date": "2019-05-07T10:45:13-07:00",
+   "version": "v5.64",
+   "author": "ESPO81"
+  },
+  {
+   "id": "4001451895",
+   "rating": 2,
+   "title": "You have to pay to get side/back view",
+   "text": "Not worth even downloading, you can’t even take a side or back view photo without paying",
+   "date": "2019-04-11T22:27:15-07:00",
+   "version": "v5.64",
+   "author": "Earinggirls"
+  },
+  {
+   "id": "3833429393",
+   "rating": 1,
+   "title": "Very Disappointed",
+   "text": "I purchased your app full version for $3.99 and unable to access measurements. I have tried everything. Even deleted app and added again. Please fix.",
+   "date": "2019-03-02T08:51:50-07:00",
+   "version": "v5.64",
+   "author": "Chrlsanders"
+  },
+  {
+   "id": "3624506658",
+   "rating": 1,
+   "title": "Not clear enough privacy policy",
+   "text": "I’m a bit hesitant to go forward with this app due to the current bad actors in Russia.  Not clear enough what the collected data is used for or why.",
+   "date": "2019-01-07T16:57:44-07:00",
+   "version": "v5.62",
+   "author": "gradientus"
+  },
+  {
+   "id": "3615908345",
+   "rating": 4,
+   "title": "Excellent tracking app, but it needs to track BF%",
+   "text": "The app is perfect, it’s just missing a Body fat % tracker.",
+   "date": "2019-01-05T09:34:53-07:00",
+   "version": "v5.62",
+   "author": "Emmanuel Urias"
+  },
+  {
+   "id": "3414783414",
+   "rating": 4,
+   "title": "Add new feature",
+   "text": "Should add to where once ur done ur weight loss journey and have the time lapse (the pictures u took) You could save it onto ur camera roll/ share it onto social media. So u can show how ur body changed during the weight loss journey to ur friends to motivate others. Other then that the app is so far great",
+   "date": "2018-11-13T14:38:28-07:00",
+   "version": "v5.61",
+   "author": "Izzy157284739"
+  },
+  {
+   "id": "3238689819",
+   "rating": 5,
+   "title": "Works just right.",
+   "text": "This app is good at what it does, and it doesn’t pretend to be everything for everyone. I use it regularly and it’s got some really nice features. I had to contact support recently when the app wouldn’t open, and they responded promptly and professionally. You won’t be disappointed with this app - it’s worth the price to upgrade.",
+   "date": "2018-09-28T00:19:38-07:00",
+   "version": "v5.42",
+   "author": "IslandScribbler"
+  },
+  {
+   "id": "3224608530",
+   "rating": 5,
+   "title": "Beautiful app, horrendous icon",
+   "text": "Why does such a great looking app have such an ugly excuse of an icon???",
+   "date": "2018-09-24T03:12:56-07:00",
+   "version": "v5.4",
+   "author": "Bibhas Acharya"
+  },
+  {
+   "id": "3163766817",
+   "rating": 2,
+   "title": "Crashes",
+   "text": "App crashes as soon as I open it. Tried restarting my phone same result",
+   "date": "2018-09-07T07:01:40-07:00",
+   "version": "v5.3",
+   "author": "carlvjack"
+  },
+  {
+   "id": "3119783118",
+   "rating": 1,
+   "title": "Too good to be true.",
+   "text": "I was so excited because I thought I was getting an all-in-one tracker. I thought it would be super convenient, but I was wrong. Apparently, I missed the part in the description where it stated that it doesn’t actually track your weight. You have to use the Apple Health app in conjunction with this app. That will be fine for those who use Apple, but I am a Fitbit woman. So, I have to open another app. I am very disappointed and regret spending the $3.99. I would be over-the-moon if it was an all-in-one like I thought. The thought of me opening an app that I do not use just to record weight is just another job. If you use Apple Health this is your app. If not, keep searching. Suggestion to app developers, let your app record your consumer’s weight.",
+   "date": "2018-08-27T01:33:51-07:00",
+   "version": "v5.3",
+   "author": "Super Zombie Nurse"
+  },
+  {
+   "id": "2613197193",
+   "rating": 5,
+   "title": "Elegant and straightforward",
+   "text": "I'm attempting the slow carb 4HB diet and was looking for an app to track body measurements and wanted the ability to store multiple photos with them. This one caught my eye because there was no fluff on it: no goofy color scheme, no extraneous graphics, and no ads! There's no tutorial on how to use it, but it's so straightforward and minimal you don't really need one, you just tap on the icons to see what's available for you to do. Results are plotted on a graph that you can pinch to zoom in order to see different ranges of time. If all you're looking to track are measurements for weight, chest, waist, hips, thigh, bicep, calf, you're good to go. A couple of these measurements aren't available in the free version, and the app will tell you when you try to enter them. You unlock them all for 99 cents, which is well worth it to me for no ads.\n\nThe only hiccup I ran into was the app wouldn't access my camera, even after I gave it permission, even after upgrading to unlimited, even after restarting the app and then the phone. I was able to pick photos from my photo roll, though. The next day the camera function magically worked, not really sure what changed. The only cons I can think of are that you don't store measurements for each thigh/bicep/calf (you input the average), and there's no option for neck (doesn’t matter to me). I had no problem upgrading to the paid unlimited version (ios 11.3.1, iphone x).",
+   "date": "2018-05-29T09:39:24-07:00",
+   "version": "4.3",
+   "author": "jkcrws"
+  },
+  {
+   "id": "2587088687",
+   "rating": 1,
+   "title": "App won’t save side-by-side photos.",
+   "text": "App crashed and closes every time I try to save my photos. Once I click on the arrow (save) button, the app closes. I contacted the support department and they asked me a few questions. I replied and have not headed back since I bought the app 4 days ago. Wish I had paid for features that don’t work. \n\nCan I please get a refund?",
+   "date": "2018-05-23T16:15:46-07:00",
+   "version": "4.3",
+   "author": "GatorGal75"
+  },
+  {
+   "id": "2495732021",
+   "rating": 3,
+   "title": "Features",
+   "text": "Would like to be able to add other categories besides front back side for the pictures, to track specific regions like abs or glutes. Any chance you can implement this?",
+   "date": "2018-05-02T05:56:21-07:00",
+   "version": "4.2",
+   "author": "11232453"
+  },
+  {
+   "id": "2254643908",
+   "rating": 1,
+   "title": "Was great until...",
+   "text": "Downloaded this last week, loved it, bought the full version, and now it doesn’t load past the title screen. I total waste of my money.",
+   "date": "2018-02-27T20:41:26-07:00",
+   "version": "4.0",
+   "author": "CyaptainHanabi"
+  },
+  {
+   "id": "1719600842",
+   "rating": 5,
+   "title": "Helpful",
+   "text": "I love how detail and good quality information it is. Has all the body calc measurements and diet macros I need. Recommended to all.",
+   "date": "2017-08-08T22:54:00-07:00",
+   "version": "1.1",
+   "author": "try pay6"
+  },
+  {
+   "id": "1719327752",
+   "rating": 5,
+   "title": "great",
+   "text": "Really an useful app for you to track your body shape wherever you are,and it is easy to upload the pictures and analyze.",
+   "date": "2017-08-08T19:05:32-07:00",
+   "version": "1.1",
+   "author": "hoffman521"
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "app": {
+  "slug": "sidelens",
+  "app_id": 6759226438,
+  "name": "SideLens Before & After Photos",
+  "developer": "JOO SUNG KIM",
+  "in_roundup": false,
+  "genre": "Photo & Video",
+  "price": 0.0,
+  "rating_count_us": 4,
+  "rating_avg_us": 5,
+  "first_released": "2026-03-10",
+  "last_updated": "2026-07-22",
+  "version": "1.3.0",
+  "store_url": "https://apps.apple.com/us/app/id6759226438",
+  "reviews_collected": 2,
+  "feed_pages_mostrecent": 1,
+  "feed_rows_mostrecent": 2,
+  "feed_rows_mosthelpful": 2,
+  "oldest_review": "2026-03-21",
+  "newest_review": "2026-10-10"
+ },
+ "fetched_at": "2026-10-17T20:19:21.418739-07:00",
+ "reviews": [
+  {
+   "id": "14652261138",
+   "rating": 5,
+   "title": "Great for fitness!",
+   "text": "Super helpful app for my fitness journey- the ghost layer was super helpful for me to line up especially when doing it routinely after the gym",
+   "date": "2026-10-10T20:31:31-07:00",
+   "version": "1.3.0",
+   "author": "asddesddssrrx"
+  },
+  {
+   "id": "13872729583",
+   "rating": 5,
+   "title": "Great app well designed",
+   "text": "Love the app and it’s already become useful for work I’ve been doing. I’ve also used it to showcase differences with style while using AI photos of outfits or style changes I was evaluating for myself. To instantly compare in real time made it easier to review! Love the app",
+   "date": "2026-03-21T13:19:03-07:00",
+   "version": "1.1.0",
+   "author": "TV user 2016"
+  }
+ ]
+}
