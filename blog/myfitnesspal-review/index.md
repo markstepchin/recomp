@@ -45,6 +45,8 @@ Sharing works from any photo in the Entries list. You can swipe between photos, 
 
 <!-- TODO(Mark): adding a check-in: taps and seconds for a weight and front, side and back photos (great is under 30 seconds). Does it read the date from the photos, import weight from Apple Health, and let me pick all 3 photos in one picker? -->
 
+**MyFitnessPal keeps only one photo per date.** I can't keep a front, side and back photo for the same day.
+
 Weight syncs both ways with Apple Health, but only from the day you connect. Older Health weigh-ins don't come over. Waist, hips, neck and weight are built in. Anything else, like body fat or thighs, has to be added on the website first, with one value per measurement per day. Sources: [Apple Health syncing](https://support.myfitnesspal.com/hc/en-us/articles/360032271092-Apple-Health-connection-and-syncing), [additional measurements](https://support.myfitnesspal.com/hc/en-us/articles/360032624891-Can-I-track-additional-measurements-or-change-the-default-measurements).
 
 <!-- TODO(Mark): privacy: are photos ever sent to a third-party server? Account required? Backup and moving to a new phone, CSV weight import, photo export, Face ID or app lock, app switcher privacy. -->
