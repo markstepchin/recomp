@@ -30,7 +30,7 @@ faq:
     a: "[TODO: a short, direct answer]"
 ---
 
-**Full disclosure: I build Recomp, a free progress photo app, and I hold it to the same bar as every other app.** I don't run ads, and I don't use affiliate links.
+**Full disclosure: I build Recomp, a free progress photo app.**
 
 <!-- app-store-card -->
 
