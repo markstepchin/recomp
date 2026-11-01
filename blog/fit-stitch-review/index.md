@@ -1,0 +1,235 @@
+---
+title: "Fit-Stitch review: $4.99 once, iCloud sync, and the weakest compare I tested"
+seo_title: "Fit-Stitch Progress Tracker Review (2026) | Recomp"
+description: "I tested Fit-Stitch with my own progress photos. It's the only paid app here with no subscription and it syncs to your iCloud, but every comparison is its own form."
+draft: true
+og_image: ./fit-stitch-entry-form.jpg
+breadcrumb: "Best progress photo apps"
+template: app-review
+app_store:
+  # Copied from the US App Store listing on the date in checked. Update all values together.
+  id: 711835190
+  name: "Fit-Stitch Progress Tracker"
+  developer: "REDSHIFT SYSTEMS INC."
+  developer_url: "https://fit-stitch.com/"
+  rating: 4.8
+  rating_count: 331
+  min_ios: "17.0"
+  url: "https://apps.apple.com/us/app/fit-stitch-progress-tracker/id711835190"
+  icon: "assets/app-icons/fit-stitch.webp"
+  checked: 2026-11-01
+  price: "4.99"
+summary: |
+  **Fit-Stitch is the only paid progress photo app I tested with no subscription: $4.99 once.** It syncs to your own iCloud, the likeliest answer here to "what if I lose my phone?" Logging is one clean form. Comparing is the weak spot, because every comparison is a card built in its own form, with no alignment. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending design, performance and backup scores\]</mark>
+card_blurb: "$4.99 once with iCloud sync, but every comparison is its own form."
+# Visible 'How I tested' line. Empty until Mark fills it; renders [CONFIRM] on drafts.
+how_tested:
+  device: ""        # e.g. the iPhone model, from Settings > General > About
+  ios: ""           # iOS version during the test
+  app_version: ""   # app version tested, from the App Store page or the app's About screen
+  started: ""       # YYYY-MM-DD, first day of testing
+  ended: ""         # YYYY-MM-DD, last day of testing
+  checkins: ""      # number of check-ins added during the test
+
+# Mark's hand measurements. Leave empty until measured; never estimate.
+measurements:
+  taps_per_checkin: ""      # weight plus front, side and back photos, from the home screen to saved
+  seconds_per_checkin: ""   # same flow, stopwatch
+  import_photo_count: ""    # N photos in the bulk import test
+  import_seconds: ""        # time to import those N photos
+
+scorecard:
+  # A check-in should be effortless
+  checkin_time: { status: confirm, fact: "[CONFIRM]" }
+  photo_picker: { status: has, fact: "Several photos on one form" }  # L37
+  weight_apple_health: { status: confirm, fact: "[CONFIRM]" }
+  weight_quick_entry: { status: confirm, fact: "[CONFIRM]" }
+  data_together: { status: has, fact: "Date, weight, tags and photos on one form" }  # L37
+  # Alignment should be effortless
+  auto_align: { status: missing, fact: "No auto-align" }  # L45
+  ghost_overlay: { status: missing, fact: "No ghost overlay" }  # L37, L45
+  gridlines: { status: confirm, fact: "[CONFIRM]" }
+  manual_align: { status: missing, fact: "No manual alignment" }  # L45
+  align_in_compare: { status: missing, fact: "No alignment" }  # L45
+  # Comparison should be effortless
+  compare_speed: { status: missing, fact: "Each comparison is its own form" }  # L49
+  compare_scale: { status: missing, fact: "No scrubbing through dates" }  # L49
+  side_by_side: { status: has, fact: "Before/after comparison cards" }  # L49, L53
+  slider_view: { status: confirm, fact: "[CONFIRM]" }
+  overlay_view: { status: confirm, fact: "[CONFIRM]" }
+  # The photos are the star
+  photo_focus: { status: confirm, fact: "[CONFIRM]" }
+  # Data privacy
+  photos_on_device: { status: has, fact: "On device, with optional private iCloud sync" }  # L61
+  privacy_label: { status: partial, fact: "The label and the policy disagree" }  # L65 | L65 is a TODO block. Publish only once the TODO is resolved.
+  # Quality of life
+  bulk_import: { status: missing, fact: "No bulk import, and dates aren't read" }  # L57
+  data_import_export: { status: confirm, fact: "[CONFIRM]" }
+  app_lock: { status: has, fact: "Face ID lock that blurs the app switcher" }  # L63
+  backup_transfer: { status: partial, fact: "iCloud sync, not a separate backup" }  # L61
+  reminders: { status: confirm, fact: "[CONFIRM]" }  # Store reviews mention reminders; not covered hands-on.
+  in_app_camera: { status: partial, fact: "Camera photos, with no ghost overlay or pose slots" }  # L37
+  units: { status: confirm, fact: "[CONFIRM]" }
+  body_measurements: { status: confirm, fact: "[CONFIRM]" }
+  sharing: { status: confirm, fact: "[CONFIRM]" }
+  timelapse: { status: confirm, fact: "[CONFIRM]" }
+  no_account: { status: has, fact: "No account" }  # L33
+  originals_untouched: { status: confirm, fact: "[CONFIRM]" }
+  edit_date: { status: confirm, fact: "[CONFIRM]" }
+  partial_checkin: { status: confirm, fact: "[CONFIRM]" }
+  dark_mode: { status: confirm, fact: "[CONFIRM]" }
+  no_ads: { status: confirm, fact: "[CONFIRM]" }  # L33 says no in-app purchases; ads aren't covered.
+---
+
+<!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
+
+**Full disclosure: I build Recomp, a free progress photo app that competes with this one.** This review expands the [Fit-Stitch entry](/blog/best-progress-photo-apps/#fit-stitch) in my [roundup of the best progress photo apps](/blog/best-progress-photo-apps/), scored with [the same kit](/blog/how-i-test-progress-photo-apps/). I rewrote it from my hands-on notes on Oct 2, 2026.
+
+<!-- app-store-card -->
+
+## What it costs {#what-it-costs}
+
+**$4.99 upfront, with no in-app purchases and no account.** Every other paid app I graded sells a subscription. Fit-Stitch has been on the App Store since Jan 9, 2014.
+
+## Taking a check-in {#taking-a-check-in}
+
+Date, weight, tags and several camera or library photos go on one form. There's no ghost overlay and no front, side and back slots. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no timer; the listing doesn't mention one\]</mark> <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: seconds and taps to a saved check-in\]</mark>
+
+**Tags arrived in 7.0 on Aug 11, 2026.** It's the only app of the 10 I checked with free-text tags. In my [study of 732 App Store reviews](/blog/what-people-want-from-progress-photo-apps/), nobody asked for them, though Fit-Stitch has had about one written review since they shipped.
+
+![Fit-Stitch entry form with date, weight, tags and photos](./fit-stitch-entry-form.jpg "One form: date, weight, tags and photos."){.phone}
+
+## Lining photos up {#lining-photos-up}
+
+**There's no auto-alignment, no manual alignment and no ghost overlay.** Lining up a pair is on you, at capture. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: the rubric floor is 1; use 0 or 1?\]</mark>
+
+## Comparing two dates {#comparing-two-dates}
+
+Each comparison is a card built in its own form, with no date scrubbing, so three old dates take three forms. The cards print the date and weight on each photo, which is useful once they exist.
+
+**Its older reviewers liked a different layout.** Three reviews from 2014 to 2016 discuss its before/after layouts, and one asks it to "go back to the old before/after set up."
+
+<div class="flex items-start justify-center gap-4"><figure class="m-0 min-w-0 flex-1"><img alt="Fit-Stitch comparison editor form" class="block h-auto w-full rounded-card border border-card-border" sizes="(min-width: 800px) 368px, 50vw" src="./fit-stitch-comparison-editor.jpg"/><figcaption class="mt-[0.65rem] text-center text-caption leading-[1.4] text-muted">Every comparison is built in its own form.</figcaption></figure><figure class="m-0 min-w-0 flex-1"><img alt="Fit-Stitch saved comparison cards with date and weight on each photo" class="block h-auto w-full rounded-card border border-card-border" sizes="(min-width: 800px) 368px, 50vw" src="./fit-stitch-comparison-cards.jpg"/><figcaption class="mt-[0.65rem] text-center text-caption leading-[1.4] text-muted">Saved comparison cards, with date and weight.</figcaption></figure></div>
+
+## Importing old photos {#importing-old-photos}
+
+Nothing imports in bulk, and dates don't fill in from photo metadata, so a 450-photo archive means adding photos one at a time. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: performance with the full library\]</mark>
+
+## Where your photos live {#where-your-photos-live}
+
+**Photos stay on your device, with optional sync to a private iCloud container tied to your Apple ID.** The developer has no access to it, per its policy. The option first arrived as an "iCloud backup option" in 5.0 on Apr 10, 2017. Delete All Data also wipes the iCloud copy, so it's sync, not a separate backup. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: delete-and-restore test\]</mark>
+
+**Face ID locks the app and blurs it in the app switcher.** Fit-Stitch alone accounts for 10 of the 26 lock or privacy mentions in my review study, mostly praise for its passcode.
+
+<mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: label vs policy conflict. The label lists Health &amp; Fitness, User Content and Crash Data as Data Not Linked to You. The policy, updated Jul 27, 2026, says "Fit-Stitch does not include any third-party analytics, crash reporting, or advertising SDKs." Raise it; don't resolve it.\]</mark>
+
+<div class="flex items-start justify-center gap-4"><figure class="m-0 min-w-0 flex-1"><img alt="Fit-Stitch settings with the iOS prompt asking to allow Fit-Stitch to use Face ID to lock and unlock the app" class="block h-auto w-full rounded-card border border-card-border" sizes="(min-width: 800px) 368px, 50vw" src="./fit-stitch-face-id-prompt.jpg"/><figcaption class="mt-[0.65rem] text-center text-caption leading-[1.4] text-muted">Face ID prompt in Settings.</figcaption></figure><figure class="m-0 min-w-0 flex-1"><img alt="Fit-Stitch app lock blurring the app in the app switcher" class="block h-auto w-full rounded-card border border-card-border" sizes="(min-width: 800px) 368px, 50vw" src="./fit-stitch-app-lock-cropped.jpg"/><figcaption class="mt-[0.65rem] text-center text-caption leading-[1.4] text-muted">Face ID lock blurs the app switcher.</figcaption></figure></div>
+
+## What reviewers say {#what-reviewers-say}
+
+**A Sep 17, 2026 review says new photos disappeared.** Version 7.0.2 on Sep 30, 2026 says it "Fixed an issue where newly added photos could fail to save when iCloud storage was full." <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: the fix holds\]</mark> Reminders are the other theme: 12 of the 32 positive reminder reviews in my study are Fit-Stitch's.
+
+## The numbers {#the-numbers}
+
+**Every app's numbers sit side by side, with test dates, in [my test data](/blog/how-i-test-progress-photo-apps/#store-data).**
+
+<div aria-label="Fit-Stitch store data" class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" role="region" tabindex="0"><table class="w-max min-w-full border-collapse text-left text-micro">
+<thead>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Field</th>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Full name</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Fit-Stitch Progress Tracker</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Rating</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">4.77 from 331 US ratings (Oct 3, 2026)</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Written reviews, Jul 2 to Oct 2, 2026</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">1 (US feed)</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Written reviews in Apple's feed</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">126 in my study</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">First released</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Jan 9, 2014</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Last updated</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">Sep 30, 2026</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Version tested</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">7.0.2 <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM]</mark></td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Requires</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted">iOS 17.0+ on iPhone and iPad; no Android ("Not at this time," per its FAQ)</td>
+</tr>
+<tr>
+<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">App Store</th>
+<td class="border-b border-card-border px-3 py-2 align-top text-muted"><a href="https://apps.apple.com/us/app/fit-stitch-progress-tracker/id711835190">Fit-Stitch Progress Tracker on the App Store</a></td>
+</tr>
+</tbody>
+</table></div>
+
+## Who should use something else {#who-should-use-something-else}
+
+**If you compare often, Fit-Stitch's one-form-per-comparison gets old fast.** For the most compare modes and auto-align, see my [Thumbstone review](/blog/thumbstone-review/). For date-reading import, see [Then &amp; Now](/blog/then-and-now-review/). For measurements and Apple Health, see [Lasmit](/blog/lasmit-review/).
+
+## What I haven't tested yet {#what-i-havent-tested-yet}
+
+**I still need design and performance scores, and a delete-and-restore with iCloud sync on.** That restore decides whether its sync really answers "what if I lose my phone?" If you've restored Fit-Stitch on a new phone, email me at [support@progressphotos.app](mailto:support@progressphotos.app).
+
+## My verdict on Fit-Stitch {#verdict}
+
+<!-- TODO(Mark): verdict in plain words on whether I recommend Fit-Stitch for progress photos, and for whom. No numeric score. -->
+
+## FAQ {#faq}
+
+<!-- TODO(Mark): questions readers ask about Fit-Stitch, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
+
+---
+
+Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
+
+Tested: <!-- TODO(Mark): month tested and app version. --> {#when-tested}
+
+Questions or corrections: support@progressphotos.app
+
+<!-- scorecard -->
+<!-- chrome:author-bio depth="2" -->
+<aside
+class="mt-12 flex flex-wrap items-center gap-4 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] sm:flex-nowrap sm:items-start"
+aria-labelledby="author-bio-heading"
+>
+<!-- TODO(Mark): pick a photo. Replace this div with <img class="shrink-0 rounded-full" src="../../assets/mark-stepchin.webp" alt="Mark Stepchin" width="64" height="64" loading="lazy" decoding="async" style="width:64px;height:64px;object-fit:cover" />. The 64×64 box is reserved so nothing shifts. -->
+<div
+class="shrink-0 rounded-full border border-card-border text-center text-micro text-muted"
+style="width:64px;height:64px;display:flex;align-items:center;justify-content:center"
+role="img"
+aria-label="Photo of Mark Stepchin coming soon"
+>
+<mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">TODO photo</mark>
+</div>
+<div class="contents sm:block sm:min-w-0 sm:flex-1">
+<h2 id="author-bio-heading" class="min-w-0 flex-1 text-h4 font-bold tracking-h4">About the author</h2>
+<p class="w-full shrink-0 pt-2 text-muted">
+<strong class="text-fg">I'm Mark Stepchin, and I make Recomp, so read what I say about other apps with that in mind.</strong>
+I'm a software engineer who has worked at Silicon Valley startups, with some time at Apple.
+I've trained for years: I bulked from 145 to 195 lb, cut to 155, and now sit around 165.
+Before building Recomp in my evenings and weekends from San Diego, I tried more than 10 progress photo apps.
+<a href="../../about/">More about me</a>
+</p>
+<!-- TODO(Mark): the weight history comes from your Oct 17 brief and isn't on /about/ yet. Confirm the numbers before publishing. -->
+<!-- TODO(Mark): "tried more than 10" is the public claim from /blog/why-i-built-recomp/. Don't say "tested 36 apps": 36 is the proposed candidate list in the how-i-test draft, with no screening log yet, and hands-on scoring is partial (6 of 10 apps have proposed scores). Once testing is done, this could read "I screened 36 apps and tested N hands-on." -->
+</div>
+</aside>
+<!-- /chrome:author-bio -->
