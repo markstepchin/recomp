@@ -31,7 +31,7 @@ MyFitnessPal is one of the 12 apps I've tested so far, and one of three fitness 
 
 <!-- TODO(Mark): ease of alignment, gridline quality, ghost overlay, auto align, and whether I can align in the side by side view. -->
 
-**MyFitnessPal crops every photo square when you upload it**, so anything outside the center gets cut. I didn't find an overlay, gridlines or auto-align in its help. [CONFIRM in the app.] Source: [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
+**MyFitnessPal has no alignment tools.** There's no overlay, gridlines or auto-align, and no way to adjust a photo after you add it. It crops every photo square when you upload it, so anything outside the center gets cut. Source: [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
 ## How do comparisons and collages work? {#compare}
 
