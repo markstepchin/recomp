@@ -22,6 +22,64 @@ app_store:
   url: "https://apps.apple.com/us/app/[TODO: listing URL]"
   icon: "assets/app-icons/[TODO: slug].webp" # 192px WebP, downloaded, never hotlinked
   checked: 2026-01-01 # [TODO: date you copied these values]
+  price: "0" # [TODO: download price on the US App Store, a plain number like 4.99]
+how_tested:
+  # The "How I tested" line near the top. A published review needs device, ios, app_version, started and ended.
+  device: "" # e.g. the iPhone model
+  ios: "" # e.g. 26.1
+  app_version: "" # the version you tested
+  started: "" # YYYY-MM-DD
+  ended: "" # YYYY-MM-DD
+  checkins: "" # number of check-ins added during the test
+measurements:
+  # Your own hand measurements, plain numbers. Leave empty until measured, never a range.
+  taps_per_checkin: ""
+  seconds_per_checkin: ""
+  import_photo_count: ""
+  import_seconds: ""
+scorecard:
+  # One row per criterion in _config/scorecard.js, in that order. status: has, partial, missing or confirm.
+  # fact: 3 to 12 plain words, the same claim the body makes. Rows at confirm are left out of a published page.
+  # A check-in should be effortless
+  checkin_time: { status: confirm, fact: "[CONFIRM]" }
+  photo_picker: { status: confirm, fact: "[CONFIRM]" }
+  weight_apple_health: { status: confirm, fact: "[CONFIRM]" }
+  weight_quick_entry: { status: confirm, fact: "[CONFIRM]" }
+  data_together: { status: confirm, fact: "[CONFIRM]" }
+  # Alignment should be effortless
+  auto_align: { status: confirm, fact: "[CONFIRM]" }
+  ghost_overlay: { status: confirm, fact: "[CONFIRM]" }
+  gridlines: { status: confirm, fact: "[CONFIRM]" }
+  manual_align: { status: confirm, fact: "[CONFIRM]" }
+  align_in_compare: { status: confirm, fact: "[CONFIRM]" }
+  # Comparison should be effortless
+  compare_speed: { status: confirm, fact: "[CONFIRM]" }
+  compare_scale: { status: confirm, fact: "[CONFIRM]" }
+  side_by_side: { status: confirm, fact: "[CONFIRM]" }
+  slider_view: { status: confirm, fact: "[CONFIRM]" }
+  overlay_view: { status: confirm, fact: "[CONFIRM]" }
+  # The photos are the star
+  photo_focus: { status: confirm, fact: "[CONFIRM]" }
+  # Data privacy
+  photos_on_device: { status: confirm, fact: "[CONFIRM]" }
+  privacy_label: { status: confirm, fact: "[CONFIRM]" }
+  # Quality of life
+  bulk_import: { status: confirm, fact: "[CONFIRM]" }
+  data_import_export: { status: confirm, fact: "[CONFIRM]" }
+  app_lock: { status: confirm, fact: "[CONFIRM]" }
+  backup_transfer: { status: confirm, fact: "[CONFIRM]" }
+  reminders: { status: confirm, fact: "[CONFIRM]" }
+  in_app_camera: { status: confirm, fact: "[CONFIRM]" }
+  units: { status: confirm, fact: "[CONFIRM]" }
+  body_measurements: { status: confirm, fact: "[CONFIRM]" }
+  sharing: { status: confirm, fact: "[CONFIRM]" }
+  timelapse: { status: confirm, fact: "[CONFIRM]" }
+  no_account: { status: confirm, fact: "[CONFIRM]" }
+  originals_untouched: { status: confirm, fact: "[CONFIRM]" }
+  edit_date: { status: confirm, fact: "[CONFIRM]" }
+  partial_checkin: { status: confirm, fact: "[CONFIRM]" }
+  dark_mode: { status: confirm, fact: "[CONFIRM]" }
+  no_ads: { status: confirm, fact: "[CONFIRM]" }
 summary: |
   [TODO: 2 to 4 sentences with the main findings. Only facts the article states.]
 faq:
@@ -30,7 +88,7 @@ faq:
     a: "[TODO: a short, direct answer]"
 ---
 
-**Full disclosure: I build Recomp, a free progress photo app, and I hold it to the same bar as every other app.** I don't run ads, and I don't use affiliate links.
+**Full disclosure: I build Recomp, a free progress photo app.**
 
 <!-- app-store-card -->
 

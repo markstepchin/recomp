@@ -19,6 +19,7 @@ app_store:
   url: "https://apps.apple.com/us/app/hevy-workout-tracker-gym-log/id1458862350"
   icon: "assets/app-icons/hevy.webp"
   checked: 2026-11-01
+  price: "0"
 summary: |
   Hevy is a workout tracker with progress photos built in, under Profile > Measures. It has an overlay in the in-app camera, side-by-side comparisons, and photos stored next to your weight and measurements. It allows only one photo per day, so you can't keep front, side and back photos under the same date. Alignment happens only while you add a photo, and there's no auto-align. Fixing a photo later means deleting it and adding it again.
 faq:

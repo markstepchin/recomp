@@ -18,6 +18,7 @@ app_store:
   url: "https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718"
   icon: "assets/app-icons/myfitnesspal.webp"
   checked: 2026-11-01
+  price: "0"
 summary: |
   MyFitnessPal is built around tracking weight, and photos are an add-on. MyFitnessPal has no alignment tools. Since photos attach to weigh-ins, MyFitnessPal keeps only one photo per date. MyFitnessPal's reminders are for meals, not photos or weigh-ins. [TODO: do I recommend MyFitnessPal for progress photos, and for whom.]
 ---

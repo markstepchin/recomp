@@ -18,6 +18,7 @@ app_store:
   url: "https://apps.apple.com/us/app/macrofactor-macro-tracker/id1553503471"
   icon: "assets/app-icons/macrofactor.webp"
   checked: 2026-11-01
+  price: "0"
 summary: |
   Each date holds one front, one side and one back photo. You can only adjust a photo in the crop step, before you save it. Every photo is saved square. I didn't find a slider, overlay view or timelapse. MacroFactor doesn't remind you to weigh in or take photos. [TODO: do I recommend MacroFactor for progress photos, and for whom.]
 ---
