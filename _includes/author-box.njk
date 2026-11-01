@@ -1,0 +1,16 @@
+{#- Author box, variant A: compact byline under the title. Replaces the plain byline on app reviews.
+    Copy: name and jobTitle from about/index.njk; the method line from the How I Review description. -#}
+        <div class="flex items-start gap-3 pb-6" id="author-box" data-author-box="a">
+          {% set avatarClass = "h-11 w-11 mt-0.5" %}{% include "author-avatar.njk" %}
+          <div class="min-w-0 text-micro leading-micro">
+            <p><a class="font-semibold text-fg no-underline hover:underline" href="../../about/" rel="author">Mark Stepchin</a><span class="text-muted"> · Founder of Recomp</span></p>
+{%- if post.published or (post.updated and post.updated != post.published) or post.tested %}
+            <p class="text-muted">
+              {%- if post.published %}Published <time datetime="{{ post.published }}">{{ post.publishedShort }}</time>{% endif %}
+              {%- if post.updated and post.updated != post.published %}{% if post.published %} · {% endif %}Updated <time datetime="{{ post.updated }}">{{ post.updatedShort }}</time>{% endif %}
+              {%- if post.published or (post.updated and post.updated != post.published) %}.{% endif %}
+              {%- if post.tested %}{% if post.published or (post.updated and post.updated != post.published) %} {% endif %}Tested {{ post.tested }}.{% endif %}</p>
+{%- endif %}
+            <p class="pt-1 text-muted">I download each app, pay for the subscription, and test it with real photos and weights from my own transformation. <a class="text-muted" href="/blog/how-i-test-progress-photo-apps/">How I review apps</a></p>
+          </div>
+        </div>
