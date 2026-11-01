@@ -21,6 +21,8 @@
  * - Build checks: a non-draft post with a TODO comment, [TODO] or [DRAFT] (outside code)
  *   fails the build; [CONFIRM] only warns. Unknown frontmatter keys and a missing co-located
  *   og_image fail too. TODO comments are always stripped from the output (not from code).
+ *   A non-draft post with `template: app-review` must also have a summary, disclosure,
+ *   app_store data and a verdict (checkTemplate). blog/_templates/ is never built.
  *
  * BLOG_FIXTURES=1 also builds tests/fixtures/blog/*, the example draft post.
  */
@@ -29,7 +31,7 @@ import { basename, dirname, extname, join, relative } from "node:path";
 import Image from "@11ty/eleventy-img";
 import { chrome } from "./scripts/apply-chrome.js";
 import { findMismatches, stamp } from "./scripts/stamp-asset-versions.js";
-import { checkFrontmatter, checkPost, indexCards, isPostPath, jsonLdBlocks, postData, slugOf, sortPosts } from "./_config/blog.js";
+import { checkFrontmatter, checkPost, checkTemplate, indexCards, isPostPath, jsonLdBlocks, postData, slugOf, sortPosts } from "./_config/blog.js";
 import { SIZES, markdown } from "./_config/markdown.js";
 
 const FIXTURES = process.env.BLOG_FIXTURES === "1";
@@ -90,6 +92,8 @@ export default function (eleventyConfig) {
     eleventyConfig.ignores.add(glob);
   }
   if (!FIXTURES) eleventyConfig.ignores.add("tests/**");
+  // Article templates (blog/_templates/) are skeletons to copy, never built, listed or checked.
+  eleventyConfig.ignores.add("blog/_templates/**");
 
   // Public files, copied byte-for-byte. Globs skip dotfiles (assets/.DS_Store).
   // Not copied (private): *.md, docs/, scripts/, partials/, _config/, _includes/, _pages/,
@@ -97,7 +101,7 @@ export default function (eleventyConfig) {
   for (const glob of [
     "index.html", "claude-version.html", "google6d053ef5debca997.html", "privacy.html", "support.html",
     "robots.txt", "_headers",
-    "assets/**", "js/!(*.test).js", DEV ? "styles/!(output).css" : "styles/**",
+    "assets/**", "data/**", "js/!(*.test).js", DEV ? "styles/!(output).css" : "styles/**",
   ]) {
     eleventyConfig.addPassthroughCopy(glob);
   }
@@ -111,7 +115,7 @@ export default function (eleventyConfig) {
   // copy non-raster extras (svg, gif, mp4); their photos go through Eleventy Image.
   const mdDirs = new Set(markdownPostDirs());
   for (const name of readdirSync("blog")) {
-    if (!statSync(join("blog", name)).isDirectory()) continue;
+    if (!statSync(join("blog", name)).isDirectory() || name.startsWith("_")) continue;
     eleventyConfig.addPassthroughCopy(mdDirs.has(name) ? `blog/${name}/*.{svg,gif,mp4}` : `blog/${name}/**`);
   }
 
@@ -149,6 +153,7 @@ export default function (eleventyConfig) {
     for (const w of warnings) console.warn(`[blog] warning: ${w}`);
     if (errors.length) errors.unshift(`${file} is not a draft but still has TODO/DRAFT markers. Resolve them or set draft: true.`);
     errors.push(...checkFrontmatter(file, raw, data, (rel) => existsSync(join(dirname(file), rel))));
+    errors.push(...checkTemplate(file, data, content));
     if (!errors.length) return;
     problems.set(file, errors);
     return false;
