@@ -462,6 +462,11 @@ html[data-theme="dark"] .device__frame {
   margin: 0;
   scroll-snap-align: center;
 }
+/* Wide screens: every screenshot fits in the row, no cut-off or scrolling. */
+@media (min-width: 768px) {
+  .phone-row { overflow-x: visible; justify-content: center; }
+  .phone-row > figure { flex: 1 1 0; min-width: 0; max-width: 280px; }
+}
 
 /* Review scorecard (_includes/scorecard.njk). The status word takes the status colour; the
    word is always there, so colour is never the only signal. Light values are in the light blocks. */
