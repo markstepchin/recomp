@@ -1,0 +1,46 @@
+---
+title: "FAQ — Recomp"
+description: "Short answers about Recomp: privacy, price, iOS-only, and how progress photos work. A longer FAQ is coming."
+og_description: "Short answers about Recomp. A longer FAQ is coming."
+posthog_defer: true
+---
+{% extends "base.njk" %}
+{% block main %}
+      <main class="mx-auto w-full max-w-[700px] flex-1 px-gutter py-12">
+        <p class="text-micro text-muted pb-3">FAQ</p>
+        <h1 class="text-h2 font-bold tracking-h2 text-balance pb-6">
+          Common questions
+        </h1>
+        <p class="text-muted pb-8">
+          Short version for now. A longer Recomp FAQ is on the
+          <a href="../blog/">blog backlog</a> and will land here later.
+        </p>
+
+        <div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5">
+          <h2>Does Recomp upload my photos?</h2>
+          <p>
+            No. Photos and check-ins stay on your iPhone. See
+            <a href="../privacy/">Privacy</a>.
+          </p>
+
+          <h2>Is Recomp free?</h2>
+          <p>Yes. iOS only.</p>
+
+          <h2>Does it estimate body fat with AI?</h2>
+          <p>No. Recomp is for photos, weight, and notes — not body-fat guesses.</p>
+
+          <h2>How should I take progress photos?</h2>
+          <p>
+            Same place, lighting, and poses every 1–2 weeks. Full write-up:
+            <a href="../blog/how-to-take-progress-photos-for-recomp/"
+              >How to Take Progress Photos for a Recomp</a
+            >.
+          </p>
+        </div>
+
+        <p class="pt-10 text-muted">
+          More answers live on the
+          <a href="../#faq">home page FAQ</a>.
+        </p>
+      </main>
+{%- endblock %}
