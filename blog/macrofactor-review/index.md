@@ -45,6 +45,7 @@ scorecard:
   weight_apple_health: { status: has, fact: "Reads weight from Apple Health, back 30 days when you connect" }  # L70
   weight_quick_entry: { status: confirm, fact: "[CONFIRM]" }
   data_together: { status: has, fact: "Photos sit with up to 21 body metrics" }  # L70
+  camera_zoom: { status: confirm, fact: "[CONFIRM]" }
   # Alignment should be effortless
   auto_align: { status: missing, fact: "No auto-align found" }  # L52
   ghost_overlay: { status: missing, fact: "No ghost overlay found" }  # L52

@@ -99,7 +99,7 @@ What I measure: whether photos stay on the device, and what the App Store privac
 4. Screen privacy: Can I lock the app with Face ID or an app lock, and does it hide my photos in the app switcher?
 5. Backup and a new phone: Are my photos backed up, for example to iCloud, and can I move everything to a new phone?
 6. Reminders: Can I set the day, the time and how often I get reminded?
-7. In-app camera: Does it have a camera with a ghost overlay and pose guides, such as upper body, full body and a 3x3 grid?
+7. In-app camera: Does it have a camera with a ghost overlay and pose guides, such as upper body, full body and a 3x3 grid? Can I zoom?
 8. Units: Does it support both metric and imperial?
 9. Body measurements: Can I add body measurements if I want them, without being forced to?
 10. Sharing: Can I make a shareable before/after image?

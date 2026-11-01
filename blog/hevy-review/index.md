@@ -57,6 +57,7 @@ scorecard:
   weight_apple_health: { status: confirm, fact: "[CONFIRM]" }  # Review says weight is typed in by hand and no Apple Health read was found, but L84 carries its own [CONFIRM].
   weight_quick_entry: { status: missing, fact: "Every weigh-in is typed in by hand" }  # L84
   data_together: { status: has, fact: "Each photo sits with your weight and measurements" }  # L84
+  camera_zoom: { status: missing, fact: "The in-app camera has no zoom" }
   # Alignment should be effortless
   auto_align: { status: missing, fact: "No auto-align" }  # L100
   ghost_overlay: { status: partial, fact: "Ghost overlay in the in-app camera only, not for camera roll photos" }  # L74, L78, L100

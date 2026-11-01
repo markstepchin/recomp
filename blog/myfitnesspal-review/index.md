@@ -45,6 +45,7 @@ scorecard:
   weight_apple_health: { status: partial, fact: "Two-way Apple Health sync, only from the day you connect" }  # L62
   weight_quick_entry: { status: confirm, fact: "[CONFIRM]" }
   data_together: { status: has, fact: "Each photo attaches to a weigh-in" }  # L40
+  camera_zoom: { status: confirm, fact: "[CONFIRM]" }
   # Alignment should be effortless
   auto_align: { status: missing, fact: "No auto-align" }  # L46
   ghost_overlay: { status: missing, fact: "No ghost overlay" }  # L46

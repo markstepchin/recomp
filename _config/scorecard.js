@@ -12,6 +12,7 @@ export const SCORECARD_GROUPS = [
     { id: "weight_apple_health", label: "Weight from Apple Health" },
     { id: "weight_quick_entry", label: "Quick weight entry without typing" },
     { id: "data_together", label: "Photos, weight and notes kept together" },
+    { id: "camera_zoom", label: "Zoom in the in-app camera" },
   ] },
   { id: "alignment", label: "Alignment should be effortless", anchor: "2-alignment-should-be-effortless", rows: [
     { id: "auto_align", label: "Auto-align" },

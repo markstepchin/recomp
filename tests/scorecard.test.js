@@ -20,8 +20,8 @@ const allRows = (status = "has") =>
 
 // ------------------------------------------------------------------ 1. checkScorecard
 
-test("checkScorecard: 34 valid rows pass; unknown, missing and bad rows fail", () => {
-  assert.equal(SCORECARD_IDS.length, 34);
+test("checkScorecard: 35 valid rows pass; unknown, missing and bad rows fail", () => {
+  assert.equal(SCORECARD_IDS.length, 35);
   assert.deepEqual(checkScorecard(FILE, allRows()), []);
   assert.deepEqual(checkScorecard(FILE, allRows("confirm")), []);
   assert.deepEqual(checkScorecard(FILE, undefined), []);
@@ -46,7 +46,7 @@ test("checkScorecard: 34 valid rows pass; unknown, missing and bad rows fail", (
 test("scorecardData: drafts keep confirm rows; published pages drop them and count them", () => {
   const raw = { ...allRows("missing"), auto_align: { status: "confirm", fact: "[CONFIRM]" } };
   const draft = scorecardData(raw, { draft: true });
-  assert.equal(draft.groups.flatMap((g) => g.rows).length, 34);
+  assert.equal(draft.groups.flatMap((g) => g.rows).length, 35);
   assert.equal(draft.hidden, 0);
   assert.equal(draft.confirm, 1);
   const live = scorecardData(raw, { draft: false });
@@ -208,9 +208,9 @@ test("rendered review: table semantics, decorative icons, byline dates match the
   assert.match(table, /<caption id="scorecard-caption"/);
   assert.equal((table.match(/<th scope="col"/g) ?? []).length, 2);
   assert.equal((table.match(/<th scope="rowgroup"/g) ?? []).length, post.scorecard.groups.length);
-  assert.equal((table.match(/<th scope="row"/g) ?? []).length, 34);
+  assert.equal((table.match(/<th scope="row"/g) ?? []).length, 35);
   const svgs = table.match(/<svg[^>]*>/g) ?? [];
-  assert.equal(svgs.length, 34);
+  assert.equal(svgs.length, 35);
   for (const svg of svgs) assert.match(svg, /aria-hidden="true"/);
   for (const status of ["has", "partial", "missing", "confirm"]) assert.match(table, new RegExp(`data-status="${status}"`));
   assert.ok(!/display:\s*(block|grid)/.test(table));

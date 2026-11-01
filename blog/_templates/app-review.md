@@ -46,6 +46,7 @@ scorecard:
   weight_apple_health: { status: confirm, fact: "[CONFIRM]" }
   weight_quick_entry: { status: confirm, fact: "[CONFIRM]" }
   data_together: { status: confirm, fact: "[CONFIRM]" }
+  camera_zoom: { status: confirm, fact: "[CONFIRM]" }
   # Alignment should be effortless
   auto_align: { status: confirm, fact: "[CONFIRM]" }
   ghost_overlay: { status: confirm, fact: "[CONFIRM]" }

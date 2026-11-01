@@ -43,6 +43,7 @@ scorecard:
   weight_apple_health: { status: missing, fact: "Example fact for a missing row" }
   weight_quick_entry: { status: confirm, fact: "[CONFIRM]" }
   data_together: { status: has, fact: "Example fact for a row it has" }
+  camera_zoom: { status: confirm, fact: "[CONFIRM]" }
   auto_align: { status: partial, fact: "Example fact for a partial row" }
   ghost_overlay: { status: missing, fact: "Example fact for a missing row" }
   gridlines: { status: confirm, fact: "[CONFIRM]" }
