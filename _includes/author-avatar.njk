@@ -1,0 +1,6 @@
+{#- Author photo placeholder: initials on a neutral circle, no face. Set avatarClass for the size.
+    TODO(Mark): replace with Mark's real photo (square, at least 192 px, e.g. assets/authors/mark-stepchin.webp)
+    as <img class="... rounded-full object-cover" src="/assets/authors/mark-stepchin.webp" alt="" width="192" height="192">.
+    This is a template comment: it never reaches the HTML, and the publish guard (TODO/DRAFT in a post's Markdown)
+    doesn't see it, so a published review would ship with this placeholder until it is replaced. -#}
+<svg class="{{ avatarClass or 'h-12 w-12' }} shrink-0 rounded-full" viewBox="0 0 48 48" aria-hidden="true" focusable="false" data-author-photo="placeholder"><circle cx="24" cy="24" r="23.5" class="fill-placeholder stroke-card-border" /><text x="24" y="24" dy="0.35em" text-anchor="middle" font-size="16" font-weight="600" class="fill-muted">MS</text></svg>

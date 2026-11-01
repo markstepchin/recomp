@@ -143,14 +143,26 @@ export function howTestedData(how, measurements, appName) {
   if (val(h.device)) parts.push(val(h.device));
   if (val(h.ios)) parts.push(`iOS ${val(h.ios)}`);
   if (val(h.app_version)) parts.push(`${appName ? `${appName} ` : ""}${val(h.app_version)}`);
+  let range = "";
   if (val(h.started) && val(h.ended)) {
     const s = asDate(h.started), e = asDate(h.ended);
-    parts.push(s.slice(0, 4) === e.slice(0, 4) ? `${shortDay(s, false)} to ${shortDay(e, true)}` : `${shortDay(s, true)} to ${shortDay(e, true)}`);
+    range = s.slice(0, 4) === e.slice(0, 4) ? `${shortDay(s, false)} to ${shortDay(e, true)}` : `${shortDay(s, true)} to ${shortDay(e, true)}`;
+    parts.push(range);
   }
   if (val(h.checkins)) parts.push(`${val(h.checkins)} check-ins`);
   if (val(m.taps_per_checkin) && val(m.seconds_per_checkin)) parts.push(`a check-in took ${val(m.taps_per_checkin)} taps and ${val(m.seconds_per_checkin)} seconds`);
   if (val(m.import_photo_count) && val(m.import_seconds)) parts.push(`importing ${val(m.import_photo_count)} photos took ${val(m.import_seconds)} seconds`);
   const confirm = HOW_TESTED_REQUIRED.some((k) => !val(h[k]));
   const measured = MEASUREMENT_KEYS.some((k) => val(m[k]));
-  return { parts, confirm, measured, appVersion: val(h.app_version) || null };
+  // One value per row for the "How I tested this app" author box. Empty strings render as [CONFIRM] on drafts.
+  const fields = {
+    device: val(h.device),
+    ios: val(h.ios),
+    appVersion: val(h.app_version),
+    dates: range,
+    checkins: val(h.checkins),
+    checkin: val(m.taps_per_checkin) && val(m.seconds_per_checkin) ? `${val(m.taps_per_checkin)} taps, ${val(m.seconds_per_checkin)} seconds` : "",
+    import: val(m.import_photo_count) && val(m.import_seconds) ? `${val(m.import_photo_count)} photos in ${val(m.import_seconds)} seconds` : "",
+  };
+  return { parts, confirm, measured, appVersion: val(h.app_version) || null, fields };
 }

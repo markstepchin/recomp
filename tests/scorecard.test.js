@@ -103,6 +103,8 @@ test("howTestedData: parts in order, [CONFIRM] while a required field is empty",
   assert.equal(full.confirm, false);
   const empty = howTestedData({ device: "", ios: "", app_version: "", started: "", ended: "", checkins: "" }, {}, "Hevy");
   assert.deepEqual(empty.parts, []);
+  assert.deepEqual(full.fields, { device: "iPhone 15", ios: "26.1", appVersion: "3.2", dates: "Oct 1 to Oct 20, 2026", checkins: "6", checkin: "5 taps, 40 seconds", import: "100 photos in 12 seconds" });
+  assert.deepEqual(empty.fields, { device: "", ios: "", appVersion: "", dates: "", checkins: "", checkin: "", import: "" });
   assert.equal(empty.confirm, true);
 });
 
@@ -218,7 +220,13 @@ test("rendered review: table semantics, decorative icons, byline dates match the
   const review = ld["@graph"].find((n) => n["@type"] === "Review");
   assert.match(html, new RegExp(`Published <time datetime="${review.datePublished}">`));
   assert.match(html, new RegExp(`Updated <time datetime="${review.dateModified}">`));
-  assert.match(html, /id="how-i-tested"[\s\S]*?\[CONFIRM: device, iOS, app version, test dates\][\s\S]*?href="\/blog\/how-i-test-progress-photo-apps\/"/);
+  assert.ok(!html.includes('id="how-i-tested"'));
+  assert.ok(html.indexOf("summary-heading") < html.indexOf('data-author-box="d"'));
+  const box = html.slice(html.indexOf('data-author-box="d"'), html.indexOf("</section>", html.indexOf('data-author-box="d"')));
+  assert.match(box, /How I tested this app[\s\S]*?Founder of Recomp/);
+  for (const label of ["Device", "iOS", "App version", "Test dates"]) assert.match(box, new RegExp(`<dt class="text-muted">${label}</dt><dd class="text-fg">`));
+  assert.match(box, /href="\/blog\/how-i-test-progress-photo-apps\/"/);
+  if (post.howTested && post.howTested.confirm) assert.match(box, /<dd class="text-fg"><mark[^>]*>\[CONFIRM\]<\/mark><\/dd>/);
 });
 
 test("rendered review: the scorecard goes at the marker, or after the body before the CTA", () => {

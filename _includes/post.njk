@@ -53,12 +53,7 @@
         </aside>
 {% endif %}
 {%- if post.template == "app-review" %}
-        <p class="pt-4 text-micro text-muted" id="how-i-tested">
-          <span class="font-semibold text-fg">How I tested:</span>
-          {%- if post.howTested.parts.length %} {{ post.howTested.parts | join(", ") }}.{% endif %}
-          {%- if post.howTested.confirm %} <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM: device, iOS, app version, test dates]</mark>{% endif %}
-          <a class="text-muted" href="/blog/how-i-test-progress-photo-apps/">How I review apps</a>
-        </p>
+{% include "author-box.njk" %}
 {%- endif %}
 {#- app_store: the card goes where the body has <!-- app-store-card --> (after the disclosure line).
     scorecard: the table goes where the body has <!-- scorecard -->, or after the body when there is no marker. -#}
