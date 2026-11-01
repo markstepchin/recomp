@@ -143,6 +143,8 @@ Weight and waist are free. Body fat and the other measurements need Hevy Pro.
 
 <div class="phone-row">
 
+![Hevy Log Measurements screen dated 1 November 2026 with an empty Add Picture box, and a sheet at the bottom offering Take Photo or Select Library Photo](./hevy-add-picture.webp "Add Picture: take a photo in the app or pick one from your library."){.phone}
+
 ![Hevy Log Measurements screen dated 30 October 2026 with one progress picture, then Body Weight and Waist fields open to fill in and Body Fat and the measurements below it showing a lock icon](./hevy-log-measurements.webp "Log Measurements: one progress picture, and weight and waist are free."){.phone}
 
 ![Hevy Log Measurements screen scrolled down, with Body Fat, Lean Body Mass, Neck, Shoulder, Chest, biceps, forearms, Abdomen, Hips, thighs and calves all showing a lock icon](./hevy-locked-measurements.webp "The rest of the measurements are locked."){.phone}
