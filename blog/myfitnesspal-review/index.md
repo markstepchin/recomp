@@ -25,7 +25,7 @@ MyFitnessPal is one of the 12 apps I've tested so far, and one of three fitness 
 
 <!-- TODO(Mark): are the photos the star? How much of the screen do they take, and do the buttons get in their way? How does it handle dozens or hundreds of photos? -->
 
-Progress photos live inside weigh-ins, under More > Weight & Measurements, not in a gallery of their own. Each photo belongs to the weigh-in you add it to, and photos taken in the app aren't saved to your camera roll. Source: [MyFitnessPal's progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
+**MyFitnessPal is built around tracking weight, and photos are an add-on.** You add a weight record under More > Weight & Measurements and can attach a photo to it. Photos taken in the app aren't saved to your camera roll. Source: [MyFitnessPal's progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
 ## How does it handle alignment? {#alignment}
 
@@ -45,7 +45,7 @@ Sharing works from any photo in the Entries list. You can swipe between photos, 
 
 <!-- TODO(Mark): adding a check-in: taps and seconds for a weight and front, side and back photos (great is under 30 seconds). Does it read the date from the photos, import weight from Apple Health, and let me pick all 3 photos in one picker? -->
 
-**MyFitnessPal keeps only one photo per date.** I can't keep a front, side and back photo for the same day.
+**Since photos attach to weigh-ins, MyFitnessPal keeps only one photo per date.** I can't keep a front, side and back photo for the same day.
 
 Weight syncs both ways with Apple Health, but only from the day you connect. Older Health weigh-ins don't come over. Waist, hips, neck and weight are built in. Anything else, like body fat or thighs, has to be added on the website first, with one value per measurement per day. Sources: [Apple Health syncing](https://support.myfitnesspal.com/hc/en-us/articles/360032271092-Apple-Health-connection-and-syncing), [additional measurements](https://support.myfitnesspal.com/hc/en-us/articles/360032624891-Can-I-track-additional-measurements-or-change-the-default-measurements).
 
