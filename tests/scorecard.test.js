@@ -50,7 +50,7 @@ test("scorecardData: drafts keep confirm rows; published pages drop them and cou
   assert.equal(draft.hidden, 0);
   assert.equal(draft.confirm, 1);
   const live = scorecardData(raw, { draft: false });
-  assert.equal(live.groups.flatMap((g) => g.rows).length, 33);
+  assert.equal(live.groups.flatMap((g) => g.rows).length, 34);
   assert.equal(live.hidden, 1);
   assert.equal(live.groups[0].rows[0].statusLabel, "No");
 });
