@@ -43,6 +43,8 @@ A good progress photo setup has the following aspects:
 
 The camera roll and the iOS photo editor are great for taking photos, storing them, and cropping. You'll need other apps or workflows for tracking weight, photo comparison, alignment, and reminders. Dedicated apps also add quality-of-life improvements across the whole workflow.
 
+Photos also uses the screen well. A photo fills the whole screen, pinch to zoom is easy, and the built-in editor crops and rotates in a few taps.
+
 ## Camera roll drawbacks {#camera-roll-drawbacks}
 
 ### Your progress photos are mixed with everything else {#your-progress-photos-are-mixed-with-everything-else}
