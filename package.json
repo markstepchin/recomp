@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node scripts/apply-chrome.js && concurrently -k -n css,web -c cyan,magenta \"npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css --watch\" \"eleventy --serve --port 3000\"",
+    "dev": "npx @tailwindcss/cli -i ./styles/input.css -o ./.cache/dev/output.css && concurrently -k -n css,web -c cyan,magenta \"npx @tailwindcss/cli -i ./styles/input.css -o ./.cache/dev/output.css --watch\" \"RECOMP_DEV=1 eleventy --serve --port 3000\"",
     "build": "node -e \"require('fs').rmSync('_site',{recursive:true,force:true})\" && node scripts/apply-chrome.js && npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css --minify && node scripts/stamp-asset-versions.js && eleventy",
     "build:example": "BLOG_FIXTURES=1 npm run build",
     "diff-site": "node scripts/diff-site.js",

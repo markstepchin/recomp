@@ -3,7 +3,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
-  DEFAULT_CTA, checkFrontmatter, checkPost, frontmatterKeys, indexCards, llmsLines, postData, sortPosts,
+  DEFAULT_CTA, appStoreData, checkFrontmatter, compactCount, checkPost, frontmatterKeys, indexCards, jsonLd, jsonLdBlocks, llmsLines, postData,
+  sitemapEntries, sortPosts,
 } from "../_config/blog.js";
 import { IMG_CLASS, PHONE_FIGURE_CLASS, PHONE_SIZES, markdown } from "../_config/markdown.js";
 
@@ -139,6 +140,48 @@ test("postData: drafts and noindex are built but not listed", () => {
   assert.deepEqual([hidden.draft, hidden.noindex, hidden.listed], [false, true, false]);
 });
 
+test("postData: optional knobs for converted posts default to the generated output", () => {
+  const p = postData(data());
+  assert.equal(p.ogTitle, "My post");
+  assert.equal(p.ogDescription, "What it is about.");
+  assert.equal(p.ogImageAlt, null);
+  assert.deepEqual([p.twitterText, p.articleDates, p.proseWrapper, p.handListed], [true, true, true, false]);
+  assert.equal(p.byline, null);
+  assert.equal(p.jsonLdOverride, null);
+  assert.deepEqual(jsonLdBlocks(p), [jsonLd(p)]);
+});
+
+test("postData: optional knobs override", () => {
+  const p = postData(data({
+    og_title: "OG", og_description: "OG desc", og_image_alt: "Alt", twitter_text: false, article_dates: false,
+    byline: "Published Oct 30, 2026.", prose_wrapper: false, hand_listed: true,
+  }));
+  assert.deepEqual(
+    [p.ogTitle, p.ogDescription, p.ogImageAlt, p.twitterText, p.articleDates, p.byline, p.proseWrapper, p.handListed],
+    ["OG", "OG desc", "Alt", false, false, "Published Oct 30, 2026.", false, true],
+  );
+  assert.equal(postData(data({ byline: false })).byline, false);
+});
+
+test("jsonLdBlocks: json_ld is used as-is, one block per item, with </ escaped", () => {
+  const one = { "@context": "https://schema.org", "@type": "Article", headline: "a </script> b" };
+  const two = { "@type": "FAQPage", mainEntity: [] };
+  const single = jsonLdBlocks(postData(data({ json_ld: one })));
+  assert.equal(single.length, 1);
+  assert.deepEqual(JSON.parse(single[0]), one);
+  assert.ok(!single[0].includes("</script>"));
+  const list = jsonLdBlocks(postData(data({ json_ld: [one, two] })));
+  assert.deepEqual(list.map((b) => JSON.parse(b)), [one, two]);
+});
+
+test("optional knobs are type-checked", () => {
+  assert.match(checkFrontmatter(FILE, RAW, { twitter_text: "no" }, () => true)[0], /twitter_text must be true or false/);
+  assert.match(checkFrontmatter(FILE, RAW, { hand_listed: 1 }, () => true)[0], /hand_listed must be true or false/);
+  assert.match(checkFrontmatter(FILE, RAW, { byline: true }, () => true)[0], /byline must be text or false/);
+  assert.match(checkFrontmatter(FILE, RAW, { json_ld: "x" }, () => true)[0], /json_ld must be/);
+  assert.deepEqual(checkFrontmatter(FILE, RAW, { byline: false, json_ld: [{}], prose_wrapper: false }, () => true), []);
+});
+
 test("postData: required fields", () => {
   assert.throws(() => postData(data({ published: undefined })), /missing "published"/);
   assert.throws(() => postData(data({ title: "" })), /missing "title"/);
@@ -171,6 +214,35 @@ test("unknown frontmatter keys fail", () => {
   assert.match(checkFrontmatter(FILE, RAW, { cta: { heading: "H", txt: "x" } }, () => true)[0], /unknown cta key "txt"/);
 });
 
+const APP = {
+  id: 1, name: "App", developer: "Dev", developer_url: "https://dev.example", rating: 4.7, rating_count: 2387079, min_ios: "18.0",
+  url: "https://apps.apple.com/us/app/x/id1", icon: "/assets/app-icons/x.webp", checked: new Date("2026-11-01"),
+};
+
+test("app_store: all keys required, rating 0 to 5, whole count, apps.apple.com url", () => {
+  assert.deepEqual(checkFrontmatter(FILE, RAW, { app_store: APP }, () => true), []);
+  assert.match(checkFrontmatter(FILE, RAW, { app_store: { ...APP, min_ios: undefined } }, () => true)[0], /app_store\.min_ios is required/);
+  assert.match(checkFrontmatter(FILE, RAW, { app_store: { ...APP, stars: 5 } }, () => true)[0], /unknown app_store key "stars"/);
+  assert.match(checkFrontmatter(FILE, RAW, { app_store: { ...APP, rating: 6 } }, () => true)[0], /0 to 5/);
+  assert.match(checkFrontmatter(FILE, RAW, { app_store: { ...APP, rating_count: "2.4M" } }, () => true)[0], /whole number/);
+  assert.match(checkFrontmatter(FILE, RAW, { app_store: { ...APP, url: "https://example.com" } }, () => true)[0], /apps\.apple\.com/);
+  assert.match(checkFrontmatter(FILE, RAW, { app_store: { ...APP, developer_url: undefined } }, () => true)[0], /developer_url is required/);
+  assert.match(checkFrontmatter(FILE, RAW, { app_store: { ...APP, developer_url: "http://dev.example" } }, () => true)[0], /https link/);
+  assert.match(checkFrontmatter(FILE, RAW, { app_store: { ...APP, developer_url: "https://apps.apple.com/us/developer/x/id1" } }, () => true)[0], /own site/);
+});
+
+test("appStoreData: compact counts like the App Store, star fill, date", () => {
+  assert.deepEqual([101232, 23708, 2387079, 999, 9500].map(compactCount), ["101K", "24K", "2.4M", "999", "9.5K"]);
+  const app = appStoreData(APP);
+  assert.equal(app.ratingText, "4.7");
+  assert.equal(app.ratingPercent, 94);
+  assert.equal(app.ratingCountFull, "2,387,079");
+  assert.equal(app.icon, "assets/app-icons/x.webp");
+  assert.equal(app.developerUrl, "https://dev.example");
+  assert.equal(app.checked, "2026-11-01");
+  assert.equal(appStoreData(undefined), null);
+});
+
 test("a co-located og_image must exist", () => {
   assert.match(checkFrontmatter(FILE, RAW, { og_image: "./missing.png" }, () => false)[0], /og_image \.\/missing\.png not found/);
   assert.deepEqual(checkFrontmatter(FILE, RAW, { og_image: "./hero.png" }, () => true), []);
@@ -194,4 +266,12 @@ test("sortPosts: newest first, then slug; lists skip unlisted posts", () => {
   assert.deepEqual([...indexCards(sorted).matchAll(/href="([^"]+)"/g)].map((m) => m[1]), ["a-new/", "z-new/", "b-old/"]);
   assert.equal(llmsLines(sorted).trim().split("\n").length, 3);
   assert.deepEqual(posts.map((p) => p.slug), ["b-old", "z-new", "a-new", "draft"], "input not mutated");
+});
+
+test("hand_listed posts are built but left out of /blog/ cards, llms.txt and the sitemap", () => {
+  const posts = sortPosts([post("auto", new Date("2026-06-01")), post("by-hand", new Date("2026-07-01"), { hand_listed: true })]);
+  assert.deepEqual([...indexCards(posts).matchAll(/href="([^"]+)"/g)].map((m) => m[1]), ["auto/"]);
+  assert.equal(llmsLines(posts).trim().split("\n").length, 1);
+  assert.ok(!sitemapEntries(posts).includes("by-hand"));
+  assert.ok(sitemapEntries(posts).includes("/blog/auto/"));
 });

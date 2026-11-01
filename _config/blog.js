@@ -82,8 +82,17 @@ export function checkPost(file, body, draft, bodyLineOffset = 0) {
 export const FRONTMATTER_KEYS = new Set([
   "title", "seo_title", "description", "published", "updated", "tested", "draft", "noindex",
   "og_image", "breadcrumb", "summary", "summary_heading", "card_blurb", "llms_blurb", "cta", "faq",
+  // app_store: the reviewed app's App Store listing, shown as a card where the body has
+  // <!-- app-store-card --> (_includes/app-store-card.njk).
+  "app_store",
+  // Optional, mostly for posts converted from hand-written HTML so their output stays the same
+  // (see docs/blog-markdown.md): og_title, og_description, og_image_alt, twitter_text,
+  // article_dates, byline, prose_wrapper, json_ld, hand_listed.
+  "og_title", "og_description", "og_image_alt", "twitter_text", "article_dates", "byline",
+  "prose_wrapper", "json_ld", "hand_listed",
 ]);
 const CTA_KEYS = new Set(["heading", "text", "location"]);
+const APP_STORE_KEYS = ["id", "name", "developer", "developer_url", "rating", "rating_count", "min_ios", "url", "icon", "checked"];
 
 /** Top-level keys of a file's YAML frontmatter (comments and nested lines ignored). */
 export function frontmatterKeys(raw) {
@@ -101,9 +110,28 @@ export function checkFrontmatter(file, raw, data, exists) {
   for (const key of frontmatterKeys(raw)) {
     if (!FRONTMATTER_KEYS.has(key)) errors.push(`${file}: unknown frontmatter key "${key}" (allowed: ${[...FRONTMATTER_KEYS].join(", ")})`);
   }
+  for (const key of ["twitter_text", "article_dates", "prose_wrapper", "hand_listed"]) {
+    if (data[key] !== undefined && typeof data[key] !== "boolean") errors.push(`${file}: ${key} must be true or false`);
+  }
+  if (data.byline !== undefined && data.byline !== false && typeof data.byline !== "string") errors.push(`${file}: byline must be text or false`);
+  if (data.json_ld !== undefined && (typeof data.json_ld !== "object" || data.json_ld === null)) errors.push(`${file}: json_ld must be a JSON-LD object or a list of them`);
   if (data.cta !== undefined && data.cta !== false) {
     if (typeof data.cta !== "object" || data.cta === null) errors.push(`${file}: cta must be a mapping or false`);
     else for (const key of Object.keys(data.cta)) if (!CTA_KEYS.has(key)) errors.push(`${file}: unknown cta key "${key}" (allowed: heading, text, location)`);
+  }
+  if (data.app_store !== undefined) {
+    const app = data.app_store;
+    if (typeof app !== "object" || app === null) errors.push(`${file}: app_store must be a mapping`);
+    else {
+      for (const key of Object.keys(app)) if (!APP_STORE_KEYS.includes(key)) errors.push(`${file}: unknown app_store key "${key}" (allowed: ${APP_STORE_KEYS.join(", ")})`);
+      for (const key of APP_STORE_KEYS) if (app[key] === undefined || app[key] === null || app[key] === "") errors.push(`${file}: app_store.${key} is required`);
+      if (app.rating !== undefined && !(Number(app.rating) >= 0 && Number(app.rating) <= 5)) errors.push(`${file}: app_store.rating must be a number from 0 to 5`);
+      if (app.rating_count !== undefined && !Number.isInteger(app.rating_count)) errors.push(`${file}: app_store.rating_count must be a whole number`);
+      if (app.url !== undefined && !/^https:\/\/apps\.apple\.com\//.test(String(app.url))) errors.push(`${file}: app_store.url must be an apps.apple.com link`);
+      // developer_url: the developer's own website, not their App Store page.
+      if (app.developer_url !== undefined && !/^https:\/\/[^/\s]+\.[^/\s]+/.test(String(app.developer_url))) errors.push(`${file}: app_store.developer_url must be an https link`);
+      if (/^https:\/\/(apps|itunes)\.apple\.com\//.test(String(app.developer_url))) errors.push(`${file}: app_store.developer_url must be the developer's own site, not an App Store page`);
+    }
   }
   const og = data.og_image ? String(data.og_image) : "";
   if (og.startsWith("./") && !exists(og)) errors.push(`${file}: og_image ${og} not found next to the post`);
@@ -126,6 +154,39 @@ const shortDate = (iso) =>
 export const longDate = (iso) =>
   new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
 
+/** App Store style rating count: 101232 -> "101K", 23708 -> "24K", 2387079 -> "2.4M", 950 -> "950". */
+export function compactCount(n) {
+  const short = (v, unit) => `${v < 10 ? Math.round(v * 10) / 10 : Math.round(v)}${unit}`;
+  if (n >= 1e6) return short(n / 1e6, "M");
+  if (n >= 1e3) return short(n / 1e3, "K");
+  return String(n);
+}
+
+/** app_store frontmatter for the card, or null. Stars fill to `rating` (0 to 5). */
+export function appStoreData(app) {
+  if (!app || typeof app !== "object") return null;
+  const rating = Number(app.rating);
+  const count = Number(app.rating_count);
+  const checked = isoDate(app.checked);
+  return {
+    id: String(app.id),
+    name: String(app.name),
+    developer: String(app.developer),
+    developerUrl: String(app.developer_url),
+    rating,
+    ratingText: rating.toFixed(1),
+    ratingPercent: Math.round((rating / 5) * 1000) / 10,
+    ratingCount: count,
+    ratingCountShort: compactCount(count),
+    ratingCountFull: count.toLocaleString("en-US"),
+    minIos: String(app.min_ios),
+    url: String(app.url),
+    icon: String(app.icon).replace(/^\//, ""),
+    checked,
+    checkedLong: checked ? longDate(checked) : null,
+  };
+}
+
 /** Normalize a post's frontmatter. `data` is the Eleventy data cascade for the page. */
 export function postData(data) {
   const file = data.page.inputPath.replace(/^\.\//, "");
@@ -138,13 +199,30 @@ export function postData(data) {
   const url = `${SITE_URL}/blog/${slug}/`;
   const og = data.og_image ? String(data.og_image) : null;
   const ogLocal = og && og.startsWith("./") ? og : null;
+  const handListed = data.hand_listed === true;
   return {
     file, slug, url, draft,
     noindex: draft || data.noindex === true,
-    listed: !draft && data.noindex !== true,
+    // hand_listed: the /blog/ card, sitemap and llms.txt lines are written by hand, not generated.
+    handListed,
+    listed: !draft && data.noindex !== true && !handListed,
     title: String(data.title),
     seoTitle: data.seo_title ? String(data.seo_title) : `${data.title} — Recomp`,
     description: String(data.description),
+    // og:title / og:description, also used for twitter:title / twitter:description.
+    ogTitle: data.og_title ? String(data.og_title) : String(data.title),
+    ogDescription: data.og_description ? String(data.og_description) : String(data.description),
+    ogImageAlt: data.og_image_alt ? String(data.og_image_alt) : null,
+    // twitter_text: false leaves out twitter:title and twitter:description.
+    twitterText: data.twitter_text !== false,
+    // article_dates: false leaves out article:published_time / article:modified_time.
+    articleDates: data.article_dates !== false,
+    // byline: false drops the byline line (the h1 gets pb-8); text replaces it (inline Markdown/HTML).
+    byline: data.byline === false ? false : data.byline ? String(data.byline) : null,
+    // prose_wrapper: false means the body brings its own wrapper <div>s (raw HTML around Markdown).
+    proseWrapper: data.prose_wrapper !== false,
+    // json_ld: used as-is instead of the generated BlogPosting/FAQPage; a list gives one <script> per item.
+    jsonLdOverride: data.json_ld ?? null,
     published, updated,
     publishedShort: published ? shortDate(published) : null,
     tested: data.tested ? String(data.tested) : null,
@@ -165,6 +243,7 @@ export function postData(data) {
           ? og
           : `${SITE_URL}/${og.replace(/^\//, "")}`,
     cta: data.cta === false ? null : { ...DEFAULT_CTA, ...(data.cta ?? {}) },
+    appStore: appStoreData(data.app_store),
   };
 }
 
@@ -199,6 +278,13 @@ export function jsonLd(post) {
   return JSON.stringify(out, null, 2).replace(/<\//g, "<\\/");
 }
 
+/** The JSON-LD <script> bodies for a post: the json_ld override (one per list item) or the generated one. */
+export function jsonLdBlocks(post) {
+  if (!post.jsonLdOverride) return [jsonLd(post)];
+  const items = Array.isArray(post.jsonLdOverride) ? post.jsonLdOverride : [post.jsonLdOverride];
+  return items.map((item) => JSON.stringify(item, null, 2).replace(/<\//g, "<\\/"));
+}
+
 // ---------------------------------------------------------------- lists
 
 const escapeHtml = (s) =>
@@ -217,7 +303,7 @@ export function replaceRegion(text, name, inner, file) {
 
 export const sitemapEntries = (posts) =>
   posts
-    .filter((p) => !p.noindex)
+    .filter((p) => !p.noindex && !p.handListed)
     .map((p) => {
       const lastmod = p.updated || p.published;
       return `  <url>\n    <loc>${p.url}</loc>\n${lastmod ? `    <lastmod>${lastmod}</lastmod>\n` : ""}  </url>\n`;
