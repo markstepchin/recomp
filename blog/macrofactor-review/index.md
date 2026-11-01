@@ -47,6 +47,8 @@ MacroFactor is one of the 12 apps I've tested so far, and one of three fitness a
 
 <!-- TODO(Mark): any quality-of-life items that matter for MacroFactor (bulk import, reminders, in-app camera, units, body measurements, editing a check-in's date, partial check-ins, dark mode, ads). Fold them into the sections above or below; no separate section or table unless it clearly helps. -->
 
+**MacroFactor doesn't remind you to weigh in or take photos.** The only nudge is a small alert on the Strategy tab when your weekly check-in is due, and you pick the check-in day. That check-in updates calories and macros, not photos. Source: [MacroFactor's check-in help](https://help.macrofactorapp.com/en/articles/247-introduction-to-check-ins-and-coaching-modules).
+
 ![MacroFactor new check-in sheet dated 10/25/2026 with empty Front, Side and Back photo slots and a Save button](./macrofactor-new-check-in.webp "A new check-in: one slot each for front, side and back."){.phone}
 
 ![MacroFactor check-in with the Front slot selected and an Upload Photo or Take Photo menu](./macrofactor-add-front-photo.webp "Adding the front photo: upload or take one."){.phone}

@@ -43,6 +43,8 @@ MyFitnessPal is one of the 12 apps I've tested so far, and one of three fitness 
 
 <!-- TODO(Mark): any quality-of-life items that matter for MyFitnessPal (bulk import, reminders, in-app camera, units, body measurements, editing a check-in's date, partial check-ins, dark mode, ads). Fold them into the sections above or below; no separate section or table unless it clearly helps. -->
 
+**MyFitnessPal's reminders are for meals, not photos or weigh-ins.** Each one fires if you haven't logged a chosen meal by a set time. Its help recommends weighing in once a week, but I didn't find a reminder for it. [CONFIRM: in Profile > Reminders > +, is there a weigh-in option?] Sources: [logging reminders](https://support.myfitnesspal.com/hc/en-us/articles/360032622391-How-to-set-up-logging-reminders), [how often to weigh in](https://support.myfitnesspal.com/hc/en-us/articles/360032272992-How-often-should-I-record-my-weight-and-other-measurements).
+
 ![MyFitnessPal Measurements screen for Weight over 1 Month with no data yet and a Go Premium banner for ad-free tracking](./myfitnesspal-measurements.webp "Measurements before any weigh-ins, with a Premium upsell."){.phone}
 
 ![MyFitnessPal Edit weight screen showing 155 lbs with a Change date picker set to August 4, 2025](./myfitnesspal-edit-weight-date.webp "Editing a weigh-in's date."){.phone}

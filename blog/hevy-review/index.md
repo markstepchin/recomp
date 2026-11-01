@@ -18,6 +18,8 @@ faq:
     a: "Weight and waist are free. Body fat and the other measurements need Hevy Pro."
   - q: "Can you export progress photos from Hevy?"
     a: "Hevy exports measurements as a CSV. Photos aren't in the export."
+  - q: "Does Hevy remind you to take progress photos?"
+    a: "No. Hevy's notifications cover workouts and social activity, not progress photos or weigh-ins."
 ---
 
 **Full disclosure: I build Recomp, a free progress photo app, and I hold it to the same bar as every other app.** I don't run ads, and I don't use affiliate links.
@@ -59,6 +61,8 @@ Existing photos get much less:
 
 Weight and waist are free. Body fat and the other measurements need Hevy Pro. Hevy exports your measurements as a CSV, but your photos aren't in the export.
 
+**Hevy doesn't remind you to take progress photos or weigh in.** Its notification settings cover the rest timer, new followers, the monthly training report, emails, likes and comments. None of them is for photos, weight or measurements, so the weekly check-in reminder has to come from your own calendar. Source: [Hevy's notification settings](https://help.hevyapp.com/hc/en-us/articles/33845807003671-Account-Settings-Preferences-Profile-Information-Adjust-username-password-or-email-address-Notifications).
+
 ![Hevy Log Measurements screen dated 30 October 2026 with one progress picture, then Body Weight and Waist fields open to fill in and Body Fat and the measurements below it showing a lock icon](./hevy-log-measurements.webp "Log Measurements: one progress picture, and weight and waist are free."){.phone}
 
 ![Hevy Log Measurements screen scrolled down, with Body Fat, Lean Body Mass, Neck, Shoulder, Chest, biceps, forearms, Abdomen, Hips, thighs and calves all showing a lock icon](./hevy-locked-measurements.webp "The rest of the measurements are locked."){.phone}
@@ -88,6 +92,10 @@ Weight and waist are free. Body fat and the other measurements need Hevy Pro.
 ### Can you export progress photos from Hevy? {#faq-export}
 
 Hevy exports measurements as a CSV. Photos aren't in the export.
+
+### Does Hevy remind you to take progress photos? {#faq-reminders}
+
+No. Hevy's notifications cover workouts and social activity, not progress photos or weigh-ins.
 
 ---
 
