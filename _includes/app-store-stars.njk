@@ -1,0 +1,9 @@
+{#- Five stars filled to app.ratingPercent: grey stars under gold ones clipped to that width (viewBox is 100 wide). -#}
+<svg class="h-3.5 w-[4.375rem] shrink-0" viewBox="0 0 100 20" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="app-star-{{ app.id }}" d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8z" />
+    <clipPath id="app-stars-fill-{{ app.id }}"><rect width="{{ app.ratingPercent }}" height="20" /></clipPath>
+  </defs>
+  <g class="fill-muted/35">{% for x in [0, 20, 40, 60, 80] %}<use href="#app-star-{{ app.id }}" x="{{ x }}" />{% endfor %}</g>
+  <g class="fill-amber-400" clip-path="url(#app-stars-fill-{{ app.id }})">{% for x in [0, 20, 40, 60, 80] %}<use href="#app-star-{{ app.id }}" x="{{ x }}" />{% endfor %}</g>
+</svg>
