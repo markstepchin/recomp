@@ -92,12 +92,13 @@ export default function (eleventyConfig) {
   if (!FIXTURES) eleventyConfig.ignores.add("tests/**");
 
   // Public files, copied byte-for-byte. Globs skip dotfiles (assets/.DS_Store).
+  // data/ holds the review study's raw JSON, linked and loaded by the review table.
   // Not copied (private): *.md, docs/, scripts/, partials/, _config/, _includes/, _pages/,
   // tests/, js/*.test.js, package*.json, wrangler.jsonc, eleventy.config.js.
   for (const glob of [
     "index.html", "claude-version.html", "google6d053ef5debca997.html", "privacy.html", "support.html",
     "robots.txt", "_headers",
-    "assets/**", "js/!(*.test).js", DEV ? "styles/!(output).css" : "styles/**",
+    "assets/**", "data/**", "js/!(*.test).js", DEV ? "styles/!(output).css" : "styles/**",
   ]) {
     eleventyConfig.addPassthroughCopy(glob);
   }
