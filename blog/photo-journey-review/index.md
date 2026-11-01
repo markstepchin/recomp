@@ -2,12 +2,26 @@
 title: "Body Tracker - Photo Journey Review (2026)"
 description: "By Mark Stepchin · Draft stub, not published [CONFIRM: publish date] Photo Journey is built for fixed-length challenges like 75 Hard, and its privacy label says Data Used to Track."
 draft: true
+app_store:
+  # Copied from the US App Store listing on the date in checked. Update all values together.
+  id: 6499454966
+  name: "Body Tracker - Photo Journey"
+  developer: "Michael Gilroy"
+  developer_url: "https://photojourney.app/"
+  rating: 4.4
+  rating_count: 117
+  min_ios: "17.4"
+  url: "https://apps.apple.com/us/app/body-tracker-photo-journey/id6499454966"
+  icon: "assets/app-icons/photo-journey.webp"
+  checked: 2026-11-01
 card_blurb: "Built for fixed challenges like 75 Hard. No hands-on scores yet."
 ---
 
 **Photo Journey is built for fixed-length challenges like 75 Hard, and its privacy label says Data Used to Track You.** It started as a daily timelapse app before it turned to body progress. Unlimited photos need a subscription. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[Sourced: roundup draft-v8\]</mark>
 
 I built Recomp, a free progress photo app that competes with this one. No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>.
+
+<!-- app-store-card -->
 
 This review expands the [Photo Journey entry](/blog/best-progress-photo-apps/#photo-journey) in my [roundup of the best progress photo apps](/blog/best-progress-photo-apps/), where every app went through the same test kit and scorecard.
 

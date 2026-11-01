@@ -5,6 +5,18 @@ description: "I ran my progress photo library through GainFrame. It has the best
 draft: true
 og_image: ./gainframe-compare-side-by-side.jpg
 breadcrumb: "Best progress photo apps"
+app_store:
+  # Copied from the US App Store listing on the date in checked. Update all values together.
+  id: 6759252082
+  name: "GainFrame: Gym Progress Photos"
+  developer: "Michael Rode"
+  developer_url: "https://gainframe.app/"
+  rating: 4.9
+  rating_count: 72
+  min_ios: "17.0"
+  url: "https://apps.apple.com/us/app/gainframe-gym-progress-photos/id6759252082"
+  icon: "assets/app-icons/gainframe.webp"
+  checked: 2026-11-01
 summary: |
   **GainFrame is the most polished progress photo app I tested, and with hundreds of photos it was pretty much unusable.** Its colors, icons, spacing and import loading states are the best in the category. But the UI puts AI first, my import stopped at 250 photos after about 15 minutes, and finding one date among hundreds took long scrolling. With 20 to 30 photos it probably works very well. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer; Mark's stub said to write it after re-checking the compare screens\]</mark>
 summary_heading: "Quick Answer"
@@ -14,6 +26,8 @@ card_blurb: "The most polished app I tested, and the slowest with my real librar
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
 
 **Full disclosure: I build Recomp, a free progress photo app that competes with GainFrame.** Recomp has no in-app purchases, and no app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>. This review expands the [GainFrame entry](/blog/best-progress-photo-apps/#gainframe) in my [roundup of the best progress photo apps](/blog/best-progress-photo-apps/), and every app went through the [same test kit and scorecard](/blog/how-i-test-progress-photo-apps/).
+
+<!-- app-store-card -->
 
 <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: Mark's Oct 4 notes say GainFrame has a full-screen view and maybe two other compare screens he hasn't fully checked. Re-check them before scoring alignment and comparison.\]</mark>
 

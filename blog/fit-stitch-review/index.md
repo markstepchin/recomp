@@ -5,6 +5,18 @@ description: "I tested Fit-Stitch with my own progress photos. It's the only pai
 draft: true
 og_image: ./fit-stitch-entry-form.jpg
 breadcrumb: "Best progress photo apps"
+app_store:
+  # Copied from the US App Store listing on the date in checked. Update all values together.
+  id: 711835190
+  name: "Fit-Stitch Progress Tracker"
+  developer: "REDSHIFT SYSTEMS INC."
+  developer_url: "https://fit-stitch.com/"
+  rating: 4.8
+  rating_count: 331
+  min_ios: "17.0"
+  url: "https://apps.apple.com/us/app/fit-stitch-progress-tracker/id711835190"
+  icon: "assets/app-icons/fit-stitch.webp"
+  checked: 2026-11-01
 summary: |
   **Fit-Stitch is the only paid progress photo app I tested with no subscription: $4.99 once.** It syncs to your own iCloud, the likeliest answer here to "what if I lose my phone?" Logging is one clean form. Comparing is the weak spot, because every comparison is a card built in its own form, with no alignment. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending design, performance and backup scores\]</mark>
 summary_heading: "Quick Answer"
@@ -14,6 +26,8 @@ card_blurb: "$4.99 once with iCloud sync, but every comparison is its own form."
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
 
 **Full disclosure: I build Recomp, a free progress photo app that competes with this one.** No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>. This review expands the [Fit-Stitch entry](/blog/best-progress-photo-apps/#fit-stitch) in my [roundup of the best progress photo apps](/blog/best-progress-photo-apps/), scored with [the same kit](/blog/how-i-test-progress-photo-apps/). I rewrote it from my hands-on notes on Oct 2, 2026.
+
+<!-- app-store-card -->
 
 ## What it costs {#what-it-costs}
 

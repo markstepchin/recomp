@@ -5,6 +5,18 @@ description: "I tested Lasmit's Progress, the oldest app in my roundup with 9,35
 draft: true
 og_image: ./lasmit-my-results.jpg
 breadcrumb: "Best progress photo apps"
+app_store:
+  # Copied from the US App Store listing on the date in checked. Update all values together.
+  id: 583840813
+  name: "Body Measurements Tracker App"
+  developer: "Lasmit TLB Ltd"
+  developer_url: "https://theprogressapp.com/"
+  rating: 4.6
+  rating_count: 9374
+  min_ios: "18.0"
+  url: "https://apps.apple.com/us/app/body-measurements-tracker-app/id583840813"
+  icon: "assets/app-icons/lasmit.webp"
+  checked: 2026-11-01
 summary: |
   **Lasmit's "Progress" is the app I'd send you to for measurement history and Apple Health, not for photos.** It has 9,355 ratings since 2012, the most of any dedicated app I tested, and two-way Apple Health sync. I can tell someone put a lot of effort into it, but everything feels awkward, and using it gave me a headache. Compare works only in landscape. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending the full test\]</mark>
 summary_heading: "Quick Answer"
@@ -14,6 +26,8 @@ card_blurb: "A measurement tracker first, with two-way Apple Health sync. Compar
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
 
 **Full disclosure: I build Recomp, a free progress photo app that competes with this one.** No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>. This review expands the [Lasmit entry](/blog/best-progress-photo-apps/#lasmit) in my [roundup of the best progress photo apps](/blog/best-progress-photo-apps/), scored with [the same kit](/blog/how-i-test-progress-photo-apps/).
+
+<!-- app-store-card -->
 
 ## What it costs {#what-it-costs}
 

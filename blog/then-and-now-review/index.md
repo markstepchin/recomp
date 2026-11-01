@@ -5,6 +5,18 @@ description: "I tested Then & Now with my own progress photos. Its import reads 
 draft: true
 og_image: ./thenandnow-compare-1x1.jpg
 breadcrumb: "Best progress photo apps"
+app_store:
+  # Copied from the US App Store listing on the date in checked. Update all values together.
+  id: 6758411454
+  name: "Progress Pictures: Then & Now"
+  developer: "Mahalo Mochi LLC"
+  developer_url: "https://mahalomochi.com/"
+  rating: 5
+  rating_count: 18
+  min_ios: "17.0"
+  url: "https://apps.apple.com/us/app/progress-pictures-then-now/id6758411454"
+  icon: "assets/app-icons/then-and-now.webp"
+  checked: 2026-11-01
 summary: |
   **Then &amp; Now is one of the better compare apps I tested, and the one I picked for hands-free capture.** Its voice timer is the only one I found, but it needs Premium. Bulk import reads each photo's date and asks for a weight, which made my old photos easy to bring in. Alignment works, but it's buried in each photo's Adjust &amp; Crop. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending the full test\]</mark>
 summary_heading: "Quick Answer"
@@ -14,6 +26,8 @@ card_blurb: "A voice timer, an import that reads each photo's date, and a buried
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
 
 **Full disclosure: I build Recomp, a free progress photo app that competes with this one.** No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>. This review expands the [Then &amp; Now entry](/blog/best-progress-photo-apps/#then-and-now) in my [roundup of the best progress photo apps](/blog/best-progress-photo-apps/), scored with [the same kit](/blog/how-i-test-progress-photo-apps/).
+
+<!-- app-store-card -->
 
 <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: placement. The roundup picks Then &amp; Now for hands-free capture, but the voice timer behind that pick is Premium, and the entry also calls it one of the better apps for compare. Decide which pick it gets, and whether "Beginner all-in-one" fits.\]</mark>
 

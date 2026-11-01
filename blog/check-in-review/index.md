@@ -2,12 +2,26 @@
 title: "Check-In: Physique Review (2026)"
 description: "By Mark Stepchin · Draft stub, not published [CONFIRM: publish date] Check-In: Physique is free with no in-app purchases and has the cleanest privacy label I found: Data Not."
 draft: true
+app_store:
+  # Copied from the US App Store listing on the date in checked. Update all values together.
+  id: 6761781961
+  name: "Check-In: Physique"
+  developer: "Bryan Mc Namara"
+  developer_url: "https://check-in.fit/"
+  rating: 0
+  rating_count: 0
+  min_ios: "26.0"
+  url: "https://apps.apple.com/us/app/check-in-physique/id6761781961"
+  icon: "assets/app-icons/check-in.webp"
+  checked: 2026-11-01
 card_blurb: "Free, with the cleanest privacy label I found. No hands-on scores yet."
 ---
 
 **Check-In: Physique is free with no in-app purchases and has the cleanest privacy label I found: Data Not Collected.** It uses no AI by design. It needs iOS 26, so older iPhones can't run it. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[Sourced: roundup draft-v8\]</mark>
 
 I built Recomp, a free progress photo app that competes with this one. No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>.
+
+<!-- app-store-card -->
 
 This review expands the [Check-In entry](/blog/best-progress-photo-apps/#check-in) in my [roundup of the best progress photo apps](/blog/best-progress-photo-apps/), where every app went through the same test kit and scorecard.
 

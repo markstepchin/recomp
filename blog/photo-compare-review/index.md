@@ -4,6 +4,18 @@ seo_title: "Photo Compare Before After Review (2026) | Recomp"
 description: "I tested Photo Compare Before After with my own progress photos. Alignment is decent, the free version compares two photos and shows ads, and it makes an image, not a weekly record."
 draft: true
 breadcrumb: "Best progress photo apps"
+app_store:
+  # Copied from the US App Store listing on the date in checked. Update all values together.
+  id: 1537250336
+  name: "Photo Compare - Before & After"
+  developer: "Devnex"
+  developer_url: "https://devnex.nl/"
+  rating: 4.5
+  rating_count: 2650
+  min_ios: "16.0"
+  url: "https://apps.apple.com/us/app/photo-compare-before-after/id1537250336"
+  icon: "assets/app-icons/photo-compare.webp"
+  checked: 2026-11-01
 summary: |
   **Photo Compare is a before/after image maker, and its alignment is decent.** The free version compares two photos and shows ads. It doesn't keep a weekly record of check-ins, so it fits one before/after, not tracking. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer; "doesn't keep a weekly record" needs Mark's check\]</mark>
 summary_heading: "Quick Answer"
@@ -13,6 +25,8 @@ card_blurb: "Decent alignment for one before/after, with ads in the free version
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
 
 **Full disclosure: I build Recomp, a free progress photo app.** No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>. Photo Compare appears in my [roundup](/blog/best-progress-photo-apps/) and my [free options guide](/blog/best-free-progress-photo-apps/), tested with [the same kit](/blog/how-i-test-progress-photo-apps/).
+
+<!-- app-store-card -->
 
 ## What it costs {#what-it-costs}
 

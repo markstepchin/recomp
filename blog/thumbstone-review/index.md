@@ -5,6 +5,18 @@ description: "I tested Thumbstone's Progress Pics with my own progress photos. A
 draft: true
 og_image: ./thumbstone-compare-slider.jpg
 breadcrumb: "Best progress photo apps"
+app_store:
+  # Copied from the US App Store listing on the date in checked. Update all values together.
+  id: 6758867697
+  name: "Progress Pics: Body Tracker"
+  developer: "Thumbstone Labs"
+  developer_url: "https://www.bodytrackerapp.com/"
+  rating: 4.6
+  rating_count: 47
+  min_ios: "16.4"
+  url: "https://apps.apple.com/us/app/progress-pics-body-tracker/id6758867697"
+  icon: "assets/app-icons/thumbstone.webp"
+  checked: 2026-11-01
 summary: |
   **Progress Pics: Body Tracker, by Thumbstone Labs, has the auto-align I'd recommend as a first pass.** About 3 in 4 of my shirtless photos landed right, and clothed photos would likely do worse. It has side by side, a slider, an overlay and a time-lapse, more modes than any other app I graded. It isn't the most intuitive app, and manual alignment is sluggish, but it's quite powerful. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending the full test\]</mark>
 summary_heading: "Quick Answer"
@@ -14,6 +26,8 @@ card_blurb: "Auto-align landed about 3 in 4 of my shirtless photos, with the mos
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
 
 **Full disclosure: I build Recomp, a free progress photo app that competes with this one.** No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>. Recomp doesn't auto-align photos today, so this is the app I point people to when they want it. This review expands the [Thumbstone entry](/blog/best-progress-photo-apps/#thumbstone) in my [roundup of the best progress photo apps](/blog/best-progress-photo-apps/), scored with [the same kit](/blog/how-i-test-progress-photo-apps/).
+
+<!-- app-store-card -->
 
 <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: Mark's Oct 4 notes call "the app with built-in alignment" the one he liked most; Alfred thinks that's Thumbstone. Confirm before using "favorite" anywhere.\]</mark>
 

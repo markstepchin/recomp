@@ -4,6 +4,18 @@ seo_title: "Body Tracker: Photo & Measure (Igor Korolev) Review (2026) | Recomp"
 description: "I tested Igor Korolev's Body Tracker with my own progress photos. Pro is $7.99 once. Manual alignment exists, but it didn't save, and compare makes you rebuild the pair to change one photo."
 draft: true
 breadcrumb: "Best progress photo apps"
+app_store:
+  # Copied from the US App Store listing on the date in checked. Update all values together.
+  id: 1265152738
+  name: "Body tracker: Photo & measure"
+  developer: "Igor Korolev"
+  developer_url: "https://bodytracker.app/"
+  rating: 4.4
+  rating_count: 635
+  min_ios: "15.6"
+  url: "https://apps.apple.com/us/app/body-tracker-photo-measure/id1265152738"
+  icon: "assets/app-icons/body-tracker-korolev.webp"
+  checked: 2026-11-01
 summary: |
   **Body Tracker by Igor Korolev has a one-time Pro price and a decent camera, but its compare step got in my way.** Pro is $7.99 once. It has manual alignment, but my adjustments didn't save. To change one photo in a comparison, I had to delete the compare view and pick both photos again. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer\]</mark>
 summary_heading: "Quick Answer"
@@ -13,6 +25,8 @@ card_blurb: "A one-time $7.99 Pro, but my manual alignment didn't save."
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
 
 **Full disclosure: I build Recomp, a free progress photo app that competes with this one.** No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>. This review expands the [Body Tracker entry](/blog/best-progress-photo-apps/) in my [roundup of the best progress photo apps](/blog/best-progress-photo-apps/), scored with [the same kit](/blog/how-i-test-progress-photo-apps/).
+
+<!-- app-store-card -->
 
 <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: three apps are called "Body Tracker" (this one, Thumbstone's Progress Pics: Body Tracker, and Body Tracker - Photo Journey). Name the seller, Igor Korolev, in the title and first mention.\]</mark>
 

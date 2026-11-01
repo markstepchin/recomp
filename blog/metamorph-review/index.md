@@ -5,6 +5,18 @@ description: "I tested Metamorph with my own progress photos. Its ghost overlay 
 draft: true
 og_image: ./metamorph-compare-2x1.jpg
 breadcrumb: "Best progress photo apps"
+app_store:
+  # Copied from the US App Store listing on the date in checked. Update all values together.
+  id: 6544789120
+  name: "Body Progress Pics: Metamorph"
+  developer: "Tiny Ideas Pty Ltd"
+  developer_url: "https://tinyideas.net/"
+  rating: 4.3
+  rating_count: 70
+  min_ios: "18.0"
+  url: "https://apps.apple.com/us/app/body-progress-pics-metamorph/id6544789120"
+  icon: "assets/app-icons/metamorph.webp"
+  checked: 2026-11-01
 summary: |
   **I don't recommend Metamorph.** It's expensive for a general-purpose before/after app: $129.99 lifetime, the most of any app I graded. Its ghost overlay helps at capture, but it has no weight logging, and you place every compare photo by hand. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending the full test\]</mark>
 summary_heading: "Quick Answer"
@@ -14,6 +26,8 @@ card_blurb: "The priciest lifetime plan I found, and you place every compare pho
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
 
 **Full disclosure: I build Recomp, a free progress photo app that competes with this one.** No app pays me <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no ads, affiliate links or partner deals\]</mark>. This review expands the [Metamorph entry](/blog/best-progress-photo-apps/#metamorph) in my [roundup of the best progress photo apps](/blog/best-progress-photo-apps/), scored with [the same kit](/blog/how-i-test-progress-photo-apps/).
+
+<!-- app-store-card -->
 
 ## What it costs {#what-it-costs}
 
