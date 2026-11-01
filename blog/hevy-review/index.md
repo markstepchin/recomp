@@ -149,6 +149,8 @@ Weight and waist are free. Body fat and the other measurements need Hevy Pro.
 
 ![Hevy Log Measurements screen scrolled down, with Body Fat, Lean Body Mass, Neck, Shoulder, Chest, biceps, forearms, Abdomen, Hips, thighs and calves all showing a lock icon](./hevy-locked-measurements.webp "The rest of the measurements are locked."){.phone}
 
+![Hevy Health Access sheet with Allow Hevy to write listing Active Energy, Body Fat Percentage, Lean Body Mass, Waist Circumference, Weight (turned on) and Workouts, then Allow Hevy to read starting with Active Energy, Body Fat Percentage, Date of Birth and Heart Rate](./hevy-health-access.webp "Health Access: Hevy can write your weight to Apple Health."){.phone}
+
 </div>
 
 ## Alignment {#alignment}
