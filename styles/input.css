@@ -427,3 +427,23 @@ html[data-theme="dark"] .device__frame {
   color: var(--color-muted);
 }
 
+
+/* Two or more phone screenshots in a row (blog): side by side, swipes horizontally on narrow screens like the homepage steps. */
+.phone-row {
+  display: flex;
+  justify-content: safe center;
+  gap: 1rem;
+  margin-top: 3rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.phone-row::-webkit-scrollbar { display: none; }
+.phone-row > figure {
+  flex: 0 0 min(70%, 280px);
+  width: auto;
+  max-width: none;
+  margin: 0;
+  scroll-snap-align: center;
+}

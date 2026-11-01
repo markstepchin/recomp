@@ -71,9 +71,13 @@ Either way, you can crop, rotate, pan and zoom before saving. That's the only ch
 
 Weight and waist are free. Body fat and the other measurements need Hevy Pro.
 
+<div class="phone-row">
+
 ![Hevy Log Measurements screen dated 30 October 2026 with one progress picture, then Body Weight and Waist fields open to fill in and Body Fat and the measurements below it showing a lock icon](./hevy-log-measurements.webp "Log Measurements: one progress picture, and weight and waist are free."){.phone}
 
 ![Hevy Log Measurements screen scrolled down, with Body Fat, Lean Body Mass, Neck, Shoulder, Chest, biceps, forearms, Abdomen, Hips, thighs and calves all showing a lock icon](./hevy-locked-measurements.webp "The rest of the measurements are locked."){.phone}
+
+</div>
 
 ## Alignment {#alignment}
 
@@ -89,11 +93,15 @@ What Hevy does have: the in-app camera's overlay, and a Transform step with crop
 
 **The single view doesn't let the photos go edge to edge.** The photo sits between grey bars and doesn't fill the width, and there's no full-screen photo viewer.
 
-![Hevy Progress Pictures screen in Single mode showing a photo from 4 Aug 2025 at 155 lbs with grey bars on both sides, above a filmstrip of three check-ins](./hevy-single-view.webp "Progress Pictures, Single mode. The photo doesn't fill the width."){.phone}
-
 The side-by-side view is better. Both photos fill the screen edge to edge.
 
+<div class="phone-row">
+
+![Hevy Progress Pictures screen in Single mode showing a photo from 4 Aug 2025 at 155 lbs with grey bars on both sides, above a filmstrip of three check-ins](./hevy-single-view.webp "Progress Pictures, Single mode. The photo doesn't fill the width."){.phone}
+
 ![Hevy Progress Pictures screen in Comparison mode with photos from 10 Oct 2024 and 4 Aug 2025 side by side above a filmstrip of check-ins](./hevy-comparison.webp "Progress Pictures, Comparison mode, with the filmstrip below."){.phone}
+
+</div>
 
 Alignment comes up again here. You can manually align two photos in the compare view, but the alignment isn't saved, so next week you start over.
 
