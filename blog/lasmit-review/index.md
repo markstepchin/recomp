@@ -5,6 +5,7 @@ description: "I tested Lasmit's Progress, the oldest app in my roundup with 9,35
 draft: true
 og_image: ./lasmit-my-results.jpg
 breadcrumb: "Best progress photo apps"
+template: app-review
 app_store:
   # Copied from the US App Store listing on the date in checked. Update all values together.
   id: 583840813
@@ -21,6 +22,63 @@ app_store:
 summary: |
   **Lasmit's "Progress" is the app I'd send you to for measurement history and Apple Health, not for photos.** It has 9,355 ratings since 2012, the most of any dedicated app I tested, and two-way Apple Health sync. I can tell someone put a lot of effort into it, but everything feels awkward, and using it gave me a headache. Compare works only in landscape. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending the full test\]</mark>
 card_blurb: "A measurement tracker first, with two-way Apple Health sync. Compare works only in landscape."
+# Visible 'How I tested' line. Empty until Mark fills it; renders [CONFIRM] on drafts.
+how_tested:
+  device: ""        # e.g. the iPhone model, from Settings > General > About
+  ios: ""           # iOS version during the test
+  app_version: ""   # app version tested, from the App Store page or the app's About screen
+  started: ""       # YYYY-MM-DD, first day of testing
+  ended: ""         # YYYY-MM-DD, last day of testing
+  checkins: ""      # number of check-ins added during the test
+
+# Mark's hand measurements. Leave empty until measured; never estimate.
+measurements:
+  taps_per_checkin: ""      # weight plus front, side and back photos, from the home screen to saved
+  seconds_per_checkin: ""   # same flow, stopwatch
+  import_photo_count: ""    # N photos in the bulk import test
+  import_seconds: ""        # time to import those N photos
+
+scorecard:
+  # A check-in should be effortless
+  checkin_time: { status: missing, fact: "A check-in is a multi-page form" }  # L39
+  photo_picker: { status: confirm, fact: "[CONFIRM]" }
+  weight_apple_health: { status: has, fact: "Two-way Apple Health sync that imports past data" }  # L55
+  weight_quick_entry: { status: has, fact: "Weight scroller" }  # L39
+  data_together: { status: has, fact: "Weight, BMI and photos on one results screen" }  # L41
+  # Alignment should be effortless
+  auto_align: { status: missing, fact: "No auto-align" }  # L45
+  ghost_overlay: { status: confirm, fact: "[CONFIRM]" }  # Smart Overlay exists but is off by default (L45). Mark to decide partial vs has.
+  gridlines: { status: confirm, fact: "[CONFIRM]" }
+  manual_align: { status: missing, fact: "No alignment" }  # L45
+  align_in_compare: { status: missing, fact: "No alignment" }  # L45
+  # Comparison should be effortless
+  compare_speed: { status: partial, fact: "A date stepper, plus jump to a date" }  # L49
+  compare_scale: { status: confirm, fact: "[CONFIRM]" }
+  side_by_side: { status: partial, fact: "Side by side in landscape only" }  # L49
+  slider_view: { status: confirm, fact: "[CONFIRM]" }
+  overlay_view: { status: confirm, fact: "[CONFIRM]" }
+  # The photos are the star
+  photo_focus: { status: confirm, fact: "[CONFIRM]" }
+  # Data privacy
+  photos_on_device: { status: confirm, fact: "[CONFIRM]" }  # L67: photos sync to your own iCloud once you switch it on. Whether anything else leaves the device isn't stated.
+  privacy_label: { status: partial, fact: "The policy names more services than the label" }  # L69
+  # Quality of life
+  bulk_import: { status: missing, fact: "No bulk import in its docs" }  # L63
+  data_import_export: { status: confirm, fact: "[CONFIRM]" }
+  app_lock: { status: confirm, fact: "[CONFIRM]" }  # No app lock fact found in the review on this commit.
+  backup_transfer: { status: has, fact: "iCloud sync carries over to a new phone" }  # L67
+  reminders: { status: has, fact: "Reminders that store reviewers thank it for" }  # L75
+  in_app_camera: { status: partial, fact: "Camera with a timer; overlay off by default" }  # L39, L45
+  units: { status: confirm, fact: "[CONFIRM]" }
+  body_measurements: { status: has, fact: "17 measurements plus 10 custom ones" }  # L55
+  sharing: { status: confirm, fact: "[CONFIRM]" }
+  timelapse: { status: confirm, fact: "[CONFIRM]" }
+  no_account: { status: confirm, fact: "[CONFIRM]" }
+  originals_untouched: { status: confirm, fact: "[CONFIRM]" }
+  edit_date: { status: confirm, fact: "[CONFIRM]" }
+  partial_checkin: { status: confirm, fact: "[CONFIRM]" }
+  dark_mode: { status: confirm, fact: "[CONFIRM]" }
+  no_ads: { status: confirm, fact: "[CONFIRM]" }
 ---
 
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
@@ -213,6 +271,7 @@ Tested: <!-- TODO(Mark): month tested and app version. --> {#when-tested}
 
 Questions or corrections: support@progressphotos.app
 
+<!-- scorecard -->
 <!-- chrome:author-bio depth="2" -->
 <aside
 class="mt-12 flex flex-wrap items-center gap-4 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] sm:flex-nowrap sm:items-start"

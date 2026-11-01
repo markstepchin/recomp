@@ -3,6 +3,7 @@ title: "Body Tracker - Photo Journey Review (2026)"
 description: "By Mark Stepchin · Draft stub, not published [CONFIRM: publish date] Photo Journey is built for fixed-length challenges like 75 Hard, and its privacy label says Data Used to Track."
 draft: true
 breadcrumb: "Best progress photo apps"
+template: app-review
 app_store:
   # Copied from the US App Store listing on the date in checked. Update all values together.
   id: 6499454966
@@ -21,6 +22,64 @@ summary: |
   **Photo Journey is built for fixed-length challenges like 75 Hard, and its privacy label says Data Used to Track You.** It started as a daily timelapse app before it turned to body progress. Unlimited photos need a subscription. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[Sourced: roundup draft-v8\]</mark>
 
   <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: three sentences after hands-on testing.\]</mark>
+# Scorecard facts: Most are '[Sourced: roundup draft-v8]' in this review, not hands-on. Retest before publishing.
+# Visible 'How I tested' line. Empty until Mark fills it; renders [CONFIRM] on drafts.
+how_tested:
+  device: ""        # e.g. the iPhone model, from Settings > General > About
+  ios: ""           # iOS version during the test
+  app_version: ""   # app version tested, from the App Store page or the app's About screen
+  started: ""       # YYYY-MM-DD, first day of testing
+  ended: ""         # YYYY-MM-DD, last day of testing
+  checkins: ""      # number of check-ins added during the test
+
+# Mark's hand measurements. Leave empty until measured; never estimate.
+measurements:
+  taps_per_checkin: ""      # weight plus front, side and back photos, from the home screen to saved
+  seconds_per_checkin: ""   # same flow, stopwatch
+  import_photo_count: ""    # N photos in the bulk import test
+  import_seconds: ""        # time to import those N photos
+
+scorecard:
+  # A check-in should be effortless
+  checkin_time: { status: confirm, fact: "[CONFIRM]" }
+  photo_picker: { status: confirm, fact: "[CONFIRM]" }
+  weight_apple_health: { status: confirm, fact: "[CONFIRM]" }
+  weight_quick_entry: { status: confirm, fact: "[CONFIRM]" }
+  data_together: { status: has, fact: "Notes on each photo" }  # L40
+  # Alignment should be effortless
+  auto_align: { status: confirm, fact: "[CONFIRM]" }
+  ghost_overlay: { status: has, fact: "Ghost Mode" }  # L39
+  gridlines: { status: confirm, fact: "[CONFIRM]" }
+  manual_align: { status: confirm, fact: "[CONFIRM]" }
+  align_in_compare: { status: confirm, fact: "[CONFIRM]" }
+  # Comparison should be effortless
+  compare_speed: { status: confirm, fact: "[CONFIRM]" }
+  compare_scale: { status: confirm, fact: "[CONFIRM]" }
+  side_by_side: { status: has, fact: "Side-by-side compare" }  # L45
+  slider_view: { status: confirm, fact: "[CONFIRM]" }  # L45 says 'swipe compare'; Mark to confirm it's a slider.
+  overlay_view: { status: confirm, fact: "[CONFIRM]" }
+  # The photos are the star
+  photo_focus: { status: confirm, fact: "[CONFIRM]" }
+  # Data privacy
+  photos_on_device: { status: partial, fact: "Its policy says photos may be uploaded; a save-in-app-only option exists" }  # L54, L55
+  privacy_label: { status: missing, fact: "The label includes Data Used to Track You" }  # L54
+  # Quality of life
+  bulk_import: { status: has, fact: "Bulk import uses each photo's capture date" }  # L50
+  data_import_export: { status: confirm, fact: "[CONFIRM]" }
+  app_lock: { status: confirm, fact: "[CONFIRM]" }
+  backup_transfer: { status: confirm, fact: "[CONFIRM]" }
+  reminders: { status: confirm, fact: "[CONFIRM]" }
+  in_app_camera: { status: has, fact: "Ghost Mode and a countdown" }  # L39
+  units: { status: confirm, fact: "[CONFIRM]" }
+  body_measurements: { status: confirm, fact: "[CONFIRM]" }
+  sharing: { status: confirm, fact: "[CONFIRM]" }
+  timelapse: { status: has, fact: "HD timelapse and GIF export" }  # L45
+  no_account: { status: confirm, fact: "[CONFIRM]" }
+  originals_untouched: { status: confirm, fact: "[CONFIRM]" }
+  edit_date: { status: confirm, fact: "[CONFIRM]" }
+  partial_checkin: { status: confirm, fact: "[CONFIRM]" }
+  dark_mode: { status: confirm, fact: "[CONFIRM]" }
+  no_ads: { status: confirm, fact: "[CONFIRM]" }
 ---
 
 **I built Recomp, a free progress photo app that competes with this one.**
@@ -71,6 +130,8 @@ This review expands the [Photo Journey entry](/blog/best-progress-photo-apps/#ph
 ## FAQ {#faq}
 
 <!-- TODO(Mark): questions readers ask about Photo Journey, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
+
+<!-- scorecard -->
 
 ---
 

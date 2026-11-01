@@ -5,6 +5,7 @@ description: "I tested Thumbstone's Progress Pics with my own progress photos. A
 draft: true
 og_image: ./thumbstone-compare-slider.jpg
 breadcrumb: "Best progress photo apps"
+template: app-review
 app_store:
   # Copied from the US App Store listing on the date in checked. Update all values together.
   id: 6758867697
@@ -21,6 +22,63 @@ app_store:
 summary: |
   **Progress Pics: Body Tracker, by Thumbstone Labs, has the auto-align I'd recommend as a first pass.** About 3 in 4 of my shirtless photos landed right, and clothed photos would likely do worse. It has side by side, a slider, an overlay and a time-lapse, more modes than any other app I graded. It isn't the most intuitive app, and manual alignment is sluggish, but it's quite powerful. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending the full test\]</mark>
 card_blurb: "Auto-align landed about 3 in 4 of my shirtless photos, with the most compare modes I found."
+# Visible 'How I tested' line. Empty until Mark fills it; renders [CONFIRM] on drafts.
+how_tested:
+  device: ""        # e.g. the iPhone model, from Settings > General > About
+  ios: ""           # iOS version during the test
+  app_version: ""   # app version tested, from the App Store page or the app's About screen
+  started: ""       # YYYY-MM-DD, first day of testing
+  ended: ""         # YYYY-MM-DD, last day of testing
+  checkins: ""      # number of check-ins added during the test
+
+# Mark's hand measurements. Leave empty until measured; never estimate.
+measurements:
+  taps_per_checkin: ""      # weight plus front, side and back photos, from the home screen to saved
+  seconds_per_checkin: ""   # same flow, stopwatch
+  import_photo_count: ""    # N photos in the bulk import test
+  import_seconds: ""        # time to import those N photos
+
+scorecard:
+  # A check-in should be effortless
+  checkin_time: { status: confirm, fact: "[CONFIRM]" }
+  photo_picker: { status: confirm, fact: "[CONFIRM]" }
+  weight_apple_health: { status: confirm, fact: "[CONFIRM]" }
+  weight_quick_entry: { status: confirm, fact: "[CONFIRM]" }
+  data_together: { status: has, fact: "Date and weight on each photo" }  # L61
+  # Alignment should be effortless
+  auto_align: { status: has, fact: "Snaps shoulders and hips to guides; about 3 in 4 shirtless photos landed right" }  # L21, L43 | L43 has its own [CONFIRM].
+  ghost_overlay: { status: missing, fact: "No ghost overlay" }  # L39
+  gridlines: { status: confirm, fact: "[CONFIRM]" }
+  manual_align: { status: partial, fact: "Manual alignment, but sluggish" }  # L45
+  align_in_compare: { status: confirm, fact: "[CONFIRM]" }
+  # Comparison should be effortless
+  compare_speed: { status: confirm, fact: "[CONFIRM]" }
+  compare_scale: { status: confirm, fact: "[CONFIRM]" }
+  side_by_side: { status: has, fact: "Side by side" }  # L51
+  slider_view: { status: has, fact: "Slider" }  # L51
+  overlay_view: { status: has, fact: "Overlay with an opacity slider" }  # L51
+  # The photos are the star
+  photo_focus: { status: confirm, fact: "[CONFIRM]" }
+  # Data privacy
+  photos_on_device: { status: has, fact: "No uploads, per its listing" }  # L67
+  privacy_label: { status: partial, fact: "Data Not Linked to You; the policy also mentions approximate location" }  # L67
+  # Quality of life
+  bulk_import: { status: partial, fact: "Camera roll import; reading metadata dates unclear" }  # L61
+  data_import_export: { status: partial, fact: "Exports photos and videos" }  # L69
+  app_lock: { status: confirm, fact: "[CONFIRM]" }
+  backup_transfer: { status: missing, fact: "No in-app backup; deleting the app deletes your photos" }  # L69
+  reminders: { status: confirm, fact: "[CONFIRM]" }
+  in_app_camera: { status: partial, fact: "Camera with a timer, no ghost overlay" }  # L39
+  units: { status: confirm, fact: "[CONFIRM]" }
+  body_measurements: { status: confirm, fact: "[CONFIRM]" }
+  sharing: { status: has, fact: "Every compare mode can be shared, with face blur" }  # L51
+  timelapse: { status: has, fact: "Time-lapse with playback controls" }  # L51
+  no_account: { status: has, fact: "No account" }  # L67
+  originals_untouched: { status: confirm, fact: "[CONFIRM]" }
+  edit_date: { status: confirm, fact: "[CONFIRM]" }
+  partial_checkin: { status: confirm, fact: "[CONFIRM]" }
+  dark_mode: { status: confirm, fact: "[CONFIRM]" }
+  no_ads: { status: confirm, fact: "[CONFIRM]" }
 ---
 
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
@@ -213,6 +271,7 @@ Tested: <!-- TODO(Mark): month tested and app version. --> {#when-tested}
 
 Questions or corrections: support@progressphotos.app
 
+<!-- scorecard -->
 <!-- chrome:author-bio depth="2" -->
 <aside
 class="mt-12 flex flex-wrap items-center gap-4 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] sm:flex-nowrap sm:items-start"

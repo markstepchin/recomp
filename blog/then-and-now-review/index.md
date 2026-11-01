@@ -5,6 +5,7 @@ description: "I tested Then & Now with my own progress photos. Its import reads 
 draft: true
 og_image: ./thenandnow-compare-1x1.jpg
 breadcrumb: "Best progress photo apps"
+template: app-review
 app_store:
   # Copied from the US App Store listing on the date in checked. Update all values together.
   id: 6758411454
@@ -21,6 +22,63 @@ app_store:
 summary: |
   **Then &amp; Now is one of the better compare apps I tested, and the one I picked for hands-free capture.** Its voice timer is the only one I found, but it needs Premium. Bulk import reads each photo's date and asks for a weight, which made my old photos easy to bring in. Alignment works, but it's buried in each photo's Adjust &amp; Crop. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending the full test\]</mark>
 card_blurb: "A voice timer, an import that reads each photo's date, and a buried align tool."
+# Visible 'How I tested' line. Empty until Mark fills it; renders [CONFIRM] on drafts.
+how_tested:
+  device: ""        # e.g. the iPhone model, from Settings > General > About
+  ios: ""           # iOS version during the test
+  app_version: ""   # app version tested, from the App Store page or the app's About screen
+  started: ""       # YYYY-MM-DD, first day of testing
+  ended: ""         # YYYY-MM-DD, last day of testing
+  checkins: ""      # number of check-ins added during the test
+
+# Mark's hand measurements. Leave empty until measured; never estimate.
+measurements:
+  taps_per_checkin: ""      # weight plus front, side and back photos, from the home screen to saved
+  seconds_per_checkin: ""   # same flow, stopwatch
+  import_photo_count: ""    # N photos in the bulk import test
+  import_seconds: ""        # time to import those N photos
+
+scorecard:
+  # A check-in should be effortless
+  checkin_time: { status: confirm, fact: "[CONFIRM]" }
+  photo_picker: { status: confirm, fact: "[CONFIRM]" }
+  weight_apple_health: { status: has, fact: "Weight syncs with Apple Health" }  # L69
+  weight_quick_entry: { status: confirm, fact: "[CONFIRM]" }
+  data_together: { status: has, fact: "Date and weight on each photo" }  # L55
+  # Alignment should be effortless
+  auto_align: { status: confirm, fact: "[CONFIRM]" }
+  ghost_overlay: { status: partial, fact: "Ghost overlay with Premium" }  # L35, L39
+  gridlines: { status: confirm, fact: "[CONFIRM]" }  # L39 mentions body silhouettes in the camera; counted under in-app camera.
+  manual_align: { status: partial, fact: "Pan, zoom, rotate and straighten, one photo at a time" }  # L49
+  align_in_compare: { status: missing, fact: "Only inside each photo's crop and align screen" }  # L49
+  # Comparison should be effortless
+  compare_speed: { status: confirm, fact: "[CONFIRM]" }
+  compare_scale: { status: confirm, fact: "[CONFIRM]" }
+  side_by_side: { status: has, fact: "2x1 and 1x1 layouts" }  # L55
+  slider_view: { status: has, fact: "Slider" }  # L55
+  overlay_view: { status: confirm, fact: "[CONFIRM]" }
+  # The photos are the star
+  photo_focus: { status: confirm, fact: "[CONFIRM]" }
+  # Data privacy
+  photos_on_device: { status: has, fact: "On device; iCloud sync is off by default" }  # L61, L63
+  privacy_label: { status: has, fact: "Data Not Collected" }  # L61
+  # Quality of life
+  bulk_import: { status: has, fact: "Bulk import reads each photo's date taken" }  # L43 | L191 says Mark still needs to confirm how import sets each entry's date.
+  data_import_export: { status: partial, fact: "Optional Save to Camera Roll" }  # L63
+  app_lock: { status: partial, fact: "Face ID per album with Premium" }  # L35, L61
+  backup_transfer: { status: partial, fact: "Optional iCloud sync, off by default" }  # L63
+  reminders: { status: confirm, fact: "[CONFIRM]" }
+  in_app_camera: { status: has, fact: "Voice timer, body silhouettes and a ghost (Premium)" }  # L35, L39
+  units: { status: confirm, fact: "[CONFIRM]" }
+  body_measurements: { status: has, fact: "Measurements sync with Apple Health" }  # L69
+  sharing: { status: partial, fact: "Free exports carry a watermark" }  # L35
+  timelapse: { status: partial, fact: "Video time-lapse with Premium" }  # L35, L55
+  no_account: { status: has, fact: "No account" }  # L61
+  originals_untouched: { status: confirm, fact: "[CONFIRM]" }
+  edit_date: { status: confirm, fact: "[CONFIRM]" }
+  partial_checkin: { status: confirm, fact: "[CONFIRM]" }
+  dark_mode: { status: confirm, fact: "[CONFIRM]" }
+  no_ads: { status: confirm, fact: "[CONFIRM]" }  # L61: policy says no advertising identifiers; ads themselves aren't covered.
 ---
 
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
@@ -207,6 +265,7 @@ Tested: <!-- TODO(Mark): month tested and app version. --> {#when-tested}
 
 Questions or corrections: support@progressphotos.app
 
+<!-- scorecard -->
 <!-- chrome:author-bio depth="2" -->
 <aside
 class="mt-12 flex flex-wrap items-center gap-4 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] sm:flex-nowrap sm:items-start"

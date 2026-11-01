@@ -5,6 +5,7 @@ description: "I tested Fit-Stitch with my own progress photos. It's the only pai
 draft: true
 og_image: ./fit-stitch-entry-form.jpg
 breadcrumb: "Best progress photo apps"
+template: app-review
 app_store:
   # Copied from the US App Store listing on the date in checked. Update all values together.
   id: 711835190
@@ -21,6 +22,63 @@ app_store:
 summary: |
   **Fit-Stitch is the only paid progress photo app I tested with no subscription: $4.99 once.** It syncs to your own iCloud, the likeliest answer here to "what if I lose my phone?" Logging is one clean form. Comparing is the weak spot, because every comparison is a card built in its own form, with no alignment. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending design, performance and backup scores\]</mark>
 card_blurb: "$4.99 once with iCloud sync, but every comparison is its own form."
+# Visible 'How I tested' line. Empty until Mark fills it; renders [CONFIRM] on drafts.
+how_tested:
+  device: ""        # e.g. the iPhone model, from Settings > General > About
+  ios: ""           # iOS version during the test
+  app_version: ""   # app version tested, from the App Store page or the app's About screen
+  started: ""       # YYYY-MM-DD, first day of testing
+  ended: ""         # YYYY-MM-DD, last day of testing
+  checkins: ""      # number of check-ins added during the test
+
+# Mark's hand measurements. Leave empty until measured; never estimate.
+measurements:
+  taps_per_checkin: ""      # weight plus front, side and back photos, from the home screen to saved
+  seconds_per_checkin: ""   # same flow, stopwatch
+  import_photo_count: ""    # N photos in the bulk import test
+  import_seconds: ""        # time to import those N photos
+
+scorecard:
+  # A check-in should be effortless
+  checkin_time: { status: confirm, fact: "[CONFIRM]" }
+  photo_picker: { status: has, fact: "Several photos on one form" }  # L37
+  weight_apple_health: { status: confirm, fact: "[CONFIRM]" }
+  weight_quick_entry: { status: confirm, fact: "[CONFIRM]" }
+  data_together: { status: has, fact: "Date, weight, tags and photos on one form" }  # L37
+  # Alignment should be effortless
+  auto_align: { status: missing, fact: "No auto-align" }  # L45
+  ghost_overlay: { status: missing, fact: "No ghost overlay" }  # L37, L45
+  gridlines: { status: confirm, fact: "[CONFIRM]" }
+  manual_align: { status: missing, fact: "No manual alignment" }  # L45
+  align_in_compare: { status: missing, fact: "No alignment" }  # L45
+  # Comparison should be effortless
+  compare_speed: { status: missing, fact: "Each comparison is its own form" }  # L49
+  compare_scale: { status: missing, fact: "No scrubbing through dates" }  # L49
+  side_by_side: { status: has, fact: "Before/after comparison cards" }  # L49, L53
+  slider_view: { status: confirm, fact: "[CONFIRM]" }
+  overlay_view: { status: confirm, fact: "[CONFIRM]" }
+  # The photos are the star
+  photo_focus: { status: confirm, fact: "[CONFIRM]" }
+  # Data privacy
+  photos_on_device: { status: has, fact: "On device, with optional private iCloud sync" }  # L61
+  privacy_label: { status: partial, fact: "The label and the policy disagree" }  # L65 | L65 is a TODO block. Publish only once the TODO is resolved.
+  # Quality of life
+  bulk_import: { status: missing, fact: "No bulk import, and dates aren't read" }  # L57
+  data_import_export: { status: confirm, fact: "[CONFIRM]" }
+  app_lock: { status: has, fact: "Face ID lock that blurs the app switcher" }  # L63
+  backup_transfer: { status: partial, fact: "iCloud sync, not a separate backup" }  # L61
+  reminders: { status: confirm, fact: "[CONFIRM]" }  # Store reviews mention reminders; not covered hands-on.
+  in_app_camera: { status: partial, fact: "Camera photos, with no ghost overlay or pose slots" }  # L37
+  units: { status: confirm, fact: "[CONFIRM]" }
+  body_measurements: { status: confirm, fact: "[CONFIRM]" }
+  sharing: { status: confirm, fact: "[CONFIRM]" }
+  timelapse: { status: confirm, fact: "[CONFIRM]" }
+  no_account: { status: has, fact: "No account" }  # L33
+  originals_untouched: { status: confirm, fact: "[CONFIRM]" }
+  edit_date: { status: confirm, fact: "[CONFIRM]" }
+  partial_checkin: { status: confirm, fact: "[CONFIRM]" }
+  dark_mode: { status: confirm, fact: "[CONFIRM]" }
+  no_ads: { status: confirm, fact: "[CONFIRM]" }  # L33 says no in-app purchases; ads aren't covered.
 ---
 
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
@@ -207,6 +265,7 @@ Tested: <!-- TODO(Mark): month tested and app version. --> {#when-tested}
 
 Questions or corrections: support@progressphotos.app
 
+<!-- scorecard -->
 <!-- chrome:author-bio depth="2" -->
 <aside
 class="mt-12 flex flex-wrap items-center gap-4 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] sm:flex-nowrap sm:items-start"

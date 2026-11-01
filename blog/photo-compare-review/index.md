@@ -4,6 +4,7 @@ seo_title: "Photo Compare Before After Review (2026) | Recomp"
 description: "I tested Photo Compare Before After with my own progress photos. Alignment is decent, the free version compares two photos and shows ads, and it makes an image, not a weekly record."
 draft: true
 breadcrumb: "Best progress photo apps"
+template: app-review
 app_store:
   # Copied from the US App Store listing on the date in checked. Update all values together.
   id: 1537250336
@@ -20,6 +21,63 @@ app_store:
 summary: |
   **Photo Compare is a before/after image maker, and its alignment is decent.** The free version compares two photos and shows ads. It doesn't keep a weekly record of check-ins, so it fits one before/after, not tracking. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer; "doesn't keep a weekly record" needs Mark's check\]</mark>
 card_blurb: "Decent alignment for one before/after, with ads in the free version."
+# Visible 'How I tested' line. Empty until Mark fills it; renders [CONFIRM] on drafts.
+how_tested:
+  device: ""        # e.g. the iPhone model, from Settings > General > About
+  ios: ""           # iOS version during the test
+  app_version: ""   # app version tested, from the App Store page or the app's About screen
+  started: ""       # YYYY-MM-DD, first day of testing
+  ended: ""         # YYYY-MM-DD, last day of testing
+  checkins: ""      # number of check-ins added during the test
+
+# Mark's hand measurements. Leave empty until measured; never estimate.
+measurements:
+  taps_per_checkin: ""      # weight plus front, side and back photos, from the home screen to saved
+  seconds_per_checkin: ""   # same flow, stopwatch
+  import_photo_count: ""    # N photos in the bulk import test
+  import_seconds: ""        # time to import those N photos
+
+scorecard:
+  # A check-in should be effortless
+  checkin_time: { status: confirm, fact: "[CONFIRM]" }
+  photo_picker: { status: confirm, fact: "[CONFIRM]" }
+  weight_apple_health: { status: confirm, fact: "[CONFIRM]" }
+  weight_quick_entry: { status: confirm, fact: "[CONFIRM]" }
+  data_together: { status: confirm, fact: "[CONFIRM]" }  # L20/L91 say it doesn't keep a weekly record of check-ins; Mark to decide missing.
+  # Alignment should be effortless
+  auto_align: { status: confirm, fact: "[CONFIRM]" }
+  ghost_overlay: { status: confirm, fact: "[CONFIRM]" }
+  gridlines: { status: confirm, fact: "[CONFIRM]" }
+  manual_align: { status: has, fact: "Alignment is decent" }  # L44
+  align_in_compare: { status: confirm, fact: "[CONFIRM]" }
+  # Comparison should be effortless
+  compare_speed: { status: confirm, fact: "[CONFIRM]" }
+  compare_scale: { status: confirm, fact: "[CONFIRM]" }
+  side_by_side: { status: has, fact: "Before and after, two photos in the free version" }  # L40
+  slider_view: { status: confirm, fact: "[CONFIRM]" }
+  overlay_view: { status: confirm, fact: "[CONFIRM]" }  # L32 says overlays are Pro; unclear if that means an overlay compare view.
+  # The photos are the star
+  photo_focus: { status: confirm, fact: "[CONFIRM]" }
+  # Data privacy
+  photos_on_device: { status: confirm, fact: "[CONFIRM]" }
+  privacy_label: { status: confirm, fact: "[CONFIRM]" }
+  # Quality of life
+  bulk_import: { status: confirm, fact: "[CONFIRM]" }
+  data_import_export: { status: confirm, fact: "[CONFIRM]" }
+  app_lock: { status: confirm, fact: "[CONFIRM]" }
+  backup_transfer: { status: confirm, fact: "[CONFIRM]" }
+  reminders: { status: confirm, fact: "[CONFIRM]" }
+  in_app_camera: { status: confirm, fact: "[CONFIRM]" }
+  units: { status: confirm, fact: "[CONFIRM]" }
+  body_measurements: { status: confirm, fact: "[CONFIRM]" }
+  sharing: { status: has, fact: "Makes a before/after image" }  # L20
+  timelapse: { status: partial, fact: "Video needs Pro" }  # L32
+  no_account: { status: confirm, fact: "[CONFIRM]" }
+  originals_untouched: { status: confirm, fact: "[CONFIRM]" }
+  edit_date: { status: confirm, fact: "[CONFIRM]" }
+  partial_checkin: { status: confirm, fact: "[CONFIRM]" }
+  dark_mode: { status: confirm, fact: "[CONFIRM]" }
+  no_ads: { status: missing, fact: "Banner ad in the free version" }  # L34
 ---
 
 <!-- TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public. -->
@@ -111,6 +169,7 @@ Tested: <!-- TODO(Mark): month tested and app version. --> {#when-tested}
 
 Questions or corrections: support@progressphotos.app
 
+<!-- scorecard -->
 <!-- chrome:author-bio depth="2" -->
 <aside
 class="mt-12 flex flex-wrap items-center gap-4 rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem] sm:flex-nowrap sm:items-start"
