@@ -17,6 +17,7 @@ app_store:
   url: "https://apps.apple.com/us/app/progress-pictures-then-now/id6758411454"
   icon: "assets/app-icons/then-and-now.webp"
   checked: 2026-11-01
+  price: "0"
 summary: |
   **Then &amp; Now is one of the better compare apps I tested, and the one I picked for hands-free capture.** Its voice timer is the only one I found, but it needs Premium. Bulk import reads each photo's date and asks for a weight, which made my old photos easy to bring in. Alignment works, but it's buried in each photo's Adjust &amp; Crop. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending the full test\]</mark>
 card_blurb: "A voice timer, an import that reads each photo's date, and a buried align tool."

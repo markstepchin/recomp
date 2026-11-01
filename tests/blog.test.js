@@ -216,7 +216,7 @@ test("unknown frontmatter keys fail", () => {
 
 const APP = {
   id: 1, name: "App", developer: "Dev", developer_url: "https://dev.example", rating: 4.7, rating_count: 2387079, min_ios: "18.0",
-  url: "https://apps.apple.com/us/app/x/id1", icon: "/assets/app-icons/x.webp", checked: new Date("2026-11-01"),
+  url: "https://apps.apple.com/us/app/x/id1", icon: "/assets/app-icons/x.webp", checked: new Date("2026-11-01"), price: "0",
 };
 
 test("app_store: all keys required, rating 0 to 5, whole count, apps.apple.com url", () => {

@@ -17,6 +17,7 @@ app_store:
   url: "https://apps.apple.com/us/app/body-progress-pics-metamorph/id6544789120"
   icon: "assets/app-icons/metamorph.webp"
   checked: 2026-11-01
+  price: "0"
 summary: |
   **I don't recommend Metamorph.** It's expensive for a general-purpose before/after app: $129.99 lifetime, the most of any app I graded. Its ghost overlay helps at capture, but it has no weight logging, and you place every compare photo by hand. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending the full test\]</mark>
 card_blurb: "The priciest lifetime plan I found, and you place every compare photo by hand."

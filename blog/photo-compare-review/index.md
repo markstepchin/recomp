@@ -16,6 +16,7 @@ app_store:
   url: "https://apps.apple.com/us/app/photo-compare-before-after/id1537250336"
   icon: "assets/app-icons/photo-compare.webp"
   checked: 2026-11-01
+  price: "0"
 summary: |
   **Photo Compare is a before/after image maker, and its alignment is decent.** The free version compares two photos and shows ads. It doesn't keep a weekly record of check-ins, so it fits one before/after, not tracking. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer; "doesn't keep a weekly record" needs Mark's check\]</mark>
 card_blurb: "Decent alignment for one before/after, with ads in the free version."

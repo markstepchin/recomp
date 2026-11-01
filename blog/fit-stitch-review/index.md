@@ -17,6 +17,7 @@ app_store:
   url: "https://apps.apple.com/us/app/fit-stitch-progress-tracker/id711835190"
   icon: "assets/app-icons/fit-stitch.webp"
   checked: 2026-11-01
+  price: "4.99"
 summary: |
   **Fit-Stitch is the only paid progress photo app I tested with no subscription: $4.99 once.** It syncs to your own iCloud, the likeliest answer here to "what if I lose my phone?" Logging is one clean form. Comparing is the weak spot, because every comparison is a card built in its own form, with no alignment. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending design, performance and backup scores\]</mark>
 card_blurb: "$4.99 once with iCloud sync, but every comparison is its own form."

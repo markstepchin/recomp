@@ -15,6 +15,7 @@ app_store:
   url: "https://apps.apple.com/us/app/check-in-physique/id6761781961"
   icon: "assets/app-icons/check-in.webp"
   checked: 2026-11-01
+  price: "0"
 card_blurb: "Free, with the cleanest privacy label I found. No hands-on scores yet."
 summary: |
   **Check-In: Physique is free with no in-app purchases and has the cleanest privacy label I found: Data Not Collected.** It uses no AI by design. It needs iOS 26, so older iPhones can't run it. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[Sourced: roundup draft-v8\]</mark>

@@ -17,6 +17,7 @@ app_store:
   url: "https://apps.apple.com/us/app/body-measurements-tracker-app/id583840813"
   icon: "assets/app-icons/lasmit.webp"
   checked: 2026-11-01
+  price: "0"
 summary: |
   **Lasmit's "Progress" is the app I'd send you to for measurement history and Apple Health, not for photos.** It has 9,355 ratings since 2012, the most of any dedicated app I tested, and two-way Apple Health sync. I can tell someone put a lot of effort into it, but everything feels awkward, and using it gave me a headache. Compare works only in landscape. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending the full test\]</mark>
 card_blurb: "A measurement tracker first, with two-way Apple Health sync. Compare works only in landscape."

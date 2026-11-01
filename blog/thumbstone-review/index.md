@@ -17,6 +17,7 @@ app_store:
   url: "https://apps.apple.com/us/app/progress-pics-body-tracker/id6758867697"
   icon: "assets/app-icons/thumbstone.webp"
   checked: 2026-11-01
+  price: "0"
 summary: |
   **Progress Pics: Body Tracker, by Thumbstone Labs, has the auto-align I'd recommend as a first pass.** About 3 in 4 of my shirtless photos landed right, and clothed photos would likely do worse. It has side by side, a slider, an overlay and a time-lapse, more modes than any other app I graded. It isn't the most intuitive app, and manual alignment is sluggish, but it's quite powerful. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer pending the full test\]</mark>
 card_blurb: "Auto-align landed about 3 in 4 of my shirtless photos, with the most compare modes I found."

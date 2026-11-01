@@ -23,6 +23,9 @@
  *   og_image fail too. TODO comments are always stripped from the output (not from code).
  *   A non-draft post with `template: app-review` must also have a summary, disclosure,
  *   app_store data and a verdict (checkTemplate). blog/_templates/ is never built.
+ * - Live links (_config/links.js): after the build, a published page that links to a page
+ *   that isn't in the build, or to a draft post, fails the build; a draft only warns. Links
+ *   inside HTML comments are skipped, which is where a link waits until its page publishes.
  *
  * BLOG_FIXTURES=1 also builds tests/fixtures/blog/*, the example draft post.
  */
@@ -31,7 +34,8 @@ import { basename, dirname, extname, join, relative } from "node:path";
 import Image from "@11ty/eleventy-img";
 import { chrome } from "./scripts/apply-chrome.js";
 import { findMismatches, stamp } from "./scripts/stamp-asset-versions.js";
-import { checkFrontmatter, checkPost, checkTemplate, indexCards, isPostPath, jsonLdBlocks, postData, slugOf, sortPosts } from "./_config/blog.js";
+import { checkFrontmatter, checkPost, checkTemplate, indexCards, isPostPath, jsonLdBlocks, postData, slugOf, sortPosts, templateWarnings } from "./_config/blog.js";
+import { checkInternalLinks } from "./_config/links.js";
 import { SIZES, markdown } from "./_config/markdown.js";
 
 const FIXTURES = process.env.BLOG_FIXTURES === "1";
@@ -77,6 +81,16 @@ async function optimizeImages(html, srcDir, outDir) {
   return html;
 }
 
+/** Every .html file under a folder, as paths relative to it. */
+// Pages the live-link check skips. claude-version.html is an archived design mockup with a
+// placeholder link to track/; it is served but nothing on the site links to it.
+const LINK_CHECK_SKIP = ["/claude-version.html"];
+
+const htmlFiles = (dir, prefix = "") =>
+  readdirSync(join(dir, prefix), { withFileTypes: true }).flatMap((d) =>
+    d.isDirectory() ? htmlFiles(dir, join(prefix, d.name)) : d.name.endsWith(".html") ? [join(prefix, d.name)] : [],
+  );
+
 const depthOf = (url) => (typeof url === "string" ? url.split("/").filter(Boolean).length : 0);
 
 /** Folders under blog/ that are Markdown posts. */
@@ -101,7 +115,7 @@ export default function (eleventyConfig) {
   for (const glob of [
     "index.html", "claude-version.html", "google6d053ef5debca997.html", "privacy.html", "support.html",
     "robots.txt", "_headers",
-    "assets/**", "js/!(*.test).js", DEV ? "styles/!(output).css" : "styles/**",
+    "assets/**", "data/**", "js/!(*.test).js", DEV ? "styles/!(output).css" : "styles/**",
   ]) {
     eleventyConfig.addPassthroughCopy(glob);
   }
@@ -142,14 +156,21 @@ export default function (eleventyConfig) {
   // (Eleventy would print a thrown error several times). TODO comments are stripped by the
   // markdown renderer (_config/markdown.js), outside code.
   const problems = new Map();
-  eleventyConfig.on("eleventy.before", () => problems.clear());
+  // URL path -> draft, for every Markdown post (the live-link check needs the drafts).
+  const postDrafts = new Map();
+  eleventyConfig.on("eleventy.before", () => {
+    problems.clear();
+    postDrafts.clear();
+  });
   eleventyConfig.addPreprocessor("blog-check", "md", (data, content) => {
     if (!isPostPath(data.page.inputPath)) return;
     const file = data.page.inputPath.replace(/^\.\//, "");
     const raw = readFileSync(file, "utf8");
     const offset = Math.max(0, raw.slice(0, raw.lastIndexOf(content)).split("\n").length - 1);
     const draft = data.draft === true;
+    postDrafts.set(`/blog/${slugOf(file)}/`, draft);
     const { errors, warnings } = checkPost(file, content, draft, offset);
+    warnings.push(...templateWarnings(file, data));
     for (const w of warnings) console.warn(`[blog] warning: ${w}`);
     if (errors.length) errors.unshift(`${file} is not a draft but still has TODO/DRAFT markers. Resolve them or set draft: true.`);
     errors.push(...checkFrontmatter(file, raw, data, (rel) => existsSync(join(dirname(file), rel))));
@@ -197,6 +218,27 @@ export default function (eleventyConfig) {
     if (problems.size) {
       const lines = [...problems.values()].flat();
       console.error(`\n[blog] ${problems.size} post(s) failed the build checks and were skipped:\n  ${lines.join("\n  ")}\n`);
+      if (!live) process.exitCode = 1;
+    }
+    // Live links: published pages link only to live pages (_config/links.js).
+    const pages = htmlFiles(OUTPUT).map((rel) => {
+      const url = `/${rel.replace(/\\/g, "/").replace(/(^|\/)index\.html$/, "$1")}`;
+      return { url, html: readFileSync(join(OUTPUT, rel), "utf8"), draft: postDrafts.get(url) === true };
+    });
+    const exists = (path) => {
+      const file = join(OUTPUT, path);
+      return (existsSync(file) && statSync(file).isFile()) || existsSync(join(file, "index.html")) || existsSync(`${file}.html`);
+    };
+    const drafts = [...postDrafts].filter(([, draft]) => draft).map(([url]) => url);
+    const links = checkInternalLinks(pages.filter((p) => !LINK_CHECK_SKIP.includes(p.url)), exists, drafts);
+    const byPage = new Map();
+    for (const w of links.warnings) {
+      const [page, rest] = w.split(": links ");
+      byPage.set(page, [...(byPage.get(page) ?? []), rest.replace(/, which is .*/, "")]);
+    }
+    for (const [page, hrefs] of byPage) console.warn(`[links] warning: draft ${page} links ${hrefs.length} page(s) that aren't live: ${hrefs.join(", ")}`);
+    if (links.errors.length) {
+      console.error(`\n[links] ${links.errors.length} link(s) on published pages point to pages that aren't live. Put them in an HTML comment until those pages publish:\n  ${links.errors.join("\n  ")}\n`);
       if (!live) process.exitCode = 1;
     }
     // Same guard as stamp-asset-versions.js, against what will be served.

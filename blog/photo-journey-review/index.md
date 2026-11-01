@@ -15,6 +15,7 @@ app_store:
   url: "https://apps.apple.com/us/app/body-tracker-photo-journey/id6499454966"
   icon: "assets/app-icons/photo-journey.webp"
   checked: 2026-11-01
+  price: "0"
 card_blurb: "Built for fixed challenges like 75 Hard. No hands-on scores yet."
 summary: |
   **Photo Journey is built for fixed-length challenges like 75 Hard, and its privacy label says Data Used to Track You.** It started as a daily timelapse app before it turned to body progress. Unlimited photos need a subscription. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[Sourced: roundup draft-v8\]</mark>

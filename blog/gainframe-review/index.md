@@ -17,6 +17,7 @@ app_store:
   url: "https://apps.apple.com/us/app/gainframe-gym-progress-photos/id6759252082"
   icon: "assets/app-icons/gainframe.webp"
   checked: 2026-11-01
+  price: "0"
 summary: |
   **GainFrame is the most polished progress photo app I tested, and with hundreds of photos it was pretty much unusable.** Its colors, icons, spacing and import loading states are the best in the category. But the UI puts AI first, my import stopped at 250 photos after about 15 minutes, and finding one date among hundreds took long scrolling. With 20 to 30 photos it probably works very well. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer; Mark's stub said to write it after re-checking the compare screens\]</mark>
 card_blurb: "The most polished app I tested, and the slowest with my real library: import stopped at 250 photos."

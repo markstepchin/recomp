@@ -16,6 +16,7 @@ app_store:
   url: "https://apps.apple.com/us/app/body-tracker-photo-measure/id1265152738"
   icon: "assets/app-icons/body-tracker-korolev.webp"
   checked: 2026-11-01
+  price: "0"
 summary: |
   **Body Tracker by Igor Korolev has a one-time Pro price and a decent camera, but its compare step got in my way.** Pro is $7.99 once. It has manual alignment, but my adjustments didn't save. To change one photo in a comparison, I had to delete the compare view and pick both photos again. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: provisional quick answer\]</mark>
 card_blurb: "A one-time $7.99 Pro, but my manual alignment didn't save."
