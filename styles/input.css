@@ -443,6 +443,15 @@ html[data-theme="dark"] .device__frame {
 }
 
 
+/* Blog phone screenshots ({.phone}): black iPhone chrome matching .device__frame. */
+.phone-shot {
+  border: 6px solid #000;
+  border-radius: 13.5% / 6.3%;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
+}
+html[data-theme="dark"] .phone-shot { box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 24px 48px rgba(0,0,0,0.4); }
+@media (prefers-color-scheme: dark) { html[data-theme="system"] .phone-shot { box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 24px 48px rgba(0,0,0,0.4); } }
+
 /* Two or more phone screenshots in a row (blog): side by side, swipes horizontally on narrow screens like the homepage steps. */
 .phone-row {
   display: flex;

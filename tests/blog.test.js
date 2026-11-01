@@ -6,7 +6,7 @@ import {
   DEFAULT_CTA, appStoreData, checkFrontmatter, compactCount, checkPost, frontmatterKeys, indexCards, jsonLd, jsonLdBlocks, llmsLines, postData,
   sitemapEntries, sortPosts,
 } from "../_config/blog.js";
-import { IMG_CLASS, PHONE_FIGURE_CLASS, PHONE_SIZES, markdown } from "../_config/markdown.js";
+import { IMG_CLASS, PHONE_FIGURE_CLASS, PHONE_SIZES, PHONE_IMG_CLASS, markdown } from "../_config/markdown.js";
 
 const FILE = "blog/x/index.md";
 const errorsOf = (body, draft = false) => checkPost(FILE, body, draft).errors;
@@ -83,7 +83,7 @@ test("images render as figures; custom classes add to the defaults", () => {
 test("{.phone} makes a narrow phone-screenshot figure with matching sizes", () => {
   const html = markdown().render("![Phone](./p.png){.phone}\n");
   assert.ok(html.startsWith(`<figure class="${PHONE_FIGURE_CLASS}">`), html);
-  assert.match(html, new RegExp(`class="${IMG_CLASS}"`));
+  assert.ok(html.includes(`class="${PHONE_IMG_CLASS}"`), html);
   assert.ok(html.includes(`sizes="${PHONE_SIZES}"`));
   assert.doesNotMatch(html, /\bphone\b"/);
 });
