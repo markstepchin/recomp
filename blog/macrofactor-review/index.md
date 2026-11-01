@@ -33,9 +33,9 @@ The gallery keeps every photo in one place and switches between front, side and 
 
 <!-- TODO(Mark): ease of alignment, gridline quality, ghost overlay, auto align, and whether I can align in the side by side view. -->
 
-**Alignment happens only in the crop step, right after you add a photo.** You can zoom and rotate there, then save. Take Photo launches the phone's camera, and I didn't find a ghost overlay, gridlines for posing or auto-align in MacroFactor's help. [CONFIRM: can you re-crop a saved photo?] Source: [How to add progress photos](https://help.macrofactorapp.com/en/articles/121-how-to-add-progress-photos).
+**You can only adjust a photo in the crop step, before you save it.** MacroFactor's help says you can zoom and rotate there. Once a photo is uploaded, I can't edit, resize or align it. Every photo is saved square. Take Photo launches the phone's camera, and I didn't find a ghost overlay, gridlines for posing or auto-align in MacroFactor's help. Source: [How to add progress photos](https://help.macrofactorapp.com/en/articles/121-how-to-add-progress-photos).
 
-![MacroFactor Crop Photo screen with a grid crop box over a mirror selfie](./macrofactor-crop-photo.webp "The Crop Photo step after uploading a photo."){.phone}
+![MacroFactor Crop Photo screen with a grid crop box over a mirror selfie](./macrofactor-crop-photo.webp "The Crop Photo step, before the photo is saved."){.phone}
 
 ## How do comparisons and collages work? {#compare}
 
