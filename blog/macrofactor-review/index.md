@@ -29,6 +29,10 @@ The gallery keeps every photo in one place and switches between front, side and 
 
 ![MacroFactor Progress Photos list grouped by month from July 2024 to August 2025, each check-in a row of three small thumbnails, with Open Gallery and Compare Before & After buttons](./macrofactor-progress-photos.webp "Progress Photos: check-ins grouped by month."){.phone}
 
+Neither gallery view uses the screen well. The single view shows one square photo with empty space below it. The compare view stacks two small square photos with the weights beside them, so the photos take up a fraction of the screen.
+
+![MacroFactor gallery single view with Front, Side and Back tabs, one square front photo dated October 31, 2026, Trend Weight and Scale Weight of 168.5 lb below it, and a large empty area above the filmstrip](./macrofactor-single-view.webp "Single view: one square photo, then empty space down to the filmstrip."){.phone}
+
 ## How does it handle alignment? {#alignment}
 
 <!-- TODO(Mark): ease of alignment, gridline quality, ghost overlay, auto align, and whether I can align in the side by side view. -->
@@ -42,6 +46,8 @@ The gallery keeps every photo in one place and switches between front, side and 
 <!-- TODO(Mark): how easy it is to compare, and the taps and time to compare 9 different dates. Can it make a shareable before/after image or a timelapse? -->
 
 Before and after stacks two photos of the same pose, one above the other. You tap the top slot and pick a photo from the ribbon of dates, then do the same for the bottom. The share image can use a plain background or one matched to the photo's colors. I didn't find a slider, overlay view or timelapse. Source: [How to create before-and-after photos](https://help.macrofactorapp.com/en/articles/123-how-to-create-and-share-before-and-after-photos).
+
+![MacroFactor gallery compare view with front photos from October 31, 2026 and August 4, 2025 stacked, each a small square photo on the left with Trend Weight and Scale Weight on the right, and mostly empty space around them](./macrofactor-compare-view.webp "Compare view: two small square photos, with the weights beside them."){.phone}
 
 ![MacroFactor gallery with Front, Side and Back tabs showing front photos from May 21, 2024 and August 4, 2025, each with Trend Weight and Scale Weight fields, above a filmstrip](./macrofactor-gallery-trend-weight.webp "The gallery: front photos by date, with Trend Weight and Scale Weight."){.phone}
 
