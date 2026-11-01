@@ -120,11 +120,11 @@ Apple keeps each pair separate because each app is optimized for a different job
 
 A progress photo app is really four apps in one: a camera roll, an alignment app, a collage app for comparisons, and a data app that keeps photos with your weight and measurements. Hevy is a workout tracker first, and its photos live under Profile > Measures. Here's how each of the four holds up through a normal weekly check-in.
 
-## The morning reminder {#reminders}
+## Adding your progress data {#adding-data}
+
+### The morning reminder {#reminders}
 
 **Hevy doesn't remind you to take progress photos or weigh in.** Its notification settings cover the rest timer, new followers, the monthly training report, emails, likes and comments. None of them is for photos, weight or measurements, so the weekly check-in reminder has to come from your own calendar. Source: [Hevy's notification settings](https://help.hevyapp.com/hc/en-us/articles/33845807003671-Account-Settings-Preferences-Profile-Information-Adjust-username-password-or-email-address-Notifications).
-
-## Adding photos and weights {#adding-data}
 
 ### Adding photos {#adding-photos}
 
