@@ -3,6 +3,8 @@
 @source "../**/*.html";
 @source "../**/*.njk";
 @source "../blog/**/*.md";
+/* "resize" in review prose (MacroFactor) would generate a stray .resize utility. */
+@source not inline("resize");
 
 @theme {
   --color-bg: #0a0a0b;
