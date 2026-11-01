@@ -62,7 +62,7 @@ scorecard:
   auto_align: { status: missing, fact: "No auto-align" }  # L100
   ghost_overlay: { status: partial, fact: "Ghost overlay in the in-app camera only, not for camera roll photos" }  # L74, L78, L100
   gridlines: { status: partial, fact: "A 3:4 crop grid while you transform the photo" }  # L102, L104
-  manual_align: { status: partial, fact: "Crop, rotate, pan and zoom before saving only" }  # L80, L98
+  manual_align: { status: partial, fact: "Camera roll photos only, before saving; none for in-app shots" }  # L80, L98
   align_in_compare: { status: confirm, fact: "[CONFIRM]" }  # CONFLICT in the review: L100 says 'no side-by-side alignment', L120 says you can manually align two photos in the compare view but it isn't saved. Mark to settle before publish.
   # Comparison should be effortless
   compare_speed: { status: confirm, fact: "[CONFIRM]" }  # Not measured yet.
@@ -133,7 +133,7 @@ A progress photo app is really four apps in one: a camera roll, an alignment app
 
 **From the camera roll.** Picking an existing photo works, but Hevy doesn't read the date from the photo. You set each photo's date by hand, so importing an old photo means typing in when you took it. Unlike the in-app camera, there's no overlay here.
 
-Either way, you can crop, rotate, pan and zoom before saving. That's the only chance you get, and the alignment tools aren't consistent between the camera and the camera roll. The next section covers why.
+For camera roll photos, you can crop, rotate, pan and zoom before saving. That's the only chance you get. Photos from the in-app camera can't be aligned at all after you take the shot, and the alignment tools aren't consistent between the camera and the camera roll. The next section covers why.
 
 ### Weights and measurements {#weights}
 
@@ -155,7 +155,7 @@ Weight and waist are free. Body fat and the other measurements need Hevy Pro.
 
 There's also no auto-align, no side-by-side alignment, and no overlay when you pick a photo from the camera roll.
 
-What Hevy does have: the in-app camera's overlay, and a Transform step with crop, rotate, pan and zoom before you save.
+What Hevy does have: the in-app camera's overlay, and a Transform step with crop, rotate, pan and zoom before you save a camera roll photo. In-app camera shots skip that step, so there's no alignment after you snap the photo.
 
 **In-app camera overlay.** The camera shows a faded ghost of your last photo over the live view, so you can match your pose and distance to last week. The camera has no zoom.
 
