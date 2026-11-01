@@ -1,0 +1,19 @@
+{#- App Store card (v3: slim bar; the whole bar links to the App Store listing). One row from sm up,
+    two short rows on phones. Data: post.appStore from app_store frontmatter (_config/blog.js appStoreData).
+    Spans only, so the post's prose wrapper styles ([&_p]:text-muted) don't reach inside. -#}
+<a class="group flex flex-wrap items-center gap-x-3 gap-y-1.5 rounded-2xl border border-card-border bg-card px-3 py-2.5 text-fg no-underline transition-colors duration-150 hover:border-accent hover:no-underline focus-visible:no-underline sm:flex-nowrap sm:rounded-full sm:py-2 sm:pl-2 sm:pr-4" href="{{ app.url }}" target="_blank" rel="noopener noreferrer" title="{{ app.name }} on the App Store. US App Store rating, checked {{ app.checkedLong }}.">
+  <img class="size-10 shrink-0 rounded-[10px] border border-card-border sm:rounded-full" src="{{ root }}{{ app.icon }}" alt="" width="40" height="40" loading="lazy" decoding="async" />
+  <span class="flex min-w-0 flex-1 flex-col gap-0.5">
+    <span class="truncate text-[15px] font-semibold leading-tight">{{ app.name }}</span>
+    <span class="truncate text-[12px] leading-tight text-muted">{{ app.developer }}</span>
+  </span>
+  <svg class="size-4 shrink-0 text-muted transition-colors duration-150 group-hover:text-accent sm:order-2" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 11l6-6M6 5h5v5" /></svg>
+  <span class="flex w-full items-center gap-2 pl-[3.25rem] text-[12px] leading-none text-muted sm:order-1 sm:w-auto sm:shrink-0 sm:pl-0">
+    <span class="flex items-center gap-1.5" aria-hidden="true">
+      {% include "app-store-stars.njk" %}
+      <span><span class="font-semibold text-fg">{{ app.ratingText }}</span> ({{ app.ratingCountShort }})</span>
+    </span>
+    <span class="rounded-full border border-card-border px-1.5 py-1 font-medium">iOS {{ app.minIos }}+</span>
+  </span>
+  <span class="sr-only">Rated {{ app.ratingText }} out of 5 from {{ app.ratingCountFull }} ratings on the US App Store, checked {{ app.checkedLong }}. Opens the App Store.</span>
+</a>
