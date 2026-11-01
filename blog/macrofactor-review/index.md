@@ -105,10 +105,10 @@ MacroFactor has dark mode and switches between pounds and kilograms. I didn't fi
 
 ---
 
-Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
+Published: [CONFIRM: publish date]
 
 Tested: October 2026 {#when-tested}
 
 <!-- TODO(Mark): confirm the test month and app version. -->
 
-There's no promise of when this page will be updated. If you think I got something wrong, email me at support@progressphotos.app.
+Questions or corrections: support@progressphotos.app
