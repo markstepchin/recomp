@@ -2,7 +2,11 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "recomp",
   "compatibility_date": "2026-09-21",
+  "build": {
+    "command": "npm run build"
+  },
   "assets": {
-    "directory": "."
+    // Eleventy output only. Source files (AGENTS.md, docs/, scripts/, partials/, package*.json) stay private.
+    "directory": "./_site"
   }
 }
