@@ -18,14 +18,12 @@ app_store:
   url: "https://apps.apple.com/us/app/myfitnesspal-calorie-counter/id341232718"
   icon: "assets/app-icons/myfitnesspal.webp"
   checked: 2026-11-01
+summary: |
+  MyFitnessPal is built around tracking weight, and photos are an add-on. MyFitnessPal has no alignment tools. Since photos attach to weigh-ins, MyFitnessPal keeps only one photo per date. MyFitnessPal's reminders are for meals, not photos or weigh-ins. [TODO: do I recommend MyFitnessPal for progress photos, and for whom.]
 ---
 
 <!-- TODO(Mark): final title, seo_title and description once the verdict is written. Add card_blurb if the /blog/ card needs a shorter line. -->
 <!-- TODO(Mark): set "published: YYYY-MM-DD" in the frontmatter and remove draft: true when this is ready. -->
-
-## Quick Answer {#quick-answer}
-
-<!-- TODO(Mark): two or three sentences: do I recommend MyFitnessPal for progress photos, and for whom. -->
 
 **Full disclosure: I build Recomp, a free progress photo app, and I hold it to the same bar as every other app.** I don't run ads, and I don't use affiliate links.
 
@@ -91,10 +89,15 @@ Photos are saved to your MyFitnessPal account on its servers, which is how they 
 
 <!-- TODO(Mark): qualitative verdict in plain words on whether I recommend it. No numeric score. -->
 
-## When was this tested? {#when-tested}
+## FAQ {#faq}
 
-- Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
-- Tested: October 2026
+<!-- TODO(Mark): questions readers ask about MyFitnessPal's progress photos, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
+
+---
+
+Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
+
+Tested: October 2026 {#when-tested}
 
 <!-- TODO(Mark): confirm the test month and app version. -->
 

@@ -18,14 +18,12 @@ app_store:
   url: "https://apps.apple.com/us/app/macrofactor-macro-tracker/id1553503471"
   icon: "assets/app-icons/macrofactor.webp"
   checked: 2026-11-01
+summary: |
+  Each date holds one front, one side and one back photo. You can only adjust a photo in the crop step, before you save it. Every photo is saved square. I didn't find a slider, overlay view or timelapse. MacroFactor doesn't remind you to weigh in or take photos. [TODO: do I recommend MacroFactor for progress photos, and for whom.]
 ---
 
 <!-- TODO(Mark): final title, seo_title and description once the verdict is written. Add card_blurb if the /blog/ card needs a shorter line. -->
 <!-- TODO(Mark): set "published: YYYY-MM-DD" in the frontmatter and remove draft: true when this is ready. -->
-
-## Quick Answer {#quick-answer}
-
-<!-- TODO(Mark): two or three sentences: do I recommend MacroFactor for progress photos, and for whom. -->
 
 **Full disclosure: I build Recomp, a free progress photo app, and I hold it to the same bar as every other app.** I don't run ads, and I don't use affiliate links.
 
@@ -101,10 +99,15 @@ MacroFactor has dark mode and switches between pounds and kilograms. I didn't fi
 
 <!-- TODO(Mark): qualitative verdict in plain words on whether I recommend it. No numeric score. -->
 
-## When was this tested? {#when-tested}
+## FAQ {#faq}
 
-- Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
-- Tested: October 2026
+<!-- TODO(Mark): questions readers ask about MacroFactor's progress photos, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
+
+---
+
+Published: <!-- TODO(Mark): publish date (also set "published:" in the frontmatter). -->
+
+Tested: October 2026 {#when-tested}
 
 <!-- TODO(Mark): confirm the test month and app version. -->
 
