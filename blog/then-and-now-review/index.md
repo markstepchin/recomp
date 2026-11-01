@@ -95,7 +95,7 @@ scorecard:
 
 ## Taking a check-in {#taking-a-check-in}
 
-**I proposed 4 out of 5 for capture.** It has a voice timer, body silhouettes and a ghost overlay, and the timer and overlay are Premium. Speech recognition runs on the device, per its policy. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: the only voice timer of the 10 apps, after testing\]</mark> <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: seconds and taps to a saved check-in\]</mark>
+It has a voice timer, body silhouettes and a ghost overlay, and the timer and overlay are Premium. Speech recognition runs on the device, per its policy. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: the only voice timer of the 10 apps, after testing\]</mark> <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: seconds and taps to a saved check-in\]</mark>
 
 ## Importing old photos {#importing-old-photos}
 
@@ -105,13 +105,13 @@ scorecard:
 
 ## Lining photos up {#lining-photos-up}
 
-**I proposed 2 for alignment.** Manual Crop &amp; Align has pan, zoom and rotate, a straighten dial and a ghost toggle. It was redesigned in 2.3 on Jul 4, 2026. It works, but you reach it one photo at a time inside Adjust &amp; Crop, so it's not convenient.
+Manual Crop &amp; Align has pan, zoom and rotate, a straighten dial and a ghost toggle. It was redesigned in 2.3 on Jul 4, 2026. It works, but you reach it one photo at a time inside Adjust &amp; Crop, so it's not convenient.
 
 ![Then & Now Crop and Align screen with a rotation dial](./thenandnow-crop-align.jpg "Crop & Align, reached one photo at a time."){.phone}
 
 ## Comparing two dates {#comparing-two-dates}
 
-**I proposed 3 for comparison.** It has a video time-lapse, a slider, 2x1 and 1x1, with the date and weight on each photo. Since 2.2, Apple Health values show in Side by Side. It's a standard UI that works but isn't amazing.
+It has a video time-lapse, a slider, 2x1 and 1x1, with the date and weight on each photo. Since 2.2, Apple Health values show in Side by Side. It's a standard UI that works but isn't amazing.
 
 <div class="flex items-start justify-center gap-4"><figure class="m-0 min-w-0 flex-1"><img alt="Then &amp; Now 1x1 compare with date and weight" class="block h-auto w-full rounded-card border border-card-border" sizes="(min-width: 800px) 368px, 50vw" src="./thenandnow-compare-1x1.jpg"/><figcaption class="mt-[0.65rem] text-center text-caption leading-[1.4] text-muted">1x1 compare with date and weight.</figcaption></figure><figure class="m-0 min-w-0 flex-1"><img alt="Then &amp; Now video mode settings for speed, fade and direction" class="block h-auto w-full rounded-card border border-card-border" sizes="(min-width: 800px) 368px, 50vw" src="./thenandnow-video.jpg"/><figcaption class="mt-[0.65rem] text-center text-caption leading-[1.4] text-muted">Video mode: speed, fade or snap, and direction.</figcaption></figure></div>
 
@@ -128,67 +128,6 @@ scorecard:
 **Album types like Renovations, Plants and Pets make it a general-purpose before/after app.** It syncs weight and body measurements with Apple Health since 2.0. I found no Android version.
 
 ![Then & Now new album types including Renovations, Plants and Pets](./thenandnow-album-types.jpg "Album types go well beyond fitness."){.phone}
-
-## Scores so far {#scores-so-far}
-
-<div aria-label="Then &amp; Now scores so far" class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" role="region" tabindex="0"><table class="w-max min-w-full border-collapse text-left text-micro">
-<thead>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Score (1 to 5)</th>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Then &amp; Now</th>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Capture and tracking</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">4</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Proposed</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Alignment</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">2</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Proposed</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Comparison</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">3</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Proposed</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Design</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Performance</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Privacy</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Backup</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Import (bonus, outside the total)</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Total out of 35</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">9 from the three proposed</td>
-</tr>
-</tbody>
-</table></div>
-
-<mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: rescore on the v8 rubric or the Oct 4 measured tiers; v7 provisional grade was A, 20/25.\]</mark>
 
 ## The numbers {#the-numbers}
 

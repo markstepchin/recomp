@@ -95,11 +95,11 @@ scorecard:
 
 ## Taking a check-in {#taking-a-check-in}
 
-**I scored capture 4 out of 5: a timer, plus date and weight at capture.** There's no ghost overlay of your last photo. The UI isn't the most intuitive, so my first check-in was also a lesson in where its buttons live. Weight tracking arrived in 1.8.0 on Jul 3, 2026, and a redesigned camera in 1.9.2 on Sep 14. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: seconds and taps to a saved check-in\]</mark>
+**It has a timer, plus date and weight at capture.** There's no ghost overlay of your last photo. The UI isn't the most intuitive, so my first check-in was also a lesson in where its buttons live. Weight tracking arrived in 1.8.0 on Jul 3, 2026, and a redesigned camera in 1.9.2 on Sep 14. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: seconds and taps to a saved check-in\]</mark>
 
 ## How well auto-align works {#how-well-auto-align-works}
 
-**Auto-align runs after capture and snaps shoulders and hips to guides.** Roughly three in four of my shirtless photos landed right, so I proposed 3 out of 5 for alignment. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: Mark's "75%" result and the "about three in four" wording\]</mark> Version 1.8.2 on Jul 15, 2026 promised "Smarter AI alignment: pose detection is now more accurate."
+**Auto-align runs after capture and snaps shoulders and hips to guides.** Roughly three in four of my shirtless photos landed right. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: Mark's "75%" result and the "about three in four" wording\]</mark> Version 1.8.2 on Jul 15, 2026 promised "Smarter AI alignment: pose detection is now more accurate."
 
 **Fixing the misses by hand is the weak spot.** Manual alignment is sluggish, like it has the brakes on. That matters, because one photo in four still needs a correction. I explain why pose-based alignment misses in [how well progress photo auto-alignment works](/blog/progress-photo-auto-alignment/) <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: PR #26 article live before linking\]</mark>. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: auto-align hit rate on clothed photos\]</mark>
 
@@ -107,7 +107,7 @@ scorecard:
 
 ## Comparing two dates {#comparing-two-dates}
 
-**I scored comparison 4 out of 5, the highest of any app I graded.** It offers side by side, a slider, an overlay with an opacity slider, and a time-lapse with playback controls, and each one can be shared. The UX isn't as smooth as the feature list. Since 1.8.4 on Aug 21, 2026, it shares to Instagram, WhatsApp and Messages and can blur faces on exports.
+It offers side by side, a slider, an overlay with an opacity slider, and a time-lapse with playback controls, and each one can be shared. The UX isn't as smooth as the feature list. Since 1.8.4 on Aug 21, 2026, it shares to Instagram, WhatsApp and Messages and can blur faces on exports.
 
 <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: the roundup says "Thumbstone has every mode \[CONFIRM: stacked\]</mark>". Its own modes are side by side, slider, overlay and time-lapse, with no stacked view confirmed. Confirm before repeating "every mode".\]
 
@@ -126,67 +126,6 @@ scorecard:
 **Photos stay on your device, and there's no account.** The listing says "We do not upload, store, or share your images," and the label reads Data Not Linked to You. Its privacy policy names Google Analytics for Firebase, Firebase Crashlytics, Expo, Sentry, Mixpanel and RevenueCat. The policy also mentions approximate location, which the label doesn't list.
 
 **There's no in-app backup, so deleting the app deletes your photos.** The developer's own FAQ tells you to export your photos and videos before switching phones or removing the app. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: delete-and-restore test: does an iPhone backup bring its photos back?\]</mark>
-
-## Scores so far {#scores-so-far}
-
-<div aria-label="Thumbstone scores so far" class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" role="region" tabindex="0"><table class="w-max min-w-full border-collapse text-left text-micro">
-<thead>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Score (1 to 5)</th>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Thumbstone</th>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Capture and tracking</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">4</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Scored</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Alignment</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">3</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Proposed</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Comparison</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">4</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Scored</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Design</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Performance</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Full-library test pending</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Privacy</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Backup</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Import (bonus, outside the total)</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Total out of 35</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">11 from the three scored</td>
-</tr>
-</tbody>
-</table></div>
-
-<mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: rescore on the v8 rubric or the Oct 4 measured tiers; v7 provisional grade was A, 20/25. Beginner all-in-one label.\]</mark>
 
 ## The numbers {#the-numbers}
 

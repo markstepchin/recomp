@@ -120,65 +120,6 @@ scorecard:
 
 **The paywall says photos stay on your iPhone and in your personal iCloud, and are never uploaded.** That's the developer's claim, not something I tested. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: App Store privacy label; whether iCloud is on by default; whether an account is needed\]</mark>
 
-## Scores so far {#scores-so-far}
-
-<div aria-label="Body Tracker scores so far" class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" role="region" tabindex="0"><table class="w-max min-w-full border-collapse text-left text-micro">
-<thead>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Score (1 to 5)</th>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Body Tracker (Korolev)</th>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Capture and tracking</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"><mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM]</mark></td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Alignment</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"><mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM]</mark></td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Exists, didn't save</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Comparison</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"><mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM]</mark></td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Two photos at a time</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Design</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Performance</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Privacy</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Backup</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Import (bonus, outside the total)</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Total out of 35</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-</tbody>
-</table></div>
-
 ## The numbers {#the-numbers}
 
 <div aria-label="Body Tracker App Store facts" class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" role="region" tabindex="0"><table class="w-max min-w-full border-collapse text-left text-micro">

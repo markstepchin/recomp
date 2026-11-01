@@ -93,7 +93,7 @@ scorecard:
 
 ## Taking a check-in {#taking-a-check-in}
 
-**I scored capture 4 out of 5.** Date, weight, tags and several camera or library photos go on one form. There's no ghost overlay and no front, side and back slots. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no timer; the listing doesn't mention one\]</mark> <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: seconds and taps to a saved check-in\]</mark>
+Date, weight, tags and several camera or library photos go on one form. There's no ghost overlay and no front, side and back slots. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: no timer; the listing doesn't mention one\]</mark> <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: seconds and taps to a saved check-in\]</mark>
 
 **Tags arrived in 7.0 on Aug 11, 2026.** It's the only app of the 10 I checked with free-text tags. In my [study of 732 App Store reviews](/blog/what-people-want-from-progress-photo-apps/), nobody asked for them, though Fit-Stitch has had about one written review since they shipped.
 
@@ -101,11 +101,11 @@ scorecard:
 
 ## Lining photos up {#lining-photos-up}
 
-**I scored alignment 0: there's no auto-alignment, no manual alignment and no ghost overlay.** Lining up a pair is on you, at capture. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: the rubric floor is 1; use 0 or 1?\]</mark>
+**There's no auto-alignment, no manual alignment and no ghost overlay.** Lining up a pair is on you, at capture. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: the rubric floor is 1; use 0 or 1?\]</mark>
 
 ## Comparing two dates {#comparing-two-dates}
 
-**I scored comparison 1.** Each comparison is a card built in its own form, with no date scrubbing, so three old dates take three forms. The cards print the date and weight on each photo, which is useful once they exist.
+Each comparison is a card built in its own form, with no date scrubbing, so three old dates take three forms. The cards print the date and weight on each photo, which is useful once they exist.
 
 **Its older reviewers liked a different layout.** Three reviews from 2014 to 2016 discuss its before/after layouts, and one asks it to "go back to the old before/after set up."
 
@@ -113,13 +113,13 @@ scorecard:
 
 ## Importing old photos {#importing-old-photos}
 
-**I scored import 0.** Nothing imports in bulk, and dates don't fill in from photo metadata, so a 450-photo archive means adding photos one at a time. Import is a bonus score, kept out of the total. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: performance with the full library\]</mark>
+Nothing imports in bulk, and dates don't fill in from photo metadata, so a 450-photo archive means adding photos one at a time. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: performance with the full library\]</mark>
 
 ## Where your photos live {#where-your-photos-live}
 
 **Photos stay on your device, with optional sync to a private iCloud container tied to your Apple ID.** The developer has no access to it, per its policy. The option first arrived as an "iCloud backup option" in 5.0 on Apr 10, 2017. Delete All Data also wipes the iCloud copy, so it's sync, not a separate backup. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: delete-and-restore test\]</mark>
 
-**Face ID locks the app and blurs it in the app switcher.** I proposed 5 out of 5 for privacy, provisionally. Fit-Stitch alone accounts for 10 of the 26 lock or privacy mentions in my review study, mostly praise for its passcode.
+**Face ID locks the app and blurs it in the app switcher.** Fit-Stitch alone accounts for 10 of the 26 lock or privacy mentions in my review study, mostly praise for its passcode.
 
 <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: label vs policy conflict. The label lists Health &amp; Fitness, User Content and Crash Data as Data Not Linked to You. The policy, updated Jul 27, 2026, says "Fit-Stitch does not include any third-party analytics, crash reporting, or advertising SDKs." Raise it; don't resolve it.\]</mark>
 
@@ -128,67 +128,6 @@ scorecard:
 ## What reviewers say {#what-reviewers-say}
 
 **A Sep 17, 2026 review says new photos disappeared.** Version 7.0.2 on Sep 30, 2026 says it "Fixed an issue where newly added photos could fail to save when iCloud storage was full." <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: the fix holds\]</mark> Reminders are the other theme: 12 of the 32 positive reminder reviews in my study are Fit-Stitch's.
-
-## Scores so far {#scores-so-far}
-
-<div aria-label="Fit-Stitch scores so far" class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" role="region" tabindex="0"><table class="w-max min-w-full border-collapse text-left text-micro">
-<thead>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Score (1 to 5)</th>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Fit-Stitch</th>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Capture and tracking</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">4</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Scored</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Alignment</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">0</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Scored; below the rubric floor of 1</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Comparison</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">1</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Scored</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Design</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">"Simple and clean"</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Performance</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Privacy</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">5</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Provisional</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Backup</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Restore test pending</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Import (bonus, outside the total)</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">0</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Scored; below the rubric floor of 1</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Total out of 35</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">10 from the four scored</td>
-</tr>
-</tbody>
-</table></div>
-
-<mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: rescore on the v8 rubric or the Oct 4 measured tiers. Power-user suite piece label.\]</mark>
 
 ## The numbers {#the-numbers}
 

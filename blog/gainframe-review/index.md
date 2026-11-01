@@ -115,7 +115,7 @@ scorecard:
 
 ## Design and speed {#design-and-speed}
 
-**Design is GainFrame's strength, and performance is its weakness.** I proposed a 4 out of 5 for design: high polish, with icons and layout that look great. I proposed a 2 for performance: past 250 photos, both import and compare bogged down. You can see the developer put a lot of effort in.
+**Design is GainFrame's strength, and performance is its weakness.** The design has high polish, with icons and layout that look great. Past 250 photos, both import and compare bogged down. You can see the developer put a lot of effort in.
 
 ## AI body-fat estimates and scores {#ai-body-fat-estimates-and-scores}
 
@@ -128,67 +128,6 @@ scorecard:
 **Photos stay on your iPhone, and core features need no account.** AI features send photos to Google's Gemini, which discards them, per GainFrame's policy. The App Store label includes "Data Used to Track You" and "Data Linked to You." The policy says there are no ads.
 
 **GainFrame has no backup of its own.** Deleting the app removes your photos, per its policy. It connects to Apple Health and Hevy. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: delete-and-restore test with an iPhone backup\]</mark>
-
-## Scores so far {#scores-so-far}
-
-<div aria-label="GainFrame scores so far" class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" role="region" tabindex="0"><table class="w-max min-w-full border-collapse text-left text-micro">
-<thead>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Score (1 to 5)</th>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">GainFrame</th>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Capture and tracking</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">3</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Proposed; camera capture untested</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Alignment</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Re-check Auto and Adjust</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Comparison</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">2</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Proposed</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Design</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">4</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Proposed</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Performance</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">2</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Proposed</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Privacy</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Backup</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Import (bonus, outside the total)</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Total out of 35</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">11 from the four proposed</td>
-</tr>
-</tbody>
-</table></div>
-
-<mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: rescore on the v8 rubric or the Oct 4 measured tiers; v7 provisional grade was A, 19/25. Beginner all-in-one label: confirm fit.\]</mark>
 
 ## The numbers {#the-numbers}
 

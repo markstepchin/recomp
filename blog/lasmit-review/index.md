@@ -95,17 +95,17 @@ scorecard:
 
 ## Taking a check-in {#taking-a-check-in}
 
-**I proposed 3 out of 5 for capture.** It has a nice weight scroller and a timer, but a single check-in is a multi-page form. That's the opposite of a check-in you'll repeat every week. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: seconds and taps to a saved check-in\]</mark>
+It has a nice weight scroller and a timer, but a single check-in is a multi-page form. That's the opposite of a check-in you'll repeat every week. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: seconds and taps to a saved check-in\]</mark>
 
 <div class="flex items-start justify-center gap-4"><figure class="m-0 min-w-0 flex-1"><img alt="Lasmit My Results screen with weight, BMI and photo buttons" class="block h-auto w-full rounded-card border border-card-border" sizes="(min-width: 800px) 368px, 50vw" src="./lasmit-my-results.jpg"/><figcaption class="mt-[0.65rem] text-center text-caption leading-[1.4] text-muted">My Results: weight, BMI and photo buttons.</figcaption></figure><figure class="m-0 min-w-0 flex-1"><img alt="Lasmit check-in detail with photos, weight, BMI and a note" class="block h-auto w-full rounded-card border border-card-border" sizes="(min-width: 800px) 368px, 50vw" src="./lasmit-checkin-detail.jpg"/><figcaption class="mt-[0.65rem] text-center text-caption leading-[1.4] text-muted">One check-in: photos, weight, BMI and a note.</figcaption></figure></div>
 
 ## Lining photos up {#lining-photos-up}
 
-**I proposed 0 for alignment, because there is none.** Its Smart Overlay has been off by default since version 2026.5 on Feb 3, 2026. The release note says "when it didn't work, it was causing a lot of confusion." <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: whether it aligns anything when switched on\]</mark> <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: the rubric floor is 1; use 0 or 1?\]</mark>
+**There is no alignment.** Its Smart Overlay has been off by default since version 2026.5 on Feb 3, 2026. The release note says "when it didn't work, it was causing a lot of confusion." <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: whether it aligns anything when switched on\]</mark> <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: the rubric floor is 1; use 0 or 1?\]</mark>
 
 ## Comparing two dates {#comparing-two-dates}
 
-**I proposed 2 for comparison.** Side by side works in landscape only, with a date stepper on each side, so you step through dates one at a time. It's awkward, and not the best UI. The same 2026.5 update added a jump to any photo by date in compare. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: seconds to put the oldest and newest front photos side by side\]</mark>
+Side by side works in landscape only, with a date stepper on each side, so you step through dates one at a time. It's awkward, and not the best UI. The same 2026.5 update added a jump to any photo by date in compare. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: seconds to put the oldest and newest front photos side by side\]</mark>
 
 ![Lasmit landscape-only compare with No face found badges](./lasmit-compare-landscape.jpg "Compare works in landscape only.")
 
@@ -132,67 +132,6 @@ scorecard:
 ## What reviewers say {#what-reviewers-say}
 
 **Reminders are what Lasmit's reviewers thank it for.** Of the 37 reviews in my study that mention reminders, 19 positive ones are Lasmit's. One reads: "The reminders are helpful but not intrusive." Four of the five reminder complaints are Lasmit's too, including one that "would not stick to the requested reminder schedule."
-
-## Scores so far {#scores-so-far}
-
-<div aria-label="Lasmit scores so far" class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" role="region" tabindex="0"><table class="w-max min-w-full border-collapse text-left text-micro">
-<thead>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Score (1 to 5)</th>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Lasmit</th>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Capture and tracking</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">3</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Proposed</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Alignment</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">0</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Proposed; below the rubric floor of 1</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Comparison</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">2</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Proposed</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Design</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Performance</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Privacy</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Backup</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Import (bonus, outside the total)</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Total out of 35</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">5 from the three proposed</td>
-</tr>
-</tbody>
-</table></div>
-
-<mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: rescore on the v8 rubric or the Oct 4 measured tiers; v7 provisional grade was B, 16/25. Beginner all-in-one label.\]</mark>
 
 ## The numbers {#the-numbers}
 

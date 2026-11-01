@@ -95,15 +95,15 @@ scorecard:
 
 ## Taking a check-in {#taking-a-check-in}
 
-**I proposed 3 out of 5 for capture.** It has a ghost overlay and a timer, but no weight logging. The timer arrived in 1.7 on Jan 23, 2025, and since 2.15 the overlay can be your first or your most recent photo. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: seconds and taps to a saved front, side and back check-in\]</mark>
+It has a ghost overlay and a timer, but no weight logging. The timer arrived in 1.7 on Jan 23, 2025, and since 2.15 the overlay can be your first or your most recent photo. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: seconds and taps to a saved front, side and back check-in\]</mark>
 
 ## Lining photos up {#lining-photos-up}
 
-**I proposed 0 for alignment: there's no alignment tool after the shot.** The ghost helps you line up before it. Its own site describes "the automatic alignment overlay to match your position, angle, and zoom to your previous photo before you shoot." An alignment grid arrived in 2.17 in Aug 2026. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: the rubric floor is 1; use 0 or 1?\]</mark>
+**There's no alignment tool after the shot.** The ghost helps you line up before it. Its own site describes "the automatic alignment overlay to match your position, angle, and zoom to your previous photo before you shoot." An alignment grid arrived in 2.17 in Aug 2026. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: the rubric floor is 1; use 0 or 1?\]</mark>
 
 ## Comparing two dates {#comparing-two-dates}
 
-**I proposed 2 for comparison.** It has a video time-lapse, a slider, 1x2 and 2x1, but the UI is poor, and you place each photo by hand. Picking a pair from hundreds of photos is slow in every app I tested, and this is the most manual version. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: seconds to put the oldest and newest front photos side by side\]</mark>
+It has a video time-lapse, a slider, 1x2 and 2x1, but the UI is poor, and you place each photo by hand. Picking a pair from hundreds of photos is slow in every app I tested, and this is the most manual version. <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[TODO: seconds to put the oldest and newest front photos side by side\]</mark>
 
 <div class="flex items-start justify-center gap-4"><figure class="m-0 min-w-0 flex-1"><img alt="Metamorph 2x1 compare with Video, Slider, 1x2, 2x1 and Edit tabs" class="block h-auto w-full rounded-card border border-card-border" sizes="(min-width: 800px) 368px, 50vw" src="./metamorph-compare-2x1.jpg"/><figcaption class="mt-[0.65rem] text-center text-caption leading-[1.4] text-muted">2x1 compare, one of five tabs.</figcaption></figure><figure class="m-0 min-w-0 flex-1"><img alt="Metamorph empty compare screen asking you to tap to place each photo" class="block h-auto w-full rounded-card border border-card-border" sizes="(min-width: 800px) 368px, 50vw" src="./metamorph-compare-empty.jpg"/><figcaption class="mt-[0.65rem] text-center text-caption leading-[1.4] text-muted">You place every photo by hand.</figcaption></figure></div>
 
@@ -122,67 +122,6 @@ scorecard:
 **Metamorph began as a stop-motion app for renovations, plants and kids before it turned to body progress.** Its own blog ranks Metamorph first. One 5-star review in my [review study](/blog/what-people-want-from-progress-photo-apps/) uses it for home renovations.
 
 ![Metamorph My Morphs home screen](./metamorph-my-morphs.jpg "My Morphs home."){.phone}
-
-## Scores so far {#scores-so-far}
-
-<div aria-label="Metamorph scores so far" class="-mx-gutter overflow-x-auto overscroll-x-contain px-gutter" role="region" tabindex="0"><table class="w-max min-w-full border-collapse text-left text-micro">
-<thead>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Score (1 to 5)</th>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Metamorph</th>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-bottom font-semibold text-fg" scope="col">Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Capture and tracking</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">3</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Proposed</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Alignment</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">0</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Proposed; below the rubric floor of 1</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Comparison</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">2</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">Proposed</td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Design</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Performance</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Privacy</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Backup</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Import (bonus, outside the total)</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted"></td>
-</tr>
-<tr>
-<th class="whitespace-nowrap border-b border-card-border px-3 py-2 align-top text-muted" scope="row">Total out of 35</th>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">TBD</td>
-<td class="border-b border-card-border px-3 py-2 align-top text-muted">5 from the three proposed</td>
-</tr>
-</tbody>
-</table></div>
-
-<mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">\[CONFIRM: rescore on the v8 rubric or the Oct 4 measured tiers; v7 provisional grade was B, 17/25.\]</mark>
 
 ## The numbers {#the-numbers}
 
