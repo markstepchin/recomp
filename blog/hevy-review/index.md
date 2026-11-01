@@ -156,7 +156,7 @@ There's also no auto-align, no side-by-side alignment, and no overlay when you p
 
 What Hevy does have: the in-app camera's overlay, and a Transform step with crop, rotate, pan and zoom before you save.
 
-**In-app camera overlay.** The camera shows a faded ghost of your last photo over the live view, so you can match your pose and distance to last week.
+**In-app camera overlay.** The camera shows a faded ghost of your last photo over the live view, so you can match your pose and distance to last week. The camera has no zoom.
 
 <div class="phone-row">
 
