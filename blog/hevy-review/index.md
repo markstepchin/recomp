@@ -34,7 +34,7 @@ faq:
     a: "No. Hevy's notifications cover workouts and social activity, not progress photos or weigh-ins."
 ---
 
-**Full disclosure: I build Recomp, a free progress photo app, and I hold it to the same bar as every other app.** I don't run ads, and I don't use affiliate links.
+**Full disclosure: I build Recomp, a free progress photo app.**
 
 <!-- app-store-card -->
 

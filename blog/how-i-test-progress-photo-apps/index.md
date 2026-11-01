@@ -26,7 +26,7 @@ Most of the reviews I read when I was looking for an app for myself hadn't downl
 
 For my reviews, I download the app, set up an account, and pay for the subscription if one exists. I use real photos and weights from my fitness transformation.
 
-Full disclosure: I build Recomp, a free progress photo app, and I hold it to the same bar as every other app.
+Full disclosure: I build Recomp, a free progress photo app.
 
 <figure class="mx-auto w-1/2 max-w-[280px]"><img class="block h-auto w-full rounded-card border border-card-border" src="../../assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp" alt="iOS Photos album showing hundreds of weekly front, side, and back progress photos from years of coaching check-ins" width="1290" height="2635"></figure>
 

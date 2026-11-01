@@ -21,7 +21,7 @@ json_ld:
 
 <div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4 pb-8">
 
-**Full disclosure: I build Recomp, a free progress photo app, and I hold it to the same bar as every other app.** I don't run ads, and I don't use affiliate links.
+**Full disclosure: I build Recomp, a free progress photo app.**
 
 I used the iOS camera roll to store my progress photos for over two years while working with a trainer. During this time I bulked from 165 to 195 lb over 11 months, followed by a cut to 155 lb over 15 months.
 

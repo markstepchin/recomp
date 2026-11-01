@@ -25,7 +25,7 @@ summary: |
 <!-- TODO(Mark): final title, seo_title and description once the verdict is written. Add card_blurb if the /blog/ card needs a shorter line. -->
 <!-- TODO(Mark): set "published: YYYY-MM-DD" in the frontmatter and remove draft: true when this is ready. -->
 
-**Full disclosure: I build Recomp, a free progress photo app, and I hold it to the same bar as every other app.** I don't run ads, and I don't use affiliate links.
+**Full disclosure: I build Recomp, a free progress photo app.**
 
 <!-- app-store-card -->
 
