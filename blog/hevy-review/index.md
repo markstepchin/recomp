@@ -14,7 +14,7 @@ app_store:
   name: "Hevy - Workout Tracker Gym Log"
   developer: "Hevy Studios S.L."
   developer_url: "https://www.hevyapp.com/"
-  price_text: "Free, or Pro for $2.99 a month, $23.99 a year or $74.99 once"
+  price_text: "Free, $2.99/mo, $23.99/yr, $74.99 lifetime"
   rating: 4.9
   rating_count: 101232
   min_ios: "15.1"
