@@ -7,8 +7,18 @@
   <url>
     <loc>https://progressphotos.app/blog/</loc>
   </url>
+  <!-- blog:start -->
+  <!-- blog:end -->
   <url>
     <loc>https://progressphotos.app/blog/how-to-take-progress-photos-for-recomp/</loc>
+  </url>
+  <url>
+    <loc>https://progressphotos.app/blog/camera-roll-vs-progress-photo-app/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://progressphotos.app/blog/how-i-test-progress-photo-apps/</loc>
+    <lastmod>2026-10-28</lastmod>
   </url>
   <url>
     <loc>https://progressphotos.app/blog/why-i-built-recomp/</loc>
