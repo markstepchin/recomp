@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 @source "../**/*.html";
+@source "../**/*.njk";
+@source "../blog/**/*.md";
 
 @theme {
   --color-bg: #0a0a0b;
@@ -47,6 +49,7 @@
   --tracking-wordmark: -0.02em;
 
   --leading-body: 1.55;
+  --leading-h3: 1.25;
   --leading-micro: 1.4;
   --leading-input: 1.4;
 
