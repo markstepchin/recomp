@@ -162,11 +162,11 @@ A progress photo app is really four apps in one: a camera roll, an alignment app
 
 ### No Notifications for tracking {#reminders}
 
-Hevy's notifications are workout specific, like a rest timer in between sets and the monthly training report, as well as social notifications for new followers, emails, likes, and comments. Source: [Hevy's notification settings](https://help.hevyapp.com/hc/en-us/articles/33845807003671-Account-Settings-Preferences-Profile-Information-Adjust-username-password-or-email-address-Notifications)
+Hevy's notifications are workout specific, like a rest timer in between sets and the monthly training report, as well as social notifications for new followers, emails, likes, and comments. [Hevy's notification settings](https://help.hevyapp.com/hc/en-us/articles/33845807003671-Account-Settings-Preferences-Profile-Information-Adjust-username-password-or-email-address-Notifications)
 
 ### Photos {#adding-photos}
 
-Hevy's **1 photo/day limit** means you can't track front, side and back photos per session <br />Source: [Hevy's progress photos page](https://www.hevyapp.com/features/progress-photos/).
+Hevy's **1 photo/day limit** means you can't track front, side and back photos per session <br />[Hevy's progress photos page](https://www.hevyapp.com/features/progress-photos/).
 
 Hevy support both adding existing photos as well as an in app camera. Hevy doesn't read the date from the photo, so you must edit the data manually if you're adding a photo from a different date.
 
