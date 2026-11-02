@@ -101,7 +101,7 @@ scorecard:
       fact: "The label doesn't list photos, but its help says they're on its servers",
     } # L128
   # Quality of life
-  bulk_import: { status: confirm, fact: "[CONFIRM]" } # Known: Hevy doesn't read the date from a camera roll photo (L78). Bulk import itself isn't covered.
+  bulk_import: { status: missing, fact: "One photo per day, each added on its own with the date set by hand" }  # Researched 2026-11-01: https://www.hevyapp.com/features/progress-photos/ (one photo per day) + L171 (date not read)
   data_import_export: {
       status: partial,
       fact: "Measurements export as a CSV, photos don't",
@@ -116,7 +116,7 @@ scorecard:
       status: has,
       fact: "In-app camera with a ghost overlay and a timer",
     } # L74, L76 | Pose guides not covered in the review.
-  units: { status: confirm, fact: "[CONFIRM]" }
+  units: { status: has, fact: "Kilograms or pounds, and centimeters or inches for measurements" }  # Researched 2026-11-01: https://help.hevyapp.com/hc/en-us/articles/34953292892823-How-to-change-the-measurement-units-Single-exercise-or-all-exercises
   body_measurements: {
       status: partial,
       fact: "Weight and waist are free; the rest need Pro",
@@ -126,9 +126,9 @@ scorecard:
   no_account: { status: missing, fact: "Needs a Hevy account" } # L128
   originals_untouched: { status: confirm, fact: "[CONFIRM]" }
   edit_date: { status: confirm, fact: "[CONFIRM]" } # You set the date when you add a photo (L78); editing later isn't covered.
-  partial_checkin: { status: confirm, fact: "[CONFIRM]" } # One photo per day (L72), so a partial check-in is the only option. Mark to decide how to state it.
+  partial_checkin: { status: has, fact: "A photo saves with or without weight and measurements" }  # Researched 2026-11-01: https://help.hevyapp.com/hc/en-us/articles/35385479603479-Body-Composition-Tracking-Measurements-and-Progress-Photos ('with or without body measurements')
   dark_mode: { status: has, fact: "Dark theme" } # L132
-  no_ads: { status: confirm, fact: "[CONFIRM]" } # Review doesn't say whether Hevy shows ads.
+  no_ads: { status: has, fact: "No ads, even on the free plan" }  # Researched 2026-11-01: https://apps.apple.com/us/app/hevy-workout-tracker-gym-log/id1458862350 (description: 'Free, with no ads.')
 ---
 
 **Full disclosure: I build Recomp, a free progress photo app.**
@@ -190,9 +190,9 @@ Weight and waist are free. Body fat and the other measurements need Hevy Pro.
 
 ## Alignment {#alignment}
 
-**There's no alignment after you add a photo.** Once the check-in is saved, there's no way to adjust it. If the alignment is off, you have to delete the photo and retake or re-upload it. If you took it with the in-app camera, there's no going back: you're locked in, and you may only notice the problem weeks later. [CONFIRM: Hevy's help article mentions "replace it". Does that let you realign without losing the entry?]
+**There's no alignment after you add a photo.** Once the check-in is saved, there's no way to adjust it. <!-- TODO(feature-link): link "adjust" to Recomp's manual alignment feature page once it exists --> If the alignment is off, you have to delete the photo and retake or re-upload it. If you took it with the in-app camera, there's no going back: you're locked in, and you may only notice the problem weeks later. [CONFIRM: Hevy's help article mentions "replace it". Does that let you realign without losing the entry?]
 
-There's also no auto-align, no side-by-side alignment, and no overlay when you pick a photo from the camera roll.
+There's also no auto-align, no side-by-side alignment, and no overlay when you pick a photo from the camera roll. <!-- TODO(feature-link): link "auto-align" to Recomp's Auto-align feature page once it exists --> <!-- TODO(feature-link): link "side-by-side alignment" to Recomp's align-in-compare feature page once it exists -->
 
 What Hevy does have: the in-app camera's overlay, and a Transform step with crop, rotate, pan and zoom before you save a camera roll photo. In-app camera shots skip that step, so there's no alignment after you snap the photo.
 
@@ -228,7 +228,7 @@ The side-by-side view is better. Both photos fill the screen edge to edge.
 
 Alignment comes up again here. You can manually align two photos in the compare view, but the alignment isn't saved, so next week you start over.
 
-For sharing, you pick two dates and share them side by side as an image. There's no slider, no overlay view and no timelapse, and you can't adjust alignment in the share view.
+For sharing, you pick two dates and share them side by side as an image. There's no slider, no overlay view and no timelapse, and you can't adjust alignment in the share view. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists -->
 
 ![Hevy share card with photos from 10 Oct 2024 and 4 Aug 2025 side by side, the Hevy logo and Instagram Stories, More and Download buttons](./hevy-share-card.webp "The share card it makes from a comparison."){.phone}
 

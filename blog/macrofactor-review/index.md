@@ -64,7 +64,7 @@ scorecard:
   photos_on_device: { status: missing, fact: "Uploaded to its servers on Google Firebase" }  # L74
   privacy_label: { status: missing, fact: "The label lists photos as data linked to you" }  # L74
   # Quality of life
-  bulk_import: { status: confirm, fact: "[CONFIRM]" }  # Known: dates for older photos are picked by hand (L70).
+  bulk_import: { status: missing, fact: "One photo at a time, with the date picked by hand" }  # Researched 2026-11-01: https://help.macrofactorapp.com/en/articles/121-how-to-add-progress-photos
   data_import_export: { status: partial, fact: "Exports weight and metrics; photos aren't mentioned" }  # L74 | L74 has its own [CONFIRM] on photos.
   app_lock: { status: missing, fact: "No app lock or Face ID option found" }  # L80
   backup_transfer: { status: has, fact: "Stored on its servers with your account" }  # L74
@@ -77,9 +77,9 @@ scorecard:
   no_account: { status: missing, fact: "Needs an account" }  # L74
   originals_untouched: { status: confirm, fact: "[CONFIRM]" }
   edit_date: { status: confirm, fact: "[CONFIRM]" }
-  partial_checkin: { status: confirm, fact: "[CONFIRM]" }
+  partial_checkin: { status: has, fact: "Front, side and back are each optional" }  # Researched 2026-11-01: https://help.macrofactorapp.com/en/articles/121-how-to-add-progress-photos ('Add more photos if desired')
   dark_mode: { status: has, fact: "Dark mode" }  # L80
-  no_ads: { status: confirm, fact: "[CONFIRM]" }
+  no_ads: { status: has, fact: "No ads; it's subscription only" }  # Researched 2026-11-01: https://macrofactor.com/macrofactor/ ('We will never serve ads')
 ---
 
 <!-- TODO(Mark): final title, seo_title and description once the verdict is written. Add card_blurb if the /blog/ card needs a shorter line. -->
@@ -109,7 +109,7 @@ Neither gallery view uses the screen well. The single view shows one square phot
 
 <!-- TODO(Mark): ease of alignment, gridline quality, ghost overlay, auto align, and whether I can align in the side by side view. -->
 
-**You can only adjust a photo in the crop step, before you save it.** MacroFactor's help says you can zoom and rotate there. Once a photo is uploaded, I can't edit, resize or align it. Every photo is saved square. Take Photo launches the phone's camera, and I didn't find a ghost overlay, gridlines for posing or auto-align in MacroFactor's help. [How to add progress photos](https://help.macrofactorapp.com/en/articles/121-how-to-add-progress-photos).
+**You can only adjust a photo in the crop step, before you save it.** MacroFactor's help says you can zoom and rotate there. Once a photo is uploaded, I can't edit, resize or align it. <!-- TODO(feature-link): link "align" to Recomp's manual alignment feature page once it exists --> Every photo is saved square. Take Photo launches the phone's camera, and I didn't find a ghost overlay, gridlines for posing or auto-align in MacroFactor's help. <!-- TODO(feature-link): link "ghost overlay" to Recomp's Ghost overlay camera feature page once it exists --> <!-- TODO(feature-link): link "auto-align" to Recomp's Auto-align feature page once it exists --> [How to add progress photos](https://help.macrofactorapp.com/en/articles/121-how-to-add-progress-photos).
 
 ![MacroFactor Crop Photo screen with a grid crop box over a mirror selfie](./macrofactor-crop-photo.webp "The Crop Photo step, before the photo is saved."){.phone}
 
@@ -117,7 +117,7 @@ Neither gallery view uses the screen well. The single view shows one square phot
 
 <!-- TODO(Mark): how easy it is to compare, and the taps and time to compare 9 different dates. Can it make a shareable before/after image or a timelapse? -->
 
-Before and after stacks two photos of the same pose, one above the other. You tap the top slot and pick a photo from the ribbon of dates, then do the same for the bottom. The share image can use a plain background or one matched to the photo's colors. I didn't find a slider, overlay view or timelapse. [How to create before-and-after photos](https://help.macrofactorapp.com/en/articles/123-how-to-create-and-share-before-and-after-photos).
+Before and after stacks two photos of the same pose, one above the other. <!-- TODO(feature-link): link "one above the other" to Recomp's Side-by-side comparison feature page once it exists --> You tap the top slot and pick a photo from the ribbon of dates, then do the same for the bottom. The share image can use a plain background or one matched to the photo's colors. I didn't find a slider, overlay view or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists --> [How to create before-and-after photos](https://help.macrofactorapp.com/en/articles/123-how-to-create-and-share-before-and-after-photos).
 
 ![MacroFactor gallery compare view with front photos from October 31, 2026 and August 4, 2025 stacked, each a small square photo on the left with Trend Weight and Scale Weight on the right, and mostly empty space around them](./macrofactor-compare-view.webp "Compare view: two small square photos, with the weights beside them."){.phone}
 

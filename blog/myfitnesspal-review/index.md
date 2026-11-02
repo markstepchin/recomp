@@ -43,7 +43,7 @@ scorecard:
   checkin_time: { status: confirm, fact: "[CONFIRM]" }
   photo_picker: { status: missing, fact: "One photo per date" }  # L60
   weight_apple_health: { status: partial, fact: "Two-way Apple Health sync, only from the day you connect" }  # L62
-  weight_quick_entry: { status: confirm, fact: "[CONFIRM]" }
+  weight_quick_entry: { status: has, fact: "A scroll wheel sets the weight, with no typing" }  # Researched 2026-11-01: https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs ('Adjust your weight using the scroll wheel')
   data_together: { status: has, fact: "Each photo attaches to a weigh-in" }  # L40
   camera_zoom: { status: confirm, fact: "[CONFIRM]" }
   # Alignment should be effortless
@@ -64,20 +64,20 @@ scorecard:
   photos_on_device: { status: missing, fact: "Saved to its servers" }  # L66
   privacy_label: { status: missing, fact: "The label lists data used to track you" }  # L66
   # Quality of life
-  bulk_import: { status: confirm, fact: "[CONFIRM]" }
+  bulk_import: { status: missing, fact: "One photo per weigh-in, added one at a time" }  # Researched 2026-11-01: https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs
   data_import_export: { status: partial, fact: "CSV export with Premium, no photos" }  # L66
   app_lock: { status: confirm, fact: "[CONFIRM]" }
   backup_transfer: { status: has, fact: "On its servers, so photos show up on a new phone" }  # L66
   reminders: { status: missing, fact: "Meal reminders only" }  # L70 | L70 carries a [CONFIRM] on a weigh-in reminder.
   in_app_camera: { status: partial, fact: "Takes photos in the app, with no overlay or guides" }  # L40, L46
-  units: { status: confirm, fact: "[CONFIRM]" }
+  units: { status: has, fact: "Pounds or kilograms, with no Premium needed" }  # Researched 2026-11-01: https://support.myfitnesspal.com/hc/en-us/articles/360032623891-How-to-change-your-preferred-units-of-measure
   body_measurements: { status: partial, fact: "Waist, hips and neck built in; others on the website" }  # L62
   sharing: { status: has, fact: "Shares a split before/after photo" }  # L52
   timelapse: { status: missing, fact: "No timelapse" }  # L52
   no_account: { status: missing, fact: "Needs an account" }  # L66
   originals_untouched: { status: confirm, fact: "[CONFIRM]" }  # In-app photos aren't saved to the camera roll (L40); that's a different question.
   edit_date: { status: has, fact: "You can edit a weigh-in's date" }  # L74
-  partial_checkin: { status: confirm, fact: "[CONFIRM]" }
+  partial_checkin: { status: partial, fact: "A weigh-in saves without a photo, but a photo needs a weigh-in" }  # Researched 2026-11-01: https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs
   dark_mode: { status: confirm, fact: "[CONFIRM]" }
   no_ads: { status: missing, fact: "Ad-free needs Premium" }  # L72 | Based on the 'Go Premium for ad-free' screenshot alt text. Mark to confirm wording.
 ---
@@ -103,13 +103,13 @@ MyFitnessPal is one of the 12 apps I've tested so far, and one of three fitness 
 
 <!-- TODO(Mark): ease of alignment, gridline quality, ghost overlay, auto align, and whether I can align in the side by side view. -->
 
-**MyFitnessPal has no alignment tools.** There's no overlay, gridlines or auto-align, and no way to adjust a photo after you add it. It crops every photo square when you upload it, so anything outside the center gets cut. [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
+**MyFitnessPal has no alignment tools.** There's no overlay, gridlines or auto-align, and no way to adjust a photo after you add it. <!-- TODO(feature-link): link "overlay" to Recomp's Ghost overlay camera feature page once it exists --> <!-- TODO(feature-link): link "auto-align" to Recomp's Auto-align feature page once it exists --> <!-- TODO(feature-link): link "adjust a photo" to Recomp's manual alignment feature page once it exists --> It crops every photo square when you upload it, so anything outside the center gets cut. [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
 ## How do comparisons and collages work? {#compare}
 
 <!-- TODO(Mark): how easy it is to compare, and the taps and time to compare 9 different dates. Can it make a shareable before/after image or a timelapse? -->
 
-Sharing works from any photo in the Entries list. You can swipe between photos, add a message and save a split photo or send it to Instagram or Facebook. I didn't find a slider, overlay view or timelapse. [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
+Sharing works from any photo in the Entries list. You can swipe between photos, add a message and save a split photo or send it to Instagram or Facebook. I didn't find a slider, overlay view or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists --> [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
 ![MyFitnessPal Progress Gallery with two front photos side by side labeled 160 lbs and 155 lbs, above a strip of thumbnails](./myfitnesspal-progress-gallery.webp "Progress Gallery: two photos side by side with their weights."){.phone}
 
