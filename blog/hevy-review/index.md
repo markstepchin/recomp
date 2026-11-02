@@ -174,8 +174,6 @@ Hevy support both adding existing photos as well as an in app camera. Hevy doesn
 
 Hevy syncs your weight with Apple Health and tracks a long list of measurements. The photo, your weight, and your waist are free. The other 15 measurements are on the paid plan. [Hevy's Apple Health help](https://help.hevyapp.com/hc/en-us/sections/36957443687831-Apple-Health).
 
-Weight and waist are free. Body fat and the other measurements need Hevy Pro.
-
 <div class="phone-row">
 
 ![Hevy Log Measurements screen dated 1 November 2026 with an empty Add Picture box, and a sheet at the bottom offering Take Photo or Select Library Photo](./hevy-add-picture.webp "Add Picture: take a photo in the app or pick one from your library."){.phone}
@@ -190,33 +188,29 @@ Weight and waist are free. Body fat and the other measurements need Hevy Pro.
 
 ## Alignment {#alignment}
 
-**There's no alignment after you add a photo.** Once the check-in is saved, there's no way to adjust it. If the alignment is off, you have to delete the photo and retake or re-upload it. If you took it with the in-app camera, there's no going back: you're locked in, and you may only notice the problem weeks later. [CONFIRM: Hevy's help article mentions "replace it". Does that let you realign without losing the entry?]
+Once a photo is added, its alignment is locked. You're sometimes in a rush, don't line up properly, and only notice a week or two later, and by then it's too late.
 
-There's also no auto-align, no side-by-side alignment, and no overlay when you pick a photo from the camera roll.
+Hevy aligns a photo in one of three ways, depending on how you add it.
 
-What Hevy does have: the in-app camera's overlay, and a Transform step with crop, rotate, pan and zoom before you save a camera roll photo. In-app camera shots skip that step, so there's no alignment after you snap the photo.
+**In-app camera.** A faded ghost of your last photo sits over the live view, so you can match your pose and distance to last week. The camera has no zoom, and there's no alignment step after you take the shot.
 
-**In-app camera overlay.** The camera shows a faded ghost of your last photo over the live view, so you can match your pose and distance to last week. The camera has no zoom.
+**Camera roll.** You get a Transform step with crop, rotate, pan and zoom before saving. That's your only chance. There's no overlay, and Hevy doesn't read the photo's date, so you type in when each one was taken.
 
-**Camera roll:** Picking an existing photo works, but Hevy doesn't read the date from the photo. You set each photo's date by hand, so importing an old photo means typing in when you took it. Unlike the in-app camera, there's no overlay here.
+**Existing photos.** None. Once a check-in is saved, you can't adjust it.
 
-**In app camera:**
-
-For camera roll photos, you can crop, rotate, pan and zoom before saving. That's the only chance you get. Photos from the in-app camera can't be aligned at all after you take the shot, and the alignment tools aren't consistent between the camera and the camera roll. The next section covers why.
+There's no auto-align or side-by-side alignment either, and the tools aren't consistent between the camera and the camera roll.
 
 <div class="phone-row">
 
-![Hevy in-app camera with Overlay turned on, showing a faded ghost of the previous progress photo over the live view, with Timer and Overlay buttons beside the shutter](./hevy-camera-overlay.webp "The in-app camera with Overlay on."){.phone}
+![Hevy in-app camera with Overlay turned on, showing a faded ghost of the previous progress photo over the live view, with Timer and Overlay buttons beside the shutter](./hevy-camera-overlay.webp "In-app camera alignment: Overlay, no zoom, no crop after taking the photo"){.phone}
 
-![Hevy Transform screen cropping a progress photo at 3:4 with a grid overlay and a rotation dial](./hevy-crop-grid.webp "Transform: a 3:4 crop with a grid and rotation dial."){.phone}
+![Hevy Transform screen cropping a progress photo at 3:4 with a grid overlay and a rotation dial](./hevy-crop-grid.webp "Photo selector alignment: crop with zoom, pan, and rotate. No Overlay"){.phone}
 
 </div>
 
 ## Comparing with last month {#compare}
 
-**The single view doesn't let the photos go edge to edge.** The photo sits between grey bars and doesn't fill the width, and there's no full-screen photo viewer.
-
-The side-by-side view is better. Both photos fill the screen edge to edge.
+Hevy has single & side by side views with a thumbnail strip along the bottom for easy switching. It lacks a full screen view for a single photo like in photos. It doesn't have a slider view, overlay, or timelapse.
 
 <div class="phone-row">
 
@@ -224,13 +218,9 @@ The side-by-side view is better. Both photos fill the screen edge to edge.
 
 ![Hevy Progress Pictures screen in Comparison mode with photos from 10 Oct 2024 and 4 Aug 2025 side by side above a filmstrip of check-ins](./hevy-comparison.webp "Progress Pictures, Comparison mode, with the filmstrip below."){.phone}
 
+![Hevy share card with photos from 10 Oct 2024 and 4 Aug 2025 side by side, the Hevy logo and Instagram Stories, More and Download buttons](./hevy-share-card.webp "Export a side by side or single image view"){.phone}
+
 </div>
-
-Alignment comes up again here. You can manually align two photos in the compare view, but the alignment isn't saved, so next week you start over.
-
-For sharing, you pick two dates and share them side by side as an image. There's no slider, no overlay view and no timelapse, and you can't adjust alignment in the share view.
-
-![Hevy share card with photos from 10 Oct 2024 and 4 Aug 2025 side by side, the Hevy logo and Instagram Stories, More and Download buttons](./hevy-share-card.webp "The share card it makes from a comparison."){.phone}
 
 ## Quality of life and privacy {#sharing}
 
