@@ -18,7 +18,7 @@ json_ld:
   - {"@context": "https://schema.org", "@type": "Article", "headline": "How I Review Progress Photo Apps", "description": "How I review progress photo apps: I download each one, pay for the subscription, and test it with real photos and weights from my own transformation.", "author": {"@type": "Person", "@id": "https://progressphotos.app/about/#mark", "name": "Mark Stepchin", "url": "https://progressphotos.app/about/", "jobTitle": "Founder of Recomp"}, "publisher": {"@type": "Organization", "name": "Recomp", "url": "https://progressphotos.app/"}, "url": "https://progressphotos.app/blog/how-i-test-progress-photo-apps/", "mainEntityOfPage": "https://progressphotos.app/blog/how-i-test-progress-photo-apps/", "image": "https://progressphotos.app/assets/step-compare.webp?v=5"}
 ---
 
-<div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4">
+<div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-[1.5rem] [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4">
 
 ## Why are my reviews different? {#why-are-my-reviews-different}
 
