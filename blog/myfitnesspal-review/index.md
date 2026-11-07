@@ -135,13 +135,21 @@ I test each of these features with my personal library of real progress photos &
 
 **Since photos attach to weigh-ins, MyFitnessPal keeps only one photo per date.** I can't keep a front, side and back photo for the same day.
 
-![MyFitnessPal Edit weight screen showing 155 lbs with a Change date picker set to August 4, 2025](./myfitnesspal-edit-weight-date.webp "Editing a weigh-in's date."){.phone}
-
 ### Weights and measurements {#weights}
 
 Weight syncs both ways with Apple Health, but only from the day you connect. Older Health weigh-ins don't come over. Waist, hips, neck and weight are built in. Anything else, like body fat or thighs, has to be added on the website first, with one value per measurement per day. Sources: [Apple Health syncing](https://support.myfitnesspal.com/hc/en-us/articles/360032271092-Apple-Health-connection-and-syncing), [additional measurements](https://support.myfitnesspal.com/hc/en-us/articles/360032624891-Can-I-track-additional-measurements-or-change-the-default-measurements).
 
+<div class="phone-row">
+
+![MyFitnessPal Edit weight screen showing 155 lbs with a Change date picker set to August 4, 2025](./myfitnesspal-edit-weight-date.webp "Editing a weigh-in's date."){.phone}
+
+![MyFitnessPal Log weight screen showing 165 lbs, date Today, and a Progress Photo with Edit](./myfitnesspal-log-weight-with-photo.webp "Logging a weight with a progress photo attached."){.phone}
+
 ![MyFitnessPal Measurements screen for Weight over 1 Month with no data yet and a Go Premium banner for ad-free tracking](./myfitnesspal-measurements.webp "Measurements before any weigh-ins, with a Premium upsell."){.phone}
+
+![MyFitnessPal Measurements screen for Weight over 1 Month with a chart from 155 to 165 lbs, an entries list, and a Go Premium banner for ad-free tracking](./myfitnesspal-measurements-chart.webp "Weight chart and entries, with an ad-free Premium upsell."){.phone}
+
+</div>
 
 ## Alignment {#alignment}
 
@@ -155,7 +163,15 @@ Weight syncs both ways with Apple Health, but only from the day you connect. Old
 
 Sharing works from any photo in the Entries list. You can swipe between photos, add a message and save a split photo or send it to Instagram or Facebook. There's no fullscreen viewer. The small viewer lets you zoom and pan, but those adjustments aren't saved. That's viewing only, not alignment. I didn't find a slider, overlay view or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists --> [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
+<div class="phone-row">
+
 ![MyFitnessPal Progress Gallery with two front photos side by side labeled 160 lbs and 155 lbs, above a strip of thumbnails](./myfitnesspal-progress-gallery.webp "Progress Gallery: two photos side by side with their weights."){.phone}
+
+![MyFitnessPal Progress Gallery showing one photo at 159 lbs on Oct 15, 2024, above a strip of thumbnails](./myfitnesspal-progress-gallery-single.webp "Progress Gallery: one photo with the thumbnail strip."){.phone}
+
+![MyFitnessPal Customize screen with two progress photos side by side and the caption Gained 1 pound!](./myfitnesspal-customize-share.webp "Share card: two photos side by side."){.phone}
+
+</div>
 
 ## Quality of life and privacy {#sharing}
 
