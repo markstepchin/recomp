@@ -73,7 +73,7 @@ test("the template keeps the canonical order and opts in as a draft", () => {
   assert.match(raw, /^draft: true$/m);
   assert.match(raw, /^template: app-review$/m);
   assert.match(raw, /^ {2}developer_url: "https:\/\//m);
-  const order = ["**Full disclosure:", "<!-- app-store-card -->", "<!-- TODO opening", "{#verdict}", "## FAQ {#faq}", "\n---\n", "Published:", "{#when-tested}", "Questions or corrections:"];
+  const order = ["**Full disclosure:", "<!-- app-store-card -->", "<!-- TODO opening", "{#verdict}", "## FAQ {#faq}", "<!-- scorecard -->"];
   let at = -1;
   for (const marker of order) {
     const next = body.indexOf(marker, at + 1);

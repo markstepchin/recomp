@@ -23,7 +23,7 @@ app_store:
   checked: 2026-11-01
   price: "0"
 summary: |
-  While Hevy has photo tracking, it's optimized for tracking workouts. It limits to one photo per day and doesn't have alignment after saving a photo. It also has extensive measurement tracking on the paid plan. For people serious about consistenly tracking their progress with photos, we recommend a dedicated app with no image limitations, multiple alignment methods, and better comparison options.
+  While Hevy has photo tracking, it's optimized for tracking workouts. It limits to one photo per day and doesn't have alignment after saving a photo. For people serious about consistenly tracking their progress with photos, we recommend a dedicated app with no image limitations, multiple alignment methods, and better comparison options.
 faq:
   - q: "Can you add front, side and back photos on the same day in Hevy?"
     a: "No. Hevy allows one progress photo per day."
@@ -35,7 +35,7 @@ faq:
     a: "Hevy exports measurements as a CSV. Photos aren't in the export."
   - q: "Does Hevy remind you to take progress photos?"
     a: "No. Hevy's notifications cover workouts and social activity, not progress photos or weigh-ins."
-# Visible 'How I tested' line. Empty until Mark fills it; renders [CONFIRM] on drafts.
+# Meta footer fields. Empty until Mark fills them.
 how_tested:
   device: "iPhone 15 Pro Max" # e.g. the iPhone model, from Settings > General > About
   ios: "26.6.2" # iOS version during the test
@@ -132,8 +132,6 @@ scorecard:
   dark_mode: { status: has, fact: "Dark theme" } # L132
   no_ads: { status: has, fact: "No ads" } # Review doesn't say whether Hevy shows ads.
 ---
-
-**Full disclosure: I build Recomp, a free progress photo app.**
 
 <!-- app-store-card -->
 
@@ -261,11 +259,3 @@ Hevy exports measurements as a CSV. Photos aren't in the export.
 No. Hevy's notifications cover workouts and social activity, not progress photos or weigh-ins.
 
 <!-- scorecard -->
-
----
-
-Published: [TODO]
-
-Tested: November 7, 2026 {#when-tested}
-
-Questions or corrections: support@progressphotos.app

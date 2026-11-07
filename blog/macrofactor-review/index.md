@@ -22,7 +22,7 @@ app_store:
   price: "0"
 summary: |
   Each date holds one front, one side and one back photo. You can only adjust a photo in the crop step, before you save it. Every photo is saved square. I didn't find a slider, overlay view or timelapse. MacroFactor doesn't remind you to weigh in or take photos. [TODO: do I recommend MacroFactor for progress photos, and for whom.]
-# Visible 'How I tested' line. Empty until Mark fills it; renders [CONFIRM] on drafts.
+# Meta footer fields. Empty until Mark fills them.
 how_tested:
   device: ""        # e.g. the iPhone model, from Settings > General > About
   ios: ""           # iOS version during the test
@@ -164,13 +164,3 @@ MacroFactor has dark mode and switches between pounds and kilograms. I didn't fi
 <!-- TODO(Mark): questions readers ask about MacroFactor's progress photos, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
 
 <!-- scorecard -->
-
----
-
-Published: [CONFIRM: publish date]
-
-Tested: October 2026 {#when-tested}
-
-<!-- TODO(Mark): confirm the test month and app version. -->
-
-Questions or corrections: support@progressphotos.app

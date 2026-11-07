@@ -165,30 +165,43 @@ export function checkHowTested(file, how, measurements) {
   return errors;
 }
 
-const shortDay = (iso, withYear) =>
-  new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", ...(withYear ? { year: "numeric" } : {}), timeZone: "UTC" });
+const monthYear = (iso) =>
+  new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-US", { month: "short", year: "numeric", timeZone: "UTC" });
 
 /**
- * The "How I tested" line: { parts, confirm, appVersion }. Parts skip empty values. `confirm` is
- * true while device, iOS, app version or the test dates are empty (the line shows [CONFIRM]).
+ * Fields for the review meta footer. Empty strings stay empty so the template can skip a row.
+ * `confirm` is true while device, iOS, app version or the test dates are empty.
  */
 export function howTestedData(how, measurements, appName) {
   if (how === undefined && measurements === undefined) return null;
   const h = how && typeof how === "object" ? how : {};
   const m = measurements && typeof measurements === "object" ? measurements : {};
   const val = (v) => (blank(v) ? "" : String(v).trim());
-  const parts = [];
-  if (val(h.device)) parts.push(val(h.device));
-  if (val(h.ios)) parts.push(`iOS ${val(h.ios)}`);
-  if (val(h.app_version)) parts.push(`${appName ? `${appName} ` : ""}${val(h.app_version)}`);
-  if (val(h.started) && val(h.ended)) {
-    const s = asDate(h.started), e = asDate(h.ended);
-    parts.push(s.slice(0, 4) === e.slice(0, 4) ? `${shortDay(s, false)} to ${shortDay(e, true)}` : `${shortDay(s, true)} to ${shortDay(e, true)}`);
-  }
-  if (val(h.checkins)) parts.push(`${val(h.checkins)} check-ins`);
-  if (val(m.taps_per_checkin) && val(m.seconds_per_checkin)) parts.push(`a check-in took ${val(m.taps_per_checkin)} taps and ${val(m.seconds_per_checkin)} seconds`);
-  if (val(m.import_photo_count) && val(m.import_seconds)) parts.push(`importing ${val(m.import_photo_count)} photos took ${val(m.import_seconds)} seconds`);
+  const device = val(h.device);
+  const ios = val(h.ios);
+  const appVersion = val(h.app_version);
+  const tested = val(h.started) && val(h.ended) ? monthYear(asDate(h.ended)) : "";
+  const checkins = val(h.checkins);
+  const checkinTiming =
+    val(m.taps_per_checkin) && val(m.seconds_per_checkin)
+      ? `${val(m.taps_per_checkin)} taps, ${val(m.seconds_per_checkin)} seconds`
+      : "";
+  const importTiming =
+    val(m.import_photo_count) && val(m.import_seconds)
+      ? `${val(m.import_photo_count)} photos in ${val(m.import_seconds)} seconds`
+      : "";
   const confirm = HOW_TESTED_REQUIRED.some((k) => !val(h[k]));
   const measured = MEASUREMENT_KEYS.some((k) => val(m[k]));
-  return { parts, confirm, measured, appVersion: val(h.app_version) || null };
+  return {
+    device,
+    ios,
+    appVersion: appVersion || null,
+    appVersionLabel: appVersion ? (appName ? `${appName} ${appVersion}` : appVersion) : "",
+    tested,
+    checkins,
+    checkinTiming,
+    importTiming,
+    confirm,
+    measured,
+  };
 }

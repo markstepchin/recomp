@@ -157,16 +157,23 @@ test("how_tested and measurements: unknown keys, bad dates and estimates fail", 
   assert.match(checkHowTested(FILE, { ...how, ended: "2026-09-01" }, undefined)[0], /before/);
 });
 
-test("howTestedData: parts in order, [CONFIRM] while a required field is empty", () => {
+test("howTestedData: labeled fields, confirm while a required field is empty", () => {
   const full = howTestedData(
     { device: "iPhone 15", ios: "26.1", app_version: "3.2", started: "2026-10-01", ended: "2026-10-20", checkins: "6" },
     { taps_per_checkin: "5", seconds_per_checkin: "40", import_photo_count: "100", import_seconds: "12" },
     "Hevy",
   );
-  assert.deepEqual(full.parts, ["iPhone 15", "iOS 26.1", "Hevy 3.2", "Oct 1 to Oct 20, 2026", "6 check-ins", "a check-in took 5 taps and 40 seconds", "importing 100 photos took 12 seconds"]);
+  assert.equal(full.device, "iPhone 15");
+  assert.equal(full.ios, "26.1");
+  assert.equal(full.appVersionLabel, "Hevy 3.2");
+  assert.equal(full.tested, "Oct 2026");
+  assert.equal(full.checkins, "6");
+  assert.equal(full.checkinTiming, "5 taps, 40 seconds");
+  assert.equal(full.importTiming, "100 photos in 12 seconds");
   assert.equal(full.confirm, false);
   const empty = howTestedData({ device: "", ios: "", app_version: "", started: "", ended: "", checkins: "" }, {}, "Hevy");
-  assert.deepEqual(empty.parts, []);
+  assert.equal(empty.device, "");
+  assert.equal(empty.tested, "");
   assert.equal(empty.confirm, true);
 });
 
@@ -282,7 +289,7 @@ test("rendered review: table semantics, decorative icons, byline dates match the
   const review = ld["@graph"].find((n) => n["@type"] === "Review");
   assert.match(html, new RegExp(`Published <time datetime="${review.datePublished}">`));
   assert.match(html, new RegExp(`Updated <time datetime="${review.dateModified}">`));
-  assert.match(html, /id="how-i-tested"[\s\S]*?\[CONFIRM: device, iOS, app version, test dates\][\s\S]*?href="\/blog\/how-i-test-progress-photo-apps\/"/);
+  assert.match(html, /id="how-i-tested"[\s\S]*?Published:[\s\S]*?Device:[\s\S]*?href="\/blog\/how-i-test-progress-photo-apps\/"/);
 });
 
 test("rendered review: omitted rows are absent and a complete review still has every row", () => {

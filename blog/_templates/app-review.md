@@ -24,7 +24,7 @@ app_store:
   checked: 2026-01-01 # [TODO: date you copied these values]
   price: "0" # [TODO: download price on the US App Store, a plain number like 4.99]
 how_tested:
-  # The "How I tested" line near the top. A published review needs device, ios, app_version, started and ended.
+  # Meta footer at the bottom (Device, iOS, Tested, …). A published review needs device, ios, app_version, started and ended.
   device: "" # e.g. the iPhone model
   ios: "" # e.g. 26.1
   app_version: "" # the version you tested
@@ -113,10 +113,4 @@ faq:
 
 [TODO: same answer as in the frontmatter]
 
----
-
-Published: [TODO: Month D, YYYY]
-
-Tested: [TODO: Month YYYY] {#when-tested}
-
-Questions or corrections: support@progressphotos.app
+<!-- scorecard -->

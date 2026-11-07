@@ -313,6 +313,7 @@ export function postData(data) {
     jsonLdOverride: data.json_ld ?? null,
     published, updated,
     publishedShort: published ? shortDate(published) : null,
+    publishedLong: published ? longDate(published) : null,
     updatedShort: updated ? shortDate(updated) : null,
     template: data.template ? String(data.template) : null,
     tested: data.tested ? String(data.tested) : null,

@@ -48,8 +48,13 @@
       {%- endfor %}
     </table>
   </div>
+{%- set checkedWhen = post.updatedShort if post.updated else (post.publishedShort if post.published else null) -%}
+{%- if checkedWhen or post.howTested.appVersion or (sc.hidden and not post.draft) %}
   <div class="mt-3 text-helper text-muted">
-    Checked {% if post.updated %}on {{ post.updatedShort }}{% elif post.published %}on {{ post.publishedShort }}{% endif %}{% if post.howTested.appVersion %} with {{ post.appStore.shortName or post.appStore.name }} {{ post.howTested.appVersion }}{% endif %}.
+    {%- if checkedWhen or post.howTested.appVersion %}
+    Checked{%- if checkedWhen %} on {{ checkedWhen }}{% endif %}{%- if post.howTested.appVersion %} with {{ post.appStore.shortName or post.appStore.name }} {{ post.howTested.appVersion }}{% endif %}.
+    {%- endif %}
     {%- if sc.hidden and not post.draft %} Rows I haven't checked yet are left out.{% endif %}
   </div>
+{%- endif %}
 </section>

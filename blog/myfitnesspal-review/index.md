@@ -22,7 +22,7 @@ app_store:
   price: "0"
 summary: |
   MyFitnessPal is built around tracking weight, and photos are an add-on. MyFitnessPal has no alignment tools. Since photos attach to weigh-ins, MyFitnessPal keeps only one photo per date. MyFitnessPal's reminders are for meals, not photos or weigh-ins. [TODO: do I recommend MyFitnessPal for progress photos, and for whom.]
-# Visible 'How I tested' line. Empty until Mark fills it; renders [CONFIRM] on drafts.
+# Meta footer fields. Empty until Mark fills them.
 how_tested:
   device: ""        # e.g. the iPhone model, from Settings > General > About
   ios: ""           # iOS version during the test
@@ -154,13 +154,3 @@ Photos are saved to your MyFitnessPal account on its servers, which is how they 
 <!-- TODO(Mark): questions readers ask about MyFitnessPal's progress photos, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
 
 <!-- scorecard -->
-
----
-
-Published: [CONFIRM: publish date]
-
-Tested: October 2026 {#when-tested}
-
-<!-- TODO(Mark): confirm the test month and app version. -->
-
-Questions or corrections: support@progressphotos.app
