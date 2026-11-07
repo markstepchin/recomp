@@ -4,7 +4,7 @@
 title: "Hevy Progress Photos Review"
 seo_title: "Hevy Progress Photos and Measurements, Tested | Recomp"
 description: "I tested Hevy's progress photos, overlay camera, side-by-side compare and measurements. It works for one weekly photo, but allows only one photo a day."
-tested: October 2026
+tested: November 2026
 draft: true
 breadcrumb: "Best progress photo apps"
 template: app-review
@@ -23,7 +23,7 @@ app_store:
   checked: 2026-11-01
   price: "0"
 summary: |
-  Hevy is a workout tracker with progress photos built in, under Profile > Measures. It has an overlay in the in-app camera, side-by-side comparisons, and photos stored next to your weight and measurements. It allows only one photo per day, so you can't keep front, side and back photos under the same date. Alignment happens only while you add a photo, and there's no auto-align. Fixing a photo later means deleting it and adding it again.
+  While Hevy has photo tracking, it's optimized for tracking workouts. It limits to one photo per day and doesn't have alignment after saving a photo. It also has extensive measurement tracking on the paid plan. For people serious about consistenly tracking their progress with photos, we recommend a dedicated app with no image limitations, multiple alignment methods, and better comparison options.
 faq:
   - q: "Can you add front, side and back photos on the same day in Hevy?"
     a: "No. Hevy allows one progress photo per day."
@@ -37,11 +37,11 @@ faq:
     a: "No. Hevy's notifications cover workouts and social activity, not progress photos or weigh-ins."
 # Visible 'How I tested' line. Empty until Mark fills it; renders [CONFIRM] on drafts.
 how_tested:
-  device: "" # e.g. the iPhone model, from Settings > General > About
-  ios: "" # iOS version during the test
+  device: "iPhone 15 Pro Max" # e.g. the iPhone model, from Settings > General > About
+  ios: "26.6.2" # iOS version during the test
   app_version: "" # app version tested, from the App Store page or the app's About screen
-  started: "" # YYYY-MM-DD, first day of testing
-  ended: "" # YYYY-MM-DD, last day of testing
+  started: "2026-11-07" # YYYY-MM-DD, first day of testing
+  ended: "2026-11-07" # YYYY-MM-DD, last day of testing
   checkins: "" # number of check-ins added during the test
 
 # Mark's hand measurements. Leave empty until measured; never estimate.
@@ -83,10 +83,13 @@ scorecard:
       status: partial,
       fact: "Camera roll photos only, before saving; none for in-app shots",
     } # L80, L98
-  align_in_compare: { status: missing, fact: "No alignment in the side-by-side view" } # CONFLICT in the review: L100 says 'no side-by-side alignment', L120 says you can manually align two photos in the compare view but it isn't saved. Mark to settle before publish.
+  align_in_compare: {
+      status: missing,
+      fact: "No alignment in the side-by-side view",
+    } # CONFLICT in the review: L100 says 'no side-by-side alignment', L120 says you can manually align two photos in the compare view but it isn't saved. Mark to settle before publish.
   # Comparison should be effortless
   compare_speed: { status: has, fact: "Switch between several dates quickly" } # Not measured yet.
-  compare_scale: { status: confirm, fact: "[CONFIRM]" } # Not tested with hundreds of photos in the review.
+  compare_scale: { status: missing, fact: "Not confirmed" } # Not tested with hundreds of photos; stays on the published table.
   side_by_side: { status: has, fact: "Two photos side by side, edge to edge" } # L110
   slider_view: { status: missing, fact: "No slider view" } # L122
   overlay_view: { status: missing, fact: "No overlay view" } # L122
@@ -263,6 +266,6 @@ No. Hevy's notifications cover workouts and social activity, not progress photos
 
 Published: [TODO]
 
-Tested: [TODO] (October 2026?) {#when-tested}
+Tested: November 7, 2026 {#when-tested}
 
 Questions or corrections: support@progressphotos.app

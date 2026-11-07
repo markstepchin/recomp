@@ -321,7 +321,7 @@ const HEVY_FACTS = {
   weight_apple_health: ["has", "Weight from Apple Health"],
   align_in_compare: ["missing", "No alignment in the side-by-side view"],
   compare_speed: ["has", "Switch between several dates quickly"],
-  compare_scale: ["confirm", "[CONFIRM]"],
+  compare_scale: ["missing", "Not confirmed"],
   bulk_import: ["missing", "No bulk import"],
   units: ["has", "Metric and imperial"],
   no_ads: ["has", "No ads"],
