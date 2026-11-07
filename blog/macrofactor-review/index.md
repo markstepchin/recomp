@@ -21,7 +21,7 @@ app_store:
   checked: 2026-11-01
   price: "0"
 summary: |
-  Each date holds one front, one side and one back photo. You can only adjust a photo in the crop step, before you save it. Every photo is saved square. I didn't find a slider, overlay view or timelapse. MacroFactor doesn't remind you to weigh in or take photos. [TODO: do I recommend MacroFactor for progress photos, and for whom.]
+  While MacroFactor has photo tracking, it's optimized for tracking macros. It limits you to one front, one side and one back photo per day and doesn't have alignment after saving a photo. For people serious about consistently tracking their progress with photos, we recommend a dedicated app with no image limitations, multiple alignment methods, and better comparison options.
 # Meta footer fields. Empty until Mark fills them.
 how_tested:
   device: ""        # e.g. the iPhone model, from Settings > General > About
@@ -89,11 +89,62 @@ scorecard:
 
 <!-- app-store-card -->
 
-MacroFactor is one of the 12 apps I've tested so far, and one of three fitness apps with a photo feature I tested alongside the dedicated progress photo apps. I tested it the way I test every app, with real photos and weights from my own transformation. [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) explains the method.
+## Built for macros, not photos {#design-tradeoffs}
 
 <!-- TODO(Mark): intro. What MacroFactor is for, what it costs, whether I paid for a subscription, and how many check-ins I added. Notes so far only say it's a fitness app with a photo feature. -->
 
-## Is it a good photo album? {#photo-album}
+If you’re one of the many people who already use MacroFactor, you’re probably wondering if you really need to download and set up a whole new app. And yes, while MacroFactor does have progress photo tracking, it makes multiple tradeoffs to optimize for macros over photo tracking.
+
+Apple’s native apps are a perfect case study for why it makes sense to separate apps that can seem closely related.
+
+- Camera and Photos
+- Health and Fitness
+- Notes and Numbers
+
+Separating these apps provides a better user experience for each individual use case. We recommend using multiple apps and tools, each designed for a specific use case. At the very least, you need a workout tracker, a calorie tracker, and a progress photo tracker.
+
+## How I test {#todo}
+
+MacroFactor is one of the 12 apps I've tested so far, and one of three fitness apps with a photo feature I tested alongside the dedicated progress photo apps. I tested it the way I test every app, with real photos and weights from my own transformation. [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) explains the method.
+
+After personally tracking hundreds of progress photos over several years, I have an opinionated philosophy on what's a must have, what's nice to have, and what's fluff. A great progress photo tracker is 4 apps in one:
+
+1. Photos app / camera roll
+2. Great alignment tools for consistent comparisons
+3. Collage app with multiple ways to compare your photos over time
+4. Weight, measurements, and notes all associated to photos
+
+I test each of these features with my personal library of real progress photos & weight records. See [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) to learn more.
+
+![iOS Photos album showing hundreds of weekly front, side, and back progress photos from years of coaching check-ins](../../assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp "Years of weekly check-ins, still stuck in my camera roll."){.phone}
+
+## Adding progress data {#adding-data}
+
+### No Notifications for tracking {#reminders}
+
+**MacroFactor doesn't remind you to weigh in or take photos.** The only nudge is a small alert on the Strategy tab when your weekly check-in is due, and you pick the check-in day. That check-in updates calories and macros, not photos. [MacroFactor's check-in help](https://help.macrofactorapp.com/en/articles/247-introduction-to-check-ins-and-coaching-modules).
+
+### Photos {#adding-photos}
+
+<!-- TODO(Mark): adding a check-in: taps and seconds for a weight and front, side and back photos (great is under 30 seconds). Does it read the date from the photos, import weight from Apple Health, and let me pick all 3 photos in one picker? -->
+
+![MacroFactor new check-in sheet dated 10/25/2026 with empty Front, Side and Back photo slots and a Save button](./macrofactor-new-check-in.webp "A new check-in: one slot each for front, side and back."){.phone}
+
+![MacroFactor check-in with the Front slot selected and an Upload Photo or Take Photo menu](./macrofactor-add-front-photo.webp "Adding the front photo: upload or take one."){.phone}
+
+### Weights and measurements {#weights}
+
+Each date holds one front, one side and one back photo. They sit next to up to 21 body metrics, from waist and hips to waist-to-height ratio. Weight can come from Apple Health, and connecting it pulls in the last 30 days. You pick a date by hand for older photos. Sources: [How to add progress photos](https://help.macrofactorapp.com/en/articles/121-how-to-add-progress-photos), [body metrics announcement](https://macrofactor.com/body-metrics/), [Apple Health setup](https://help.macrofactorapp.com/en/articles/65-connect-health-connect-or-apple-health).
+
+## Alignment {#alignment}
+
+<!-- TODO(Mark): ease of alignment, gridline quality, ghost overlay, auto align, and whether I can align in the side by side view. -->
+
+**You can only adjust a photo in the crop step, before you save it.** MacroFactor's help says you can zoom and rotate there. Once a photo is uploaded, I can't edit, resize or align it. <!-- TODO(feature-link): link "align" to Recomp's manual alignment feature page once it exists --> Every photo is saved square. Take Photo launches the phone's camera, and I didn't find a ghost overlay, gridlines for posing or auto-align in MacroFactor's help. <!-- TODO(feature-link): link "ghost overlay" to Recomp's Ghost overlay camera feature page once it exists --> <!-- TODO(feature-link): link "auto-align" to Recomp's Auto-align feature page once it exists --> [How to add progress photos](https://help.macrofactorapp.com/en/articles/121-how-to-add-progress-photos).
+
+![MacroFactor Crop Photo screen with a grid crop box over a mirror selfie](./macrofactor-crop-photo.webp "The Crop Photo step, before the photo is saved."){.phone}
+
+## Comparison Features {#compare}
 
 <!-- TODO(Mark): are the photos the star? How much of the screen do they take, and do the buttons get in their way? How does it handle dozens or hundreds of photos? -->
 
@@ -105,16 +156,6 @@ Neither gallery view uses the screen well. The single view shows one square phot
 
 ![MacroFactor gallery single view with Front, Side and Back tabs, one square front photo dated October 31, 2026, Trend Weight and Scale Weight of 168.5 lb below it, and a large empty area above the filmstrip](./macrofactor-single-view.webp "Single view: one square photo, then empty space down to the filmstrip."){.phone}
 
-## How does it handle alignment? {#alignment}
-
-<!-- TODO(Mark): ease of alignment, gridline quality, ghost overlay, auto align, and whether I can align in the side by side view. -->
-
-**You can only adjust a photo in the crop step, before you save it.** MacroFactor's help says you can zoom and rotate there. Once a photo is uploaded, I can't edit, resize or align it. <!-- TODO(feature-link): link "align" to Recomp's manual alignment feature page once it exists --> Every photo is saved square. Take Photo launches the phone's camera, and I didn't find a ghost overlay, gridlines for posing or auto-align in MacroFactor's help. <!-- TODO(feature-link): link "ghost overlay" to Recomp's Ghost overlay camera feature page once it exists --> <!-- TODO(feature-link): link "auto-align" to Recomp's Auto-align feature page once it exists --> [How to add progress photos](https://help.macrofactorapp.com/en/articles/121-how-to-add-progress-photos).
-
-![MacroFactor Crop Photo screen with a grid crop box over a mirror selfie](./macrofactor-crop-photo.webp "The Crop Photo step, before the photo is saved."){.phone}
-
-## How do comparisons and collages work? {#compare}
-
 <!-- TODO(Mark): how easy it is to compare, and the taps and time to compare 9 different dates. Can it make a shareable before/after image or a timelapse? -->
 
 Before and after stacks two photos of the same pose, one above the other. <!-- TODO(feature-link): link "one above the other" to Recomp's Side-by-side comparison feature page once it exists --> You tap the top slot and pick a photo from the ribbon of dates, then do the same for the bottom. The share image can use a plain background or one matched to the photo's colors. I didn't find a slider, overlay view or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists --> [How to create before-and-after photos](https://help.macrofactorapp.com/en/articles/123-how-to-create-and-share-before-and-after-photos).
@@ -123,11 +164,7 @@ Before and after stacks two photos of the same pose, one above the other. <!-- T
 
 ![MacroFactor gallery with Front, Side and Back tabs showing front photos from May 21, 2024 and August 4, 2025, each with Trend Weight and Scale Weight fields, above a filmstrip](./macrofactor-gallery-trend-weight.webp "The gallery: front photos by date, with Trend Weight and Scale Weight."){.phone}
 
-## How does it handle my data? {#data}
-
-<!-- TODO(Mark): adding a check-in: taps and seconds for a weight and front, side and back photos (great is under 30 seconds). Does it read the date from the photos, import weight from Apple Health, and let me pick all 3 photos in one picker? -->
-
-Each date holds one front, one side and one back photo. They sit next to up to 21 body metrics, from waist and hips to waist-to-height ratio. Weight can come from Apple Health, and connecting it pulls in the last 30 days. You pick a date by hand for older photos. Sources: [How to add progress photos](https://help.macrofactorapp.com/en/articles/121-how-to-add-progress-photos), [body metrics announcement](https://macrofactor.com/body-metrics/), [Apple Health setup](https://help.macrofactorapp.com/en/articles/65-connect-health-connect-or-apple-health).
+## Quality of life and privacy {#sharing}
 
 <!-- TODO(Mark): privacy: are photos ever sent to a third-party server? Account required? Backup and moving to a new phone, CSV weight import, photo export, Face ID or app lock, app switcher privacy. -->
 
@@ -135,29 +172,17 @@ Photos upload to MacroFactor's servers on Google Firebase. They stay there until
 
 <!-- TODO(Mark): any quality-of-life items that matter for MacroFactor (bulk import, reminders, in-app camera, units, body measurements, editing a check-in's date, partial check-ins, dark mode, ads). Fold them into the sections above or below; no separate section or table unless it clearly helps. -->
 
-**MacroFactor doesn't remind you to weigh in or take photos.** The only nudge is a small alert on the Strategy tab when your weekly check-in is due, and you pick the check-in day. That check-in updates calories and macros, not photos. [MacroFactor's check-in help](https://help.macrofactorapp.com/en/articles/247-introduction-to-check-ins-and-coaching-modules).
-
 MacroFactor has dark mode and switches between pounds and kilograms. I didn't find an app lock or Face ID option. Sources: [dark mode](https://help.macrofactorapp.com/en/articles/73-switch-between-dark-and-light-mode), [units](https://help.macrofactorapp.com/en/articles/353-changing-unit-preferences).
-
-![MacroFactor new check-in sheet dated 10/25/2026 with empty Front, Side and Back photo slots and a Save button](./macrofactor-new-check-in.webp "A new check-in: one slot each for front, side and back."){.phone}
-
-![MacroFactor check-in with the Front slot selected and an Upload Photo or Take Photo menu](./macrofactor-add-front-photo.webp "Adding the front photo: upload or take one."){.phone}
-
-## What's good {#whats-good}
 
 <!-- TODO(Mark): what's good. -->
 
-## What's bad {#whats-bad}
-
 <!-- TODO(Mark): what's bad. -->
-
-## Who it's for {#who-its-for}
 
 <!-- TODO(Mark): who I'd recommend it for. -->
 
-## Verdict {#verdict}
-
 <!-- TODO(Mark): qualitative verdict in plain words on whether I recommend it. No numeric score. -->
+
+<!-- [TODO: do I recommend MacroFactor for progress photos, and for whom.] -->
 
 ## FAQ {#faq}
 

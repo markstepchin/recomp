@@ -23,7 +23,7 @@ app_store:
   checked: 2026-11-01
   price: "0"
 summary: |
-  While Hevy has photo tracking, it's optimized for tracking workouts. It limits to one photo per day and doesn't have alignment after saving a photo. For people serious about consistenly tracking their progress with photos, we recommend a dedicated app with no image limitations, multiple alignment methods, and better comparison options.
+  While Hevy has photo tracking, it's optimized for tracking workouts. It limits you to one photo per day and doesn't have alignment after saving a photo. For people serious about consistently tracking their progress with photos, we recommend a dedicated app with no image limitations, multiple alignment methods, and better comparison options.
 faq:
   - q: "Can you add front, side and back photos on the same day in Hevy?"
     a: "No. Hevy allows one progress photo per day."
@@ -139,7 +139,7 @@ scorecard:
 
 <!-- TODO: outline, write into prose -->
 
-If you’re one of the many people who already use the popular workout tracking app Hevy, you’re probably wondering if you really need to download and setup a whole new app. And yes, while Hevy does have progress photo tracking, it makes multiple tradeoffs to optimize for workouts over photo tracking.
+If you’re one of the many people who already use the popular workout tracking app Hevy, you’re probably wondering if you really need to download and set up a whole new app. And yes, while Hevy does have progress photo tracking, it makes multiple tradeoffs to optimize for workouts over photo tracking.
 
 Apple’s native apps are a perfect case study for why it makes sense to separate apps that can seem closely related.
 
@@ -172,7 +172,7 @@ Hevy's notifications are workout specific, like a rest timer in between sets and
 
 Hevy's **1 photo/day limit** means you can't track front, side and back photos per session <br />[Hevy's progress photos page](https://www.hevyapp.com/features/progress-photos/).
 
-Hevy support both adding existing photos as well as an in app camera. Hevy doesn't read the date from the photo, so you must edit the data manually if you're adding a photo from a different date.
+Hevy supports both adding existing photos and an in-app camera. Hevy doesn't read the date from the photo, so you must edit the date manually if you're adding a photo from a different date.
 
 ### Weights and measurements {#weights}
 

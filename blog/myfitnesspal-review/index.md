@@ -21,7 +21,7 @@ app_store:
   checked: 2026-11-01
   price: "0"
 summary: |
-  MyFitnessPal is built around tracking weight, and photos are an add-on. MyFitnessPal has no alignment tools. Since photos attach to weigh-ins, MyFitnessPal keeps only one photo per date. MyFitnessPal's reminders are for meals, not photos or weigh-ins. [TODO: do I recommend MyFitnessPal for progress photos, and for whom.]
+  While MyFitnessPal has photo tracking, it's optimized for tracking calories. It limits you to one photo per day and doesn't have alignment tools. For people serious about consistently tracking their progress with photos, we recommend a dedicated app with no image limitations, multiple alignment methods, and better comparison options.
 # Meta footer fields. Empty until Mark fills them.
 how_tested:
   device: ""        # e.g. the iPhone model, from Settings > General > About
@@ -89,23 +89,66 @@ scorecard:
 
 <!-- app-store-card -->
 
-MyFitnessPal is one of the 12 apps I've tested so far, and one of three fitness apps with a photo feature I tested alongside the dedicated progress photo apps. I tested it the way I test every app, with real photos and weights from my own transformation. [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) explains the method.
+## Built for calories, not photos {#design-tradeoffs}
 
 <!-- TODO(Mark): intro. What MyFitnessPal is for, what it costs, whether I paid for a subscription, and how many check-ins I added. Notes so far only say it's a fitness app with a photo feature. -->
 
-## Is it a good photo album? {#photo-album}
+If you’re one of the many people who already use MyFitnessPal, you’re probably wondering if you really need to download and set up a whole new app. And yes, while MyFitnessPal does have progress photo tracking, it makes multiple tradeoffs to optimize for calories over photo tracking.
+
+Apple’s native apps are a perfect case study for why it makes sense to separate apps that can seem closely related.
+
+- Camera and Photos
+- Health and Fitness
+- Notes and Numbers
+
+Separating these apps provides a better user experience for each individual use case. We recommend using multiple apps and tools, each designed for a specific use case. At the very least, you need a workout tracker, a calorie tracker, and a progress photo tracker.
+
+## How I test {#todo}
+
+MyFitnessPal is one of the 12 apps I've tested so far, and one of three fitness apps with a photo feature I tested alongside the dedicated progress photo apps. I tested it the way I test every app, with real photos and weights from my own transformation. [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) explains the method.
+
+After personally tracking hundreds of progress photos over several years, I have an opinionated philosophy on what's a must have, what's nice to have, and what's fluff. A great progress photo tracker is 4 apps in one:
+
+1. Photos app / camera roll
+2. Great alignment tools for consistent comparisons
+3. Collage app with multiple ways to compare your photos over time
+4. Weight, measurements, and notes all associated to photos
+
+I test each of these features with my personal library of real progress photos & weight records. See [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) to learn more.
+
+![iOS Photos album showing hundreds of weekly front, side, and back progress photos from years of coaching check-ins](../../assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp "Years of weekly check-ins, still stuck in my camera roll."){.phone}
+
+## Adding progress data {#adding-data}
+
+### No Notifications for tracking {#reminders}
+
+**MyFitnessPal's reminders are for meals, not photos or weigh-ins.** Each one fires if you haven't logged a chosen meal by a set time. Its help recommends weighing in once a week, but I didn't find a reminder for it. [CONFIRM: in Profile > Reminders > +, is there a weigh-in option?] Sources: [logging reminders](https://support.myfitnesspal.com/hc/en-us/articles/360032622391-How-to-set-up-logging-reminders), [how often to weigh in](https://support.myfitnesspal.com/hc/en-us/articles/360032272992-How-often-should-I-record-my-weight-and-other-measurements).
+
+### Photos {#adding-photos}
 
 <!-- TODO(Mark): are the photos the star? How much of the screen do they take, and do the buttons get in their way? How does it handle dozens or hundreds of photos? -->
 
+<!-- TODO(Mark): adding a check-in: taps and seconds for a weight and front, side and back photos (great is under 30 seconds). Does it read the date from the photos, import weight from Apple Health, and let me pick all 3 photos in one picker? -->
+
 **MyFitnessPal is built around tracking weight, and photos are an add-on.** You add a weight record under More > Weight & Measurements and can attach a photo to it. Photos taken in the app aren't saved to your camera roll. [MyFitnessPal's progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
-## How does it handle alignment? {#alignment}
+**Since photos attach to weigh-ins, MyFitnessPal keeps only one photo per date.** I can't keep a front, side and back photo for the same day.
+
+![MyFitnessPal Edit weight screen showing 155 lbs with a Change date picker set to August 4, 2025](./myfitnesspal-edit-weight-date.webp "Editing a weigh-in's date."){.phone}
+
+### Weights and measurements {#weights}
+
+Weight syncs both ways with Apple Health, but only from the day you connect. Older Health weigh-ins don't come over. Waist, hips, neck and weight are built in. Anything else, like body fat or thighs, has to be added on the website first, with one value per measurement per day. Sources: [Apple Health syncing](https://support.myfitnesspal.com/hc/en-us/articles/360032271092-Apple-Health-connection-and-syncing), [additional measurements](https://support.myfitnesspal.com/hc/en-us/articles/360032624891-Can-I-track-additional-measurements-or-change-the-default-measurements).
+
+![MyFitnessPal Measurements screen for Weight over 1 Month with no data yet and a Go Premium banner for ad-free tracking](./myfitnesspal-measurements.webp "Measurements before any weigh-ins, with a Premium upsell."){.phone}
+
+## Alignment {#alignment}
 
 <!-- TODO(Mark): ease of alignment, gridline quality, ghost overlay, auto align, and whether I can align in the side by side view. -->
 
 **MyFitnessPal has no alignment tools.** There's no overlay, gridlines or auto-align, and no way to adjust a photo after you add it. <!-- TODO(feature-link): link "overlay" to Recomp's Ghost overlay camera feature page once it exists --> <!-- TODO(feature-link): link "auto-align" to Recomp's Auto-align feature page once it exists --> <!-- TODO(feature-link): link "adjust a photo" to Recomp's manual alignment feature page once it exists --> It crops every photo square when you upload it, so anything outside the center gets cut. [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
-## How do comparisons and collages work? {#compare}
+## Comparison Features {#compare}
 
 <!-- TODO(Mark): how easy it is to compare, and the taps and time to compare 9 different dates. Can it make a shareable before/after image or a timelapse? -->
 
@@ -113,13 +156,7 @@ Sharing works from any photo in the Entries list. You can swipe between photos, 
 
 ![MyFitnessPal Progress Gallery with two front photos side by side labeled 160 lbs and 155 lbs, above a strip of thumbnails](./myfitnesspal-progress-gallery.webp "Progress Gallery: two photos side by side with their weights."){.phone}
 
-## How does it handle my data? {#data}
-
-<!-- TODO(Mark): adding a check-in: taps and seconds for a weight and front, side and back photos (great is under 30 seconds). Does it read the date from the photos, import weight from Apple Health, and let me pick all 3 photos in one picker? -->
-
-**Since photos attach to weigh-ins, MyFitnessPal keeps only one photo per date.** I can't keep a front, side and back photo for the same day.
-
-Weight syncs both ways with Apple Health, but only from the day you connect. Older Health weigh-ins don't come over. Waist, hips, neck and weight are built in. Anything else, like body fat or thighs, has to be added on the website first, with one value per measurement per day. Sources: [Apple Health syncing](https://support.myfitnesspal.com/hc/en-us/articles/360032271092-Apple-Health-connection-and-syncing), [additional measurements](https://support.myfitnesspal.com/hc/en-us/articles/360032624891-Can-I-track-additional-measurements-or-change-the-default-measurements).
+## Quality of life and privacy {#sharing}
 
 <!-- TODO(Mark): privacy: are photos ever sent to a third-party server? Account required? Backup and moving to a new phone, CSV weight import, photo export, Face ID or app lock, app switcher privacy. -->
 
@@ -127,27 +164,15 @@ Photos are saved to your MyFitnessPal account on its servers, which is how they 
 
 <!-- TODO(Mark): any quality-of-life items that matter for MyFitnessPal (bulk import, reminders, in-app camera, units, body measurements, editing a check-in's date, partial check-ins, dark mode, ads). Fold them into the sections above or below; no separate section or table unless it clearly helps. -->
 
-**MyFitnessPal's reminders are for meals, not photos or weigh-ins.** Each one fires if you haven't logged a chosen meal by a set time. Its help recommends weighing in once a week, but I didn't find a reminder for it. [CONFIRM: in Profile > Reminders > +, is there a weigh-in option?] Sources: [logging reminders](https://support.myfitnesspal.com/hc/en-us/articles/360032622391-How-to-set-up-logging-reminders), [how often to weigh in](https://support.myfitnesspal.com/hc/en-us/articles/360032272992-How-often-should-I-record-my-weight-and-other-measurements).
-
-![MyFitnessPal Measurements screen for Weight over 1 Month with no data yet and a Go Premium banner for ad-free tracking](./myfitnesspal-measurements.webp "Measurements before any weigh-ins, with a Premium upsell."){.phone}
-
-![MyFitnessPal Edit weight screen showing 155 lbs with a Change date picker set to August 4, 2025](./myfitnesspal-edit-weight-date.webp "Editing a weigh-in's date."){.phone}
-
-## What's good {#whats-good}
-
 <!-- TODO(Mark): what's good. -->
-
-## What's bad {#whats-bad}
 
 <!-- TODO(Mark): what's bad. -->
 
-## Who it's for {#who-its-for}
-
 <!-- TODO(Mark): who I'd recommend it for. -->
 
-## Verdict {#verdict}
-
 <!-- TODO(Mark): qualitative verdict in plain words on whether I recommend it. No numeric score. -->
+
+<!-- [TODO: do I recommend MyFitnessPal for progress photos, and for whom.] -->
 
 ## FAQ {#faq}
 
