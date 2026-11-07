@@ -3,6 +3,8 @@
 @source "../**/*.html";
 @source "../**/*.njk";
 @source "../blog/**/*.md";
+/* "resize" in review prose (MacroFactor) would generate a stray .resize utility. */
+@source not inline("resize");
 
 @theme {
   --color-bg: #0a0a0b;
@@ -17,6 +19,8 @@
   --color-placeholder: #1c1c1e;
   --color-success: #30d158;
   --color-error: #ff453a;
+  /* iOS system orange. Status colours (scorecard): 9.6:1, 9.8:1 and 5.8:1 on #0a0a0b. */
+  --color-warning: #ff9f0a;
 
   --font-sans:
     -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
@@ -87,6 +91,11 @@
     --color-card-border: rgba(0, 0, 0, 0.08);
     --color-placeholder: #ececea;
     --color-accent-tint: rgba(10, 132, 255, 0.1);
+    /* Darker status colours for light mode: the dark-mode ones are 1.9:1 to 3.3:1 on #fafaf9.
+       These are 5.2:1, 5.2:1 and 5.1:1 on #fafaf9 (WCAG AA for 14px text). */
+    --color-success: #1e7a34;
+    --color-error: #d70015;
+    --color-warning: #c93400;
     --grid-color: rgba(0, 0, 0, 0.06);
     --shadow-card:
       0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 16px 40px rgba(0, 0, 0, 0.08);
@@ -112,6 +121,9 @@ html[data-theme="dark"] {
   --color-card-border: rgba(255, 255, 255, 0.08);
   --color-placeholder: #1c1c1e;
   --color-accent-tint: rgba(10, 132, 255, 0.12);
+  --color-success: #30d158;
+  --color-error: #ff453a;
+  --color-warning: #ff9f0a;
   --grid-color: rgba(255, 255, 255, 0.16);
   --shadow-card:
     0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 24px 48px rgba(0, 0, 0, 0.35);
@@ -126,6 +138,9 @@ html[data-theme="light"] {
   --color-card-border: rgba(0, 0, 0, 0.08);
   --color-placeholder: #ececea;
   --color-accent-tint: rgba(10, 132, 255, 0.1);
+  --color-success: #1e7a34;
+  --color-error: #d70015;
+  --color-warning: #c93400;
   --grid-color: rgba(0, 0, 0, 0.06);
   --shadow-card:
     0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 16px 40px rgba(0, 0, 0, 0.08);
@@ -427,3 +442,52 @@ html[data-theme="dark"] .device__frame {
   color: var(--color-muted);
 }
 
+
+/* Blog phone screenshots ({.phone}): black iPhone chrome matching .device__frame. */
+.phone-shot {
+  border: 6px solid #000;
+  border-radius: 13.5% / 6.3%;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
+}
+html[data-theme="dark"] .phone-shot { box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 24px 48px rgba(0,0,0,0.4); }
+@media (prefers-color-scheme: dark) { html[data-theme="system"] .phone-shot { box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 24px 48px rgba(0,0,0,0.4); } }
+
+/* Two or more phone screenshots in a row (blog): side by side, swipes horizontally on narrow screens like the homepage steps. */
+.phone-row {
+  display: flex;
+  justify-content: safe center;
+  gap: 1rem;
+  margin-top: 3rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.phone-row::-webkit-scrollbar { display: none; }
+.phone-row > figure {
+  flex: 0 0 min(70%, 280px);
+  width: auto;
+  max-width: none;
+  margin: 0;
+  scroll-snap-align: center;
+}
+/* Wide screens: every screenshot fits in the row, no cut-off or scrolling. */
+@media (min-width: 768px) {
+  .phone-row { overflow-x: visible; justify-content: center; }
+  .phone-row > figure { flex: 1 1 0; min-width: 0; max-width: 280px; }
+}
+
+/* Review scorecard (_includes/scorecard.njk). The status word takes the status colour; the
+   word is always there, so colour is never the only signal. Light values are in the light blocks. */
+@layer components {
+  /* MailCheap-style marks: green check, muted dash and cross; facts for missing rows are muted. */
+  .scorecard [data-status="has"] .sc-status { color: var(--color-success); }
+  .scorecard [data-status="partial"] .sc-status,
+  .scorecard [data-status="missing"] .sc-status,
+  .scorecard [data-status="confirm"] .sc-status { color: var(--color-muted); }
+  .scorecard [data-status="has"] .sc-fact,
+  .scorecard [data-status="partial"] .sc-fact { color: var(--color-fg); }
+  .scorecard [data-status="missing"] .sc-fact { color: var(--color-muted); }
+  .scorecard tbody:last-child > tr:last-child > * { border-bottom: 0; }
+  .scorecard tbody + tbody > tr:first-child > th { border-top: 0; }
+}

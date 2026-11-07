@@ -10,7 +10,7 @@ cta:
   text: "Compare progress photos on a before-and-after timeline, scroll to any date instantly, and align photos on the fly. Recomp never uploads your photos or weight data."
 hand_listed: true
 json_ld:
-  - {"@context": "https://schema.org", "@type": "Article", "headline": "Why I created Recomp", "description": "I built Recomp because I couldn't find an app that made weekly progress photos fast to take, align, and compare. A weekly check-in takes under a minute.", "datePublished": "2026-09-21", "dateModified": "2026-09-27", "author": {"@type": "Person", "name": "Mark Stepchin", "url": "https://progressphotos.app/about/", "jobTitle": "Founder of Recomp"}, "publisher": {"@type": "Organization", "name": "Recomp", "url": "https://progressphotos.app/"}, "url": "https://progressphotos.app/blog/why-i-built-recomp/", "mainEntityOfPage": "https://progressphotos.app/blog/why-i-built-recomp/", "image": "https://progressphotos.app/assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp"}
+  - {"@context": "https://schema.org", "@type": "Article", "headline": "Why I created Recomp", "description": "I built Recomp because I couldn't find an app that made weekly progress photos fast to take, align, and compare. A weekly check-in takes under a minute.", "datePublished": "2026-09-21", "dateModified": "2026-09-27", "author": {"@type": "Person", "@id": "https://progressphotos.app/about/#mark", "name": "Mark Stepchin", "url": "https://progressphotos.app/about/", "jobTitle": "Founder of Recomp"}, "publisher": {"@type": "Organization", "name": "Recomp", "url": "https://progressphotos.app/"}, "url": "https://progressphotos.app/blog/why-i-built-recomp/", "mainEntityOfPage": "https://progressphotos.app/blog/why-i-built-recomp/", "image": "https://progressphotos.app/assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp"}
 ---
 
 <aside
@@ -30,7 +30,7 @@ json_ld:
   </p>
 </aside>
 
-<div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4">
+<div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-[1.5rem] [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4">
 
 <figure class="m-0 mx-auto mt-12 w-1/2 max-w-[280px]"><img class="block h-auto w-full rounded-card border border-card-border" src="../../assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp" alt="iOS Photos album showing hundreds of weekly front, side, and back progress photos from years of coaching check-ins" width="1290" height="2635"><figcaption class="mt-[0.65rem] text-center text-caption leading-[1.4] text-muted">Years of weekly check-ins, still stuck in my camera roll.</figcaption></figure>
 

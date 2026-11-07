@@ -19,10 +19,26 @@ export const TODO_COMMENT = /<!--\s*TODO\b[\s\S]*?-->/gi;
 export const FIGURE_CLASS = "m-0";
 export const PHONE_FIGURE_CLASS = "m-0 mx-auto mt-12 w-1/2 max-w-[280px]";
 export const IMG_CLASS = "block h-auto w-full rounded-card border border-card-border";
+// Phone screenshots get the same black iPhone chrome as the homepage (.phone-shot in input.css).
+export const PHONE_IMG_CLASS = "phone-shot block h-auto w-full";
 export const CAPTION_CLASS = "mt-[0.65rem] text-center text-caption leading-[1.4] text-muted";
 export const SIZES = "(min-width: 800px) 752px, 100vw";
 export const PHONE_SIZES = "(min-width: 560px) 280px, 50vw";
 const PHONE = "phone";
+
+/** Source links to an app's own site get that app's icon before the text (posts live at /blog/<slug>/). */
+export const SOURCE_ICONS = [
+  [/(^|\.)hevy(app)?\.com$/, "hevy"],
+  [/(^|\.)macrofactor(app)?\.com$/, "macrofactor"],
+  [/(^|\.)myfitnesspal\.com$/, "myfitnesspal"],
+];
+export const SOURCE_ICON_CLASS = "mr-[0.3em] inline-block size-[1em] rounded-[22%] align-[-0.125em]";
+export function sourceIcon(href) {
+  let host;
+  try { host = new URL(href).hostname; } catch { return null; }
+  const hit = SOURCE_ICONS.find(([re]) => re.test(host));
+  return hit ? hit[1] : null;
+}
 
 export function markdown() {
   const md = markdownIt({ html: true, linkify: false, typographer: false });
@@ -47,12 +63,20 @@ export function markdown() {
     token.attrSet("alt", self.renderInlineAsText(token.children, options, env));
     const extra = (token.attrGet("class") ?? "").split(/\s+/).filter(Boolean);
     const phone = extra.includes(PHONE);
-    token.attrSet("class", [IMG_CLASS, ...extra.filter((c) => c !== PHONE)].join(" "));
+    token.attrSet("class", phone ? [PHONE_IMG_CLASS, ...extra.filter((c) => c !== PHONE)].join(" ") : [IMG_CLASS, ...extra].join(" "));
     if (phone) token.attrSet("sizes", PHONE_SIZES);
     const img = self.renderToken(tokens, idx, options);
     if (!token.meta?.figure) return img;
     const cap = caption ? `<figcaption class="${CAPTION_CLASS}">${escape(caption)}</figcaption>` : "";
     return `<figure class="${phone ? PHONE_FIGURE_CLASS : FIGURE_CLASS}">${img}${cap}</figure>\n`;
+  };
+
+  const defaultLinkOpen = md.renderer.rules.link_open ?? ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options));
+  md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
+    const html = defaultLinkOpen(tokens, idx, options, env, self);
+    const icon = sourceIcon(tokens[idx].attrGet("href") ?? "");
+    if (!icon) return html;
+    return `${html}<img class="${SOURCE_ICON_CLASS}" src="../../assets/app-icons/${icon}.webp" alt="" width="16" height="16" loading="lazy" decoding="async">`;
   };
 
   const strip = (rule) => (tokens, idx, ...rest) => {

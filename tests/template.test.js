@@ -22,7 +22,8 @@ const GOOD_BODY = [
   "",
   "Verdict.",
 ].join("\n");
-const good = { template: "app-review", summary: "A summary.", app_store: APP };
+const HOW = { device: "iPhone", ios: "26.1", app_version: "1.0", started: "2026-10-01", ended: "2026-10-20", checkins: "" };
+const good = { template: "app-review", summary: "A summary.", app_store: APP, scorecard: {}, published: new Date("2026-11-01"), how_tested: HOW };
 const errorsFor = (data, text = GOOD_BODY) => checkTemplate(FILE, data, text);
 
 test("a complete non-draft app review passes", () => {
@@ -41,13 +42,22 @@ test("each missing part fails a non-draft app review", () => {
     [good, GOOD_BODY.replace("**Full disclosure:", "Full disclosure:"), /disclosure/],
     [{ ...good, app_store: undefined }, GOOD_BODY, /app_store/],
     [good, GOOD_BODY.replace(" {#verdict}", ""), /verdict/],
+    [{ ...good, scorecard: undefined }, GOOD_BODY, /scorecard/],
+    [{ ...good, published: undefined }, GOOD_BODY, /published or updated/],
+    [{ ...good, published: undefined, updated: new Date("2026-11-02") }, GOOD_BODY, null],
+    [{ ...good, how_tested: { ...HOW, ios: "" } }, GOOD_BODY, /how_tested\.ios/],
+    [{ ...good, how_tested: { ...HOW, ended: "" } }, GOOD_BODY, /how_tested\.ended/],
   ];
   for (const [data, text, pattern] of cases) {
     const errors = errorsFor(data, text);
+    if (pattern === null) {
+      assert.deepEqual(errors, []);
+      continue;
+    }
     assert.equal(errors.length, 1, String(pattern));
     assert.match(errors[0], pattern);
   }
-  assert.equal(errorsFor({ template: "app-review" }, "Nothing.").length, 4);
+  assert.equal(errorsFor({ template: "app-review" }, "Nothing.").length, 11);
 });
 
 test("an unknown template name fails, even on a draft", () => {
