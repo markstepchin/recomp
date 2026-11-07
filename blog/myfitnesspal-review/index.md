@@ -13,6 +13,7 @@ app_store:
   name: "MyFitnessPal: Calorie Counter"
   developer: "MyFitnessPal, Inc."
   developer_url: "https://www.myfitnesspal.com/"
+  price_text: "Free, Premium $19.99/mo, $79.99/yr"
   rating: 4.7
   rating_count: 2387079
   min_ios: "18.0"
@@ -45,7 +46,7 @@ scorecard:
   weight_apple_health: { status: partial, fact: "Two-way Apple Health sync, only from the day you connect" }  # L62
   weight_quick_entry: { status: has, fact: "A scroll wheel sets the weight, with no typing" }  # Researched 2026-11-01: https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs ('Adjust your weight using the scroll wheel')
   data_together: { status: has, fact: "Each photo attaches to a weigh-in" }  # L40
-  camera_zoom: { status: confirm, fact: "[CONFIRM]" }
+  camera_zoom: { status: missing, fact: "In-app camera has no zoom" }
   # Alignment should be effortless
   auto_align: { status: missing, fact: "No auto-align" }  # L46
   ghost_overlay: { status: missing, fact: "No ghost overlay" }  # L46
@@ -59,7 +60,7 @@ scorecard:
   slider_view: { status: missing, fact: "No slider view" }  # L52
   overlay_view: { status: missing, fact: "No overlay view" }  # L52
   # The photos are the star
-  photo_focus: { status: confirm, fact: "[CONFIRM]" }
+  photo_focus: { status: partial, fact: "No fullscreen view; zoom and pan aren't saved" }
   # Data privacy
   photos_on_device: { status: missing, fact: "Saved to its servers" }  # L66
   privacy_label: { status: missing, fact: "The label lists data used to track you" }  # L66
@@ -79,7 +80,7 @@ scorecard:
   edit_date: { status: has, fact: "You can edit a weigh-in's date" }  # L74
   partial_checkin: { status: partial, fact: "A weigh-in saves without a photo, but a photo needs a weigh-in" }  # Researched 2026-11-01: https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs
   dark_mode: { status: confirm, fact: "[CONFIRM]" }
-  no_ads: { status: missing, fact: "Ad-free needs Premium" }  # L72 | Based on the 'Go Premium for ad-free' screenshot alt text. Mark to confirm wording.
+  no_ads: { status: missing, fact: "Has ads; ad-free needs Premium" }  # L72
 ---
 
 <!-- TODO(Mark): final title, seo_title and description once the verdict is written. Add card_blurb if the /blog/ card needs a shorter line. -->
@@ -130,7 +131,7 @@ I test each of these features with my personal library of real progress photos &
 
 <!-- TODO(Mark): adding a check-in: taps and seconds for a weight and front, side and back photos (great is under 30 seconds). Does it read the date from the photos, import weight from Apple Health, and let me pick all 3 photos in one picker? -->
 
-**MyFitnessPal is built around tracking weight, and photos are an add-on.** You add a weight record under More > Weight & Measurements and can attach a photo to it. Photos taken in the app aren't saved to your camera roll. [MyFitnessPal's progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
+**MyFitnessPal is built around tracking weight, and photos are an add-on.** You add a weight record under More > Weight & Measurements and can attach a photo to it. Photos taken in the app aren't saved to your camera roll. The in-app camera has no zoom. [MyFitnessPal's progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
 **Since photos attach to weigh-ins, MyFitnessPal keeps only one photo per date.** I can't keep a front, side and back photo for the same day.
 
@@ -146,13 +147,13 @@ Weight syncs both ways with Apple Health, but only from the day you connect. Old
 
 <!-- TODO(Mark): ease of alignment, gridline quality, ghost overlay, auto align, and whether I can align in the side by side view. -->
 
-**MyFitnessPal has no alignment tools.** There's no overlay, gridlines or auto-align, and no way to adjust a photo after you add it. <!-- TODO(feature-link): link "overlay" to Recomp's Ghost overlay camera feature page once it exists --> <!-- TODO(feature-link): link "auto-align" to Recomp's Auto-align feature page once it exists --> <!-- TODO(feature-link): link "adjust a photo" to Recomp's manual alignment feature page once it exists --> It crops every photo square when you upload it, so anything outside the center gets cut. [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
+**MyFitnessPal has no alignment options.** There's no overlay, gridlines or auto-align, and no way to adjust a photo after you add it. <!-- TODO(feature-link): link "overlay" to Recomp's Ghost overlay camera feature page once it exists --> <!-- TODO(feature-link): link "auto-align" to Recomp's Auto-align feature page once it exists --> <!-- TODO(feature-link): link "adjust a photo" to Recomp's manual alignment feature page once it exists --> It crops every photo square when you upload it, so anything outside the center gets cut. [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
 ## Comparison Features {#compare}
 
 <!-- TODO(Mark): how easy it is to compare, and the taps and time to compare 9 different dates. Can it make a shareable before/after image or a timelapse? -->
 
-Sharing works from any photo in the Entries list. You can swipe between photos, add a message and save a split photo or send it to Instagram or Facebook. I didn't find a slider, overlay view or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists --> [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
+Sharing works from any photo in the Entries list. You can swipe between photos, add a message and save a split photo or send it to Instagram or Facebook. There's no fullscreen viewer. The small viewer lets you zoom and pan, but those adjustments aren't saved. That's viewing only, not alignment. I didn't find a slider, overlay view or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists --> [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
 ![MyFitnessPal Progress Gallery with two front photos side by side labeled 160 lbs and 155 lbs, above a strip of thumbnails](./myfitnesspal-progress-gallery.webp "Progress Gallery: two photos side by side with their weights."){.phone}
 
@@ -163,6 +164,8 @@ Sharing works from any photo in the Entries list. You can swipe between photos, 
 Photos are saved to your MyFitnessPal account on its servers, which is how they show up on a new phone. You need an account. The App Store privacy label lists identifiers and usage data used to track you across other companies' apps, plus data for third-party advertising. Data Export is Premium only. It emails a zip of three CSVs, including weight and measurements, and no photos. Sources: [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs), [data export](https://support.myfitnesspal.com/hc/en-us/articles/360032273352-Export-your-nutrition-progress-and-exercise-data), [App Store listing](https://apps.apple.com/us/app/id341232718).
 
 <!-- TODO(Mark): any quality-of-life items that matter for MyFitnessPal (bulk import, reminders, in-app camera, units, body measurements, editing a check-in's date, partial check-ins, dark mode, ads). Fold them into the sections above or below; no separate section or table unless it clearly helps. -->
+
+MyFitnessPal has ads. Ad-free tracking needs Premium.
 
 <!-- TODO(Mark): what's good. -->
 

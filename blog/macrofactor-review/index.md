@@ -13,6 +13,7 @@ app_store:
   name: "MacroFactor - Macro Tracker"
   developer: "Stronger By Science Technologies LLC"
   developer_url: "https://macrofactor.com/"
+  price_text: "Subscription required: $11.99/mo, $47.99/6 mo, or $71.99/yr (free trial, no free plan)"
   rating: 4.8
   rating_count: 23708
   min_ios: "15.6"
@@ -128,9 +129,13 @@ I test each of these features with my personal library of real progress photos &
 
 <!-- TODO(Mark): adding a check-in: taps and seconds for a weight and front, side and back photos (great is under 30 seconds). Does it read the date from the photos, import weight from Apple Health, and let me pick all 3 photos in one picker? -->
 
+<div class="phone-row">
+
 ![MacroFactor new check-in sheet dated 10/25/2026 with empty Front, Side and Back photo slots and a Save button](./macrofactor-new-check-in.webp "A new check-in: one slot each for front, side and back."){.phone}
 
 ![MacroFactor check-in with the Front slot selected and an Upload Photo or Take Photo menu](./macrofactor-add-front-photo.webp "Adding the front photo: upload or take one."){.phone}
+
+</div>
 
 ### Weights and measurements {#weights}
 
@@ -142,7 +147,11 @@ Each date holds one front, one side and one back photo. They sit next to up to 2
 
 **You can only adjust a photo in the crop step, before you save it.** MacroFactor's help says you can zoom and rotate there. Once a photo is uploaded, I can't edit, resize or align it. <!-- TODO(feature-link): link "align" to Recomp's manual alignment feature page once it exists --> Every photo is saved square. Take Photo launches the phone's camera, and I didn't find a ghost overlay, gridlines for posing or auto-align in MacroFactor's help. <!-- TODO(feature-link): link "ghost overlay" to Recomp's Ghost overlay camera feature page once it exists --> <!-- TODO(feature-link): link "auto-align" to Recomp's Auto-align feature page once it exists --> [How to add progress photos](https://help.macrofactorapp.com/en/articles/121-how-to-add-progress-photos).
 
+<div class="phone-row">
+
 ![MacroFactor Crop Photo screen with a grid crop box over a mirror selfie](./macrofactor-crop-photo.webp "The Crop Photo step, before the photo is saved."){.phone}
+
+</div>
 
 ## Comparison Features {#compare}
 
@@ -150,19 +159,23 @@ Each date holds one front, one side and one back photo. They sit next to up to 2
 
 The gallery keeps every photo in one place and switches between front, side and back from the same day. Each photo shows the body metrics you logged that day. The gallery tints its background and buttons to match the photo on screen. [MacroFactor's body metrics announcement](https://macrofactor.com/body-metrics/).
 
-![MacroFactor Progress Photos list grouped by month from July 2024 to August 2025, each check-in a row of three small thumbnails, with Open Gallery and Compare Before & After buttons](./macrofactor-progress-photos.webp "Progress Photos: check-ins grouped by month."){.phone}
-
 Neither gallery view uses the screen well. The single view shows one square photo with empty space below it. The compare view stacks two small square photos with the weights beside them, so the photos take up a fraction of the screen.
-
-![MacroFactor gallery single view with Front, Side and Back tabs, one square front photo dated October 31, 2026, Trend Weight and Scale Weight of 168.5 lb below it, and a large empty area above the filmstrip](./macrofactor-single-view.webp "Single view: one square photo, then empty space down to the filmstrip."){.phone}
 
 <!-- TODO(Mark): how easy it is to compare, and the taps and time to compare 9 different dates. Can it make a shareable before/after image or a timelapse? -->
 
 Before and after stacks two photos of the same pose, one above the other. <!-- TODO(feature-link): link "one above the other" to Recomp's Side-by-side comparison feature page once it exists --> You tap the top slot and pick a photo from the ribbon of dates, then do the same for the bottom. The share image can use a plain background or one matched to the photo's colors. I didn't find a slider, overlay view or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists --> [How to create before-and-after photos](https://help.macrofactorapp.com/en/articles/123-how-to-create-and-share-before-and-after-photos).
 
+<div class="phone-row">
+
+![MacroFactor Progress Photos list grouped by month from July 2024 to August 2025, each check-in a row of three small thumbnails, with Open Gallery and Compare Before & After buttons](./macrofactor-progress-photos.webp "Progress Photos: check-ins grouped by month."){.phone}
+
+![MacroFactor gallery single view with Front, Side and Back tabs, one square front photo dated October 31, 2026, Trend Weight and Scale Weight of 168.5 lb below it, and a large empty area above the filmstrip](./macrofactor-single-view.webp "Single view: one square photo, then empty space down to the filmstrip."){.phone}
+
 ![MacroFactor gallery compare view with front photos from October 31, 2026 and August 4, 2025 stacked, each a small square photo on the left with Trend Weight and Scale Weight on the right, and mostly empty space around them](./macrofactor-compare-view.webp "Compare view: two small square photos, with the weights beside them."){.phone}
 
 ![MacroFactor gallery with Front, Side and Back tabs showing front photos from May 21, 2024 and August 4, 2025, each with Trend Weight and Scale Weight fields, above a filmstrip](./macrofactor-gallery-trend-weight.webp "The gallery: front photos by date, with Trend Weight and Scale Weight."){.phone}
+
+</div>
 
 ## Quality of life and privacy {#sharing}
 
