@@ -135,28 +135,32 @@ scorecard:
 
 <!-- app-store-card -->
 
-Hevy is one of the 12 apps I've tested so far, and one of three fitness apps with a photo feature I tested alongside the dedicated progress photo apps. I tested it the way I test every app, with real photos and weights from my own transformation. [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) explains the method.
-
 ## Built for workouts, not photos {#design-tradeoffs}
 
 <!-- TODO: outline, write into prose -->
 
-1. Hevy is one of the best and most popular workout trackers.
-2. Every design decision in Hevy serves workout tracking. That's the app's priority.
-3. Photo and weight tracking aren't a priority.
-4. Designing an app means making trade-offs.
-5. If you optimize for workout tracking, you can't also optimize for photo tracking.
-6. Apple's own apps show this. Calendar, Reminders, Photos, Calculator, Notes and Health are all separate apps.
-7. Each of those apps is optimized for a different job, and that's why Apple split them up.
-8. Apple could combine them into one app. Separate apps are just much more usable.
+If you’re one of the many people who already use the popular workout tracking app Hevy, you’re probably wondering if you really need to download and setup a whole new app. And yes, while Hevy does have progress photo tracking, it makes multiple tradeoffs to optimize for workouts over photo tracking.
 
-Apple keeps each pair separate because each app is optimized for a different job:
+Apple’s native apps are a perfect case study for why it makes sense to separate apps that can seem closely related.
 
-- Camera and Photos both handle your pictures.
-- Health and Fitness both track your body. It could combine them into one app. They're just much easier to use apart.
-- Notes and Numbers are both pages you type into.
+- Camera and Photos
+- Health and Fitness
+- Notes and Numbers
 
-A progress photo app is really four apps in one: a camera roll, an alignment app, a collage app for comparisons, and a data app that keeps photos with your weight and measurements. Hevy is a workout tracker first, and its photos live under Profile > Measures. Here's how each of the four holds up through a normal weekly check-in.
+Separating these apps provides a better user experience for each individual use case. We recommend using multiple apps and tools, each designed for a specific use case. At the very least, you need a workout tracker, a calorie tracker, and a progress photo tracker.
+
+## How I test {#todo}
+
+After personally tracking hundreds of progress photos over several years, I have an opinionated philosophy on what's a must have, what's nice to have, and what's fluff. A great progress photo tracker is 4 apps in one:
+
+1. Photos app / camera roll
+2. Great alignment tools for consistent comparisons
+3. Collage app with multiple ways to compare your photos over time
+4. Weight, measurements, and notes all associated to photos
+
+I test each of these features with my personal library of real progress photos & weight records. See [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) to learn more.
+
+![iOS Photos album showing hundreds of weekly front, side, and back progress photos from years of coaching check-ins](../../assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp "Years of weekly check-ins, still stuck in my camera roll."){.phone}
 
 ## Adding progress data {#adding-data}
 
@@ -208,7 +212,7 @@ There's no auto-align or side-by-side alignment either, and the tools aren't con
 
 </div>
 
-## Comparing with last month {#compare}
+## Comparison Features {#compare}
 
 Hevy has single & side by side views with a thumbnail strip along the bottom for easy switching. It lacks a full screen view for a single photo like in photos. It doesn't have a slider view, overlay, or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists -->
 
