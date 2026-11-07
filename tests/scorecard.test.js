@@ -64,6 +64,70 @@ test("scorecardData: a group with only confirm rows disappears on a published pa
   assert.equal(scorecardData(undefined, { draft: false }), null);
 });
 
+test("scorecard omit drops only the listed rows; a missing row is still required", () => {
+  const full = allRows("missing");
+  full.auto_align = { status: "confirm", fact: "[CONFIRM]" };
+  const fullRows = scorecardData(full, { draft: true }).groups.flatMap((g) => g.rows);
+  assert.equal(fullRows.length, 35);
+
+  const omitted = { ...full, omit: ["originals_untouched", "partial_checkin"] };
+  delete omitted.originals_untouched;
+  delete omitted.partial_checkin;
+  assert.deepEqual(checkScorecard(FILE, omitted), []);
+  const draft = scorecardData(omitted, { draft: true });
+  const rows = draft.groups.flatMap((g) => g.rows);
+  assert.deepEqual(
+    rows.map((r) => r.id),
+    fullRows.map((r) => r.id).filter((id) => id !== "originals_untouched" && id !== "partial_checkin"),
+  );
+  for (const row of rows) assert.deepEqual(row, fullRows.find((r) => r.id === row.id));
+  assert.equal(draft.confirm, 1);
+  assert.equal(draft.hidden, 0);
+  const live = scorecardData(omitted, { draft: false });
+  assert.equal(live.groups.flatMap((g) => g.rows).length, 32);
+  assert.equal(live.hidden, 1);
+  assert.equal(live.confirm, 1);
+  assert.ok(live.groups.some((g) => g.id === "qol"));
+
+  const noPhotos = { ...allRows("has"), omit: ["photo_focus"] };
+  delete noPhotos.photo_focus;
+  const dropped = scorecardData(noPhotos, { draft: true });
+  assert.ok(!dropped.groups.some((g) => g.id === "photos"));
+  assert.equal(dropped.groups.flatMap((g) => g.rows).length, 34);
+
+  const stillRequired = { ...full, omit: ["originals_untouched"] };
+  delete stillRequired.originals_untouched;
+  delete stillRequired.partial_checkin;
+  assert.match(checkScorecard(FILE, stillRequired).join("\n"), /scorecard\.partial_checkin is required/);
+  assert.match(checkScorecard(FILE, { ...allRows(), omit: ["stars"] }).join("\n"), /scorecard\.omit has unknown id "stars"/);
+  assert.match(checkScorecard(FILE, { ...allRows(), omit: ["auto_align"] }).join("\n"), /scorecard\.auto_align is set and also omitted/);
+  const notAList = allRows();
+  delete notAList.photo_focus;
+  notAList.omit = "photo_focus";
+  const notAListErrors = checkScorecard(FILE, notAList).join("\n");
+  assert.match(notAListErrors, /scorecard\.omit must be a list/);
+  assert.match(notAListErrors, /scorecard\.photo_focus is required/);
+
+  // Eleventy's computed-data proxy returns array methods from an empty target.
+  // Index reads still see the real ids. `.filter` on that proxy would not.
+  const proxiedOmit = new Proxy(new Array(omitted.omit.length), {
+    get(target, key) {
+      if (Array.prototype.hasOwnProperty(key)) return target[key];
+      return omitted.omit[key];
+    },
+  });
+  const proxied = new Proxy(omitted, {
+    get(target, key) {
+      if (key === "omit") return proxiedOmit;
+      return target[key];
+    },
+  });
+  assert.deepEqual(proxiedOmit.filter(() => true), []);
+  const viaProxy = scorecardData(proxied, { draft: true }).groups.flatMap((g) => g.rows);
+  assert.deepEqual(viaProxy.map((r) => r.id), rows.map((r) => r.id));
+  assert.equal(viaProxy.find((r) => r.id === "auto_align").status, "confirm");
+});
+
 // ------------------------------------------------------------------ 3. app_store.price
 
 const APP = {
@@ -219,6 +283,85 @@ test("rendered review: table semantics, decorative icons, byline dates match the
   assert.match(html, new RegExp(`Published <time datetime="${review.datePublished}">`));
   assert.match(html, new RegExp(`Updated <time datetime="${review.dateModified}">`));
   assert.match(html, /id="how-i-tested"[\s\S]*?\[CONFIRM: device, iOS, app version, test dates\][\s\S]*?href="\/blog\/how-i-test-progress-photo-apps\/"/);
+});
+
+test("rendered review: omitted rows are absent and a complete review still has every row", () => {
+  const data = { ...fixture.data, page: { inputPath: "./blog/example-review/index.md" } };
+  const scorecard = { ...data.scorecard, omit: ["originals_untouched", "partial_checkin"] };
+  delete scorecard.originals_untouched;
+  delete scorecard.partial_checkin;
+  const html = render(postData({ ...data, scorecard }), "<p>Body.</p>\n<!-- scorecard -->\n");
+  const table = html.slice(html.indexOf("<table"), html.indexOf("</table>"));
+  assert.equal((table.match(/<th scope="row"/g) ?? []).length, 33);
+  assert.equal((table.match(/<svg[^>]*>/g) ?? []).length, 33);
+  assert.ok(!table.includes("Leaves originals untouched in Photos"));
+  assert.ok(!table.includes("Save a partial check-in"));
+  assert.ok(!table.includes('id="sc-originals-untouched"'));
+  assert.ok(!table.includes('id="sc-partial-checkin"'));
+  assert.match(table, /id="sc-edit-date"/);
+  assert.match(table, /id="sc-dark-mode"/);
+  assert.match(table, /data-status="has"/);
+
+  for (const file of ["blog/macrofactor-review/index.md", "blog/myfitnesspal-review/index.md"]) {
+    const parsed = matter(readFileSync(file, "utf8"));
+    assert.deepEqual(checkFrontmatter(file, readFileSync(file, "utf8"), parsed.data, () => true), [], file);
+    const other = postData({ ...parsed.data, page: { inputPath: `./${file}` } });
+    assert.deepEqual(other.scorecard.groups.flatMap((g) => g.rows).map((r) => r.id), SCORECARD_IDS, file);
+    const otherHtml = render(other, "<p>Body.</p>\n<!-- scorecard -->\n");
+    const otherTable = otherHtml.slice(otherHtml.indexOf("<table"), otherHtml.indexOf("</table>"));
+    assert.equal((otherTable.match(/<th scope="row"/g) ?? []).length, 35, file);
+    assert.match(otherTable, /Leaves originals untouched in Photos/);
+    assert.match(otherTable, /Save a partial check-in/);
+  }
+});
+
+const HEVY = "blog/hevy-review/index.md";
+const HEVY_FACTS = {
+  checkin_time: ["has", "Under a minute and a few taps"],
+  weight_apple_health: ["has", "Weight from Apple Health"],
+  align_in_compare: ["missing", "No alignment in the side-by-side view"],
+  compare_speed: ["has", "Switch between several dates quickly"],
+  compare_scale: ["confirm", "[CONFIRM]"],
+  bulk_import: ["missing", "No bulk import"],
+  units: ["has", "Metric and imperial"],
+  no_ads: ["has", "No ads"],
+  edit_date: ["missing", "Can't edit a saved check-in's date"],
+};
+
+test("Hevy omits two rows, keeps the approved statuses, and has no separate verdict", () => {
+  const raw = readFileSync(HEVY, "utf8");
+  const parsed = matter(raw);
+  assert.deepEqual(parsed.data.scorecard.omit, ["originals_untouched", "partial_checkin"]);
+  assert.equal(parsed.data.scorecard.originals_untouched, undefined);
+  assert.equal(parsed.data.scorecard.partial_checkin, undefined);
+  assert.deepEqual(checkFrontmatter(HEVY, raw, parsed.data, () => true), []);
+  const post = postData({ ...parsed.data, page: { inputPath: `./${HEVY}` } });
+  const rows = post.scorecard.groups.flatMap((g) => g.rows);
+  const byId = Object.fromEntries(rows.map((r) => [r.id, r]));
+  assert.deepEqual(rows.map((r) => r.id), SCORECARD_IDS.filter((id) => id !== "originals_untouched" && id !== "partial_checkin"));
+  for (const [id, [status, fact]] of Object.entries(HEVY_FACTS)) {
+    assert.equal(byId[id].status, status, id);
+    assert.equal(byId[id].fact, fact, id);
+  }
+  assert.equal(byId.weight_quick_entry.status, "missing");
+  assert.equal(byId.weight_quick_entry.fact, "Every weigh-in is typed in by hand");
+  const html = render(post, "<p>Body.</p>\n<!-- scorecard -->\n");
+  const table = html.slice(html.indexOf("<table"), html.indexOf("</table>"));
+  assert.equal((table.match(/<th scope="row"/g) ?? []).length, 33);
+  assert.ok(!table.includes("Leaves originals untouched"));
+  assert.ok(!table.includes("Save a partial check-in"));
+  assert.ok(!table.includes('id="sc-originals-untouched"'));
+  assert.ok(!table.includes('id="sc-partial-checkin"'));
+  assert.match(table, /No alignment in the side-by-side view/);
+  assert.match(table, /Can&#39;t edit a saved check-in&#39;s date/);
+  assert.match(table, /data-status="missing"/);
+  const body = raw.replace(/^---\n[\s\S]*?\n---\n/, "");
+  assert.match(body, /## Built for workouts, not photos \{#design-tradeoffs\}/);
+  assert.ok(!body.includes("{#verdict}"));
+  assert.ok(!body.includes("My verdict on Hevy"));
+  assert.match(body, /## FAQ \{#faq\}/);
+  assert.match(body, /TODO\(feature-link\): link "auto-align"/);
+  assert.match(body, /TODO\(feature-link\): link "timelapse"/);
 });
 
 test("rendered review: the scorecard goes at the marker, or after the body before the CTA", () => {

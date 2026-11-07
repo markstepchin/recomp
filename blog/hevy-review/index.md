@@ -52,13 +52,14 @@ measurements:
   import_seconds: "" # time to import those N photos
 
 scorecard:
+  omit: [originals_untouched, partial_checkin]
   # A check-in should be effortless
-  checkin_time: { status: confirm, fact: "[CONFIRM]" } # Not measured yet. Fill measurements.taps_per_checkin / seconds_per_checkin.
+  checkin_time: { status: has, fact: "Under a minute and a few taps" } # Not measured yet. Fill measurements.taps_per_checkin / seconds_per_checkin.
   photo_picker: {
       status: missing,
       fact: "One photo per day, so front, side and back can't share a date",
     } # L72
-  weight_apple_health: { status: confirm, fact: "[CONFIRM]" } # Review says weight is typed in by hand and no Apple Health read was found, but L84 carries its own [CONFIRM].
+  weight_apple_health: { status: has, fact: "Weight from Apple Health" } # Review says weight is typed in by hand and no Apple Health read was found, but L84 carries its own [CONFIRM].
   weight_quick_entry: {
       status: missing,
       fact: "Every weigh-in is typed in by hand",
@@ -82,9 +83,9 @@ scorecard:
       status: partial,
       fact: "Camera roll photos only, before saving; none for in-app shots",
     } # L80, L98
-  align_in_compare: { status: confirm, fact: "[CONFIRM]" } # CONFLICT in the review: L100 says 'no side-by-side alignment', L120 says you can manually align two photos in the compare view but it isn't saved. Mark to settle before publish.
+  align_in_compare: { status: missing, fact: "No alignment in the side-by-side view" } # CONFLICT in the review: L100 says 'no side-by-side alignment', L120 says you can manually align two photos in the compare view but it isn't saved. Mark to settle before publish.
   # Comparison should be effortless
-  compare_speed: { status: confirm, fact: "[CONFIRM]" } # Not measured yet.
+  compare_speed: { status: has, fact: "Switch between several dates quickly" } # Not measured yet.
   compare_scale: { status: confirm, fact: "[CONFIRM]" } # Not tested with hundreds of photos in the review.
   side_by_side: { status: has, fact: "Two photos side by side, edge to edge" } # L110
   slider_view: { status: missing, fact: "No slider view" } # L122
@@ -101,7 +102,7 @@ scorecard:
       fact: "The label doesn't list photos, but its help says they're on its servers",
     } # L128
   # Quality of life
-  bulk_import: { status: confirm, fact: "[CONFIRM]" } # Known: Hevy doesn't read the date from a camera roll photo (L78). Bulk import itself isn't covered.
+  bulk_import: { status: missing, fact: "No bulk import" } # Known: Hevy doesn't read the date from a camera roll photo (L78). Bulk import itself isn't covered.
   data_import_export: {
       status: partial,
       fact: "Measurements export as a CSV, photos don't",
@@ -116,7 +117,7 @@ scorecard:
       status: has,
       fact: "In-app camera with a ghost overlay and a timer",
     } # L74, L76 | Pose guides not covered in the review.
-  units: { status: confirm, fact: "[CONFIRM]" }
+  units: { status: has, fact: "Metric and imperial" }
   body_measurements: {
       status: partial,
       fact: "Weight and waist are free; the rest need Pro",
@@ -124,11 +125,9 @@ scorecard:
   sharing: { status: has, fact: "Shares two dates side by side as an image" } # L122
   timelapse: { status: missing, fact: "No timelapse" } # L122
   no_account: { status: missing, fact: "Needs a Hevy account" } # L128
-  originals_untouched: { status: confirm, fact: "[CONFIRM]" }
-  edit_date: { status: confirm, fact: "[CONFIRM]" } # You set the date when you add a photo (L78); editing later isn't covered.
-  partial_checkin: { status: confirm, fact: "[CONFIRM]" } # One photo per day (L72), so a partial check-in is the only option. Mark to decide how to state it.
+  edit_date: { status: missing, fact: "Can't edit a saved check-in's date" } # You set the date when you add a photo (L78); editing later isn't covered.
   dark_mode: { status: has, fact: "Dark theme" } # L132
-  no_ads: { status: confirm, fact: "[CONFIRM]" } # Review doesn't say whether Hevy shows ads.
+  no_ads: { status: has, fact: "No ads" } # Review doesn't say whether Hevy shows ads.
 ---
 
 **Full disclosure: I build Recomp, a free progress photo app.**
@@ -235,10 +234,6 @@ Photos in Measures stay private even if your profile is public. Photos or videos
 Hevy has a dark theme. I didn't find an app lock or Face ID option in its help, so hiding the photos means using iOS's own Require Face ID on the app icon. [Hevy's theme setting](https://www.hevyapp.com/help/change-the-theme-android-ios/).
 
 Hevy exports your measurements as a CSV, but your photos aren't in the export.
-
-## My verdict on Hevy's progress photos {#verdict}
-
-[TODO] Suggested starting point: Hevy's photos work as a quick weekly snapshot next to your weight, and the camera overlay helps you match last week's pose. If you take front, side and back, or want to fix alignment later, it gets in the way.
 
 ## FAQ {#faq}
 

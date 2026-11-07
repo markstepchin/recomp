@@ -2,6 +2,8 @@
  * Review scorecard: the checklist table at the bottom of each app review, plus the
  * "How I tested" line. Criteria live here, not in each post, so the labels stay the same
  * across reviews and a typo in an id fails the build. Order here is the order on the page.
+ * A post leaves rows out of its own table with `omit:` inside `scorecard`. The criteria
+ * stay in this list, and every id that is not omitted is still required.
  * Source: blog/how-i-test-progress-photo-apps/index.md (5 principles plus quality of life).
  * Rendered by _includes/scorecard.njk; checked from checkFrontmatter in _config/blog.js.
  */
@@ -59,17 +61,39 @@ export const SCORECARD_IDS = SCORECARD_GROUPS.flatMap((g) => g.rows.map((r) => r
 export const SCORECARD_STATUSES = ["has", "partial", "missing", "confirm"];
 const LABELS = { has: "Yes", partial: "Partly", missing: "No", confirm: "Not checked yet" };
 
+/**
+ * Ids in `scorecard.omit`. Read by index: Eleventy's computed-data proxy serves array
+ * methods from an empty target, so `.filter` on the proxy would see no ids and a missing
+ * row would throw. A missing row that is not in this list still fails validation.
+ */
+function omitList(omit) {
+  if (!Array.isArray(omit)) return null;
+  const ids = [];
+  for (let i = 0; i < omit.length; i++) ids.push(omit[i]);
+  return ids;
+}
+
+function omittedIds(raw) {
+  if (!raw || typeof raw !== "object") return new Set();
+  const list = omitList(raw.omit);
+  if (!list) return new Set();
+  return new Set(list.filter((id) => typeof id === "string" && id !== "" && SCORECARD_IDS.includes(id) && raw[id] === undefined));
+}
+
 /** Frontmatter `scorecard:` -> groups for the include. Drafts keep confirm rows; published pages drop them. */
 export function scorecardData(raw, { draft }) {
   if (!raw || typeof raw !== "object") return null;
+  const omitted = omittedIds(raw);
+  const ids = SCORECARD_IDS.filter((id) => !omitted.has(id));
   const groups = SCORECARD_GROUPS.map((g) => ({
     ...g,
     rows: g.rows
+      .filter((r) => !omitted.has(r.id))
       .map((r) => ({ ...r, status: raw[r.id].status, statusLabel: LABELS[raw[r.id].status], fact: String(raw[r.id].fact) }))
       .filter((r) => draft || r.status !== "confirm"),
   })).filter((g) => g.rows.length > 0);
-  const hidden = draft ? 0 : SCORECARD_IDS.filter((id) => raw[id].status === "confirm").length;
-  const confirm = SCORECARD_IDS.filter((id) => raw[id].status === "confirm").length;
+  const hidden = draft ? 0 : ids.filter((id) => raw[id].status === "confirm").length;
+  const confirm = ids.filter((id) => raw[id].status === "confirm").length;
   return { groups, hidden, confirm };
 }
 
@@ -78,8 +102,21 @@ export function checkScorecard(file, raw) {
   const errors = [];
   if (raw === undefined) return errors;
   if (typeof raw !== "object" || raw === null || Array.isArray(raw)) return [`${file}: scorecard must be a mapping of criterion id to { status, fact }`];
-  for (const id of Object.keys(raw)) if (!SCORECARD_IDS.includes(id)) errors.push(`${file}: unknown scorecard id "${id}"`);
+  if (raw.omit !== undefined) {
+    const list = omitList(raw.omit);
+    if (!list || list.some((id) => typeof id !== "string" || id === "")) {
+      errors.push(`${file}: scorecard.omit must be a list of criterion ids`);
+    } else {
+      for (const id of list) {
+        if (!SCORECARD_IDS.includes(id)) errors.push(`${file}: scorecard.omit has unknown id "${id}"`);
+        else if (raw[id] !== undefined) errors.push(`${file}: scorecard.${id} is set and also omitted`);
+      }
+    }
+  }
+  const omitted = omittedIds(raw);
+  for (const id of Object.keys(raw)) if (id !== "omit" && !SCORECARD_IDS.includes(id)) errors.push(`${file}: unknown scorecard id "${id}"`);
   for (const id of SCORECARD_IDS) {
+    if (omitted.has(id)) continue;
     const row = raw[id];
     if (!row || typeof row !== "object") { errors.push(`${file}: scorecard.${id} is required (use status: confirm, fact: "[CONFIRM]")`); continue; }
     const fact = row.fact === undefined || row.fact === null ? "" : String(row.fact);
