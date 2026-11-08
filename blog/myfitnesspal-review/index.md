@@ -149,6 +149,10 @@ Weight syncs both ways with Apple Health, but only from the day you connect. Old
 
 ![MyFitnessPal Measurements screen for Weight over 1 Month with a chart from 155 to 165 lbs, an entries list, and a Go Premium banner for ad-free tracking](./myfitnesspal-measurements-chart.webp "Weight chart and entries, with an ad-free Premium upsell."){.phone}
 
+![MyFitnessPal Reminders list with meal reminders and a weight reminder set to weekly on Sundays at 12:18 PM](./myfitnesspal-reminders.webp "Reminders: weight weekly on Sundays at 12:18 PM."){.phone}
+
+![MyFitnessPal Edit Reminder screen for weight, set to weekly on Sunday at 12:18 PM](./myfitnesspal-edit-weight-reminder.webp "Editing the weight reminder: weekly, Sunday, 12:18 PM."){.phone}
+
 </div>
 
 ## Alignment {#alignment}
