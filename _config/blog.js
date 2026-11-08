@@ -3,6 +3,7 @@
  * Used by eleventy.config.js, _includes/post.njk and _pages/*.11ty.js.
  */
 import { TODO_COMMENT, markdown } from "./markdown.js";
+import { checkHowTested, checkScorecard, howTestedData, scorecardData } from "./scorecard.js";
 
 export { TODO_COMMENT };
 export const SITE_URL = "https://progressphotos.app";
@@ -82,6 +83,9 @@ export function checkPost(file, body, draft, bodyLineOffset = 0) {
 export const FRONTMATTER_KEYS = new Set([
   "title", "seo_title", "description", "published", "updated", "tested", "draft", "noindex",
   "og_image", "breadcrumb", "summary", "summary_heading", "card_blurb", "llms_blurb", "cta", "faq",
+  // app_store: the reviewed app's App Store listing, shown as a card where the body has
+  // <!-- app-store-card --> (_includes/app-store-card.njk).
+  "app_store",
   // Optional, mostly for posts converted from hand-written HTML so their output stays the same
   // (see docs/blog-markdown.md): og_title, og_description, og_image_alt, twitter_text,
   // article_dates, byline, prose_wrapper, json_ld, hand_listed.
@@ -89,8 +93,28 @@ export const FRONTMATTER_KEYS = new Set([
   "prose_wrapper", "json_ld", "hand_listed",
   // template: "app-review" opts a post into the structure check (checkTemplate).
   "template",
+  // App reviews: the checklist table (_config/scorecard.js), the "How I tested" line and
+  // Mark's hand measurements. See blog/_templates/app-review.md.
+  "scorecard", "how_tested", "measurements",
 ]);
 const CTA_KEYS = new Set(["heading", "text", "location"]);
+const APP_STORE_KEYS = ["id", "name", "developer", "developer_url", "rating", "rating_count", "min_ios", "url", "icon", "checked", "price"];
+// Optional app_store keys: price_currency (default USD), category (schema.org applicationCategory,
+// default HealthApplication), seller (the App Store "Seller" when it differs from the developer).
+const APP_STORE_OPTIONAL_KEYS = ["price_currency", "category", "seller", "price_text"];
+const PERSON_ID = `${SITE_URL}/about/#mark`;
+
+/** Person nodes used as an author anywhere in a JSON-LD value. */
+function authorPersons(node, out = []) {
+  if (Array.isArray(node)) for (const n of node) authorPersons(n, out);
+  else if (node && typeof node === "object") {
+    for (const [key, value] of Object.entries(node)) {
+      if (key === "author") for (const a of [value].flat()) if (a && a["@type"] === "Person") out.push(a);
+      authorPersons(value, out);
+    }
+  }
+  return out;
+}
 
 /** Top-level keys of a file's YAML frontmatter (comments and nested lines ignored). */
 export function frontmatterKeys(raw) {
@@ -117,6 +141,33 @@ export function checkFrontmatter(file, raw, data, exists) {
     if (typeof data.cta !== "object" || data.cta === null) errors.push(`${file}: cta must be a mapping or false`);
     else for (const key of Object.keys(data.cta)) if (!CTA_KEYS.has(key)) errors.push(`${file}: unknown cta key "${key}" (allowed: heading, text, location)`);
   }
+  if (data.app_store !== undefined) {
+    const app = data.app_store;
+    if (typeof app !== "object" || app === null) errors.push(`${file}: app_store must be a mapping`);
+    else {
+      const allowed = [...APP_STORE_KEYS, ...APP_STORE_OPTIONAL_KEYS];
+      for (const key of Object.keys(app)) if (!allowed.includes(key)) errors.push(`${file}: unknown app_store key "${key}" (allowed: ${allowed.join(", ")})`);
+      for (const key of APP_STORE_KEYS) if (app[key] === undefined || app[key] === null || app[key] === "") errors.push(`${file}: app_store.${key} is required`);
+      if (app.rating !== undefined && !(Number(app.rating) >= 0 && Number(app.rating) <= 5)) errors.push(`${file}: app_store.rating must be a number from 0 to 5`);
+      if (app.rating_count !== undefined && !Number.isInteger(app.rating_count)) errors.push(`${file}: app_store.rating_count must be a whole number`);
+      if (app.url !== undefined && !/^https:\/\/apps\.apple\.com\//.test(String(app.url))) errors.push(`${file}: app_store.url must be an apps.apple.com link`);
+      // developer_url: the developer's own website, not their App Store page.
+      if (app.developer_url !== undefined && !/^https:\/\/[^/\s]+\.[^/\s]+/.test(String(app.developer_url))) errors.push(`${file}: app_store.developer_url must be an https link`);
+      if (/^https:\/\/(apps|itunes)\.apple\.com\//.test(String(app.developer_url))) errors.push(`${file}: app_store.developer_url must be the developer's own site, not an App Store page`);
+      // price: the US App Store download price as a plain number ("0", "4.99"), for the JSON-LD Offer.
+      if (app.price !== undefined && app.price !== null && app.price !== "" && !/^\d+(\.\d{1,2})?$/.test(String(app.price))) errors.push(`${file}: app_store.price must be a plain number like 0 or 4.99`);
+      if (app.price_currency !== undefined && !/^[A-Z]{3}$/.test(String(app.price_currency))) errors.push(`${file}: app_store.price_currency must be a 3-letter currency code like USD`);
+      if (app.category !== undefined && !/^[A-Z][A-Za-z]*Application$/.test(String(app.category))) errors.push(`${file}: app_store.category must be a schema.org application category like HealthApplication`);
+    }
+  }
+  errors.push(...checkScorecard(file, data.scorecard));
+  errors.push(...checkHowTested(file, data.how_tested, data.measurements));
+  // A json_ld override with a Person author must point at Mark's one Person node on /about/.
+  if (data.json_ld && typeof data.json_ld === "object") {
+    for (const person of authorPersons(data.json_ld)) {
+      if (person["@id"] !== PERSON_ID) errors.push(`${file}: json_ld author Person needs "@id": "${PERSON_ID}"`);
+    }
+  }
   const og = data.og_image ? String(data.og_image) : "";
   if (og.startsWith("./") && !exists(og)) errors.push(`${file}: og_image ${og} not found next to the post`);
   return errors;
@@ -128,7 +179,8 @@ export const TEMPLATES = new Set(["app-review"]);
 /**
  * Structure check for a post that opts in with `template: app-review` (blog/_templates/app-review.md).
  * Drafts and posts without `template` are not checked. A non-draft app review needs a summary,
- * the bold "Full disclosure:" line, app_store data and a {#verdict} heading.
+ * the bold "Full disclosure:" line, app_store data, a {#verdict} heading, a scorecard, a
+ * published or updated date, and how_tested device, ios, app_version, started and ended.
  */
 export function checkTemplate(file, data, body) {
   if (data.template === undefined || data.template === null) return [];
@@ -139,7 +191,31 @@ export function checkTemplate(file, data, body) {
   if (!/^\*\*Full disclosure:/m.test(body)) missing.push('disclosure (a paragraph starting "**Full disclosure:")');
   if (!data.app_store || typeof data.app_store !== "object") missing.push("app_store (frontmatter)");
   if (!/^##[ \t]+.*\{#verdict\}[ \t]*$/m.test(body)) missing.push("verdict (an H2 ending in {#verdict})");
+  if (!data.scorecard || typeof data.scorecard !== "object") missing.push("scorecard (frontmatter, see _config/scorecard.js)");
+  if (!data.published && !data.updated) missing.push("published or updated date (frontmatter)");
+  const how = data.how_tested && typeof data.how_tested === "object" ? data.how_tested : {};
+  for (const key of ["device", "ios", "app_version", "started", "ended"]) {
+    if (how[key] === undefined || how[key] === null || String(how[key]).trim() === "") missing.push(`how_tested.${key} (frontmatter)`);
+  }
   return missing.map((m) => `${file}: template app-review is missing the ${m}. See blog/_templates/app-review.md.`);
+}
+
+/**
+ * Warnings for an app review (never fail the build): scorecard rows still at confirm, which
+ * a published page leaves out, and empty measurements.
+ */
+export function templateWarnings(file, data) {
+  if (String(data.template ?? "") !== "app-review") return [];
+  const warnings = [];
+  const raw = data.scorecard;
+  if (raw && typeof raw === "object" && data.draft !== true) {
+    const confirm = Object.values(raw).filter((r) => r && r.status === "confirm").length;
+    if (confirm) warnings.push(`${file}: ${confirm} scorecard rows are confirm and won't show`);
+  }
+  const m = data.measurements;
+  const empty = !m || typeof m !== "object" || Object.values(m).every((v) => v === undefined || v === null || String(v).trim() === "");
+  if (data.draft !== true && empty) warnings.push(`${file}: measurements are empty (taps, seconds, import time)`);
+  return warnings;
 }
 
 // ---------------------------------------------------------------- page data
@@ -158,6 +234,46 @@ const shortDate = (iso) =>
 export const longDate = (iso) =>
   new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
 
+/** App Store style rating count: 101232 -> "101K", 23708 -> "24K", 2387079 -> "2.4M", 950 -> "950". */
+export function compactCount(n) {
+  const short = (v, unit) => `${v < 10 ? Math.round(v * 10) / 10 : Math.round(v)}${unit}`;
+  if (n >= 1e6) return short(n / 1e6, "M");
+  if (n >= 1e3) return short(n / 1e3, "K");
+  return String(n);
+}
+
+/** app_store frontmatter for the card, or null. Stars fill to `rating` (0 to 5). */
+export function appStoreData(app) {
+  if (!app || typeof app !== "object") return null;
+  const rating = Number(app.rating);
+  const count = Number(app.rating_count);
+  const checked = isoDate(app.checked);
+  return {
+    id: String(app.id),
+    name: String(app.name),
+    developer: String(app.developer),
+    developerUrl: String(app.developer_url),
+    priceText: app.price_text ? String(app.price_text) : null,
+    rating,
+    ratingText: rating.toFixed(1),
+    ratingPercent: Math.round((rating / 5) * 1000) / 10,
+    ratingCount: count,
+    ratingCountShort: compactCount(count),
+    ratingCountFull: count.toLocaleString("en-US"),
+    minIos: String(app.min_ios),
+    url: String(app.url),
+    icon: String(app.icon).replace(/^\//, ""),
+    // Short name for headings: the text before " - " or ":" ("Hevy - Workout Tracker" -> "Hevy").
+    shortName: String(app.name).split(/\s+-\s+|:/)[0].trim(),
+    price: app.price === undefined || app.price === null || app.price === "" ? null : String(app.price),
+    priceCurrency: app.price_currency ? String(app.price_currency) : "USD",
+    category: app.category ? String(app.category) : "HealthApplication",
+    seller: app.seller ? String(app.seller) : null,
+    checked,
+    checkedLong: checked ? longDate(checked) : null,
+  };
+}
+
 /** Normalize a post's frontmatter. `data` is the Eleventy data cascade for the page. */
 export function postData(data) {
   const file = data.page.inputPath.replace(/^\.\//, "");
@@ -171,6 +287,7 @@ export function postData(data) {
   const og = data.og_image ? String(data.og_image) : null;
   const ogLocal = og && og.startsWith("./") ? og : null;
   const handListed = data.hand_listed === true;
+  const appStore = appStoreData(data.app_store);
   return {
     file, slug, url, draft,
     noindex: draft || data.noindex === true,
@@ -196,6 +313,9 @@ export function postData(data) {
     jsonLdOverride: data.json_ld ?? null,
     published, updated,
     publishedShort: published ? shortDate(published) : null,
+    publishedLong: published ? longDate(published) : null,
+    updatedShort: updated ? shortDate(updated) : null,
+    template: data.template ? String(data.template) : null,
     tested: data.tested ? String(data.tested) : null,
     breadcrumb: data.breadcrumb ? String(data.breadcrumb) : null,
     summary: data.summary ? String(data.summary).trim() : null,
@@ -214,6 +334,9 @@ export function postData(data) {
           ? og
           : `${SITE_URL}/${og.replace(/^\//, "")}`,
     cta: data.cta === false ? null : { ...DEFAULT_CTA, ...(data.cta ?? {}) },
+    appStore,
+    scorecard: scorecardData(data.scorecard, { draft }),
+    howTested: howTestedData(data.how_tested, data.measurements, appStore ? appStore.shortName : null),
   };
 }
 
@@ -231,6 +354,7 @@ export function jsonLd(post) {
   };
   if (post.published) article.datePublished = post.published;
   if (post.updated || post.published) article.dateModified = post.updated || post.published;
+  if (post.template === "app-review" && post.appStore) return reviewGraph(post, article);
   const out = !post.faq
     ? article
     : [
@@ -246,6 +370,62 @@ export function jsonLd(post) {
         },
       ];
   return JSON.stringify(out, null, 2).replace(/<\//g, "<\\/");
+}
+
+/** Markdown -> plain text for JSON-LD (links keep their text; emphasis and code marks go). */
+const plainText = (md) =>
+  String(md)
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+    .replace(/<[^>]+>/g, "")
+    .replace(/(\*\*|\*|`)/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+/**
+ * An app review's JSON-LD: one @graph with the BlogPosting (about the app), a Review of the
+ * SoftwareApplication by Mark, and the FAQPage. No reviewRating and no aggregateRating: Mark
+ * gives no numeric scores, and the App Store rating on the card is Apple's, not his.
+ */
+function reviewGraph(post, article) {
+  const app = post.appStore;
+  const appId = `${post.url}#app`;
+  const org = (name) => ({ "@type": "Organization", name, url: app.developerUrl });
+  const software = {
+    "@type": "SoftwareApplication",
+    "@id": appId,
+    name: app.name,
+    operatingSystem: `iOS ${app.minIos} or later`,
+    applicationCategory: app.category,
+    url: app.url,
+    sameAs: app.developerUrl,
+    image: `${SITE_URL}/${app.icon}`,
+    // schema.org has no "developer": the developer is the app's author (as /about/ marks up Recomp).
+    author: org(app.developer),
+    publisher: org(app.seller || app.developer),
+  };
+  if (app.price !== null) software.offers = { "@type": "Offer", price: app.price, priceCurrency: app.priceCurrency, url: app.url };
+  const { "@context": _context, ...articleNode } = article;
+  const review = {
+    "@type": "Review",
+    "@id": `${post.url}#review`,
+    name: post.title,
+    url: post.url,
+    author: AUTHOR,
+    publisher: PUBLISHER,
+    itemReviewed: software,
+  };
+  if (post.published) review.datePublished = post.published;
+  if (post.updated || post.published) review.dateModified = post.updated || post.published;
+  if (post.summary) review.reviewBody = plainText(post.summary);
+  const graph = [{ ...articleNode, "@id": `${post.url}#article`, about: { "@id": appId } }, review];
+  if (post.faq) {
+    graph.push({
+      "@type": "FAQPage",
+      mainEntity: post.faq.map(({ q, a }) => ({ "@type": "Question", name: String(q), acceptedAnswer: { "@type": "Answer", text: String(a) } })),
+    });
+  }
+  return JSON.stringify({ "@context": "https://schema.org", "@graph": graph }, null, 2).replace(/<\//g, "<\\/");
 }
 
 /** The JSON-LD <script> bodies for a post: the json_ld override (one per list item) or the generated one. */

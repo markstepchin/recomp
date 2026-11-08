@@ -12,7 +12,7 @@ cta:
   location: false
 hand_listed: true
 json_ld:
-  - {"@context": "https://schema.org", "@type": "Article", "headline": "How to Take Progress Photos for a Recomp (Cut or Bulk)", "description": "Take progress photos every 1–2 weeks in the same place, lighting, and poses. Pair them with weight and notes so a flat scale during a recomp still makes sense.", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "author": {"@type": "Person", "name": "Mark Stepchin", "url": "https://progressphotos.app/about/", "jobTitle": "Founder of Recomp"}, "publisher": {"@type": "Organization", "name": "Recomp", "url": "https://progressphotos.app/"}, "mainEntityOfPage": "https://progressphotos.app/blog/how-to-take-progress-photos-for-recomp/", "image": "https://progressphotos.app/assets/step-compare.webp?v=5"}
+  - {"@context": "https://schema.org", "@type": "Article", "headline": "How to Take Progress Photos for a Recomp (Cut or Bulk)", "description": "Take progress photos every 1–2 weeks in the same place, lighting, and poses. Pair them with weight and notes so a flat scale during a recomp still makes sense.", "datePublished": "2026-09-14", "dateModified": "2026-09-14", "author": {"@type": "Person", "@id": "https://progressphotos.app/about/#mark", "name": "Mark Stepchin", "url": "https://progressphotos.app/about/", "jobTitle": "Founder of Recomp"}, "publisher": {"@type": "Organization", "name": "Recomp", "url": "https://progressphotos.app/"}, "mainEntityOfPage": "https://progressphotos.app/blog/how-to-take-progress-photos-for-recomp/", "image": "https://progressphotos.app/assets/step-compare.webp?v=5"}
   - {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How often should I take progress photos on a cut?", "acceptedAnswer": {"@type": "Answer", "text": "Every 1–2 weeks. Daily photos mostly capture water, lighting, and pump — not tissue change."}}, {"@type": "Question", "name": "Do I need a tripod?", "acceptedAnswer": {"@type": "Answer", "text": "Helpful, not required. A shelf, a stack of books, or a timer on a bathroom counter works. Camera height that you can repeat matters more than the mount."}}, {"@type": "Question", "name": "Should I flex or stay relaxed?", "acceptedAnswer": {"@type": "Answer", "text": "Pick one protocol and repeat it. Relaxed is easier to match; flexed can show muscle better. Do not mix them when you compare months."}}, {"@type": "Question", "name": "Can I use old camera-roll photos?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if you can find roughly matching angles. An imperfect history still beats starting from zero."}}, {"@type": "Question", "name": "Does Recomp upload my photos?", "acceptedAnswer": {"@type": "Answer", "text": "No. On device only."}}, {"@type": "Question", "name": "Is Recomp free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. iOS only."}}]}
 ---
 
@@ -30,7 +30,7 @@ json_ld:
   </p>
 </aside>
 
-<div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4">
+<div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-[1.5rem] [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4">
 
 ## How often should you take progress photos?
 
@@ -76,7 +76,7 @@ That last part is what a dedicated tracker is for. Your Photos album can store t
 
 </div>
 
-<section class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-8" aria-labelledby="article-faq">
+<section class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-[1.5rem] [&_h2]:leading-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-8" aria-labelledby="article-faq">
 
 ## FAQ {#article-faq}
 

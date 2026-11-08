@@ -1,24 +1,24 @@
 ---
 # Copy: Mark's "How I Review Progress Photo Apps" (Oct 28, 2026), used verbatim. The URL stays /blog/how-i-test-progress-photo-apps/ so existing links keep working. Earlier versions of this page are in git history.
-# TODO before publishing: add article:published_time, article:modified_time, and datePublished/dateModified in the JSON-LD; add to llms.txt.
+# TODO before publishing: add to llms.txt.
 # TODO(Mark): no "sameAs" on the author node yet. /about/ and the site link no X, Instagram, LinkedIn or GitHub profile for Mark. Add it here and on /about/ once one is public.
 title: "How I Review Progress Photo Apps"
 seo_title: "How I Review Progress Photo Apps | Recomp"
 description: "How I review progress photo apps: I download each one, pay for the subscription, and test it with real photos and weights from my own transformation."
-article_dates: false
 breadcrumb: "Best progress photo apps"
 published: 2026-10-27
+updated: 2026-11-01
 tested: October 2026
 summary: "I download every app I review, pay for the subscription if there is one, and test it with real photos and weights from my own fitness transformation. I measure how many taps and how much time it takes to add a check-in, compare dates, and align photos. The app I'm looking for lets me finish a check-in in under 30 seconds, lets me compare hundreds of photos effortlessly, keeps the photos front and center, and never sends my photos to a third-party server. The ideal progress photo app is a photo album, alignment tool and collage maker, all built for progress photos, that keeps your photos, weight and notes in the same place."
 prose_wrapper: false
 cta:
-  text: "Compare progress photos on a before-and-after timeline, scroll to any date instantly, and align photos on the fly. Recomp never uploads your photos or weight data."
+  text: "Compare progress photos on a before-and-after timeline, scroll to any date instantly, and align photos on the fly. Recomp never uploads your photos. It sends anonymous usage analytics and crash reports, with no account and no tracking."
 hand_listed: true
 json_ld:
-  - {"@context": "https://schema.org", "@type": "Article", "headline": "How I Review Progress Photo Apps", "description": "How I review progress photo apps: I download each one, pay for the subscription, and test it with real photos and weights from my own transformation.", "author": {"@type": "Person", "@id": "https://progressphotos.app/about/#mark", "name": "Mark Stepchin", "url": "https://progressphotos.app/about/", "jobTitle": "Founder of Recomp"}, "publisher": {"@type": "Organization", "name": "Recomp", "url": "https://progressphotos.app/"}, "url": "https://progressphotos.app/blog/how-i-test-progress-photo-apps/", "mainEntityOfPage": "https://progressphotos.app/blog/how-i-test-progress-photo-apps/", "image": "https://progressphotos.app/assets/step-compare.webp?v=5"}
+  - {"@context": "https://schema.org", "@type": "Article", "datePublished": "2026-10-27", "dateModified": "2026-11-01", "headline": "How I Review Progress Photo Apps", "description": "How I review progress photo apps: I download each one, pay for the subscription, and test it with real photos and weights from my own transformation.", "author": {"@type": "Person", "@id": "https://progressphotos.app/about/#mark", "name": "Mark Stepchin", "url": "https://progressphotos.app/about/", "jobTitle": "Founder of Recomp"}, "publisher": {"@type": "Organization", "name": "Recomp", "url": "https://progressphotos.app/"}, "url": "https://progressphotos.app/blog/how-i-test-progress-photo-apps/", "mainEntityOfPage": "https://progressphotos.app/blog/how-i-test-progress-photo-apps/", "image": "https://progressphotos.app/assets/step-compare.webp?v=5"}
 ---
 
-<div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-h3 [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4">
+<div class="[&>*+*]:mt-[1em] [&_h2]:mt-[2.25em] [&_h2]:text-[1.5rem] [&_h2]:tracking-h3 [&_h2]:font-bold [&_h3]:mt-[1.75em] [&_h3]:text-[1.0625rem] [&_h3]:leading-[1.35] [&_h3]:tracking-h4 [&_h3]:font-bold [&_p]:text-muted [&_li]:text-muted [&_strong]:text-fg [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5 pt-4">
 
 ## Why are my reviews different? {#why-are-my-reviews-different}
 
@@ -50,12 +50,12 @@ Then I hit save and compare my results to last week, 2 weeks ago, and a month ag
 
 A great progress photo app is really four apps in one:
 
-1. **A great cameral roll app.** Photos are front and center. Quick navigation and search that scales to hundreds of photos without performance issues.
+1. **A great camera roll app.** Photos are front and center. Quick navigation and search that scales to hundreds of photos without performance issues.
 2. **A great photo alignment app, built for fitness.** Auto & manual alignment features.
 3. **A good collage app, built for fitness.** Side by side, slider, overlay, & timelapse comparison views and sharing features.
 4. **A good data app.** Your photos, weight, notes and measurements are stored together, so you can answer questions like "show me every photo where I weighed 185 lb."
 
-All that built on top of <strong>your personal fitness database.</strong>Photos, weight, notes, and measurements live in one searchable timeline so you can instantly filter questions like "show me every check-in where I was under 180 lbs.
+All that built on top of <strong>your personal fitness database.</strong> Photos, weight, notes, and measurements live in one searchable timeline so you can instantly filter questions like "show me every check-in where I was under 180 lbs."
 
 ## What does a progress photo app need? {#what-does-a-progress-photo-app-need}
 
@@ -99,7 +99,7 @@ What I measure: whether photos stay on the device, and what the App Store privac
 4. Screen privacy: Can I lock the app with Face ID or an app lock, and does it hide my photos in the app switcher?
 5. Backup and a new phone: Are my photos backed up, for example to iCloud, and can I move everything to a new phone?
 6. Reminders: Can I set the day, the time and how often I get reminded?
-7. In-app camera: Does it have a camera with a ghost overlay and pose guides, such as upper body, full body and a 3x3 grid?
+7. In-app camera: Does it have a camera with a ghost overlay and pose guides, such as upper body, full body and a 3x3 grid? Can I zoom?
 8. Units: Does it support both metric and imperial?
 9. Body measurements: Can I add body measurements if I want them, without being forced to?
 10. Sharing: Can I make a shareable before/after image?
@@ -107,6 +107,27 @@ What I measure: whether photos stay on the device, and what the App Store privac
 12. Account and originals: Does it work without an account, and does it leave my originals untouched in Photos?
 13. Editing: Can I edit a check-in's date, and save a partial check-in when I skip a pose?
 14. Polish: Does it have dark mode, and is it free of ads?
+
+<!-- Which apps have I reviewed? Uncomment this section when the first review publishes, and list only reviews that are live. Published pages link only to live pages (the build checks).
+## Which apps have I reviewed? {#reviews}
+
+Each review ends with the same checklist, so you can compare apps row by row.
+
+- [Hevy](/blog/hevy-review/)
+- [MacroFactor](/blog/macrofactor-review/)
+- [MyFitnessPal](/blog/myfitnesspal-review/)
+- [Body Tracker](/blog/body-tracker-korolev-review/)
+- [Check-In](/blog/check-in-review/)
+- [Fit-Stitch](/blog/fit-stitch-review/)
+- [GainFrame](/blog/gainframe-review/)
+- [Lasmit](/blog/lasmit-review/)
+- [Metamorph](/blog/metamorph-review/)
+- [Photo Compare](/blog/photo-compare-review/)
+- [Photo Journey](/blog/photo-journey-review/)
+- [Progress: Photo Journal](/blog/progress-photo-journal-review/)
+- [Then & Now](/blog/then-and-now-review/)
+- [Progress Pics: Body Tracker (Thumbstone)](/blog/thumbstone-review/)
+-->
 
 ## How do I test each app? {#how-do-i-test-each-app}
 

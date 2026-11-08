@@ -3,10 +3,10 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
-  DEFAULT_CTA, checkFrontmatter, checkPost, frontmatterKeys, indexCards, jsonLd, jsonLdBlocks, llmsLines, postData,
+  DEFAULT_CTA, appStoreData, checkFrontmatter, compactCount, checkPost, frontmatterKeys, indexCards, jsonLd, jsonLdBlocks, llmsLines, postData,
   sitemapEntries, sortPosts,
 } from "../_config/blog.js";
-import { IMG_CLASS, PHONE_FIGURE_CLASS, PHONE_SIZES, markdown } from "../_config/markdown.js";
+import { IMG_CLASS, PHONE_FIGURE_CLASS, PHONE_SIZES, PHONE_IMG_CLASS, markdown } from "../_config/markdown.js";
 
 const FILE = "blog/x/index.md";
 const errorsOf = (body, draft = false) => checkPost(FILE, body, draft).errors;
@@ -83,7 +83,7 @@ test("images render as figures; custom classes add to the defaults", () => {
 test("{.phone} makes a narrow phone-screenshot figure with matching sizes", () => {
   const html = markdown().render("![Phone](./p.png){.phone}\n");
   assert.ok(html.startsWith(`<figure class="${PHONE_FIGURE_CLASS}">`), html);
-  assert.match(html, new RegExp(`class="${IMG_CLASS}"`));
+  assert.ok(html.includes(`class="${PHONE_IMG_CLASS}"`), html);
   assert.ok(html.includes(`sizes="${PHONE_SIZES}"`));
   assert.doesNotMatch(html, /\bphone\b"/);
 });
@@ -212,6 +212,35 @@ test("unknown frontmatter keys fail", () => {
   assert.match(errors[0], /unknown frontmatter key "titel"/);
   assert.deepEqual(checkFrontmatter(FILE, RAW, { cta: { heading: "H" } }, () => true), []);
   assert.match(checkFrontmatter(FILE, RAW, { cta: { heading: "H", txt: "x" } }, () => true)[0], /unknown cta key "txt"/);
+});
+
+const APP = {
+  id: 1, name: "App", developer: "Dev", developer_url: "https://dev.example", rating: 4.7, rating_count: 2387079, min_ios: "18.0",
+  url: "https://apps.apple.com/us/app/x/id1", icon: "/assets/app-icons/x.webp", checked: new Date("2026-11-01"), price: "0",
+};
+
+test("app_store: all keys required, rating 0 to 5, whole count, apps.apple.com url", () => {
+  assert.deepEqual(checkFrontmatter(FILE, RAW, { app_store: APP }, () => true), []);
+  assert.match(checkFrontmatter(FILE, RAW, { app_store: { ...APP, min_ios: undefined } }, () => true)[0], /app_store\.min_ios is required/);
+  assert.match(checkFrontmatter(FILE, RAW, { app_store: { ...APP, stars: 5 } }, () => true)[0], /unknown app_store key "stars"/);
+  assert.match(checkFrontmatter(FILE, RAW, { app_store: { ...APP, rating: 6 } }, () => true)[0], /0 to 5/);
+  assert.match(checkFrontmatter(FILE, RAW, { app_store: { ...APP, rating_count: "2.4M" } }, () => true)[0], /whole number/);
+  assert.match(checkFrontmatter(FILE, RAW, { app_store: { ...APP, url: "https://example.com" } }, () => true)[0], /apps\.apple\.com/);
+  assert.match(checkFrontmatter(FILE, RAW, { app_store: { ...APP, developer_url: undefined } }, () => true)[0], /developer_url is required/);
+  assert.match(checkFrontmatter(FILE, RAW, { app_store: { ...APP, developer_url: "http://dev.example" } }, () => true)[0], /https link/);
+  assert.match(checkFrontmatter(FILE, RAW, { app_store: { ...APP, developer_url: "https://apps.apple.com/us/developer/x/id1" } }, () => true)[0], /own site/);
+});
+
+test("appStoreData: compact counts like the App Store, star fill, date", () => {
+  assert.deepEqual([101232, 23708, 2387079, 999, 9500].map(compactCount), ["101K", "24K", "2.4M", "999", "9.5K"]);
+  const app = appStoreData(APP);
+  assert.equal(app.ratingText, "4.7");
+  assert.equal(app.ratingPercent, 94);
+  assert.equal(app.ratingCountFull, "2,387,079");
+  assert.equal(app.icon, "assets/app-icons/x.webp");
+  assert.equal(app.developerUrl, "https://dev.example");
+  assert.equal(app.checked, "2026-11-01");
+  assert.equal(appStoreData(undefined), null);
 });
 
 test("a co-located og_image must exist", () => {

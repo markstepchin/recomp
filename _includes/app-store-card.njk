@@ -1,0 +1,25 @@
+{#- App Store card (v1: compact horizontal card with a "View on App Store" button).
+    Data: post.appStore from app_store frontmatter (_config/blog.js appStoreData). Divs and spans,
+    not <p>, so the post's prose wrapper styles ([&_p]:text-muted) don't reach inside. -#}
+<aside class="flex flex-wrap items-center gap-x-4 gap-y-3 rounded-card border border-card-border bg-card p-4 sm:flex-nowrap" aria-label="{{ app.name }} on the App Store">
+  <img class="size-16 shrink-0 rounded-[14px] border border-card-border" src="{{ root }}{{ app.icon }}" alt="" width="64" height="64" loading="lazy" decoding="async" />
+  <div class="min-w-0 flex-1">
+    <div class="text-[1.0625rem] font-semibold leading-snug tracking-h4 text-fg">{{ app.name }}</div>
+    <div class="text-micro leading-snug text-muted"><a class="text-muted no-underline decoration-muted/40 decoration-1 underline-offset-2 hover:underline focus-visible:underline" href="{{ app.developerUrl }}" target="_blank" rel="noopener noreferrer">{{ app.developer }}<svg class="ml-0.5 inline-block size-[0.7em] align-baseline" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 8.5l5-5M4.5 3.5h4v4" /></svg><span class="sr-only"> (developer website, opens in a new tab)</span></a></div>
+    {%- if app.priceText %}
+    <div class="mt-0.5 text-micro leading-snug text-muted" title="US App Store price, checked {{ app.checkedLong }}">{{ app.priceText }}</div>
+    {%- endif %}
+    <div class="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-helper leading-none text-muted" title="US App Store rating, checked {{ app.checkedLong }}">
+      {% include "app-store-stars.njk" %}
+      {%- if app.ratingCount > 0 %}
+      <span><span class="font-semibold text-fg">{{ app.ratingText }}</span> · {{ app.ratingCountShort }} ratings</span>
+      <span class="sr-only">Rated {{ app.ratingText }} out of 5 from {{ app.ratingCountFull }} ratings on the US App Store, checked {{ app.checkedLong }}.</span>
+      {%- else %}
+      <span>No ratings yet</span>
+      <span class="sr-only">No ratings on the US App Store yet, checked {{ app.checkedLong }}.</span>
+      {%- endif %}
+      <span class="rounded-full border border-card-border px-2 py-1 text-[12px] font-medium leading-none text-muted">iOS {{ app.minIos }}+</span>
+    </div>
+  </div>
+  <a class="w-full shrink-0 rounded-full bg-accent px-4 py-2.5 text-center text-[15px] font-semibold leading-none text-white no-underline transition-colors duration-150 hover:bg-accent-hover hover:no-underline focus-visible:no-underline active:bg-accent-active sm:w-auto" href="{{ app.url }}" target="_blank" rel="noopener noreferrer">View on App Store</a>
+</aside>
