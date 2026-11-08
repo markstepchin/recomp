@@ -79,7 +79,7 @@ scorecard:
       status: has,
       fact: "Filmstrip along the bottom switches dates",
     } # L214
-  compare_scale: { status: confirm, fact: "[CONFIRM]" }
+  compare_scale: { status: missing, fact: "Not confirmed" }
   side_by_side: {
       status: partial,
       fact: "Before and after stacked, one above the other",
@@ -128,7 +128,7 @@ scorecard:
       status: has,
       fact: "Camera-roll originals stay unchanged",
     }
-  edit_date: { status: confirm, fact: "[CONFIRM]" }
+  edit_date: { status: missing, fact: "Not confirmed" }
   partial_checkin: {
       status: has,
       fact: "Front, side and back are each optional",
