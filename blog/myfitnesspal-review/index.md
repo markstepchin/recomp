@@ -41,7 +41,7 @@ measurements:
 
 scorecard:
   # A check-in should be effortless
-  checkin_time: { status: confirm, fact: "[CONFIRM]" }
+  checkin_time: { status: has, fact: "Under a minute and a few taps" }
   photo_picker: { status: missing, fact: "One photo per date" } # L60
   weight_apple_health: {
       status: partial,
@@ -63,8 +63,8 @@ scorecard:
     } # L46
   align_in_compare: { status: missing, fact: "No alignment tools" } # L46
   # Comparison should be effortless
-  compare_speed: { status: confirm, fact: "[CONFIRM]" }
-  compare_scale: { status: confirm, fact: "[CONFIRM]" }
+  compare_speed: { status: has, fact: "Scroll bar with photos" }
+  compare_scale: { status: missing, fact: "Not confirmed" }
   side_by_side: {
       status: has,
       fact: "Two photos side by side with their weights",
@@ -89,7 +89,7 @@ scorecard:
       status: partial,
       fact: "CSV export with Premium, no photos",
     } # L66
-  app_lock: { status: confirm, fact: "[CONFIRM]" }
+  app_lock: { status: missing, fact: "None" }
   backup_transfer: {
       status: has,
       fact: "On its servers, so photos show up on a new phone",
@@ -107,13 +107,13 @@ scorecard:
   sharing: { status: has, fact: "Shares a split before/after photo" } # L52
   timelapse: { status: missing, fact: "No timelapse" } # L52
   no_account: { status: missing, fact: "Needs an account" } # L66
-  originals_untouched: { status: confirm, fact: "[CONFIRM]" } # In-app photos aren't saved to the camera roll (L40); that's a different question.
+  originals_untouched: { status: has, fact: "Confirmed" } # In-app photos aren't saved to the camera roll (L40); that's a different question.
   edit_date: { status: has, fact: "You can edit a weigh-in's date" } # L74
   partial_checkin: {
       status: partial,
       fact: "A weigh-in saves without a photo, but a photo needs a weigh-in",
     } # Researched 2026-11-01: https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs
-  dark_mode: { status: confirm, fact: "[CONFIRM]" }
+  dark_mode: { status: has, fact: "Confirmed" }
   no_ads: { status: missing, fact: "Has ads; ad-free needs Premium" } # L72
 ---
 
@@ -153,7 +153,7 @@ I test each of these features with my personal library of real progress photos &
 
 ### No Notifications for tracking {#reminders}
 
-**MyFitnessPal's reminders are for meals, not photos or weigh-ins.** Each one fires if you haven't logged a chosen meal by a set time. Its help recommends weighing in once a week, but I didn't find a reminder for it. [CONFIRM: in Profile > Reminders > +, is there a weigh-in option?] Sources: [logging reminders](https://support.myfitnesspal.com/hc/en-us/articles/360032622391-How-to-set-up-logging-reminders), [how often to weigh in](https://support.myfitnesspal.com/hc/en-us/articles/360032272992-How-often-should-I-record-my-weight-and-other-measurements).
+**MyFitnessPal has reminders are for tracking weight, which includes a single photo field.** Sources: [logging reminders](https://support.myfitnesspal.com/hc/en-us/articles/360032622391-How-to-set-up-logging-reminders), [how often to weigh in](https://support.myfitnesspal.com/hc/en-us/articles/360032272992-How-often-should-I-record-my-weight-and-other-measurements).
 
 ### Photos {#adding-photos}
 
@@ -163,7 +163,7 @@ I test each of these features with my personal library of real progress photos &
 
 **MyFitnessPal is built around tracking weight, and photos are an add-on.** You add a weight record under More > Weight & Measurements and can attach a photo to it. Photos taken in the app aren't saved to your camera roll. The in-app camera has no zoom. [MyFitnessPal's progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
-**Since photos attach to weigh-ins, MyFitnessPal keeps only one photo per date.** I can't keep a front, side and back photo for the same day.
+**Since photos attach to weigh-ins, MyFitnessPal keeps only one photo per date.** This makes it impossible to track multiple angles, i.e. front, side and back photos for the same day.
 
 ### Weights and measurements {#weights}
 
@@ -177,9 +177,9 @@ Weight syncs both ways with Apple Health, but only from the day you connect. Old
 
 ![MyFitnessPal Edit weight screen showing 155 lbs with a Change date picker set to August 4, 2025](./myfitnesspal-edit-weight-date.webp "Editing a weigh-in's date."){.phone}
 
-![MyFitnessPal Reminders list with meal reminders and a weight reminder set to weekly on Sundays at 12:18 PM](./myfitnesspal-reminders.webp "Reminders: weight weekly on Sundays at 12:18 PM."){.phone}
+![MyFitnessPal Reminders list with meal reminders and a weight reminder set to weekly on Sundays at 12:18 PM](./myfitnesspal-reminders.webp "Weight tracking reminder"){.phone}
 
-![MyFitnessPal Edit Reminder screen for weight, set to weekly on Sunday at 12:18 PM](./myfitnesspal-edit-weight-reminder.webp "Editing the weight reminder: weekly, Sunday, 12:18 PM."){.phone}
+![MyFitnessPal Edit Reminder screen for weight, set to weekly on Sunday at 12:18 PM](./myfitnesspal-edit-weight-reminder.webp "Weight tracking reminder, select time view"){.phone}
 
 </div>
 
@@ -195,7 +195,9 @@ MyFitnessPal supports **square aspect radio only** and crops every photo square 
 
 <!-- TODO(Mark): how easy it is to compare, and the taps and time to compare 9 different dates. Can it make a shareable before/after image or a timelapse? -->
 
-Sharing works from any photo in the Entries list. You can swipe between photos, add a message and save a split photo or send it to Instagram or Facebook. There's no fullscreen viewer. The small viewer lets you zoom and pan, but those adjustments aren't saved. That's viewing only, not alignment. It doesn't have a slider view, overlay, or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists --> [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
+MyFitnessPal has both single and side by side views for comparison, with a with a thumbnail strip along the bottom for easy switching. It lacks a full screen view for a single photo like in photos. It doesn't have a slider view, overlay, or timelapse
+
+You can share a single photo or side by side view, along with a message, directly to Instagram or Facebook. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists --> [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
 <div class="phone-row">
 
