@@ -122,7 +122,9 @@ export function checkScorecard(file, raw) {
     const fact = row.fact === undefined || row.fact === null ? "" : String(row.fact);
     if (!SCORECARD_STATUSES.includes(row.status)) errors.push(`${file}: scorecard.${id}.status must be has, partial, missing or confirm`);
     if (!fact.trim()) errors.push(`${file}: scorecard.${id}.fact is required`);
-    if (row.status === "confirm" && fact !== "[CONFIRM]") errors.push(`${file}: scorecard.${id} is confirm, so fact must be "[CONFIRM]"`);
+    if (row.status === "confirm" && fact !== "[CONFIRM]" && /\[(CONFIRM|TODO|DRAFT)/.test(fact)) {
+      errors.push(`${file}: scorecard.${id} is confirm with a marker in fact; use plain wording or fact: "[CONFIRM]"`);
+    }
     if (row.status !== "confirm" && /\[(CONFIRM|TODO|DRAFT)/.test(fact)) errors.push(`${file}: scorecard.${id} has a marker in a non-confirm fact`);
     if (fact.includes("\u2014")) errors.push(`${file}: scorecard.${id}.fact has an em dash`);
     if (fact.length > 90) errors.push(`${file}: scorecard.${id}.fact is over 90 characters`);

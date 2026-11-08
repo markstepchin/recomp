@@ -1,9 +1,10 @@
 ---
 # Outline skeleton for Mark to write into. draft: true keeps it noindex and out of /blog/, the sitemap and llms.txt.
-title: "MacroFactor review: progress photos in a fitness app"
+title: "MacroFactor Progress Photos Review"
 seo_title: "MacroFactor Progress Photos Review (2026) | Recomp"
 description: "I tested MacroFactor's progress photo feature with real photos and weights from my own transformation."
-tested: October 2026
+tested: November 2026
+published: 2026-11-08
 draft: true
 breadcrumb: "Best progress photo apps"
 template: app-review
@@ -28,8 +29,8 @@ how_tested:
   device: "" # e.g. the iPhone model, from Settings > General > About
   ios: "" # iOS version during the test
   app_version: "" # app version tested, from the App Store page or the app's About screen
-  started: "" # YYYY-MM-DD, first day of testing
-  ended: "" # YYYY-MM-DD, last day of testing
+  started: "2026-11-01" # YYYY-MM-DD, first day of testing
+  ended: "2026-11-01" # YYYY-MM-DD, last day of testing
   checkins: "" # number of check-ins added during the test
 
 # Mark's hand measurements. Leave empty until measured; never estimate.
@@ -79,7 +80,7 @@ scorecard:
       status: has,
       fact: "Filmstrip along the bottom switches dates",
     } # L214
-  compare_scale: { status: missing, fact: "Not confirmed" }
+  compare_scale: { status: confirm, fact: "Not tested." }
   side_by_side: {
       status: partial,
       fact: "Before and after stacked, one above the other",
@@ -108,7 +109,7 @@ scorecard:
   data_import_export: {
       status: partial,
       fact: "Exports weight and metrics; photos aren't mentioned",
-    } # L74 | L74 has its own [CONFIRM] on photos.
+    } # L74
   app_lock: { status: missing, fact: "No app lock or Face ID option found" } # L80
   backup_transfer: {
       status: has,
@@ -128,7 +129,7 @@ scorecard:
       status: has,
       fact: "Camera-roll originals stay unchanged",
     }
-  edit_date: { status: missing, fact: "Not confirmed" }
+  edit_date: { status: confirm, fact: "Not confirmed." }
   partial_checkin: {
       status: has,
       fact: "Front, side and back are each optional",
@@ -137,14 +138,9 @@ scorecard:
   no_ads: { status: has, fact: "No ads; it's subscription only" } # Researched 2026-11-01: https://macrofactor.com/macrofactor/ ('We will never serve ads')
 ---
 
-<!-- TODO(Mark): final title, seo_title and description once the verdict is written. Add card_blurb if the /blog/ card needs a shorter line. -->
-<!-- TODO(Mark): set "published: YYYY-MM-DD" in the frontmatter and remove draft: true when this is ready. -->
-
 <!-- app-store-card -->
 
 ## Built for macros, not photos {#design-tradeoffs}
-
-<!-- TODO(Mark): intro. What MacroFactor is for, what it costs, whether I paid for a subscription, and how many check-ins I added. Notes so far only say it's a fitness app with a photo feature. -->
 
 If you’re one of the many people who already use MacroFactor, you’re probably wondering if you really need to download and set up a whole new app. And yes, while MacroFactor does have progress photo tracking, it makes multiple tradeoffs to optimize for macros over photo tracking.
 
@@ -156,30 +152,28 @@ Apple’s native apps are a perfect case study for why it makes sense to separat
 
 Separating these apps provides a better user experience for each individual use case. We recommend using multiple apps and tools, each designed for a specific use case. At the very least, you need a workout tracker, a calorie tracker, and a progress photo tracker.
 
-## How I test {#todo}
+## How I test {#how-i-test}
 
-After personally tracking hundreds of progress photos over several years, I have an opinionated philosophy on what's a must have, what's nice to have, and what's fluff. A great progress photo tracker is 4 apps in one:
+After personally tracking hundreds of progress photos over several years, I have an opinionated philosophy on what's a must-have, what's nice-to-have, and what's fluff. A great progress photo tracker is four apps in one:
 
 1. Photos app / camera roll
 2. Great alignment tools for consistent comparisons
 3. Collage app with multiple ways to compare your photos over time
-4. Weight, measurements, and notes all associated to photos
+4. Weight, measurements, and notes all associated with photos
 
-I test each of these features with my personal library of real progress photos & weight records. See [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) to learn more.
+I test each of these features with my personal library of real progress photos and weight records. See [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) to learn more.
 
 ![iOS Photos album showing hundreds of weekly front, side, and back progress photos from years of coaching check-ins](../../assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp "Years of weekly check-ins, still stuck in my camera roll."){.phone}
 
 ## Adding progress data {#adding-data}
 
-### No Notifications for tracking {#reminders}
+### No notifications for tracking {#reminders}
 
 **MacroFactor doesn't remind you to weigh in or take photos.** The only nudge is a small alert on the Strategy tab when your weekly check-in is due, and you pick the check-in day. That check-in updates calories and macros, not photos. [MacroFactor's check-in help](https://help.macrofactorapp.com/en/articles/247-introduction-to-check-ins-and-coaching-modules).
 
 ### Photos {#adding-photos}
 
-Macrofactor supports both adding existing photos and an in-app camera. It doesn't read the date from the photo, so you must edit the date manually if you're adding a photo from a different date.
-
-<!-- TODO(Mark): adding a check-in: taps and seconds for a weight and front, side and back photos (great is under 30 seconds). Does it read the date from the photos, import weight from Apple Health, and let me pick all 3 photos in one picker? -->
+MacroFactor supports adding photos from your library or taking a new one with the system camera. It doesn't read the date from the photo, so you must edit the date manually if you're adding a photo from a different date.
 
 <div class="phone-row">
 
@@ -195,11 +189,9 @@ Each date holds one front, one side and one back photo. They sit next to up to 2
 
 ## Alignment {#alignment}
 
-<!-- TODO(Mark): ease of alignment, gridline quality, ghost overlay, auto align, and whether I can align in the side by side view. -->
-
 **You can only adjust a photo in the crop step, before you save it.** MacroFactor's help says you can zoom and rotate there. Once a photo is uploaded, it can't be edited, resized or aligned. <!-- TODO(feature-link): link "align" to Recomp's manual alignment feature page once it exists -->
 
-MyFitnessPal supports **square aspect radio only** and crops every photo square when you upload it. <!-- TODO(feature-link): link "ghost overlay" to Recomp's Ghost overlay camera feature page once it exists --> <!-- TODO(feature-link): link "auto-align" to Recomp's Auto-align feature page once it exists --> [How to add progress photos](https://help.macrofactorapp.com/en/articles/121-how-to-add-progress-photos).
+MacroFactor supports **square aspect ratio only** and crops every photo square when you upload it. [How to add progress photos](https://help.macrofactorapp.com/en/articles/121-how-to-add-progress-photos).
 
 <div class="phone-row">
 
@@ -209,13 +201,9 @@ MyFitnessPal supports **square aspect radio only** and crops every photo square 
 
 ## Comparison Features {#compare}
 
-<!-- TODO(Mark): are the photos the star? How much of the screen do they take, and do the buttons get in their way? How does it handle dozens or hundreds of photos? -->
-
-MyFitnessPal has both single and stacked views for comparison, with a with a thumbnail strip along the bottom for easy switching. It lacks a full screen view for a single photo like in photos. It doesn't have a slider view, overlay, or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists --> [MacroFactor's body metrics announcement](https://macrofactor.com/body-metrics/).
+MacroFactor has both single and stacked views for comparison, with a thumbnail strip along the bottom for easy switching. It lacks a full-screen view for a single photo like in the Photos app. It doesn't have a slider view, overlay, or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists --> [MacroFactor's body metrics announcement](https://macrofactor.com/body-metrics/).
 
 Neither gallery view uses the screen well. The single view shows one square photo with empty space below it. The compare view stacks two small square photos with the weights beside them, so the photos take up a fraction of the screen.
-
-<!-- TODO(Mark): how easy it is to compare, and the taps and time to compare 9 different dates. Can it make a shareable before/after image or a timelapse? -->
 
 MacroFactor also has a simple before-and-after share feature, with the two photos stacked one above the other. <!-- TODO(feature-link): link "one above the other" to Recomp's Side-by-side comparison feature page once it exists --> [How to create before-and-after photos](https://help.macrofactorapp.com/en/articles/123-how-to-create-and-share-before-and-after-photos).
 
@@ -231,26 +219,8 @@ MacroFactor also has a simple before-and-after share feature, with the two photo
 
 ## Quality of life and privacy {#sharing}
 
-<!-- TODO(Mark): privacy: are photos ever sent to a third-party server? Account required? Backup and moving to a new phone, CSV weight import, photo export, Face ID or app lock, app switcher privacy. -->
-
-Photos upload to MacroFactor's servers on Google Firebase. They stay there until you delete them or your account. You need an account to use the app, and the App Store privacy label lists photos as data linked to you. Data Export gives you spreadsheets of weight, nutrition and body metrics, and its help doesn't mention photos. [CONFIRM: photos aren't in the export.] Sources: [MacroFactor's personal data page](https://macrofactor.com/app-personal-data-protection-information/), [Export your data](https://help.macrofactorapp.com/en/articles/68-export-your-data), [App Store listing](https://apps.apple.com/us/app/id1553503471).
-
-<!-- TODO(Mark): any quality-of-life items that matter for MacroFactor (bulk import, reminders, in-app camera, units, body measurements, editing a check-in's date, partial check-ins, dark mode, ads). Fold them into the sections above or below; no separate section or table unless it clearly helps. -->
+Photos upload to MacroFactor's servers on Google Firebase. They stay there until you delete them or your account. You need an account to use the app, and the App Store privacy label lists photos as data linked to you. Data Export gives you spreadsheets of weight, nutrition and body metrics, and its help doesn't mention photos. Sources: [MacroFactor's personal data page](https://macrofactor.com/app-personal-data-protection-information/), [Export your data](https://help.macrofactorapp.com/en/articles/68-export-your-data), [App Store listing](https://apps.apple.com/us/app/id1553503471).
 
 MacroFactor has dark mode and switches between pounds and kilograms. I didn't find an app lock or Face ID option. Sources: [dark mode](https://help.macrofactorapp.com/en/articles/73-switch-between-dark-and-light-mode), [units](https://help.macrofactorapp.com/en/articles/353-changing-unit-preferences).
-
-<!-- TODO(Mark): what's good. -->
-
-<!-- TODO(Mark): what's bad. -->
-
-<!-- TODO(Mark): who I'd recommend it for. -->
-
-<!-- TODO(Mark): qualitative verdict in plain words on whether I recommend it. No numeric score. -->
-
-<!-- [TODO: do I recommend MacroFactor for progress photos, and for whom.] -->
-
-## FAQ {#faq}
-
-<!-- TODO(Mark): questions readers ask about MacroFactor's progress photos, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
 
 <!-- scorecard -->

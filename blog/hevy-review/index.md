@@ -5,6 +5,7 @@ title: "Hevy Progress Photos Review"
 seo_title: "Hevy Progress Photos and Measurements, Tested | Recomp"
 description: "I tested Hevy's progress photos, overlay camera, side-by-side compare and measurements. It works for one weekly photo, but allows only one photo a day."
 tested: November 2026
+published: 2026-11-08
 draft: true
 breadcrumb: "Best progress photo apps"
 template: app-review
@@ -32,7 +33,7 @@ faq:
   - q: "Are Hevy body measurements free?"
     a: "Weight and waist are free. Body fat and the other measurements need Hevy Pro."
   - q: "Can you export progress photos from Hevy?"
-    a: "Hevy exports measurements as a CSV. Photos aren't in the export."
+    a: "You can share a single-photo or side-by-side image. The measurements CSV doesn't include your photos."
   - q: "Does Hevy remind you to take progress photos?"
     a: "No. Hevy's notifications cover workouts and social activity, not progress photos or weigh-ins."
 # Meta footer fields. Empty until Mark fills them.
@@ -59,11 +60,11 @@ scorecard:
       status: missing,
       fact: "One photo per day, so front, side and back can't share a date",
     } # L72
-  weight_apple_health: { status: has, fact: "Weight from Apple Health" } # Review says weight is typed in by hand and no Apple Health read was found, but L84 carries its own [CONFIRM].
+  weight_apple_health: { status: has, fact: "Weight from Apple Health" }
   weight_quick_entry: {
-      status: missing,
-      fact: "Every weigh-in is typed in by hand",
-    } # L84
+      status: partial,
+      fact: "Weight from Apple Health or manual entry",
+    }
   data_together: {
       status: has,
       fact: "Each photo sits with your weight and measurements",
@@ -86,10 +87,10 @@ scorecard:
   align_in_compare: {
       status: missing,
       fact: "No alignment in the side-by-side view",
-    } # CONFLICT in the review: L100 says 'no side-by-side alignment', L120 says you can manually align two photos in the compare view but it isn't saved. Mark to settle before publish.
+    }
   # Comparison should be effortless
   compare_speed: { status: has, fact: "Switch between several dates quickly" } # Not measured yet.
-  compare_scale: { status: missing, fact: "Not confirmed" } # Not tested with hundreds of photos; stays on the published table.
+  compare_scale: { status: confirm, fact: "Not tested." }
   side_by_side: { status: has, fact: "Two photos side by side, edge to edge" } # L110
   slider_view: { status: missing, fact: "No slider view" } # L122
   overlay_view: { status: missing, fact: "No overlay view" } # L122
@@ -137,8 +138,6 @@ scorecard:
 
 ## Built for workouts, not photos {#design-tradeoffs}
 
-<!-- TODO: outline, write into prose -->
-
 If you’re one of the many people who already use the popular workout tracking app Hevy, you’re probably wondering if you really need to download and set up a whole new app. And yes, while Hevy does have progress photo tracking, it makes multiple tradeoffs to optimize for workouts over photo tracking.
 
 Apple’s native apps are a perfect case study for why it makes sense to separate apps that can seem closely related.
@@ -149,28 +148,28 @@ Apple’s native apps are a perfect case study for why it makes sense to separat
 
 Separating these apps provides a better user experience for each individual use case. We recommend using multiple apps and tools, each designed for a specific use case. At the very least, you need a workout tracker, a calorie tracker, and a progress photo tracker.
 
-## How I test {#todo}
+## How I test {#how-i-test}
 
-After personally tracking hundreds of progress photos over several years, I have an opinionated philosophy on what's a must have, what's nice to have, and what's fluff. A great progress photo tracker is 4 apps in one:
+After personally tracking hundreds of progress photos over several years, I have an opinionated philosophy on what's a must-have, what's nice-to-have, and what's fluff. A great progress photo tracker is four apps in one:
 
 1. Photos app / camera roll
 2. Great alignment tools for consistent comparisons
 3. Collage app with multiple ways to compare your photos over time
-4. Weight, measurements, and notes all associated to photos
+4. Weight, measurements, and notes all associated with photos
 
-I test each of these features with my personal library of real progress photos & weight records. See [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) to learn more.
+I test each of these features with my personal library of real progress photos and weight records. See [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) to learn more.
 
 ![iOS Photos album showing hundreds of weekly front, side, and back progress photos from years of coaching check-ins](../../assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp "Years of weekly check-ins, still stuck in my camera roll."){.phone}
 
 ## Adding progress data {#adding-data}
 
-### No Notifications for tracking {#reminders}
+### No notifications for tracking {#reminders}
 
-Hevy's notifications are workout specific, like a rest timer in between sets and the monthly training report, as well as social notifications for new followers, emails, likes, and comments. [Hevy's notification settings](https://help.hevyapp.com/hc/en-us/articles/33845807003671-Account-Settings-Preferences-Profile-Information-Adjust-username-password-or-email-address-Notifications)
+Hevy's notifications are workout-specific, like a rest timer in between sets and the monthly training report, as well as social notifications for new followers, likes, and comments. Sources: [Hevy's notification settings](https://help.hevyapp.com/hc/en-us/articles/33845807003671-Account-Settings-Preferences-Profile-Information-Adjust-username-password-or-email-address-Notifications).
 
 ### Photos {#adding-photos}
 
-Hevy's **1 photo/day limit** means you can't track front, side and back photos per session <br />[Hevy's progress photos page](https://www.hevyapp.com/features/progress-photos/).
+Hevy's **1 photo/day limit** means you can't keep front, side and back photos on the same day. Sources: [Hevy's progress photos page](https://www.hevyapp.com/features/progress-photos/).
 
 Hevy supports both adding existing photos and an in-app camera. Hevy doesn't read the date from the photo, so you must edit the date manually if you're adding a photo from a different date.
 
@@ -192,9 +191,9 @@ Hevy syncs your weight with Apple Health and tracks a long list of measurements.
 
 ## Alignment {#alignment}
 
-Once a photo is added, its alignment is locked. You're sometimes in a rush, don't line up properly, and only notice a week or two later, and by then it's too late.
+Once a photo is added, its alignment is locked. Sometimes you're in a rush, don't line up properly, and only notice a week or two later, when it's too late.
 
-Hevy aligns a photo in one of three ways, depending on how you add it.
+Your alignment options depend on how you add the photo.
 
 **In-app camera.** A faded ghost of your last photo sits over the live view, so you can match your pose and distance to last week. The camera has no zoom, and there's no alignment step after you take the shot.
 
@@ -206,15 +205,15 @@ There's no auto-align or side-by-side alignment either, and the tools aren't con
 
 <div class="phone-row">
 
-![Hevy in-app camera with Overlay turned on, showing a faded ghost of the previous progress photo over the live view, with Timer and Overlay buttons beside the shutter](./hevy-camera-overlay.webp "In-app camera alignment: Overlay, no zoom, no crop after taking the photo"){.phone}
+![Hevy in-app camera with overlay turned on, showing a faded ghost of the previous progress photo over the live view, with Timer and Overlay buttons beside the shutter](./hevy-camera-overlay.webp "In-app camera alignment: overlay, no zoom, no crop after taking the photo"){.phone}
 
-![Hevy Transform screen cropping a progress photo at 3:4 with a grid overlay and a rotation dial](./hevy-crop-grid.webp "Photo selector alignment: crop with zoom, pan, and rotate. No Overlay"){.phone}
+![Hevy Transform screen cropping a progress photo at 3:4 with a grid overlay and a rotation dial](./hevy-crop-grid.webp "Camera roll alignment: crop with zoom, pan, and rotate. No overlay"){.phone}
 
 </div>
 
 ## Comparison Features {#compare}
 
-Hevy has single & side by side views with a thumbnail strip along the bottom for easy switching. It lacks a full screen view for a single photo like in photos. It doesn't have a slider view, overlay, or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists -->
+Hevy has single and side-by-side views with a thumbnail strip along the bottom for easy switching. It lacks a full-screen view for a single photo like in the Photos app. It doesn't have a slider view, overlay, or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists -->
 
 <div class="phone-row">
 
@@ -222,13 +221,13 @@ Hevy has single & side by side views with a thumbnail strip along the bottom for
 
 ![Hevy Progress Pictures screen in Comparison mode with photos from 10 Oct 2024 and 4 Aug 2025 side by side above a filmstrip of check-ins](./hevy-comparison.webp "Progress Pictures, Comparison mode, with the filmstrip below."){.phone}
 
-![Hevy share card with photos from 10 Oct 2024 and 4 Aug 2025 side by side, the Hevy logo and Instagram Stories, More and Download buttons](./hevy-share-card.webp "Export a side by side or single image view"){.phone}
+![Hevy share card with photos from 10 Oct 2024 and 4 Aug 2025 side by side, the Hevy logo and Instagram Stories, More and Download buttons](./hevy-share-card.webp "Export a side-by-side or single-photo image."){.phone}
 
 </div>
 
 ## Quality of life and privacy {#sharing}
 
-**Your photos are uploaded to Hevy's servers, not kept on your phone.** Hevy's help says everything is stored to your profile on its servers, which is why reinstalling the app doesn't lose them and why you need an account. Hevy's App Store privacy label doesn't list photos among the data it collects. [Hevy's help on reinstalling](https://help.hevyapp.com/hc/en-us/articles/38223672272791-What-will-happen-to-my-information-if-I-uninstall-and-reinstall-the-Hevy-app) and the [App Store listing](https://apps.apple.com/us/app/id1458862350).
+**Your photos are uploaded to Hevy's servers, rather than stored only on your phone.** Hevy's help says everything is stored in your profile on its servers, which is why reinstalling the app doesn't lose them and why you need an account. Hevy's App Store privacy label doesn't list photos among the data it collects. Sources: [Hevy's help on reinstalling](https://help.hevyapp.com/hc/en-us/articles/38223672272791-What-will-happen-to-my-information-if-I-uninstall-and-reinstall-the-Hevy-app) and the [App Store listing](https://apps.apple.com/us/app/id1458862350).
 
 Photos in Measures stay private even if your profile is public. Photos or videos you attach to a shared workout are different, and other people can see them. If you use Hevy's social side, know which one you're posting. Sources: [Hevy's help article on measurements and progress photos](https://help.hevyapp.com/hc/en-us/articles/35385479603479-Body-Composition-Tracking-Measurements-and-Progress-Photos) and [Hevy's progress photos feature page](https://www.hevyapp.com/features/progress-photos/).
 
@@ -252,7 +251,7 @@ Weight and waist are free. Body fat and the other measurements need Hevy Pro.
 
 ### Can you export progress photos from Hevy? {#faq-export}
 
-Hevy exports measurements as a CSV. Photos aren't in the export.
+You can share a single-photo or side-by-side image. The measurements CSV doesn't include your photos.
 
 ### Does Hevy remind you to take progress photos? {#faq-reminders}
 

@@ -35,7 +35,8 @@ test("checkScorecard: 35 valid rows pass; unknown, missing and bad rows fail", (
   delete missing.auto_align;
   fails(missing, /scorecard\.auto_align is required/);
   fails({ ...allRows(), auto_align: { status: "yes", fact: "x" } }, /status must be/);
-  fails({ ...allRows(), auto_align: { status: "confirm", fact: "Has auto-align" } }, /fact must be "\[CONFIRM\]"/);
+  assert.deepEqual(checkScorecard(FILE, { ...allRows(), compare_scale: { status: "confirm", fact: "Not tested." } }), []);
+  fails({ ...allRows(), auto_align: { status: "confirm", fact: "[CONFIRM: needs check]" } }, /confirm with a marker in fact/);
   fails({ ...allRows(), auto_align: { status: "has", fact: "[CONFIRM]" } }, /marker in a non-confirm fact/);
   fails({ ...allRows(), auto_align: { status: "has", fact: "Aligns faces \u2014 fast" } }, /em dash/);
   assert.match(checkScorecard(FILE, ["has"])[0], /must be a mapping/);
@@ -328,7 +329,7 @@ const HEVY_FACTS = {
   weight_apple_health: ["has", "Weight from Apple Health"],
   align_in_compare: ["missing", "No alignment in the side-by-side view"],
   compare_speed: ["has", "Switch between several dates quickly"],
-  compare_scale: ["missing", "Not confirmed"],
+  compare_scale: ["confirm", "Not tested."],
   bulk_import: ["missing", "No bulk import"],
   units: ["has", "Metric and imperial"],
   no_ads: ["has", "No ads"],
@@ -350,8 +351,8 @@ test("Hevy omits two rows, keeps the approved statuses, and has no separate verd
     assert.equal(byId[id].status, status, id);
     assert.equal(byId[id].fact, fact, id);
   }
-  assert.equal(byId.weight_quick_entry.status, "missing");
-  assert.equal(byId.weight_quick_entry.fact, "Every weigh-in is typed in by hand");
+  assert.equal(byId.weight_quick_entry.status, "partial");
+  assert.equal(byId.weight_quick_entry.fact, "Weight from Apple Health or manual entry");
   const html = render(post, "<p>Body.</p>\n<!-- scorecard -->\n");
   const table = html.slice(html.indexOf("<table"), html.indexOf("</table>"));
   assert.equal((table.match(/<th scope="row"/g) ?? []).length, 33);

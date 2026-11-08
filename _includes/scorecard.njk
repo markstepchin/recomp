@@ -35,7 +35,7 @@
             <span class="flex items-start gap-3">
               <span class="sc-status mt-[0.2em] flex size-[14px] shrink-0 items-center justify-center">{%- include "scorecard-icon.njk" %}</span>
               <span class="sr-only">{{ r.statusLabel }}:</span>
-              {%- if r.status == "confirm" %}
+              {%- if r.status == "confirm" and r.fact == "[CONFIRM]" %}
               <span class="sc-fact"><mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">[CONFIRM]</mark></span>
               {%- else %}
               <span class="sc-fact">{{ r.fact }}</span>

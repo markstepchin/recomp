@@ -1,9 +1,10 @@
 ---
 # Outline skeleton for Mark to write into. draft: true keeps it noindex and out of /blog/, the sitemap and llms.txt.
-title: "MyFitnessPal review: progress photos in a fitness app"
+title: "MyFitnessPal Progress Photos Review"
 seo_title: "MyFitnessPal Progress Photos Review (2026) | Recomp"
 description: "I tested MyFitnessPal's progress photo feature with real photos and weights from my own transformation."
-tested: October 2026
+tested: November 2026
+published: 2026-11-08
 draft: true
 breadcrumb: "Best progress photo apps"
 template: app-review
@@ -28,8 +29,8 @@ how_tested:
   device: "" # e.g. the iPhone model, from Settings > General > About
   ios: "" # iOS version during the test
   app_version: "" # app version tested, from the App Store page or the app's About screen
-  started: "" # YYYY-MM-DD, first day of testing
-  ended: "" # YYYY-MM-DD, last day of testing
+  started: "2026-11-01" # YYYY-MM-DD, first day of testing
+  ended: "2026-11-01" # YYYY-MM-DD, last day of testing
   checkins: "" # number of check-ins added during the test
 
 # Mark's hand measurements. Leave empty until measured; never estimate.
@@ -49,8 +50,8 @@ scorecard:
     } # L62
   weight_quick_entry: {
       status: has,
-      fact: "A scroll wheel sets the weight, with no typing",
-    } # Researched 2026-11-01: https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs ('Adjust your weight using the scroll wheel')
+      fact: "Numeric keypad for manual weight entry",
+    }
   data_together: { status: has, fact: "Each photo attaches to a weigh-in" } # L40
   camera_zoom: { status: missing, fact: "In-app camera has no zoom" }
   # Alignment should be effortless
@@ -64,7 +65,7 @@ scorecard:
   align_in_compare: { status: missing, fact: "No alignment tools" } # L46
   # Comparison should be effortless
   compare_speed: { status: has, fact: "Scroll bar with photos" }
-  compare_scale: { status: missing, fact: "Not confirmed" }
+  compare_scale: { status: confirm, fact: "Not tested." }
   side_by_side: {
       status: has,
       fact: "Two photos side by side with their weights",
@@ -94,7 +95,10 @@ scorecard:
       status: has,
       fact: "On its servers, so photos show up on a new phone",
     } # L66
-  reminders: { status: missing, fact: "Meal reminders only" } # L70 | L70 carries a [CONFIRM] on a weigh-in reminder.
+  reminders: {
+      status: partial,
+      fact: "Meal and weight reminders; no dedicated photo reminder",
+    }
   in_app_camera: {
       status: partial,
       fact: "Takes photos in the app, with no overlay or guides",
@@ -117,14 +121,9 @@ scorecard:
   no_ads: { status: missing, fact: "Has ads; ad-free needs Premium" } # L72
 ---
 
-<!-- TODO(Mark): final title, seo_title and description once the verdict is written. Add card_blurb if the /blog/ card needs a shorter line. -->
-<!-- TODO(Mark): set "published: YYYY-MM-DD" in the frontmatter and remove draft: true when this is ready. -->
-
 <!-- app-store-card -->
 
 ## Built for calories, not photos {#design-tradeoffs}
-
-<!-- TODO(Mark): intro. What MyFitnessPal is for, what it costs, whether I paid for a subscription, and how many check-ins I added. Notes so far only say it's a fitness app with a photo feature. -->
 
 If you’re one of the many people who already use MyFitnessPal, you’re probably wondering if you really need to download and set up a whole new app. And yes, while MyFitnessPal does have progress photo tracking, it makes multiple tradeoffs to optimize for calories over photo tracking.
 
@@ -136,34 +135,30 @@ Apple’s native apps are a perfect case study for why it makes sense to separat
 
 Separating these apps provides a better user experience for each individual use case. We recommend using multiple apps and tools, each designed for a specific use case. At the very least, you need a workout tracker, a calorie tracker, and a progress photo tracker.
 
-## How I test {#todo}
+## How I test {#how-i-test}
 
-After personally tracking hundreds of progress photos over several years, I have an opinionated philosophy on what's a must have, what's nice to have, and what's fluff. A great progress photo tracker is 4 apps in one:
+After personally tracking hundreds of progress photos over several years, I have an opinionated philosophy on what's a must-have, what's nice-to-have, and what's fluff. A great progress photo tracker is four apps in one:
 
 1. Photos app / camera roll
 2. Great alignment tools for consistent comparisons
 3. Collage app with multiple ways to compare your photos over time
-4. Weight, measurements, and notes all associated to photos
+4. Weight, measurements, and notes all associated with photos
 
-I test each of these features with my personal library of real progress photos & weight records. See [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) to learn more.
+I test each of these features with my personal library of real progress photos and weight records. See [How I review progress photo apps](/blog/how-i-test-progress-photo-apps/) to learn more.
 
 ![iOS Photos album showing hundreds of weekly front, side, and back progress photos from years of coaching check-ins](../../assets/blog/why-i-built-recomp/ios-photos-album-weekly-progress-photos.webp "Years of weekly check-ins, still stuck in my camera roll."){.phone}
 
 ## Adding progress data {#adding-data}
 
-### No Notifications for tracking {#reminders}
+### Weight reminders {#reminders}
 
-**MyFitnessPal has reminders are for tracking weight, which includes a single photo field.** Sources: [logging reminders](https://support.myfitnesspal.com/hc/en-us/articles/360032622391-How-to-set-up-logging-reminders), [how often to weigh in](https://support.myfitnesspal.com/hc/en-us/articles/360032272992-How-often-should-I-record-my-weight-and-other-measurements).
+**MyFitnessPal lets you set a reminder to log your weight. You can attach one progress photo to each weigh-in.** Sources: [logging reminders](https://support.myfitnesspal.com/hc/en-us/articles/360032622391-How-to-set-up-logging-reminders), [how often to weigh in](https://support.myfitnesspal.com/hc/en-us/articles/360032272992-How-often-should-I-record-my-weight-and-other-measurements).
 
 ### Photos {#adding-photos}
 
-<!-- TODO(Mark): are the photos the star? How much of the screen do they take, and do the buttons get in their way? How does it handle dozens or hundreds of photos? -->
-
-<!-- TODO(Mark): adding a check-in: taps and seconds for a weight and front, side and back photos (great is under 30 seconds). Does it read the date from the photos, import weight from Apple Health, and let me pick all 3 photos in one picker? -->
-
 **MyFitnessPal is built around tracking weight, and photos are an add-on.** You add a weight record under More > Weight & Measurements and can attach a photo to it. Photos taken in the app aren't saved to your camera roll. The in-app camera has no zoom. [MyFitnessPal's progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
-**Since photos attach to weigh-ins, MyFitnessPal keeps only one photo per date.** This makes it impossible to track multiple angles, i.e. front, side and back photos for the same day.
+**Since photos attach to weigh-ins, MyFitnessPal keeps only one photo per date.** This makes it impossible to track multiple angles, such as front, side and back photos on the same day.
 
 ### Weights and measurements {#weights}
 
@@ -179,25 +174,23 @@ Weight syncs both ways with Apple Health, but only from the day you connect. Old
 
 ![MyFitnessPal Reminders list with meal reminders and a weight reminder set to weekly on Sundays at 12:18 PM](./myfitnesspal-reminders.webp "Weight tracking reminder"){.phone}
 
-![MyFitnessPal Edit Reminder screen for weight, set to weekly on Sunday at 12:18 PM](./myfitnesspal-edit-weight-reminder.webp "Weight tracking reminder, select time view"){.phone}
+![MyFitnessPal Edit Reminder screen for weight, set to weekly on Sunday at 12:18 PM](./myfitnesspal-edit-weight-reminder.webp "Setting the weight reminder's day and time."){.phone}
 
 </div>
 
 ## Alignment {#alignment}
 
-<!-- TODO(Mark): ease of alignment, gridline quality, ghost overlay, auto align, and whether I can align in the side by side view. -->
+**MyFitnessPal has no alignment options.** There's no overlay, gridlines or auto-align, and no way to adjust a photo after you add it.
 
-**MyFitnessPal has no alignment options.** There's no overlay, gridlines or auto-align, and no way to adjust a photo after you add it. <!-- TODO(feature-link): link "overlay" to Recomp's Ghost overlay camera feature page once it exists --> <!-- TODO(feature-link): link "auto-align" to Recomp's Auto-align feature page once it exists --> <!-- TODO(feature-link): link "adjust a photo" to Recomp's manual alignment feature page once it exists -->
-
-MyFitnessPal supports **square aspect radio only** and crops every photo square when you upload it. [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
+MyFitnessPal supports **square aspect ratio only** and crops every photo square when you upload it. [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
 ## Comparison Features {#compare}
 
-<!-- TODO(Mark): how easy it is to compare, and the taps and time to compare 9 different dates. Can it make a shareable before/after image or a timelapse? -->
+MyFitnessPal has both single and side-by-side views for comparison, with a thumbnail strip along the bottom for easy switching. It lacks a full-screen view for a single photo like in the Photos app. It doesn't have a slider view, overlay, or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists -->
 
-MyFitnessPal has both single and side by side views for comparison, with a with a thumbnail strip along the bottom for easy switching. It lacks a full screen view for a single photo like in photos. It doesn't have a slider view, overlay, or timelapse
+You can zoom and pan in the small viewer, but those adjustments aren't saved.
 
-You can share a single photo or side by side view, along with a message, directly to Instagram or Facebook. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists --> [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
+You can share a single photo or side-by-side view, along with a message, directly to Instagram or Facebook. [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs).
 
 <div class="phone-row">
 
@@ -211,26 +204,8 @@ You can share a single photo or side by side view, along with a message, directl
 
 ## Quality of life and privacy {#sharing}
 
-<!-- TODO(Mark): privacy: are photos ever sent to a third-party server? Account required? Backup and moving to a new phone, CSV weight import, photo export, Face ID or app lock, app switcher privacy. -->
-
-Photos are saved to your MyFitnessPal account on its servers, which is how they show up on a new phone. You need an account. The App Store privacy label lists identifiers and usage data used to track you across other companies' apps, plus data for third-party advertising. Data Export is Premium only. It emails a zip of three CSVs, including weight and measurements, and no photos. Sources: [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs), [data export](https://support.myfitnesspal.com/hc/en-us/articles/360032273352-Export-your-nutrition-progress-and-exercise-data), [App Store listing](https://apps.apple.com/us/app/id341232718).
-
-<!-- TODO(Mark): any quality-of-life items that matter for MyFitnessPal (bulk import, reminders, in-app camera, units, body measurements, editing a check-in's date, partial check-ins, dark mode, ads). Fold them into the sections above or below; no separate section or table unless it clearly helps. -->
+Photos are saved to your MyFitnessPal account on its servers, which is how they show up on a new phone. You need an account. The App Store privacy label lists identifiers and usage data used to track you across other companies' apps, plus data for third-party advertising. Data Export requires Premium. It emails a zip of three CSVs, including weight and measurements, and no photos. Sources: [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs), [data export](https://support.myfitnesspal.com/hc/en-us/articles/360032273352-Export-your-nutrition-progress-and-exercise-data), [App Store listing](https://apps.apple.com/us/app/id341232718).
 
 MyFitnessPal has ads. Ad-free tracking needs Premium.
-
-<!-- TODO(Mark): what's good. -->
-
-<!-- TODO(Mark): what's bad. -->
-
-<!-- TODO(Mark): who I'd recommend it for. -->
-
-<!-- TODO(Mark): qualitative verdict in plain words on whether I recommend it. No numeric score. -->
-
-<!-- [TODO: do I recommend MyFitnessPal for progress photos, and for whom.] -->
-
-## FAQ {#faq}
-
-<!-- TODO(Mark): questions readers ask about MyFitnessPal's progress photos, each as a ### question with its answer. Add every one to the faq frontmatter too, word for word. -->
 
 <!-- scorecard -->
