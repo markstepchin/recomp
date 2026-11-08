@@ -1,12 +1,9 @@
 ---
-# Outline skeleton for Mark to write into. draft: true keeps it noindex and out of /blog/, the sitemap and llms.txt.
-
 title: "Hevy Progress Photos Review"
 seo_title: "Hevy Progress Photos and Measurements, Tested | Recomp"
 description: "I tested Hevy's progress photos, overlay camera, side-by-side compare and measurements. It works for one weekly photo, but allows only one photo a day."
 tested: November 2026
 published: 2026-11-08
-draft: true
 breadcrumb: "Best progress photo apps"
 template: app-review
 app_store:
@@ -40,7 +37,7 @@ faq:
 how_tested:
   device: "iPhone 15 Pro Max" # e.g. the iPhone model, from Settings > General > About
   ios: "26.6.2" # iOS version during the test
-  app_version: "" # app version tested, from the App Store page or the app's About screen
+  app_version: "3.2.5" # app version tested, from the App Store page or the app's About screen
   started: "2026-11-07" # YYYY-MM-DD, first day of testing
   ended: "2026-11-07" # YYYY-MM-DD, last day of testing
   checkins: "" # number of check-ins added during the test
@@ -134,6 +131,8 @@ scorecard:
   no_ads: { status: has, fact: "No ads" } # Review doesn't say whether Hevy shows ads.
 ---
 
+**Full disclosure: I build Recomp, a free progress photo app.**
+
 <!-- app-store-card -->
 
 ## Built for workouts, not photos {#design-tradeoffs}
@@ -201,7 +200,7 @@ Your alignment options depend on how you add the photo.
 
 **Existing photos.** None. Once a check-in is saved, you can't adjust it.
 
-There's no auto-align or side-by-side alignment either, and the tools aren't consistent between the camera and the camera roll. <!-- TODO(feature-link): link "auto-align" to Recomp's Auto-align feature page once it exists --> <!-- TODO(feature-link): link "side-by-side alignment" to Recomp's align-in-compare feature page once it exists -->
+There's no auto-align or side-by-side alignment either, and the tools aren't consistent between the camera and the camera roll.
 
 <div class="phone-row">
 
@@ -213,7 +212,7 @@ There's no auto-align or side-by-side alignment either, and the tools aren't con
 
 ## Comparison Features {#compare}
 
-Hevy has single and side-by-side views with a thumbnail strip along the bottom for easy switching. It lacks a full-screen view for a single photo like in the Photos app. It doesn't have a slider view, overlay, or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists -->
+Hevy has single and side-by-side views with a thumbnail strip along the bottom for easy switching. It lacks a full-screen view for a single photo like in the Photos app. It doesn't have a slider view, overlay, or timelapse.
 
 <div class="phone-row">
 
@@ -234,6 +233,10 @@ Photos in Measures stay private even if your profile is public. Photos or videos
 Hevy has a dark theme. I didn't find an app lock or Face ID option in its help, so hiding the photos means using iOS's own Require Face ID on the app icon. [Hevy's theme setting](https://www.hevyapp.com/help/change-the-theme-android-ios/).
 
 Hevy exports your measurements as a CSV, but your photos aren't in the export.
+
+## My verdict on Hevy's progress photos {#verdict}
+
+**Hevy is fine for one weekly photo if you already train in the app**, but one photo per day, alignment that locks after save, and comparison limits make it a poor fit if photos are central to your cut or bulk. Use a dedicated progress photo app if you want multiple angles per check-in, saved alignment, and richer comparisons.
 
 ## FAQ {#faq}
 

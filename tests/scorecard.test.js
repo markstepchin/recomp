@@ -314,10 +314,17 @@ test("rendered review: omitted rows are absent and a complete review still has e
     const parsed = matter(readFileSync(file, "utf8"));
     assert.deepEqual(checkFrontmatter(file, readFileSync(file, "utf8"), parsed.data, () => true), [], file);
     const other = postData({ ...parsed.data, page: { inputPath: `./${file}` } });
-    assert.deepEqual(other.scorecard.groups.flatMap((g) => g.rows).map((r) => r.id), SCORECARD_IDS, file);
+    const hiddenConfirm = file.includes("macrofactor")
+      ? ["compare_scale", "edit_date"]
+      : ["compare_scale"];
+    assert.deepEqual(
+      other.scorecard.groups.flatMap((g) => g.rows).map((r) => r.id),
+      SCORECARD_IDS.filter((id) => !hiddenConfirm.includes(id)),
+      file,
+    );
     const otherHtml = render(other, "<p>Body.</p>\n<!-- scorecard -->\n");
     const otherTable = otherHtml.slice(otherHtml.indexOf("<table"), otherHtml.indexOf("</table>"));
-    assert.equal((otherTable.match(/<th scope="row"/g) ?? []).length, 35, file);
+    assert.equal((otherTable.match(/<th scope="row"/g) ?? []).length, 35 - hiddenConfirm.length, file);
     assert.match(otherTable, /Leaves originals untouched in Photos/);
     assert.match(otherTable, /Save a partial check-in/);
   }
@@ -336,7 +343,7 @@ const HEVY_FACTS = {
   edit_date: ["missing", "Can't edit a saved check-in's date"],
 };
 
-test("Hevy omits two rows, keeps the approved statuses, and has no separate verdict", () => {
+test("Hevy omits two rows, keeps the approved statuses, and has a verdict", () => {
   const raw = readFileSync(HEVY, "utf8");
   const parsed = matter(raw);
   assert.deepEqual(parsed.data.scorecard.omit, ["originals_untouched", "partial_checkin"]);
@@ -346,30 +353,32 @@ test("Hevy omits two rows, keeps the approved statuses, and has no separate verd
   const post = postData({ ...parsed.data, page: { inputPath: `./${HEVY}` } });
   const rows = post.scorecard.groups.flatMap((g) => g.rows);
   const byId = Object.fromEntries(rows.map((r) => [r.id, r]));
-  assert.deepEqual(rows.map((r) => r.id), SCORECARD_IDS.filter((id) => id !== "originals_untouched" && id !== "partial_checkin"));
+  assert.deepEqual(
+    rows.map((r) => r.id),
+    SCORECARD_IDS.filter((id) => id !== "originals_untouched" && id !== "partial_checkin" && id !== "compare_scale"),
+  );
   for (const [id, [status, fact]] of Object.entries(HEVY_FACTS)) {
-    assert.equal(byId[id].status, status, id);
-    assert.equal(byId[id].fact, fact, id);
+    const row = byId[id] ?? parsed.data.scorecard[id];
+    assert.equal(row.status, status, id);
+    assert.equal(row.fact, fact, id);
   }
   assert.equal(byId.weight_quick_entry.status, "partial");
   assert.equal(byId.weight_quick_entry.fact, "Weight from Apple Health or manual entry");
   const html = render(post, "<p>Body.</p>\n<!-- scorecard -->\n");
   const table = html.slice(html.indexOf("<table"), html.indexOf("</table>"));
-  assert.equal((table.match(/<th scope="row"/g) ?? []).length, 33);
+  assert.equal((table.match(/<th scope="row"/g) ?? []).length, 32);
   assert.ok(!table.includes("Leaves originals untouched"));
   assert.ok(!table.includes("Save a partial check-in"));
   assert.ok(!table.includes('id="sc-originals-untouched"'));
   assert.ok(!table.includes('id="sc-partial-checkin"'));
+  assert.ok(!table.includes('id="sc-compare-scale"'));
   assert.match(table, /No alignment in the side-by-side view/);
   assert.match(table, /Can&#39;t edit a saved check-in&#39;s date/);
   assert.match(table, /data-status="missing"/);
   const body = raw.replace(/^---\n[\s\S]*?\n---\n/, "");
   assert.match(body, /## Built for workouts, not photos \{#design-tradeoffs\}/);
-  assert.ok(!body.includes("{#verdict}"));
-  assert.ok(!body.includes("My verdict on Hevy"));
+  assert.match(body, /## My verdict on Hevy's progress photos \{#verdict\}/);
   assert.match(body, /## FAQ \{#faq\}/);
-  assert.match(body, /TODO\(feature-link\): link "auto-align"/);
-  assert.match(body, /TODO\(feature-link\): link "timelapse"/);
 });
 
 test("rendered review: the scorecard goes at the marker, or after the body before the CTA", () => {

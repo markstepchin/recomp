@@ -1,11 +1,9 @@
 ---
-# Outline skeleton for Mark to write into. draft: true keeps it noindex and out of /blog/, the sitemap and llms.txt.
 title: "MyFitnessPal Progress Photos Review"
 seo_title: "MyFitnessPal Progress Photos Review (2026) | Recomp"
 description: "I tested MyFitnessPal's progress photo feature with real photos and weights from my own transformation."
 tested: November 2026
 published: 2026-11-08
-draft: true
 breadcrumb: "Best progress photo apps"
 template: app-review
 app_store:
@@ -26,9 +24,9 @@ summary: |
   While MyFitnessPal has photo tracking, it's optimized for tracking calories. It limits you to one photo per day and doesn't have alignment tools. For people serious about consistently tracking their progress with photos, we recommend a dedicated app with no image limitations, multiple alignment methods, and better comparison options.
 # Meta footer fields. Empty until Mark fills them.
 how_tested:
-  device: "" # e.g. the iPhone model, from Settings > General > About
-  ios: "" # iOS version during the test
-  app_version: "" # app version tested, from the App Store page or the app's About screen
+  device: "iPhone 15 Pro Max" # e.g. the iPhone model, from Settings > General > About
+  ios: "26.6.2" # iOS version during the test
+  app_version: "26.44.0" # app version tested, from the App Store page or the app's About screen
   started: "2026-11-01" # YYYY-MM-DD, first day of testing
   ended: "2026-11-01" # YYYY-MM-DD, last day of testing
   checkins: "" # number of check-ins added during the test
@@ -121,6 +119,8 @@ scorecard:
   no_ads: { status: missing, fact: "Has ads; ad-free needs Premium" } # L72
 ---
 
+**Full disclosure: I build Recomp, a free progress photo app.**
+
 <!-- app-store-card -->
 
 ## Built for calories, not photos {#design-tradeoffs}
@@ -186,7 +186,7 @@ MyFitnessPal supports **square aspect ratio only** and crops every photo square 
 
 ## Comparison Features {#compare}
 
-MyFitnessPal has both single and side-by-side views for comparison, with a thumbnail strip along the bottom for easy switching. It lacks a full-screen view for a single photo like in the Photos app. It doesn't have a slider view, overlay, or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists -->
+MyFitnessPal has both single and side-by-side views for comparison, with a thumbnail strip along the bottom for easy switching. It lacks a full-screen view for a single photo like in the Photos app. It doesn't have a slider view, overlay, or timelapse.
 
 You can zoom and pan in the small viewer, but those adjustments aren't saved.
 
@@ -207,5 +207,9 @@ You can share a single photo or side-by-side view, along with a message, directl
 Photos are saved to your MyFitnessPal account on its servers, which is how they show up on a new phone. You need an account. The App Store privacy label lists identifiers and usage data used to track you across other companies' apps, plus data for third-party advertising. Data Export requires Premium. It emails a zip of three CSVs, including weight and measurements, and no photos. Sources: [progress photos FAQ](https://support.myfitnesspal.com/hc/en-us/articles/360032625271-Progress-Photos-FAQs), [data export](https://support.myfitnesspal.com/hc/en-us/articles/360032273352-Export-your-nutrition-progress-and-exercise-data), [App Store listing](https://apps.apple.com/us/app/id341232718).
 
 MyFitnessPal has ads. Ad-free tracking needs Premium.
+
+## My verdict on MyFitnessPal's progress photos {#verdict}
+
+**MyFitnessPal makes sense if you already log every meal there and want one photo next to weight**, but one photo per day, forced square crops, and no alignment tools limit serious physique tracking. Use a dedicated progress photo app if comparisons and consistent framing matter more than keeping everything inside your calorie counter.
 
 <!-- scorecard -->

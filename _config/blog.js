@@ -460,27 +460,42 @@ export const sitemapEntries = (posts) =>
     })
     .join("");
 
+const indexCardHtml = (p, { dateHtml }) =>
+  [
+    "            <article",
+    '              class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"',
+    "            >",
+    `              <p class="text-micro text-muted">${dateHtml}</p>`,
+    '              <h3 class="text-h3 font-bold tracking-h3 pt-2">',
+    "                <a",
+    '                  class="text-fg no-underline hover:underline focus-visible:underline"',
+    p.draft ? '                  data-draft-link' : null,
+    `                  href="${p.slug}/"`,
+    `                  >${escapeHtml(p.title)}</a`,
+    "                >",
+    "              </h3>",
+    `              <p class="text-muted pt-2">${escapeHtml(p.cardBlurb)}</p>`,
+    "            </article>",
+    "",
+  ]
+    .filter(Boolean)
+    .join("\n");
+
 export const indexCards = (posts) =>
   posts
     .filter((p) => p.listed)
-    .map((p) =>
-      [
-        "            <article",
-        '              class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"',
-        "            >",
-        `              <p class="text-micro text-muted">${longDate(p.published)}</p>`,
-        '              <h3 class="text-h3 font-bold tracking-h3 pt-2">',
-        "                <a",
-        '                  class="text-fg no-underline hover:underline focus-visible:underline"',
-        `                  href="${p.slug}/"`,
-        `                  >${escapeHtml(p.title)}</a`,
-        "                >",
-        "              </h3>",
-        `              <p class="text-muted pt-2">${escapeHtml(p.cardBlurb)}</p>`,
-        "            </article>",
-        "",
-      ].join("\n"),
-    )
+    .map((p) => indexCardHtml(p, { dateHtml: longDate(p.published) }))
+    .join("");
+
+/** Draft posts linked from /blog/ until they publish and move into indexCards. */
+export const draftIndexCards = (posts) =>
+  posts
+    .filter((p) => p.draft)
+    .map((p) => {
+      const date = p.publishedLong ? ` ${p.publishedLong}` : "";
+      const dateHtml = `<mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">Draft</mark>${date}`;
+      return indexCardHtml(p, { dateHtml });
+    })
     .join("");
 
 export const llmsLines = (posts) =>

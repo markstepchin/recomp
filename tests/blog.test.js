@@ -3,7 +3,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
-  DEFAULT_CTA, appStoreData, checkFrontmatter, compactCount, checkPost, frontmatterKeys, indexCards, jsonLd, jsonLdBlocks, llmsLines, postData,
+  DEFAULT_CTA, appStoreData, checkFrontmatter, compactCount, checkPost, draftIndexCards, frontmatterKeys, indexCards, jsonLd, jsonLdBlocks, llmsLines, postData,
   sitemapEntries, sortPosts,
 } from "../_config/blog.js";
 import { IMG_CLASS, PHONE_FIGURE_CLASS, PHONE_SIZES, PHONE_IMG_CLASS, markdown } from "../_config/markdown.js";
@@ -266,6 +266,18 @@ test("sortPosts: newest first, then slug; lists skip unlisted posts", () => {
   assert.deepEqual([...indexCards(sorted).matchAll(/href="([^"]+)"/g)].map((m) => m[1]), ["a-new/", "z-new/", "b-old/"]);
   assert.equal(llmsLines(sorted).trim().split("\n").length, 3);
   assert.deepEqual(posts.map((p) => p.slug), ["b-old", "z-new", "a-new", "draft"], "input not mutated");
+});
+
+test("draftIndexCards: draft badge, publish date and data-draft-link", () => {
+  const posts = sortPosts([
+    post("hevy-review", "2026-11-08", { draft: true }),
+    post("live", "2026-10-01"),
+  ]);
+  const html = draftIndexCards(posts);
+  assert.ok(html.includes("Draft</mark> November 8, 2026"));
+  assert.ok(html.includes('data-draft-link'));
+  assert.equal([...html.matchAll(/href="([^"]+)"/g)].map((m) => m[1]).length, 1);
+  assert.ok(html.includes('href="hevy-review/"'));
 });
 
 test("hand_listed posts are built but left out of /blog/ cards, llms.txt and the sitemap", () => {

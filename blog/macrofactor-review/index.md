@@ -1,11 +1,9 @@
 ---
-# Outline skeleton for Mark to write into. draft: true keeps it noindex and out of /blog/, the sitemap and llms.txt.
 title: "MacroFactor Progress Photos Review"
 seo_title: "MacroFactor Progress Photos Review (2026) | Recomp"
 description: "I tested MacroFactor's progress photo feature with real photos and weights from my own transformation."
 tested: November 2026
 published: 2026-11-08
-draft: true
 breadcrumb: "Best progress photo apps"
 template: app-review
 app_store:
@@ -26,9 +24,9 @@ summary: |
   While MacroFactor has photo tracking, it's optimized for tracking macros. It limits you to one front, one side and one back photo per day and doesn't have alignment after saving a photo. For people serious about consistently tracking their progress with photos, we recommend a dedicated app with no image limitations, multiple alignment methods, and better comparison options.
 # Meta footer fields. Empty until Mark fills them.
 how_tested:
-  device: "" # e.g. the iPhone model, from Settings > General > About
-  ios: "" # iOS version during the test
-  app_version: "" # app version tested, from the App Store page or the app's About screen
+  device: "iPhone 15 Pro Max" # e.g. the iPhone model, from Settings > General > About
+  ios: "26.6.2" # iOS version during the test
+  app_version: "5.8.11" # app version tested, from the App Store page or the app's About screen
   started: "2026-11-01" # YYYY-MM-DD, first day of testing
   ended: "2026-11-01" # YYYY-MM-DD, last day of testing
   checkins: "" # number of check-ins added during the test
@@ -138,6 +136,8 @@ scorecard:
   no_ads: { status: has, fact: "No ads; it's subscription only" } # Researched 2026-11-01: https://macrofactor.com/macrofactor/ ('We will never serve ads')
 ---
 
+**Full disclosure: I build Recomp, a free progress photo app.**
+
 <!-- app-store-card -->
 
 ## Built for macros, not photos {#design-tradeoffs}
@@ -189,7 +189,7 @@ Each date holds one front, one side and one back photo. They sit next to up to 2
 
 ## Alignment {#alignment}
 
-**You can only adjust a photo in the crop step, before you save it.** MacroFactor's help says you can zoom and rotate there. Once a photo is uploaded, it can't be edited, resized or aligned. <!-- TODO(feature-link): link "align" to Recomp's manual alignment feature page once it exists -->
+**You can only adjust a photo in the crop step, before you save it.** MacroFactor's help says you can zoom and rotate there. Once a photo is uploaded, it can't be edited, resized or aligned.
 
 MacroFactor supports **square aspect ratio only** and crops every photo square when you upload it. [How to add progress photos](https://help.macrofactorapp.com/en/articles/121-how-to-add-progress-photos).
 
@@ -201,11 +201,11 @@ MacroFactor supports **square aspect ratio only** and crops every photo square w
 
 ## Comparison Features {#compare}
 
-MacroFactor has both single and stacked views for comparison, with a thumbnail strip along the bottom for easy switching. It lacks a full-screen view for a single photo like in the Photos app. It doesn't have a slider view, overlay, or timelapse. <!-- TODO(feature-link): link "slider" to Recomp's Slider view feature page once it exists --> <!-- TODO(feature-link): link "overlay view" to Recomp's Overlay view feature page once it exists --> <!-- TODO(feature-link): link "timelapse" to Recomp's Timelapse feature page once it exists --> [MacroFactor's body metrics announcement](https://macrofactor.com/body-metrics/).
+MacroFactor has both single and stacked views for comparison, with a thumbnail strip along the bottom for easy switching. It lacks a full-screen view for a single photo like in the Photos app. It doesn't have a slider view, overlay, or timelapse. [MacroFactor's body metrics announcement](https://macrofactor.com/body-metrics/).
 
 Neither gallery view uses the screen well. The single view shows one square photo with empty space below it. The compare view stacks two small square photos with the weights beside them, so the photos take up a fraction of the screen.
 
-MacroFactor also has a simple before-and-after share feature, with the two photos stacked one above the other. <!-- TODO(feature-link): link "one above the other" to Recomp's Side-by-side comparison feature page once it exists --> [How to create before-and-after photos](https://help.macrofactorapp.com/en/articles/123-how-to-create-and-share-before-and-after-photos).
+MacroFactor also has a simple before-and-after share feature, with the two photos stacked one above the other. [How to create before-and-after photos](https://help.macrofactorapp.com/en/articles/123-how-to-create-and-share-before-and-after-photos).
 
 <div class="phone-row">
 
@@ -222,5 +222,9 @@ MacroFactor also has a simple before-and-after share feature, with the two photo
 Photos upload to MacroFactor's servers on Google Firebase. They stay there until you delete them or your account. You need an account to use the app, and the App Store privacy label lists photos as data linked to you. Data Export gives you spreadsheets of weight, nutrition and body metrics, and its help doesn't mention photos. Sources: [MacroFactor's personal data page](https://macrofactor.com/app-personal-data-protection-information/), [Export your data](https://help.macrofactorapp.com/en/articles/68-export-your-data), [App Store listing](https://apps.apple.com/us/app/id1553503471).
 
 MacroFactor has dark mode and switches between pounds and kilograms. I didn't find an app lock or Face ID option. Sources: [dark mode](https://help.macrofactorapp.com/en/articles/73-switch-between-dark-and-light-mode), [units](https://help.macrofactorapp.com/en/articles/353-changing-unit-preferences).
+
+## My verdict on MacroFactor's progress photos {#verdict}
+
+**MacroFactor fits users who want body metrics beside macros**, but square crops, no realignment after save, and cramped gallery views make photos a side feature. Use a dedicated progress photo app if you want alignment you can fix later, side-by-side comparisons that use the screen, and photo-first workflows.
 
 <!-- scorecard -->

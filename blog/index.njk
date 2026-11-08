@@ -13,65 +13,8 @@ nav: blog
           <div class="flex flex-col gap-4">
             <!-- posts:start -->
 {{ collections.posts | indexCards | safe }}            <!-- posts:end -->
-            <!-- Drafts: remove each card when that review is published. It will then fill the marker above. -->
-            <article
-              class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
-            >
-              <p class="text-micro text-muted">
-                <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">Draft</mark>
-              </p>
-              <h3 class="text-h3 font-bold tracking-h3 pt-2">
-                <a
-                  class="text-fg no-underline hover:underline focus-visible:underline"
-                  data-draft-link
-                  href="hevy-review/"
-                  >Hevy Progress Photos Review</a
-                >
-              </h3>
-              <p class="text-muted pt-2">
-                I tested Hevy's progress photos, overlay camera, side-by-side
-                compare and measurements. It works for one weekly photo, but
-                allows only one photo a day.
-              </p>
-            </article>
-            <article
-              class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
-            >
-              <p class="text-micro text-muted">
-                <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">Draft</mark>
-              </p>
-              <h3 class="text-h3 font-bold tracking-h3 pt-2">
-                <a
-                  class="text-fg no-underline hover:underline focus-visible:underline"
-                  data-draft-link
-                  href="macrofactor-review/"
-                  >MacroFactor review: progress photos in a fitness app</a
-                >
-              </h3>
-              <p class="text-muted pt-2">
-                I tested MacroFactor's progress photo feature with real photos
-                and weights from my own transformation.
-              </p>
-            </article>
-            <article
-              class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
-            >
-              <p class="text-micro text-muted">
-                <mark class="rounded-sm bg-yellow-200 px-1 text-black box-decoration-clone">Draft</mark>
-              </p>
-              <h3 class="text-h3 font-bold tracking-h3 pt-2">
-                <a
-                  class="text-fg no-underline hover:underline focus-visible:underline"
-                  data-draft-link
-                  href="myfitnesspal-review/"
-                  >MyFitnessPal review: progress photos in a fitness app</a
-                >
-              </h3>
-              <p class="text-muted pt-2">
-                I tested MyFitnessPal's progress photo feature with real photos
-                and weights from my own transformation.
-              </p>
-            </article>
+            <!-- drafts:start -->
+{{ collections.posts | draftIndexCards | safe }}            <!-- drafts:end -->
             <article
               class="rounded-card border border-card-border bg-card px-[1.4rem] py-[1.35rem]"
             >

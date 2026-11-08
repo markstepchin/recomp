@@ -34,7 +34,7 @@ import { basename, dirname, extname, join, relative } from "node:path";
 import Image from "@11ty/eleventy-img";
 import { chrome } from "./scripts/apply-chrome.js";
 import { findMismatches, stamp } from "./scripts/stamp-asset-versions.js";
-import { checkFrontmatter, checkPost, checkTemplate, indexCards, isPostPath, jsonLdBlocks, postData, slugOf, sortPosts, templateWarnings } from "./_config/blog.js";
+import { checkFrontmatter, checkPost, checkTemplate, draftIndexCards, indexCards, isPostPath, jsonLdBlocks, postData, slugOf, sortPosts, templateWarnings } from "./_config/blog.js";
 import { checkInternalLinks } from "./_config/links.js";
 import { SIZES, markdown } from "./_config/markdown.js";
 
@@ -182,6 +182,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("jsonLdBlocks", (post) => jsonLdBlocks(post));
   eleventyConfig.addFilter("indexCards", (posts) => indexCards(posts));
+  eleventyConfig.addFilter("draftIndexCards", (posts) => draftIndexCards(posts));
   const md = markdown();
   eleventyConfig.addFilter("md", (text) => md.render(String(text)).trim());
   eleventyConfig.addFilter("mdInline", (text) => md.renderInline(String(text)).trim());
